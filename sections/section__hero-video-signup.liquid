@@ -1,0 +1,479 @@
+{% capture modal_id %}HeroVideoModal-{{ section.id }}{% endcapture %}
+{% capture modal_open_selector %}js-open-modal-hero-{{ section.id }}{% endcapture %}
+{% capture modal_close_selector %}js-close-modal-hero-{{ section.id }}{% endcapture %}
+
+{% capture signup_form_markup %}
+  <div class="hero-video-signup__form-wrapper rounded-sm px-md py-lg tabletl:w-[430px] bg-[var(--bg-color)] backdrop-blur-[10px]"
+    style="--bg-color: rgba({{ section.settings.form_background_color }}, 0.6);">
+    {% if section.settings.title != blank %}
+      <h2 class="hero-video-signup__title h4 leading-none mb-12">
+        {{ section.settings.title }}
+      </h2> 
+    {% endif %}
+
+    {% if section.settings.subtitle != blank %}
+      <p class="hero-video-signup__subtitle text-18 font-500 mb-12 tabletl:text-20">{{ section.settings.subtitle }}</p>
+    {% endif %}
+    {% if section.settings.description != blank %}
+      <div class="hero-video-signup__description mb-md rte">{{ section.settings.description }}</div>
+    {% endif %}
+    {% if section.settings.klaviyo_embed != blank %}
+      <div class="hero-video-signup__klaviyo w-full">
+        {{ section.settings.klaviyo_embed }}
+      </div>
+    {% endif %}
+  </div>
+{% endcapture %}
+
+{% liquid
+  assign container_classes = ""
+
+  if section.settings.margin_top != "pt-0"
+      assign container_classes = container_classes | append: " " | append: section.settings.margin_top
+  endif
+
+  if section.settings.margin_bottom != "pb-0"
+      assign container_classes = container_classes | append: " " | append: section.settings.margin_bottom
+  endif
+
+  if section.settings.desktop_margin_top != "inherit" 
+      assign container_classes = container_classes | append: " " | append: section.settings.desktop_margin_top
+  endif
+
+  if section.settings.desktop_margin_bottom != "inherit"
+      assign container_classes = container_classes | append: " " | append: section.settings.desktop_margin_bottom
+  endif
+
+  if section.settings.padding_horizontal != "pt-0"
+      assign container_classes = container_classes | append: " " | append: section.settings.padding_horizontal
+  endif
+
+  if section.settings.desktop_padding_horizontal != "inherit"
+      assign container_classes = container_classes | append: " " | append: section.settings.desktop_padding_horizontal
+  endif
+
+  assign container_classes = container_classes | strip
+%}
+
+<section
+  class="hero-video-signup {% if container_classes != blank %} {{ container_classes }}{% endif %}"
+  style="{% if section.settings.bg_color != blank %}background-color: {{ section.settings.bg_color }};{% endif %}
+  --padding-top: {{ section.settings.padding_top }};
+  --padding-bottom: {{ section.settings.padding_bottom}};
+  --padding-top-desktop: {% if section.settings.desktop_padding_top != "inherit" %} {{ section.settings.desktop_padding_top }} {% else %} {{ section.settings.padding_top }} {% endif %};
+  --padding-bottom-desktop: {% if section.settings.desktop_padding_bottom != "inherit" %} {{section.settings.desktop_padding_bottom}} {% else %} {{section.settings.padding_bottom}} {% endif %};"
+>
+  <div class="hero-video-signup__container{% if section.settings.use_container %} container mx-auto{% endif %} {% if section.settings.set_100vh %} screen-height flex flex-col {% endif %}">
+    <div
+      class="hero-video-signup__wrapper relative overflow-hidden {% if section.settings.set_100vh %} flex flex-col flex-1 {% endif %}"
+      style="{% unless section.settings.set_100vh %} --aspect-ratio: {{ section.settings.aspect_ratio }}; --aspect-ratio-desktop: {{ section.settings.aspect_ratio_desktop }};{% endunless %} border-radius: {{ section.settings.border_radius }}px;"
+    >
+      <div class="hero-video-signup__image absolute inset-0">
+        {% if section.settings.video != blank or section.settings.video_desktop != blank %}
+          {% assign video_class = 'w-full h-full object-cover block' %}
+
+          {% if section.settings.video != blank %}
+            {% if section.settings.video_desktop != blank %}
+              {% assign video_class = video_class | append: ' tabletl:hidden' %}
+            {% endif %}
+            {{ section.settings.video | video_tag: autoplay: true, loop: true, muted: true, controls: false, image_size: '1024x', class: video_class }}
+          {% endif %}
+          {% if section.settings.video_desktop  != blank %}
+            {% if section.settings.video != blank %}
+              {% assign video_class = video_class | append: 'hidden tabletl:block' %}
+            {% endif %}
+            {{ section.settings.video_desktop | video_tag: autoplay: true, loop: true, muted: true, controls: false, image_size: '1024x', class: video_class }}
+          {% endif %}   
+        {% elsif section.settings.image != blank or section.settings.image_desktop != blank  %}
+          {%
+            render 'lazy-image',
+            image: section.settings.image,
+            image_desktop: section.settings.image_desktop,
+            picture_classes: 'w-full h-full',
+            img_classes: 'h-full object-cover',
+            style:
+          %}
+        {% endif %}
+      </div>
+      <div class="hero-video-signup__content-wrapper relative h-full p-md tabletl:py-xl tabletl:px-xxxl {% if section.settings.set_100vh %} flex flex-col flex-1 {% endif %}">
+        <div class="hero-video-signup__content-container h-full flex gap-lg justify-end items-center {% if section.settings.set_100vh %} flex-1 {% endif %}">
+          <div class="flex flex-1 justify-center">
+            {% if section.settings.video_url != blank %}
+              <button
+                class="video-modal-trigger btn flex items-center gap-12 bg-opacity-30 text-white py-md px-32 hover:bg-opacity-50 backdrop-blur-[2px]"
+                aria-label="Play video"
+                {{ modal_open_selector }}
+              >
+                <span class="video-modal-trigger__icon w-12 h-12 flex items-center justify-center relative -top-[1px]">
+                  {% render 'icon--play' %}
+                </span>
+    
+                <span class="video-modal-trigger__text">
+                  Ver
+                </span>
+              </button>
+            {% endif %}
+          </div>
+
+          <div
+            class="hero-video-signup__content"
+            style="{% if section.settings.text_color != blank %}color: {{ section.settings.text_color }};{% endif %}"
+          >
+            <div class="hero-video-signup__form-container-desktop hidden justify-self-end ml-auto tabletl:block">
+              {{ signup_form_markup }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-video-signup__form-container-mobile container py-lg tabletl:hidden"
+  style="{% if section.settings.text_color != blank %}color: {{ section.settings.text_color }};{% endif %}">
+    {{ signup_form_markup }}
+  </div>
+
+  {% render 'video-modal',
+    modal_id: modal_id,
+    video_url: section.settings.video_url,
+    selectors_open: modal_open_selector,
+    selectors_close: modal_close_selector
+  %}
+</section>
+
+{% schema %}
+{
+  "name": "Hero Video Signup",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "select",
+      "id": "padding_top",
+      "label": "Padding Top",
+      "options": [
+        { "value": "0px", "label": "None" },
+        { "value": "8px", "label": "Small - 8px" },
+        { "value": "16px", "label": "Medium - 16px" },
+        { "value": "24px", "label": "Large - 24px" },
+        { "value": "40px", "label": "X-Large - 40px" },
+        { "value": "60px", "label": "XX-Large - 60px" },
+        { "value": "80px", "label": "XXX-Large - 80px" }
+      ],
+      "default": "0px"
+    },
+    {
+      "type": "select",
+      "id": "desktop_padding_top",
+      "label": "Desktop - Padding Top",
+      "options": [
+        { "value": "inherit", "label": "Inherit" },
+        { "value": "0px", "label": "None" },
+        { "value": "8px", "label": "Small - 8px" },
+        { "value": "16px", "label": "Medium - 16px" },
+        { "value": "24px", "label": "Large - 24px" },
+        { "value": "40px", "label": "X-Large - 40px" },
+        { "value": "60px", "label": "XX-Large - 60px" },
+        { "value": "80px", "label": "XXX-Large - 80px" }
+      ],
+      "default": "0px"
+    },
+    {
+      "type": "select",
+      "id": "padding_bottom",
+      "label": "Padding Bottom",
+      "options": [
+        { "value": "0px", "label": "None" },
+        { "value": "8px", "label": "Small - 8px" },
+        { "value": "16px", "label": "Medium - 16px" },
+        { "value": "24px", "label": "Large - 24px" },
+        { "value": "40px", "label": "X-Large - 40px" },
+        { "value": "60px", "label": "XX-Large - 60px" },
+        { "value": "80px", "label": "XXX-Large - 80px" }
+      ],
+      "default": "0px"
+    },
+    {
+      "type": "select",
+      "id": "desktop_padding_bottom",
+      "label": "Desktop - Padding Bottom",
+      "options": [
+        { "value": "inherit", "label": "Inherit" },
+        { "value": "0px", "label": "None" },
+        { "value": "8px", "label": "Small - 8px" },
+        { "value": "16px", "label": "Medium - 16px" },
+        { "value": "24px", "label": "Large - 24px" },
+        { "value": "40px", "label": "X-Large - 40px" },
+        { "value": "60px", "label": "XX-Large - 60px" },
+        { "value": "80px", "label": "XXX-Large - 80px" }
+      ],
+      "default": "inherit"
+    },
+    {
+      "type": "select",
+      "id": "padding_horizontal",
+      "label": "Padding Horizontal",
+      "options": [
+        { "value": "px-0", "label": "None" },
+        { "value": "px-sm", "label": "Small - 8px" },
+        { "value": "px-md", "label": "Medium - 16px" },
+        { "value": "px-lg", "label": "Large - 24px" },
+        { "value": "px-xl", "label": "X-Large - 40px" },
+        { "value": "px-xxl", "label": "XX-Large - 60px" },
+        { "value": "px-xxxl", "label": "XXX-Large - 80px" }
+      ],
+      "default": "px-0"
+    },
+    {
+      "type": "select",
+      "id": "desktop_padding_horizontal",
+      "label": "Desktop - Padding Horizontal",
+      "options": [
+        { "value": "inherit", "label": "Inherit" },
+        { "value": "tabletl:px-0", "label": "None" },
+        { "value": "tabletl:px-sm", "label": "Small - 8px" },
+        { "value": "tabletl:px-md", "label": "Medium - 16px" },
+        { "value": "tabletl:px-lg", "label": "Large - 24px" },
+        { "value": "tabletl:px-xl", "label": "X-Large - 40px" },
+        { "value": "tabletl:px-xxl", "label": "XX-Large - 60px" },
+        { "value": "tabletl:px-xxxl", "label": "XXX-Large - 80px" }
+      ],
+      "default": "inherit"
+    },
+    {
+      "type": "select",
+      "id": "margin_top",
+      "label": "Margin Top",
+      "options": [
+        { "value": "mt-0", "label": "None" },
+        { "value": "mt-sm", "label": "Small - 8px" },
+        { "value": "mt-md", "label": "Medium - 16px" },
+        { "value": "mt-lg", "label": "Large - 24px" },
+        { "value": "mt-xl", "label": "X-Large - 40px" },
+        { "value": "mt-xxl", "label": "XX-Large - 60px" },
+        { "value": "mt-xxxl", "label": "XXX-Large - 80px" }
+      ],
+      "default": "mt-0"
+    },
+    {
+      "type": "select",
+      "id": "margin_bottom",
+      "label": "Margin Bottom",
+      "options": [
+        { "value": "mb-0", "label": "None" },
+        { "value": "mb-sm", "label": "Small - 8px" },
+        { "value": "mb-md", "label": "Medium - 16px" },
+        { "value": "mb-lg", "label": "Large - 24px" },
+        { "value": "mb-xl", "label": "X-Large - 40px" },
+        { "value": "mb-xxl", "label": "XX-Large - 60px" },
+        { "value": "mb-xxxl", "label": "XXX-Large - 80px" }
+      ],
+      "default": "mb-0"
+    },
+    {
+      "type": "select",
+      "id": "desktop_margin_top",
+      "label": "Desktop - Margin Top",
+      "options": [
+        { "value": "inherit", "label": "Inherit" },
+        { "value": "tabletl:mt-0", "label": "None" },
+        { "value": "tabletl:mt-sm", "label": "Small - 8px" },
+        { "value": "tabletl:mt-md", "label": "Medium - 16px" },
+        { "value": "tabletl:mt-lg", "label": "Large - 24px" },
+        { "value": "tabletl:mt-xl", "label": "X-Large - 40px" },
+        { "value": "tabletl:mt-xxl", "label": "XX-Large - 60px" },
+        { "value": "tabletl:mt-xxxl", "label": "XXX-Large - 80px" }
+      ],
+      "default": "inherit"
+    },
+    {
+      "type": "select",
+      "id": "desktop_margin_bottom",
+      "label": "Desktop - Margin Bottom",
+      "options": [
+        { "value": "inherit", "label": "Inherit" },
+        { "value": "tabletl:mb-0", "label": "None" },
+        { "value": "tabletl:mb-sm", "label": "Small - 8px" },
+        { "value": "tabletl:mb-md", "label": "Medium - 16px" },
+        { "value": "tabletl:mb-lg", "label": "Large - 24px" },
+        { "value": "tabletl:mb-xl", "label": "X-Large - 40px" },
+        { "value": "tabletl:mb-xxl", "label": "XX-Large - 60px" },
+        { "value": "tabletl:mb-xxxl", "label": "XXX-Large - 80px" }
+      ],
+      "default": "inherit"
+    },
+    {
+      "type": "checkbox",
+      "id": "use_container",
+      "label": "Use container",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "set_100vh",
+      "label": "Set full screen height",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "border_radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Border radius",
+      "default": 0
+    },
+    {
+      "type": "select",
+      "id": "aspect_ratio",
+      "label": "Aspect ratio Mobile",
+      "options": [
+        {
+          "value": "16/9",
+          "label": "16:9"
+        },
+        {
+          "value": "4/3",
+          "label": "4:3"
+        },
+        {
+          "value": "3/2",
+          "label": "3:2"
+        },
+        {
+          "value": "1/1",
+          "label": "1:1"
+        },
+        {
+          "value": "9/16",
+          "label": "9:16"
+        },
+        {
+          "value": "auto",
+          "label": "Auto"
+        }
+      ],
+      "default": "16/9"
+    },
+    {
+      "type": "select",
+      "id": "aspect_ratio_desktop",
+      "label": "Aspect ratio Desktop",
+      "options": [
+        {
+          "value": "16/9",
+          "label": "16:9"
+        },
+        {
+          "value": "4/3",
+          "label": "4:3"
+        },
+        {
+          "value": "3/2",
+          "label": "3:2"
+        },
+        {
+          "value": "1/1",
+          "label": "1:1"
+        },
+        {
+          "value": "9/16",
+          "label": "9:16"
+        },
+        {
+          "value": "auto",
+          "label": "Auto"
+        }
+      ],
+      "default": "16/9"
+    },
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Background image mobile"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_desktop",
+      "label": "Background image desktop"
+    },
+    {
+      "type": "video",
+      "id": "video",
+      "label": "Background video mobile"
+    },
+    {
+      "type": "video",
+      "id": "video_desktop",
+      "label": "Background video desktop"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background color"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color"
+    },
+    {
+      "type": "select",
+      "id": "form_background_color",
+      "label": "Form Background",
+      "options": [
+        {
+          "value": "255, 255, 255",
+          "label": "Light"
+        },
+        {
+          "value": "0, 0, 0",
+          "label": "Dark"
+        }
+      ],
+      "default": "255, 255, 255"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description"
+    },
+    {
+      "type": "html",
+      "id": "klaviyo_embed",
+      "label": "Klaviyo Embed"
+    },
+    {
+      "type": "header",
+      "content": "Video"
+    },
+    {
+      "type": "video",
+      "id": "video_url",
+      "label": "Video"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hero Video Signup"
+    }
+  ]
+}
+{% endschema %}

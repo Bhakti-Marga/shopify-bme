@@ -1,0 +1,84 @@
+{% comment %}
+  Example:
+
+  {%
+    render 'article-hero',
+    article: featured_article,
+    background_style: 'split',
+    classes: container_classes
+  %}
+{% endcomment %}
+
+{% capture article_hero_content_markup %}
+  <div class="article-hero__content-container max-w-4xl">
+    {% if article.metafields.event.type != blank %}
+      <p class="article-hero__pretitle pb-md">{{ article.metafields.event.type }}</p>
+    {% endif %}
+    <h2 class="article-hero__title h3 leading-[1.15] tabletl:mb-sm">{{ article.title }}</h2>  
+    <div class="article-hero__description font-500 mb-md rte">{{  article.content }}</div>
+    <div class="tabletl:flex tabletl:gap-lg tabletl:items-center">
+      {% if article.metafields.event.product != blank %}
+        <a
+          {% if anchor == true %}
+            href="#prices"
+          {% else %}
+            href="{{ article.url }}"
+          {% endif %}
+          class="article-hero__cta btn inline-block mb-md tabletl:mb-0"
+        >
+          Register now!
+        </a>
+      {% endif %}
+      <div class="flex flex-wrap font-600 text-14 gap-lg tabletl:gap-xl tabletl:text-16">
+        {% if article.metafields.event.date != blank %}
+          <div class="article-hero__info-item pr-lg border-r border-white tabletl:pr-0 tabletl:border-r-0 tabletl:pl-xl tabletl:border-l">
+            <strong class="font-600">Date</strong> 
+            <span class="capitalize block">{{ article.metafields.event.date }}</span>
+          </div>
+        {% endif %}
+        {% if article.metafields.event.location != blank %}
+          <div class="article-hero__info-item pr-lg border-r border-white tabletl:pr-0 tabletl:border-r-0 tabletl:pl-xl tabletl:border-l">
+            <strong class="font-600">Place</strong> 
+            <span class="capitalize block">{{ article.metafields.event.location }}</span>
+          </div>
+        {% endif %}
+        {% if article.metafields.event.timezone != blank %}
+          <div class="article-hero__info-item pr-lg border-white tabletl:pr-0 tabletl:pl-xl tabletl:border-l">
+            <strong class="font-600">Timezone</strong> 
+            <span class="capitalize block">{{ article.metafields.event.timezone }}</span>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+{% endcapture %}
+
+{% if article.image != blank %} 
+  <section class="article-hero pb-md h-auto flex flex-col{% if classes != blank %} {{ classes }}{% endif %}"
+    style="--screen-height: calc(100vh - var(--header-height));
+  {% if background_style == 'split' %}--background-color: linear-gradient(to bottom, #16254C 70%, #fff 70%);{% else %}--background-color: #16254C;{% endif %}">
+    <div class="container w-full flex flex-col flex-1">
+      <div class="flex flex-col flex-1 w-full relative overflow-hidden rounded">
+        <div class="article-hero__image absolute inset-0">
+          {%
+            render 'lazy-image',
+            image: article.image,
+            picture_classes: 'w-full h-full',
+            img_classes: 'h-full object-cover'
+          %}
+        </div>
+        {% if gradient %}
+          <div class="article-hero__gradient hidden absolute inset-0" style="background: linear-gradient(transparent {{ gradient_height }}%, {{ gradient_color }} 100%);"></div>
+        {% endif %}
+        <div class="article-hero__content-wrapper aspect-video flex flex-col flex-1 w-full text-white text-18 font-500 relative p-md tabletl:p-xxl tabletl:text-20">
+          <div class="article-hero__content hidden article-hero__content--desktop flex-1 items-end pb-md border-b border-gray-light  max-w-5xl">
+            {{ article_hero_content_markup }}
+          </div>
+        </div>
+      </div>
+      <div class="article-hero__content article-hero__content--mobile pt-md flex flex-1 items-end pb-md border-b border-gray-light  max-w-5xl text-white">
+        {{ article_hero_content_markup }}
+      </div>
+    </div>
+  </section>
+{% endif %} 

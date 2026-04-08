@@ -1,0 +1,232 @@
+<div class="video-overlay w-full relative">
+  {% if block.settings.video != blank %}
+    <div class="video-overlay__mobile tabletl:hidden">
+      {{ video | video_tag: autoplay: block.settings.autoplay, loop: block.settings.loop, muted: block.settings.muted }}
+    </div>
+  {% endif %}
+  {% if block.settings.video_desktop != blank %}
+    <div class="video-overlay__mobile hidden tabletl:block">
+      {{ block.settings.video_desktop | video_tag: autoplay: block.settings.autoplay, loop: block.settings.loop, muted: block.settings.muted }}
+    </div>
+  {% endif %}
+  <div class="video-overlay__container flex absolute top-0 left-0 h-full w-full {{ block.settings.text_position }} {{ block.settings.text_position_desktop }} {{ block.settings.text_alignment }} {{ block.settings.text_alignment_desktop }}">
+    <div class="video-overlay__content w-full">
+      {% if block.settings.heading != blank %}
+        <h1 class="video-overlay__heading">
+          {{ block.settings.heading }}
+        </h1>
+      {% endif %}
+      {% if block.settings.subheading != blank %}
+        <h3 class="video-overlay__subheading">
+          {{ block.settings.subheading }}
+        </h3>
+      {% endif %}
+      <div class="video-overlay__cta-container {{ block.settings.text_position }} {{ block.settings.text_position_desktop }}">
+        {% if block.settings.cta_url != blank %}
+          <a href="{{ block.settings.cta_url }}" class="video-overlay__cta"> 
+            {{ block.settings.cta_text }} 
+          </a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Video - Overlay",
+    "settings": [
+      {
+        "type": "video",
+        "id": "video",
+        "label": "Video (Mobile - Required)"
+      },
+      {
+        "type": "video",
+        "id": "video_desktop",
+        "label": "Video (Desktop)"
+      },
+      {
+        "type": "checkbox",
+        "id": "autoplay",
+        "label": "Autoplay",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "loop",
+        "label": "Loop",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "muted",
+        "label": "Muted",
+        "default": true
+      },
+      {
+        "type": "select",
+        "id": "load",
+        "label": "Image Loading Type",
+        "options": [
+          {
+            "value": "lazy",
+            "label": "Lazy"
+          },
+          {
+            "value": "eager",
+            "label": "Eager"
+          }
+        ],
+        "default": "lazy"
+      },
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading"
+      },
+      {
+        "type": "text",
+        "id": "subheading",
+        "label": "Subheading"
+      },
+      {
+        "type": "url",
+        "id": "cta_url",
+        "label": "CTA URL"
+      },
+      {
+        "type": "text",
+        "id": "cta_text",
+        "label": "CTA Text"
+      },
+      {
+        "type": "select",
+        "id": "text_position",
+        "label": "Text Position (Mobile)",
+        "options": [
+          {
+            "value": "items-start justify-start",
+            "label": "Top Left"
+          },
+          {
+            "value": "items-start justify-center",
+            "label": "Top Center"
+          },
+          {
+            "value": "items-start justify-end",
+            "label": "Top Right"
+          },
+          {
+            "value": "items-center justify-start",
+            "label": "Center Left"
+          },
+          {
+            "value": "items-center justify-center",
+            "label": "Center Center"
+          },
+          {
+            "value": "items-center justify-end",
+            "label": "Center Right"
+          },
+          {
+            "value": "items-end justify-start",
+            "label": "Bottom Left"
+          },
+          {
+            "value": "items-end justify-center",
+            "label": "Bottom Center"
+          },
+          {
+            "value": "items-end justify-end",
+            "label": "Bottom Right"
+          }
+        ]
+      },
+      {
+        "type": "select",
+        "id": "text_position_desktop",
+        "label": "Text Position (Desktop)",
+        "options": [
+          {
+            "value": "tabletl:items-start tabletl:justify-start",
+            "label": "Top Left"
+          },
+          {
+            "value": "tabletl:items-start tabletl:justify-center",
+            "label": "Top Center"
+          },
+          {
+            "value": "tabletl:items-start tabletl:justify-end",
+            "label": "Top Right"
+          },
+          {
+            "value": "tabletl:items-center tabletl:justify-start",
+            "label": "Center Left"
+          },
+          {
+            "value": "tabletl:items-center tabletl:justify-center",
+            "label": "Center Center"
+          },
+          {
+            "value": "tabletl:items-center tabletl:justify-end",
+            "label": "Center Right"
+          },
+          {
+            "value": "tabletl:items-end tabletl:justify-start",
+            "label": "Bottom Left"
+          },
+          {
+            "value": "tabletl:items-end tabletl:justify-center",
+            "label": "Bottom Center"
+          },
+          {
+            "value": "tabletl:items-end tabletl:justify-end",
+            "label": "Bottom Right"
+          }
+        ]
+      },
+      {
+        "type": "select",
+        "id": "text_alignment",
+        "label": "Text Alignment (Mobile)",
+        "options": [
+          {
+            "value": "text-left",
+            "label": "Left"
+          },
+          {
+            "value": "text-center",
+            "label": "Center"
+          },
+          {
+            "value": "text-right",
+            "label": "Right"
+          }
+        ]
+      },
+      {
+        "type": "select",
+        "id": "text_alignment_desktop",
+        "label": "Text Alignment (Desktop)",
+        "options": [
+          {
+            "value": "tabletl:text-left",
+            "label": "Left"
+          },
+          {
+            "value": "tabletl:text-center",
+            "label": "Center"
+          },
+          {
+            "value": "tabletl:text-right",
+            "label": "Right"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      { "name": "Video - Overlay" }
+    ]
+  }
+{% endschema %}

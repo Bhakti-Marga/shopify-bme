@@ -1,0 +1,191 @@
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+<div class="sangha-map-section" id="comunidades">
+
+  <div class="container py-xl text-center">
+    <h2 class="h2" style="color:#fff;">{{ section.settings.title }}</h2>
+    <p class="mt-md text-16 opacity-70" style="color:#fff;">{{ section.settings.subtitle }}</p>
+  </div>
+
+  <!-- Legend -->
+  <div class="container flex gap-xl mb-lg">
+    <div class="flex items-center gap-sm">
+      <svg width="22" height="30" viewBox="0 0 32 45" xmlns="http://www.w3.org/2000/svg">
+        <path d="M16 0C7.163 0 0 7.163 0 16c0 11 16 29 16 29S32 27 32 16C32 7.163 24.837 0 16 0z" fill="#D4AF37" stroke="#B8960C" stroke-width="1.5"/>
+        <circle cx="16" cy="16" r="6" fill="white"/>
+      </svg>
+      <span class="text-14" style="color:#fff;">Templo</span>
+    </div>
+    <div class="flex items-center gap-sm">
+      <svg width="18" height="25" viewBox="0 0 32 45" xmlns="http://www.w3.org/2000/svg">
+        <path d="M16 0C7.163 0 0 7.163 0 16c0 11 16 29 16 29S32 27 32 16C32 7.163 24.837 0 16 0z" fill="#16254c" stroke="#0d1a36" stroke-width="1.5"/>
+        <circle cx="16" cy="16" r="6" fill="white"/>
+      </svg>
+      <span class="text-14" style="color:#fff;">Sangha</span>
+    </div>
+  </div>
+
+  <div class="container">
+    <div id="sangha-map" style="height:560px;width:100%;border-radius:16px;overflow:hidden;"></div>
+  </div>
+
+</div>
+
+<style>
+  .sangha-map-section {
+    background: #16254c;
+    padding-bottom: 60px;
+  }
+  .leaflet-popup-content-wrapper {
+    border-radius: 12px;
+    border-top: 4px solid #16254c;
+    padding: 0;
+  }
+  .leaflet-popup-content {
+    margin: 14px 18px;
+  }
+  .smap-popup__type {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 4px;
+  }
+  .smap-popup__type--temple { color: #D4AF37; }
+  .smap-popup__type--sangha { color: #16254c; }
+  .smap-popup__name {
+    font-size: 15px;
+    font-weight: 700;
+    color: #16254c;
+    margin-bottom: 2px;
+  }
+  .smap-popup__city {
+    font-size: 13px;
+    color: #888;
+  }
+  .smap-popup__divider { border: none; border-top: 1px solid #eee; margin: 10px 0; }
+  .smap-popup__label { font-weight: 700; font-size: 13px; color: #16254c; }
+  .smap-popup__row { font-size: 13px; margin-bottom: 6px; color: #444; }
+  .smap-popup__activities { font-size: 13px; color: #444; margin-bottom: 12px; }
+  .smap-popup__btn {
+    display: block;
+    background: #16254c;
+    color: #fff !important;
+    text-align: center;
+    padding: 10px 14px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-decoration: none;
+    margin-top: 4px;
+  }
+  .smap-popup__btn:hover { background: #0d1a36; }
+</style>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+
+  var map = L.map('sangha-map', {
+    scrollWheelZoom: false
+  });
+
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>',
+    subdomains: 'abcd',
+    maxZoom: 19
+  }).addTo(map);
+
+  function makePin(type) {
+    var isTemple = type === 'temple';
+    var fill   = isTemple ? '#D4AF37' : '#16254c';
+    var stroke = isTemple ? '#B8960C' : '#0d1a36';
+    var size   = isTemple ? 32 : 26;
+    var svg = '<svg width="'+size+'" height="'+(size*1.4)+'" viewBox="0 0 32 44" xmlns="http://www.w3.org/2000/svg">'
+      + '<path d="M16 0C7.163 0 0 7.163 0 16c0 10 16 28 16 28S32 26 32 16C32 7.163 24.837 0 16 0z" fill="'+fill+'" stroke="'+stroke+'" stroke-width="1.5"/>'
+      + '<circle cx="16" cy="16" r="6" fill="white"/>'
+      + '</svg>';
+    return L.divIcon({
+      className: '',
+      html: svg,
+      iconSize:   [size, size*1.4],
+      iconAnchor: [size/2, size*1.4],
+      popupAnchor:[0, -(size*1.4)]
+    });
+  }
+
+  var temples = [
+    { name: 'Templo Bhava Narasimha', city: 'Benamocarra, Málaga', lat: 36.7775, lng: -4.0597,
+      contact: 'Seva Coordinador', activities: ['Puja diaria', 'Kirtan', 'Abhishekam', 'Meditación'], url: '#' },
+    { name: 'Templo Hari Hara', city: 'Lanzarote', lat: 28.9636, lng: -13.5477,
+      contact: 'Seva Coordinador', activities: ['Puja diaria', 'Kirtan', 'Atma Kriya Yoga'], url: '#' }
+  ];
+
+  var sanghas = [
+    { name: 'Sangha Galicia',   city: 'Turzás, Galicia',              lat: 42.8406, lng: -7.8642,  contact: 'Coordinador Local', activities: ['Kirtan', 'Atma Kriya Yoga', 'Babaji Surya Namaskar'], url: '#' },
+    { name: 'Sangha Valencia',  city: 'Valencia',                     lat: 39.4699, lng: -0.3763,  contact: 'Coordinador Local', activities: ['Clases de conocimiento', 'Canto OM', 'Kirtan'], url: '#' },
+    { name: 'Sangha Barcelona', city: 'Barcelona',                    lat: 41.3851, lng:  2.1734,  contact: 'Coordinador Local', activities: ['Kirtan', 'Meditación Sri Yantra', 'Atma Kriya Yoga'], url: '#' },
+    { name: 'Sangha Gipuzkoa',  city: 'Gipuzkoa',                    lat: 43.1828, lng: -2.2023,  contact: 'Coordinador Local', activities: ['Kirtan', 'Babaji Surya Namaskar'], url: '#' },
+    { name: 'Sangha Euskadi',   city: 'Euskadi',                      lat: 43.2630, lng: -2.9350,  contact: 'Coordinador Local', activities: ['Kirtan', 'Atma Kriya Yoga'], url: '#' },
+    { name: 'Sangha Málaga',    city: 'Málaga',                       lat: 36.7213, lng: -4.4214,  contact: 'Coordinador Local', activities: ['Canto OM', 'Kirtan', 'Meditación'], url: '#' },
+    { name: 'Sangha Riba-Roja', city: 'Riba-Roja de Túria, Valencia', lat: 39.5379, lng: -0.4286,  contact: 'Coordinador Local', activities: ['Kirtan', 'Clases de conocimiento'], url: '#' },
+    { name: 'Sangha Canals',    city: 'Canals, Valencia',             lat: 38.9638, lng: -0.5867,  contact: 'Coordinador Local', activities: ['Kirtan', 'Atma Kriya Yoga', 'Canto OM'], url: '#' },
+    { name: 'Sangha Madrid',    city: 'Madrid',                       lat: 40.4168, lng: -3.7038,  contact: 'Coordinador Local', activities: ['Clases de conocimiento', 'Kirtan', 'Babaji Surya Namaskar'], url: '#' }
+  ];
+
+  temples.forEach(function(t) {
+    L.marker([t.lat, t.lng], { icon: makePin('temple') })
+      .bindPopup(
+        '<div class="smap-popup__type smap-popup__type--temple">Templo</div>' +
+        '<div class="smap-popup__name">' + t.name + '</div>' +
+        '<div class="smap-popup__city">' + t.city + '</div>' +
+        '<hr class="smap-popup__divider">' +
+        '<div class="smap-popup__row"><span class="smap-popup__label">Contacto:</span> ' + t.contact + '</div>' +
+        '<div class="smap-popup__activities"><span class="smap-popup__label">Actividades:</span><br>' + t.activities.join(', ') + '</div>' +
+        '<a href="' + t.url + '" class="smap-popup__btn">VISITAR PÁGINA DEL TEMPLO</a>'
+      )
+      .addTo(map);
+  });
+
+  sanghas.forEach(function(s) {
+    L.marker([s.lat, s.lng], { icon: makePin('sangha') })
+      .bindPopup(
+        '<div class="smap-popup__type smap-popup__type--sangha">Sangha</div>' +
+        '<div class="smap-popup__name">' + s.name + '</div>' +
+        '<div class="smap-popup__city">' + s.city + '</div>' +
+        '<hr class="smap-popup__divider">' +
+        '<div class="smap-popup__row"><span class="smap-popup__label">Contacto:</span> ' + s.contact + '</div>' +
+        '<div class="smap-popup__activities"><span class="smap-popup__label">Actividades:</span><br>' + s.activities.join(', ') + '</div>' +
+        '<a href="' + s.url + '" class="smap-popup__btn">VISITAR PÁGINA DE SANGHA</a>'
+      )
+      .addTo(map);
+  });
+
+  // Auto-fit map to show all markers
+  var allCoords = temples.concat(sanghas).map(function(p) { return [p.lat, p.lng]; });
+  map.fitBounds(allCoords, { padding: [40, 40] });
+
+});
+</script>
+
+{% schema %}
+{
+  "name": "Sangha Map",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Encuentra tu Sangha"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "Descubre tu comunidad Bhakti Marga más cercana en España"
+    }
+  ],
+  "presets": [{ "name": "Sangha Map" }]
+}
+{% endschema %}

@@ -1,0 +1,86 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "page__main",
+      "disabled": true,
+      "settings": {}
+    },
+    "section_hero_cBpMpY": {
+      "type": "section__hero",
+      "settings": {
+        "padding_top": "0px",
+        "desktop_padding_top": "inherit",
+        "padding_bottom": "40px",
+        "desktop_padding_bottom": "60px",
+        "padding_horizontal": "px-0",
+        "desktop_padding_horizontal": "inherit",
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "use_container": true,
+        "set_100vh": true,
+        "set_100vh_desktop": true,
+        "border_radius": 16,
+        "aspect_ratio": "9\/16",
+        "aspect_ratio_desktop": "4\/3",
+        "image": "shopify:\/\/shop_images\/The_Tools_44d2dc91-9290-4fa9-ad5b-130314386bc7.jpg",
+        "image_desktop": "shopify:\/\/shop_images\/The_Tools_44d2dc91-9290-4fa9-ad5b-130314386bc7.jpg",
+        "bg_color": "#16254c",
+        "content_width": "max-w-5xl",
+        "text_align": "text-left",
+        "text_color": "#ffffff",
+        "title": "Request a course",
+        "title_font_style": "h3",
+        "subtitle": "",
+        "button_text": "",
+        "button_url": "",
+        "button_style": "btn btn--gold",
+        "anchor_to_pricing": false,
+        "video_title": "",
+        "horizontal_position": "justify-start",
+        "vertical_position": "items-end"
+      }
+    },
+    "1750841109ec6ceaaa": {
+      "type": "apps",
+      "blocks": {
+        "forms_inline_qAUUx9": {
+          "type": "shopify:\/\/apps\/forms\/blocks\/inline\/8744a304-fcb1-4347-b211-bb6b4759a76a",
+          "settings": {
+            "form_id": "528133",
+            "text_color": "#16254c",
+            "button_background_color": "#16254c",
+            "button_label_color": "#FFFFFF",
+            "links_color": "#1878B9",
+            "errors_color": "#E02229",
+            "text_alignment": "left",
+            "form_alignment": "center",
+            "padding_top": 40,
+            "padding_bottom": 40,
+            "padding_right": 0,
+            "padding_left": 0
+          }
+        }
+      },
+      "block_order": [
+        "forms_inline_qAUUx9"
+      ],
+      "settings": {}
+    }
+  },
+  "order": [
+    "main",
+    "section_hero_cBpMpY",
+    "1750841109ec6ceaaa"
+  ]
+}

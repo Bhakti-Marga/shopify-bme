@@ -1,0 +1,253 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "page__main",
+      "disabled": true,
+      "settings": {}
+    },
+    "section_hero_cBpMpY": {
+      "type": "section__hero",
+      "settings": {
+        "padding_top": "0px",
+        "desktop_padding_top": "inherit",
+        "padding_bottom": "16px",
+        "desktop_padding_bottom": "inherit",
+        "padding_horizontal": "px-0",
+        "desktop_padding_horizontal": "inherit",
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "use_container": true,
+        "set_100vh": true,
+        "border_radius": 16,
+        "aspect_ratio": "auto",
+        "aspect_ratio_desktop": "auto",
+        "image": "shopify:\/\/shop_images\/placeholder-img.png",
+        "image_desktop": "shopify:\/\/shop_images\/2018-12-07-p-0245.jpg",
+        "bg_color": "#16254c",
+        "content_width": "max-w-5xl",
+        "text_align": "text-left",
+        "text_color": "#ffffff",
+        "title": "Bhakti Marga Community",
+        "title_font_style": "h2",
+        "subtitle": "<p>Be part of a vibrant, spiritual family that gathers regularly to experience and share the Love of God”<\/p>",
+        "button_text": "Find Your Community",
+        "button_url": "#",
+        "button_style": "btn",
+        "video_title": "",
+        "horizontal_position": "justify-center",
+        "vertical_position": "items-end"
+      }
+    },
+    "section_content_grid_N744rE": {
+      "type": "section__content-grid",
+      "blocks": {
+        "content_block_9pPMLd": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/placeholder-img.png",
+            "title": "",
+            "title_tag": "h2",
+            "title_font_style": "h4",
+            "description": "",
+            "cta_link": "",
+            "cta_label": "",
+            "cta_style": "btn btn--black"
+          }
+        },
+        "content_block_TL6zKT": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/placeholder-img.png",
+            "title": "",
+            "title_tag": "h2",
+            "title_font_style": "h4",
+            "description": "",
+            "cta_link": "",
+            "cta_label": "",
+            "cta_style": "btn btn--black"
+          }
+        },
+        "content_block_BgRX3i": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/placeholder-img.png",
+            "title": "",
+            "title_tag": "h2",
+            "title_font_style": "h4",
+            "description": "",
+            "cta_link": "",
+            "cta_label": "",
+            "cta_style": "btn btn--black"
+          }
+        },
+        "content_block_4xMXn9": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/placeholder-img.png",
+            "title": "",
+            "title_tag": "h2",
+            "title_font_style": "h4",
+            "description": "",
+            "cta_link": "",
+            "cta_label": "",
+            "cta_style": "btn btn--black"
+          }
+        },
+        "content_block_iqp3iT": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/placeholder-img.png",
+            "title": "",
+            "title_tag": "h2",
+            "title_font_style": "h4",
+            "description": "",
+            "cta_link": "",
+            "cta_label": "",
+            "cta_style": "btn btn--black"
+          }
+        },
+        "content_block_y9aKh9": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/placeholder-img.png",
+            "title": "",
+            "title_tag": "h2",
+            "title_font_style": "h4",
+            "description": "",
+            "cta_link": "",
+            "cta_label": "",
+            "cta_style": "btn btn--black"
+          }
+        }
+      },
+      "block_order": [
+        "content_block_9pPMLd",
+        "content_block_TL6zKT",
+        "content_block_BgRX3i",
+        "content_block_4xMXn9",
+        "content_block_iqp3iT",
+        "content_block_y9aKh9"
+      ],
+      "settings": {
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "padding_top": "pt-xl",
+        "padding_bottom": "pb-0",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "desktop_padding_top": "inherit",
+        "desktop_padding_bottom": "tabletl:pb-xl",
+        "bg_color": "",
+        "cols_mobile": "1",
+        "cols_desktop": "3",
+        "horizontal_gap_mobile": "gap-x-md",
+        "horizontal_gap_desktop": "tabletl:gap-x-md",
+        "vertical_gap_mobile": "gap-y-md",
+        "vertical_gap_desktop": "tabletl:gap-y-md",
+        "format": "inside"
+      }
+    },
+    "section_image_text_blocks_PHhidM": {
+      "type": "section__image_text_blocks",
+      "blocks": {
+        "image_block_jfBVbY": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/2023-09-02-p-0121.jpg",
+            "height": "auto",
+            "desktop_height": "50vh"
+          }
+        },
+        "content_block_gVQiM6": {
+          "type": "content_block",
+          "settings": {
+            "title": "Paranitya Narasimha Center  Elmira, New York",
+            "title_tag": "h2",
+            "title_font_style": "h4",
+            "description": "<p>The Center is home to a world-renowned Narasimha temple and is the co-global headquarters of the Bhakti Marga’s mission. <\/p>",
+            "credits": "",
+            "cta_url": "#",
+            "cta_label": "Visítanos",
+            "text_align": "left",
+            "desktop_text_align": "inherit",
+            "vertical_padding": "py-lg",
+            "vertical_padding_desktop": "tabletl:py-xxl"
+          }
+        }
+      },
+      "block_order": [
+        "image_block_jfBVbY",
+        "content_block_gVQiM6"
+      ],
+      "custom_css": [],
+      "settings": {
+        "margin_top": "mt-xl",
+        "margin_bottom": "mb-0",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "tabletl:mb-lg",
+        "vertical_align": "center",
+        "flip_columns_desktop": true
+      }
+    },
+    "section_image_text_blocks_Kixczp": {
+      "type": "section__image_text_blocks",
+      "blocks": {
+        "image_block_4RXENQ": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/placeholder-img.png",
+            "height": "auto",
+            "desktop_height": "inherit"
+          }
+        },
+        "content_block_rLPL9a": {
+          "type": "content_block",
+          "settings": {
+            "title": "Shree Peetha Nilaya Springen, Germany",
+            "title_tag": "h2",
+            "title_font_style": "h4",
+            "description": "<p>The Ashram is the “home of the divine mother” and currently the permanent residence of Paramahamsa Vishwananda. It's the co-global headquarters of the Bhakti Marga mission.<\/p>",
+            "credits": "",
+            "cta_url": "#",
+            "cta_label": "Saber más",
+            "text_align": "left",
+            "desktop_text_align": "inherit",
+            "vertical_padding": "py-lg",
+            "vertical_padding_desktop": "tabletl:py-xxl"
+          }
+        }
+      },
+      "block_order": [
+        "image_block_4RXENQ",
+        "content_block_rLPL9a"
+      ],
+      "custom_css": [],
+      "settings": {
+        "margin_top": "mt-xl",
+        "margin_bottom": "mb-0",
+        "desktop_margin_top": "tabletl:mt-xl",
+        "desktop_margin_bottom": "tabletl:mb-xl",
+        "vertical_align": "center",
+        "flip_columns_desktop": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "section_hero_cBpMpY",
+    "section_content_grid_N744rE",
+    "section_image_text_blocks_PHhidM",
+    "section_image_text_blocks_Kixczp"
+  ]
+}

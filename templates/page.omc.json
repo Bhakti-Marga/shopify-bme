@@ -1,0 +1,207 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "page__main",
+      "disabled": true,
+      "settings": {}
+    },
+    "section_hero_cBpMpY": {
+      "type": "section__hero",
+      "custom_css": [
+        ".hero__content-wrapper {background: #0000004a; z-index: 1; position: sticky;}"
+      ],
+      "settings": {
+        "padding_top": "0px",
+        "desktop_padding_top": "inherit",
+        "padding_bottom": "40px",
+        "desktop_padding_bottom": "60px",
+        "padding_horizontal": "px-0",
+        "desktop_padding_horizontal": "inherit",
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "use_container": true,
+        "set_100vh": true,
+        "set_100vh_desktop": true,
+        "border_radius": 16,
+        "aspect_ratio": "auto",
+        "aspect_ratio_desktop": "4\/3",
+        "image": "shopify:\/\/shop_images\/omc-hero.jpg",
+        "image_desktop": "shopify:\/\/shop_images\/omc-hero.jpg",
+        "bg_color": "#16254c",
+        "content_width": "max-w-5xl",
+        "text_align": "text-left",
+        "text_color": "#ffffff",
+        "title": "OM Chanting",
+        "title_font_style": "h3",
+        "subtitle": "<p>God creates by vibration. Om is the seed vibration. Bathing in its resonance clears mental and physical blockages.<br\/><br\/>As a group practice, it’s also a great way to connect with people. You can find a group or even start your own.<\/p>",
+        "button_text": "",
+        "button_url": "",
+        "button_style": "btn",
+        "anchor_to_pricing": false,
+        "video_title": "",
+        "video_url": "shopify:\/\/files\/videos\/Intro to OM Chanting.mp4",
+        "poster_video": "shopify:\/\/files\/videos\/Intro to OM Chanting.mp4",
+        "horizontal_position": "justify-center",
+        "vertical_position": "items-end"
+      }
+    },
+    "bm_event_slider_mzXtyt": {
+      "type": "BM-event-slider",
+      "name": "Product Carousel",
+      "settings": {
+        "product_collection": "events",
+        "set_dark_theme": true,
+        "apply_gradient": true,
+        "title": "Upcoming Courses",
+        "title_tag": "h2",
+        "cta_label": "",
+        "cta_url": "",
+        "padding_top": "pt-xl",
+        "padding_bottom": "pb-xl",
+        "desktop_padding_top": "inherit",
+        "desktop_padding_bottom": "inherit"
+      }
+    },
+    "section_hero_EmDBMy": {
+      "type": "section__hero",
+      "custom_css": [
+        ".hero__content-wrapper {background: #0000004a; z-index: 1; position: sticky;}"
+      ],
+      "settings": {
+        "padding_top": "0px",
+        "desktop_padding_top": "0px",
+        "padding_bottom": "0px",
+        "desktop_padding_bottom": "inherit",
+        "padding_horizontal": "px-0",
+        "desktop_padding_horizontal": "inherit",
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "use_container": false,
+        "set_100vh": false,
+        "set_100vh_desktop": true,
+        "border_radius": 0,
+        "aspect_ratio": "9\/16",
+        "aspect_ratio_desktop": "16\/9",
+        "image": "shopify:\/\/shop_images\/omc_b5127473-0a55-454d-b35c-af61996a22dc.jpg",
+        "bg_color": "",
+        "content_width": "max-w-5xl",
+        "text_align": "text-center",
+        "text_color": "#ffffff",
+        "title": "OM Chanting is a group practice that uses the transformational power of OM to activate the self-healing potential of participants.It also brings people together in service of others. Like a prayer, the positive vibrations of OM can be offered to support those in need.",
+        "title_font_style": "h5",
+        "subtitle": "",
+        "button_text": "",
+        "button_url": "",
+        "button_style": "btn",
+        "anchor_to_pricing": false,
+        "video_title": "",
+        "horizontal_position": "justify-center",
+        "vertical_position": "items-center"
+      }
+    },
+    "section_image_text_blocks_PHhidM": {
+      "type": "section__image_text_blocks",
+      "blocks": {
+        "image_block_jfBVbY": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/omc1.jpg",
+            "height": "auto",
+            "desktop_height": "auto"
+          }
+        },
+        "content_block_gVQiM6": {
+          "type": "content_block",
+          "settings": {
+            "title": "OM Chanting",
+            "title_tag": "h3",
+            "title_font_style": "h4",
+            "description": "<p>OM Chanting promotes inner peace, mental clarity, emotional freedom and physical health. Many people experience positive shifts. <\/p><p>It also generates a vibrational frequency that releases negativity, transforms it and showers participants with positive energy.<\/p><p>And the vibrational waves created by the OM Chanting practise spreads out in a 2-kilometre radius, creating a harmonious, peaceful environment and a unity between humans and nature.<\/p>",
+            "credits": "",
+            "cta_url": "#",
+            "cta_label": "",
+            "text_align": "left",
+            "desktop_text_align": "inherit",
+            "vertical_padding": "py-lg",
+            "vertical_padding_desktop": "tabletl:py-xxl"
+          }
+        }
+      },
+      "block_order": [
+        "image_block_jfBVbY",
+        "content_block_gVQiM6"
+      ],
+      "custom_css": [],
+      "settings": {
+        "margin_top": "mt-xl",
+        "margin_bottom": "mb-0",
+        "desktop_margin_top": "tabletl:mt-xxxl",
+        "desktop_margin_bottom": "tabletl:mb-xl",
+        "vertical_align": "center",
+        "flip_columns_desktop": false
+      }
+    },
+    "section_image_text_blocks_Xfh44d": {
+      "type": "section__image_text_blocks",
+      "blocks": {
+        "image_block_k6rWMK": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/omc2.jpg",
+            "height": "auto",
+            "desktop_height": "auto"
+          }
+        },
+        "content_block_8FN3f3": {
+          "type": "content_block",
+          "settings": {
+            "title": "Request a course",
+            "title_tag": "h3",
+            "title_font_style": "h4",
+            "description": "<p>You can also become a OM Chanting organizer, please click on the button bellow and sign-up the form.<\/p>",
+            "credits": "",
+            "cta_url": "shopify:\/\/pages\/request-a-course",
+            "cta_label": "Enviar mi nombre",
+            "text_align": "left",
+            "desktop_text_align": "inherit",
+            "vertical_padding": "py-lg",
+            "vertical_padding_desktop": "tabletl:py-xxl"
+          }
+        }
+      },
+      "block_order": [
+        "image_block_k6rWMK",
+        "content_block_8FN3f3"
+      ],
+      "settings": {
+        "margin_top": "mt-xl",
+        "margin_bottom": "mb-0",
+        "desktop_margin_top": "tabletl:mt-xxxl",
+        "desktop_margin_bottom": "tabletl:mb-xl",
+        "vertical_align": "center",
+        "flip_columns_desktop": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "section_hero_cBpMpY",
+    "bm_event_slider_mzXtyt",
+    "section_hero_EmDBMy",
+    "section_image_text_blocks_PHhidM",
+    "section_image_text_blocks_Xfh44d"
+  ]
+}

@@ -1,0 +1,370 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "page__main",
+      "disabled": true,
+      "settings": {}
+    },
+    "section_hero_cBpMpY": {
+      "type": "section__hero",
+      "custom_css": [],
+      "settings": {
+        "padding_top": "0px",
+        "desktop_padding_top": "inherit",
+        "padding_bottom": "16px",
+        "desktop_padding_bottom": "40px",
+        "padding_horizontal": "px-0",
+        "desktop_padding_horizontal": "inherit",
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "use_container": true,
+        "set_100vh": false,
+        "border_radius": 16,
+        "aspect_ratio": "9\/16",
+        "aspect_ratio_desktop": "16\/9",
+        "image": "shopify:\/\/shop_images\/placeholder-img.png",
+        "video": "shopify:\/\/files\/videos\/2025-02-01-BM3Web-SundayProgram-Loop-03.mp4",
+        "bg_color": "#16254c",
+        "content_width": "max-w-5xl",
+        "text_align": "text-left",
+        "text_color": "#ffffff",
+        "title": "Deepen your devotion anytime, anywhere.",
+        "title_font_style": "h2",
+        "subtitle": "",
+        "button_text": "",
+        "button_url": "",
+        "button_style": "btn",
+        "anchor_to_pricing": false,
+        "video_title": "",
+        "horizontal_position": "justify-center",
+        "vertical_position": "items-end"
+      }
+    },
+    "section_hero_EmDBMy": {
+      "type": "section__hero",
+      "custom_css": [],
+      "settings": {
+        "padding_top": "0px",
+        "desktop_padding_top": "0px",
+        "padding_bottom": "0px",
+        "desktop_padding_bottom": "inherit",
+        "padding_horizontal": "px-0",
+        "desktop_padding_horizontal": "inherit",
+        "margin_top": "mt-xl",
+        "margin_bottom": "mb-0",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "tabletl:mb-xl",
+        "use_container": true,
+        "set_100vh": false,
+        "border_radius": 16,
+        "aspect_ratio": "auto",
+        "aspect_ratio_desktop": "16\/9",
+        "image": "shopify:\/\/shop_images\/BHAKTI-SUNDAYS-HERO.jpg",
+        "bg_color": "",
+        "content_width": "max-w-5xl",
+        "text_align": "text-left",
+        "text_color": "#ffffff",
+        "title": "Bhakti Sundays",
+        "title_font_style": "h2",
+        "subtitle": "<p>Welcome to Bhakti Sundays! Our Online Sunday Program is on a mission to bring Bhakti to the people - whether you are new to the path of Bhakti, or a seasoned practitioner, Bhakti Sundays is designed to help you connect with God, your true Self, and our community of like-minded people at your convenience. It serves as a weekly reminder that life reveals its greatest joy when we align with the Divine. <\/p>",
+        "button_text": "Starting August 2025!",
+        "button_url": "#",
+        "button_style": "btn",
+        "anchor_to_pricing": false,
+        "video_title": "",
+        "horizontal_position": "justify-start",
+        "vertical_position": "items-end"
+      }
+    },
+    "section_content_grid_YGe7gK": {
+      "type": "section__content-grid",
+      "blocks": {
+        "content_block_NyHgbJ": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/bm-03-mainokriya.jpg",
+            "title": "Multifaceted Movement",
+            "title_tag": "h3",
+            "title_font_style": "h4",
+            "description": "<p>As a multifaceted movement, Bhakti Marga incorporates elements such as yoga, meditation, music, art, knowledge lectures, events, charity work, community engagement and more! Bhakti Sundays distills these elements into a concise, enriching experience that you can enjoy from the comfort of your home.<\/p><p>Bhakti Sundays distills these elements into a concise, enriching experience.<\/p>",
+            "cta_link": "",
+            "cta_label": "",
+            "cta_style": "btn btn--black",
+            "cta_klaviyo_embed": ""
+          }
+        },
+        "content_block_PDLjFQ": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/SUNDAY-PROGRAM-ONLINE-3_200dc6b7-0bfc-4ed9-a4b7-0bc8e964a8b4.jpg",
+            "title": "Every Sunday, Everywhere",
+            "title_tag": "h2",
+            "title_font_style": "h4",
+            "description": "<p>Bhakti Sundays meets every Sunday at 11:00 AM ET on our Bhakti Marga YouTube channel for a unique experience led by our hosts, talented musicians and speakers and even the occasional appearance by Paramahamsa Vishwananda when His schedule allows it!<\/p>",
+            "cta_link": "",
+            "cta_label": "",
+            "cta_style": "btn btn--black",
+            "cta_klaviyo_embed": ""
+          }
+        }
+      },
+      "block_order": [
+        "content_block_NyHgbJ",
+        "content_block_PDLjFQ"
+      ],
+      "custom_css": [],
+      "settings": {
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "padding_top": "pt-xl",
+        "padding_bottom": "pb-0",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "desktop_padding_top": "inherit",
+        "desktop_padding_bottom": "tabletl:pb-xl",
+        "bg_color": "",
+        "cols_mobile": "1",
+        "cols_desktop": "2",
+        "horizontal_gap_mobile": "gap-x-md",
+        "horizontal_gap_desktop": "tabletl:gap-x-md",
+        "vertical_gap_mobile": "gap-y-md",
+        "vertical_gap_desktop": "tabletl:gap-y-md",
+        "format": "inside",
+        "text_color": "#ffffff",
+        "apply_gradient": true,
+        "gradient_height": 40,
+        "gradient_color": "#000000"
+      }
+    },
+    "section_icon_grid_BFYa8i": {
+      "type": "section__icon-grid",
+      "blocks": {
+        "content_block_VGaw7Y": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/A_Hosted_Experience.png",
+            "title": "A Hosted Experience",
+            "title_tag": "h3",
+            "title_font_style": "h5",
+            "description": "<p>Each Sunday, our hosts will welcome you and guide you through the program. Often they will share updates on the latest happenings within the Bhakti Marga world or they may even conduct unique interviews with special guests, showing a little of the world of Bhakti Marga behind the scenes!<\/p>",
+            "content_align": "items-start"
+          }
+        },
+        "content_block_MxbrVy": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Kirtan_-_Devotional_Music.png",
+            "title": "Kirtan - Devotional Music",
+            "title_tag": "h3",
+            "title_font_style": "h5",
+            "description": "<p>You’ll enjoy uplifting kirtan (call-and-response music) led by our talented musicians, with lyrics displayed on-screen so you can sing along with us. Singing together is a moment for us all to let go of distractions and focus on God together. There is immense energy and power when we gather together and sing heartfelt songs that honor God for who He is and what He’s done, through the ages and in our lives. <\/p>",
+            "content_align": "items-start"
+          }
+        },
+        "content_block_RbgVhW": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/A_Powerful_Message.png",
+            "title": "A Powerful Message",
+            "title_tag": "h3",
+            "title_font_style": "h5",
+            "description": "<p>Every month features a new and relevant theme, explored through inspiring 30-minute talks by our senior teachers. These lectures offer practical insights and tools to deepen your connection with God and improve your daily life. The lectures are grounded, authentic and inspired by the incomparable wisdom of Paramahamsa Vishwananda and the Vedic tradition.<\/p>",
+            "content_align": "items-start"
+          }
+        },
+        "content_block_GgJ49k": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/A_Loving_Community.png",
+            "title": "A Loving Community",
+            "title_tag": "h3",
+            "title_font_style": "h5",
+            "description": "<p>Our weekly program is here to help keep your inner flame alive, supporting you in becoming the best version of yourself. By coming together in these special moments, we form a powerful, positive force to inspire others and lead with kindness—whether in family life, at work, or in all aspects of life. So please, invite your family and friends to join us at Bhakti Sundays and experience the love of God!<\/p>",
+            "content_align": "items-start"
+          }
+        }
+      },
+      "block_order": [
+        "content_block_VGaw7Y",
+        "content_block_MxbrVy",
+        "content_block_RbgVhW",
+        "content_block_GgJ49k"
+      ],
+      "custom_css": [],
+      "settings": {
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "padding_top": "pt-xl",
+        "padding_bottom": "pb-0",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "desktop_padding_top": "inherit",
+        "desktop_padding_bottom": "tabletl:pb-xl",
+        "cols_mobile": "1",
+        "cols_desktop": "2",
+        "text_align": "text-left",
+        "title": "",
+        "subtitle": "",
+        "button_text": "",
+        "button_url": "",
+        "button_style": "btn"
+      }
+    },
+    "section_playlist_WUtnJ6": {
+      "type": "section__playlist",
+      "blocks": {
+        "media_block_E9faDk": {
+          "type": "media_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/rishi-aaradhaka-thumbnail.jpg",
+            "title": "Bhaja Govinda Govinda Gopala",
+            "name": "Rishi Aaradhakananda",
+            "url": "https:\/\/www.youtube.com\/watch?v=y68bHyG39Bc"
+          }
+        },
+        "media_block_6mjdHh": {
+          "type": "media_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/2019-08-06-KS-Sati-Raghupati-Thumbnail.jpg",
+            "title": "Raghupati Raghava Raja Ram",
+            "name": "Sati Ethnica",
+            "url": "https:\/\/www.youtube.com\/watch?v=9WC8QbVJyLE"
+          }
+        },
+        "media_block_gjUJwe": {
+          "type": "media_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/2019-03-01-KS-Bhavani-Radhe-Krishna-Govinda-Thumbnail.jpg",
+            "title": "Radhe Krishna Govinda",
+            "name": "Bhavani",
+            "url": "https:\/\/www.youtube.com\/watch?v=Dk-SYl5jCXU"
+          }
+        },
+        "media_block_KbceXq": {
+          "type": "media_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/2019-11-28-KS-Shankari-Sri-Radha-Jai-Shyam-Radhe-Thumbnail.jpg",
+            "title": "Sri Radhe Jai Shyam Radhe",
+            "name": "Shankaridasi",
+            "url": "https:\/\/www.youtube.com\/watch?v=Y2A7CYuuVg8"
+          }
+        },
+        "media_block_Ai3yfJ": {
+          "type": "media_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/2020-06-26-KS-Bhavani-Aaradhaka-SVGPN-Thumbnail.jpg",
+            "title": "Sri Vitthala Giridhari Parabrahmane Namaha",
+            "name": "Bhavani",
+            "url": "https:\/\/www.youtube.com\/watch?v=3-Kpp52aFX8"
+          }
+        }
+      },
+      "block_order": [
+        "media_block_E9faDk",
+        "media_block_6mjdHh",
+        "media_block_gjUJwe",
+        "media_block_KbceXq",
+        "media_block_Ai3yfJ"
+      ],
+      "custom_css": [],
+      "settings": {
+        "margin_top": "mt-xl",
+        "margin_bottom": "mb-xl",
+        "padding_top": "pt-0",
+        "padding_bottom": "pb-0",
+        "desktop_margin_top": "tabletl:mt-xl",
+        "desktop_margin_bottom": "tabletl:mb-xl",
+        "desktop_padding_top": "inherit",
+        "desktop_padding_bottom": "tabletl:pb-0",
+        "playlist_position": "right",
+        "image": "shopify:\/\/shop_images\/thumnail-guruji-live-kirtan.jpg",
+        "title": "Kirtan Sessions",
+        "title_tag": "h3",
+        "avatar": "shopify:\/\/shop_images\/channels4_profile-3.jpg",
+        "name": "By Bhakti Marga Music",
+        "video_count": "323",
+        "url": "https:\/\/www.youtube.com\/playlist?list=PLRJzEHCmzsf2K-ETOxFTNC0r6QNbqSE5A",
+        "cta_label": "Play Now"
+      }
+    },
+    "section_podcast_3YRjKL": {
+      "type": "section__podcast",
+      "blocks": {
+        "content_block_8ybWYF": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/placeholder-img.png",
+            "title": "Transform your life from the inside out \u2028under the guidance of a Fully Realized, Kriya Yoga Master",
+            "topic": "Topic 1",
+            "date": "January 1, 2024",
+            "link": "#"
+          }
+        },
+        "content_block_wGEp3i": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/placeholder-img.png",
+            "title": "Transform your life from the inside out \u2028under the guidance of a Fully Realized, Kriya Yoga Master",
+            "topic": "Topic 2",
+            "date": "January 1, 2024",
+            "link": "#"
+          }
+        },
+        "content_block_A8yA7j": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/placeholder-img.png",
+            "title": "Transform your life from the inside out \u2028under the guidance of a Fully Realized, Kriya Yoga Master",
+            "topic": "Topic 2",
+            "date": "January 1, 2024",
+            "link": "#"
+          }
+        }
+      },
+      "block_order": [
+        "content_block_8ybWYF",
+        "content_block_wGEp3i",
+        "content_block_A8yA7j"
+      ],
+      "disabled": true,
+      "settings": {
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "padding_top": "pt-xl",
+        "padding_bottom": "pb-xl",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "tabletl:mb-xl",
+        "desktop_padding_top": "tabletl:pt-xxxl",
+        "desktop_padding_bottom": "tabletl:pb-xxxl",
+        "title": "Explore the Topics",
+        "title_tag": "h2",
+        "title_font_style": "h2",
+        "description": "<p>Bhakti Sunday's will be filled with inspiring and rich topics to enhace your spiritual journey. Explore the topics below, starting in August 2025!<\/p>",
+        "primary_bg_color": "#16254c",
+        "secondary_bg_color": "#ffffff",
+        "heading_color": "white",
+        "card_color": "black"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "section_hero_cBpMpY",
+    "section_hero_EmDBMy",
+    "section_content_grid_YGe7gK",
+    "section_icon_grid_BFYa8i",
+    "section_playlist_WUtnJ6",
+    "section_podcast_3YRjKL"
+  ]
+}

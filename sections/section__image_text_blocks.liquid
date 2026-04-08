@@ -1,0 +1,382 @@
+{%- liquid 
+  assign section_id = section.id
+  assign container_classes = "container"
+
+  if section.settings.margin_top != "mt-0"
+    assign container_classes = container_classes | append: " " | append: section.settings.margin_top
+  endif
+
+  if section.settings.margin_bottom != "mt-0"
+    assign container_classes = container_classes | append: " " | append: section.settings.margin_bottom
+  endif
+
+  if section.settings.desktop_margin_top != "inherit"
+    assign container_classes = container_classes | append: " " | append: section.settings.desktop_margin_top
+  endif
+
+  if section.settings.desktop_margin_bottom != "inherit"
+    assign container_classes = container_classes | append: " " | append: section.settings.desktop_margin_bottom
+  endif
+
+  assign container_classes = container_classes | strip
+-%}
+
+<section class="{{ container_classes }}">
+  <div class="grid grid-cols-1 tabletl:grid-cols-2 tabletl:gap-md">
+    {% for block in section.blocks %}
+      {% if block.type == 'image_block' %}
+        {% liquid
+          assign image_container_classes = ""
+          
+          if section.settings.flip_columns_desktop
+            assign image_container_classes = image_container_classes | append: " tabletl:order-last"
+          endif
+
+          assign image_classes = "w-full rounded object-center object-cover"
+          
+          if block.settings.height != 'auto'
+            assign image_classes = image_classes | append: " h-[var(--image-height)]"
+          else 
+            assign image_classes = image_classes | append: " h-auto"
+          endif
+
+          if block.settings.desktop_height != 'inherit'
+            assign image_classes = image_classes | append: " tabletl:h-[var(--image-height-desktop)]"
+          endif
+
+          assign image_container_classes = image_container_classes | strip
+          assign image_classes = image_classes | strip
+        %}
+
+        <div class="relative w-full h-full flex items-center justify-center {{ image_container_classes }}"
+          {% if block.settings.height != 'auto' %}style="--image-height: {{ block.settings.height }};"{% endif %}
+          {% if block.settings.desktop_height != 'inherit' %}style="{% if block.settings.height == 'auto' %}--image-height-desktop: {{ block.settings.desktop_height }};{% else %}--image-height: {{ block.settings.height }}; --image-height-desktop: {{ block.settings.desktop_height }};{% endif %}"{% endif %}
+        >
+          {% if block.settings.image %}
+            {% render 'lazy-image',
+              image: block.settings.image,
+              loading: 'lazy',
+              img_classes: image_classes
+            %}
+          {% endif %}
+        </div>
+      {% else %}
+        {% liquid
+          assign content_classes = ""
+
+          if section.settings.vertical_align == 'top'
+            assign content_classes = content_classes | append: " tabletl:justify-start"
+          elsif section.settings.vertical_align == 'center'
+            assign content_classes = content_classes | append: " tabletl:justify-center"
+          elsif section.settings.vertical_align == 'bottom'
+            assign content_classes = content_classes | append: " tabletl:justify-end"
+          endif
+
+          if block.settings.text_align == 'left'
+            assign content_classes = content_classes | append: " text-left"
+          elsif block.settings.text_align == 'center'
+            assign content_classes = content_classes | append: " text-center"
+          elsif block.settings.text_align == 'right'
+            assign content_classes = content_classes | append: " text-right"
+          endif
+
+          if block.settings.desktop_text_align != 'inherit'
+            if block.settings.desktop_text_align == 'left'
+              assign content_classes = content_classes | append: " tabletl:text-left"
+            elsif block.settings.desktop_text_align == 'center'
+              assign content_classes = content_classes | append: " tabletl:text-center"
+            else
+              assign content_classes = content_classes | append: " tabletl:text-right"
+            endif
+          endif
+
+          if block.settings.vertical_padding != 'none'
+            assign content_classes = content_classes | append: " " | append: block.settings.vertical_padding
+          endif
+
+          if block.settings.vertical_padding_desktop != 'inherit'
+            assign content_classes = content_classes | append: " " | append: block.settings.vertical_padding_desktop
+          endif
+
+          assign content_classes = content_classes | strip
+        %}
+
+        <div class="tabletl:px-md h-full flex flex-col {{ content_classes }}">
+          <div class="flex flex-col gap-md tabletl:max-w-[490px] tabletl:mx-auto tabletl:w-full">
+            {% if block.settings.title != blank %}
+              <{{ block.settings.title_tag }} class="{{ block.settings.title_font_style }}">
+                {{ block.settings.title }}
+              </{{ block.settings.title_tag }}>
+            {% endif %}
+            
+            {% if block.settings.description != blank %}
+              <div class="rte">{{ block.settings.description }}</div>
+            {% endif %}
+
+            {% if block.settings.credits != blank %}
+              <span class="text-16 font-600">{{ block.settings.credits }}</span>
+            {% endif %}
+
+          {% if block.settings.cta_url != blank and block.settings.cta_label != blank %}
+            <div class="w-full">
+              <a href="{{ block.settings.cta_url }}" class="btn btn--gold inline-block">
+                {{ block.settings.cta_label }}
+              </a>
+            </div>  
+          {% endif %}
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>
+
+{% schema %}  
+{
+  "name": "Image Text Blocks",
+  "max_blocks": 2,
+  "settings": [
+    {
+      "type": "select",
+      "id": "margin_top",
+      "label": "Margin Top",
+      "options": [
+        { "value": "mt-0", "label": "None" },
+        { "value": "mt-sm", "label": "Small - 8px" },
+        { "value": "mt-md", "label": "Medium - 16px" },
+        { "value": "mt-lg", "label": "Large - 24px" },
+        { "value": "mt-xl", "label": "X-Large - 40px" },
+        { "value": "mt-xxl", "label": "XX-Large - 60px" },
+        { "value": "mt-xxxl", "label": "XXX-Large - 80px" }
+      ],
+      "default": "mt-0"
+    },
+    {
+      "type": "select",
+      "id": "margin_bottom",
+      "label": "Margin Bottom",
+      "options": [
+        { "value": "mb-0", "label": "None" },
+        { "value": "mb-sm", "label": "Small - 8px" },
+        { "value": "mb-md", "label": "Medium - 16px" },
+        { "value": "mb-lg", "label": "Large - 24px" },
+        { "value": "mb-xl", "label": "X-Large - 40px" },
+        { "value": "mb-xxl", "label": "XX-Large - 60px" },
+        { "value": "mb-xxxl", "label": "XXX-Large - 80px" }
+      ],
+      "default": "mb-0"
+    },
+    {
+      "type": "select",
+      "id": "desktop_margin_top",
+      "label": "Desktop - Margin Top",
+      "options": [
+        { "value": "inherit", "label": "Inherit" },
+        { "value": "tabletl:mt-0", "label": "None" },
+        { "value": "tabletl:mt-sm", "label": "Small - 8px" },
+        { "value": "tabletl:mt-md", "label": "Medium - 16px" },
+        { "value": "tabletl:mt-lg", "label": "Large - 24px" },
+        { "value": "tabletl:mt-xl", "label": "X-Large - 40px" },
+        { "value": "tabletl:mt-xxl", "label": "XX-Large - 60px" },
+        { "value": "tabletl:mt-xxxl", "label": "XXX-Large - 80px" }
+      ],
+      "default": "inherit"
+    },
+    {
+      "type": "select",
+      "id": "desktop_margin_bottom",
+      "label": "Desktop - Margin Bottom",
+      "options": [
+        { "value": "inherit", "label": "Inherit" },
+        { "value": "tabletl:mb-0", "label": "None" },
+        { "value": "tabletl:mb-sm", "label": "Small - 8px" },
+        { "value": "tabletl:mb-md", "label": "Medium - 16px" },
+        { "value": "tabletl:mb-lg", "label": "Large - 24px" },
+        { "value": "tabletl:mb-xl", "label": "X-Large - 40px" },
+        { "value": "tabletl:mb-xxl", "label": "XX-Large - 60px" },
+        { "value": "tabletl:mb-xxxl", "label": "XXX-Large - 80px" }
+      ],
+      "default": "inherit"
+    },
+    {
+      "type": "select",
+      "id": "vertical_align",
+      "label": "Desktop - Vertical Alignment",
+      "options": [
+        { "value": "top", "label": "Top" },
+        { "value": "center", "label": "Center" },
+        { "value": "bottom", "label": "Bottom" }
+      ],
+      "default": "top"
+    },
+    {
+      "type": "checkbox",
+      "id": "flip_columns_desktop",
+      "label": "Flip Columns on Desktop",
+      "default": false
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image_block",
+      "name": "Image Block",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "select",
+          "id": "height",
+          "label": "Height",
+          "options": [
+            { "value": "auto", "label": "Auto" },
+            { "value": "100vh", "label": "100vh" },
+            { "value": "33vh", "label": "33vh" },
+            { "value": "50vh", "label": "50vh" }
+          ],
+          "default": "auto"
+        },
+        {
+          "type": "select",
+          "id": "desktop_height",
+          "label": "Desktop Height",
+          "options": [
+            { "value": "inherit", "label": "Inherit" },
+            { "value": "auto", "label": "Auto" },
+            { "value": "100vh", "label": "100vh" },
+            { "value": "33vh", "label": "33vh" },
+            { "value": "50vh", "label": "50vh" }
+          ],
+          "default": "inherit"
+        }
+      ]
+    },
+    {
+      "type": "content_block",
+      "name": "Content Block",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "select",
+          "id": "title_tag",
+          "label": "Title Tag",
+          "options": [
+            { "value": "h1", "label": "H1" },
+            { "value": "h2", "label": "H2" },
+            { "value": "h3", "label": "H3" },
+            { "value": "h4", "label": "H4" }
+          ],
+          "default": "h2"
+        },
+        {
+          "type": "select",
+          "id": "title_font_style",
+          "label": "Title Font Style",
+          "options": [
+            { "value": "h1", "label": "H1 - 120px / 80px" },
+            { "value": "h2", "label": "H2 - 88px / 48px" },
+            { "value": "h3", "label": "H3 - 56px / 40px" },
+            { "value": "h4", "label": "H4 - 40px / 32px" },
+            { "value": "h5", "label": "H5 - 32px / 24px" }
+          ],
+          "default": "h3"
+        },
+        {
+          "type": "richtext",
+          "id": "description",
+          "label": "Description"
+        },
+        {
+          "type": "text",
+          "id": "credits",
+          "label": "Credits/Source"
+        },
+        {
+          "type": "url",
+          "id": "cta_url",
+          "label": "CTA Link"
+        },
+        {
+          "type": "text",
+          "id": "cta_label",
+          "label": "CTA Label"
+        },
+        {
+          "type": "select",
+          "id": "text_align",
+          "label": "Text Align",
+          "options": [
+            { "value": "left", "label": "Left" },
+            { "value": "center", "label": "Center" },
+            { "value": "right", "label": "Right" }
+          ],
+          "default": "left"
+        },
+        {
+          "type": "select",
+          "id": "desktop_text_align",
+          "label": "Desktop Text Align",
+          "options": [
+            { "value": "inherit", "label": "Inherit" },
+            { "value": "left", "label": "Left" },
+            { "value": "center", "label": "Center" },
+            { "value": "right", "label": "Right" }
+          ],
+          "default": "inherit"
+        },
+        {
+          "type": "select",
+          "id": "vertical_padding",
+          "label": "Vertical Padding",
+          "options": [
+            { "value": "py-0", "label": "None" },
+            { "value": "py-sm", "label": "Small - 8px" },
+            { "value": "py-md", "label": "Medium - 16px" },
+            { "value": "py-lg", "label": "Large - 24px" },
+            { "value": "py-xl", "label": "XLarge - 40px" },
+            { "value": "py-xxl", "label": "XXLarge - 60px" },
+            { "value": "py-xxxl", "label": "XXXLarge - 80px" },
+          ],
+          "default": "py-lg"
+        },
+        {
+          "type": "select",
+          "id": "vertical_padding_desktop",
+          "label": "Desktop - Vertical Padding",
+          "options": [
+            { "value": "inherit", "label": "Inherit" },
+            { "value": "tabletl:py-0", "label": "None" },
+            { "value": "tabletl:py-sm", "label": "Small - 8px" },
+            { "value": "tabletl:py-md", "label": "Medium - 16px" },
+            { "value": "tabletl:py-lg", "label": "Large - 24px" },
+            { "value": "tabletl:py-xl", "label": "XLarge - 40px" },
+            { "value": "tabletl:py-xxl", "label": "XXLarge - 60px" },
+            { "value": "tabletl:py-xxxl", "label": "XXXLarge - 80px" },
+          ],
+          "default": "tabletl:py-xxl"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Image Text Blocks",
+      "blocks": [
+        {
+          "type": "image_block"
+        },
+        {
+          "type": "content_block"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %} 

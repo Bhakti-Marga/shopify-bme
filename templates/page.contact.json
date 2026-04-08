@@ -1,0 +1,91 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "page__main",
+      "disabled": true,
+      "settings": {}
+    },
+    "form": {
+      "type": "page__contact-form",
+      "disabled": true,
+      "settings": {}
+    },
+    "section_hero_3gNTTe": {
+      "type": "section__hero",
+      "settings": {
+        "padding_top": "0px",
+        "desktop_padding_top": "24px",
+        "padding_bottom": "0px",
+        "desktop_padding_bottom": "24px",
+        "padding_horizontal": "px-0",
+        "desktop_padding_horizontal": "inherit",
+        "margin_top": "mt-sm",
+        "margin_bottom": "mb-0",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "use_container": true,
+        "set_100vh": true,
+        "set_100vh_desktop": true,
+        "border_radius": 20,
+        "aspect_ratio": "16\/9",
+        "aspect_ratio_desktop": "16\/9",
+        "image": "shopify:\/\/shop_images\/Newsletter_Signup_adb3b123-b934-4de4-8abf-637d36061ca9.jpg",
+        "bg_color": "",
+        "content_width": "max-w-5xl",
+        "text_align": "text-left",
+        "text_color": "#ffffff",
+        "title": "Contacto",
+        "title_font_style": "h2",
+        "subtitle": "<p>Usa el formulario y pregúntanos lo que quieras. ¿Necesitas ayuda para encontrar una comunidad cerca de ti? ¿Quieres aprender a meditar? ¿Necesitas encontrar un libro? ¡Envíanos un mensaje! Te responderemos lo antes posible.<\/p>",
+        "button_text": "",
+        "button_url": "",
+        "button_style": "btn",
+        "anchor_to_pricing": false,
+        "video_title": "",
+        "horizontal_position": "justify-center",
+        "vertical_position": "items-center"
+      }
+    },
+    "1743259583eb7c24f9": {
+      "type": "apps",
+      "blocks": {
+        "forms_inline_3xqH46": {
+          "type": "shopify:\/\/apps\/forms\/blocks\/inline\/8744a304-fcb1-4347-b211-bb6b4759a76a",
+          "settings": {
+            "form_id": "362470",
+            "text_color": "#16254b",
+            "button_background_color": "#16254b",
+            "button_label_color": "#ffffff",
+            "links_color": "#1878b9",
+            "errors_color": "#e02229",
+            "text_alignment": "center",
+            "form_alignment": "center",
+            "padding_top": 30,
+            "padding_bottom": 30,
+            "padding_right": 0,
+            "padding_left": 0
+          }
+        }
+      },
+      "block_order": [
+        "forms_inline_3xqH46"
+      ],
+      "settings": {}
+    }
+  },
+  "order": [
+    "main",
+    "form",
+    "section_hero_3gNTTe",
+    "1743259583eb7c24f9"
+  ]
+}

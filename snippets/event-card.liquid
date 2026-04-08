@@ -1,0 +1,52 @@
+{% liquid
+  assign video = article.metafields.event.video.value
+  assign poster = article.metafields.event.video_poster
+
+  if poster == blank and video != blank
+    assign poster = article.metafields.event.video
+  endif
+%}
+
+{% unless video == blank and poster == blank %}
+   {% if article.title contains 'Narasimha Chaturdashi - 72 Hour Fire Ceremony for World Peace' %}
+    <a href="https://ashram.bhaktimarga.us/72houryagna/" aria-label="{{ article.title }}">
+    {% elsif article.title contains 'Pray for the World' %}
+    <a href="https://events.bhaktimarga.org/pages/pray-for-the-world" aria-label="{{ article.title }}">
+    {% else %}
+    <a href="{{ article.url }}" aria-label="{{ article.title }}">
+  {% endif %}
+    <video-card class="event-card block rounded overflow-hidden aspect-[5/7]">
+      <div class="event-card__video w-full h-full relative" js-video-container>
+        <div class="h-full" js-video>
+          {% if video == blank %}
+            {% render 'lazy-image', image: poster, img_classes: "h-full w-full object-cover object-center", picture_classes: "w-full h-full" %}
+          {% else %}
+            {% assign video_poster = poster | img_url: 'master' %}
+            {{ video | video_tag: autoplay: false, loop: true, muted: true, class: 'w-full h-full object-cover object-center', poster: video_poster }}
+          {% endif %}
+        </div>
+        {% if gradient %}
+          <div class="event-card__gradient absolute inset-0" style="background: linear-gradient(transparent 45%, rgb(0, 0, 0) 100%);"></div>
+        {% endif %}
+        <div class="event-card__content-container flex flex-col justify-end absolute top-0 left-0 p-md h-full w-full text-white">
+          <div class="event-card__content text-center text-16 leading-none">
+              <h5 class="font-550 leading-tight mb-sm text-18 tabletl:text-20">{{ article.title }}</h5>
+              {% if article.metafields.event.card_subtitle != blank or article.metafields.event.type != blank or article.metafields.event.date != blank %}
+                <div class="flex flex-col gap-sm">
+                  {% if article.metafields.event.card_subtitle != blank %}
+                    <p>{{ article.metafields.event.card_subtitle }}</p>
+                  {% endif %}
+                  {% if article.metafields.event.type != blank %}
+                    <p>Tipo: {{ article.metafields.event.type }}</p>
+                  {% endif %}
+                  {% if article.metafields.event.date != blank %}
+                    <p>Fecha: {{ article.metafields.event.date }}</p>
+                  {% endif %}
+                </div>
+              {% endif %}
+          </div>
+        </div>
+      </div>
+    </video-card>
+  </a>
+{% endunless %}

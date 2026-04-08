@@ -1,0 +1,247 @@
+{% liquid
+  assign container_classes = ""
+
+  if section.settings.margin_top != "mt-0"
+      assign container_classes = container_classes | append: " " | append: section.settings.margin_top
+  endif
+
+  if section.settings.margin_bottom != "mb-0"
+      assign container_classes = container_classes | append: " " | append: section.settings.margin_bottom
+  endif
+
+  if section.settings.desktop_margin_top != "inherit"
+      assign container_classes = container_classes | append: " " | append: section.settings.desktop_margin_top
+  endif
+
+  if section.settings.desktop_margin_bottom != "inherit"
+      assign container_classes = container_classes | append: " " | append: section.settings.desktop_margin_bottom
+  endif
+
+  assign container_classes = container_classes | strip
+%}
+
+{%- capture carousel_options -%}
+  {
+    "slidesPerView": "auto",
+    "centerMode": true,
+    "loop": false,
+    "spaceBetween": "16",
+    "pagination": {
+      "el": ".swiper-pagination",
+      "type": "bullets",
+      "clickable": true
+    }
+  }
+{%- endcapture -%}
+
+<section class="ticket-tier mx-auto tabletl:px-xl extrawide:max-w-[1600px] {% if container_classes != blank %} {{ container_classes }}{% endif %}" id="prices">
+    <div class="bg-blue tabletl:rounded-lg pt-xl pb-lg tabletl:py-xxxl">
+        <div class="flex flex-col text-center mb-md tabletl:mb-xl">
+          {% if section.settings.title != blank %}
+            <h2 class="text-white h3 leading-[1.15] mb-md">
+                {{ section.settings.title }}
+            </h2>  
+          {% endif %}
+          {% if section.settings.content != blank %}
+            <div class="text-white text-18 mx-auto px-md tabletl:text-20 tabletp:w-[90%] tabletl:w-[70%] tabletp:max-w-[930px]">
+              {{ section.settings.content }}
+            </div>  
+          {% endif %}
+        </div>
+        <s-carousel class="grid grid-cols-1" data-options='{{ carousel_options }}' data-init="belowLaptop">
+          <div id="{{ section.id }}--carousel" class="swiper w-full pb-[50px] pl-md tabletl:pb-0 tabletl:px-md" js-carousel>
+            <div class="swiper-wrapper w-full tabletl:flex{% if section.blocks.size == 1 %} justify-center{% endif %}">
+              {% for block in section.blocks %}
+                <div class="swiper-slide w-[70%] tabletl:flex-1 tabletl:px-sm {% if forloop.last %} pr-md tabletp:pr-20 tabletl:pr-0{% endif %}" js-carousel-slide>
+                  <div class="bg-white rounded-lg text-center flex flex-col h-full px-20 py-xl tabletl:px-xxl">
+                    <div class="flex-grow flex flex-col items-center">
+                        {% if block.settings.title != blank %}
+                          <h3 class="text-32 leading-[1.15]">
+                            {{ block.settings.title }}
+                          </h3>
+                        {% endif %}
+                        {% if block.settings.price != blank %}
+                          <p class="text-32 text-gray-light leading-tight mb-md">
+                            {{ block.settings.price }}
+                          </p>
+                        {% endif %}
+                        {% if block.settings.subtitle != blank %}
+                          <p class="text-18 tabletl:text-20 tabletl:max-w-[300px]">
+                              {{ block.settings.subtitle }}
+                          </p>
+                        {% endif %}
+                        {% if block.settings.description != blank %}
+                          <div class="ticket-tier-list">
+                              {{ block.settings.description }}
+                          </div>
+                        {% endif %}
+                    </div>
+                    {% if block.settings.note != blank %}
+                      <p class="mb-md">
+                        {{ block.settings.note }}
+                      </p>
+                    {% endif %}
+                    {% if block.settings.cta_label != blank and block.settings.cta_link != blank %}
+                      <div class="w-full">
+                        <a
+                          class="inline-block {{ block.settings.cta_style }}"
+                          href="{{ block.settings.cta_link }}"
+                        >{{ block.settings.cta_label }}</a>
+                      </div> 
+                    {% endif %} 
+                  </div>
+                </div>
+              {% endfor %}
+            </div>
+            <div class="swiper-pagination tabletl:hidden"></div>
+          </div>
+        </s-carousel>
+      
+    </div> 
+</section>
+
+{% schema %}
+{
+  "name": "Ticket Tiers",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "select",
+      "id": "margin_top",
+      "label": "Margin Top",
+      "options": [
+        { "value": "mt-0", "label": "None" },
+        { "value": "mt-sm", "label": "Small - 8px" },
+        { "value": "mt-md", "label": "Medium - 16px" },
+        { "value": "mt-lg", "label": "Large - 24px" },
+        { "value": "mt-xl", "label": "X-Large - 40px" },
+        { "value": "mt-xxl", "label": "XX-Large - 60px" },
+        { "value": "mt-xxxl", "label": "XXX-Large - 80px" }
+      ],
+      "default": "mt-0"
+    },
+    {
+      "type": "select",
+      "id": "margin_bottom",
+      "label": "Margin Bottom",
+      "options": [
+        { "value": "mb-0", "label": "None" },
+        { "value": "mb-sm", "label": "Small - 8px" },
+        { "value": "mb-md", "label": "Medium - 16px" },
+        { "value": "mb-lg", "label": "Large - 24px" },
+        { "value": "mb-xl", "label": "X-Large - 40px" },
+        { "value": "mb-xxl", "label": "XX-Large - 60px" },
+        { "value": "mb-xxxl", "label": "XXX-Large - 80px" }
+      ],
+      "default": "mb-0"
+    },
+    {
+      "type": "select",
+      "id": "desktop_margin_top",
+      "label": "Desktop - Margin Top",
+      "options": [
+        { "value": "inherit", "label": "Inherit" },
+        { "value": "tabletl:mt-0", "label": "None" },
+        { "value": "tabletl:mt-sm", "label": "Small - 8px" },
+        { "value": "tabletl:mt-md", "label": "Medium - 16px" },
+        { "value": "tabletl:mt-lg", "label": "Large - 24px" },
+        { "value": "tabletl:mt-xl", "label": "X-Large - 40px" },
+        { "value": "tabletl:mt-xxl", "label": "XX-Large - 60px" },
+        { "value": "tabletl:mt-xxxl", "label": "XXX-Large - 80px" }
+      ],
+      "default": "inherit"
+    },
+    {
+      "type": "select",
+      "id": "desktop_margin_bottom",
+      "label": "Desktop - Margin Bottom",
+      "options": [
+        { "value": "inherit", "label": "Inherit" },
+        { "value": "tabletl:mb-0", "label": "None" },
+        { "value": "tabletl:mb-sm", "label": "Small - 8px" },
+        { "value": "tabletl:mb-md", "label": "Medium - 16px" },
+        { "value": "tabletl:mb-lg", "label": "Large - 24px" },
+        { "value": "tabletl:mb-xl", "label": "X-Large - 40px" },
+        { "value": "tabletl:mb-xxl", "label": "XX-Large - 60px" },
+        { "value": "tabletl:mb-xxxl", "label": "XXX-Large - 80px" }
+      ],
+      "default": "inherit"
+    },
+    {
+      "type": "header",
+      "content": "Content Settings"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "text",
+      "id": "content",
+      "label": "Content"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Content Block",
+      "type": "block",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "text",
+          "id": "price",
+          "label": "Price"
+        },
+        {
+          "type": "text",
+          "id": "subtitle",
+          "label": "Subitle"
+        },
+        {
+          "type": "richtext",
+          "id": "description",
+          "label": "Description"
+        },
+        {
+          "type": "text",
+          "id": "note",
+          "label": "Note"
+        },
+        {
+          "type": "text",
+          "id": "cta_label",
+          "label": "CTA - Label"
+        },
+        {
+          "type": "url",
+          "id": "cta_link",
+          "label": "CTA - Link"
+        },
+        {
+          "type": "select",
+          "id": "cta_style",
+          "label": "CTA - Style",
+          "options": [
+            { "value": "btn btn--gold text-black", "label": "Gold Button" },
+            { "value": "btn btn--black text-white", "label": "Black Button" }
+          ],
+          "default": "btn btn--gold text-black"
+        },
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Ticket Tiers"
+    }
+  ]
+}
+{% endschema %}

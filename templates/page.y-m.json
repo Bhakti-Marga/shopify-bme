@@ -1,0 +1,337 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "page__main",
+      "disabled": true,
+      "settings": {}
+    },
+    "section_hero_cBpMpY": {
+      "type": "section__hero",
+      "custom_css": [
+        ".hero__content-wrapper {background: #0000004a; z-index: 1; position: sticky;}"
+      ],
+      "settings": {
+        "padding_top": "0px",
+        "desktop_padding_top": "inherit",
+        "padding_bottom": "40px",
+        "desktop_padding_bottom": "60px",
+        "padding_horizontal": "px-0",
+        "desktop_padding_horizontal": "inherit",
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "use_container": true,
+        "set_100vh": true,
+        "set_100vh_desktop": true,
+        "border_radius": 16,
+        "aspect_ratio": "auto",
+        "aspect_ratio_desktop": "4/3",
+        "image": "shopify://shop_images/the-path-yoga-and-meditation.jpg",
+        "image_desktop": "shopify://shop_images/the-path-yoga-and-meditation.jpg",
+        "bg_color": "#16254c",
+        "content_width": "max-w-5xl",
+        "text_align": "text-left",
+        "text_color": "#ffffff",
+        "title": "Yoga y meditación",
+        "title_font_style": "h3",
+        "subtitle": "<p>Las prácticas de meditación de Paramahamsa Vishwananda centran nuestra atención y acciones en la divinidad interior. A través de la práctica sincera, puedes entrar en el silencio que está libre de mente, y centrarte en tu corazón donde se hace consciente el Amor Divino.<br/><br/></p>",
+        "button_text": "",
+        "button_url": "",
+        "button_style": "btn",
+        "anchor_to_pricing": false,
+        "video_title": "",
+        "video_url": "shopify://files/videos/Start-your-Journey-with-Yoga-Meditation.mp4",
+        "poster_video": "shopify://files/videos/Start-your-Journey-with-Yoga-Meditation.mp4",
+        "horizontal_position": "justify-center",
+        "vertical_position": "items-end"
+      }
+    },
+    "bm_event_slider_FfebPy": {
+      "type": "BM-event-slider",
+      "name": "Product Carousel",
+      "settings": {
+        "product_collection": "events",
+        "set_dark_theme": true,
+        "apply_gradient": true,
+        "title": "Próximos cursos",
+        "title_tag": "h2",
+        "cta_label": "",
+        "cta_url": "",
+        "padding_top": "pt-xl",
+        "padding_bottom": "pb-xl",
+        "desktop_padding_top": "inherit",
+        "desktop_padding_bottom": "inherit"
+      }
+    },
+    "section_hero_EmDBMy": {
+      "type": "section__hero",
+      "custom_css": [
+        ".hero__content-wrapper {background: #0000004a; z-index: 1; position: sticky;}"
+      ],
+      "settings": {
+        "padding_top": "0px",
+        "desktop_padding_top": "0px",
+        "padding_bottom": "0px",
+        "desktop_padding_bottom": "inherit",
+        "padding_horizontal": "px-0",
+        "desktop_padding_horizontal": "inherit",
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "use_container": false,
+        "set_100vh": false,
+        "set_100vh_desktop": true,
+        "border_radius": 0,
+        "aspect_ratio": "9/16",
+        "aspect_ratio_desktop": "16/9",
+        "image": "shopify://shop_images/bhagavad-gita-bhaktishop.webp",
+        "bg_color": "",
+        "content_width": "max-w-5xl",
+        "text_align": "text-center",
+        "text_color": "#ffffff",
+        "title": "\"Habiendo controlado todos los sentidos, uno debe permanecer en el estado de meditación, teniéndome a Mí (Krishna) como la meta suprema\".",
+        "title_font_style": "h4",
+        "subtitle": "<p><em>Bhagavad Gita</em></p>",
+        "button_text": "",
+        "button_url": "",
+        "button_style": "btn",
+        "anchor_to_pricing": false,
+        "video_title": "",
+        "horizontal_position": "justify-center",
+        "vertical_position": "items-center"
+      }
+    },
+    "section_image_text_blocks_PHhidM": {
+      "type": "section__image_text_blocks",
+      "blocks": {
+        "image_block_jfBVbY": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/mahavatar-babaji-yogi.jpg",
+            "height": "auto",
+            "desktop_height": "auto"
+          }
+        },
+        "content_block_gVQiM6": {
+          "type": "content_block",
+          "settings": {
+            "title": "Atma Kriya Yoga",
+            "title_tag": "h3",
+            "title_font_style": "h4",
+            "description": "<p>Atma Kriya Yoga es absolutamente único. Aunque las técnicas aquietan la mente, el objetivo espiritual es despertar el alma en su relación eterna con Dios mediante el cultivo de diversas formas de <em>bhakti</em>: amor y devoción.</p><p>A medida que tu práctica se hace más profunda, las cualidades divinas comienzan a manifestarse de forma natural: paz, autocontrol, fuerza, sabiduría, humildad, compasión, vitalidad y mucho más.</p><p>Gracias a la gracia de la iniciación <em>shaktipat</em>, las técnicas son lo suficientemente sencillas como para que las aprendan los principiantes, pero lo suficientemente poderosas como para llevar incluso a los meditadores más avanzados a nuevas cotas de conexión divina.</p>",
+            "credits": "",
+            "cta_url": "shopify://pages/atma-kriya-yoga",
+            "cta_label": "Más información",
+            "text_align": "left",
+            "desktop_text_align": "inherit",
+            "vertical_padding": "py-lg",
+            "vertical_padding_desktop": "tabletl:py-xxl"
+          }
+        }
+      },
+      "block_order": [
+        "image_block_jfBVbY",
+        "content_block_gVQiM6"
+      ],
+      "custom_css": [],
+      "settings": {
+        "margin_top": "mt-xl",
+        "margin_bottom": "mb-0",
+        "desktop_margin_top": "tabletl:mt-xxxl",
+        "desktop_margin_bottom": "tabletl:mb-xl",
+        "vertical_align": "center",
+        "flip_columns_desktop": false
+      }
+    },
+    "section_image_text_blocks_Kixczp": {
+      "type": "section__image_text_blocks",
+      "blocks": {
+        "image_block_4RXENQ": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/omc.jpg",
+            "height": "auto",
+            "desktop_height": "inherit"
+          }
+        },
+        "content_block_rLPL9a": {
+          "type": "content_block",
+          "settings": {
+            "title": "OM Chanting",
+            "title_tag": "h3",
+            "title_font_style": "h4",
+            "description": "<p>OM Chanting es una práctica grupal que utiliza el poder transformador del OM para activar el potencial de autocuración de los participantes. Además de los beneficios personales que recibimos, OM Chanting también puede ser un servicio a la humanidad.</p><p>Las ondas vibratorias creadas por la práctica del OM Chanting se extienden en un radio de 2 km, creando un ambiente armonioso y pacífico y unidad entre los seres humanos y la naturaleza. El OM sigue resonando en los cuerpos de los participantes después del círculo, lo que les permite compartir las buenas vibraciones dondequiera que vayan.</p>",
+            "credits": "",
+            "cta_url": "shopify://pages/om-chanting",
+            "cta_label": "Más información",
+            "text_align": "left",
+            "desktop_text_align": "inherit",
+            "vertical_padding": "py-lg",
+            "vertical_padding_desktop": "tabletl:py-xxl"
+          }
+        }
+      },
+      "block_order": [
+        "image_block_4RXENQ",
+        "content_block_rLPL9a"
+      ],
+      "custom_css": [],
+      "settings": {
+        "margin_top": "mt-xl",
+        "margin_bottom": "mb-0",
+        "desktop_margin_top": "tabletl:mt-xl",
+        "desktop_margin_bottom": "tabletl:mb-xl",
+        "vertical_align": "center",
+        "flip_columns_desktop": true
+      }
+    },
+    "section_image_text_blocks_94GqbY": {
+      "type": "section__image_text_blocks",
+      "blocks": {
+        "image_block_wUVFUh": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/babaji-surya-namaskar-align-body-mind-and-spirit.jpg",
+            "height": "auto",
+            "desktop_height": "inherit"
+          }
+        },
+        "content_block_tpUJcx": {
+          "type": "content_block",
+          "settings": {
+            "title": "Babaji Surya Namaskar",
+            "title_tag": "h2",
+            "title_font_style": "h4",
+            "description": "<p>Babaji Surya Namaskar es una meditación en movimiento que celebra la divinidad del templo del cuerpo humano. Esta práctica de asanas (posturas) sencilla pero poderosa requiere menos de 15 minutos al día y aporta luz y vitalidad a todo tu ser.</p><p>A medida que tu práctica diaria se arraiga en el núcleo de tu cuerpo, los pensamientos se calman y tus movimientos se convierten en una expresión suave y consciente de tu fuerza interior.</p><p>Cuando la práctica se realiza con amor y consciencia, cada postura se convierte en una oración de gratitud por la vida misma. Pon tu devoción en movimiento.</p>",
+            "credits": "",
+            "cta_url": "shopify://pages/babaji-surya-namaskar",
+            "cta_label": "Más información",
+            "text_align": "left",
+            "desktop_text_align": "inherit",
+            "vertical_padding": "py-lg",
+            "vertical_padding_desktop": "tabletl:py-xxl"
+          }
+        }
+      },
+      "block_order": [
+        "image_block_wUVFUh",
+        "content_block_tpUJcx"
+      ],
+      "settings": {
+        "margin_top": "mt-xl",
+        "margin_bottom": "mb-0",
+        "desktop_margin_top": "tabletl:mt-xl",
+        "desktop_margin_bottom": "tabletl:mb-xl",
+        "vertical_align": "center",
+        "flip_columns_desktop": false
+      }
+    },
+    "section_image_text_blocks_cFYAEn": {
+      "type": "section__image_text_blocks",
+      "blocks": {
+        "image_block_hbAiH7": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/project-mantra-challenge-japa-mala.webp",
+            "height": "auto",
+            "desktop_height": "inherit"
+          }
+        },
+        "content_block_ktXfKC": {
+          "type": "content_block",
+          "settings": {
+            "title": "Project Mantra",
+            "title_tag": "h3",
+            "title_font_style": "h4",
+            "description": "<p>Recitar los nombres divinos es una de las prácticas de meditación más fáciles que puedes hacer. Es especialmente significativo cuando conviertes cada repetición en una oración sincera. Aunque parece muy sencillo, ¡puede llevarte hasta Dios!</p><p>Todo el mundo puede hacerlo, en cualquier momento y en cualquier lugar, incluso los niños. Es perfecto para principiantes que desean una herramienta sencilla y eficaz para aquietar la mente y abrir el corazón.</p><p>Project Mantra es un programa gratuito diseñado para ayudarte a establecer y desarrollar gradualmente una práctica diaria de recitación a lo largo de un reto de 40 días.</p>",
+            "credits": "",
+            "cta_url": "shopify://pages/project-mantra",
+            "cta_label": "Más información",
+            "text_align": "left",
+            "desktop_text_align": "inherit",
+            "vertical_padding": "py-lg",
+            "vertical_padding_desktop": "tabletl:py-xxl"
+          }
+        }
+      },
+      "block_order": [
+        "image_block_hbAiH7",
+        "content_block_ktXfKC"
+      ],
+      "settings": {
+        "margin_top": "mt-xl",
+        "margin_bottom": "mb-0",
+        "desktop_margin_top": "tabletl:mt-xl",
+        "desktop_margin_bottom": "tabletl:mb-xl",
+        "vertical_align": "center",
+        "flip_columns_desktop": true
+      }
+    },
+    "section_grid_images_GjYKDk": {
+      "type": "section__grid-images",
+      "blocks": {
+        "image_block_AnHDVr": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/Image_Container_c306694f-4f97-47a5-9350-d5ccdb1367ce.jpg"
+          }
+        },
+        "image_block_6p8Vji": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/2022-07-16-p-0413_e3435448-1a61-490a-a09e-61188c0388ad.jpg"
+          }
+        },
+        "image_block_RfTJix": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/2024-07-19-p-1143_06f7af54-b5e1-4542-a5b6-e06f1df2d89f.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "image_block_AnHDVr",
+        "image_block_6p8Vji",
+        "image_block_RfTJix"
+      ],
+      "name": "Grid Images",
+      "settings": {
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "padding_top": "pt-0",
+        "padding_bottom": "pb-xl",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "desktop_padding_top": "inherit",
+        "desktop_padding_bottom": "inherit",
+        "main_image": "shopify://shop_images/meditation-essentials-shankaridasi.jpg",
+        "yt": "https://www.youtube.com/embed/pDOHcU1Jq4Q?si=J4hHz319IT1aiP61",
+        "text": "<p><strong>EXPERIMENTA LA MEDITACIÓN</strong></p><p>Siéntate y relájate. En este vídeo, Aksharananda, uno de nuestros profesores de yoga y meditación, explica brevemente qué es la meditación y cómo puede ayudarte a acercarte a Dios. También te guía a través de dos breves meditaciones para que puedas experimentarla por ti mismo.</p>",
+        "cta_url": "",
+        "cta_label": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "section_hero_cBpMpY",
+    "bm_event_slider_FfebPy",
+    "section_hero_EmDBMy",
+    "section_image_text_blocks_PHhidM",
+    "section_image_text_blocks_Kixczp",
+    "section_image_text_blocks_94GqbY",
+    "section_image_text_blocks_cFYAEn",
+    "section_grid_images_GjYKDk"
+  ]
+}

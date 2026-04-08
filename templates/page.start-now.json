@@ -1,0 +1,303 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "header": {
+      "type": "section__program-header",
+      "blocks": {
+        "heading_tGKxtb": {
+          "type": "heading",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/2021-03-06-p-0680.jpg",
+            "title": "Join the Community",
+            "description": "<p>Join our newsletter to receive free inspiration, resources, event updates, and more to support your spiritual journey!<\/p>",
+            "text_color": "white",
+            "btn_label": "Únete a la comunidad",
+            "btn_link": "",
+            "button_style": "btn",
+            "cta_klaviyo_embed": "SEA9Ef"
+          }
+        },
+        "heading_e9HdKa": {
+          "type": "heading",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/2021-03-06-p-0293.jpg",
+            "title": "Get your free meditation course",
+            "description": "<p>Take a journey from the mind to the heart wiith our free meditation course guided by Swami Tulsidas!<\/p>",
+            "text_color": "white",
+            "btn_label": "Aprende a Meditar",
+            "btn_link": "",
+            "button_style": "btn",
+            "cta_klaviyo_embed": "RxziKK"
+          }
+        }
+      },
+      "block_order": [
+        "heading_tGKxtb",
+        "heading_e9HdKa"
+      ],
+      "settings": {
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "padding_top": "pt-xl",
+        "padding_bottom": "pb-lg",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "desktop_padding_top": "tabletl:pt-xxl",
+        "desktop_padding_bottom": "tabletl:pb-xxl",
+        "title": "Start your Journey to Love",
+        "title_tag": "h1",
+        "title_font_style": "h3",
+        "description": "<p>Ready to deepen your spiritual journey? Sign up now for our Bhakti Marga America’s free <strong>Meditation Essentials <\/strong>course or stay up to date with <strong>inspiration from our newsletter! <\/strong><\/p>"
+      }
+    },
+    "bm_custom_carousel_cards_yPTwf9": {
+      "type": "BM-custom-carousel-cards",
+      "blocks": {
+        "content_block_j9V99D": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/mahavatar-babaji-yogi_a72509ce-73e9-475c-91f4-4e11c051bb88.jpg",
+            "heading": "Atma Kriya Yoga",
+            "description": "<p>Your soul, or atma, is the eternal part of you that animates your mind and body.<\/p><p>Atma Kriya Yoga is unique. Paramahamsa Vishwananda has given it so you can know your essential Self and awaken devotion to your source and support: God.<\/p>",
+            "button_text": "Learn More",
+            "button_link": "shopify:\/\/pages\/atma-kriya-yoga"
+          }
+        },
+        "content_block_pbR4iN": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/OM-Chanting-Circle.jpg",
+            "heading": "OM Chanting",
+            "description": "<p>God creates by vibration. Om is the seed vibration. Bathing in its resonance clears mental and physical blockages.<\/p><p>As a group practice, it’s also a great way to connect with people. You can find a group or even start your own.<\/p>",
+            "button_text": "Learn More",
+            "button_link": "#"
+          }
+        },
+        "content_block_zULtW3": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/babaji-surya-namaskar-align-body-mind-and-spirit_0e47ee43-8a9e-438c-9f69-67834f60b303.jpg",
+            "heading": "Babaji Surya Namaskar",
+            "description": "<p>Babaji Surya Namaskar is a simple, yet powerful, <em>asana<\/em> (posture) practice which takes less than 15 minutes a day and brings vitality into your whole being.<\/p>",
+            "button_text": "Learn More",
+            "button_link": "#"
+          }
+        },
+        "content_block_Y4MYW7": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/project-mantra-chanting-the-divine-name.jpg",
+            "heading": "Project Mantra",
+            "description": "<p>Project Mantra is a free program designed to help you establish and gradually build up a daily chanting practice over 40 days ‘challenge’.<\/p>",
+            "button_text": "Learn More",
+            "button_link": "#"
+          }
+        },
+        "content_block_mXgriF": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/bhagavad-gita-essentials-book.jpg",
+            "heading": "Scriptures Study",
+            "description": "<p>In Bhakti Marga we study the scriptures in order to deepen our loving relationship with God and with our Satguru and to learn more about this eternal bond.<\/p><p>The main scriptures that we study are the Bhagavad Gita, Guru Gita and Srimad Bhagavatam – all embellished with the profound commentary of Paramahamsa Vishwananda.<\/p>",
+            "button_text": "Learn More",
+            "button_link": "shopify:\/\/pages\/knowledge"
+          }
+        },
+        "content_block_VWXkVV": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/puja-ceremonial-worship_c861736f-d1df-45fe-9327-3f82d7a039ef.jpg",
+            "heading": "Ritual Worship",
+            "description": "<p>In Bhakti Marga we teach rituals such as simple puja, abhishekam or yajna, as well as different forms of traditional Vedic chanting.<\/p>",
+            "button_text": "Learn More",
+            "button_link": "shopify:\/\/pages\/rituals"
+          }
+        },
+        "content_block_N8dbY3": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/guruji-devotional-music.jpg",
+            "heading": "Devotional Music",
+            "description": "<p>When we sing and dance, not for our own pleasure but for the pleasure of our Beloved Lord, the mundane transforms into the Divine.<\/p>",
+            "button_text": "Learn More",
+            "button_link": "#"
+          }
+        },
+        "content_block_BHDwpM": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/spiritual-art.jpg",
+            "heading": "Spiritual Art",
+            "description": "<p>When the subject of your art is a Divine form, the Lord holds your attention and draws you closer to Him. This connection deepens even more when you work on a piece over time, or work with the same form over and over again.<\/p>",
+            "button_text": "Learn More",
+            "button_link": "shopify:\/\/pages\/devotional-arts"
+          }
+        }
+      },
+      "block_order": [
+        "content_block_j9V99D",
+        "content_block_pbR4iN",
+        "content_block_zULtW3",
+        "content_block_Y4MYW7",
+        "content_block_mXgriF",
+        "content_block_VWXkVV",
+        "content_block_N8dbY3",
+        "content_block_BHDwpM"
+      ],
+      "name": "BM Custom Carousel Cards",
+      "settings": {
+        "padding_top": "pt-md",
+        "padding_bottom": "pb-xl",
+        "desktop_padding_top": "tabletl:pt-0",
+        "desktop_padding_bottom": "inherit",
+        "title": "Our Practices",
+        "title_tag": "h2"
+      }
+    },
+    "section_events_carousel_KydBCi": {
+      "type": "section__events-carousel",
+      "blocks": {
+        "block_CLJFUm": {
+          "type": "block",
+          "disabled": true,
+          "settings": {
+            "article": "events\/online-darshan"
+          }
+        },
+        "block_LNgYEq": {
+          "type": "block",
+          "settings": {
+            "article": "events\/maha-abhishekam-fire-ceremony-elmira-new-york"
+          }
+        },
+        "block_AbHtdr": {
+          "type": "block",
+          "settings": {
+            "article": "events\/darshan-blessing-elmira-new-york"
+          }
+        },
+        "block_Bhqx3C": {
+          "type": "block",
+          "settings": {
+            "article": "events\/darshan-blessing-elmira-new-york-1"
+          }
+        },
+        "block_kf98Qt": {
+          "type": "block",
+          "settings": {
+            "article": "events\/darshan-blessing-new-york-city"
+          }
+        },
+        "block_F4Rgar": {
+          "type": "block",
+          "settings": {
+            "article": "events\/krishna-janmashtami-with-paramahamsa-vishwananda"
+          }
+        },
+        "block_9j7gkM": {
+          "type": "block",
+          "settings": {
+            "article": "events\/event-article"
+          }
+        },
+        "block_R9TBgi": {
+          "type": "block",
+          "disabled": true,
+          "settings": {
+            "article": "events\/maha-abhishekam-fire-ceremony-elmira-new-york"
+          }
+        },
+        "block_fxjC4K": {
+          "type": "block",
+          "settings": {
+            "article": "events\/event-article"
+          }
+        }
+      },
+      "block_order": [
+        "block_CLJFUm",
+        "block_LNgYEq",
+        "block_AbHtdr",
+        "block_Bhqx3C",
+        "block_kf98Qt",
+        "block_F4Rgar",
+        "block_9j7gkM",
+        "block_R9TBgi",
+        "block_fxjC4K"
+      ],
+      "disabled": true,
+      "custom_css": [],
+      "settings": {
+        "padding_top": "pt-xl",
+        "padding_bottom": "pb-xxl",
+        "desktop_padding_top": "inherit",
+        "desktop_padding_bottom": "inherit",
+        "set_dark_theme": false,
+        "apply_gradient": true,
+        "title": "Upcoming Events",
+        "title_tag": "h2",
+        "cta_label": "Discover Events",
+        "cta_url": "shopify:\/\/blogs\/events",
+        "hide_arrows_desktop": false
+      }
+    },
+    "section_hero_yHNQ3k": {
+      "type": "section__hero",
+      "disabled": true,
+      "settings": {
+        "padding_top": "0px",
+        "desktop_padding_top": "0px",
+        "padding_bottom": "0px",
+        "desktop_padding_bottom": "inherit",
+        "padding_horizontal": "px-0",
+        "desktop_padding_horizontal": "inherit",
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "use_container": false,
+        "set_100vh": false,
+        "set_100vh_desktop": true,
+        "border_radius": 0,
+        "aspect_ratio": "3\/2",
+        "aspect_ratio_desktop": "16\/9",
+        "image": "shopify:\/\/shop_images\/2018-12-07-p-0245.jpg",
+        "image_desktop": "shopify:\/\/shop_images\/2018-12-07-p-0245.jpg",
+        "bg_color": "",
+        "content_width": "max-w-5xl",
+        "text_align": "text-center",
+        "text_color": "#ffffff",
+        "title": "Ready to live a life of love?",
+        "title_font_style": "h2",
+        "subtitle": "<p>Receive free resources and tools on how to live a life of love<\/p>",
+        "button_text": "Start Now",
+        "button_url": "shopify:\/\/pages\/start-now",
+        "button_style": "btn",
+        "anchor_to_pricing": false,
+        "video_title": "",
+        "horizontal_position": "justify-center",
+        "vertical_position": "items-center"
+      }
+    },
+    "main": {
+      "type": "page__main",
+      "disabled": true,
+      "settings": {}
+    }
+  },
+  "order": [
+    "header",
+    "bm_custom_carousel_cards_yPTwf9",
+    "section_events_carousel_KydBCi",
+    "section_hero_yHNQ3k",
+    "main"
+  ]
+}

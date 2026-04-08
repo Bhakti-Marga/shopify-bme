@@ -1,0 +1,193 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "header": {
+      "type": "section__program-header",
+      "blocks": {
+        "heading_tGKxtb": {
+          "type": "heading",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/2024-08-16-p-0253.png",
+            "title": "Awaken the Love of the Divine",
+            "description": "<p>A once in a lifetime opportunity to unlock the transformative power of your Soul under the guidance of an Enlightened spiritual master. <\/p>",
+            "text_color": "white",
+            "btn_label": "Programa Despertar del Alma",
+            "btn_link": "shopify:\/\/blogs\/events\/4-days-to-soul-awakening-with-paramahamsa-vishwananda",
+            "button_style": "btn"
+          }
+        },
+        "heading_e9HdKa": {
+          "type": "heading",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/bm-07-storiesofsaints.jpg",
+            "title": "Join a Loving Community Online",
+            "description": "<p>We gather monthly online to unite and dive deeper in the path of Bhakti<\/p>",
+            "text_color": "white",
+            "btn_label": "Domingos Bhakti",
+            "btn_link": "shopify:\/\/pages\/domingos-bhakti",
+            "button_style": "btn"
+          }
+        }
+      },
+      "block_order": [
+        "heading_tGKxtb",
+        "heading_e9HdKa"
+      ],
+      "settings": {
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "padding_top": "pt-xl",
+        "padding_bottom": "pb-lg",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "desktop_padding_top": "tabletl:pt-xxl",
+        "desktop_padding_bottom": "tabletl:pb-xxl",
+        "title": "Bhakti Marga Programs",
+        "title_tag": "h1",
+        "title_font_style": "h3",
+        "description": "<p>Connect deeply, engage fully, and awaken the love in your heart with Bhakti Marga’s exclusive programs and communities.<\/p>"
+      }
+    },
+    "section_events_carousel_KydBCi": {
+      "type": "section__events-carousel",
+      "blocks": {
+        "block_CLJFUm": {
+          "type": "block",
+          "disabled": true,
+          "settings": {
+            "article": "events\/online-darshan"
+          }
+        },
+        "block_LNgYEq": {
+          "type": "block",
+          "settings": {
+            "article": "events\/maha-abhishekam-fire-ceremony-elmira-new-york"
+          }
+        },
+        "block_AbHtdr": {
+          "type": "block",
+          "settings": {
+            "article": "events\/darshan-blessing-elmira-new-york"
+          }
+        },
+        "block_Bhqx3C": {
+          "type": "block",
+          "settings": {
+            "article": "events\/darshan-blessing-elmira-new-york-1"
+          }
+        },
+        "block_kf98Qt": {
+          "type": "block",
+          "settings": {
+            "article": "events\/darshan-blessing-new-york-city"
+          }
+        },
+        "block_F4Rgar": {
+          "type": "block",
+          "settings": {
+            "article": "events\/krishna-janmashtami-with-paramahamsa-vishwananda"
+          }
+        },
+        "block_9j7gkM": {
+          "type": "block",
+          "settings": {
+            "article": "events\/event-article"
+          }
+        },
+        "block_R9TBgi": {
+          "type": "block",
+          "disabled": true,
+          "settings": {
+            "article": "events\/maha-abhishekam-fire-ceremony-elmira-new-york"
+          }
+        },
+        "block_fxjC4K": {
+          "type": "block",
+          "settings": {
+            "article": "events\/event-article"
+          }
+        }
+      },
+      "block_order": [
+        "block_CLJFUm",
+        "block_LNgYEq",
+        "block_AbHtdr",
+        "block_Bhqx3C",
+        "block_kf98Qt",
+        "block_F4Rgar",
+        "block_9j7gkM",
+        "block_R9TBgi",
+        "block_fxjC4K"
+      ],
+      "custom_css": [],
+      "settings": {
+        "padding_top": "pt-xl",
+        "padding_bottom": "pb-xxl",
+        "desktop_padding_top": "inherit",
+        "desktop_padding_bottom": "inherit",
+        "set_dark_theme": false,
+        "apply_gradient": true,
+        "title": "Upcoming Events",
+        "title_tag": "h2",
+        "cta_label": "Descubre eventos",
+        "cta_url": "",
+        "hide_arrows_desktop": false
+      }
+    },
+    "section_hero_yHNQ3k": {
+      "type": "section__hero",
+      "settings": {
+        "padding_top": "0px",
+        "desktop_padding_top": "0px",
+        "padding_bottom": "0px",
+        "desktop_padding_bottom": "inherit",
+        "padding_horizontal": "px-0",
+        "desktop_padding_horizontal": "inherit",
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "use_container": false,
+        "set_100vh": false,
+        "border_radius": 0,
+        "aspect_ratio": "1\/1",
+        "aspect_ratio_desktop": "16\/9",
+        "image": "shopify:\/\/shop_images\/2018-12-07-p-0245.jpg",
+        "image_desktop": "shopify:\/\/shop_images\/2018-12-07-p-0245.jpg",
+        "bg_color": "rgba(0,0,0,0)",
+        "content_width": "max-w-5xl",
+        "text_align": "text-center",
+        "text_color": "#ffffff",
+        "title": "Ready to live a life of love?",
+        "title_font_style": "h2",
+        "subtitle": "<p>Receive free resources and tools on how to live a life of love<\/p>",
+        "button_text": "Empieza ahora",
+        "button_url": "shopify:\/\/pages\/empieza-ahora",
+        "button_style": "btn",
+        "anchor_to_pricing": false,
+        "video_title": "",
+        "horizontal_position": "justify-center",
+        "vertical_position": "items-center"
+      }
+    },
+    "main": {
+      "type": "page__main",
+      "disabled": true,
+      "settings": {}
+    }
+  },
+  "order": [
+    "header",
+    "section_events_carousel_KydBCi",
+    "section_hero_yHNQ3k",
+    "main"
+  ]
+}

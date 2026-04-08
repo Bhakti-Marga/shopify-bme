@@ -1,0 +1,234 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "page__main",
+      "disabled": true,
+      "settings": {}
+    },
+    "section_hero_cBpMpY": {
+      "type": "section__hero",
+      "custom_css": [
+        ".hero__content-wrapper {background: #0000004a; z-index: 1; position: sticky;}"
+      ],
+      "settings": {
+        "padding_top": "0px",
+        "desktop_padding_top": "inherit",
+        "padding_bottom": "40px",
+        "desktop_padding_bottom": "60px",
+        "padding_horizontal": "px-0",
+        "desktop_padding_horizontal": "inherit",
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "use_container": true,
+        "set_100vh": true,
+        "set_100vh_desktop": true,
+        "border_radius": 16,
+        "aspect_ratio": "auto",
+        "aspect_ratio_desktop": "4/3",
+        "image": "shopify://shop_images/project-mantra-hero.jpg",
+        "image_desktop": "shopify://shop_images/project-mantra-hero.jpg",
+        "bg_color": "#16254c",
+        "content_width": "max-w-5xl",
+        "text_align": "text-left",
+        "text_color": "#ffffff",
+        "title": "Project Mantra",
+        "title_font_style": "h3",
+        "subtitle": "<p>Experimenta un sistema yóguico completo que te ayudará a sumergirte en tu corazón y conectar con lo Divino.</p>",
+        "button_text": "",
+        "button_url": "",
+        "button_style": "btn",
+        "anchor_to_pricing": false,
+        "video_title": "",
+        "video_url": "shopify://files/videos/2022-06-22-Project-Mantra-Intro.mp4",
+        "poster_video": "shopify://files/videos/2022-06-22-Project-Mantra-Intro.mp4",
+        "horizontal_position": "justify-center",
+        "vertical_position": "items-end"
+      }
+    },
+    "section_hero_EmDBMy": {
+      "type": "section__hero",
+      "custom_css": [
+        ".hero__content-wrapper {background: #0000004a; z-index: 1; position: sticky;}"
+      ],
+      "settings": {
+        "padding_top": "0px",
+        "desktop_padding_top": "0px",
+        "padding_bottom": "0px",
+        "desktop_padding_bottom": "inherit",
+        "padding_horizontal": "px-0",
+        "desktop_padding_horizontal": "inherit",
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "use_container": false,
+        "set_100vh": false,
+        "set_100vh_desktop": true,
+        "border_radius": 0,
+        "aspect_ratio": "9/16",
+        "aspect_ratio_desktop": "16/9",
+        "image": "shopify://shop_images/project-mantra-challenge-japa-mala.webp",
+        "bg_color": "",
+        "content_width": "max-w-5xl",
+        "text_align": "text-center",
+        "text_color": "#ffffff",
+        "title": "\"Cuanto más recites, más disminuirá el poder de la mente, más estarás en la dicha divina y más se abrirá tu corazón al amor divino\".",
+        "title_font_style": "h5",
+        "subtitle": "<p>Paramahamsa Vishwananda</p>",
+        "button_text": "",
+        "button_url": "",
+        "button_style": "btn",
+        "anchor_to_pricing": false,
+        "video_title": "",
+        "horizontal_position": "justify-center",
+        "vertical_position": "items-center"
+      }
+    },
+    "section_image_text_blocks_PHhidM": {
+      "type": "section__image_text_blocks",
+      "blocks": {
+        "image_block_jfBVbY": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/project-mantra-chanting-the-divine-name_e6e3c39b-c8cf-4ea9-bd66-bfaf50c843da.jpg",
+            "height": "auto",
+            "desktop_height": "auto"
+          }
+        },
+        "content_block_gVQiM6": {
+          "type": "content_block",
+          "settings": {
+            "title": "¿Qué es Project Mantra?",
+            "title_tag": "h3",
+            "title_font_style": "h4",
+            "description": "<p>El recitar de mantras es una forma sencilla pero<strong> poderosa de meditación</strong> que despierta una alegría profunda y duradera.</p><p>Project Mantra es un <strong>viaje guiado gratuito de 40 días</strong> que te ayudará a desarrollar la práctica de la meditación con mantras.</p><p>Es perfecto tanto para principiantes como para practicantes avanzados.</p>",
+            "credits": "",
+            "cta_url": "https://pages.bhaktimarga.org/project-mantra",
+            "cta_label": "Más información",
+            "text_align": "left",
+            "desktop_text_align": "inherit",
+            "vertical_padding": "py-lg",
+            "vertical_padding_desktop": "tabletl:py-xxl"
+          }
+        }
+      },
+      "block_order": [
+        "image_block_jfBVbY",
+        "content_block_gVQiM6"
+      ],
+      "custom_css": [],
+      "settings": {
+        "margin_top": "mt-xl",
+        "margin_bottom": "mb-0",
+        "desktop_margin_top": "tabletl:mt-xxxl",
+        "desktop_margin_bottom": "tabletl:mb-xl",
+        "vertical_align": "center",
+        "flip_columns_desktop": false
+      }
+    },
+    "section_accordion_bPkzp9": {
+      "type": "section__accordion",
+      "blocks": {
+        "accordion_item_Jn4yDk": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Elije tu mantra",
+            "content": "<p>Durante 40 días, recitarás uno de estos dos mantras. Haz clic para escuchar.</p><p>* om namo narayanaya</p><p>* sri vitthala giridhari parabrahmane namaha</p>"
+          }
+        },
+        "accordion_item_npze4h": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Concierta una cita con lo Divino",
+            "content": "<p>Comenzarás recitando durante 15 minutos al día y poco a poco irás aumentando tu práctica hasta llegar a los 60 minutos diarios. Recibirás una serie de correos electrónicos que te guiarán a lo largo de los 40 días de práctica.</p>"
+          }
+        },
+        "accordion_item_wWaaBW": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Empieza a recitar",
+            "content": "<p>¡Es fácil, solo tienes que recitar!</p><p>Recibirás un registro imprimible para que puedas anotar tu progreso a lo largo de los 40 días.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "accordion_item_Jn4yDk",
+        "accordion_item_npze4h",
+        "accordion_item_wWaaBW"
+      ],
+      "settings": {
+        "margin_top": "mt-lg",
+        "margin_bottom": "mb-0",
+        "padding_top": "pt-0",
+        "padding_bottom": "pb-0",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "desktop_padding_top": "inherit",
+        "desktop_padding_bottom": "inherit",
+        "max_width": "",
+        "title": "¿A quién va dirigido?",
+        "cta_url": "",
+        "cta_label": "",
+        "title_position": "left"
+      }
+    },
+    "section_review_carousel_rxy9jF": {
+      "type": "section__review-carousel",
+      "blocks": {
+        "content_block_NbNwXJ": {
+          "type": "content_block",
+          "settings": {
+            "content": "<p>«Recitar el mantra me hizo disfrutar de un estado de bienestar que no es fácil de traducir en palabras. Si estaba tranquilo, recitar el mantra me hacía sonreír. Si estaba agitado, ansioso, preocupado o asustado, el mantra me ayudaba a mantener la calma y a cambiar mi punto de vista, dando importancia a las \"cosas correctas\"».</p>",
+            "credits": "Tiziana"
+          }
+        },
+        "content_block_q8eN4C": {
+          "type": "content_block",
+          "settings": {
+            "content": "<p>\"Antes de Project Mantra, sentía que mi práctica espiritual era como una obligación. Ahora me siento más en paz. Me siento más dedicada a mi práctica espiritual diaria. Tengo muchas ganas de recitar mi mantra todos los días».</p>",
+            "credits": "Anette Anderson"
+          }
+        },
+        "content_block_DNL9XK": {
+          "type": "content_block",
+          "settings": {
+            "content": "<p>\"La recitación me ha proporcionado mucha paz y satisfacción, la sensación de no necesitar nada para sentirme bien. Cuanto más recitaba, más profunda se volvía y más sentía que el mundo exterior tenía menos control sobre mí\".</p>",
+            "credits": "Nicholas"
+          }
+        }
+      },
+      "block_order": [
+        "content_block_NbNwXJ",
+        "content_block_q8eN4C",
+        "content_block_DNL9XK"
+      ],
+      "settings": {
+        "padding_top": "pt-xl",
+        "padding_bottom": "pb-0",
+        "desktop_padding_top": "inherit",
+        "desktop_padding_bottom": "inherit",
+        "title": "Lo que dice la gente",
+        "title_tag": "h5"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "section_hero_cBpMpY",
+    "section_hero_EmDBMy",
+    "section_image_text_blocks_PHhidM",
+    "section_accordion_bPkzp9",
+    "section_review_carousel_rxy9jF"
+  ]
+}

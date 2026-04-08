@@ -1,0 +1,259 @@
+<style>
+@media (min-width: 48rem) {
+  .ddd-seed {
+    margin-left: 1.25rem;
+  }
+}
+
+@media (min-width: 64rem) {
+  .ddd-seed {
+    margin-left: 2.5rem;
+  }
+}
+
+  
+  
+</style>
+
+{% liquid
+  assign container_classes = ""
+
+  if section.settings.padding_top != "pt-0"
+    assign container_classes = container_classes | append: " " | append: section.settings.padding_top
+  endif
+
+  if section.settings.padding_bottom != "pb-0"
+    assign container_classes = container_classes | append: " " | append: section.settings.padding_bottom
+  endif
+
+  if section.settings.desktop_padding_top != "inherit"
+    assign container_classes = container_classes | append: " " | append: section.settings.desktop_padding_top
+  endif
+
+  if section.settings.desktop_padding_bottom != "inherit"
+    assign container_classes = container_classes | append: " " | append: section.settings.desktop_padding_bottom
+  endif
+
+  assign container_classes = container_classes | strip
+%}
+
+{%- capture carousel_options -%}
+{
+  "slidesPerView": "auto",
+  "freeMode": true,
+  "spaceBetween": 16,
+  "cssMode": true,
+  "loop": false,
+  "watchOverflow": true,
+  "navigation": {
+    "enabled": true,
+    "prevEl": "[js-button-prev-{{ section.id }}]",
+    "nextEl": "[js-button-next-{{ section.id }}]"
+  },
+  "pagination": {
+    "el": ".swiper-pagination",
+    "type": "bullets",
+    "clickable": true
+  }
+}
+{%- endcapture -%}
+
+
+{% assign block_count = 0 %}
+{%- for product in products -%}
+    {% assign block_count = block_count | plus: 1 %}
+{%- endfor -%}
+
+<div class="product-carousel {{ container_classes }} {% if section.settings.set_dark_theme %} bg-blue text-white {% else %} bg-white text-black {% endif %}">
+  <s-carousel class="grid grid-cols-1" data-options='{{ carousel_options }}'>
+    <div class="container w-full mb-lg tabletl:mb-xl">
+      <div class="grid grid-cols-1 tabletl:grid-cols-3">
+        <div class="flex flex-col tabletl:flex-row tabletl:col-span-2 tabletl:items-center">
+          {% if section.settings.title != blank %}
+            <{{ section.settings.title_tag }} class="h5 mb-lg tabletl:mb-0">
+              {{ section.settings.title }}
+            </{{ section.settings.title_tag }}>
+          {% endif %}
+          {% if section.settings.cta_label != blank and section.settings.cta_url != blank %}
+            <a class="group inline-flex items-center text-12 uppercase tabletl:ml-lg" href="{{ section.settings.cta_url }}">
+              {{ section.settings.cta_label }}
+              <i class="inline-block ml-xs w-md h-md -rotate-90 duration-500 group-hover:translate-x-xs">{% render 'icon--caret' %}</i>
+            </a>
+          {% endif %}
+        </div>
+        <div class="hidden gap-sm justify-end items-center tabletl:flex">
+          <button class="events-carousel__nav-button" js-button-prev-{{ section.id }}>
+            <i class="inline-block w-lg rotate-90">{% render 'icon--caret' %}</i>
+          </button>
+          <button class="events-carousel__nav-button" js-button-next-{{ section.id }}>
+            <i class="inline-block w-lg -rotate-90">{% render 'icon--caret' %}</i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="{{ section.id }}--carousel" class=" swiper w-full pb-[50px] swiper--left-offset" js-carousel>
+      <div class="swiper-wrapper">
+        {% assign products = collections[section.settings.product_collection].products %}
+        {% assign slide_index = 0 %}
+        {% for product in products %}
+          {% assign slide_index = slide_index | plus: 1 %}
+          <div class="swiper-slide block w-[80%] tabletp:w-[33.3333%] tabletl:w-[20%] box-content {% if slide_index == 1 %} ddd-seed {% elsif slide_index == block_count %}pl-0 pr-md tabletp:pr-20 tabletl:pr-xl{% endif %}" js-carousel-slide>
+            <a href="{{ product.url }}" aria-label="{{ product.title }}">
+              <video-card class="event-card block rounded overflow-hidden aspect-[5/7]">
+                <div class="event-card__video w-full h-full relative" js-video-container>
+                  <div class="h-full" js-video>
+                    {% if product.featured_media.media_type == 'video' %}
+                      {% assign poster = product.featured_media.preview_image %}
+                      {{ product.featured_media | video_tag: autoplay: false, loop: true, muted: true, class: 'w-full h-full object-cover object-center', poster: poster | img_url: 'master' }}
+                    {% else %}
+                      {% render 'lazy-image', image: product.featured_image, img_classes: "h-full w-full object-cover object-center", picture_classes: "w-full h-full" %}
+                    {% endif %}
+                  </div>
+
+                  {% if section.settings.apply_gradient %}
+                    <div class="event-card__gradient absolute inset-0" style="background: linear-gradient(transparent 45%, rgb(0, 0, 0) 100%);"></div>
+                  {% endif %}
+
+                  <div class="event-card__content-container flex flex-col justify-end absolute top-0 left-0 p-md h-full w-full text-white">
+                    <div class="event-card__content text-center text-16 leading-none">
+                      <h5 class="font-550 leading-tight mb-sm text-18 tabletl:text-20">{{ product.title }}</h5>
+                      <p class="text-sm opacity-90">{{ product.description | strip_html | truncatewords: 25 }}</p>
+                    </div>
+                  </div>
+                </div>
+              </video-card>
+            </a>
+          </div>
+        {% endfor %}
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </s-carousel>
+</div>
+
+<style>
+  #shopify-section-{{ section.id }} .swiper {
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
+  #shopify-section-{{ section.id }} .swiper-wrapper {
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+  #shopify-section-{{ section.id }} .swiper-slide {
+    box-sizing: border-box;
+    min-width: 250px;
+    scroll-snap-align: start;
+  }
+  html, body {
+    overflow-x: hidden;
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Product Carousel",
+  "settings": [
+    {
+      "type": "collection",
+      "id": "product_collection",
+      "label": "Product Collection"
+    },
+    {
+      "type": "checkbox",
+      "id": "set_dark_theme",
+      "label": "Set Dark Theme",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "apply_gradient",
+      "label": "Apply Gradient",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "default": "Upcoming Courses",
+      "label": "Title"
+    },
+    {
+      "type": "select",
+      "id": "title_tag",
+      "label": "Title Tag",
+      "options": [
+        { "value": "h1", "label": "H1" },
+        { "value": "h2", "label": "H2" },
+        { "value": "h3", "label": "H3" },
+        { "value": "h4", "label": "H4" },
+        { "value": "h5", "label": "H5" }
+      ],
+      "default": "h2"
+    },
+    {
+      "type": "text",
+      "id": "cta_label",
+      "label": "Link Label"
+    },
+    {
+      "type": "url",
+      "id": "cta_url",
+      "label": "Link Location"
+    },
+    {
+      "type": "select",
+      "id": "padding_top",
+      "label": "Padding Top",
+      "options": [
+        { "value": "pt-0", "label": "None" },
+        { "value": "pt-md", "label": "Medium" },
+        { "value": "pt-xl", "label": "Extra Large" }
+      ],
+      "default": "pt-xl"
+    },
+    {
+      "type": "select",
+      "id": "padding_bottom",
+      "label": "Padding Bottom",
+      "options": [
+        { "value": "pb-0", "label": "None" },
+        { "value": "pb-md", "label": "Medium" },
+        { "value": "pb-xl", "label": "Extra Large" }
+      ],
+      "default": "pb-xl"
+    },
+    {
+      "type": "select",
+      "id": "desktop_padding_top",
+      "label": "Desktop Padding Top",
+      "options": [
+        { "value": "inherit", "label": "Inherit" },
+        { "value": "tabletl:pt-0", "label": "None" },
+        { "value": "tabletl:pt-md", "label": "Medium" },
+        { "value": "tabletl:pt-xl", "label": "Extra Large" }
+      ],
+      "default": "inherit"
+    },
+    {
+      "type": "select",
+      "id": "desktop_padding_bottom",
+      "label": "Desktop Padding Bottom",
+      "options": [
+        { "value": "inherit", "label": "Inherit" },
+        { "value": "tabletl:pb-0", "label": "None" },
+        { "value": "tabletl:pb-md", "label": "Medium" },
+        { "value": "tabletl:pb-xl", "label": "Extra Large" }
+      ],
+      "default": "inherit"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product Carousel"
+    }
+  ]
+}
+{% endschema %}
+              

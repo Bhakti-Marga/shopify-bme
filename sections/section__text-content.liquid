@@ -1,0 +1,259 @@
+{% liquid
+  assign container_classes = ""
+
+  if section.settings.margin_top != "mt-0"
+      assign container_classes = container_classes | append: " " | append: section.settings.margin_top
+  endif
+
+  if section.settings.margin_bottom != "mb-0"
+      assign container_classes = container_classes | append: " " | append: section.settings.margin_bottom
+  endif
+
+  if section.settings.desktop_margin_top != "inherit"
+      assign container_classes = container_classes | append: " " | append: section.settings.desktop_margin_top
+  endif
+
+  if section.settings.desktop_margin_bottom != "inherit"
+      assign container_classes = container_classes | append: " " | append: section.settings.desktop_margin_bottom
+  endif
+
+  if section.settings.padding_top != "pt-0"
+      assign container_classes = container_classes | append: " " | append: section.settings.padding_top
+  endif
+
+  if section.settings.padding_bottom != "pb-0"
+      assign container_classes = container_classes | append: " " | append: section.settings.padding_bottom
+  endif
+
+  if section.settings.desktop_padding_top != "inherit"
+      assign container_classes = container_classes | append: " " | append: section.settings.desktop_padding_top
+  endif
+
+  if section.settings.desktop_padding_bottom != "inherit"
+      assign container_classes = container_classes | append: " " | append: section.settings.desktop_padding_bottom
+  endif
+
+  assign container_classes = container_classes | strip
+%}
+
+<section class="text-content container {% if container_classes != blank %} {{ container_classes }}{% endif %}">
+  <div class="text-content__inner text-center {% if section.settings.max_width != blank %} mx-auto  tabletl:max-w-[var(--max-width)] {% endif -%}"
+    style="{% if section.settings.max_width != blank %} --max-width: {{ section.settings.max_width }};{% endif %}">
+    {% if section.settings.pretitle != blank %}
+      <p class="mb-md text-18 tabletl:text-20">
+          {{ section.settings.pretitle }}
+      </p>
+    {% endif %}
+    {% if section.settings.title != blank %}
+      <{{ section.settings.title_tag }} class="leading-[1.15] mb-md tabletl:mb-xl {% if section.settings.title_font_style != blank %}{{  section.settings.title_font_style  }}{% endif %}">
+          {{ section.settings.title }}
+      </{{ section.settings.title_tag }}>  
+    {% endif %}
+    {% if section.settings.description != blank %}
+      <div class="rte">
+          {{ section.settings.description }}
+      </div>
+    {% endif %}
+    {% if section.settings.credits != blank %}
+      <p class="mt-xl font-600 leading-tight text-24 tabletl:text-32 tabletl:mt-xxl">{{ section.settings.credits }}</p>
+    {% endif %} 
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Text Content",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "select",
+      "id": "margin_top",
+      "label": "Margin Top",
+      "options": [
+        { "value": "mt-0", "label": "None" },
+        { "value": "mt-sm", "label": "Small - 8px" },
+        { "value": "mt-md", "label": "Medium - 16px" },
+        { "value": "mt-lg", "label": "Large - 24px" },
+        { "value": "mt-xl", "label": "X-Large - 40px" },
+        { "value": "mt-xxl", "label": "XX-Large - 60px" },
+        { "value": "mt-xxxl", "label": "XXX-Large - 80px" }
+      ],
+      "default": "mt-0"
+    },
+    {
+      "type": "select",
+      "id": "margin_bottom",
+      "label": "Margin Bottom",
+      "options": [
+        { "value": "mb-0", "label": "None" },
+        { "value": "mb-sm", "label": "Small - 8px" },
+        { "value": "mb-md", "label": "Medium - 16px" },
+        { "value": "mb-lg", "label": "Large - 24px" },
+        { "value": "mb-xl", "label": "X-Large - 40px" },
+        { "value": "mb-xxl", "label": "XX-Large - 60px" },
+        { "value": "mb-xxxl", "label": "XXX-Large - 80px" }
+      ],
+      "default": "mb-0"
+    },
+    {
+      "type": "select",
+      "id": "padding_top",
+      "label": "Padding Top",
+      "options": [
+        { "value": "pt-0", "label": "None" },
+        { "value": "pt-sm", "label": "Small - 8px" },
+        { "value": "pt-md", "label": "Medium - 16px" },
+        { "value": "pt-lg", "label": "Large - 24px" },
+        { "value": "pt-xl", "label": "X-Large - 40px" },
+        { "value": "pt-xxl", "label": "XX-Large - 60px" },
+        { "value": "pt-xxxl", "label": "XXX-Large - 80px" }
+      ],
+      "default": "pt-0"
+    },
+    {
+      "type": "select",
+      "id": "padding_bottom",
+      "label": "Padding Bottom",
+      "options": [
+        { "value": "pb-0", "label": "None" },
+        { "value": "pb-sm", "label": "Small - 8px" },
+        { "value": "pb-md", "label": "Medium - 16px" },
+        { "value": "pb-lg", "label": "Large - 24px" },
+        { "value": "pb-xl", "label": "X-Large - 40px" },
+        { "value": "pb-xxl", "label": "XX-Large - 60px" },
+        { "value": "pb-xxxl", "label": "XXX-Large - 80px" }
+      ],
+      "default": "pb-0"
+    },
+    {
+      "type": "select",
+      "id": "desktop_margin_top",
+      "label": "Desktop - Margin Top",
+      "options": [
+        { "value": "inherit", "label": "Inherit" },
+        { "value": "tabletl:mt-0", "label": "None" },
+        { "value": "tabletl:mt-sm", "label": "Small - 8px" },
+        { "value": "tabletl:mt-md", "label": "Medium - 16px" },
+        { "value": "tabletl:mt-lg", "label": "Large - 24px" },
+        { "value": "tabletl:mt-xl", "label": "X-Large - 40px" },
+        { "value": "tabletl:mt-xxl", "label": "XX-Large - 60px" },
+        { "value": "tabletl:mt-xxxl", "label": "XXX-Large - 80px" }
+      ],
+      "default": "inherit"
+    },
+    {
+      "type": "select",
+      "id": "desktop_margin_bottom",
+      "label": "Desktop - Margin Bottom",
+      "options": [
+        { "value": "inherit", "label": "Inherit" },
+        { "value": "tabletl:mb-0", "label": "None" },
+        { "value": "tabletl:mb-sm", "label": "Small - 8px" },
+        { "value": "tabletl:mb-md", "label": "Medium - 16px" },
+        { "value": "tabletl:mb-lg", "label": "Large - 24px" },
+        { "value": "tabletl:mb-xl", "label": "X-Large - 40px" },
+        { "value": "tabletl:mb-xxl", "label": "XX-Large - 60px" },
+        { "value": "tabletl:mb-xxxl", "label": "XXX-Large - 80px" }
+      ],
+      "default": "inherit"
+    },
+    {
+      "type": "select",
+      "id": "desktop_padding_top",
+      "label": "Desktop - Padding Top",
+      "options": [
+        { "value": "inherit", "label": "Inherit" },
+        { "value": "tabletl:pt-0", "label": "None" },
+        { "value": "tabletl:pt-sm", "label": "Small - 8px" },
+        { "value": "tabletl:pt-md", "label": "Medium - 16px" },
+        { "value": "tabletl:pt-lg", "label": "Large - 24px" },
+        { "value": "tabletl:pt-xl", "label": "X-Large - 40px" },
+        { "value": "tabletl:pt-xxl", "label": "XX-Large - 60px" },
+        { "value": "tabletl:pt-xxxl", "label": "XXX-Large - 80px" }
+      ],
+      "default": "inherit"
+    },
+    {
+      "type": "select",
+      "id": "desktop_padding_bottom",
+      "label": "Desktop - Padding Bottom",
+      "options": [
+        { "value": "inherit", "label": "Inherit" },
+        { "value": "tabletl:pb-0", "label": "None" },
+        { "value": "tabletl:pb-sm", "label": "Small - 8px" },
+        { "value": "tabletl:pb-md", "label": "Medium - 16px" },
+        { "value": "tabletl:pb-lg", "label": "Large - 24px" },
+        { "value": "tabletl:pb-xl", "label": "X-Large - 40px" },
+        { "value": "tabletl:pb-xxl", "label": "XX-Large - 60px" },
+        { "value": "tabletl:pb-xxxl", "label": "XXX-Large - 80px" }
+      ],
+      "default": "inherit"
+    },
+    {
+      "type": "text",
+      "id": "max_width",
+      "label": "Container Max Width - Desktop",
+      "info": "Make sure to include units, for example: 750px"
+    },
+    {
+      "type": "header",
+      "content": "Content Settings"
+    },
+    {
+      "type": "text",
+      "id": "pretitle",
+      "label": "Pretitle"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "select",
+      "id": "title_tag",
+      "label": "Semantic HTML Title Tag",
+      "options": [
+        { "value": "h1", "label": "H1" },
+        { "value": "h2", "label": "H2" },
+        { "value": "h3", "label": "H3" },
+        { "value": "h4", "label": "H4" },
+        { "value": "h5", "label": "H5" },
+        { "value": "h6", "label": "H6" }
+      ],
+      "default": "h2"
+    },
+    {
+      "type": "select",
+      "id": "title_font_style",
+      "label": "Title Font Style",
+      "options": [
+        { "value": "h1", "label": "H1 - 120px / 80px" },
+        { "value": "h2", "label": "H2 - 88px / 48px" },
+        { "value": "h3", "label": "H3 - 56px / 40px" },
+        { "value": "h4", "label": "H4 - 40px / 32px" },
+        { "value": "h5", "label": "H5 - 32px / 24px" }
+      ],
+      "default": "h3"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description"
+    },
+    {
+      "type": "text",
+      "id": "credits",
+      "label": "Credits"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Text Content"
+    }
+  ]
+}
+{% endschema %}

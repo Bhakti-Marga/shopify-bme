@@ -1,0 +1,11 @@
+{%- if predictive_search.performed -%}
+{% assign total_results = predictive_search.resources.products.size | plus: predictive_search.resources.articles.size | plus: predictive_search.resources.pages.size %}
+  <section id="predictive-search-results">
+    {% render 'predictive-search--resources' resources: predictive_search.resources.products, title: 'Productos', type: 'Product'%}
+    {% render 'predictive-search--resources' resources: predictive_search.resources.articles, title: 'Artículos', type: 'Blog'%}
+    {% render 'predictive-search--resources' resources: predictive_search.resources.pages, title: 'Páginas', type: 'Page'%}
+    {% if total_results == 0 %}
+      <p class="text-20 text-black px-20 py-sm border-t border-gray"> No se encontraron resultados...</p>
+    {% endif %}
+  </section>
+{%- endif -%}

@@ -1,0 +1,57 @@
+<section class="account self-center justify-self-center w-full max-w-[475px]">
+  <div class="account__container border">
+    {%- form 'activate_customer_password', class: 'account__activate' -%}
+      <h1 class="account__title">Activar cuenta</h1>
+      <p>Crea tu contraseña para activar tu cuenta.</p>
+      {%- if form.errors -%}
+        <ul class="form__errors">
+          {% for field in form.errors %}
+            <li>
+              {% if field == 'form' %}
+                {{ form.errors.messages[field] }}
+              {% else %}
+                {{ form.errors.translated_fields[field] }} - {{ form.errors.messages[field] }}
+              {% endif %}
+            </li>
+          {% endfor %}
+        </ul>
+      {%- endif -%}
+
+      <div class="relative">
+        <label for="password" class="form__label">Contraseña</label>
+        <input
+          type="password"
+          name="customer[password]"
+          id="password"
+          class="form__element"
+          autocomplete="new-password"
+          placeholder="{{ 'customer.activate_account.password' | t }}"
+          {% if form.errors contains 'password' %}
+            aria-invalid="true"
+            aria-describedby="password-error"
+          {% endif %}
+        >
+      </div>
+
+      <div class="relative">
+        <label for="password_confirmation" class="form__label">Confirmar contraseña</label>    
+        <input
+          type="password"
+          name="customer[password_confirmation]"
+          id="password_confirmation"
+          class="form__element"
+          autocomplete="new-password"
+          placeholder="{{ 'customer.activate_account.password_confirm' | t }}"
+          {% if form.errors contains 'password' %}
+            aria-invalid="true"
+            aria-describedby="password_confirmation-error"
+          {% endif %}
+        >
+      </div>
+
+      <button class="btn">Activar cuenta</button>
+      <button name="decline">Rechazar invitación</button>
+    
+    {%- endform -%}
+  </div>
+</section>

@@ -1,0 +1,220 @@
+{%- liquid 
+  assign current_variant = product.selected_or_first_available_variant 
+  assign product_form_id = 'ProductForm-' | append: section.id | append: product.id
+  assign master_select_id = 'MasterSelect-' | append: section.id
+-%}
+
+{%- capture carousel_options -%}
+  {
+    "slidesPerView": "auto",
+    "freeMode": true,
+    "touchRatio": 1,
+    "momentum": true,
+    "mousewheel": {
+      "forceToAxis": true
+    },
+    "loop": false,
+    "spaceBetween": "16",
+    "pagination": {
+      "el": ".swiper-pagination",
+      "type": "bullets",
+      "clickable": true
+    }
+  }
+{%- endcapture -%}
+
+<s-product role="section" class="product block container py-md tabletl:py-xl" data-section-id="{{ section.id }}">
+  <a class="skip-to-content-link sr-only" href="#ProductInfo-{{ section.id }}">Skip to product information</a>
+  <div class="product__layout tabletl:grid tabletl:grid-cols-2 tabletl:gap-md">
+    <div class="product__images">
+      <s-carousel data-init="belowLaptop" data-options='{{carousel_options}}'>
+        <div id="ProductMainImages" class="swiper w-full pb-[50px]" js-carousel>
+          <div class="swiper-wrapper tabletl:grid tabletl:grid-cols-2 tabletl:gap-md">
+            {% for media in product.media %}
+              {% assign slide_classes = 'aspect-[16/9] relative z-1 overflow-hidden' %}
+              {% assign index_mod_3 = forloop.index | modulo: 3 %}
+
+              {% if index_mod_3 == 1 %}
+                {% assign slide_classes = slide_classes | append: ' tabletl:col-span-2' %}
+              {% elsif index_mod_3 == 2 or index_mod_3 == 0 %}
+                {% assign slide_classes = slide_classes | append: ' tabletl:col-span-1' %}
+              {% endif %}
+
+              {% case media.media_type %}
+                {% when 'image' %}
+                  <div class="swiper-slide {{ slide_classes }}" js-carousel-slide>
+                    {% render 'lazy-image',
+                      image: media,
+                      picture_classes: 'h-full',
+                      img_classes: 'object-cover h-full rounded'
+                    %}
+                  </div>
+                {% when 'video' %}
+                  <div class="swiper-slide {{ slide_classes }}" js-carousel-slide>
+                    {{ media | video_tag: controls: true, autoplay: false, loop: true, mute: false, class: 'w-full h-full object-cover block' }}
+                  </div>
+                {% when 'external_video' %}              
+                  <div class="swiper-slide {{ slide_classes }}" js-carousel-slide>
+                    {{ media | external_video_tag }}
+                  </div>
+                {% endcase %}
+            {% endfor %}
+          </div>
+          <div class="swiper-pagination tabletl:hidden"></div>
+        </div>
+      </s-carousel>
+    </div><!-- .product__images-container -->
+
+    <div class="product__information h-[min-content] py-lg tabletl:py-xl tabletl:px-xxl tabletl:sticky tabletl:top-[var(--header-height)]" id="ProductInfo-{{ section.id }}">
+      <h1 class="product__title h5 leading-tight mb-lg">{{ product.title }}</h1>
+      <div class="product__price mb-lg text-18 tabletl:text-20" js-price>{{current_variant.price | money }}</div>
+      {% if product.metafields.event.date_time != blank or product.metafields.event.teacher != blank or product.metafields.event.location != blank %}
+        <div class="product__event-info-wrapper mb-lg text-18 tabletl:text-20">
+          {% if product.metafields.event.date_time != blank %}
+            <p class="font-700">{{ product.metafields.event.date_time }}</p>
+          {% endif %}
+          {% if product.metafields.event.teacher != blank %}
+            <p class="mt-sm">{{ product.metafields.event.teacher }}</p>
+          {% endif %}
+          {% if product.metafields.event.type != blank and product.metafields.event.location != blank %}
+            {%- assign event_type = product.metafields.event.type | downcase -%}
+              {%- if event_type contains "in-person" -%}
+                <p class="mt-sm">{{ product.metafields.event.location }}</p>
+              {%- endif -%}
+          {% endif %}
+        </div>
+      {% endif %}
+      <div class="product__description text-16 mb-lg tabletl:text-18">{{ product.description }}</div>
+      {%- comment -%}
+        * Product Form
+      {%- endcomment -%}
+      {%- form 'product', product, id: product_form_id, class: 'form', novalidate: 'novalidate', js-product-form: true -%}
+        
+        {%- comment -%} Product Variant Master Select {%- endcomment -%}
+        {% render 'master-variant-select',
+          variants: product.variants,
+          id: master_select_id,
+          current_variant: current_variant
+        %}
+
+        {% unless product.has_only_default_variant %}
+          <product-options class="no-js-hidden block" data-product='ProductJSON' data-master-select-id="{{ master_select_id }}" data-enable-history-state>
+            {% for option in product.options_with_values %}
+              {% render 'product-option-selector' 
+                option: option
+                type: 'select'
+                section_id: section.id
+                product_id: product.id
+              %}
+            {% endfor %}
+          </product-options>
+        {% endunless %}
+
+        <label class="form__label inline-block font-600 text-16 mb-md" for="Quantity-{{ section.id }}">
+          {%- assign product_type = product.type | downcase -%}
+          {%- if product_type contains "event" -%}
+            Attendees:
+          {%- else -%}
+            Qty:
+          {%- endif -%}
+        </label>
+        {%- if product_type contains "event" -%}
+          <input class="quantity__input hidden"
+                type="number"
+                name="quantity"
+                id="Quantity-{{ section.id }}"
+                min="1"
+                value="1"
+                form="{{ product_form_id }}"
+              >
+        {%- else -%}
+          <quantity-input class="quantity flex justify-between items-center w-[130px] py-12 px-lg border rounded-full mb-lg">
+            <button class="quantity__button" name="minus" type="button" aria-label="Decrease quantity for {{ product.title }}" title="Decrease quantity for {{ product.title }}">&minus;</button>
+            <input class="quantity__input w-full bg-transparent text-center font-500 text-20"
+                type="number"
+                name="quantity"
+                id="Quantity-{{ section.id }}"
+                min="1"
+                value="1"
+                form="{{ product_form_id }}"
+              >
+            <button class="quantity__button" name="plus" type="button" aria-label="Increase quantity for {{ product.title }}" title="Increase quantity for {{ product.title }}">&plus;</button>
+          </quantity-input>
+        {%- endif -%}
+
+        {%- for block in section.blocks -%}
+          {% render block %}
+        {%- endfor -%}
+
+        <button 
+          class="btn btn--gold py-md w-full uppercase relative"
+          type="submit" 
+          {% unless current_variant.available %} disabled {% endunless %}
+          js-add-to-cart>
+          <loading-spinner style="--size: 3rem; --bg-opacity: 100%;"></loading-spinner>
+          {% if current_variant.available %} {{ 'products.product.add_to_cart' | t }} {% else %} {{ 'products.product.sold_out' | t }} {% endif %}
+
+        </button>
+        <p class="hidden" js-error-message></p>
+
+      {%- endform -%}
+    </div><!-- .product__images-container -->
+  </div><!-- .product__layout -->
+
+  <script type="application/json" id="ProductJSON">{{ product | json }}</script>
+
+</s-product>
+
+{%- liquid
+  if product.selected_or_first_available_variant.featured_media
+    assign seo_media = product.selected_or_first_available_variant.featured_media
+  else
+    assign seo_media = product.featured_media
+  endif
+-%}
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org/",
+    "@type": "Product",
+    "name": {{ product.title | json }},
+    "url": {{ shop.url | append: product.url | json }},
+    {% if seo_media -%}
+      "image": [
+        {{ seo_media | image_url: width: seo_media.preview_image.width | prepend: "https:" | json }}
+      ],
+    {%- endif %}
+    "description": {{ product.description | strip_html | json }},
+    {%- if product.selected_or_first_available_variant.sku != blank -%}
+      "sku": {{ product.selected_or_first_available_variant.sku | json }},
+    {%- endif -%}
+    "brand": {
+      "@type": "Brand",
+      "name": {{ product.vendor | json }}
+    },
+    "offers": [
+      {%- for variant in product.variants -%}
+        {
+          "@type" : "Offer",
+          {%- if variant.sku != blank -%}
+            "sku": {{ variant.sku | json }},
+          {%- endif -%}
+          "availability" : "http://schema.org/{% if variant.available %}InStock{% else %}OutOfStock{% endif %}",
+          "price" : {{ variant.price | divided_by: 100.00 | json }},
+          "priceCurrency" : {{ cart.currency.iso_code | json }},
+          "url" : {{ shop.url | append: variant.url | json }}
+        }{% unless forloop.last %},{% endunless %}
+      {%- endfor -%}
+    ]
+  }
+</script>
+
+{% schema %}
+{
+  "name": "Product",
+  "blocks": [
+    {
+      "type": "@app"
+    }
+  ]
+}
+{% endschema %}

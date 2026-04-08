@@ -1,0 +1,149 @@
+{% liquid
+  assign container_classes = ""
+
+  if section.settings.padding_top != "pt-0"
+    assign container_classes = container_classes | append: " " | append: section.settings.padding_top
+  endif
+
+  if section.settings.padding_bottom != "pb-0"
+    assign container_classes = container_classes | append: " " | append: section.settings.padding_bottom
+  endif
+
+  if section.settings.desktop_padding_top != "inherit"
+    assign container_classes = container_classes | append: " " | append: section.settings.desktop_padding_top
+  endif
+
+  if section.settings.desktop_padding_bottom != "inherit"
+    assign container_classes = container_classes | append: " " | append: section.settings.desktop_padding_bottom
+  endif
+
+  assign container_classes = container_classes | strip
+%}
+
+{% assign featured_article = nil %}
+
+{% for article in blog.articles %}
+  {% if article.metafields.event.featured == true %}
+    {% assign featured_article = article %}
+    {% break %}
+  {% endif %}
+{% endfor %}
+
+{% if featured_article != blank %}
+  {%
+    render 'article-hero',
+    article: featured_article,
+    background_style: 'split',
+    classes: container_classes,
+    gradient: section.settings.apply_gradient,
+    gradient_height: section.settings.gradient_height,
+    gradient_color: section.settings.gradient_color
+  %}
+{% endif %}
+
+
+{% schema %}
+{
+    "name": "Blog Hero",
+    "settings": [
+        {
+            "type": "header",
+            "content": "Layout"
+        },
+        {
+            "type": "select",
+            "id": "padding_top",
+            "label": "Padding Top",
+            "options": [
+                { "value": "pt-0", "label": "None" },
+                { "value": "pt-sm", "label": "Small - 8px" },
+                { "value": "pt-md", "label": "Medium - 16px" },
+                { "value": "pt-lg", "label": "Large - 24px" },
+                { "value": "pt-xl", "label": "X-Large - 40px" },
+                { "value": "pt-xxl", "label": "XX-Large - 60px" },
+                { "value": "pt-xxxl", "label": "XXX-Large - 80px" }
+            ],
+            "default": "pt-0"
+        },
+        {
+            "type": "select",
+            "id": "padding_bottom",
+            "label": "Padding Bottom",
+            "options": [
+                { "value": "pb-0", "label": "None" },
+                { "value": "pb-sm", "label": "Small - 8px" },
+                { "value": "pb-md", "label": "Medium - 16px" },
+                { "value": "pb-lg", "label": "Large - 24px" },
+                { "value": "pb-xl", "label": "X-Large - 40px" },
+                { "value": "pb-xxl", "label": "XX-Large - 60px" },
+                { "value": "pb-xxxl", "label": "XXX-Large - 80px" }
+            ],
+            "default": "pb-0"
+        },
+        {
+            "type": "select",
+            "id": "desktop_padding_top",
+            "label": "Desktop - Padding Top",
+            "options": [
+                { "value": "inherit", "label": "Inherit" },
+                { "value": "tabletl:pt-0", "label": "None" },
+                { "value": "tabletl:pt-sm", "label": "Small - 8px" },
+                { "value": "tabletl:pt-md", "label": "Medium - 16px" },
+                { "value": "tabletl:pt-lg", "label": "Large - 24px" },
+                { "value": "tabletl:pt-xl", "label": "X-Large - 40px" },
+                { "value": "tabletl:pt-xxl", "label": "XX-Large - 60px" },
+                { "value": "tabletl:pt-xxxl", "label": "XXX-Large - 80px" }
+            ],
+            "default": "inherit"
+        },
+        {
+            "type": "select",
+            "id": "desktop_padding_bottom",
+            "label": "Desktop - Padding Bottom",
+            "options": [
+                { "value": "inherit", "label": "Inherit" },
+                { "value": "tabletl:pb-0", "label": "None" },
+                { "value": "tabletl:pb-sm", "label": "Small - 8px" },
+                { "value": "tabletl:pb-md", "label": "Medium - 16px" },
+                { "value": "tabletl:pb-lg", "label": "Large - 24px" },
+                { "value": "tabletl:pb-xl", "label": "X-Large - 40px" },
+                { "value": "tabletl:pb-xxl", "label": "XX-Large - 60px" },
+                { "value": "tabletl:pb-xxxl", "label": "XXX-Large - 80px" }
+            ],
+            "default": "inherit"
+        },
+        {
+          "type": "header",
+          "content": "Gradient"
+        },
+        {
+          "type": "checkbox",
+          "id": "apply_gradient",
+          "label": "Apply Hero Gradient",
+          "default": true
+        },
+        {
+          "type": "range",
+          "id": "gradient_height",
+          "min": 0,
+          "max": 100,
+          "step": 2,
+          "unit": "%",
+          "label": "Gradient Height",
+          "default": 40
+        },
+        {
+          "type": "color",
+          "id": "gradient_color",
+          "label": "Gradient Color",
+          "default": "#000"
+        }
+
+    ],
+    "presets": [
+    {
+        "name": "Blog Hero"
+    }
+  ]
+}
+{% endschema %}

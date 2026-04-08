@@ -1,0 +1,23 @@
+<div class="product-card h-full">
+  <a href="{{ product.url }}" class="product-card__link group flex h-full flex-col justify-between rounded bg-gray-lighter p-md tabletl:p-lg">
+    <div class="product-card__image flex item-center justify-center relative aspect-[2/3] overflow-hidden">
+    {% render 'lazy-image'
+      image: product.featured_image,
+      picture_classes: 'w-full h-full',
+      img_classes: 'object-cover absolute top-0 left-0 h-full duration-1000 group-hover:scale-[1.15]'
+     %}
+    </div>
+    <div class="product-card__info mt-md flex items-end gap-md tabletl:gap-lg">
+      <div class="flex flex-1 flex-col">
+        <span class="font-600 opacity-50 text-14 tabletl:text-16">{{ product.category }}</span>
+        <h3 class="product-card__title font-500 text-18 tabletl:text-20">
+          {{ product.title }}
+        </h3>
+        <div class="product-card__price font-600 text-14 tabletl:text-16">{{product.price | money}}</div>
+      </div>
+      <div class="btn btn--black p-0 flex items-center justify-center h-xl w-xl shrink-0">
+        <i class='inline-block w-lg text-white -rotate-90'>{% render 'icon--caret' %}</i>
+      </div>
+    </div>
+  </a>
+</div>

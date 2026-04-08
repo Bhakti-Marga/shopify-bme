@@ -1,0 +1,266 @@
+{% liquid
+  assign container_classes = ""
+
+  if section.settings.margin_top != "mt-0"
+    assign container_classes = container_classes | append: " " | append: section.settings.margin_top
+  endif
+
+  if section.settings.margin_bottom != "mb-0"
+    assign container_classes = container_classes | append: " " | append: section.settings.margin_bottom
+  endif
+
+  if section.settings.desktop_margin_top != "inherit"
+    assign container_classes = container_classes | append: " " | append: section.settings.desktop_margin_top
+  endif
+
+  if section.settings.desktop_margin_bottom != "inherit"
+    assign container_classes = container_classes | append: " " | append: section.settings.desktop_margin_bottom
+  endif
+
+  if section.settings.padding_top != "pt-0"
+    assign container_classes = container_classes | append: " " | append: section.settings.padding_top
+  endif
+
+  if section.settings.padding_bottom != "pb-0"
+    assign container_classes = container_classes | append: " " | append: section.settings.padding_bottom
+  endif
+
+  if section.settings.desktop_padding_top != "inherit"
+    assign container_classes = container_classes | append: " " | append: section.settings.desktop_padding_top
+  endif
+
+  if section.settings.desktop_padding_bottom != "inherit"
+    assign container_classes = container_classes | append: " " | append: section.settings.desktop_padding_bottom
+  endif
+
+  assign container_classes = container_classes | strip
+%}
+
+<section class="event-calendar container mt-xl mb-xl {% if container_classes != blank %} {{ container_classes }}{% endif %}">
+  {% if section.settings.title != blank %}
+    <h2 class="h3">{{ section.settings.title }}</h2>
+  {% endif %}
+
+  {% if section.settings.description != blank %}
+      <div class="rte text-20">
+        {{ section.settings.description }}
+      </div>
+  {% endif %}
+
+  {% for block in section.blocks %}
+
+    <div class="grid grid-cols-1 tabletl:grid-cols-[30%_40%_30%] border-b border-gray py-sm tabletl:py-xl">
+      <!-- Date Column (Smaller) -->
+      <div class="pb-md tabletl:pb-0">
+        {% if block.settings.date_title != blank %}
+          <h3 class="text-32">{{ block.settings.date_title }}</h3>
+        {% endif %}
+      </div>
+
+      <!-- Image Column -->
+      <div class="tabletl:order-last {{ image_container_classes }}">
+        {% if block.settings.image %}
+          {% render 'lazy-image',
+            image: block.settings.image,
+            img_classes: 'rounded'
+          %}
+        {% endif %}
+      </div>
+
+      <!-- Title + Subtitle Column -->
+      <div class="py-lg tabletl:py-0 tabletl:pr-xl">
+        {% if block.settings.title != blank %}
+          <h4 class="text-32">{{ block.settings.title }}</h4>
+        {% endif %}
+        
+        {% if block.settings.content != blank %}
+          <div class="rte text-16">{{ block.settings.content }}</div>
+        {% endif %}
+      </div>
+    </div>
+
+  {% endfor %}
+</section>
+
+{% schema %}
+{
+  "name": "Event Calendar",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "select",
+      "id": "margin_top",
+      "label": "Margin Top",
+      "options": [
+        { "value": "mt-0", "label": "None" },
+        { "value": "mt-sm", "label": "Small - 8px" },
+        { "value": "mt-md", "label": "Medium - 16px" },
+        { "value": "mt-lg", "label": "Large - 24px" },
+        { "value": "mt-xl", "label": "X-Large - 40px" },
+        { "value": "mt-xxl", "label": "XX-Large - 60px" },
+        { "value": "mt-xxxl", "label": "XXX-Large - 80px" }
+      ],
+      "default": "mt-0"
+    },
+    {
+      "type": "select",
+      "id": "margin_bottom",
+      "label": "Margin Bottom",
+      "options": [
+        { "value": "mb-0", "label": "None" },
+        { "value": "mb-sm", "label": "Small - 8px" },
+        { "value": "mb-md", "label": "Medium - 16px" },
+        { "value": "mb-lg", "label": "Large - 24px" },
+        { "value": "mb-xl", "label": "X-Large - 40px" },
+        { "value": "mb-xxl", "label": "XX-Large - 60px" },
+        { "value": "mb-xxxl", "label": "XXX-Large - 80px" }
+      ],
+      "default": "mb-0"
+    },
+    {
+      "type": "select",
+      "id": "padding_top",
+      "label": "Padding Top",
+      "options": [
+        { "value": "pt-0", "label": "None" },
+        { "value": "pt-sm", "label": "Small - 8px" },
+        { "value": "pt-md", "label": "Medium - 16px" },
+        { "value": "pt-lg", "label": "Large - 24px" },
+        { "value": "pt-xl", "label": "X-Large - 40px" },
+        { "value": "pt-xxl", "label": "XX-Large - 60px" },
+        { "value": "pt-xxxl", "label": "XXX-Large - 80px" }
+      ],
+      "default": "pt-0"
+    },
+    {
+      "type": "select",
+      "id": "padding_bottom",
+      "label": "Padding Bottom",
+      "options": [
+        { "value": "pb-0", "label": "None" },
+        { "value": "pb-sm", "label": "Small - 8px" },
+        { "value": "pb-md", "label": "Medium - 16px" },
+        { "value": "pb-lg", "label": "Large - 24px" },
+        { "value": "pb-xl", "label": "X-Large - 40px" },
+        { "value": "pb-xxl", "label": "XX-Large - 60px" },
+        { "value": "pb-xxxl", "label": "XXX-Large - 80px" }
+      ],
+      "default": "pb-0"
+    },
+    {
+      "type": "select",
+      "id": "desktop_margin_top",
+      "label": "Desktop - Margin Top",
+      "options": [
+        { "value": "inherit", "label": "Inherit" },
+        { "value": "tabletl:mt-0", "label": "None" },
+        { "value": "tabletl:mt-sm", "label": "Small - 8px" },
+        { "value": "tabletl:mt-md", "label": "Medium - 16px" },
+        { "value": "tabletl:mt-lg", "label": "Large - 24px" },
+        { "value": "tabletl:mt-xl", "label": "X-Large - 40px" },
+        { "value": "tabletl:mt-xxl", "label": "XX-Large - 60px" },
+        { "value": "tabletl:mt-xxxl", "label": "XXX-Large - 80px" }
+      ],
+      "default": "inherit"
+    },
+    {
+      "type": "select",
+      "id": "desktop_margin_bottom",
+      "label": "Desktop - Margin Bottom",
+      "options": [
+        { "value": "inherit", "label": "Inherit" },
+        { "value": "tabletl:mb-0", "label": "None" },
+        { "value": "tabletl:mb-sm", "label": "Small - 8px" },
+        { "value": "tabletl:mb-md", "label": "Medium - 16px" },
+        { "value": "tabletl:mb-lg", "label": "Large - 24px" },
+        { "value": "tabletl:mb-xl", "label": "X-Large - 40px" },
+        { "value": "tabletl:mb-xxl", "label": "XX-Large - 60px" },
+        { "value": "tabletl:mb-xxxl", "label": "XXX-Large - 80px" }
+      ],
+      "default": "inherit"
+    },
+    {
+      "type": "select",
+      "id": "desktop_padding_top",
+      "label": "Desktop - Padding Top",
+      "options": [
+        { "value": "inherit", "label": "Inherit" },
+        { "value": "tabletl:pt-0", "label": "None" },
+        { "value": "tabletl:pt-sm", "label": "Small - 8px" },
+        { "value": "tabletl:pt-md", "label": "Medium - 16px" },
+        { "value": "tabletl:pt-lg", "label": "Large - 24px" },
+        { "value": "tabletl:pt-xl", "label": "X-Large - 40px" },
+        { "value": "tabletl:pt-xxl", "label": "XX-Large - 60px" },
+        { "value": "tabletl:pt-xxxl", "label": "XXX-Large - 80px" }
+      ],
+      "default": "inherit"
+    },
+    {
+      "type": "select",
+      "id": "desktop_padding_bottom",
+      "label": "Desktop - Padding Bottom",
+      "options": [
+        { "value": "inherit", "label": "Inherit" },
+        { "value": "tabletl:pb-0", "label": "None" },
+        { "value": "tabletl:pb-sm", "label": "Small - 8px" },
+        { "value": "tabletl:pb-md", "label": "Medium - 16px" },
+        { "value": "tabletl:pb-lg", "label": "Large - 24px" },
+        { "value": "tabletl:pb-xl", "label": "X-Large - 40px" },
+        { "value": "tabletl:pb-xxl", "label": "XX-Large - 60px" },
+        { "value": "tabletl:pb-xxxl", "label": "XXX-Large - 80px" }
+      ],
+      "default": "inherit"
+    },
+    {
+      "type": "header",
+      "content": "Content Settings"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Event Calendar Item",
+      "type": "Calendar_item",
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "date_title",
+          "label": "Date"
+        },
+        {
+          "type": "textarea",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Content"
+        },
+         {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Event Calendar"
+    }
+  ]
+}
+{% endschema %}

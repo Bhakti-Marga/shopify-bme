@@ -1,0 +1,47 @@
+{% render 'article-hero',
+  article: article,
+  background_style: 'solid',
+  anchor: true,
+  gradient: section.settings.apply_gradient,
+  gradient_height: section.settings.gradient_height,
+  gradient_color: section.settings.gradient_color
+ %}
+
+{% schema %}
+  {
+    "name": "Article Hero",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Gradient"
+      },
+      {
+        "type": "checkbox",
+        "id": "apply_gradient",
+        "label": "Apply Hero Gradient",
+        "default": false
+      },
+      {
+        "type": "range",
+        "id": "gradient_height",
+        "min": 0,
+        "max": 100,
+        "step": 2,
+        "unit": "%",
+        "label": "Gradient Height",
+        "default": 40
+      },
+      {
+        "type": "color",
+        "id": "gradient_color",
+        "label": "Gradient Color",
+        "default": "#000"
+      },
+    ],
+    "presets": [
+    {
+        "name": "Article Hero"
+    }
+  ]
+  }
+{% endschema %}

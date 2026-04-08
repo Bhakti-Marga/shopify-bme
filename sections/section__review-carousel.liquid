@@ -1,0 +1,220 @@
+{% liquid
+  assign container_classes = ""
+  if section.settings.padding_top != "pt-0"
+      assign container_classes = container_classes | append: " " | append: section.settings.padding_top
+  endif
+  if section.settings.padding_bottom != "pb-0"
+      assign container_classes = container_classes | append: " " | append: section.settings.padding_bottom
+  endif
+  if section.settings.desktop_padding_top != "inherit"
+      assign container_classes = container_classes | append: " " | append: section.settings.desktop_padding_top
+  endif
+  if section.settings.desktop_padding_bottom != "inherit"
+      assign container_classes = container_classes | append: " " | append: section.settings.desktop_padding_bottom
+  endif
+  assign container_classes = container_classes | strip
+%}
+{%- capture carousel_options -%}
+  {
+    "slidesPerView": "auto",
+    "loop": false,
+    "spaceBetween": "16",
+    "freeMode": true,
+    "touchRatio": 1,
+    "momentum": true,
+    "mousewheel": {
+      "forceToAxis": true
+    },
+    "simulateTouch": true,
+    "navigation": {
+      "enabled": true,
+      "prevEl": "[js-button-prev-{{ section.id }}]",
+      "nextEl": "[js-button-next-{{ section.id }}]"
+    },
+    "pagination": {
+      "el": ".swiper-pagination",
+      "type": "bullets",
+      "clickable": true
+    }
+  }
+{%- endcapture -%}
+<div class="review-carousel {% if container_classes != blank %} {{ container_classes }}{% endif %}">
+  <s-carousel class="grid grid-cols-1" data-options='{{carousel_options}}' data-locked="true">
+    <div class="review-carousel-header container w-full mb-md tabletl:mb-xl">
+      <div class="grid grid-cols-1 tabletp:grid-cols-3">
+        <div class="flex flex-col tabletl:flex-row tabletp:col-span-2 tabletl:items-center">
+          {% if section.settings.title != blank %}
+            <{{ section.settings.title_tag }} class="review-carousel-header__title h3 leading-[1.15]">
+                {{ section.settings.title }}
+            </{{ section.settings.title_tag }}>
+          {% endif %}
+        </div>
+        <div class="review-carousel__navigation hidden gap-sm justify-end items-center tabletp:flex">
+          <button class="review-carousel__nav-button" js-button-prev-{{ section.id }}>
+            <i class='inline-block w-lg rotate-90'>{% render 'icon--caret' %}</i>
+          </button>
+          <button class="review-carousel__nav-button" js-button-next-{{ section.id }}>
+            <i class='inline-block w-lg -rotate-90'>{% render 'icon--caret' %}</i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      id="{{ section.id }}--carousel"
+      class="swiper swiper--left-offset w-full pb-[50px]"
+      js-carousel
+    >
+      <div class="swiper-wrapper w-full">
+        {% for block in section.blocks %}
+          {% if block.settings.content != blank or block.settings.image != blank %}
+            <figure class="swiper-slide block w-[70%] tabletp:w-[33%] tabletl:w-[20%] box-content {% if forloop.first %}tabletp:pl-20 tabletl:pl-xl{% elsif forloop.last %}pl-0 pr-md tabletp:pr-20 tabletl:pr-xl{% endif %}" js-carousel-slide>
+              {% if block.settings.image != blank %}
+                <div class="overflow-hidden rounded w-full aspect-[3/5] relative mb-md tabletl:mb-lg">
+                  {% render 'lazy-image',
+                    image: block.settings.image,
+                    img_classes: 'object-cover absolute top-0 left-0 h-full' %}
+                </div>
+              {% endif %}
+              <figcaption>
+                {% if block.settings.content != blank %}
+                  <div class="text-center rte mb-12">
+                      {{ block.settings.content }}
+                  </div>  
+                {% endif %}
+                {% if block.settings.credits != blank %}
+                  <div class="font-600 text-16 text-center">
+                    -{{ block.settings.credits }}
+                  </div>
+                {% endif %}
+              </figcaption>
+            </figure>
+          {% endif %}
+        {% endfor %}
+      </div> 
+      <div class="swiper-pagination"></div>
+    </div>
+  </s-carousel>
+</div>
+{% schema %}
+{
+  "name": "Review Carousel",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "select",
+      "id": "padding_top",
+      "label": "Padding Top",
+      "options": [
+        { "value": "pt-0", "label": "None" },
+        { "value": "pt-sm", "label": "Small - 8px" },
+        { "value": "pt-md", "label": "Medium - 16px" },
+        { "value": "pt-lg", "label": "Large - 24px" },
+        { "value": "pt-xl", "label": "X-Large - 40px" },
+        { "value": "pt-xxl", "label": "XX-Large - 60px" },
+        { "value": "pt-xxxl", "label": "XXX-Large - 80px" }
+      ],
+      "default": "pt-0"
+    },
+    {
+      "type": "select",
+      "id": "padding_bottom",
+      "label": "Padding Bottom",
+      "options": [
+        { "value": "pb-0", "label": "None" },
+        { "value": "pb-sm", "label": "Small - 8px" },
+        { "value": "pb-md", "label": "Medium - 16px" },
+        { "value": "pb-lg", "label": "Large - 24px" },
+        { "value": "pb-xl", "label": "X-Large - 40px" },
+        { "value": "pb-xxl", "label": "XX-Large - 60px" },
+        { "value": "pb-xxxl", "label": "XXX-Large - 80px" }
+      ],
+      "default": "pb-0"
+    },
+    {
+      "type": "select",
+      "id": "desktop_padding_top",
+      "label": "Desktop - Padding Top",
+      "options": [
+        { "value": "inherit", "label": "Inherit" },
+        { "value": "tabletl:pt-0", "label": "None" },
+        { "value": "tabletl:pt-sm", "label": "Small - 8px" },
+        { "value": "tabletl:pt-md", "label": "Medium - 16px" },
+        { "value": "tabletl:pt-lg", "label": "Large - 24px" },
+        { "value": "tabletl:pt-xl", "label": "X-Large - 40px" },
+        { "value": "tabletl:pt-xxl", "label": "XX-Large - 60px" },
+        { "value": "tabletl:pt-xxxl", "label": "XXX-Large - 80px" }
+      ],
+      "default": "inherit"
+    },
+    {
+      "type": "select",
+      "id": "desktop_padding_bottom",
+      "label": "Desktop - Padding Bottom",
+      "options": [
+        { "value": "inherit", "label": "Inherit" },
+        { "value": "tabletl:pb-0", "label": "None" },
+        { "value": "tabletl:pb-sm", "label": "Small - 8px" },
+        { "value": "tabletl:pb-md", "label": "Medium - 16px" },
+        { "value": "tabletl:pb-lg", "label": "Large - 24px" },
+        { "value": "tabletl:pb-xl", "label": "X-Large - 40px" },
+        { "value": "tabletl:pb-xxl", "label": "XX-Large - 60px" },
+        { "value": "tabletl:pb-xxxl", "label": "XXX-Large - 80px" }
+      ],
+      "default": "inherit"
+    },
+    {
+      "type": "header",
+      "content": "Header Settings"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "select",
+      "id": "title_tag",
+      "label": "Title Tag",
+      "options": [
+        { "value": "h1", "label": "H1" },
+        { "value": "h2", "label": "H2" },
+        { "value": "h3", "label": "H3" },
+        { "value": "h4", "label": "H4" },
+        { "value": "h5", "label": "H5" }
+      ],
+      "default": "h2"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "content_block",
+      "name": "Content Block",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Content"
+        },
+        {
+          "type": "text",
+          "id": "credits",
+          "label": "Credits"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Review Carousel"
+    }
+  ]
+}
+{% endschema %}

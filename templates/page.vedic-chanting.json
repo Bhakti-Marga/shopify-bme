@@ -1,0 +1,290 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "page__main",
+      "disabled": true,
+      "settings": {}
+    },
+    "section_hero_cBpMpY": {
+      "type": "section__hero",
+      "custom_css": [
+        ".hero__content-wrapper {background: #0000004a; z-index: 1; position: sticky;}"
+      ],
+      "settings": {
+        "padding_top": "0px",
+        "desktop_padding_top": "inherit",
+        "padding_bottom": "40px",
+        "desktop_padding_bottom": "60px",
+        "padding_horizontal": "px-0",
+        "desktop_padding_horizontal": "inherit",
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "use_container": true,
+        "set_100vh": true,
+        "set_100vh_desktop": true,
+        "border_radius": 16,
+        "aspect_ratio": "auto",
+        "aspect_ratio_desktop": "4/3",
+        "image": "shopify://shop_images/vedic-chanting_3cc5c269-558a-4d18-9b4e-c33a9452453d.jpg",
+        "image_desktop": "shopify://shop_images/vedic-chanting_3cc5c269-558a-4d18-9b4e-c33a9452453d.jpg",
+        "bg_color": "#16254c",
+        "content_width": "max-w-5xl",
+        "text_align": "text-left",
+        "text_color": "#ffffff",
+        "title": "Canto védico",
+        "title_font_style": "h3",
+        "subtitle": "<p>El sánscrito es la expresión del reino espiritual, un lenguaje vibracional que tiene el poder de cambiar las ondas de pensamiento, así como tu entorno.</p>",
+        "button_text": "",
+        "button_url": "",
+        "button_style": "btn",
+        "anchor_to_pricing": false,
+        "video_title": "",
+        "horizontal_position": "justify-center",
+        "vertical_position": "items-end"
+      }
+    },
+    "section_events_carousel_DCwMX4": {
+      "type": "section__events-carousel",
+      "blocks": {
+        "block_wXb6Ui": {
+          "type": "block",
+          "settings": {
+            "article": "events/paramahamsa-vishwanandas-birthday-2025"
+          }
+        },
+        "block_49UgaW": {
+          "type": "block",
+          "settings": {
+            "article": "events/paramahamsa-vishwanandas-birthday-2025"
+          }
+        },
+        "block_HcJFDQ": {
+          "type": "block",
+          "settings": {
+            "article": "events/paramahamsa-vishwanandas-birthday-2025"
+          }
+        },
+        "block_Rxtyp6": {
+          "type": "block",
+          "settings": {
+            "article": "events/paramahamsa-vishwanandas-birthday-2025"
+          }
+        }
+      },
+      "block_order": [
+        "block_wXb6Ui",
+        "block_49UgaW",
+        "block_HcJFDQ",
+        "block_Rxtyp6"
+      ],
+      "name": "Events Carousel",
+      "settings": {
+        "padding_top": "pt-sm",
+        "padding_bottom": "pb-xl",
+        "desktop_padding_top": "inherit",
+        "desktop_padding_bottom": "inherit",
+        "set_dark_theme": true,
+        "apply_gradient": true,
+        "title": "Próximos cursos",
+        "title_tag": "h2",
+        "cta_label": "Ver más",
+        "cta_url": "#",
+        "hide_arrows_desktop": false
+      }
+    },
+    "section_hero_EmDBMy": {
+      "type": "section__hero",
+      "custom_css": [
+        ".hero__content-wrapper {background: #0000004a; z-index: 1; position: sticky;}"
+      ],
+      "settings": {
+        "padding_top": "0px",
+        "desktop_padding_top": "0px",
+        "padding_bottom": "0px",
+        "desktop_padding_bottom": "inherit",
+        "padding_horizontal": "px-0",
+        "desktop_padding_horizontal": "inherit",
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "use_container": false,
+        "set_100vh": false,
+        "set_100vh_desktop": true,
+        "border_radius": 0,
+        "aspect_ratio": "9/16",
+        "aspect_ratio_desktop": "16/9",
+        "image": "shopify://shop_images/vedic-chanting_3cc5c269-558a-4d18-9b4e-c33a9452453d.jpg",
+        "bg_color": "",
+        "content_width": "max-w-5xl",
+        "text_align": "text-center",
+        "text_color": "#ffffff",
+        "title": "La ciencia moderna ha demostrado que todo es energía y que la energía es vibración. Con la recitación en sánscrito puedes equilibrar o elevar la vibración de tu entorno mediante el uso de mantras.",
+        "title_font_style": "h5",
+        "subtitle": "",
+        "button_text": "",
+        "button_url": "",
+        "button_style": "btn",
+        "anchor_to_pricing": false,
+        "video_title": "",
+        "horizontal_position": "justify-center",
+        "vertical_position": "items-center"
+      }
+    },
+    "section_image_text_blocks_PHhidM": {
+      "type": "section__image_text_blocks",
+      "blocks": {
+        "image_block_jfBVbY": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/2024-08-10-RITUALS-Mass-Chanting-if-the-SGG-LMS-Square-Image.webp",
+            "height": "auto",
+            "desktop_height": "auto"
+          }
+        },
+        "content_block_gVQiM6": {
+          "type": "content_block",
+          "settings": {
+            "title": "",
+            "title_tag": "h3",
+            "title_font_style": "h4",
+            "description": "<p>El recitar (¡y la lectura!) del sánscrito está presente en todas partes en Bhakti Marga. Ya sea durante un evento, para la <em>pūjā</em>, oraciones o estudio.</p><p><br/>El término sánscrito significa 'perfeccionado' o 'logrado', lo que indica que es un idioma muy ordenado en términos de gramática, simetría y disposición. Se considera el idioma antiguo del <em>Sanātana-dharma</em> (ley eterna), la cultura espiritual que hoy en día se conoce como hinduismo, y en ese contexto se considera el idioma de los dioses y de origen divino. Dado que el sánscrito es un idioma muy refinado, es muy adecuado para expresar contextos espirituales.</p><p>Hoy en día vemos un creciente interés por la espiritualidad, en el que los buscadores conectan con las escrituras sánscritas, como la epopeya <em>Mahābhārata</em>, el <em>Bhagavad Gītā</em> o los <em>Upaṇiṣads</em>, y aprenden de ellas.</p><p>Desde un punto de vista académico, el sánscrito es una de las lenguas más antiguas del mundo, que ha experimentado una evolución propia. Además del griego y el latín, el sánscrito ha tenido una gran influencia en las lenguas del mundo.</p>",
+            "credits": "",
+            "cta_url": "",
+            "cta_label": "Learn more",
+            "text_align": "left",
+            "desktop_text_align": "inherit",
+            "vertical_padding": "py-lg",
+            "vertical_padding_desktop": "tabletl:py-xxl"
+          }
+        }
+      },
+      "block_order": [
+        "image_block_jfBVbY",
+        "content_block_gVQiM6"
+      ],
+      "custom_css": [],
+      "settings": {
+        "margin_top": "mt-xl",
+        "margin_bottom": "mb-0",
+        "desktop_margin_top": "tabletl:mt-xxxl",
+        "desktop_margin_bottom": "tabletl:mb-xl",
+        "vertical_align": "center",
+        "flip_columns_desktop": false
+      }
+    },
+    "section_image_text_blocks_Xfh44d": {
+      "type": "section__image_text_blocks",
+      "blocks": {
+        "image_block_k6rWMK": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/2022-07-13-p-0899_56a6bd0f-2a20-4dad-93e3-d01be27af8ab.jpg",
+            "height": "auto",
+            "desktop_height": "auto"
+          }
+        },
+        "content_block_8FN3f3": {
+          "type": "content_block",
+          "settings": {
+            "title": "Solicitar un curso",
+            "title_tag": "h3",
+            "title_font_style": "h4",
+            "description": "<p>¿No hay cursos o profesores en tu zona?</p><p> Contacta con nosotros, haremos todo lo posible para ayudarte a encontrar un curso de Canto Védico.</p>",
+            "credits": "",
+            "cta_url": "#",
+            "cta_label": "Solicitar ahora",
+            "text_align": "left",
+            "desktop_text_align": "inherit",
+            "vertical_padding": "py-lg",
+            "vertical_padding_desktop": "tabletl:py-xxl"
+          }
+        }
+      },
+      "block_order": [
+        "image_block_k6rWMK",
+        "content_block_8FN3f3"
+      ],
+      "settings": {
+        "margin_top": "mt-xl",
+        "margin_bottom": "mb-0",
+        "desktop_margin_top": "tabletl:mt-xxxl",
+        "desktop_margin_bottom": "tabletl:mb-xl",
+        "vertical_align": "center",
+        "flip_columns_desktop": true
+      }
+    },
+    "section_review_carousel_rxy9jF": {
+      "type": "section__review-carousel",
+      "blocks": {
+        "content_block_NbNwXJ": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify://shop_images/teacher-yashasvini.jpg",
+            "content": "<p><strong>PAZ EN EL CAOS</strong><br/>\"Llevaba muchos años buscando \"algo que faltaba\" en mi vida. Lo encontré en Atma Kriya Yoga. Me ayudó a conectar con mi corazón y a encontrar la paz en el caos de mi vida como madre soltera de tres hijos. Y puedo dedicarle dos minutos aquí y diez minutos allá a lo largo del día. Esos pocos momentos al día han cambiado mi vida a mejor\".</p>",
+            "credits": "Viktorija | Ireland"
+          }
+        },
+        "content_block_VLafxC": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify://shop_images/ramshwardas.webp",
+            "content": "<p>APERTURA DEL CORAZÓN<br/>\"Durante más de 35 años, aprendí 112 técnicas de kriya, pero mi corazón nunca se abrió hasta que aprendí Atma Kriya Yoga... Atma Kriya Yoga es el único que despierta el amor. Llegó directamente a mi alma y me ayudó a darme cuenta de que podía amar a todo el mundo. Nunca antes había recibido Shaktipat (la gracia del gurú)... Fue como si mi viejo ordenador hubiera recibido un nuevo software y estuviera aprendiendo a vivir en un nuevo paradigma\".</p>",
+            "credits": "Swamini Pratibha | Canada"
+          }
+        },
+        "content_block_kmn7Bt": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify://shop_images/teacher-saketharaman.jpg",
+            "content": "<p>FUENTE DE AMOR ETERNO<br/>\"La práctica abrió una fuente profunda de amor eterno y una paz profunda que había estado buscando. A través de ella, me di cuenta de que Atma Kriya Yoga es Bhagavan, Dios mismo. Con el tiempo, llegué a experimentar que cada respiración no es mía, es Él quien respira. Es Él quien ve. Es Él quien percibe\".</p>",
+            "credits": "Shivani | Slovenia"
+          }
+        },
+        "content_block_7eHX9f": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify://shop_images/teacher-rishi-aaradhaka.jpg",
+            "content": "<p><strong>HABLA DE GRANDEZA</strong></p><p>\"A lo largo de los años, he estudiado e investigado muchos linajes diferentes de Kriya. Aunque algunos maestros, a través de su linaje, pueden impartir la iniciación <em>shaktipat</em>, Paramahamsa Vishwananda es el único que conozco al que se le ha permitido iniciar a cientos de personas para que impartan <em>shaktipat</em>. Esto habla de la grandeza de quién es Él y de lo que ha venido a hacer aquí\".</p>",
+            "credits": "Jaganmohini Das | Bulgaria"
+          }
+        }
+      },
+      "block_order": [
+        "content_block_NbNwXJ",
+        "content_block_VLafxC",
+        "content_block_kmn7Bt",
+        "content_block_7eHX9f"
+      ],
+      "name": "Review Carousel",
+      "settings": {
+        "padding_top": "pt-0",
+        "padding_bottom": "pb-0",
+        "desktop_padding_top": "inherit",
+        "desktop_padding_bottom": "inherit",
+        "title": "",
+        "title_tag": "h2"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "section_hero_cBpMpY",
+    "section_events_carousel_DCwMX4",
+    "section_hero_EmDBMy",
+    "section_image_text_blocks_PHhidM",
+    "section_image_text_blocks_Xfh44d",
+    "section_review_carousel_rxy9jF"
+  ]
+}

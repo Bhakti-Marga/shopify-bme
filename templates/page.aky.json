@@ -1,0 +1,373 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "page__main",
+      "disabled": true,
+      "settings": {}
+    },
+    "section_hero_cBpMpY": {
+      "type": "section__hero",
+      "custom_css": [
+        ".hero__content-wrapper {background: #0000004a; z-index: 1; position: sticky;}"
+      ],
+      "settings": {
+        "padding_top": "0px",
+        "desktop_padding_top": "inherit",
+        "padding_bottom": "40px",
+        "desktop_padding_bottom": "60px",
+        "padding_horizontal": "px-0",
+        "desktop_padding_horizontal": "inherit",
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "use_container": true,
+        "set_100vh": true,
+        "set_100vh_desktop": true,
+        "border_radius": 16,
+        "aspect_ratio": "auto",
+        "aspect_ratio_desktop": "4/3",
+        "image": "shopify://shop_images/aky-hero.jpg",
+        "image_desktop": "shopify://shop_images/aky-hero.jpg",
+        "bg_color": "#16254c",
+        "content_width": "max-w-5xl",
+        "text_align": "text-left",
+        "text_color": "#ffffff",
+        "title": "Atma Kriya Yoga",
+        "title_font_style": "h3",
+        "subtitle": "<p>Experimenta un sistema yóguico completo que te ayudará a sumergirte en tu corazón y conectar con lo Divino.</p>",
+        "button_text": "",
+        "button_url": "",
+        "button_style": "btn",
+        "anchor_to_pricing": false,
+        "video_title": "",
+        "video_url": "shopify://files/videos/Start-your-Journey-with-Yoga-Meditation.mp4",
+        "poster_video": "shopify://files/videos/Start-your-Journey-with-Yoga-Meditation.mp4",
+        "horizontal_position": "justify-center",
+        "vertical_position": "items-end"
+      }
+    },
+    "bm_event_slider_FakRgW": {
+      "type": "BM-event-slider",
+      "name": "Product Carousel",
+      "settings": {
+        "product_collection": "events",
+        "set_dark_theme": true,
+        "apply_gradient": true,
+        "title": "Próximos cursos",
+        "title_tag": "h2",
+        "cta_label": "",
+        "cta_url": "",
+        "padding_top": "pt-xl",
+        "padding_bottom": "pb-xl",
+        "desktop_padding_top": "inherit",
+        "desktop_padding_bottom": "inherit"
+      }
+    },
+    "section_hero_EmDBMy": {
+      "type": "section__hero",
+      "custom_css": [
+        ".hero__content-wrapper {background: #0000004a; z-index: 1; position: sticky;}"
+      ],
+      "settings": {
+        "padding_top": "0px",
+        "desktop_padding_top": "0px",
+        "padding_bottom": "0px",
+        "desktop_padding_bottom": "inherit",
+        "padding_horizontal": "px-0",
+        "desktop_padding_horizontal": "inherit",
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "use_container": false,
+        "set_100vh": false,
+        "set_100vh_desktop": true,
+        "border_radius": 0,
+        "aspect_ratio": "9/16",
+        "aspect_ratio_desktop": "16/9",
+        "image": "shopify://shop_images/The_Path_-_Yoga_Meditation_56496ae6-3a20-4df8-beba-bfce6ecdbea8.jpg",
+        "bg_color": "",
+        "content_width": "max-w-5xl",
+        "text_align": "text-center",
+        "text_color": "#ffffff",
+        "title": "Atma Kriya Yoga es un sistema yóguico completo que incluye meditación, así como ejercicios yóguicos energéticos y físicos. La práctica es completa y lo suficientemente flexible como para incorporarla a un estilo de vida ajetreado.",
+        "title_font_style": "h5",
+        "subtitle": "",
+        "button_text": "",
+        "button_url": "",
+        "button_style": "btn",
+        "anchor_to_pricing": false,
+        "video_title": "",
+        "horizontal_position": "justify-center",
+        "vertical_position": "items-center"
+      }
+    },
+    "section_image_text_blocks_PHhidM": {
+      "type": "section__image_text_blocks",
+      "blocks": {
+        "image_block_jfBVbY": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/mahavatar-babaji-yogi.jpg",
+            "height": "auto",
+            "desktop_height": "auto"
+          }
+        },
+        "content_block_gVQiM6": {
+          "type": "content_block",
+          "settings": {
+            "title": "Atma Kriya Yoga",
+            "title_tag": "h3",
+            "title_font_style": "h4",
+            "description": "<p>Atma Kriya Yoga es absolutamente único. Aunque las técnicas aquietan la mente, el objetivo espiritual es despertar el alma en su relación eterna con Dios mediante el cultivo de diversas formas de <em>bhakti</em>: amor y devoción.<br/><br/>A medida que tu práctica se hace más profunda, las cualidades divinas comienzan a manifestarse de forma natural: paz, autocontrol, fuerza, sabiduría, humildad, compasión, vitalidad y mucho más.<br/><br/>Gracias a la gracia de la iniciación <em>shaktipat</em>, las técnicas son lo suficientemente sencillas como para que las aprendan los principiantes, pero lo suficientemente poderosas como para llevar incluso a los meditadores más avanzados a nuevas cotas de conexión divina.</p>",
+            "credits": "",
+            "cta_url": "",
+            "cta_label": "",
+            "text_align": "left",
+            "desktop_text_align": "inherit",
+            "vertical_padding": "py-lg",
+            "vertical_padding_desktop": "tabletl:py-xxl"
+          }
+        }
+      },
+      "block_order": [
+        "image_block_jfBVbY",
+        "content_block_gVQiM6"
+      ],
+      "custom_css": [],
+      "settings": {
+        "margin_top": "mt-xl",
+        "margin_bottom": "mb-0",
+        "desktop_margin_top": "tabletl:mt-xxxl",
+        "desktop_margin_bottom": "tabletl:mb-xl",
+        "vertical_align": "center",
+        "flip_columns_desktop": false
+      }
+    },
+    "section_accordion_bPkzp9": {
+      "type": "section__accordion",
+      "blocks": {
+        "accordion_item_MkAi9b": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Japa",
+            "content": "<p>Recitar los Nombres Divinos sintoniza todo tu ser con su poderosa vibración y permite que despierten las cualidades divinas.</p>"
+          }
+        },
+        "accordion_item_HWmQhF": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Técnicas de meditación",
+            "content": "<p>La concentración y el enfoque te ayudan a llevar la consciencia a tus acciones diarias para que puedas trascender la dualidad de la existencia humana.</p>"
+          }
+        },
+        "accordion_item_ifjmNr": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "",
+            "content": ""
+          }
+        },
+        "accordion_item_bb6e9Y": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Yoga del sonido",
+            "content": "<p>Escuchar la sinfonía de sonidos místicos interiores que emanan del chakra del corazón refuerza la intuición.</p>"
+          }
+        },
+        "accordion_item_D9wLcz": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "OM Chanting",
+            "content": "<p>El canto en grupo genera armonía y paz para uno mismo, para los demás y para el entorno local.</p>"
+          }
+        },
+        "accordion_item_hG8kz3": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Pranayama",
+            "content": "<p>Observar y controlar la respiración favorece el equilibrio físico y energético.</p>"
+          }
+        },
+        "accordion_item_fkgzVG": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Asanas",
+            "content": "<p>Cinco posturas físicas yóguicas apoyan tu práctica de meditación, refuerzan tu sistema inmunológico y mejoran tu vitalidad física.</p>"
+          }
+        },
+        "accordion_item_YFPaad": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Mudras",
+            "content": "<p>El yoga corporal y de los dedos alinea la energía de tu cuerpo para que puedas alcanzar tu objetivo espiritual.</p>"
+          }
+        },
+        "accordion_item_Jn4yDk": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Main Kriya",
+            "content": "<p>Esta meditación de los chakras eleva tu conciencia, une cuerpo y alma y quema un año espiritual de karma con cada respiración.</p>"
+          }
+        },
+        "accordion_item_npze4h": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Escudo protector",
+            "content": "<p>Elevar la vibración de tus centros energéticos te protege de la negatividad y permite que brille más luz divina.</p>"
+          }
+        },
+        "accordion_item_wWaaBW": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Iniciación shaktipat",
+            "content": "<p>El curso culmina con una hermosa iniciación individual en la que se te otorga la gracia y la bendición de todos los Maestros de <em>kriya-yoga</em>. </p>"
+          }
+        }
+      },
+      "block_order": [
+        "accordion_item_MkAi9b",
+        "accordion_item_HWmQhF",
+        "accordion_item_ifjmNr",
+        "accordion_item_bb6e9Y",
+        "accordion_item_D9wLcz",
+        "accordion_item_hG8kz3",
+        "accordion_item_fkgzVG",
+        "accordion_item_YFPaad",
+        "accordion_item_Jn4yDk",
+        "accordion_item_npze4h",
+        "accordion_item_wWaaBW"
+      ],
+      "name": "Accordion",
+      "settings": {
+        "margin_top": "mt-lg",
+        "margin_bottom": "mb-0",
+        "padding_top": "pt-0",
+        "padding_bottom": "pb-0",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "desktop_padding_top": "inherit",
+        "desktop_padding_bottom": "inherit",
+        "max_width": "",
+        "title": "Detalles del curso",
+        "cta_url": "",
+        "cta_label": "",
+        "title_position": "left"
+      }
+    },
+    "section_image_text_blocks_Xfh44d": {
+      "type": "section__image_text_blocks",
+      "blocks": {
+        "image_block_k6rWMK": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/2022-07-13-p-0899_56a6bd0f-2a20-4dad-93e3-d01be27af8ab.jpg",
+            "height": "auto",
+            "desktop_height": "auto"
+          }
+        },
+        "content_block_8FN3f3": {
+          "type": "content_block",
+          "settings": {
+            "title": "Solicitar un curso",
+            "title_tag": "h3",
+            "title_font_style": "h4",
+            "description": "<p>¿No hay próximos cursos o profesores en tu zona? </p><p>Ponte en contacto con nosotros, haremos todo lo posible para ayudarle a comenzar tu viaje de Atma Kriya Yoga.</p>",
+            "credits": "",
+            "cta_url": "shopify://pages/request-a-course",
+            "cta_label": "Solicitar ahora",
+            "text_align": "left",
+            "desktop_text_align": "inherit",
+            "vertical_padding": "py-lg",
+            "vertical_padding_desktop": "tabletl:py-xxl"
+          }
+        }
+      },
+      "block_order": [
+        "image_block_k6rWMK",
+        "content_block_8FN3f3"
+      ],
+      "settings": {
+        "margin_top": "mt-xl",
+        "margin_bottom": "mb-0",
+        "desktop_margin_top": "tabletl:mt-xxxl",
+        "desktop_margin_bottom": "tabletl:mb-xl",
+        "vertical_align": "center",
+        "flip_columns_desktop": false
+      }
+    },
+    "section_review_carousel_rxy9jF": {
+      "type": "section__review-carousel",
+      "blocks": {
+        "content_block_NbNwXJ": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify://shop_images/teacher-yashasvini.jpg",
+            "content": "<p><strong>PEACE IN THE CHAOS</strong><br/>'I'd been searching for many years for \"something that was missing\" in my life. I found it in Atma Kriya Yoga. It helped me connect to my heart and find peace in the chaos of my life as a single mother of three kids. And I can fit it in two minutes here and 10 minutes there throughout my day. Just those few moments each day have changed my life for the better.'</p>",
+            "credits": "Viktorija | Ireland"
+          }
+        },
+        "content_block_VLafxC": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify://shop_images/ramshwardas.webp",
+            "content": "<p><strong>HEART OPENING</strong><br/>'Over 35 years, I learned 112 kriya techniques, but my heart never opened until I learned Atma Kriya Yoga...Atma Kriya Yoga is the only one that awakens love. It went right to my soul and helped me realise I could love everybody. I'd never received Shaktipat (decent of guru's grace) before...It was like my old computer had been given new software, and I was learning to live in a new paradigm.'</p>",
+            "credits": "Swamini Pratibha | Canada"
+          }
+        },
+        "content_block_kmn7Bt": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify://shop_images/teacher-saketharaman.jpg",
+            "content": "<p><strong>FOUNTAIN OF ETERNAL LOVE</strong><br/>'The practice opened up a deep fountain of eternal love and a profound peace that I’d been looking for. Through it, I came to realise that Atma Kriya Yoga is Bhagavan, God Himself. Over time, I came to experience that each breath is not my own, it is Him who is breathing. It is Him who is seeing. It is Him who is perceiving.'</p>",
+            "credits": "Shivani | Slovenia"
+          }
+        },
+        "content_block_7eHX9f": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify://shop_images/teacher-rishi-aaradhaka.jpg",
+            "content": "<p><strong>SPEAKS TO GREATNESS</strong><br/>'Over the years, I’ve studied and researched many different Kriya lineages. While some masters–through their lineage–can give Shaktipat Initiation, Paramahamsa Vishwananda is the only one I know of who has ever been allowed to initiate hundreds of others to give Shaktipat. This speaks to the greatness of who He is, and what He is here to do.'</p>",
+            "credits": "Jaganmohini Das | Bulgaria"
+          }
+        }
+      },
+      "block_order": [
+        "content_block_NbNwXJ",
+        "content_block_VLafxC",
+        "content_block_kmn7Bt",
+        "content_block_7eHX9f"
+      ],
+      "disabled": true,
+      "name": "Review Carousel",
+      "settings": {
+        "padding_top": "pt-0",
+        "padding_bottom": "pb-0",
+        "desktop_padding_top": "inherit",
+        "desktop_padding_bottom": "inherit",
+        "title": "",
+        "title_tag": "h2"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "section_hero_cBpMpY",
+    "bm_event_slider_FakRgW",
+    "section_hero_EmDBMy",
+    "section_image_text_blocks_PHhidM",
+    "section_accordion_bPkzp9",
+    "section_image_text_blocks_Xfh44d",
+    "section_review_carousel_rxy9jF"
+  ]
+}

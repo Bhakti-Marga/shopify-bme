@@ -1,0 +1,96 @@
+{% assign footer_linklist = linklists[section.settings.footer_nav] %}
+{% assign subfooter_linklist = linklists[section.settings.subfooter_nav] %}
+
+<footer class="site-footer bg-blue">
+  <div class="container relative text-white pt-xxl pb-xl text-14 tabletl:text-16 tabletl:py-xxl">
+    <div class="grid grid-cols-12 gap-4">
+      <!-- Left side - navigation columns -->
+      {% assign columns_count = footer_linklist.links.size %}
+      <nav class="col-span-12 tabletl:col-span-6 pb-xl border-b border-white grid gap-lg tabletl:border-0 tabletl:pb-0"
+        style="grid-template-columns: repeat({{ columns_count }}, 1fr);">
+        {% for link in footer_linklist.links %}
+          <div class="site-footer-nav__links-wrapper">
+            <div class="hidden">{{ link.title }}</div>
+            <ul class="site-footer-nav__links">
+              {% for child_link in link.links %}
+                <li class="site-footer-nav__item -ml-sm mb-sm last:mb-0">
+                  <a href="{{ child_link.url }}" class="site-footer-nav__link inline-block p-sm whitespace-nowrap duration-500 tabletp:hover:opacity-50">{{ child_link.title }}</a>
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+        {% endfor %}
+      </nav>
+      
+      <!-- Right side - contact information with offset -->
+      <div class="col-span-12 tabletl:col-span-5 tabletl:col-start-9">
+        <div>
+          <div class="footer__contact py-xl border-b border-white tabletl:border-0 tabletl:py-0">
+            <div class="footer__contact">
+              <p class="footer-contact__title">{{ section.settings.contact_title }}</p>
+              <div class="footer-contact__body mt-md text-12 rte">
+                {{ section.settings.contact_body }}
+              </div>
+            </div>
+          </div>
+          
+          {% if settings.social_facebook != blank or settings.social_instagram != blank or settings.social_twitter != blank or settings.social_flickr != blank or settings.social_youtube != blank %}
+            <div class="footer__socials-wrapper mt-xl">
+              <p class="footer__socials-title">Síguenos</p>
+              {% render 'social-media-links' %}
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+
+    <div class="site-footer-subfooter mt-xl tabletl:mt-xxxl">
+      <div class="site-footer-subfooter__localization tabletl:absolute tabletl:left-xl">
+        {%- render 'language-localization' -%}
+      </div>
+
+      <nav class="site-footer-subfooter-nav mt-xl tabletl:mt-0 flex tabletl:justify-center">
+        <ul class="site-footer-subfooter-nav__links flex justify-between w-full tabletl:w-auto ">
+          {% for link in subfooter_linklist.links %}
+            <li class="site-footer-subfooter-nav__item tabletl:mx-lg">
+              <a href="{{ link.url }}" class="site-footer-subfooter-nav__link text-12 opacity-40 duration-500 tabletp:hover:opacity-100">{{ link.title }}</a>
+            </li>
+          {% endfor %}
+          <li class="site-footer-subfooter-nav__item flex items-center text-12 tabletl:mx-lg opacity-40">&copy;{{  "now" | date: '%Y' }} Todos los derechos reservados </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+{% schema %}
+{
+"name": "Footer",
+"settings": [
+    {
+      "type": "link_list",
+      "id": "footer_nav",
+      "label": "Footer Navigation"
+    },
+    {
+      "type": "link_list",
+      "id": "subfooter_nav",
+      "label": "Subfooter Navigation"
+    },
+    {
+      "type": "header",
+      "content": "Contact"
+    },
+    {
+      "type": "text",
+      "id": "contact_title",
+      "label": "Contact Title"
+    },
+    {
+      "type": "richtext",
+      "id": "contact_body",
+      "label": "Contact Body"
+    }
+  ]
+}
+{% endschema %}

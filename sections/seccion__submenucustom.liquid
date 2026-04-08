@@ -1,0 +1,137 @@
+{%- style -%}
+  #shopify-section-{{ section.id }} .collection-submenu-tienda {
+    background-color: {{ section.settings.background_color }};
+    border-bottom: 1px solid #e0e0e0;
+    overflow-x: auto; /* Para scroll horizontal en móvil */
+    white-space: nowrap;
+  }
+
+  #shopify-section-{{ section.id }} .collection-submenu-tienda__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: {{ section.settings.alignment }};
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1rem 2rem;
+  }
+
+  #shopify-section-{{ section.id }} .collection-submenu-tienda__item {
+    text-decoration: none;
+    color: {{ section.settings.text_color }};
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0.6rem 1.2rem;
+    border-radius: 4px;
+    transition: all 0.2s ease-in-out;
+    display: inline-block;
+  }
+
+  #shopify-section-{{ section.id }} .collection-submenu-tienda__item:hover {
+    background-color: {{ section.settings.hover_color }};
+    color: {{ section.settings.hover_text_color }};
+  }
+
+  #shopify-section-{{ section.id }} .collection-submenu-tienda__item--active {
+    background-color: {{ section.settings.active_color }};
+    color: {{ section.settings.active_text_color }};
+  }
+
+  @media (max-width: 768px) {
+    #shopify-section-{{ section.id }} .collection-submenu-tienda__container {
+      gap: 0.5rem;
+      padding: 0.8rem 1rem;
+      justify-content: flex-start; /* En móvil siempre empezamos por la izquierda */
+    }
+    #shopify-section-{{ section.id }} .collection-submenu-tienda__item {
+      font-size: 0.9rem;
+    }
+  }
+{%- endstyle -%}
+
+<nav class="collection-submenu-tienda" aria-label="{{ section.settings.menu.title | default: 'Navegación' }}">
+  <div class="collection-submenu-tienda__container">
+    {%- assign target_menu = section.settings.menu -%}
+    
+    {%- if target_menu != blank and target_menu.links.size > 0 -%}
+      {%- for link in target_menu.links -%}
+        <a href="{{ link.url }}" 
+           class="collection-submenu-tienda__item {% if link.current or link.active %}collection-submenu-tienda__item--active{% endif %}"
+           {% if link.current %}aria-current="page"{% endif %}>
+          {{ link.title }}
+        </a>
+      {%- endfor -%}
+    {%- else -%}
+      <p style="text-align: center; width: 100%;">Configura un menú en los ajustes de la sección.</p>
+    {%- endif -%}
+  </div>
+</nav>
+
+{% schema %}
+{
+  "name": "Submenú Flexible",
+  "settings": [
+    {
+      "type": "link_list",
+      "id": "menu",
+      "label": "Selecciona el menú"
+    },
+    {
+      "type": "select",
+      "id": "alignment",
+      "label": "Alineación (Escritorio)",
+      "options": [
+        { "value": "flex-start", "label": "Izquierda" },
+        { "value": "center", "label": "Centro" },
+        { "value": "flex-end", "label": "Derecha" }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "header",
+      "content": "Colores"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Fondo",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Texto",
+      "default": "#333333"
+    },
+    {
+      "type": "color",
+      "id": "hover_color",
+      "label": "Fondo (Hover)",
+      "default": "#f0f0f0"
+    },
+    {
+      "type": "color",
+      "id": "hover_text_color",
+      "label": "Texto (Hover)",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "active_color",
+      "label": "Fondo (Activo)",
+      "default": "#333333"
+    },
+    {
+      "type": "color",
+      "id": "active_text_color",
+      "label": "Texto (Activo)",
+      "default": "#ffffff"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Submenú Flexible"
+    }
+  ]
+}
+{% endschema %}

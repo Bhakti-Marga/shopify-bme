@@ -1,0 +1,234 @@
+{%- liquid 
+  assign current_variant = product.selected_or_first_available_variant 
+  assign product_form_id = 'ProductForm-' | append: section.id | append: product.id
+  assign master_select_id = 'MasterSelect-' | append: section.id
+-%}
+
+{%- capture carousel_options -%}
+  {
+    "slidesPerView": "auto",
+    "loop": false,
+    "spaceBetween": "16",
+    "pagination": {
+      "el": ".swiper-pagination",
+      "type": "bullets",
+      "clickable": true
+    }
+  }
+{%- endcapture -%}
+
+<s-donation role="section" class="product block container py-md tabletl:py-xl" data-section-id="{{ section.id }}">
+  <a class="skip-to-content-link sr-only" href="#ProductInfo-{{ section.id }}">Ir a la información del producto</a>
+  <div class="product__layout tabletl:grid tabletl:grid-cols-2 tabletl:gap-md">
+    <div class="product__images">
+      <s-carousel data-init="belowLaptop" data-options='{{carousel_options}}'>
+        <div id="ProductMainImages" class="swiper w-full pb-[50px]" js-carousel>
+          <div class="swiper-wrapper tabletl:grid tabletl:grid-cols-2 tabletl:gap-md">
+            {% for media in product.media %}
+              {% assign slide_classes = 'aspect-[7/9] relative z-1 overflow-hidden' %}
+              {% assign index_mod_3 = forloop.index | modulo: 3 %}
+
+              {% if index_mod_3 == 1 %}
+                {% assign slide_classes = slide_classes | append: ' tabletl:col-span-2' %}
+              {% elsif index_mod_3 == 2 or index_mod_3 == 0 %}
+                {% assign slide_classes = slide_classes | append: ' tabletl:col-span-1' %}
+              {% endif %}
+
+              {% case media.media_type %}
+                {% when 'image' %}
+                  <div class="swiper-slide {{ slide_classes }}" js-carousel-slide>
+                    {% render 'lazy-image',
+                      image: media,
+                      picture_classes: 'h-full',
+                      img_classes: 'object-cover h-full rounded'
+                    %}
+                  </div>
+                {% when 'video' %}
+                  <div class="swiper-slide {{ slide_classes }}" js-carousel-slide>
+                    {{ media | video_tag: controls: true, autoplay: false, loop: true, mute: false, class: 'w-full h-full object-cover block' }}
+                  </div>
+                {% when 'external_video' %}              
+                  <div class="swiper-slide {{ slide_classes }}" js-carousel-slide>
+                    {{ media | external_video_tag }}
+                  </div>
+                {% endcase %}
+            {% endfor %}
+          </div>
+          <div class="swiper-pagination tabletl:hidden"></div>
+        </div>
+      </s-carousel>
+    </div><!-- .product__images-container -->
+
+    <div class="product__information h-[min-content] py-lg tabletl:py-xl tabletl:px-xxl tabletl:sticky tabletl:top-[var(--header-height)]" id="ProductInfo-{{ section.id }}">
+      <h1 class="product__title h5 leading-tight mb-lg">{{ product.title }}</h1>
+      <div class="product__description text-14 mb-lg">{{ product.description }}</div>
+      {%- comment -%}
+        * Product Form
+      {%- endcomment -%}
+      {%- form 'product', product, id: product_form_id, class: 'form flex flex-col gap-[24px]', novalidate: 'novalidate', js-product-form: true -%}
+
+
+        <div class="flex gap-[4px] p-[16px] border border-solid border-gray-light w-full rounded-[50px] text-16 font-600 leading-6">
+          <span class="text-gray-light" js-currency-symbol>{{ cart.currency.symbol }}</span>
+          <input
+            class=""
+            type="number"
+            name=""
+            id=""
+            placeholder="{{ 1000 | money_without_currency }}"
+            min="0"
+            step="1"
+            pattern="[0-9]*"
+            inputmode="numeric"
+            js-amount-input
+          >
+        </div>
+
+        <select class="sr-only" name="id" js-master-select>
+          {% for variant in product.variants %}
+            <option value="{{ variant.id }}" {% if variant.price == 1000 %} selected {% endif %}>{{ variant.title }}</option>
+          {% endfor %}
+        </select>
+
+        <div class="flex flex-wrap gap-[16px] max-w-lg">
+          {% for variant in product.variants %}
+            {% if variant.title == "Custom Amount" %}
+              <button
+                class="bg-gold px-20 py-[14px] rounded-[25px] min-w-[93px] text-16 font-600 leading-6 ease-in-out"
+                data-amount="custom"
+                data-name="{{ variant.title }}"
+                data-variant-id="{{ variant.id }}"
+                type="button"
+                js-quick-select
+              >{{ variant.title }}</button>
+            {% else %}
+              <button
+                class="bg-gold px-20 py-[14px] rounded-[25px] min-w-[93px] text-16 font-600 leading-6 ease-in-out"
+                data-amount="{{ variant.price | money_without_currency }}"
+                data-name="{{ variant.title }}"
+                data-variant-id="{{ variant.id }}"
+                type="button"
+                js-quick-select
+              >{{ variant.price | money }}</button>
+            {% endif %}
+          {% endfor %}
+        </div>
+
+        <div class="subscription-container flex items-center gap-[16px]">
+          <div class="flex items-center">
+            <label class="flex items-center gap-[15px] cursor-pointer px-[15px]">
+              <div class="relative flex items-center">
+                <div>
+                  <input 
+                    type="checkbox" 
+                    class="sr-only"
+                    js-subscription-checkbox
+                  >
+                  <div class="w-[14px] h-[14px] border border-gray-light rounded-full transition-colors" data-checkbox>
+                    <div class="absolute inset-0 flex items-center justify-center opacity-0 transition-opacity" data-checkbox-inner>
+                      <div class="h-sm w-sm bg-gray-light rounded-full" data-checkbox-dot></div>
+                    </div>
+                  </div>
+                </div>
+                </div>
+              <span class="text-16 text-gray-light font-600 leading-6">Hacer esta donación cada</span>
+            </label>
+          </div>
+          <div class="relative flex min-w-[115px] gap-[4px] p-[16px] border border-solid border-gray-light w-auto rounded-[50px] text-16 font-600 leading-6 text-gray-light">
+            <select 
+              name="selling_plan" 
+              id="selling_plan"
+              class="appearance-none bg-transparent pr-[24px] text-gray-light"
+              js-subscription-select
+            >
+              {% for group in product.selling_plan_groups %}
+                {% for plan in group.selling_plans %}
+                  
+                  {% assign frequency = "" %}
+
+                  {% if plan.name == "Monthly" %}
+                    {% assign frequency = "Mensual" %}
+                  {% elsif plan.name == "Quarterly" %}
+                    {% assign frequency = "Trimestral" %}
+                  {% elsif plan.name == "Yearly" %}
+                    {% assign frequency = "Anual" %}
+                  {% else %}
+                    {% assign frequency = plan.name %}
+                  {% endif %}
+
+                  <option value="{{ plan.id }}">{{ frequency }}</option>
+                {% endfor %}
+              {% endfor %}
+            </select>
+            <div class="absolute right-[16px] -translate-y-1/2 top-1/2">
+              {% render 'icon--chevron' %}
+            </div>
+          </div>
+        </div>
+        
+        <button 
+          class="btn btn--gold py-md w-full uppercase relative"
+          type="submit" 
+          {% unless current_variant.available %} disabled {% endunless %}
+          js-add-to-cart>
+          <loading-spinner style="--size: 3rem; --bg-opacity: 100%;"></loading-spinner>
+          Donar ahora
+        </button>
+        <p class="hidden" js-error-message></p>
+
+      {%- endform -%}
+    </div><!-- .product__images-container -->
+  </div><!-- .product__layout -->
+
+  <script type="application/json" id="ProductJSON">{{ product | json }}</script>
+
+</s-donation>
+
+{%- liquid
+  if product.selected_or_first_available_variant.featured_media
+    assign seo_media = product.selected_or_first_available_variant.featured_media
+  else
+    assign seo_media = product.featured_media
+  endif
+-%}
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org/",
+    "@type": "Product",
+    "name": {{ product.title | json }},
+    "url": {{ shop.url | append: product.url | json }},
+    {% if seo_media -%}
+      "image": [
+        {{ seo_media | image_url: width: seo_media.preview_image.width | prepend: "https:" | json }}
+      ],
+    {%- endif %}
+    "description": {{ product.description | strip_html | json }},
+    {%- if product.selected_or_first_available_variant.sku != blank -%}
+      "sku": {{ product.selected_or_first_available_variant.sku | json }},
+    {%- endif -%}
+    "brand": {
+      "@type": "Brand",
+      "name": {{ product.vendor | json }}
+    },
+    "offers": [
+      {%- for variant in product.variants -%}
+        {
+          "@type" : "Offer",
+          {%- if variant.sku != blank -%}
+            "sku": {{ variant.sku | json }},
+          {%- endif -%}
+          "availability" : "http://schema.org/{% if variant.available %}InStock{% else %}OutOfStock{% endif %}",
+          "price" : {{ variant.price | divided_by: 100.00 | json }},
+          "priceCurrency" : {{ cart.currency.iso_code | json }},
+          "url" : {{ shop.url | append: variant.url | json }}
+        }{% unless forloop.last %},{% endunless %}
+      {%- endfor -%}
+    ]
+  }
+</script>
+
+{% schema %}
+{
+  "name": "Donation"
+}
+{% endschema %}

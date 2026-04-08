@@ -1,0 +1,311 @@
+{% liquid
+  assign container_classes = ""
+
+  if section.settings.margin_top != "mt-0"
+      assign container_classes = container_classes | append: " " | append: section.settings.margin_top
+  endif
+
+  if section.settings.margin_bottom != "mb-0"
+      assign container_classes = container_classes | append: " " | append: section.settings.margin_bottom
+  endif
+
+  if section.settings.desktop_margin_top != "inherit"
+      assign container_classes = container_classes | append: " " | append: section.settings.desktop_margin_top
+  endif
+
+  if section.settings.desktop_margin_bottom != "inherit"
+      assign container_classes = container_classes | append: " " | append: section.settings.desktop_margin_bottom
+  endif
+
+  if section.settings.padding_top != "pt-0"
+      assign container_classes = container_classes | append: " " | append: section.settings.padding_top
+  endif
+
+  if section.settings.padding_bottom != "pb-0"
+      assign container_classes = container_classes | append: " " | append: section.settings.padding_bottom
+  endif
+
+  if section.settings.desktop_padding_top != "inherit"
+      assign container_classes = container_classes | append: " " | append: section.settings.desktop_padding_top
+  endif
+
+  if section.settings.desktop_padding_bottom != "inherit"
+      assign container_classes = container_classes | append: " " | append: section.settings.desktop_padding_bottom
+  endif
+
+  assign container_classes = container_classes | strip
+%}
+
+<section class="container {% if container_classes != blank %} {{ container_classes }}{% endif %} {{ section.settings.padding_top }} {{ section.settings.padding_bottom }} {{ section.settings.desktop_padding_top }} {{ section.settings.desktop_padding_bottom }}">
+  {% if section.settings.title != blank %}
+    <{{ section.settings.title_tag | default: 'h2' }} class="line-title">{{ section.settings.title }}</{{ section.settings.title_tag | default: 'h2' }}>
+  {% endif %}
+
+  <div class="bm-custom-carousel-cards">
+    {% for block in section.blocks %}
+      {% assign image_url = block.settings.image | img_url: 'master' %}
+      <div class="bm-card{% if forloop.first %} active{% endif %}" style="background-image: url('{{ image_url }}');">
+        <div class="bm-desc">
+          {% if block.settings.heading != blank %}
+            <h4>{{ block.settings.heading }}</h4>
+          {% endif %}
+          {% if block.settings.description != blank %}
+            {{ block.settings.description }}
+          {% endif %}
+          {% if block.settings.button_text != blank and block.settings.button_link != blank %}
+            <a href="{{ block.settings.button_link }}" class="btn inline-block">{{ block.settings.button_text }}</a>
+          {% endif %}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+
+<style>
+  .bm-custom-carousel-cards {
+    display: flex;
+    overflow: scroll;
+    gap: 20px;
+    padding-bottom: 20px;
+    max-width: calc(100vw - 80px);
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .bm-custom-carousel-cards .bm-card {
+    flex: 0 0 auto;
+    width: 350px;
+    height: 400px;
+    border-radius: 16px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    scroll-snap-align: start;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    align-items: flex-end;
+    color: #fff;
+    overflow: hidden;
+    transition: width 0.6s ease;
+  }
+  
+  .bm-custom-carousel-cards .bm-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0));
+    z-index: 1;
+  }
+  
+  .bm-custom-carousel-cards .bm-desc {
+    position: relative;
+    z-index: 2;
+    padding: 16px;
+    transform: translateY(calc(100% - 80px));
+    transition: transform 0.6s ease;
+  }
+  
+  .bm-custom-carousel-cards .bm-card.active {
+    width: 500px;
+  }
+  
+  .bm-custom-carousel-cards .bm-card.active .bm-desc {
+    transform: translateY(0);
+  }
+
+  .bm-custom-carousel-cards .bm-desc h4 {
+    font-size: 36px;
+  }
+
+  .bm-custom-carousel-cards .bm-desc p {
+    opacity: 0;
+    font-size: 18px;
+    max-width: 432px
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+    margin-bottom: 1rem;
+  }
+  
+  .bm-custom-carousel-cards .bm-card.active .bm-desc p {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .bm-custom-carousel-cards .bm-desc .btn.inline-block {
+      padding: 0.75rem 1.5rem;
+  }
+
+  @media (min-width: 768px) and (max-width: 991px) {
+      .bm-custom-carousel-cards .bm-card.active {
+        width: 400px;
+      }
+  }
+  @media (max-width: 767px) {
+      .bm-custom-carousel-cards {
+        max-width: calc(100vw - 24px);
+      }
+      .bm-custom-carousel-cards .bm-card {
+        width: 280px;
+      }
+      .bm-custom-carousel-cards .bm-desc h4 {
+        font-size: 28px;
+      }
+    
+      .bm-custom-carousel-cards .bm-desc p {
+        font-size: 14px;
+      }
+      .bm-custom-carousel-cards .bm-card.active {
+        width: 300px;
+      }
+  }
+
+</style>
+
+<script>
+  document.querySelectorAll('.bm-card').forEach(card => {
+    card.addEventListener('click', () => {
+      document.querySelectorAll('.bm-card').forEach(c => c.classList.remove('active'));
+      card.classList.add('active');
+    });
+  });
+</script>
+
+
+{% schema %}
+{
+  "name": "BM Custom Carousel Cards",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "select",
+      "id": "padding_top",
+      "label": "Padding Top",
+      "options": [
+        { "value": "pt-0", "label": "None" },
+        { "value": "pt-sm", "label": "Small - 8px" },
+        { "value": "pt-md", "label": "Medium - 16px" },
+        { "value": "pt-lg", "label": "Large - 24px" },
+        { "value": "pt-xl", "label": "X-Large - 40px" },
+        { "value": "pt-xxl", "label": "XX-Large - 60px" },
+        { "value": "pt-xxxl", "label": "XXX-Large - 80px" }
+      ],
+      "default": "pt-0"
+    },
+    {
+      "type": "select",
+      "id": "padding_bottom",
+      "label": "Padding Bottom",
+      "options": [
+        { "value": "pb-0", "label": "None" },
+        { "value": "pb-sm", "label": "Small - 8px" },
+        { "value": "pb-md", "label": "Medium - 16px" },
+        { "value": "pb-lg", "label": "Large - 24px" },
+        { "value": "pb-xl", "label": "X-Large - 40px" },
+        { "value": "pb-xxl", "label": "XX-Large - 60px" },
+        { "value": "pb-xxxl", "label": "XXX-Large - 80px" }
+      ],
+      "default": "pb-0"
+    },
+    {
+      "type": "select",
+      "id": "desktop_padding_top",
+      "label": "Desktop - Padding Top",
+      "options": [
+        { "value": "inherit", "label": "Inherit" },
+        { "value": "tabletl:pt-0", "label": "None" },
+        { "value": "tabletl:pt-sm", "label": "Small - 8px" },
+        { "value": "tabletl:pt-md", "label": "Medium - 16px" },
+        { "value": "tabletl:pt-lg", "label": "Large - 24px" },
+        { "value": "tabletl:pt-xl", "label": "X-Large - 40px" },
+        { "value": "tabletl:pt-xxl", "label": "XX-Large - 60px" },
+        { "value": "tabletl:pt-xxxl", "label": "XXX-Large - 80px" }
+      ],
+      "default": "inherit"
+    },
+    {
+      "type": "select",
+      "id": "desktop_padding_bottom",
+      "label": "Desktop - Padding Bottom",
+      "options": [
+        { "value": "inherit", "label": "Inherit" },
+        { "value": "tabletl:pb-0", "label": "None" },
+        { "value": "tabletl:pb-sm", "label": "Small - 8px" },
+        { "value": "tabletl:pb-md", "label": "Medium - 16px" },
+        { "value": "tabletl:pb-lg", "label": "Large - 24px" },
+        { "value": "tabletl:pb-xl", "label": "X-Large - 40px" },
+        { "value": "tabletl:pb-xxl", "label": "XX-Large - 60px" },
+        { "value": "tabletl:pb-xxxl", "label": "XXX-Large - 80px" }
+      ],
+      "default": "inherit"
+    },
+    {
+      "type": "header",
+      "content": "Header Settings"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "select",
+      "id": "title_tag",
+      "label": "Title Tag",
+      "options": [
+        { "value": "h1", "label": "H1" },
+        { "value": "h2", "label": "H2" },
+        { "value": "h3", "label": "H3" },
+        { "value": "h4", "label": "H4" },
+        { "value": "h5", "label": "H5" }
+      ],
+      "default": "h2"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "content_block",
+      "name": "Carousel Card",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Background Image"
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Card Heading",
+          "default": "Your Heading"
+        },
+        {
+          "type": "richtext",
+          "id": "description",
+          "label": "Card Description",
+          "default": "<p>Your descriptive text goes here.</p>"
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button Text",
+          "default": "Learn More"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Button Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "BM Custom Carousel Cards",
+      "category": "Custom Sections"
+    }
+  ]
+}
+{% endschema %}

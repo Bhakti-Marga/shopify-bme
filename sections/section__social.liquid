@@ -1,0 +1,291 @@
+{% liquid
+  assign container_classes = ""
+
+  if section.settings.padding_top != "pt-0"
+      assign container_classes = container_classes | append: " " | append: section.settings.padding_top
+  endif
+
+  if section.settings.padding_bottom != "pb-0"
+      assign container_classes = container_classes | append: " " | append: section.settings.padding_bottom
+  endif
+
+  if section.settings.desktop_padding_top != "inherit"
+      assign container_classes = container_classes | append: " " | append: section.settings.desktop_padding_top
+  endif
+
+  if section.settings.desktop_padding_bottom != "inherit"
+      assign container_classes = container_classes | append: " " | append: section.settings.desktop_padding_bottom
+  endif
+
+  assign container_classes = container_classes | strip
+%}
+
+{%- capture carousel_options -%}
+  {
+    "slidesPerView": "auto",
+    "loop": false,
+    "spaceBetween": "16",
+    "freeMode": true,
+    "touchRatio": 1,
+    "momentum": true,
+    "mousewheel": {
+      "forceToAxis": true
+    },
+    "simulateTouch": true
+  }
+{%- endcapture -%}
+
+<section class="social {% if container_classes != blank %} {{ container_classes }}{% endif %}">
+  <div class="social-header container flex items-center gap-md mb-md tabletl:mb-xl">
+    {% if section.settings.title_icon == "instagram" %}
+      <i class="inline-block w-xl">{% render 'icon--instagram' %}</i>
+    {% elsif section.settings.title_icon == "x" %}
+      <i class="inline-block w-xl">{% render 'icon--x' %}</i>
+    {% endif %}
+    {% if section.settings.title != blank %}
+      <div class="social-header__title rte">
+        {{ section.settings.title }}
+      </div>
+    {% endif %}
+  </div>
+
+  {% assign app_block_found = false %}
+
+  {%- for block in section.blocks -%}
+    {%- if block.type == '@app' -%}
+      {% assign app_block_found = true %}
+      {% render block %}
+      {%- break -%}
+    {%- endif -%}
+  {%- endfor -%}
+
+  {% unless app_block_found %}
+    <s-carousel class="grid grid-cols-1" data-options='{{carousel_options}}'>
+      <div id="{{ section.id }}--carousel" class="swiper w-full swiper--left-offset pt-xs pb-12" js-carousel>
+        <div class="swiper-wrapper w-full">
+          
+            {%- for block in section.blocks -%}
+              <div class="social__slide swiper-slide box-content {% if forloop.first %}tabletp:pl-20 tabletl:pl-xl{%  elsif forloop.last %}pl-0 pr-md tabletp:pr-20 tabletl:pr-xl{% endif %}" js-carousel-slide>           
+                {% if block.type == 'media_block' %}
+                  <article class="media-card rounded leading-none">
+                    {% if block.settings.image_url != blank %}
+                      <a href="{{ block.settings.image_url }}" class="inline-block rounded leading-none w-full"
+                        {% if block.settings.accessibility_label != blank %}
+                          aria-label="{{ block.settings.accessibility_label }}"
+                        {% endif %}>
+                        {% if block.settings.image != blank%}
+                          <div class="media-card__image w-full rounded">
+                            {% render 'lazy-image',
+                              image: block.settings.image
+                              image_desktop: block.settings.desktop_image
+                              img_classes: 'rounded w-full h-full object-center object-cover'
+                              loading: lazy_loading
+                            %}
+                          </div>
+                        {% endif %}
+                      </a>
+                    {% else %}
+                      {% if block.settings.image != blank%}
+                        <div class="media-card__image w-full rounded">
+                          {% render 'lazy-image',
+                            image: block.settings.image
+                            image_desktop: block.settings.desktop_image
+                            img_classes: 'rounded w-full h-full object-center object-cover'
+                            loading: lazy_loading
+                          %}
+                        </div>
+                      {% endif %}
+                    {% endif %}
+                  </article>
+                {% elsif block.type == 'content_block' %}
+                  <article class="content-card h-full">
+                    {% if block.settings.url %}
+                      {% assign tag = 'a' %}
+                    {% else %}
+                      {% assign tag = 'div' %}
+                    {% endif %}
+                    <{{ tag }}{% if tag == 'a' %} href="{{ block.settings.url }}"{% endif %} class="inline-block w-full h-full rounded border border-gray-light p-md tabletl:p-lg">
+                      <div class="content-card__header flex flex-wrap items-center mb-md gap-md tabletl:gap-lg tabletl:mb-lg">
+                        {% if block.settings.avatar != blank %}
+                          <div class="content-card__avatar overflow-hidden rounded-full w-[64px] shrink-0 relative" style="aspect-ratio: 1/1;">
+                            {% render 'lazy-image', image: block.settings.avatar , img_classes: 'object-cover absolute top-0 left-0 w-full h-full' %}
+                          </div>
+                        {% endif %}
+                        {% if block.settings.name != blank %}
+                          <p class="font-500 text-12 tabletl:text-14">
+                            {{ block.settings.name }}
+                          </p>
+                        {% endif %}
+                      </div>
+                      {% if block.settings.description != blank %}
+                        <div class="content-card__description rte">
+                            {{ block.settings.description }}
+                        </div>
+                      {% endif %}
+                    </{{ tag }}>
+                  </article>
+                {% endif %}
+              </div>
+            {% endfor %}
+
+        </div> 
+      </div>
+    </s-carousel>
+  {%- endunless -%} 
+</section>
+
+{% schema %}
+{
+  "name": "Social",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "select",
+      "id": "padding_top",
+      "label": "Padding Top",
+      "options": [
+        { "value": "pt-0", "label": "None" },
+        { "value": "pt-sm", "label": "Small - 8px" },
+        { "value": "pt-md", "label": "Medium - 16px" },
+        { "value": "pt-lg", "label": "Large - 24px" },
+        { "value": "pt-xl", "label": "X-Large - 40px" },
+        { "value": "pt-xxl", "label": "XX-Large - 60px" },
+        { "value": "pt-xxxl", "label": "XXX-Large - 80px" }
+      ],
+      "default": "pt-0"
+    },
+    {
+      "type": "select",
+      "id": "padding_bottom",
+      "label": "Padding Bottom",
+      "options": [
+        { "value": "pb-0", "label": "None" },
+        { "value": "pb-sm", "label": "Small - 8px" },
+        { "value": "pb-md", "label": "Medium - 16px" },
+        { "value": "pb-lg", "label": "Large - 24px" },
+        { "value": "pb-xl", "label": "X-Large - 40px" },
+        { "value": "pb-xxl", "label": "XX-Large - 60px" },
+        { "value": "pb-xxxl", "label": "XXX-Large - 80px" }
+      ],
+      "default": "pb-0"
+    },
+    {
+      "type": "select",
+      "id": "desktop_padding_top",
+      "label": "Desktop - Padding Top",
+      "options": [
+        { "value": "inherit", "label": "Inherit" },
+        { "value": "tabletl:pt-0", "label": "None" },
+        { "value": "tabletl:pt-sm", "label": "Small - 8px" },
+        { "value": "tabletl:pt-md", "label": "Medium - 16px" },
+        { "value": "tabletl:pt-lg", "label": "Large - 24px" },
+        { "value": "tabletl:pt-xl", "label": "X-Large - 40px" },
+        { "value": "tabletl:pt-xxl", "label": "XX-Large - 60px" },
+        { "value": "tabletl:pt-xxxl", "label": "XXX-Large - 80px" }
+      ],
+      "default": "tabletl:pt-0"
+    },
+    {
+      "type": "select",
+      "id": "desktop_padding_bottom",
+      "label": "Desktop - Padding Bottom",
+      "options": [
+        { "value": "inherit", "label": "Inherit" },
+        { "value": "tabletl:pb-0", "label": "None" },
+        { "value": "tabletl:pb-sm", "label": "Small - 8px" },
+        { "value": "tabletl:pb-md", "label": "Medium - 16px" },
+        { "value": "tabletl:pb-lg", "label": "Large - 24px" },
+        { "value": "tabletl:pb-xl", "label": "X-Large - 40px" },
+        { "value": "tabletl:pb-xxl", "label": "XX-Large - 60px" },
+        { "value": "tabletl:pb-xxxl", "label": "XXX-Large - 80px" }
+      ],
+      "default": "tabletl:pb-0"
+    },
+    {
+      "type": "header",
+      "content": "Header Settings"
+    },
+    {
+      "type": "richtext",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "select",
+      "id": "title_icon",
+      "label": "Title Icon",
+      "options": [
+        { "value": "none", "label": "None" },
+        { "value": "instagram", "label": "Instagram" },
+        { "value": "x", "label": "X" }
+      ],
+      "default": "none"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "media_block",
+      "name": "Media Block",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "desktop_image",
+          "label": "Desktop - Image"
+        },
+        {
+          "type": "url",
+          "id": "image_url",
+          "label": "Link"
+        },
+        {
+          "type": "text",
+          "id": "accessibility_label",
+          "label": "Link Accessibility Label "
+        },
+      ]
+    },
+    {
+      "type": "content_block",
+      "name": "Content Block",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "avatar",
+          "label": "Upload Avatar"
+        },
+        {
+          "type": "text",
+          "id": "name",
+          "label": "Name"
+        },
+        {
+          "type": "richtext",
+          "id": "description",
+          "label": "Description"
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "Link"
+        }
+      ]
+    },
+    {
+      "type": "@app"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Social"
+    }
+  ]
+}
+{% endschema %}

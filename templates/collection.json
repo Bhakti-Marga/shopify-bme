@@ -1,0 +1,135 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "section_hero_yixPkq": {
+      "type": "section__hero",
+      "settings": {
+        "padding_top": "0px",
+        "desktop_padding_top": "0px",
+        "padding_bottom": "16px",
+        "desktop_padding_bottom": "40px",
+        "padding_horizontal": "px-0",
+        "desktop_padding_horizontal": "inherit",
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "tabletl:mb-xxxl",
+        "use_container": true,
+        "set_100vh": false,
+        "set_100vh_desktop": true,
+        "border_radius": 16,
+        "aspect_ratio": "1/1",
+        "aspect_ratio_desktop": "16/9",
+        "image": "{{ collection.image }}",
+        "image_desktop": "{{ collection.image }}",
+        "bg_color": "#16254c",
+        "content_width": "max-w-5xl",
+        "text_align": "text-left",
+        "text_color": "#ffffff",
+        "title": "{{ collection.title }}",
+        "title_font_style": "h2",
+        "subtitle": "{{ collection.description }}",
+        "button_text": "",
+        "button_url": "",
+        "button_style": "btn",
+        "anchor_to_pricing": false,
+        "video_title": "",
+        "horizontal_position": "justify-start",
+        "vertical_position": "items-end"
+      }
+    },
+    "product-grid": {
+      "type": "collection__grid",
+      "settings": {}
+    },
+    "section_content_grid_QpzMRe": {
+      "type": "section__content-grid",
+      "blocks": {
+        "content_block_hrCUqg": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify://shop_images/Newsletter_Signup-2-MOBILE.jpg",
+            "desktop_image": "shopify://shop_images/Newsletter_Signup-2.jpg",
+            "title": "Newsletter Sign-Up",
+            "title_tag": "h3",
+            "title_font_style": "h5",
+            "description": "<p>Want free resources on how to live a life of love? Sign up to receive special updates and free resources.</p>",
+            "cta_link": "",
+            "cta_label": "Únete a la comunidad",
+            "cta_style": "btn btn--gold",
+            "cta_klaviyo_embed": "SEA9Ef"
+          }
+        },
+        "content_block_x4qiqJ": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify://shop_images/Free_Meditation_Course-2-MOBILE.jpg",
+            "desktop_image": "shopify://shop_images/Free_Meditation_Course-2.jpg",
+            "title": "Free Guided Meditation",
+            "title_tag": "h3",
+            "title_font_style": "h5",
+            "description": "<p>Free 3 Weeks of Guided Meditations. Learn to meditate and awaken love in your life</p>",
+            "cta_link": "",
+            "cta_label": "Curso gratuito Aprende a Meditar",
+            "cta_style": "btn btn--gold",
+            "cta_klaviyo_embed": "RxziKK"
+          }
+        }
+      },
+      "block_order": [
+        "content_block_hrCUqg",
+        "content_block_x4qiqJ"
+      ],
+      "settings": {
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "padding_top": "pt-md",
+        "padding_bottom": "pb-md",
+        "desktop_margin_top": "tabletl:mt-0",
+        "desktop_margin_bottom": "inherit",
+        "desktop_padding_top": "tabletl:pt-xxl",
+        "desktop_padding_bottom": "tabletl:pb-xxl",
+        "bg_color": "#16254c",
+        "cols_mobile": "1",
+        "cols_desktop": "2",
+        "horizontal_gap_mobile": "gap-x-md",
+        "horizontal_gap_desktop": "tabletl:gap-x-md",
+        "vertical_gap_mobile": "gap-y-md",
+        "vertical_gap_desktop": "tabletl:gap-y-md",
+        "format": "inside",
+        "text_color": "#ffffff",
+        "apply_gradient": true,
+        "gradient_height": 40,
+        "gradient_color": "#000000"
+      }
+    },
+    "seccion_texto_adicional_ir4PBa": {
+      "type": "seccion__texto__adicional",
+      "name": "Texto Adicional Colección",
+      "settings": {
+        "max_width": 1000,
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "font_size": 16,
+        "line_height": "1.5",
+        "text_align": "left",
+        "background_color": "#ffffff",
+        "text_color": "#333333"
+      }
+    }
+  },
+  "order": [
+    "section_hero_yixPkq",
+    "product-grid",
+    "section_content_grid_QpzMRe",
+    "seccion_texto_adicional_ir4PBa"
+  ]
+}

@@ -1,0 +1,906 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "hero": {
+      "type": "article__hero",
+      "settings": {
+        "apply_gradient": false,
+        "gradient_height": 40,
+        "gradient_color": "#000"
+      }
+    },
+    "1743424089805cd316": {
+      "type": "apps",
+      "settings": {}
+    },
+    "main": {
+      "type": "article__main",
+      "disabled": true,
+      "settings": {}
+    },
+    "section_text_content_YVPHBf": {
+      "type": "section__text-content",
+      "settings": {
+        "margin_top": "mt-xl",
+        "margin_bottom": "mb-xl",
+        "padding_top": "pt-0",
+        "padding_bottom": "pb-0",
+        "desktop_margin_top": "tabletl:mt-xl",
+        "desktop_margin_bottom": "tabletl:mb-xl",
+        "desktop_padding_top": "inherit",
+        "desktop_padding_bottom": "inherit",
+        "max_width": "750px",
+        "pretitle": "",
+        "title": "Learn the Secret to Great Meditation",
+        "title_tag": "h2",
+        "title_font_style": "h3",
+        "description": "<p>Have you ever tried to meditate, but just ended up feeling frustrated at the non-stop thoughts and distractions?</p><p>Many people give up on meditation before they see results because - <em>the truth is</em> - calming the mind is not easy <em>unless you have the right tools.</em></p><p><em>Meditation Essentials</em> is designed to take you step by step into the <em>experience of meditation</em>. This is where peace of mind and the stillness of the heart become a living reality that lasts long after you leave your cushion.</p>",
+        "credits": ""
+      }
+    },
+    "section_video_TMtkEK": {
+      "type": "section__video",
+      "settings": {
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "padding_top": "pt-0",
+        "padding_bottom": "pb-0",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "desktop_padding_top": "inherit",
+        "desktop_padding_bottom": "inherit",
+        "set_100vh": false,
+        "aspect_ratio": "16/9",
+        "aspect_ratio_desktop": "16/9",
+        "video_url": "shopify://files/videos/2025-02-22-BM3Web-SoulAwakening-03.mp4",
+        "poster_video": "shopify://files/videos/2025-02-22-BM3Web-SoulAwakening-03.mp4"
+      }
+    },
+    "section_text_content_dDgmnw": {
+      "type": "section__text-content",
+      "settings": {
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "padding_top": "pt-lg",
+        "padding_bottom": "pb-0",
+        "desktop_margin_top": "tabletl:mt-0",
+        "desktop_margin_bottom": "tabletl:mb-0",
+        "desktop_padding_top": "tabletl:pt-xl",
+        "desktop_padding_bottom": "tabletl:pb-0",
+        "max_width": "750px",
+        "pretitle": "",
+        "title": "Experience the breakthrough of a meditation practice centered in Love.",
+        "title_tag": "h3",
+        "title_font_style": "h4",
+        "description": "",
+        "credits": ""
+      }
+    },
+    "section_icon_grid_QfR3bE": {
+      "type": "section__icon-grid",
+      "blocks": {
+        "content_block_88fU6F": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify://shop_images/icon-placeholder.png",
+            "title": "Refine your Focus with Mantra",
+            "title_tag": "h4",
+            "title_font_style": "h5",
+            "description": "<p>We are always meditating on something – but it’s often our problems and worries. <strong>Mantra meditation helps us to take back control of the mind and focus it onsomething positive.</strong></p>"
+          }
+        },
+        "content_block_bRpdR3": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify://shop_images/icon-placeholder.png",
+            "title": "Harness the Power of Breath",
+            "title_tag": "h3",
+            "title_font_style": "h5",
+            "description": "<p>The most powerful tool for meditation is always with us - our breath! Learn how to<strong>utilize the breath to take you into a calm, relaxed statewithin minutes.</strong></p>"
+          }
+        },
+        "content_block_g4G4Lh": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify://shop_images/icon-placeholder.png",
+            "title": "Enter the Heart with Guided Meditation",
+            "title_tag": "h3",
+            "title_font_style": "h5",
+            "description": "<p>Go deeper with <strong>guided meditations to calm the mind and enter the spaciousness of the heart</strong>, opening your life and relationships up to experience more connectionand fulfillment.</p>"
+          }
+        },
+        "content_block_FzqmmK": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify://shop_images/icon-placeholder.png",
+            "title": "Make the Mind your Friend",
+            "title_tag": "h3",
+            "title_font_style": "h5",
+            "description": "<p>This course isn’t about sitting perfectly still or stopping your thoughts; instead you will learn<strong>how to make the mind your friend, so it works for you, notagainst you.</strong></p>"
+          }
+        }
+      },
+      "block_order": [
+        "content_block_88fU6F",
+        "content_block_bRpdR3",
+        "content_block_g4G4Lh",
+        "content_block_FzqmmK"
+      ],
+      "custom_css": [
+        ".overflow-hidden,picture {display: none;}"
+      ],
+      "settings": {
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "padding_top": "pt-0",
+        "padding_bottom": "pb-0",
+        "desktop_margin_top": "tabletl:mt-0",
+        "desktop_margin_bottom": "tabletl:mb-0",
+        "desktop_padding_top": "tabletl:pt-0",
+        "desktop_padding_bottom": "tabletl:pb-0",
+        "cols_mobile": "1",
+        "cols_desktop": "2",
+        "text_align": "text-left",
+        "title": "",
+        "subtitle": "",
+        "button_text": "",
+        "button_url": "",
+        "button_style": "btn"
+      }
+    },
+    "section_text_content_RLqfyC": {
+      "type": "section__text-content",
+      "settings": {
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "padding_top": "pt-0",
+        "padding_bottom": "pb-0",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "desktop_padding_top": "inherit",
+        "desktop_padding_bottom": "inherit",
+        "max_width": "750px",
+        "pretitle": "",
+        "title": "This course is right for you if:",
+        "title_tag": "h3",
+        "title_font_style": "h4",
+        "description": "",
+        "credits": ""
+      }
+    },
+    "section_icon_grid_TNtinb": {
+      "type": "section__icon-grid",
+      "blocks": {
+        "content_block_kUBqr4": {
+          "type": "content_block",
+          "settings": {
+            "title": "",
+            "title_tag": "h4",
+            "title_font_style": "h5",
+            "description": "<p>You are new to meditation and want to start a practice that is practical, enjoyable and effective</p>"
+          }
+        },
+        "content_block_HXw3hB": {
+          "type": "content_block",
+          "settings": {
+            "title": "",
+            "title_tag": "h3",
+            "title_font_style": "h5",
+            "description": "<p>You’ve meditated before, but want something deeper or haven’t experienced results fromother practices</p>"
+          }
+        },
+        "content_block_RGDQBM": {
+          "type": "content_block",
+          "settings": {
+            "title": "",
+            "title_tag": "h3",
+            "title_font_style": "h5",
+            "description": "<p>You want a simple and natural way to decrease stress, anxietyor worry</p>"
+          }
+        },
+        "content_block_xEHVBc": {
+          "type": "content_block",
+          "settings": {
+            "title": "",
+            "title_tag": "h3",
+            "title_font_style": "h5",
+            "description": "<p>You desire a life centered in love and want to live from your heart -for good</p>"
+          }
+        }
+      },
+      "block_order": [
+        "content_block_kUBqr4",
+        "content_block_HXw3hB",
+        "content_block_RGDQBM",
+        "content_block_xEHVBc"
+      ],
+      "custom_css": [
+        "li {display: flex; flex-direction: column; align-items: center; text-align: center; max-width: 600px; margin: 0 auto;}"
+      ],
+      "settings": {
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "padding_top": "pt-0",
+        "padding_bottom": "pb-0",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "tabletl:mb-0",
+        "desktop_padding_top": "tabletl:pt-0",
+        "desktop_padding_bottom": "tabletl:pb-0",
+        "cols_mobile": "1",
+        "cols_desktop": "4",
+        "text_align": "text-left",
+        "title": "",
+        "subtitle": "",
+        "button_text": "",
+        "button_url": "",
+        "button_style": "btn"
+      }
+    },
+    "section_text_content_cRLxiC": {
+      "type": "section__text-content",
+      "custom_css": [
+        ".text-content {background-color: #eff6ff;}",
+        ".text-content h5 {margin-bottom: 0;}"
+      ],
+      "settings": {
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "padding_top": "pt-lg",
+        "padding_bottom": "pb-0",
+        "desktop_margin_top": "tabletl:mt-0",
+        "desktop_margin_bottom": "tabletl:mb-0",
+        "desktop_padding_top": "tabletl:pt-xl",
+        "desktop_padding_bottom": "tabletl:pb-0",
+        "max_width": "",
+        "pretitle": "",
+        "title": "What you will learn:",
+        "title_tag": "h5",
+        "title_font_style": "h5",
+        "description": "",
+        "credits": ""
+      }
+    },
+    "section_content_grid_89gq9j": {
+      "type": "section__content-grid",
+      "blocks": {
+        "content_block_V6QDQF": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify://shop_images/lesson-01.jpg",
+            "title": "Lesson 1:",
+            "title_tag": "h5",
+            "title_font_style": "h5",
+            "description": "<p>What is meditation, intro to the course and a guided meditation to learn how to use the breath to enter a state of deep meditation.</p>",
+            "cta_link": "",
+            "cta_label": "",
+            "cta_style": "btn btn--black"
+          }
+        },
+        "content_block_VBLpVd": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify://shop_images/lesson-02.jpg",
+            "title": "Lesson 2:",
+            "title_tag": "h5",
+            "title_font_style": "h5",
+            "description": "<p>A meditation you can do any time of day that will help you to gain the feeling and awareness of what is different when I live my life with the mind, and when I am living with the heart.</p>",
+            "cta_link": "",
+            "cta_label": "",
+            "cta_style": "btn btn--black"
+          }
+        },
+        "content_block_Nf4DGF": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify://shop_images/heart-hands.jpg",
+            "title": "Lesson 3:",
+            "title_tag": "h5",
+            "title_font_style": "h5",
+            "description": "<p>A guided meditation to help you “See with the eyes of the Divine” and tune into the essence of life - the reality of Love itself.</p>",
+            "cta_link": "",
+            "cta_label": "",
+            "cta_style": "btn btn--black"
+          }
+        },
+        "content_block_Hph6ri": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify://shop_images/lesson-04.jpg",
+            "title": "Lesson 4:",
+            "title_tag": "h5",
+            "title_font_style": "h5",
+            "description": "<p>Learn to meditate using a powerful sanskrit mantra, plus its meaning, how to chant, and ways to deepen your mantra meditation practice.</p>",
+            "cta_link": "",
+            "cta_label": "",
+            "cta_style": "btn btn--black"
+          }
+        },
+        "content_block_XPTUUU": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify://shop_images/lesson-05.jpg",
+            "title": "Lesson 5:",
+            "title_tag": "h5",
+            "title_font_style": "h5",
+            "description": "<p>Bringing it all together for a full meditation experience. Project Mantra: how to use what you learned to create a daily meditation practice.</p>",
+            "cta_link": "",
+            "cta_label": "",
+            "cta_style": "btn btn--black"
+          }
+        },
+        "content_block_7cTiBk": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify://shop_images/lesson-06.jpg",
+            "title": "Bonus Video: Intro to Mudra",
+            "title_tag": "h5",
+            "title_font_style": "h5",
+            "description": "<p>What are Mudras, plus two mudras (hand positions) that you can use any time to balance your energetic body and overcome unconscious patterns.</p>",
+            "cta_link": "",
+            "cta_label": "",
+            "cta_style": "btn btn--black"
+          }
+        }
+      },
+      "block_order": [
+        "content_block_V6QDQF",
+        "content_block_VBLpVd",
+        "content_block_Nf4DGF",
+        "content_block_Hph6ri",
+        "content_block_XPTUUU",
+        "content_block_7cTiBk"
+      ],
+      "settings": {
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "padding_top": "pt-xl",
+        "padding_bottom": "pb-xl",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "desktop_padding_top": "inherit",
+        "desktop_padding_bottom": "inherit",
+        "bg_color": "#eff6ff",
+        "cols_mobile": "1",
+        "cols_desktop": "2",
+        "horizontal_gap_mobile": "gap-x-md",
+        "horizontal_gap_desktop": "tabletl:gap-x-xl",
+        "vertical_gap_mobile": "gap-y-xl",
+        "vertical_gap_desktop": "tabletl:gap-y-xl",
+        "format": "alongside"
+      }
+    },
+    "section_hero_jPCMza": {
+      "type": "section__hero",
+      "settings": {
+        "padding_top": "16px",
+        "desktop_padding_top": "0px",
+        "padding_bottom": "16px",
+        "desktop_padding_bottom": "inherit",
+        "padding_horizontal": "px-0",
+        "desktop_padding_horizontal": "tabletl:px-xxxl",
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "use_container": false,
+        "set_100vh": false,
+        "border_radius": 0,
+        "aspect_ratio": "16/9",
+        "aspect_ratio_desktop": "auto",
+        "bg_color": "#eff6ff",
+        "content_width": "max-w-5xl",
+        "text_align": "text-center",
+        "text_color": "#000000",
+        "title": "PDF of Each Lesson",
+        "title_font_style": "h5",
+        "subtitle": "<p>Each lesson will include a detailed written overview you can easily refer back to during any point in the course.</p>",
+        "button_text": "Calm Your Mind",
+        "button_url": "#",
+        "button_style": "btn btn--gold",
+        "anchor_to_pricing": true,
+        "video_title": "",
+        "horizontal_position": "justify-center",
+        "vertical_position": "items-center"
+      }
+    },
+    "section_image_text_blocks_hjR6aP": {
+      "type": "section__image_text_blocks",
+      "blocks": {
+        "image_block_WPMCWX": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/swami-tulsidas-meditation-teacher.webp",
+            "height": "auto",
+            "desktop_height": "50vh"
+          }
+        },
+        "content_block_iVedkM": {
+          "type": "content_block",
+          "settings": {
+            "title": "Expert Instruction",
+            "title_tag": "h4",
+            "title_font_style": "h4",
+            "description": "<p><strong>About Your Teacher<br/></strong><br/>Swami Tulsidas spent 12 years living with and learning directly from Enlightened Master Paramahamsa Vishwananda. He has taught yoga and meditation in over 21 countries, to more than 8,000 people worldwide through a variety of classes, workshops, and retreats.</p><p>His courses take each participant on an intimate and empowering journey towards discovering the depths of Love and Divinity within through the joy of meditation.</p>",
+            "credits": "",
+            "cta_url": "",
+            "cta_label": "",
+            "text_align": "left",
+            "desktop_text_align": "inherit",
+            "vertical_padding": "py-lg",
+            "vertical_padding_desktop": "tabletl:py-xxl"
+          }
+        }
+      },
+      "block_order": [
+        "image_block_WPMCWX",
+        "content_block_iVedkM"
+      ],
+      "settings": {
+        "margin_top": "mt-lg",
+        "margin_bottom": "mb-lg",
+        "desktop_margin_top": "tabletl:mt-md",
+        "desktop_margin_bottom": "tabletl:mb-md",
+        "vertical_align": "center",
+        "flip_columns_desktop": true
+      }
+    },
+    "section_quote_blocks_kGzFeP": {
+      "type": "section__quote-blocks",
+      "blocks": {
+        "block_DN6VHg": {
+          "type": "block",
+          "settings": {
+            "title": "‘In meditation, when the mind is calm, you have a personal contact with the Divine, not outside, but within you. And this inner contact is the most wonderful and the most powerful contact you can ever have.’",
+            "description": "<p>Paramahamsa Vishwananda</p>"
+          }
+        }
+      },
+      "block_order": [
+        "block_DN6VHg"
+      ],
+      "settings": {
+        "padding_top": "pt-0",
+        "padding_bottom": "pb-0",
+        "desktop_padding_top": "tabletl:pt-0",
+        "desktop_padding_bottom": "tabletl:pb-0",
+        "cols_mobile": "1",
+        "cols_desktop": "1"
+      }
+    },
+    "section_review_carousel_dNJAUb": {
+      "type": "section__review-carousel",
+      "blocks": {
+        "content_block_eQzmnx": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify://shop_images/IMG_0334.jpg",
+            "content": "<p><em>“Swami Tulsidas has such a loving presence in the way that he guides others in their path of meditation. There is this special heart element that takes listeners out of their minds and, even if just for a moment, so often brings them to what I believe is the essence of Yoga itself: this deeper connection with the Divine. If you have not had the chance to dive deeper in this way, I would highly recommend attending one of his meditation courses!”</em></p>",
+            "credits": "Quinn, Orlando, FL"
+          }
+        },
+        "content_block_6zgi88": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify://shop_images/IMG_0334.jpg",
+            "content": "<p><em>“After learning to meditate, I noticed shifts in myself like being more emotionally balanced and able to handle the ups and downs of life. I look forward to my practice every day!”</em></p>",
+            "credits": "Ally, Long Island, NY"
+          }
+        },
+        "content_block_tzKzba": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify://shop_images/IMG_1603.jpg",
+            "content": "<p><em><strong> \"I feel connected to this Divine essence in a way my previous practices weren’t capable of providing.\"</strong></em><em><br/><br/>“I started eagerly practicing yoga at age 15, teaching at 19, and essentially ‘fell out of love’ with the physical aspect of the practice. Later on, Atma Kriya gave a completely new life to my relationship with yoga. Through the various techniques provided, I feel connected to this Divine essence in a way my previous practices weren’t capable of providing. Atma Kriya was certainly the missing key.”</em> </p>",
+            "credits": "—Moriah, Boulder, CO"
+          }
+        },
+        "content_block_N7pUYF": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify://shop_images/photo_2025-03-25_23-05-13.jpg",
+            "content": "<p><em><strong>\"Receiving this spiritual practice which was given by a living enlightened Master allowed me to trust it much more fully\"</strong></em><em><br/><br/>“Despite being earnest in my attempts to meditate prior to learning Atma Kriya Yoga, there was always some lingering doubt or concern that perhaps I wasn’t doing it properly, or perhaps a different technique would be better, etc. etc. But receiving this spiritual practice which was given by a living enlightened Master allowed me to trust it much more fully - which in turn allowed me to enjoy it more fully and go much deeper.</em>” </p>",
+            "credits": "—Jeremiah, Eugene, OR"
+          }
+        },
+        "content_block_qBj7b4": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify://shop_images/photo_2025-03-25_23-06-09.jpg",
+            "content": "<p><em><strong>\"It has changed my life in so many different ways; the most important being acceptance of who I am.\"</strong></em><em><br/><br/>Atma Kriya Yoga is something I look forward to doing everyday. It's a time when nothing else matters, it's just time for quieting my mind, being with the Divine and opening my heart. This time is like no other. I can sit and find peace, forgiveness & love. It has changed my life in so many different ways; the most important being acceptance of who I am. I will forever love this practice and all that it brings to not only me but everyone around me.”</em> </p>",
+            "credits": "—Samantha, Elmira, NY"
+          }
+        },
+        "content_block_Dw8dUV": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify://shop_images/photo_2025-03-21_16-57-13.jpg",
+            "content": "<p><em><strong>\"Atma Kriya Yoga came into my life when I was least expecting it...\"</strong></em><em><br/><br/>Atma Kriya Yoga came into my life when I was least expecting it and it changed it in the best possible way. Personally, this has been such a wonderful journey of rediscovery of who I really am and what my purpose in this life is. To me it has become a lifestyle, my daily spiritual food that keeps me centered and strong through the ups and downs of life and that showers me with unconditional love no matter what. If you are considering taking Atma Kriya Yoga don’t let your mind stop you, just go for it! You will not regret it. </em></p>",
+            "credits": "—Vesna, Rochester NY"
+          }
+        },
+        "content_block_WkWfBL": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify://shop_images/photo_2025-03-25_23-21-07.jpg",
+            "content": "<p><strong>\"The techniques have helped to ground me and make me more and more the version of a person I wish to be.\"</strong><br/><br/>Atma Kriya Yoga is a life changing meditation that will bring you closer to your Divine Self. There is so much there and whatever Divine desire you have can be fulfilled through the sincere practice of Atma Kriya. The techniques have helped to ground me and make me more and more the version of the person I wish to be. I recommend them to anyone and hope you decide to learn this timeless and most precious gift known as Atma Kriya.</p>",
+            "credits": "Deva, New Orleans"
+          }
+        }
+      },
+      "block_order": [
+        "content_block_eQzmnx",
+        "content_block_6zgi88",
+        "content_block_tzKzba",
+        "content_block_N7pUYF",
+        "content_block_qBj7b4",
+        "content_block_Dw8dUV",
+        "content_block_WkWfBL"
+      ],
+      "settings": {
+        "padding_top": "pt-md",
+        "padding_bottom": "pb-md",
+        "desktop_padding_top": "tabletl:pt-xl",
+        "desktop_padding_bottom": "tabletl:pb-xl",
+        "title": "See what others are saying",
+        "title_tag": "h3"
+      }
+    },
+    "section_text_content_ikgUYc": {
+      "type": "section__text-content",
+      "settings": {
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "padding_top": "pt-0",
+        "padding_bottom": "pb-0",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "desktop_padding_top": "inherit",
+        "desktop_padding_bottom": "inherit",
+        "max_width": "",
+        "pretitle": "",
+        "title": "",
+        "title_tag": "h2",
+        "title_font_style": "h3",
+        "description": "",
+        "credits": ""
+      }
+    },
+    "section_featured_master_section_kUWppT": {
+      "type": "section__featured-master-section",
+      "blocks": {
+        "featured_master_item_Gdbhxa": {
+          "type": "Featured_Master_item",
+          "settings": {
+            "image": "shopify://shop_images/2024-08-12-p-0170.jpg",
+            "col-span": "8"
+          }
+        },
+        "featured_master_item_HpxaDd": {
+          "type": "Featured_Master_item",
+          "settings": {
+            "image": "shopify://shop_images/2024-08-13-p-0705.jpg",
+            "col-span": "4"
+          }
+        },
+        "featured_master_item_MBtrAX": {
+          "type": "Featured_Master_item",
+          "settings": {
+            "image": "shopify://shop_images/bm-03-mainokriya.jpg",
+            "col-span": "4"
+          }
+        },
+        "featured_master_item_9WaL7B": {
+          "type": "Featured_Master_item",
+          "settings": {
+            "image": "shopify://shop_images/Mastery.jpg",
+            "col-span": "6"
+          }
+        }
+      },
+      "block_order": [
+        "featured_master_item_Gdbhxa",
+        "featured_master_item_HpxaDd",
+        "featured_master_item_MBtrAX",
+        "featured_master_item_9WaL7B"
+      ],
+      "settings": {
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "padding_top": "pt-0",
+        "padding_bottom": "pb-0",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "desktop_padding_top": "inherit",
+        "desktop_padding_bottom": "tabletl:pb-xxxl",
+        "title": "A Master for our time: Paramahamsa Vishwananda",
+        "content": "<p>Paramahamsa Vishwananda is a fully realized enlightened master, direct disciple of Mahavatar Babaji, and world renowned Satguru. He is an incarnation of Divine Love, and is here to empower you to discover this never-ending Love for yourself. His expert guidance, unsurpassed wisdom, and loving presence is unparalleled. Don’t miss this rare opportunity to spend 4-days learning directly from the greatest spiritual teacher of our time!</p>",
+        "marquee_speed": 28
+      }
+    },
+    "section_event_calendar_fF9RNM": {
+      "type": "section__event-calendar",
+      "blocks": {
+        "calendar_item_zrtK3J": {
+          "type": "Calendar_item",
+          "settings": {
+            "date_title": "Day 1",
+            "title": "Discovery",
+            "content": "<p>Soul Awakening begins with the discovery of your true self, a journey inward to understand the nature of the soul. Through practices such as meditation and mindful action, you learn to detach from the distractions of the external world and recognize the eternal presence within. This step is about awakening to your spiritual essence and realizing that the soul's true nature is pure, unchanging, and intimately connected to the Divine.</p>",
+            "image": "shopify://shop_images/day01.jpg"
+          }
+        },
+        "calendar_item_wCjn8G": {
+          "type": "Calendar_item",
+          "settings": {
+            "date_title": "Day 2",
+            "title": "Awakening",
+            "content": "<p>In the second step, you experience a deeper level of awakening as you begin to align your actions with the awareness of your soul. The heart opens to a higher consciousness, and the bhakti (devotion) within you starts to flourish. You cultivate devotion through prayer, chanting, and surrender, all of which allow you to feel the presence of Divine Love in every moment. This phase is about experiencing divine connection and surrendering to the grace that flows through your being.</p>",
+            "image": "shopify://shop_images/day02.jpg"
+          }
+        },
+        "calendar_item_ArQz9V": {
+          "type": "Calendar_item",
+          "settings": {
+            "date_title": "Day 3",
+            "title": "Mastery",
+            "content": "<p>As your practice deepens, you enter the phase of mastery, where the awareness of the soul becomes a part of your daily life. You move beyond technique and reach a state of effortless devotion. Your actions, thoughts, and feelings are naturally aligned with the Divine, and you experience inner peace, compassion, and joy. At this stage, you have refined your practice and are living in harmony with the higher energies that guide you on your spiritual journey.</p>",
+            "image": "shopify://shop_images/2022-07-16-p-0413.jpg"
+          }
+        },
+        "calendar_item_cfHkfC": {
+          "type": "Calendar_item",
+          "settings": {
+            "date_title": "Day 4",
+            "title": "Transformation",
+            "content": "<p>The final step is the transmission of divine energy, or Shaktipat, directly from the source of all creation. In this transformative moment, Paramahamsa Vishwananda’s grace descends upon you, awakening your inner potential and elevating your spiritual practice to new heights. With Shaktipat, you experience the direct touch of the Divine, igniting a deeper connection to your true self and opening the door to the ultimate realization of God’s love within you.</p>",
+            "image": "shopify://shop_images/Image_adbe1761-923f-493f-ba55-3da2dbabcab5.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "calendar_item_zrtK3J",
+        "calendar_item_wCjn8G",
+        "calendar_item_ArQz9V",
+        "calendar_item_cfHkfC"
+      ],
+      "settings": {
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "padding_top": "pt-xl",
+        "padding_bottom": "pb-xl",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "desktop_padding_top": "tabletl:pt-xxxl",
+        "desktop_padding_bottom": "tabletl:pb-xxxl",
+        "title": "Four Days, Unlimited Potential",
+        "description": "<p>4 Unforgettable Days, Lifetimes of Transformation.<br/><br/>Thursday, September 11 - Sunday, September 14</p>"
+      }
+    },
+    "section_ticket_tier_7YGiea": {
+      "type": "section__ticket-tier",
+      "blocks": {
+        "block_NEXjNY": {
+          "type": "block",
+          "settings": {
+            "title": "Online Virtual Pass",
+            "price": "$435",
+            "subtitle": "Get 4-day virtual admission to the program INCLUDING:",
+            "description": "<ul><li>Full Training in Atma Kriya Yoga from the Bhakti Marga Swamis & teachers</li><li>Shaktipat Initiation option from Paramahamsa Vishwananda at a later date </li><li>Atma Kriya Yoga Course Manual (PDF only) </li><li>Access to on-going advanced training & free refresher courses</li><li>Recording of all lectures & discourse from Paramahasa Vishwananda </li><li>Option for language interpretation </li><li>Option to come on September 14th for final initation day.</li></ul>",
+            "note": "Unlimited Passes Available",
+            "cta_label": "Compra tu entrada virtual",
+            "cta_link": "#",
+            "cta_style": "btn btn--gold text-black"
+          }
+        },
+        "block_HyiKeh": {
+          "type": "block",
+          "settings": {
+            "title": "In-Person Access Pass",
+            "price": "$895",
+            "subtitle": "Get 4-day in person admission to the program INCLUDING:",
+            "description": "<ul><li>Full training in Atma Kriya Yoga from Bhakti Marga Swamis & teachers </li><li>Shaktipat Initiation directly from Paramahamsa Vishwananda</li><li>Lunch & dinner included each day (vegetarian & vegan options)</li><li>Access to free refresher courses & lifetime teacher support</li><li>Atma Kriya Yoga Course Manual (physical & pdf)</li><li>Access to Soul Awakening online recording</li></ul><p></p>",
+            "note": "Limited Passes Available",
+            "cta_label": "Entrada presencial",
+            "cta_link": "#",
+            "cta_style": "btn btn--black text-white"
+          }
+        },
+        "block_ETLd9E": {
+          "type": "block",
+          "settings": {
+            "title": "In-Person Premium Pass",
+            "price": "$1008",
+            "subtitle": "Get 4-day in person admission to the program INCLUDING:",
+            "description": "<ul><li>Front row seats for the entire program </li><li>Full Training in Atma Kriya Yoga from Bhakti Marga Swamis & teachers </li><li>Shaktipat Initiation directly from Paramahamsa Vishwananda </li><li>Lunch & dinner included each day (vegetarian & vegan options)</li><li>Access to free refresher courses & lifetime teacher support</li><li>Atma Kriya Yoga Course Manual (physical & pdf)</li><li>Access to Soul Awakening online recording</li></ul><p></p>",
+            "note": "Limited Passes Available",
+            "cta_label": "Entrada presencial premium",
+            "cta_link": "#",
+            "cta_style": "btn btn--black text-white"
+          }
+        }
+      },
+      "block_order": [
+        "block_NEXjNY",
+        "block_HyiKeh",
+        "block_ETLd9E"
+      ],
+      "settings": {
+        "margin_top": "mt-lg",
+        "margin_bottom": "mb-lg",
+        "desktop_margin_top": "tabletl:mt-xxl",
+        "desktop_margin_bottom": "tabletl:mb-xxl",
+        "title": "Awaken your Soul",
+        "content": "Join Paramahamsa Vishwananda for this once in a lifetime opportunity, online or in-person! *Limited in-person spaces, save your spot for this incredible event! Payment plan available.*"
+      }
+    },
+    "section_accordion_eVtHNJ": {
+      "type": "section__accordion",
+      "blocks": {
+        "accordion_item_emUQpJ": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Who is this program for? Do I need to be religious to join the program?",
+            "content": "<p>Soul awakening is for everyone, from those just starting on their spiritual journey to seasoned practitioners. <br/><br/>While the teachings are rooted in the Vedic Tradition, the wisdom given trancends religious boundary and can be applied to every person in all walks of life. <br/><br/>Atma Kriya Yoga is a spiritual, but non-religious practice which can help you deepen your connection to any form of the Divine which you feel closest to. </p>"
+          }
+        },
+        "accordion_item_rPjfcM": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "What is the difference between the online and in-person Soul Awakening Program?",
+            "content": "<p>The online Soul Awakening does not include access to the physical venue, meals, or in-person shaktipat initiation with Paramahamsa Vishwananda. <br/><br/>The in-person gives a more immersive experience, while the online version allows you to access and experience this once in a lifetime program from the comfort of your home. </p>"
+          }
+        },
+        "accordion_item_7TFdiQ": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "What if I have a physical limitation? Can I still learn Atma Kriya?",
+            "content": "<p>Yes. Your teacher on-site can show you proper modifications for many of the techniques. <br/><br/>If attending online, you will have the opportunity to speak with a teacher who can help with modifications to specific techniques as needed. <br/><br/>Depending on the nature of the physical limitation, you may want to check with a teacher before the course on how we can best support your individual needs. </p>"
+          }
+        },
+        "accordion_item_mQ3rJ9": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Is there a payment plan available?",
+            "content": "<p>Payment plan options are available at checkout. Options may vary depending on your country. <br/><br/>If you would like to apply for a scholorship to attend Soul Awakening please contact us at info@bhaktimarga.us </p>"
+          }
+        },
+        "accordion_item_7CKjgY": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "How can I get shaktipat if I am online only?",
+            "content": "<p>There are Atma Kriya Yoga Teachers around the world who give Shaktipat Initiation. We will happily connect you to a teacher near you so you can get shaktipat as soon as possible. </p>"
+          }
+        },
+        "accordion_item_mwprCe": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Is the AKY initiation (Shaktipat) the same as a devotee initiation? Do I need to take Paramahamsa Vishwananda as my Guru to learn Atma Kriya Yoga?",
+            "content": "<p>No, the Shaktipat Initiation given at the end of the AKY course will initiate the student into Atma Kriya Yoga which is part of the Kriya Yoga Lineage only.<br/><br/>No, Paramahamsa Vishwananda does not need to be your Guru to take Atma Kriya Yoga. AKY is a universal practice. <br/><br/>However, please note, if you have a different Guru it is best to ask them if you should take AKY out of respect for your teacher and lineage. </p>"
+          }
+        },
+        "accordion_item_Bpxjbg": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Will it be recorded?",
+            "content": "<p>All lectures and talks with Paramahamsa Vishwananda for Soul Awakening will be recorded. <br/><br/>For confidentiality of the techniques, the section of teaching the physical techniques will not be recorded. You will receive a course manual to refer to with details on how to do all of the techniques to help as you learn. </p>"
+          }
+        },
+        "accordion_item_a6Qb7Q": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Can I join if I already have Atma Kriya Yoga? Do I get a discount?",
+            "content": "<p>You are warmly welcomed to join Soul Awakening if you have already been initiated into Atma Kriya Yoga. <br/><br/>However, <em>only those who have not been initiated yet may receive initiation from Paramahamsa Vishwananda. </em><br/><br/>You are welcome to join the entire program, including a refresher of the techniques. <br/><br/>Please note that this is a unique course with Paramahamsa Vishwananda and no discounts are given for current initiated Atma Kriya Yogis. Thank you for understanding. </p>"
+          }
+        },
+        "accordion_item_PabXqd": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "How do I get to Elmira, New York?",
+            "content": "<p>Elmira, New York is located in the Southern Tier Region of Upstate, New York.  <br/><br/>Here are some helpful resources for getting to the Paranitya Narasimha Center: <br/><br/><strong>Find a Direct Flight </strong></p><p>The nearest airport to the ashram is the Elmira Corning Regional Airport. As flights direct to this airport can be expensive, we recommend looking for a flight first to an airport with a direct flight to Elmira, and then take a direct flight from these airports to Elmira. </p><p><strong>You can find direct flights from: </strong></p><p>Detroit (DTW)<br/>Orlando (SFB)<br/>Punta Gorda (PGD)<br/>Tampa (PIE) <br/><strong><br/>Nearest Airports </strong></p><ul><li>Elmira Corning Regional (ELM) – 15 minute drive </li><li>Ithaca Tompkins International(ITH) – 45 minute drive </li><li>Syracuse Hancock International (SYR) – 1 hr 45 min. drive </li><li>Greater Rochester International (ROC) – 2 hour drive </li><li>Newark Liberty International (EWR) – 3.5 hour drive <br/><br/>From NYC </li><li>Drive: 4.5 (depending on traffic) </li><li>Bus: There are affordable buses from NYC using OurBus. ($50, 5.5 hours)  <a href=\"https://www.ourbus.com/\">https://www.ourbus.com</a></li><li>Flight from Ithaca: You can find a direct flight from NYC to the Ithaca Tompkins airport <br/><br/></li></ul>"
+          }
+        },
+        "accordion_item_VUUMin": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "What is the refund policy?",
+            "content": "<p><strong>Soul Awakening Program Refund Policy</strong></p><p>We understand that plans can change, and we want to ensure a fair and flexible refund policy for all participants of the <strong>Soul Awakening Program with Paramahamsa Vishwananda</strong>.</p><h3><strong>Refund Eligibility:<br/></strong></h3><p>Request a refund at least <strong>14 days before</strong> the program start date to receive a <strong>100% refund</strong> of your payment.<br/><br/>If you request a refund between <strong>7-13 days before</strong> the start date, you will receive a <strong>50% refund</strong>.<br/><br/>Refund requests made <strong>less than 7 days before</strong> the program start date are not eligible, as program resources and preparations will already be in place.<br/></p><h3><strong>How to Request a Refund:</strong></h3><p>To request a refund, please contact our support team at <strong>[support email]</strong> with your enrollment details. Refunds will be processed to the original payment method within <strong>7-10 business days</strong>.</p><h3><strong>Exceptions:</strong></h3><p>Refunds will not be issued for missed sessions, schedule conflicts, or personal circumstances. However, in cases of <strong>extraordinary situations</strong>, please reach out to discuss possible options.</p><p>We appreciate your understanding and look forward to supporting you on your spiritual journey with <strong>Bhakti Marga</strong>.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "accordion_item_emUQpJ",
+        "accordion_item_rPjfcM",
+        "accordion_item_7TFdiQ",
+        "accordion_item_mQ3rJ9",
+        "accordion_item_7CKjgY",
+        "accordion_item_mwprCe",
+        "accordion_item_Bpxjbg",
+        "accordion_item_a6Qb7Q",
+        "accordion_item_PabXqd",
+        "accordion_item_VUUMin"
+      ],
+      "settings": {
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "padding_top": "pt-0",
+        "padding_bottom": "pb-xl",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "desktop_padding_top": "inherit",
+        "desktop_padding_bottom": "tabletl:pb-xxxl",
+        "max_width": "",
+        "title": "FAQs",
+        "cta_url": "shopify://pages/contact",
+        "cta_label": "Contáctanos",
+        "title_position": "left"
+      }
+    },
+    "section_hero_9MnEcf": {
+      "type": "section__hero",
+      "settings": {
+        "padding_top": "0px",
+        "desktop_padding_top": "0px",
+        "padding_bottom": "0px",
+        "desktop_padding_bottom": "inherit",
+        "padding_horizontal": "px-0",
+        "desktop_padding_horizontal": "inherit",
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "use_container": false,
+        "set_100vh": false,
+        "border_radius": 0,
+        "aspect_ratio": "1/1",
+        "aspect_ratio_desktop": "16/9",
+        "image": "shopify://shop_images/bm-souliscalling.jpg",
+        "image_desktop": "shopify://shop_images/2024-08-26-p-0601.jpg",
+        "bg_color": "",
+        "content_width": "max-w-5xl",
+        "text_align": "text-center",
+        "text_color": "#ffffff",
+        "title": "Your soul is calling it's time to answer it.",
+        "title_font_style": "h2",
+        "subtitle": "",
+        "button_text": "Save your Spot",
+        "button_url": "#",
+        "button_style": "btn",
+        "anchor_to_pricing": true,
+        "video_title": "",
+        "horizontal_position": "justify-center",
+        "vertical_position": "items-center"
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "1743424089805cd316",
+    "main",
+    "section_text_content_YVPHBf",
+    "section_video_TMtkEK",
+    "section_text_content_dDgmnw",
+    "section_icon_grid_QfR3bE",
+    "section_text_content_RLqfyC",
+    "section_icon_grid_TNtinb",
+    "section_text_content_cRLxiC",
+    "section_content_grid_89gq9j",
+    "section_hero_jPCMza",
+    "section_image_text_blocks_hjR6aP",
+    "section_quote_blocks_kGzFeP",
+    "section_review_carousel_dNJAUb",
+    "section_text_content_ikgUYc",
+    "section_featured_master_section_kUWppT",
+    "section_event_calendar_fF9RNM",
+    "section_ticket_tier_7YGiea",
+    "section_accordion_eVtHNJ",
+    "section_hero_9MnEcf"
+  ]
+}

@@ -1,0 +1,462 @@
+{% liquid
+  assign container_classes = ""
+  assign grid_gap_classes = ""
+
+  if section.settings.margin_top != "mt-0"
+      assign container_classes = container_classes | append: " " | append: section.settings.margin_top
+  endif
+
+  if section.settings.margin_bottom != "mb-0"
+      assign container_classes = container_classes | append: " " | append: section.settings.margin_bottom
+  endif
+
+  if section.settings.desktop_margin_top != "inherit"
+      assign container_classes = container_classes | append: " " | append: section.settings.desktop_margin_top
+  endif
+
+  if section.settings.desktop_margin_bottom != "inherit"
+      assign container_classes = container_classes | append: " " | append: section.settings.desktop_margin_bottom
+  endif
+
+  if section.settings.padding_top != "pt-0"
+      assign container_classes = container_classes | append: " " | append: section.settings.padding_top
+  endif
+
+  if section.settings.padding_bottom != "pb-0"
+      assign container_classes = container_classes | append: " " | append: section.settings.padding_bottom
+  endif
+
+  if section.settings.desktop_padding_top != "inherit"
+      assign container_classes = container_classes | append: " " | append: section.settings.desktop_padding_top
+  endif
+
+  if section.settings.desktop_padding_bottom != "inherit"
+      assign container_classes = container_classes | append: " " | append: section.settings.desktop_padding_bottom
+  endif
+
+  if section.settings.horizontal_gap_mobile != "gap-x-0"
+    assign grid_gap_classes = grid_gap_classes | append: " " | append: section.settings.horizontal_gap_mobile
+  endif
+
+  if section.settings.vertical_gap_mobile != "gap-y-0"
+    assign grid_gap_classes = grid_gap_classes | append: " " | append: section.settings.vertical_gap_mobile
+  endif
+
+  if section.settings.horizontal_gap_desktop != "inherit"
+    assign grid_gap_classes = grid_gap_classes | append: " " | append: section.settings.horizontal_gap_desktop
+  endif
+
+  if section.settings.vertical_gap_desktop != "inherit"
+    assign grid_gap_classes = grid_gap_classes | append: " " | append: section.settings.vertical_gap_desktop
+  endif
+
+  assign container_classes = container_classes | strip
+  assign grid_gap_classes = grid_gap_classes | strip
+%}
+
+<section class="content-grid {% if container_classes != blank %} {{ container_classes }}{% endif %}"
+  style="{% if section.settings.bg_color != blank %}background-color: {{ section.settings.bg_color }};{% endif %}">
+  <ul class="container grid grid-cols-[var(--column-size-mobile)] tabletl:grid-cols-[var(--column-size)] {% if grid_gap_classes != blank %} {{ grid_gap_classes }}{% endif %}"
+    style="--column-size-mobile: repeat({{ section.settings.cols_mobile }}, 1fr);
+    --column-size: repeat({{ section.settings.cols_desktop }}, 1fr);
+    --text-color:{{ section.settings.text_color | default: '#000' }};">
+    {% for block in section.blocks %}
+      {% if block.settings.title != blank or block.settings.description != blank or block.settings.image != blank %}
+        <li
+          class="{%- if section.settings.format == 'inside' %} pt-[50%] tabletp:pt-0 tabletp:aspect-[6/5] relative z-1 rounded overflow-hidden flex flex-col justify-end {% else %} grid grid-cols-2 gap-md {% endif -%}"
+        >
+          {% if block.settings.image != blank %}
+            <div class="{%- if section.settings.format == 'inside' %} absolute inset-0 -z-1 h-full {% else %} aspect-video {% endif -%}">
+              {% render 'lazy-image',
+                image: block.settings.image,
+                image_desktop: block.settings.desktop_image,
+                picture_classes: 'h-full',
+                img_classes: 'object-cover h-full'
+              %} 
+            </div>
+          {% endif %}
+          {% if section.settings.apply_gradient %}
+            <div class="absolute inset-0" style="background: linear-gradient(transparent {{ section.settings.gradient_height }}%, {{ section.settings.gradient_color }} 100%);"></div>
+          {% endif %}
+          <div class="text-[var(--text-color)]{% if section.settings.format == 'inside' %} relative p-md tabletl:p-32{% endif %}">
+            {% if block.settings.title != blank %}
+              <{{ block.settings.title_tag }} class="content-grid__title leading-tight mb-sm {% if block.settings.title_font_style != blank %}{{  block.settings.title_font_style  }}{% endif %}">
+                  {{ block.settings.title }}
+              </{{ block.settings.title_tag }}>  
+            {% endif %}
+            {% if block.settings.description != blank %}
+              <div class="content-grid__description rte">
+                {{ block.settings.description }}
+              </div>
+            {% endif %}
+            {% if block.settings.cta_klaviyo_embed != blank %}
+              <button class="klaviyo_form_trigger-{{ block.settings.cta_klaviyo_embed }} {{ block.settings.cta_style }} inline-block mt-md">{{ block.settings.cta_label }}</button>
+              <script type="text/javascript">
+                document.querySelector('.klaviyo_form_trigger-{{ block.settings.cta_klaviyo_embed }}').addEventListener('click', function (){
+                  window._klOnsite = window._klOnsite || []; 
+                  window._klOnsite.push(['openForm', '{{ block.settings.cta_klaviyo_embed }}']);
+                });
+              </script>
+            {% elsif block.settings.cta_label != blank and block.settings.cta_link != blank %}
+              <a
+                class="{{ block.settings.cta_style }} inline-block mt-md"
+                href="{{ block.settings.cta_link }}"
+              >
+                {{ block.settings.cta_label }}
+              </a>
+            {% endif %}
+          </div> 
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+</section>
+
+{% schema %}
+{
+  "name": "Content Grid",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "select",
+      "id": "margin_top",
+      "label": "Margin Top",
+      "options": [
+        { "value": "mt-0", "label": "None" },
+        { "value": "mt-sm", "label": "Small - 8px" },
+        { "value": "mt-md", "label": "Medium - 16px" },
+        { "value": "mt-lg", "label": "Large - 24px" },
+        { "value": "mt-xl", "label": "X-Large - 40px" },
+        { "value": "mt-xxl", "label": "XX-Large - 60px" },
+        { "value": "mt-xxxl", "label": "XXX-Large - 80px" }
+      ],
+      "default": "mt-0"
+    },
+    {
+      "type": "select",
+      "id": "margin_bottom",
+      "label": "Margin Bottom",
+      "options": [
+        { "value": "mb-0", "label": "None" },
+        { "value": "mb-sm", "label": "Small - 8px" },
+        { "value": "mb-md", "label": "Medium - 16px" },
+        { "value": "mb-lg", "label": "Large - 24px" },
+        { "value": "mb-xl", "label": "X-Large - 40px" },
+        { "value": "mb-xxl", "label": "XX-Large - 60px" },
+        { "value": "mb-xxxl", "label": "XXX-Large - 80px" }
+      ],
+      "default": "mb-0"
+    },
+    {
+      "type": "select",
+      "id": "padding_top",
+      "label": "Padding Top",
+      "options": [
+        { "value": "pt-0", "label": "None" },
+        { "value": "pt-sm", "label": "Small - 8px" },
+        { "value": "pt-md", "label": "Medium - 16px" },
+        { "value": "pt-lg", "label": "Large - 24px" },
+        { "value": "pt-xl", "label": "X-Large - 40px" },
+        { "value": "pt-xxl", "label": "XX-Large - 60px" },
+        { "value": "pt-xxxl", "label": "XXX-Large - 80px" }
+      ],
+      "default": "pt-0"
+    },
+    {
+      "type": "select",
+      "id": "padding_bottom",
+      "label": "Padding Bottom",
+      "options": [
+        { "value": "pb-0", "label": "None" },
+        { "value": "pb-sm", "label": "Small - 8px" },
+        { "value": "pb-md", "label": "Medium - 16px" },
+        { "value": "pb-lg", "label": "Large - 24px" },
+        { "value": "pb-xl", "label": "X-Large - 40px" },
+        { "value": "pb-xxl", "label": "XX-Large - 60px" },
+        { "value": "pb-xxxl", "label": "XXX-Large - 80px" }
+      ],
+      "default": "pb-0"
+    },
+    {
+      "type": "select",
+      "id": "desktop_margin_top",
+      "label": "Desktop - Margin Top",
+      "options": [
+        { "value": "inherit", "label": "Inherit" },
+        { "value": "tabletl:mt-0", "label": "None" },
+        { "value": "tabletl:mt-sm", "label": "Small - 8px" },
+        { "value": "tabletl:mt-md", "label": "Medium - 16px" },
+        { "value": "tabletl:mt-lg", "label": "Large - 24px" },
+        { "value": "tabletl:mt-xl", "label": "X-Large - 40px" },
+        { "value": "tabletl:mt-xxl", "label": "XX-Large - 60px" },
+        { "value": "tabletl:mt-xxxl", "label": "XXX-Large - 80px" }
+      ],
+      "default": "inherit"
+    },
+    {
+      "type": "select",
+      "id": "desktop_margin_bottom",
+      "label": "Desktop - Margin Bottom",
+      "options": [
+        { "value": "inherit", "label": "Inherit" },
+        { "value": "tabletl:mb-0", "label": "None" },
+        { "value": "tabletl:mb-sm", "label": "Small - 8px" },
+        { "value": "tabletl:mb-md", "label": "Medium - 16px" },
+        { "value": "tabletl:mb-lg", "label": "Large - 24px" },
+        { "value": "tabletl:mb-xl", "label": "X-Large - 40px" },
+        { "value": "tabletl:mb-xxl", "label": "XX-Large - 60px" },
+        { "value": "tabletl:mb-xxxl", "label": "XXX-Large - 80px" }
+      ],
+      "default": "inherit"
+    },
+    {
+      "type": "select",
+      "id": "desktop_padding_top",
+      "label": "Desktop - Padding Top",
+      "options": [
+        { "value": "inherit", "label": "Inherit" },
+        { "value": "tabletl:pt-0", "label": "None" },
+        { "value": "tabletl:pt-sm", "label": "Small - 8px" },
+        { "value": "tabletl:pt-md", "label": "Medium - 16px" },
+        { "value": "tabletl:pt-lg", "label": "Large - 24px" },
+        { "value": "tabletl:pt-xl", "label": "X-Large - 40px" },
+        { "value": "tabletl:pt-xxl", "label": "XX-Large - 60px" },
+        { "value": "tabletl:pt-xxxl", "label": "XXX-Large - 80px" }
+      ],
+      "default": "inherit"
+    },
+    {
+      "type": "select",
+      "id": "desktop_padding_bottom",
+      "label": "Desktop - Padding Bottom",
+      "options": [
+        { "value": "inherit", "label": "Inherit" },
+        { "value": "tabletl:pb-0", "label": "None" },
+        { "value": "tabletl:pb-sm", "label": "Small - 8px" },
+        { "value": "tabletl:pb-md", "label": "Medium - 16px" },
+        { "value": "tabletl:pb-lg", "label": "Large - 24px" },
+        { "value": "tabletl:pb-xl", "label": "X-Large - 40px" },
+        { "value": "tabletl:pb-xxl", "label": "XX-Large - 60px" },
+        { "value": "tabletl:pb-xxxl", "label": "XXX-Large - 80px" }
+      ],
+      "default": "inherit"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background Color"
+    },
+    {
+      "type": "header",
+      "content": "Grid Settings"
+    },
+    {
+      "type": "text",
+      "id": "cols_mobile",
+      "label": "Columns per row (mobile)",
+      "default": "1"
+    },
+    {
+      "type": "text",
+      "id": "cols_desktop",
+      "label": "Columns per row (desktop)",
+      "default": "2"
+    },
+    {
+      "type": "select",
+      "id": "horizontal_gap_mobile",
+      "label": "Horizontal Column Gap (mobile)",
+      "options": [
+        { "value": "gap-x-0", "label": "None" },
+        { "value": "gap-x-sm", "label": "Small - 8px" },
+        { "value": "gap-x-md", "label": "Medium - 16px" },
+        { "value": "gap-x-lg", "label": "Large - 24px" },
+        { "value": "gap-x-xl", "label": "X-Large - 40px" },
+        { "value": "gap-x-xxl", "label": "XX-Large - 60px" }
+      ],
+      "default": "gap-x-md"
+    },
+    {
+      "type": "select",
+      "id": "horizontal_gap_desktop",
+      "label": "Horizontal Column Gap (desktop)",
+      "options": [
+        { "value": "inherit", "label": "Inherit" },
+        { "value": "tabletl:gap-x-0", "label": "None" },
+        { "value": "tabletl:gap-x-sm", "label": "Small - 8px" },
+        { "value": "tabletl:gap-x-md", "label": "Medium - 16px" },
+        { "value": "tabletl:gap-x-lg", "label": "Large - 24px" },
+        { "value": "tabletl:gap-x-xl", "label": "X-Large - 40px" },
+        { "value": "tabletl:gap-x-xxl", "label": "XX-Large - 60px" }
+      ],
+      "default": "tabletl:gap-x-md"
+    },
+    {
+      "type": "select",
+      "id": "vertical_gap_mobile",
+      "label": "Vertical Column Gap (mobile)",
+      "options": [
+        { "value": "gap-y-0", "label": "None" },
+        { "value": "gap-y-sm", "label": "Small - 8px" },
+        { "value": "gap-y-md", "label": "Medium - 16px" },
+        { "value": "gap-y-lg", "label": "Large - 24px" },
+        { "value": "gap-y-xl", "label": "X-Large - 40px" },
+        { "value": "gap-y-xxl", "label": "XX-Large - 60px" }
+      ],
+      "default": "gap-y-md"
+    },
+    {
+      "type": "select",
+      "id": "vertical_gap_desktop",
+      "label": "Vertical Column Gap (desktop)",
+      "options": [
+        { "value": "inherit", "label": "Inherit" },
+        { "value": "tabletl:gap-y-0", "label": "None" },
+        { "value": "tabletl:gap-y-sm", "label": "Small - 8px" },
+        { "value": "tabletl:gap-y-md", "label": "Medium - 16px" },
+        { "value": "tabletl:gap-y-lg", "label": "Large - 24px" },
+        { "value": "tabletl:gap-y-xl", "label": "X-Large - 40px" },
+        { "value": "tabletl:gap-y-xxl", "label": "XX-Large - 60px" }
+      ],
+      "default": "tabletl:gap-y-md"
+    },
+    {
+      "type": "header",
+      "content": "Section Format"
+    },
+    {
+      "type": "select",
+      "id": "format",
+      "label": "Format",
+      "options": [
+        {
+          "value": "inside",
+          "label": "Content overlaying images"
+        },
+        {
+          "value": "alongside",
+          "label": "Content alongside images"
+        }
+      ],
+      "default": "inside"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#000"
+    },
+    {
+      "type": "checkbox",
+      "id": "apply_gradient",
+      "label": "Apply Hero Gradient",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "gradient_height",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "%",
+      "label": "Gradient Height",
+      "default": 40
+    },
+    {
+      "type": "color",
+      "id": "gradient_color",
+      "label": "Gradient Color",
+      "default": "#000"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "content_block",
+      "name": "Content Block",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "desktop_image",
+          "label": "Desktop - Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "select",
+          "id": "title_tag",
+          "label": "Semantic HTML Title Tag",
+          "options": [
+            { "value": "h1", "label": "H1" },
+            { "value": "h2", "label": "H2" },
+            { "value": "h3", "label": "H3" },
+            { "value": "h4", "label": "H4" },
+            { "value": "h5", "label": "H5" },
+            { "value": "h6", "label": "H6" }
+          ],
+          "default": "h2"
+        },
+        {
+          "type": "select",
+          "id": "title_font_style",
+          "label": "Title Font Style",
+          "options": [
+            { "value": "h1", "label": "H1 - 120px / 80px" },
+            { "value": "h2", "label": "H2 - 88px / 48px" },
+            { "value": "h3", "label": "H3 - 56px / 40px" },
+            { "value": "h4", "label": "H4 - 40px / 32px" },
+            { "value": "h5", "label": "H5 - 32px / 24px" }
+          ],
+          "default": "h4"
+        },
+        {
+          "type": "richtext",
+          "id": "description",
+          "label": "Description"
+        },
+        {
+          "type": "url",
+          "id": "cta_link",
+          "label": "CTA Link"
+        },
+        {
+          "type": "text",
+          "id": "cta_label",
+          "label": "CTA Label"
+        },
+        {
+          "type": "select",
+          "id": "cta_style",
+          "label": "CTA - Style",
+          "options": [
+            { "value": "btn", "label": "White Button" },
+            { "value": "btn btn--gold", "label": "Gold Button" },
+            { "value": "btn btn--black text-white", "label": "Black Button" }
+          ],
+          "default": "btn btn--black text-white"
+        },
+        {
+          "type": "textarea",
+          "id": "cta_klaviyo_embed",
+          "label": "Klaviyo Embed"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Content Grid"
+    }
+  ]
+}
+{% endschema %}

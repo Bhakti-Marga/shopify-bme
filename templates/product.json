@@ -1,0 +1,31 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "product__main",
+      "settings": {}
+    },
+    "17423212074b9332fa": {
+      "type": "apps",
+      "settings": {}
+    },
+    "17423215936ab0758f": {
+      "type": "apps",
+      "disabled": true,
+      "settings": {}
+    }
+  },
+  "order": [
+    "main",
+    "17423212074b9332fa",
+    "17423215936ab0758f"
+  ]
+}

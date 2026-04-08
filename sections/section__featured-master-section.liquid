@@ -1,0 +1,321 @@
+{% liquid
+  assign container_classes = ""
+
+  if section.settings.margin_top != "mt-0"
+    assign container_classes = container_classes | append: " " | append: section.settings.margin_top
+  endif
+
+  if section.settings.margin_bottom != "mb-0"
+    assign container_classes = container_classes | append: " " | append: section.settings.margin_bottom
+  endif
+
+  if section.settings.desktop_margin_top != "inherit"
+    assign container_classes = container_classes | append: " " | append: section.settings.desktop_margin_top
+  endif
+
+  if section.settings.desktop_margin_bottom != "inherit"
+    assign container_classes = container_classes | append: " " | append: section.settings.desktop_margin_bottom
+  endif
+
+  if section.settings.padding_top != "pt-0"
+    assign container_classes = container_classes | append: " " | append: section.settings.padding_top
+  endif
+
+  if section.settings.padding_bottom != "pb-0"
+    assign container_classes = container_classes | append: " " | append: section.settings.padding_bottom
+  endif
+
+  if section.settings.desktop_padding_top != "inherit"
+    assign container_classes = container_classes | append: " " | append: section.settings.desktop_padding_top
+  endif
+
+  if section.settings.desktop_padding_bottom != "inherit"
+    assign container_classes = container_classes | append: " " | append: section.settings.desktop_padding_bottom
+  endif
+
+  assign container_classes = container_classes | strip
+%}
+
+<section id="featured-master-{{ section.id }}">
+  <div class="{{ container_classes }}">
+    {% if section.settings.title != blank or section.settings.content != blank %}
+      <div class="container my-xl flex flex-col tabletl:flex-row gap-4">
+        {% if section.settings.title != blank %}
+          <h2 class="leading-64 h3 tabletl:w-3/5">{{ section.settings.title }}</h2>
+        {% endif %}
+        {% if section.settings.content != blank %}
+          <div class="rte text-18 leading-28 tabletl:w-2/5 tabletl:pt-12">
+            {{ section.settings.content }}
+          </div>
+        {% endif %}
+      </div>
+    {% endif %}
+
+    <div class="grid grid-cols-1 overflow-hidden my-md">
+      <div class="marquee-block"
+        style="--marquee-speed:{{ section.settings.marquee_speed }}s;">
+        {% assign total_cols_number = 0 %}
+        {% assign total_blocks_number = 0 %}
+        {% for block in section.blocks %}
+          {% assign total_cols_number = total_cols_number | plus: block.settings.col-span %}
+          {% assign total_blocks_number  = total_blocks_number  | plus: 1 %}
+        {% endfor %}
+
+        {% capture section_blocks_markup %}
+          {% for block in section.blocks %}
+            {% if block.settings.image %}
+              <div 
+                class="{{ block.settings.height-desktop }} h-auto overflow-hidden flex-shrink-0 mx-sm marquee-item min-w-[var(--col-min-width)] w-[var(--col-width)]"
+                style="--col-width: calc(((100vw - {{ total_blocks_number }} * 16px - 16px) / {{ total_cols_number }}) * {{ block.settings.col-span }});
+                --col-min-width:calc(50px * {{ block.settings.col-span }});"
+              >
+                {% render 'lazy-image',
+                  image: block.settings.image,
+                  img_classes: 'h-full object-cover rounded',
+                  picture_classes: 'h-full'
+                %}
+              </div>
+            {% endif %}
+          {% endfor %}
+        {% endcapture %}
+
+        {% comment %} Render twice to fill marquee space {% endcomment %}
+        {% for i in (1..2) %}
+          {{ section_blocks_markup }}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Featured Master Section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "select",
+      "id": "margin_top",
+      "label": "Margin Top",
+      "options": [
+        { "value": "mt-0", "label": "None" },
+        { "value": "mt-sm", "label": "Small - 8px" },
+        { "value": "mt-md", "label": "Medium - 16px" },
+        { "value": "mt-lg", "label": "Large - 24px" },
+        { "value": "mt-xl", "label": "X-Large - 40px" },
+        { "value": "mt-xxl", "label": "XX-Large - 60px" },
+        { "value": "mt-xxxl", "label": "XXX-Large - 80px" }
+      ],
+      "default": "mt-0"
+    },
+    {
+      "type": "select",
+      "id": "margin_bottom",
+      "label": "Margin Bottom",
+      "options": [
+        { "value": "mb-0", "label": "None" },
+        { "value": "mb-sm", "label": "Small - 8px" },
+        { "value": "mb-md", "label": "Medium - 16px" },
+        { "value": "mb-lg", "label": "Large - 24px" },
+        { "value": "mb-xl", "label": "X-Large - 40px" },
+        { "value": "mb-xxl", "label": "XX-Large - 60px" },
+        { "value": "mb-xxxl", "label": "XXX-Large - 80px" }
+      ],
+      "default": "mb-0"
+    },
+    {
+      "type": "select",
+      "id": "padding_top",
+      "label": "Padding Top",
+      "options": [
+        { "value": "pt-0", "label": "None" },
+        { "value": "pt-sm", "label": "Small - 8px" },
+        { "value": "pt-md", "label": "Medium - 16px" },
+        { "value": "pt-lg", "label": "Large - 24px" },
+        { "value": "pt-xl", "label": "X-Large - 40px" },
+        { "value": "pt-xxl", "label": "XX-Large - 60px" },
+        { "value": "pt-xxxl", "label": "XXX-Large - 80px" }
+      ],
+      "default": "pt-0"
+    },
+    {
+      "type": "select",
+      "id": "padding_bottom",
+      "label": "Padding Bottom",
+      "options": [
+        { "value": "pb-0", "label": "None" },
+        { "value": "pb-sm", "label": "Small - 8px" },
+        { "value": "pb-md", "label": "Medium - 16px" },
+        { "value": "pb-lg", "label": "Large - 24px" },
+        { "value": "pb-xl", "label": "X-Large - 40px" },
+        { "value": "pb-xxl", "label": "XX-Large - 60px" },
+        { "value": "pb-xxxl", "label": "XXX-Large - 80px" }
+      ],
+      "default": "pb-0"
+    },
+    {
+      "type": "select",
+      "id": "desktop_margin_top",
+      "label": "Desktop - Margin Top",
+      "options": [
+        { "value": "inherit", "label": "Inherit" },
+        { "value": "tabletl:mt-0", "label": "None" },
+        { "value": "tabletl:mt-sm", "label": "Small - 8px" },
+        { "value": "tabletl:mt-md", "label": "Medium - 16px" },
+        { "value": "tabletl:mt-lg", "label": "Large - 24px" },
+        { "value": "tabletl:mt-xl", "label": "X-Large - 40px" },
+        { "value": "tabletl:mt-xxl", "label": "XX-Large - 60px" },
+        { "value": "tabletl:mt-xxxl", "label": "XXX-Large - 80px" }
+      ],
+      "default": "inherit"
+    },
+    {
+      "type": "select",
+      "id": "desktop_margin_bottom",
+      "label": "Desktop - Margin Bottom",
+      "options": [
+        { "value": "inherit", "label": "Inherit" },
+        { "value": "tabletl:mb-0", "label": "None" },
+        { "value": "tabletl:mb-sm", "label": "Small - 8px" },
+        { "value": "tabletl:mb-md", "label": "Medium - 16px" },
+        { "value": "tabletl:mb-lg", "label": "Large - 24px" },
+        { "value": "tabletl:mb-xl", "label": "X-Large - 40px" },
+        { "value": "tabletl:mb-xxl", "label": "XX-Large - 60px" },
+        { "value": "tabletl:mb-xxxl", "label": "XXX-Large - 80px" }
+      ],
+      "default": "inherit"
+    },
+    {
+      "type": "select",
+      "id": "desktop_padding_top",
+      "label": "Desktop - Padding Top",
+      "options": [
+        { "value": "inherit", "label": "Inherit" },
+        { "value": "tabletl:pt-0", "label": "None" },
+        { "value": "tabletl:pt-sm", "label": "Small - 8px" },
+        { "value": "tabletl:pt-md", "label": "Medium - 16px" },
+        { "value": "tabletl:pt-lg", "label": "Large - 24px" },
+        { "value": "tabletl:pt-xl", "label": "X-Large - 40px" },
+        { "value": "tabletl:pt-xxl", "label": "XX-Large - 60px" },
+        { "value": "tabletl:pt-xxxl", "label": "XXX-Large - 80px" }
+      ],
+      "default": "inherit"
+    },
+    {
+      "type": "select",
+      "id": "desktop_padding_bottom",
+      "label": "Desktop - Padding Bottom",
+      "options": [
+        { "value": "inherit", "label": "Inherit" },
+        { "value": "tabletl:pb-0", "label": "None" },
+        { "value": "tabletl:pb-sm", "label": "Small - 8px" },
+        { "value": "tabletl:pb-md", "label": "Medium - 16px" },
+        { "value": "tabletl:pb-lg", "label": "Large - 24px" },
+        { "value": "tabletl:pb-xl", "label": "X-Large - 40px" },
+        { "value": "tabletl:pb-xxl", "label": "XX-Large - 60px" },
+        { "value": "tabletl:pb-xxxl", "label": "XXX-Large - 80px" }
+      ],
+      "default": "inherit"
+    },
+    {
+      "type": "header",
+      "content": "Content Settings"
+    },
+    {
+      "type": "paragraph",
+      "content": "When you add images to the section you will see them duplicate, this is to create a seamless marquee effect. The more images you add the longer the marquee will be."
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "richtext",
+      "id": "content",
+      "label": "Content"
+    },
+    {
+      "type": "range",
+      "id": "marquee_speed",
+      "label": "Marquee Speed (seconds)",
+      "min": 10,
+      "max": 60,
+      "step": 0.5,
+      "default": 28
+    }
+],
+"blocks": [
+  {
+    "name": "Featured Master Block",
+    "type": "Featured_Master_item",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      },
+      {
+        "type": "paragraph",
+        "content": "You can adjust the size of your images via the width setting, height is calculated automatically based on aspect ratios. You can also adjust the speed of the Marquee in the section settings."
+      },
+      {
+        "type": "select",
+        "id": "height-desktop",
+        "label": "Image Height (desktop)",
+        "options": [
+          { 
+            "value": "tabletl:max-h-[unset] tabletl:min-h-[unset]", 
+            "label": "None" 
+          },
+          { "value": "tabletl:max-h-[33vh] tabletl:min-h-[33vh]",
+            "label": "33vh"
+          },
+          { 
+            "value": "tabletl:max-h-[50vh] tabletl:min-h-[50vh]", 
+            "label": "50vh" 
+          },
+          { 
+            "value": "tabletl:max-h-[70vh] tabletl:min-h-[70vh]", 
+            "label": "70vh" 
+          }
+        ],
+        "default": "tabletl:max-h-[33vh] tabletl:min-h-[33vh]"
+      },
+      {
+        "type": "select",
+        "id": "col-span",
+        "label": "Image Width",
+        "options": [
+          {
+          "value": "2",
+          "label": "2"
+          },
+          {
+          "value": "4",
+          "label": "4"
+          },
+          {
+          "value": "6",
+          "label": "6"
+          },
+          {
+          "value": "8",
+          "label": "8"
+          }
+        ],
+        "default": "4"
+      }
+    ],
+  }
+],
+"presets": [
+    {
+    "name": "Featured Master Section"
+    }
+]
+}
+{% endschema %}

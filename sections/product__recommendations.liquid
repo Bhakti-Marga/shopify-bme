@@ -1,0 +1,27 @@
+<product-recommendations class="product-recommendations container block mb-xl tabletl:mb-xxl" data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}&limit=4">
+  {% if recommendations.performed and recommendations.products_count > 0 %}
+    {% if section.settings.title != blank %}
+      <h2 class="product-recommendations__title h4 leading-none mb-md tabletl:mb-xl">{{ section.settings.title }}</h2>
+      <div class="product-recommendations__products grid grid-cols-2 gap-md tabletl:grid-cols-4">
+        {% for recommendation in recommendations.products %}
+          {% render 'product-card' product: recommendation, brand: recommendation.vendor %}
+        {% endfor %}
+      </div>
+    {% endif %}
+  {% endif %}
+</product-recommendations>
+
+{% schema %}
+{
+  "name": "Product Recommendations",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "text", 
+      "id": "title",
+      "label": "Title",
+      "default": "También te puede interesar"
+    }
+  ]
+}
+{% endschema %}

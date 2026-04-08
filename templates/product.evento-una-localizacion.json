@@ -1,0 +1,348 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "seccion_submenucustom_jeAdKT": {
+      "type": "seccion__submenucustom",
+      "name": "Submenú Flexible",
+      "settings": {
+        "menu": "menu-prgoramas-eventos-cursos-festividades",
+        "alignment": "center",
+        "background_color": "#ffffff",
+        "text_color": "#333333",
+        "hover_color": "#f0f0f0",
+        "hover_text_color": "#000000",
+        "active_color": "#333333",
+        "active_text_color": "#ffffff"
+      }
+    },
+    "section_program_header_4eFmNQ": {
+      "type": "section__program-header",
+      "blocks": {
+        "heading_UezqV4": {
+          "type": "heading",
+          "settings": {
+            "image": "{{ product.metafields.custom.galeria_del_evento.value }}",
+            "title": "program block",
+            "description": "<p>descricpion program block</p>",
+            "text_color": "white",
+            "btn_label": "boton eventos ejemplo",
+            "btn_link": "shopify://collections/events",
+            "button_style": "btn btn--gold",
+            "cta_klaviyo_embed": ""
+          }
+        },
+        "heading_HPHjdm": {
+          "type": "heading",
+          "settings": {
+            "title": "",
+            "description": "",
+            "text_color": "black",
+            "btn_label": "",
+            "btn_link": "",
+            "button_style": "btn btn--black text-white",
+            "cta_klaviyo_embed": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_UezqV4",
+        "heading_HPHjdm"
+      ],
+      "name": "Program Header",
+      "settings": {
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "padding_top": "pt-0",
+        "padding_bottom": "pb-0",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "desktop_padding_top": "inherit",
+        "desktop_padding_bottom": "inherit",
+        "title": "",
+        "title_tag": "h1",
+        "title_font_style": "h2",
+        "description": ""
+      }
+    },
+    "section_featured_master_section_t43yAE": {
+      "type": "section__featured-master-section",
+      "blocks": {
+        "featured_master_item_kMxGbx": {
+          "type": "Featured_Master_item",
+          "settings": {
+            "height-desktop": "tabletl:max-h-[33vh] tabletl:min-h-[33vh]",
+            "col-span": "4"
+          }
+        }
+      },
+      "block_order": [
+        "featured_master_item_kMxGbx"
+      ],
+      "name": "Featured Master Section",
+      "settings": {
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "padding_top": "pt-0",
+        "padding_bottom": "pb-0",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "desktop_padding_top": "inherit",
+        "desktop_padding_bottom": "inherit",
+        "title": "",
+        "content": "",
+        "marquee_speed": 28
+      }
+    },
+    "section_galeria_evento_hg4xax": {
+      "type": "section__galeria-evento",
+      "name": "Galería del Evento",
+      "settings": {
+        "columns_desktop": 3,
+        "background_color": "#f9f9f9"
+      }
+    },
+    "section_rich_text_WNmUcg": {
+      "type": "section__rich-text",
+      "name": "Rich Text Section",
+      "settings": {
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "padding_top": "pt-sm",
+        "padding_bottom": "pb-sm",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "tabletl:mb-xl",
+        "desktop_padding_top": "tabletl:pt-md",
+        "desktop_padding_bottom": "tabletl:pb-md",
+        "content": "<p>seccion de texto enriquecido pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>",
+        "text_alignment": "center",
+        "max_width": "750px",
+        "apply_max_width": false
+      }
+    },
+    "seccion_texto_adicional_Mgqygn": {
+      "type": "seccion__texto__adicional",
+      "name": "Texto Adicional Colección",
+      "settings": {
+        "max_width": 1000,
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "font_size": 16,
+        "line_height": "1.5",
+        "text_align": "left",
+        "background_color": "#ffffff",
+        "text_color": "#333333"
+      }
+    },
+    "bm_custom_carousel_cards_qq3hVn": {
+      "type": "BM-custom-carousel-cards",
+      "blocks": {
+        "content_block_qyPmxD": {
+          "type": "content_block",
+          "settings": {
+            "image": "{{ product.featured_image }}",
+            "heading": "titulo",
+            "description": "<p>descripcion de</p>",
+            "button_text": "Registrate",
+            "button_link": "shopify://products/curso-iniciacion-atma-kriya-yoga"
+          }
+        }
+      },
+      "block_order": [
+        "content_block_qyPmxD"
+      ],
+      "name": "BM Custom Carousel Cards",
+      "settings": {
+        "padding_top": "pt-0",
+        "padding_bottom": "pb-0",
+        "desktop_padding_top": "inherit",
+        "desktop_padding_bottom": "inherit",
+        "title": "",
+        "title_tag": "h2"
+      }
+    },
+    "section_text_content_YahQ3D": {
+      "type": "section__text-content",
+      "name": "Text Content",
+      "settings": {
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "padding_top": "pt-0",
+        "padding_bottom": "pb-0",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "desktop_padding_top": "inherit",
+        "desktop_padding_bottom": "inherit",
+        "max_width": "{{ product.metafields.custom.evento_metaobjeto_producto.value.fecha_y_hora | metafield_text }}{{ product.metafields.custom.evento_metaobjeto_producto.value.ubicacion.value }}{{ product.metafields.custom.evento_metaobjeto_producto.value.fecha.value }}{{ product.metafields.custom.evento_metaobjeto_producto.value.subtitulo_de_tarjeta.value }}{{ product.metafields.custom.evento_metaobjeto_producto.value.tipo_de_evento.value }}",
+        "pretitle": "",
+        "title": "",
+        "title_tag": "h2",
+        "title_font_style": "h3",
+        "description": "",
+        "credits": ""
+      }
+    },
+    "main": {
+      "type": "product__main",
+      "settings": {}
+    },
+    "section_hero_rDigMi": {
+      "type": "section__hero",
+      "custom_css": [
+        ".hero__wrapper {aspect-ratio: unset;}"
+      ],
+      "settings": {
+        "padding_top": "0px",
+        "desktop_padding_top": "40px",
+        "padding_bottom": "0px",
+        "desktop_padding_bottom": "40px",
+        "padding_horizontal": "px-0",
+        "desktop_padding_horizontal": "tabletl:px-0",
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "desktop_margin_top": "tabletl:mt-0",
+        "desktop_margin_bottom": "tabletl:mb-0",
+        "use_container": true,
+        "set_100vh": true,
+        "set_100vh_desktop": false,
+        "border_radius": 0,
+        "aspect_ratio": "16/9",
+        "aspect_ratio_desktop": "16/9",
+        "bg_color": "#16254c",
+        "content_width": "max-w-5xl",
+        "text_align": "text-left",
+        "text_color": "#ffffff",
+        "title": "{{ product.metafields.event.first_title.value }}",
+        "title_font_style": "h4",
+        "subtitle": "{{ product.metafields.event.first_content | metafield_tag }}",
+        "button_text": "",
+        "button_url": "",
+        "button_style": "btn",
+        "anchor_to_pricing": false,
+        "video_title": "",
+        "horizontal_position": "justify-start",
+        "vertical_position": "items-center"
+      }
+    },
+    "section_image_text_blocks_3pzKVd": {
+      "type": "section__image_text_blocks",
+      "blocks": {
+        "image_block_p7GjYf": {
+          "type": "image_block",
+          "settings": {
+            "image": "{{ product.metafields.event.first_image.value }}",
+            "height": "auto",
+            "desktop_height": "inherit"
+          }
+        },
+        "content_block_pDf7gd": {
+          "type": "content_block",
+          "settings": {
+            "title": "{{ product.metafields.event.second_title.value }}",
+            "title_tag": "h2",
+            "title_font_style": "h5",
+            "description": "{{ product.metafields.event.second_content | metafield_tag }}",
+            "credits": "",
+            "cta_url": "",
+            "cta_label": "",
+            "text_align": "left",
+            "desktop_text_align": "inherit",
+            "vertical_padding": "py-lg",
+            "vertical_padding_desktop": "tabletl:py-xxl"
+          }
+        }
+      },
+      "block_order": [
+        "image_block_p7GjYf",
+        "content_block_pDf7gd"
+      ],
+      "settings": {
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "desktop_margin_top": "tabletl:mt-xl",
+        "desktop_margin_bottom": "tabletl:mb-xl",
+        "vertical_align": "top",
+        "flip_columns_desktop": false
+      }
+    },
+    "section_hero_rN7L7f": {
+      "type": "section__hero",
+      "custom_css": [
+        ".hero__wrapper {aspect-ratio: unset;}"
+      ],
+      "settings": {
+        "padding_top": "0px",
+        "desktop_padding_top": "0px",
+        "padding_bottom": "0px",
+        "desktop_padding_bottom": "0px",
+        "padding_horizontal": "px-0",
+        "desktop_padding_horizontal": "tabletl:px-0",
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "desktop_margin_top": "tabletl:mt-0",
+        "desktop_margin_bottom": "tabletl:mb-0",
+        "use_container": true,
+        "set_100vh": true,
+        "set_100vh_desktop": false,
+        "border_radius": 0,
+        "aspect_ratio": "16/9",
+        "aspect_ratio_desktop": "16/9",
+        "bg_color": "#ffffff",
+        "content_width": "max-w-5xl",
+        "text_align": "text-left",
+        "text_color": "#081756",
+        "title": "{{ product.metafields.event.third_title.value }}",
+        "title_font_style": "h4",
+        "subtitle": "{{ product.metafields.event.third_content | metafield_tag }}",
+        "button_text": "",
+        "button_url": "",
+        "button_style": "btn",
+        "anchor_to_pricing": false,
+        "video_title": "",
+        "horizontal_position": "justify-start",
+        "vertical_position": "items-center"
+      }
+    },
+    "section_galeria_evento_wxyDJ4": {
+      "type": "section__galeria-evento",
+      "name": "Galería del Evento",
+      "settings": {
+        "columns_desktop": 3,
+        "background_color": "#f9f9f9"
+      }
+    },
+    "17423212074b9332fa": {
+      "type": "apps",
+      "settings": {}
+    },
+    "17423215936ab0758f": {
+      "type": "apps",
+      "disabled": true,
+      "settings": {}
+    }
+  },
+  "order": [
+    "seccion_submenucustom_jeAdKT",
+    "section_program_header_4eFmNQ",
+    "section_featured_master_section_t43yAE",
+    "section_galeria_evento_hg4xax",
+    "section_rich_text_WNmUcg",
+    "seccion_texto_adicional_Mgqygn",
+    "bm_custom_carousel_cards_qq3hVn",
+    "section_text_content_YahQ3D",
+    "main",
+    "section_hero_rDigMi",
+    "section_image_text_blocks_3pzKVd",
+    "section_hero_rN7L7f",
+    "section_galeria_evento_wxyDJ4",
+    "17423212074b9332fa",
+    "17423215936ab0758f"
+  ]
+}

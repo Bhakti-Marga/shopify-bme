@@ -1,0 +1,225 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "header": {
+      "type": "blog__header",
+      "settings": {
+        "padding_top": "pt-md",
+        "padding_bottom": "pb-md",
+        "desktop_padding_top": "tabletl:pt-xl",
+        "desktop_padding_bottom": "tabletl:pb-xl"
+      }
+    },
+    "hero": {
+      "type": "blog__hero",
+      "settings": {
+        "padding_top": "pt-0",
+        "padding_bottom": "pb-0",
+        "desktop_padding_top": "inherit",
+        "desktop_padding_bottom": "inherit",
+        "apply_gradient": true,
+        "gradient_height": 40,
+        "gradient_color": "#000000"
+      }
+    },
+    "main": {
+      "type": "blog__main",
+      "disabled": true,
+      "settings": {}
+    },
+    "section_events_carousel_3KFdNK": {
+      "type": "section__events-carousel",
+      "blocks": {
+        "block_RwKYmr": {
+          "type": "block",
+          "disabled": true,
+          "settings": {
+            "article": "events\/online-darshan"
+          }
+        },
+        "block_WbgtXL": {
+          "type": "block",
+          "settings": {
+            "article": "events\/4-days-to-soul-awakening-with-paramahamsa-vishwananda"
+          }
+        },
+        "block_GdXnKR": {
+          "type": "block",
+          "settings": {
+            "article": "events\/pray-for-the-world"
+          }
+        }
+      },
+      "block_order": [
+        "block_RwKYmr",
+        "block_WbgtXL",
+        "block_GdXnKR"
+      ],
+      "settings": {
+        "padding_top": "pt-xxxl",
+        "padding_bottom": "pb-xxxl",
+        "desktop_padding_top": "inherit",
+        "desktop_padding_bottom": "inherit",
+        "set_dark_theme": false,
+        "apply_gradient": true,
+        "title": "Exclusive Online Events with Guruji",
+        "title_tag": "h4",
+        "cta_label": "",
+        "cta_url": "",
+        "hide_arrows_desktop": true
+      }
+    },
+    "section_events_carousel_6MceyW": {
+      "type": "section__events-carousel",
+      "blocks": {
+        "block_jHC9VL": {
+          "type": "block",
+          "settings": {
+            "article": "events\/darshan-festival-new-york-city"
+          }
+        },
+        "block_bB6gj3": {
+          "type": "block",
+          "settings": {
+            "article": "events\/event-article"
+          }
+        }
+      },
+      "block_order": [
+        "block_jHC9VL",
+        "block_bB6gj3"
+      ],
+      "disabled": true,
+      "settings": {
+        "padding_top": "pt-xxxl",
+        "padding_bottom": "pb-xxxl",
+        "desktop_padding_top": "inherit",
+        "desktop_padding_bottom": "inherit",
+        "set_dark_theme": false,
+        "apply_gradient": true,
+        "title": "Exclusive Physical Events with Guruji",
+        "title_tag": "h2",
+        "cta_label": "",
+        "cta_url": "",
+        "hide_arrows_desktop": true
+      }
+    },
+    "section_events_carousel_EY7NUx": {
+      "type": "section__events-carousel",
+      "blocks": {
+        "block_WVPJbn": {
+          "type": "block",
+          "settings": {
+            "article": "events\/yogic-philosophy-level-1"
+          }
+        },
+        "block_npmErF": {
+          "type": "block",
+          "disabled": true,
+          "settings": {
+            "article": "events\/yogic-philosophy-level-2"
+          }
+        },
+        "block_AEJD7L": {
+          "type": "block",
+          "disabled": true,
+          "settings": {
+            "article": "events\/yogic-philosophy-level-3"
+          }
+        },
+        "block_m9eCY7": {
+          "type": "block",
+          "disabled": true,
+          "settings": {
+            "article": "events\/atma-kriya-yoga-immersions-4-types"
+          }
+        }
+      },
+      "block_order": [
+        "block_WVPJbn",
+        "block_npmErF",
+        "block_AEJD7L",
+        "block_m9eCY7"
+      ],
+      "settings": {
+        "padding_top": "pt-xxxl",
+        "padding_bottom": "pb-xxxl",
+        "desktop_padding_top": "inherit",
+        "desktop_padding_bottom": "inherit",
+        "set_dark_theme": false,
+        "apply_gradient": true,
+        "title": "Virtual Events",
+        "title_tag": "h2",
+        "cta_label": "",
+        "cta_url": "",
+        "hide_arrows_desktop": true
+      }
+    },
+    "section_events_carousel_WTWBiK": {
+      "type": "section__events-carousel",
+      "blocks": {
+        "block_RLmjtn": {
+          "type": "block",
+          "settings": {
+            "article": "events\/maha-abhishekam-fire-ceremony-elmira-new-york"
+          }
+        },
+        "block_LacUdW": {
+          "type": "block",
+          "disabled": true,
+          "settings": {
+            "article": "events\/krishna-janmashtami"
+          }
+        },
+        "block_ftff3q": {
+          "type": "block",
+          "settings": {
+            "article": "events\/krishna-janmashtami-with-paramahamsa-vishwananda"
+          }
+        },
+        "block_CUiEBQ": {
+          "type": "block",
+          "settings": {
+            "article": "events\/paranitya-narasimha-center-local-events"
+          }
+        }
+      },
+      "block_order": [
+        "block_RLmjtn",
+        "block_LacUdW",
+        "block_ftff3q",
+        "block_CUiEBQ"
+      ],
+      "settings": {
+        "padding_top": "pt-xxxl",
+        "padding_bottom": "pb-xxxl",
+        "desktop_padding_top": "inherit",
+        "desktop_padding_bottom": "inherit",
+        "set_dark_theme": false,
+        "apply_gradient": true,
+        "title": "Major Hindu Events in the USA",
+        "title_tag": "h2",
+        "cta_label": "",
+        "cta_url": "",
+        "hide_arrows_desktop": true
+      }
+    }
+  },
+  "order": [
+    "header",
+    "hero",
+    "main",
+    "section_events_carousel_3KFdNK",
+    "section_events_carousel_6MceyW",
+    "section_events_carousel_EY7NUx",
+    "section_events_carousel_WTWBiK"
+  ]
+}

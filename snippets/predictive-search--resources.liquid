@@ -1,0 +1,41 @@
+{%- comment -%}
+ * Snippet: predictive-search--resources.liquid
+ * --------------------------------------------
+ * Used to display predictive search resources, such as products, collections and articles.
+ * @param title - required
+ * @param resources - required
+{%- endcomment -%}
+
+{%- if resources.size > 0 -%}
+  <ul id="predictive-search-results-list" class="predictive-search__results-list" role="listbox" aria-labelledby="predictive-search-products">
+  {%- for resource in resources -%}
+  <li class="predictive-search__list-item" role="option">
+    <a href="{{ resource.url }}" class="predictive-search__item block py-sm px-lg border-b border-gray text-gray-dark font-500 duration-500 tabletl:hover:bg-gray" tabindex="0">
+      <div class="flex tabletl:items-center gap-lg">
+        {% if resource.image != blank or resource.featured_media != blank %}
+          <div class="predictive-search__item-image w-xxl h-xxl">
+            {% if resource.image != blank %}
+              {% render 'lazy-image', image: resource.image, picture_classes:"w-xxl h-xxl" , img_classes:"rounded w-full h-full object-cover object-center" %}
+            {% else %}
+              {% render 'lazy-image', image: resource.featured_media, picture_classes:"w-xxl h-xxl" , img_classes:"rounded w-full h-full object-cover object-center" %}
+            {% endif %}
+          </div>
+        {% endif %}
+        <div class="text-black">
+          <span class="text-12 opacity-60">
+            {% if resource.url contains 'blogs/events/' %}
+              EVENTO
+            {% else %}
+              {{ type |  upcase }}
+            {% endif %}
+          </span>
+          <h3 class="predictive-search__item-content text-16">
+           {{ resource.title }}
+          </h3>
+        </div>
+      </div>
+    </a>
+ </li>
+ {%- endfor -%}
+ </ul>
+{%- endif -%}

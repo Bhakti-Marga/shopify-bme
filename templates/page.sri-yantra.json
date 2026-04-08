@@ -1,0 +1,259 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "page__main",
+      "disabled": true,
+      "settings": {}
+    },
+    "section_hero_cBpMpY": {
+      "type": "section__hero",
+      "custom_css": [
+        ".hero__content-wrapper {background: #0000004a; z-index: 1; position: sticky;}"
+      ],
+      "settings": {
+        "padding_top": "0px",
+        "desktop_padding_top": "inherit",
+        "padding_bottom": "40px",
+        "desktop_padding_bottom": "60px",
+        "padding_horizontal": "px-0",
+        "desktop_padding_horizontal": "inherit",
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "use_container": true,
+        "set_100vh": true,
+        "set_100vh_desktop": true,
+        "border_radius": 16,
+        "aspect_ratio": "auto",
+        "aspect_ratio_desktop": "4/3",
+        "image": "shopify://shop_images/Sri_Yantra_Painting_Meditation-3.webp",
+        "image_desktop": "shopify://shop_images/Sri_Yantra_Painting_Meditation-3.webp",
+        "bg_color": "#16254c",
+        "content_width": "max-w-5xl",
+        "text_align": "text-left",
+        "text_color": "#ffffff",
+        "title": "Sri Yantra",
+        "title_font_style": "h3",
+        "subtitle": "<p>Tanto las cualidades masculinas como las femeninas están plenamente representadas en esta forma, que también tenemos en nosotros mismos. Sin embargo, más allá de su forma, hay un misterio mayor que explorar en el Sri Yantra.</p>",
+        "button_text": "",
+        "button_url": "",
+        "button_style": "btn",
+        "anchor_to_pricing": false,
+        "video_title": "",
+        "horizontal_position": "justify-center",
+        "vertical_position": "items-end"
+      }
+    },
+    "bm_event_slider_wTQkFc": {
+      "type": "BM-event-slider",
+      "name": "Product Carousel",
+      "settings": {
+        "product_collection": "events",
+        "set_dark_theme": true,
+        "apply_gradient": true,
+        "title": "Upcoming Courses",
+        "title_tag": "h2",
+        "cta_label": "",
+        "cta_url": "",
+        "padding_top": "pt-xl",
+        "padding_bottom": "pb-xl",
+        "desktop_padding_top": "inherit",
+        "desktop_padding_bottom": "inherit"
+      }
+    },
+    "section_hero_EmDBMy": {
+      "type": "section__hero",
+      "custom_css": [
+        ".hero__content-wrapper {background: #0000004a; z-index: 1; position: sticky;}"
+      ],
+      "settings": {
+        "padding_top": "0px",
+        "desktop_padding_top": "0px",
+        "padding_bottom": "0px",
+        "desktop_padding_bottom": "inherit",
+        "padding_horizontal": "px-0",
+        "desktop_padding_horizontal": "inherit",
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "use_container": false,
+        "set_100vh": false,
+        "set_100vh_desktop": true,
+        "border_radius": 0,
+        "aspect_ratio": "9/16",
+        "aspect_ratio_desktop": "16/9",
+        "image": "shopify://shop_images/sri-yantra.jpg",
+        "bg_color": "",
+        "content_width": "max-w-5xl",
+        "text_align": "text-center",
+        "text_color": "#ffffff",
+        "title": "Un yantra es un instrumento energético para nuestro avance espiritual. Es la geometría más sagrada conocida por la humanidad. El Sri Yantra tiene un profundo efecto en la persona que lo dibuja, pinta o estudia. Se basa en nueve capas y cada nivel tiene su propia estructura y sabiduría secreta oculta. El Sri Yantra nos proporciona un camino hacia lo Divino en nuestro interior.",
+        "title_font_style": "h5",
+        "subtitle": "",
+        "button_text": "",
+        "button_url": "",
+        "button_style": "btn",
+        "anchor_to_pricing": false,
+        "video_title": "",
+        "horizontal_position": "justify-center",
+        "vertical_position": "items-center"
+      }
+    },
+    "section_image_text_blocks_PHhidM": {
+      "type": "section__image_text_blocks",
+      "blocks": {
+        "image_block_jfBVbY": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/Sri_Yantra_Drawing.webp",
+            "height": "auto",
+            "desktop_height": "auto"
+          }
+        },
+        "content_block_gVQiM6": {
+          "type": "content_block",
+          "settings": {
+            "title": "El poder de toda creación",
+            "title_tag": "h3",
+            "title_font_style": "h4",
+            "description": "<p>Un <em>yantra</em> es la geometría más sagrada conocida por la humanidad y es un instrumento energético especial para el avance espiritual. Entre los <em>yantras</em>, el Sri Yantra se considera el más antiguo, el más poderoso y el más eficaz. Se cree que el Sri Yantra contiene el poder de toda la creación y se considera la verdadera forma de la Madre Divina. Sus triángulos entrelazados simbolizan la unión entre las energías masculina y femenina de la creación.</p><p>Un <em>yantra</em> es un instrumento energético para nuestro avance espiritual. Es la geometría más sagrada conocida por la humanidad. El Sri Yantra tiene un profundo efecto en la persona que lo dibuja, pinta o estudia. Se basa en nueve capas y cada nivel tiene su propia estructura y sabiduría secreta oculta. El Sri Yantra nos proporciona un camino hacia lo Divino en nuestro interior.</p>",
+            "credits": "",
+            "cta_url": "#",
+            "cta_label": "",
+            "text_align": "left",
+            "desktop_text_align": "inherit",
+            "vertical_padding": "py-lg",
+            "vertical_padding_desktop": "tabletl:py-xxl"
+          }
+        }
+      },
+      "block_order": [
+        "image_block_jfBVbY",
+        "content_block_gVQiM6"
+      ],
+      "custom_css": [],
+      "settings": {
+        "margin_top": "mt-xl",
+        "margin_bottom": "mb-0",
+        "desktop_margin_top": "tabletl:mt-xxxl",
+        "desktop_margin_bottom": "tabletl:mb-xl",
+        "vertical_align": "center",
+        "flip_columns_desktop": false
+      }
+    },
+    "section_image_text_blocks_Xfh44d": {
+      "type": "section__image_text_blocks",
+      "blocks": {
+        "image_block_k6rWMK": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/photo_2025-06-11_14.43.13.jpg",
+            "height": "auto",
+            "desktop_height": "auto"
+          }
+        },
+        "content_block_8FN3f3": {
+          "type": "content_block",
+          "settings": {
+            "title": "Solicitar un curso",
+            "title_tag": "h3",
+            "title_font_style": "h4",
+            "description": "<p>¿No hay próximos cursos o profesores en tu zona? </p><p>Contacta con nosotros, haremos todo lo posible para ayudarte a encontrar el próximo curso de Sri Yantra.</p>",
+            "credits": "",
+            "cta_url": "shopify://pages/request-a-course",
+            "cta_label": "Solicitar ahora",
+            "text_align": "left",
+            "desktop_text_align": "inherit",
+            "vertical_padding": "py-lg",
+            "vertical_padding_desktop": "tabletl:py-xxl"
+          }
+        }
+      },
+      "block_order": [
+        "image_block_k6rWMK",
+        "content_block_8FN3f3"
+      ],
+      "settings": {
+        "margin_top": "mt-xl",
+        "margin_bottom": "mb-0",
+        "desktop_margin_top": "tabletl:mt-xxxl",
+        "desktop_margin_bottom": "tabletl:mb-xl",
+        "vertical_align": "center",
+        "flip_columns_desktop": true
+      }
+    },
+    "section_review_carousel_rxy9jF": {
+      "type": "section__review-carousel",
+      "blocks": {
+        "content_block_NbNwXJ": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify://shop_images/teacher-yashasvini.jpg",
+            "content": "<p><strong>PEACE IN THE CHAOS</strong><br/>'I'd been searching for many years for \"something that was missing\" in my life. I found it in Atma Kriya Yoga. It helped me connect to my heart and find peace in the chaos of my life as a single mother of three kids. And I can fit it in two minutes here and 10 minutes there throughout my day. Just those few moments each day have changed my life for the better.'</p>",
+            "credits": "Viktorija | Ireland"
+          }
+        },
+        "content_block_VLafxC": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify://shop_images/ramshwardas.webp",
+            "content": "<p><strong>HEART OPENING</strong><br/>'Over 35 years, I learned 112 kriya techniques, but my heart never opened until I learned Atma Kriya Yoga...Atma Kriya Yoga is the only one that awakens love. It went right to my soul and helped me realise I could love everybody. I'd never received Shaktipat (decent of guru's grace) before...It was like my old computer had been given new software, and I was learning to live in a new paradigm.'</p>",
+            "credits": "Swamini Pratibha | Canada"
+          }
+        },
+        "content_block_kmn7Bt": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify://shop_images/teacher-saketharaman.jpg",
+            "content": "<p><strong>FOUNTAIN OF ETERNAL LOVE</strong><br/>'The practice opened up a deep fountain of eternal love and a profound peace that I’d been looking for. Through it, I came to realise that Atma Kriya Yoga is Bhagavan, God Himself. Over time, I came to experience that each breath is not my own, it is Him who is breathing. It is Him who is seeing. It is Him who is perceiving.'</p>",
+            "credits": "Shivani | Slovenia"
+          }
+        },
+        "content_block_7eHX9f": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify://shop_images/teacher-rishi-aaradhaka.jpg",
+            "content": "<p><strong>SPEAKS TO GREATNESS</strong><br/>'Over the years, I’ve studied and researched many different Kriya lineages. While some masters–through their lineage–can give Shaktipat Initiation, Paramahamsa Vishwananda is the only one I know of who has ever been allowed to initiate hundreds of others to give Shaktipat. This speaks to the greatness of who He is, and what He is here to do.'</p>",
+            "credits": "Jaganmohini Das | Bulgaria"
+          }
+        }
+      },
+      "block_order": [
+        "content_block_NbNwXJ",
+        "content_block_VLafxC",
+        "content_block_kmn7Bt",
+        "content_block_7eHX9f"
+      ],
+      "disabled": true,
+      "name": "Review Carousel",
+      "settings": {
+        "padding_top": "pt-0",
+        "padding_bottom": "pb-0",
+        "desktop_padding_top": "inherit",
+        "desktop_padding_bottom": "inherit",
+        "title": "",
+        "title_tag": "h2"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "section_hero_cBpMpY",
+    "bm_event_slider_wTQkFc",
+    "section_hero_EmDBMy",
+    "section_image_text_blocks_PHhidM",
+    "section_image_text_blocks_Xfh44d",
+    "section_review_carousel_rxy9jF"
+  ]
+}

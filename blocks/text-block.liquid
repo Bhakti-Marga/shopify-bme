@@ -1,0 +1,88 @@
+<div class="text-block text-{{ block.settings.alignment }}">
+  <{{ block.settings.heading_type }}>{{ block.settings.heading }}</{{ block.settings.heading_type }}>
+  <{{ block.settings.subheading_type }}>{{ block.settings.subheading }}</{{ block.settings.subheading_type }}>
+  <div class="text-block__body">
+    {{ block.settings.text }}
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Text",
+    "settings": [
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading"
+      },
+      {
+        "type": "select",
+        "id": "heading_type",
+        "label": "Heading Type",
+        "options": [
+          {
+            "value": "h1",
+            "label": "h1"
+          },
+          {
+            "value": "h2",
+            "label": "h2"
+          },
+          {
+            "value": "h3",
+            "label": "h3"
+          },
+          {
+            "value": "h4",
+            "label": "h4"
+          }
+        ],
+        "default": "h1"
+      },
+      {
+        "type": "text",
+        "id": "subheading",
+        "label": "Subheading"
+      },
+      {
+        "type": "select",
+        "id": "subheading_type",
+        "label": "Subheading Type",
+        "options": [
+          {
+            "value": "h1",
+            "label": "h1"
+          },
+          {
+            "value": "h2",
+            "label": "h2"
+          },
+          {
+            "value": "h3",
+            "label": "h3"
+          },
+          {
+            "value": "h4",
+            "label": "h4"
+          }
+        ],
+        "default": "h3"
+      },
+      {
+        "type": "richtext",
+        "id": "text",
+        "label": "Text"
+      },
+      {
+        "type": "text_alignment",
+        "id": "alignment",
+        "label": "Alignment"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Text"
+      }
+    ]
+  }
+{% endschema %}

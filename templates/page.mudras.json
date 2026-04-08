@@ -1,0 +1,202 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "page__main",
+      "disabled": true,
+      "settings": {}
+    },
+    "section_hero_cBpMpY": {
+      "type": "section__hero",
+      "settings": {
+        "padding_top": "0px",
+        "desktop_padding_top": "inherit",
+        "padding_bottom": "40px",
+        "desktop_padding_bottom": "60px",
+        "padding_horizontal": "px-0",
+        "desktop_padding_horizontal": "inherit",
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "use_container": true,
+        "set_100vh": true,
+        "set_100vh_desktop": true,
+        "border_radius": 16,
+        "aspect_ratio": "auto",
+        "aspect_ratio_desktop": "4/3",
+        "image": "shopify://shop_images/mudras-hero.webp",
+        "image_desktop": "shopify://shop_images/mudras-hero.webp",
+        "bg_color": "#16254c",
+        "content_width": "max-w-5xl",
+        "text_align": "text-left",
+        "text_color": "#ffffff",
+        "title": "Mudras",
+        "title_font_style": "h3",
+        "subtitle": "<p>Los mudras son herramientas espirituales increíblemente poderosas que se han utilizado durante siglos para ayudarnos a conectar con nuestro potencial divino y despertarlo por completo.</p>",
+        "button_text": "",
+        "button_url": "",
+        "button_style": "btn",
+        "anchor_to_pricing": false,
+        "video_title": "",
+        "horizontal_position": "justify-center",
+        "vertical_position": "items-end"
+      }
+    },
+    "bm_event_slider_JpxTEU": {
+      "type": "BM-event-slider",
+      "name": "Product Carousel",
+      "settings": {
+        "product_collection": "events",
+        "set_dark_theme": true,
+        "apply_gradient": true,
+        "title": "Próximos cursos",
+        "title_tag": "h2",
+        "cta_label": "",
+        "cta_url": "",
+        "padding_top": "pt-xl",
+        "padding_bottom": "pb-xl",
+        "desktop_padding_top": "inherit",
+        "desktop_padding_bottom": "inherit"
+      }
+    },
+    "section_hero_EmDBMy": {
+      "type": "section__hero",
+      "custom_css": [
+        ".hero__content-wrapper {background: #0000004a; z-index: 1; position: sticky;}"
+      ],
+      "settings": {
+        "padding_top": "0px",
+        "desktop_padding_top": "0px",
+        "padding_bottom": "0px",
+        "desktop_padding_bottom": "inherit",
+        "padding_horizontal": "px-0",
+        "desktop_padding_horizontal": "inherit",
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "use_container": false,
+        "set_100vh": false,
+        "set_100vh_desktop": true,
+        "border_radius": 0,
+        "aspect_ratio": "9/16",
+        "aspect_ratio_desktop": "16/9",
+        "image": "shopify://shop_images/The_Path_-_Yoga_Meditation_56496ae6-3a20-4df8-beba-bfce6ecdbea8.jpg",
+        "bg_color": "",
+        "content_width": "max-w-5xl",
+        "text_align": "text-center",
+        "text_color": "#ffffff",
+        "title": "Cada mudra es un gesto de manos único que activa, purifica y equilibra los elementos de tu cuerpo de una manera única. El uso de mudras mejora tu bienestar físico, emocional y espiritual, y mejora tu flujo de energía, ayudándote a avanzar en tu camino espiritual.",
+        "title_font_style": "h5",
+        "subtitle": "",
+        "button_text": "",
+        "button_url": "",
+        "button_style": "btn",
+        "anchor_to_pricing": false,
+        "video_title": "",
+        "horizontal_position": "justify-center",
+        "vertical_position": "items-center"
+      }
+    },
+    "section_image_text_blocks_PHhidM": {
+      "type": "section__image_text_blocks",
+      "blocks": {
+        "image_block_jfBVbY": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/mudra1.webp",
+            "height": "auto",
+            "desktop_height": "auto"
+          }
+        },
+        "content_block_gVQiM6": {
+          "type": "content_block",
+          "settings": {
+            "title": "Más información",
+            "title_tag": "h3",
+            "title_font_style": "h4",
+            "description": "<p>- Mejora de la concentración y la memoria</p><p>- Apoya la salud física y combate el insomnio</p><p>- Aumenta el amor incondicional y la compasión</p><p>- Disuelve el ego y el orgullo</p><p>- Potencia los dones divinos</p><p>Los mudras son gestos con las manos que activan, purifican y equilibran los elementos del cuerpo. El uso de mudras mejora el bienestar físico, emocional y espiritual, y mejora el flujo de energía, lo que ayuda a avanzar en el camino espiritual.<br/></p>",
+            "credits": "",
+            "cta_url": "",
+            "cta_label": "",
+            "text_align": "left",
+            "desktop_text_align": "inherit",
+            "vertical_padding": "py-lg",
+            "vertical_padding_desktop": "tabletl:py-xxl"
+          }
+        }
+      },
+      "block_order": [
+        "image_block_jfBVbY",
+        "content_block_gVQiM6"
+      ],
+      "custom_css": [],
+      "settings": {
+        "margin_top": "mt-xl",
+        "margin_bottom": "mb-0",
+        "desktop_margin_top": "tabletl:mt-xxxl",
+        "desktop_margin_bottom": "tabletl:mb-xl",
+        "vertical_align": "center",
+        "flip_columns_desktop": false
+      }
+    },
+    "section_image_text_blocks_Xfh44d": {
+      "type": "section__image_text_blocks",
+      "blocks": {
+        "image_block_k6rWMK": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/The_Tools_44d2dc91-9290-4fa9-ad5b-130314386bc7.jpg",
+            "height": "auto",
+            "desktop_height": "auto"
+          }
+        },
+        "content_block_8FN3f3": {
+          "type": "content_block",
+          "settings": {
+            "title": "Solicitar un curso",
+            "title_tag": "h3",
+            "title_font_style": "h4",
+            "description": "<p>¿No hay próximos cursos o profesores en tu zona? </p><p>Ponte en contacto con nosotros, haremos todo lo posible para ayudarle a comenzar tu viaje con los mudras.</p>",
+            "credits": "",
+            "cta_url": "shopify://pages/request-a-course",
+            "cta_label": "Solicitar ahora",
+            "text_align": "left",
+            "desktop_text_align": "inherit",
+            "vertical_padding": "py-lg",
+            "vertical_padding_desktop": "tabletl:py-xxl"
+          }
+        }
+      },
+      "block_order": [
+        "image_block_k6rWMK",
+        "content_block_8FN3f3"
+      ],
+      "settings": {
+        "margin_top": "mt-xl",
+        "margin_bottom": "mb-0",
+        "desktop_margin_top": "tabletl:mt-xxxl",
+        "desktop_margin_bottom": "tabletl:mb-xl",
+        "vertical_align": "center",
+        "flip_columns_desktop": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "section_hero_cBpMpY",
+    "bm_event_slider_JpxTEU",
+    "section_hero_EmDBMy",
+    "section_image_text_blocks_PHhidM",
+    "section_image_text_blocks_Xfh44d"
+  ]
+}

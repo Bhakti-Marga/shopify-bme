@@ -1,0 +1,340 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "page__main",
+      "disabled": true,
+      "settings": {}
+    },
+    "section_hero_cBpMpY": {
+      "type": "section__hero",
+      "settings": {
+        "padding_top": "0px",
+        "desktop_padding_top": "inherit",
+        "padding_bottom": "40px",
+        "desktop_padding_bottom": "60px",
+        "padding_horizontal": "px-0",
+        "desktop_padding_horizontal": "inherit",
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "use_container": true,
+        "set_100vh": true,
+        "set_100vh_desktop": true,
+        "border_radius": 16,
+        "aspect_ratio": "9/16",
+        "aspect_ratio_desktop": "4/3",
+        "image": "shopify://shop_images/2023-07-23-p-1279.png",
+        "image_desktop": "shopify://shop_images/2023-07-23-p-1279.jpg",
+        "bg_color": "#16254c",
+        "content_width": "max-w-5xl",
+        "text_align": "text-left",
+        "text_color": "#ffffff",
+        "title": "Nuestra misión es ayudar a cada persona a experimentar el amor de Dios.",
+        "title_font_style": "h3",
+        "subtitle": "<p>Así es como podemos lograr un cambio. Y es el motor de todo lo que hacemos.</p>",
+        "button_text": "",
+        "button_url": "",
+        "button_style": "btn",
+        "anchor_to_pricing": false,
+        "video_title": "",
+        "horizontal_position": "justify-center",
+        "vertical_position": "items-end"
+      }
+    },
+    "section_text_image_grid_q8FKHB": {
+      "type": "section__text-image-grid",
+      "blocks": {
+        "image_block_RA3nVQ": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/CIMG1012.jpg"
+          }
+        },
+        "image_block_Dee9xw": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/CIMG1926_Switzerland_2006.jpg"
+          }
+        },
+        "image_block_qhpXeT": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/102-IMG_0267.jpg"
+          }
+        },
+        "image_block_gKfa4C": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/2023-11-05-p-1146.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "image_block_RA3nVQ",
+        "image_block_Dee9xw",
+        "image_block_qhpXeT",
+        "image_block_gKfa4C"
+      ],
+      "custom_css": [],
+      "settings": {
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "padding_top": "pt-xl",
+        "padding_bottom": "pb-xxl",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "desktop_padding_top": "tabletl:pt-xxxl",
+        "desktop_padding_bottom": "tabletl:pb-xxxl",
+        "mobile_position": "top",
+        "position": "left",
+        "title": "Nuestra historia",
+        "title_tag": "h2",
+        "description": "<p>Cuando Bhakti Marga comenzó en 2005, nos reuníamos en cualquier espacio que pudiera acogernos. Hoy, Bhakti Marga es un grupo diverso de personas que se reúnen en templos, <em>ashrams</em> y ciudades de 75 países de todo el mundo. La <em>sangha</em>, o comunidad, es más que un lugar al que ir, es lo que somos como buscadores espirituales.</p>"
+      }
+    },
+    "section_hero_EmDBMy": {
+      "type": "section__hero",
+      "settings": {
+        "padding_top": "0px",
+        "desktop_padding_top": "0px",
+        "padding_bottom": "0px",
+        "desktop_padding_bottom": "inherit",
+        "padding_horizontal": "px-0",
+        "desktop_padding_horizontal": "inherit",
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "use_container": false,
+        "set_100vh": false,
+        "set_100vh_desktop": true,
+        "border_radius": 0,
+        "aspect_ratio": "9/16",
+        "aspect_ratio_desktop": "16/9",
+        "image": "shopify://shop_images/MISSION-BELIEVE-MOBILE.jpg",
+        "image_desktop": "shopify://shop_images/MISSION-BELIEVE-2_7e7376b3-e81b-4ec6-9655-84bf3c4a2992.jpg",
+        "bg_color": "",
+        "content_width": "max-w-5xl",
+        "text_align": "text-center",
+        "text_color": "#ffffff",
+        "title": "¿En qué cree Bhakti Marga?",
+        "title_font_style": "h3",
+        "subtitle": "<p>Bhakti Marga es un movimiento espiritual dentro de la Hari Bhakta Sampradaya, un linaje vaishnava tradicional establecido por Paramahamsa Vishwananda. Esto significa que nuestras creencias se basan tanto en Guruji como en las escrituras védicas tradicionales. Nuestras creencias guían e inspiran nuestra misión de ayudar a cada individuo a experimentar el amor de Dios. Esto es en lo que creemos.</p>",
+        "button_text": "",
+        "button_url": "",
+        "button_style": "btn",
+        "anchor_to_pricing": false,
+        "video_title": "",
+        "horizontal_position": "justify-center",
+        "vertical_position": "items-center"
+      }
+    },
+    "section_accordion_UezKHE": {
+      "type": "section__accordion",
+      "blocks": {
+        "accordion_item_pTnKEj": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "El Ser Supremo se llama Śrī Hari, es personal y puede ser conocido por muchos nombres y formas.",
+            "content": "<p>Yo (el alma) soy parte de Hari, la fuente de todo lo que existe. Más allá de Él, no hay otra causa o efecto. Para quien es consciente de esta verdad, ya no hay nacimiento ni renacimiento, ni las dualidades de pena y alegría.</p><p><em><strong>- Viṣṇu-purāṇa, 1.22.86</strong></em></p><p>Me inclino ante el supremo Śrī Hari, el canto de Su Nombre destruye todos los pecados, y Su reverente postración elimina todo sufrimiento.</p><p><em><strong>- Bhāgavata-purāṇa, 12.13.23</strong></em></p><p>Él es Hari, la persona suprema, el heroico, Kṛṣṇa, el victorioso, y el señor de todos los seres. </p><p><em><strong>- Harivaṃśa, 3.111.1</strong></em></p><p>La verdad es una, pero los sabios le dan muchos nombres.</p><p><em><strong>- Ṛg Veda, 1.164.46</strong></em><strong><br/></strong><br/></p>"
+          }
+        },
+        "accordion_item_DawVUM": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "La meta de la vida humana es alcanzar un estado de inmersión completa en el Amor de Śrī Hari.",
+            "content": "<p>A aquellos que están constantemente comprometidos conmigo, y Me veneran con intenso Amor, les doy la consciencia mediante la cual pueden llegar a Mí. </p><p><strong>- </strong><em><strong>Bhagavad-Gītā</strong></em><strong>, </strong><em><strong>10.10</strong></em><em> </em></p><p>Así dedicado, recitando el amado Nombre del Señor, el corazón de un devoto se derrite en profundo amor, y grita en voz alta. Ríe, llora, grita y canta; Como un loco de amor, baila, ajeno al mundo. </p><p><em><strong>- Bhāgavata-purāṇa, 11.2.40 </strong></em></p><p>En este mundo material, prestar servicio a los Pies de Loto de Govinda, la causa de todas las causas, y verlo en todas partes, es el único objetivo de la vida. Solo esto es el objetivo último de la vida humana, como explican todas las escrituras reveladas. </p><p><em><strong>- Bhāgavata-purāṇa, 7.7.55</strong></em><br/><br/><br/></p>"
+          }
+        },
+        "accordion_item_H3nJMM": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "El bhakti a Śrī Hari es tanto el medio como el resultado de vivir una verdadera vida espiritual.",
+            "content": "<p>Solo mediante la devoción única y exclusiva, Arjuna, es posible conocer, ver y entrar verdaderamente en Mi Morada. Quienquiera que Me sirva, Me considere como el más elevado, quienquiera que sea Mi devoto, esté libre de apegos y no muestre malicia hacia ningún ser vivo, vendrá a Mí, oh Arjuna.</p><p><strong>- </strong><em><strong>Bhagavad-gītā</strong></em><strong>, 18.54-55</strong></p><p><br/>Recordando y recordándose mutuamente a Śrī Hari, el que elimina todos los pecados, cultivan la devoción, que surge a través de la propia devoción, y sostienen cuerpos emocionados por el éxtasis.</p><p><strong>- </strong><em><strong>Bhāgavata-purāṇa</strong></em><strong>, 11.3.31</strong></p><p>Los devotos puros o las grandes personas santas que desean alcanzar la meta más elevada de la vida y que están completamente libres de todos los deseos materiales de gratificación de los sentidos se dedican constantemente al servicio trascendental de Tus Pies de Loto.</p><p><strong>- </strong><em><strong>Bhāgavata-purāṇa</strong></em><strong>, 8.12.6</strong></p>"
+          }
+        },
+        "accordion_item_mHjLdW": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "El satguru es el instrumento de Śrī Hari para distribuir la gracia necesaria.",
+            "content": "<p>Uno debe acercarse a un maestro espiritual con entrega, profundas ganas de aprender y servicio. Esas almas conscientes pueden instruirte, pues han visto la Verdad.</p><p><strong>- </strong><em><strong>Bhagavad-gītā</strong></em><strong>, 4.34</strong></p><p>Quien ha aceptado a un <em>ācārya</em> (gurú) puede conocer al Señor Supremo.</p><p><strong>- </strong><em><strong>Chāndogya Upaniṣad</strong></em><strong>, 6.14.2</strong></p><p>A esa gran alma que tiene una gran devoción por el Señor y una devoción igual por el gurú, se le revelan los significados de los asuntos tratados en las escrituras.</p><p><strong>- </strong><em><strong>Śvetāśvatara Upaniṣad</strong></em><strong>, 6.23</strong></p>"
+          }
+        },
+        "accordion_item_N9Ycbi": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "El Bhagavad Gita es la instrucción perfecta de Śrī Hari para la vida espiritual.",
+            "content": "<p>En mi opinión, quienquiera que estudie este diálogo nuestro (el <em>Bhagavad-gītā</em>) basado en el <em>dharma</em>, me venera a través del sacrificio del conocimiento. Y quien lo escuche con fe y libre de envidia, también será liberado y alcanzará los reinos auspiciosos donde residen aquellos que han realizado acciones virtuosas.</p><p> <strong>- </strong><em><strong>Bhagavad-gītā</strong></em><strong>, 18.70-71</strong></p><p>Las enseñanzas del Señor, el recitar de Sus discípulos y las diversas enseñanzas secretas del Ser Supremo, tal y como Él las ha revelado, son verdaderamente lo más elevado.</p><p><strong>- </strong><em><strong>Kūrma-purāṇa</strong></em><strong>, 2.44.113</strong></p>"
+          }
+        },
+        "accordion_item_YzWNPr": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Ningún alma está condenada a una eternidad de separación de Śrī Hari.",
+            "content": "<p>El Ser nunca nace y nunca muere. Siempre ha existido y nunca dejará de existir. Es no nacido, eterno, imperecedero y sumamente antiguo. No muere cuando el cuerpo muere.</p><p><strong>- </strong><em><strong>Bhagavad-gītā,</strong></em><strong> 2.20</strong></p><p>La muerte es ciertamente segura para todo lo que nace, y el renacimiento es seguro para lo que ha muerto; por lo tanto, no debes afligirte por lo que es inevitable.</p><p><strong>-</strong><em><strong> Bhagavad-gītā</strong></em><strong>, 2.27</strong></p><p>Quien conoce la verdad de Mi nacimiento y Mis hazañas divinas, oh Arjuna, no renace de nuevo. Después de abandonar el cuerpo, viene a Mí.</p><p><strong>- </strong><em><strong>Bhagavad-gītā</strong></em><strong>, 4.9</strong></p>"
+          }
+        }
+      },
+      "block_order": [
+        "accordion_item_pTnKEj",
+        "accordion_item_DawVUM",
+        "accordion_item_H3nJMM",
+        "accordion_item_mHjLdW",
+        "accordion_item_N9Ycbi",
+        "accordion_item_YzWNPr"
+      ],
+      "settings": {
+        "margin_top": "mt-xl",
+        "margin_bottom": "mb-0",
+        "padding_top": "pt-0",
+        "padding_bottom": "pb-xl",
+        "desktop_margin_top": "tabletl:mt-xxxl",
+        "desktop_margin_bottom": "tabletl:mb-xl",
+        "desktop_padding_top": "inherit",
+        "desktop_padding_bottom": "inherit",
+        "max_width": "870px",
+        "title": "Nuestras creencias",
+        "cta_url": "",
+        "cta_label": "",
+        "title_position": "left"
+      }
+    },
+    "section_our_values_aTbiFM": {
+      "type": "section__our-values",
+      "blocks": {
+        "content_block_yJkb4a": {
+          "type": "content_block",
+          "settings": {
+            "title": "El servicio es amor en acción.",
+            "cta_label": "",
+            "cta_link": "",
+            "cta_style": "btn btn--black",
+            "image": "shopify://shop_images/2020-01-14-p-0233.jpg"
+          }
+        },
+        "content_block_RqDhn9": {
+          "type": "content_block",
+          "settings": {
+            "title": "Cambiamos el mundo cambiándonos a nosotros mismos.",
+            "cta_label": "",
+            "cta_link": "",
+            "cta_style": "btn btn--black",
+            "image": "shopify://shop_images/We_change_the_world_by_changing_ourselves.jpg"
+          }
+        },
+        "content_block_tAQLpU": {
+          "type": "content_block",
+          "settings": {
+            "title": "Lideramos con altruismo y amabilidad.",
+            "cta_label": "",
+            "cta_link": "",
+            "cta_style": "btn btn--black",
+            "image": "shopify://shop_images/2024-07-19-p-2271.jpg"
+          }
+        },
+        "content_block_LBwtVa": {
+          "type": "content_block",
+          "settings": {
+            "title": "La vida es un regalo que hay que celebrar.",
+            "cta_label": "",
+            "cta_link": "",
+            "cta_style": "btn btn--black",
+            "image": "shopify://shop_images/Life_is_a_gift_to_be_celebrated_2.jpg"
+          }
+        },
+        "content_block_fjLWxp": {
+          "type": "content_block",
+          "settings": {
+            "title": "La unión hace la fuerza.",
+            "cta_label": "",
+            "cta_link": "",
+            "cta_style": "btn btn--black",
+            "image": "shopify://shop_images/Unity_Brings_Strength.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "content_block_yJkb4a",
+        "content_block_RqDhn9",
+        "content_block_tAQLpU",
+        "content_block_LBwtVa",
+        "content_block_fjLWxp"
+      ],
+      "settings": {
+        "margin_top": "mt-md",
+        "margin_bottom": "mb-md",
+        "padding_top": "pt-0",
+        "padding_bottom": "pb-0",
+        "desktop_margin_top": "tabletl:mt-xl",
+        "desktop_margin_bottom": "tabletl:mb-xl",
+        "desktop_padding_top": "inherit",
+        "desktop_padding_bottom": "inherit",
+        "title": "Nuestros valores",
+        "title_tag": "h3",
+        "content": "<p><em>Pilares para una vida extraordinaria.</em></p>",
+        "image": "shopify://shop_images/2024-11-10-p-1097.jpg"
+      }
+    },
+    "section_image_text_blocks_PHhidM": {
+      "type": "section__image_text_blocks",
+      "blocks": {
+        "image_block_jfBVbY": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/Experience_Bhakti_Marga_For_Yourself_4ef546c2-cf45-4648-b7aa-dbfa1a0034a0.jpg",
+            "height": "auto",
+            "desktop_height": "auto"
+          }
+        },
+        "content_block_gVQiM6": {
+          "type": "content_block",
+          "settings": {
+            "title": "Experimenta Bhakti Marga por ti mismo",
+            "title_tag": "h2",
+            "title_font_style": "h3",
+            "description": "<p>Únete a nuestro programa semanal gratuito online de los domingos, donde nos reunimos para unirnos y profundizar en el camino del <em>bhakti</em>.</p>",
+            "credits": "",
+            "cta_url": "shopify://pages/bhakti-sundays",
+            "cta_label": "Programa del Domingo",
+            "text_align": "left",
+            "desktop_text_align": "inherit",
+            "vertical_padding": "py-lg",
+            "vertical_padding_desktop": "tabletl:py-xxl"
+          }
+        }
+      },
+      "block_order": [
+        "image_block_jfBVbY",
+        "content_block_gVQiM6"
+      ],
+      "custom_css": [],
+      "settings": {
+        "margin_top": "mt-xl",
+        "margin_bottom": "mb-xl",
+        "desktop_margin_top": "tabletl:mt-xl",
+        "desktop_margin_bottom": "tabletl:mb-xxxl",
+        "vertical_align": "center",
+        "flip_columns_desktop": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "section_hero_cBpMpY",
+    "section_text_image_grid_q8FKHB",
+    "section_hero_EmDBMy",
+    "section_accordion_UezKHE",
+    "section_our_values_aTbiFM",
+    "section_image_text_blocks_PHhidM"
+  ]
+}

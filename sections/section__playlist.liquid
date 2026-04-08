@@ -1,0 +1,405 @@
+{% liquid
+  assign container_classes = ""
+
+  if section.settings.margin_top != "mt-0"
+      assign container_classes = container_classes | append: " " | append: section.settings.margin_top
+  endif
+
+  if section.settings.margin_bottom != "mb-0"
+      assign container_classes = container_classes | append: " " | append: section.settings.margin_bottom
+  endif
+
+  if section.settings.desktop_margin_top != "inherit"
+      assign container_classes = container_classes | append: " " | append: section.settings.desktop_margin_top
+  endif
+
+  if section.settings.desktop_margin_bottom != "inherit"
+      assign container_classes = container_classes | append: " " | append: section.settings.desktop_margin_bottom
+  endif
+
+  if section.settings.padding_top != "pt-0"
+      assign container_classes = container_classes | append: " " | append: section.settings.padding_top
+  endif
+
+  if section.settings.padding_bottom != "pb-0"
+      assign container_classes = container_classes | append: " " | append: section.settings.padding_bottom
+  endif
+
+  if section.settings.desktop_padding_top != "inherit"
+      assign container_classes = container_classes | append: " " | append: section.settings.desktop_padding_top
+  endif
+
+  if section.settings.desktop_padding_bottom != "inherit"
+      assign container_classes = container_classes | append: " " | append: section.settings.desktop_padding_bottom
+  endif
+
+  assign container_classes = container_classes | strip
+%}
+
+<section class="playlist container tabletl:flex {% if container_classes != blank %} {{ container_classes }}{% endif %}">
+  <div class="bg-blue p-md rounded-lg text-white mb-xxl text-14 tabletl:text-16 tabletl:w-[40%] tabletl:mb-0">
+    {% if section.settings.image != blank%}
+      <a href="{{ section.settings.url }}" class="playlist__image inline-block rounded w-full mb-sm tabletl:mb-lg">
+        {% render 'lazy-image',
+          image: section.settings.image,
+          image_desktop: section.settings.desktop_image,
+          img_classes: 'rounded'
+        %}
+      </a>
+    {% endif %}
+    {% if section.settings.title != blank %}
+      <a href="{{ section.settings.url }}" class="inline-block group mb-lg tabletl:mb-xl">
+        <{{ section.settings.title_tag }} class="font-600 text-32 leading-tight duration-500 tabletl:group-hover:opacity-70">
+            {{ section.settings.title  | truncate: 30, ' ...'}}
+        </{{ section.settings.title_tag }}>  
+      </a>
+    {% endif %}
+    {% if section.settings.avatar != blank or section.settings.name != blank %}
+      <div class="flex items-center mb-lg gap-md tabletl:mb-32">
+        {% if section.settings.avatar != blank %}
+          <div class="playlist__avatar playlist__avatar--main w-[48px] h-[48px] object-cover">
+            {% render 'lazy-image',
+              image: section.settings.avatar,
+              picture_classes: "h-full w-full"
+              img_classes: 'h-full w-full object-cover' 
+            %}
+          </div>
+        {% endif %}
+        {% if section.settings.name != blank %}
+          <p>{{ section.settings.name }}</p>
+        {% endif %}
+      </div>
+    {% endif %}
+    {% if section.settings.video_count != blank %}
+      <div class="mb-lg tabletl:mb-32">
+        Lista de reproducción <span>&#8226;</span> {{ section.settings.video_count }}
+        {% if section.settings.video_count == '1' %}
+          <span>video</span>
+        {% else %}
+          <span>videos</span>
+        {% endif %}
+      </div>
+    {% endif %}
+    <div class="flex justify-between mb-xl">
+      {% if section.settings.url != blank and section.settings.cta_label != blank %}
+        <a href="{{ section.settings.url }}" target="_blank" class="btn inline-flex items-center">
+          <span class="inline-block w-[10px] mr-sm relative -top-[1px]">{% render 'icon--play' %}</span>{{ section.settings.cta_label }}
+        </a>
+      {% endif %}
+        <div class="flex gap-md">
+          {% if section.settings.secondary_avatar_1 != blank %}
+            <div class="playlist__avatar">
+              {% render 'lazy-image',
+                image: section.settings.secondary_avatar_1,
+                img_classes: 'object-cover absolute top-0 left-0 h-full' %}
+            </div>
+          {% endif %}
+          {% if section.settings.secondary_avatar_2 != blank %}
+            <div class="playlist__avatar">
+              {% render 'lazy-image',
+                image: section.settings.secondary_avatar_2,
+                img_classes: 'object-cover absolute top-0 left-0 h-full' 
+              %}
+            </div>
+          {% endif %}
+          {% if section.settings.secondary_avatar_3 != blank %}
+            <div class="playlist__avatar">
+              {% render 'lazy-image',
+                image: section.settings.secondary_avatar_3,
+                img_classes: 'object-cover absolute top-0 left-0 h-full' 
+              %}
+            </div>
+          {% endif %}
+        </div>
+    </div>
+  </div>
+  <ol class="playlist__media-block flex flex-col justify-center w-full tabletl:w-[60%] {% if section.settings.playlist_position == 'left' %} tabletl:order-first tabletl:pr-xxl {% endif -%}">
+    {%- for block in section.blocks -%}
+      <li class="flex {% unless forloop.last %} mb-32{% endunless %}">           
+      <div class="pr-md self-center font-600 text-24 tabletl:text-32 tabletl:pr-xxl {% unless section.settings.playlist_position == 'left' %} tabletl:pl-xxl {% endunless -%}">{{ forloop.index }}</div>
+        <a href="{{ block.settings.url }}" target="_blank" class="playlist__media-block-image inline-flex rounded overflow-hidden w-1/2 flex-grow self-start tabletl:flex-grow-0 tabletl:w-[32%]">
+          {% if block.settings.image != blank %}
+            <div class="w-full aspect-video relative">
+              {% render 'lazy-image',
+                image: block.settings.image,
+                picture_classes: 'rounded overflow-hidden',
+                img_classes: 'object-cover absolute top-0 left-0 h-full'
+              %}
+            </div>
+          {% endif %}
+        </a>
+        <div class="w-1/2 tabletl:flex-grow pl-md">
+          <a href="{{ block.settings.url }}" target="_blank" class="group inline-block mb-sm">
+            {% if block.settings.title != blank %}
+              <h4 class="font-500 text-14 tabletl:text-16 duration-500 tabletl:group-hover:opacity-70">
+                  {{ block.settings.title }}
+              </h4>
+            {% endif %}
+          </a>
+          {% if block.settings.name != blank %}
+            <p class="font-500 text-12 text-gray-light">
+              {{ block.settings.name }}
+            </p>
+          {% endif %}
+        </div>     
+      </li>
+    {% endfor %}
+  </ol>
+</section>
+
+{% schema %}
+{
+  "name": "Playlist",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "select",
+      "id": "margin_top",
+      "label": "Margin Top",
+      "options": [
+        { "value": "mt-0", "label": "None" },
+        { "value": "mt-sm", "label": "Small - 8px" },
+        { "value": "mt-md", "label": "Medium - 16px" },
+        { "value": "mt-lg", "label": "Large - 24px" },
+        { "value": "mt-xl", "label": "X-Large - 40px" },
+        { "value": "mt-xxl", "label": "XX-Large - 60px" },
+        { "value": "mt-xxxl", "label": "XXX-Large - 80px" }
+      ],
+      "default": "mt-0"
+    },
+    {
+      "type": "select",
+      "id": "margin_bottom",
+      "label": "Margin Bottom",
+      "options": [
+        { "value": "mb-0", "label": "None" },
+        { "value": "mb-sm", "label": "Small - 8px" },
+        { "value": "mb-md", "label": "Medium - 16px" },
+        { "value": "mb-lg", "label": "Large - 24px" },
+        { "value": "mb-xl", "label": "X-Large - 40px" },
+        { "value": "mb-xxl", "label": "XX-Large - 60px" },
+        { "value": "mb-xxxl", "label": "XXX-Large - 80px" }
+      ],
+      "default": "mb-0"
+    },
+    {
+      "type": "select",
+      "id": "padding_top",
+      "label": "Padding Top",
+      "options": [
+        { "value": "pt-0", "label": "None" },
+        { "value": "pt-sm", "label": "Small - 8px" },
+        { "value": "pt-md", "label": "Medium - 16px" },
+        { "value": "pt-lg", "label": "Large - 24px" },
+        { "value": "pt-xl", "label": "X-Large - 40px" },
+        { "value": "pt-xxl", "label": "XX-Large - 60px" },
+        { "value": "pt-xxxl", "label": "XXX-Large - 80px" }
+      ],
+      "default": "pt-0"
+    },
+    {
+      "type": "select",
+      "id": "padding_bottom",
+      "label": "Padding Bottom",
+      "options": [
+        { "value": "pb-0", "label": "None" },
+        { "value": "pb-sm", "label": "Small - 8px" },
+        { "value": "pb-md", "label": "Medium - 16px" },
+        { "value": "pb-lg", "label": "Large - 24px" },
+        { "value": "pb-xl", "label": "X-Large - 40px" },
+        { "value": "pb-xxl", "label": "XX-Large - 60px" },
+        { "value": "pb-xxxl", "label": "XXX-Large - 80px" }
+      ],
+      "default": "pb-0"
+    },
+    {
+      "type": "select",
+      "id": "desktop_margin_top",
+      "label": "Desktop - Margin Top",
+      "options": [
+        { "value": "inherit", "label": "Inherit" },
+        { "value": "tabletl:mt-0", "label": "None" },
+        { "value": "tabletl:mt-sm", "label": "Small - 8px" },
+        { "value": "tabletl:mt-md", "label": "Medium - 16px" },
+        { "value": "tabletl:mt-lg", "label": "Large - 24px" },
+        { "value": "tabletl:mt-xl", "label": "X-Large - 40px" },
+        { "value": "tabletl:mt-xxl", "label": "XX-Large - 60px" },
+        { "value": "tabletl:mt-xxxl", "label": "XXX-Large - 80px" }
+      ],
+      "default": "inherit"
+    },
+    {
+      "type": "select",
+      "id": "desktop_margin_bottom",
+      "label": "Desktop - Margin Bottom",
+      "options": [
+        { "value": "inherit", "label": "Inherit" },
+        { "value": "tabletl:mb-0", "label": "None" },
+        { "value": "tabletl:mb-sm", "label": "Small - 8px" },
+        { "value": "tabletl:mb-md", "label": "Medium - 16px" },
+        { "value": "tabletl:mb-lg", "label": "Large - 24px" },
+        { "value": "tabletl:mb-xl", "label": "X-Large - 40px" },
+        { "value": "tabletl:mb-xxl", "label": "XX-Large - 60px" },
+        { "value": "tabletl:mb-xxxl", "label": "XXX-Large - 80px" }
+      ],
+      "default": "inherit"
+    },
+    {
+      "type": "select",
+      "id": "desktop_padding_top",
+      "label": "Desktop - Padding Top",
+      "options": [
+        { "value": "inherit", "label": "Inherit" },
+        { "value": "tabletl:pt-0", "label": "None" },
+        { "value": "tabletl:pt-sm", "label": "Small - 8px" },
+        { "value": "tabletl:pt-md", "label": "Medium - 16px" },
+        { "value": "tabletl:pt-lg", "label": "Large - 24px" },
+        { "value": "tabletl:pt-xl", "label": "X-Large - 40px" },
+        { "value": "tabletl:pt-xxl", "label": "XX-Large - 60px" },
+        { "value": "tabletl:pt-xxxl", "label": "XXX-Large - 80px" }
+      ],
+      "default": "inherit"
+    },
+    {
+      "type": "select",
+      "id": "desktop_padding_bottom",
+      "label": "Desktop - Padding Bottom",
+      "options": [
+        { "value": "inherit", "label": "Inherit" },
+        { "value": "tabletl:pb-0", "label": "None" },
+        { "value": "tabletl:pb-sm", "label": "Small - 8px" },
+        { "value": "tabletl:pb-md", "label": "Medium - 16px" },
+        { "value": "tabletl:pb-lg", "label": "Large - 24px" },
+        { "value": "tabletl:pb-xl", "label": "X-Large - 40px" },
+        { "value": "tabletl:pb-xxl", "label": "XX-Large - 60px" },
+        { "value": "tabletl:pb-xxxl", "label": "XXX-Large - 80px" }
+      ],
+      "default": "inherit"
+    },
+    {
+      "type": "select",
+      "id": "playlist_position",
+      "label": "Playlist Position",
+      "options": [
+        {
+          "value": "right",
+          "label": "Right"
+        },
+        {
+          "value": "left",
+          "label": "Left"
+        }
+      ],
+      "default": "right"
+    },
+    {
+      "type": "header",
+      "content": "Content Settings"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "desktop_image",
+      "label": "Image - Desktop"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "select",
+      "id": "title_tag",
+      "label": "Title Tag",
+      "options": [
+        { "value": "h1", "label": "H1" },
+        { "value": "h2", "label": "H2" },
+        { "value": "h3", "label": "H3" },
+        { "value": "h4", "label": "H4" },
+        { "value": "h5", "label": "H5" }
+      ],
+      "default": "h3"
+    },
+    {
+      "type": "image_picker",
+      "id": "avatar",
+      "label": "Upload Avatar"
+    },
+    {
+      "type": "text",
+      "id": "name",
+      "label": "Name"
+    },
+    {
+      "type": "text",
+      "id": "video_count",
+      "label": "Number of Videos"
+    },
+    {
+      "type": "url",
+      "id": "url",
+      "label": "CTA URL"
+    },
+    {
+      "type": "text",
+      "id": "cta_label",
+      "label": "CTA Label"
+    },
+    {
+      "type": "image_picker",
+      "id": "secondary_avatar_1",
+      "label": "Upload Secondary Avatar #1"
+    },
+    {
+      "type": "image_picker",
+      "id": "secondary_avatar_2",
+      "label": "Upload Secondary Avatar #2"
+    },
+    {
+      "type": "image_picker",
+      "id": "secondary_avatar_3",
+      "label": "Upload Secondary Avatar #3"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "media_block",
+      "name": "Media Block",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "text",
+          "id": "name",
+          "label": "Name"
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Playlist"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,315 @@
+{% liquid
+  assign container_classes = ""
+
+  if section.settings.margin_top != "mt-0"
+      assign container_classes = container_classes | append: " " | append: section.settings.margin_top
+  endif
+
+  if section.settings.margin_bottom != "mb-0"
+      assign container_classes = container_classes | append: " " | append: section.settings.margin_bottom
+  endif
+
+  if section.settings.desktop_margin_top != "inherit"
+      assign container_classes = container_classes | append: " " | append: section.settings.desktop_margin_top
+  endif
+
+  if section.settings.desktop_margin_bottom != "inherit"
+      assign container_classes = container_classes | append: " " | append: section.settings.desktop_margin_bottom
+  endif
+
+  if section.settings.padding_top != "pt-0"
+      assign container_classes = container_classes | append: " " | append: section.settings.padding_top
+  endif
+
+  if section.settings.padding_bottom != "pb-0"
+      assign container_classes = container_classes | append: " " | append: section.settings.padding_bottom
+  endif
+
+  if section.settings.desktop_padding_top != "inherit"
+      assign container_classes = container_classes | append: " " | append: section.settings.desktop_padding_top
+  endif
+
+  if section.settings.desktop_padding_bottom != "inherit"
+      assign container_classes = container_classes | append: " " | append: section.settings.desktop_padding_bottom
+  endif
+
+  assign container_classes = container_classes | strip
+%}
+
+<section class="our-values container {% if container_classes != blank %} {{ container_classes }}{% endif %}">
+  <div class="our-values__content-wrapper relative tabletl:flex">
+    <div class="our-values__content flex flex-col justify-center w-full tabletl:w-1/2">
+      <div class="mb-lg">
+        {% if section.settings.title != blank %}
+          <{{ section.settings.title_tag }} class="font-600 text-48 leading-tight tabletl:text-56">
+              {{ section.settings.title }}
+          </{{ section.settings.title_tag }}>  
+        {% endif %}
+        {% if section.settings.content != blank %}
+          <div class="rte">
+            {{ section.settings.content }}
+          </div>  
+        {% endif %}
+      </div>
+        <ul class="our-values__list">
+          {%- for block in section.blocks -%}
+            <li class="our-values__list-item flex group py-md tabletl:py-lg">           
+              <div class="flex items-center gap-md">
+                {% if block.settings.title != blank %}
+                  {% if block.settings.cta_link %}
+                    {% assign tag = 'a' %}
+                  {% else %}
+                    {% assign tag = 'div' %}
+                  {% endif %}
+                  <{{ tag }} {% if tag == 'a' %} href="{{ block.settings.cta_link }}"{% endif %}
+                    class="our-values__text-link inline-block leading-none duration-500 font-600 text-32 tabletl:text-40"
+                  >
+                    {{ block.settings.title }} 
+                  </{{ tag }}>
+                {% endif %}
+                {% if block.settings.cta_label != blank and block.settings.cta_link != blank %}
+                  <a
+                    class="our-values__button {{ block.settings.cta_style }} opacity-0 hidden items-center text-white duration-300 tabletl:flex tabletl:group-hover:opacity-100"
+                    href="{{ block.settings.cta_link }}"
+                  >{{ block.settings.cta_label }}
+                  <i class="inline-block ml-sm w-md -rotate-90 duration-500">{% render 'icon--caret' %}</i></a>
+                {% endif %}
+              </div>   
+              {% if block.settings.image != blank %}
+                <div class="hidden opacity-0 rounded duration-500 tabletl:block tabletl:w-[48%] aspect-landscape tabletl:aspect-square tabletl:absolute tabletl:top-1/2 tabletl:-translate-y-1/2 tabletl:right-0 tabletl:group-hover:opacity-100 pointer-events-none">
+                  {% render 'lazy-image',
+                    image: block.settings.image,
+                    picture_classes: 'w-full h-full',
+                    img_classes: 'object-cover rounded absolute top-0 left-0 h-full'
+                  %} 
+                </div>
+              {% endif %}  
+            </li>
+          {% endfor %}
+        </ul>
+
+    </div>
+    <div class="mt-md tabletl:mt-0 tabletl:w-[48%] tabletl:ml-[2%] flex items-center">
+      {% if section.settings.image != blank%}
+        <div class="our-values__image rounded relative w-full aspect-[4/3] tabletl:aspect-square tabletl:static">
+          {% render 'lazy-image',
+            image: section.settings.image,
+            picture_classes: 'h-full',
+            img_classes: 'object-cover absolute top-0 left-0 h-full rounded tabletl:static'
+          %}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Our Values",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "select",
+      "id": "margin_top",
+      "label": "Margin Top",
+      "options": [
+        { "value": "mt-0", "label": "None" },
+        { "value": "mt-sm", "label": "Small - 8px" },
+        { "value": "mt-md", "label": "Medium - 16px" },
+        { "value": "mt-lg", "label": "Large - 24px" },
+        { "value": "mt-xl", "label": "X-Large - 40px" },
+        { "value": "mt-xxl", "label": "XX-Large - 60px" },
+        { "value": "mt-xxxl", "label": "XXX-Large - 80px" }
+      ],
+      "default": "mt-0"
+    },
+    {
+      "type": "select",
+      "id": "margin_bottom",
+      "label": "Margin Bottom",
+      "options": [
+        { "value": "mb-0", "label": "None" },
+        { "value": "mb-sm", "label": "Small - 8px" },
+        { "value": "mb-md", "label": "Medium - 16px" },
+        { "value": "mb-lg", "label": "Large - 24px" },
+        { "value": "mb-xl", "label": "X-Large - 40px" },
+        { "value": "mb-xxl", "label": "XX-Large - 60px" },
+        { "value": "mb-xxxl", "label": "XXX-Large - 80px" }
+      ],
+      "default": "mb-0"
+    },
+    {
+      "type": "select",
+      "id": "padding_top",
+      "label": "Padding Top",
+      "options": [
+        { "value": "pt-0", "label": "None" },
+        { "value": "pt-sm", "label": "Small - 8px" },
+        { "value": "pt-md", "label": "Medium - 16px" },
+        { "value": "pt-lg", "label": "Large - 24px" },
+        { "value": "pt-xl", "label": "X-Large - 40px" },
+        { "value": "pt-xxl", "label": "XX-Large - 60px" },
+        { "value": "pt-xxxl", "label": "XXX-Large - 80px" }
+      ],
+      "default": "pt-0"
+    },
+    {
+      "type": "select",
+      "id": "padding_bottom",
+      "label": "Padding Bottom",
+      "options": [
+        { "value": "pb-0", "label": "None" },
+        { "value": "pb-sm", "label": "Small - 8px" },
+        { "value": "pb-md", "label": "Medium - 16px" },
+        { "value": "pb-lg", "label": "Large - 24px" },
+        { "value": "pb-xl", "label": "X-Large - 40px" },
+        { "value": "pb-xxl", "label": "XX-Large - 60px" },
+        { "value": "pb-xxxl", "label": "XXX-Large - 80px" }
+      ],
+      "default": "pb-0"
+    },
+    {
+      "type": "select",
+      "id": "desktop_margin_top",
+      "label": "Desktop - Margin Top",
+      "options": [
+        { "value": "inherit", "label": "Inherit" },
+        { "value": "tabletl:mt-0", "label": "None" },
+        { "value": "tabletl:mt-sm", "label": "Small - 8px" },
+        { "value": "tabletl:mt-md", "label": "Medium - 16px" },
+        { "value": "tabletl:mt-lg", "label": "Large - 24px" },
+        { "value": "tabletl:mt-xl", "label": "X-Large - 40px" },
+        { "value": "tabletl:mt-xxl", "label": "XX-Large - 60px" },
+        { "value": "tabletl:mt-xxxl", "label": "XXX-Large - 80px" }
+      ],
+      "default": "inherit"
+    },
+    {
+      "type": "select",
+      "id": "desktop_margin_bottom",
+      "label": "Desktop - Margin Bottom",
+      "options": [
+        { "value": "inherit", "label": "Inherit" },
+        { "value": "tabletl:mb-0", "label": "None" },
+        { "value": "tabletl:mb-sm", "label": "Small - 8px" },
+        { "value": "tabletl:mb-md", "label": "Medium - 16px" },
+        { "value": "tabletl:mb-lg", "label": "Large - 24px" },
+        { "value": "tabletl:mb-xl", "label": "X-Large - 40px" },
+        { "value": "tabletl:mb-xxl", "label": "XX-Large - 60px" },
+        { "value": "tabletl:mb-xxxl", "label": "XXX-Large - 80px" }
+      ],
+      "default": "inherit"
+    },
+    {
+      "type": "select",
+      "id": "desktop_padding_top",
+      "label": "Desktop - Padding Top",
+      "options": [
+        { "value": "inherit", "label": "Inherit" },
+        { "value": "tabletl:pt-0", "label": "None" },
+        { "value": "tabletl:pt-sm", "label": "Small - 8px" },
+        { "value": "tabletl:pt-md", "label": "Medium - 16px" },
+        { "value": "tabletl:pt-lg", "label": "Large - 24px" },
+        { "value": "tabletl:pt-xl", "label": "X-Large - 40px" },
+        { "value": "tabletl:pt-xxl", "label": "XX-Large - 60px" },
+        { "value": "tabletl:pt-xxxl", "label": "XXX-Large - 80px" }
+      ],
+      "default": "inherit"
+    },
+    {
+      "type": "select",
+      "id": "desktop_padding_bottom",
+      "label": "Desktop - Padding Bottom",
+      "options": [
+        { "value": "inherit", "label": "Inherit" },
+        { "value": "tabletl:pb-0", "label": "None" },
+        { "value": "tabletl:pb-sm", "label": "Small - 8px" },
+        { "value": "tabletl:pb-md", "label": "Medium - 16px" },
+        { "value": "tabletl:pb-lg", "label": "Large - 24px" },
+        { "value": "tabletl:pb-xl", "label": "X-Large - 40px" },
+        { "value": "tabletl:pb-xxl", "label": "XX-Large - 60px" },
+        { "value": "tabletl:pb-xxxl", "label": "XXX-Large - 80px" }
+      ],
+      "default": "inherit"
+    },
+    {
+      "type": "header",
+      "content": "Content Settings"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "select",
+      "id": "title_tag",
+      "label": "Title Tag",
+      "options": [
+        { "value": "h1", "label": "H1" },
+        { "value": "h2", "label": "H2" },
+        { "value": "h3", "label": "H3" },
+        { "value": "h4", "label": "H4" },
+        { "value": "h5", "label": "H5" }
+      ],
+      "default": "h2"
+    },
+    {
+      "type": "richtext",
+      "id": "content",
+      "label": "Content"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "content_block",
+      "name": "Content Block",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "text",
+          "id": "cta_label",
+          "label": "CTA - Label"
+        },
+        {
+          "type": "url",
+          "id": "cta_link",
+          "label": "CTA - Link"
+        },
+        {
+          "type": "select",
+          "id": "cta_style",
+          "label": "CTA - Style",
+          "options": [
+            { "value": "btn btn--gold", "label": "Gold Button" },
+            { "value": "btn btn--black", "label": "Black Button" }
+          ],
+          "default": "btn btn--black"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Our Values"
+    }
+  ]
+}
+{% endschema %}

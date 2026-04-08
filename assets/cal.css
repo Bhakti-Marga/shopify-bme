@@ -1,0 +1,22 @@
+#calendar {
+      max-width: 90%;
+  height:800px;
+      margin: 40px auto;
+    }
+
+a.bold.link-faded-reverse {
+    color: white;
+    text-decoration: none;
+}
+
+.fc-day-grid-event > .fc-content {
+    white-space: pre-wrap;
+}
+
+.w-full {
+    color: #002554;
+    text-decoration: none;
+}
+.tap-area {
+    color: white;
+}

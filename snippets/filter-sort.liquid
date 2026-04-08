@@ -1,0 +1,59 @@
+{%- comment -%}
+ * snippet: filter-sort.liquid 
+ * ---------------------------
+ * Collection filter and sort
+ *
+ * @param {Object} results: Collection of Search object
+ * @param {Boolean} enable_filtering
+ * @param {Boolean} enable_sorting
+ * @param {String} scope - descriptive string to scope different filter-sort instances
+ * @usage 
+    {% render 'facets', 
+      results: collection, 
+      enable_filtering: true, 
+      enable_sorting: true 
+      scope: "mobile" 
+    %}
+{%- endcomment -%}
+
+<filter-sort class="filter-sort block" data-scope="{{ scope }}">
+  <form class="filter-sort__form" js-filter-form>
+    <div class="filter-sort__filters-container grid grid-cols-1">
+      {%- for filter in results.filters -%}
+        <div class="filter-sort flex" data-index="{{ forloop.index }}">
+          <nav id="{{ filter.label | handle }}-master-filter" class="filter-sort__values-container overflow-x-auto extrawide:pl-[var(--padding-left)]"
+            style="--padding-left: calc((100vw - 1600px) / 2)">
+            <ul class="filter-sort__values flex gap-md" role="list">
+              {%- for value in filter.values -%}
+                {% capture value_id %}FilterSort-{{ filter.label | escape }}-{{ forloop.index }}-{{ scope }}{% endcapture %}
+                <li class="filter-sort__value {% if forloop.first %}pl-12 tabletp:pl-20 tabletl:pl-xl {% elsif forloop.last %}pr-12 tabletp:pr-20 tabletl:pr-xl{% endif %}" js-filter>
+                  <div class="filter-value relative">
+                    <input 
+                    class="absolute top-0 w-0 h-0"
+                    type="checkbox"
+                    name="{{ value.param_name }}"
+                    value="{{ value.value }}"
+                    id="{{ value_id }}"
+                    {% if value.active %}checked{% endif %}
+                    {% if value.count == 0 and value.active == false %}disabled{% endif %}
+                    > 
+                    <label for="{{ value_id }}" 
+                      class="filter-value__label capitalize whitespace-nowrap inline-block rounded-full text-16 py-12 px-20 leading-[1.5em] border border-gray-lighter duration-500 tabletp:hover:border-gray-dark {% if value.active %}bg-gray{% endif %} {% if value.count == 0 and value.active == false %} disabled opacity-30 {% endif %}"
+                    >{{ value.label | escape }}</label>
+                  </div>
+                </li>                          
+              {%- endfor -%}
+            </ul>   
+          </nav><!-- .filter-sort__values-container -->
+        </div>
+      {%- endfor -%}
+    </div><!-- .filter-sort__filters-container -->
+  </form>
+  <loading-spinner class="filter__loading-spinner fixed" style="--width: 40px; --height: 40px;"></loading-spinner>
+</filter-sort>
+
+<style>
+  .filter-sort__values-container {
+    scrollbar-width: none;
+  }
+</style>

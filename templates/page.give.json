@@ -1,0 +1,308 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "page__main",
+      "disabled": true,
+      "settings": {}
+    },
+    "section_hero_cBpMpY": {
+      "type": "section__hero",
+      "custom_css": [],
+      "settings": {
+        "padding_top": "0px",
+        "desktop_padding_top": "inherit",
+        "padding_bottom": "16px",
+        "desktop_padding_bottom": "60px",
+        "padding_horizontal": "px-0",
+        "desktop_padding_horizontal": "inherit",
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "use_container": true,
+        "set_100vh": false,
+        "set_100vh_desktop": true,
+        "border_radius": 16,
+        "aspect_ratio": "auto",
+        "aspect_ratio_desktop": "16/9",
+        "image": "shopify://shop_images/GIVE-PAGE-HERO-Edit.jpg",
+        "bg_color": "#16254c",
+        "content_width": "max-w-5xl",
+        "text_align": "text-left",
+        "text_color": "#ffffff",
+        "title": "Tus donaciones están cambiando el mundo.",
+        "title_font_style": "h2",
+        "subtitle": "<p>Puedes apoyar la misión de Bhakti Marga de abrir los corazones de la humanidad en todo el mundo. Bhakti Marga es una organización gestionada por voluntarios y su objetivo es aportar las herramientas y la sabiduría necesarias para ayudar a todos a experimentar el amor de Dios en sus vidas. Tu apoyo y donación ayudarán a llegar a todos aquellos que necesiten estas herramientas.</p>",
+        "button_text": "Donar ahora",
+        "button_url": "shopify://products/make-a-donation",
+        "button_style": "btn",
+        "anchor_to_pricing": false,
+        "video_title": "",
+        "horizontal_position": "justify-center",
+        "vertical_position": "items-end"
+      }
+    },
+    "section_icon_grid_BFYa8i": {
+      "type": "section__icon-grid",
+      "blocks": {
+        "content_block_VGaw7Y": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify://shop_images/Make_your_giving_recurring.png",
+            "title": "Haz que tus donaciones sean recurrentes",
+            "title_tag": "h3",
+            "title_font_style": "h5",
+            "description": "<p>Solo tienes que pulsar el botón de repetición y establecer la frecuencia que más te convenga. </p>",
+            "content_align": "items-center"
+          }
+        },
+        "content_block_MxbrVy": {
+          "type": "content_block",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/icon-placeholder.png",
+            "title": "Select offerings",
+            "title_tag": "h3",
+            "title_font_style": "h5",
+            "description": "<p>Selecciona entre 4 ofertas específicas que sean significativas para ti</p>",
+            "content_align": "items-center"
+          }
+        }
+      },
+      "block_order": [
+        "content_block_VGaw7Y",
+        "content_block_MxbrVy"
+      ],
+      "custom_css": [],
+      "settings": {
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "padding_top": "pt-xl",
+        "padding_bottom": "pb-0",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "desktop_padding_top": "inherit",
+        "desktop_padding_bottom": "tabletl:pb-xl",
+        "cols_mobile": "1",
+        "cols_desktop": "1",
+        "text_align": "text-center",
+        "title": "Facilidad de donación",
+        "subtitle": "",
+        "button_text": "",
+        "button_url": "",
+        "button_style": "btn"
+      }
+    },
+    "section_text_content_da8qWR": {
+      "type": "section__text-content",
+      "custom_css": [],
+      "settings": {
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "padding_top": "pt-0",
+        "padding_bottom": "pb-0",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "desktop_padding_top": "inherit",
+        "desktop_padding_bottom": "inherit",
+        "max_width": "",
+        "pretitle": "",
+        "title": "",
+        "title_tag": "h2",
+        "title_font_style": "h3",
+        "description": "<p>Hacemos que dar sea más fácil que nunca con tarjeta de crédito, ACH, Apple Pay y Google Pay</p>",
+        "credits": ""
+      }
+    },
+    "section_text_content_fGhEg9": {
+      "type": "section__text-content",
+      "disabled": true,
+      "custom_css": [],
+      "settings": {
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "padding_top": "pt-xl",
+        "padding_bottom": "pb-xl",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "desktop_padding_top": "tabletl:pt-xxxl",
+        "desktop_padding_bottom": "tabletl:pb-xxxl",
+        "max_width": "",
+        "pretitle": "",
+        "title": "Toque para donar",
+        "title_tag": "h2",
+        "title_font_style": "h2",
+        "description": "<p>Lanzamiento en junio.</p>",
+        "credits": ""
+      }
+    },
+    "section_rich_text_BBqkkC": {
+      "type": "section__rich-text",
+      "disabled": true,
+      "settings": {
+        "margin_top": "mt-md",
+        "margin_bottom": "mb-0",
+        "padding_top": "pt-0",
+        "padding_bottom": "pb-0",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "desktop_padding_top": "inherit",
+        "desktop_padding_bottom": "inherit",
+        "content": "<p>Dar sin complicaciones. Generosidad sin límites.</p>",
+        "text_alignment": "left",
+        "max_width": "",
+        "apply_max_width": false
+      }
+    },
+    "section_hero_EmDBMy": {
+      "type": "section__hero",
+      "custom_css": [],
+      "settings": {
+        "padding_top": "0px",
+        "desktop_padding_top": "0px",
+        "padding_bottom": "0px",
+        "desktop_padding_bottom": "inherit",
+        "padding_horizontal": "px-0",
+        "desktop_padding_horizontal": "inherit",
+        "margin_top": "mt-xl",
+        "margin_bottom": "mb-xl",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "use_container": true,
+        "set_100vh": false,
+        "set_100vh_desktop": true,
+        "border_radius": 16,
+        "aspect_ratio": "auto",
+        "aspect_ratio_desktop": "auto",
+        "image": "shopify://shop_images/2019-09-14-p-0208.jpg",
+        "bg_color": "rgba(0,0,0,0)",
+        "content_width": "max-w-5xl",
+        "text_align": "text-center",
+        "text_color": "#ffffff",
+        "title": "El secreto de la vida es dar",
+        "title_font_style": "h3",
+        "subtitle": "<p>La misión de Bhakti Marga ha tocado cientos de miles de vidas en todo el mundo a través de sus programas y centros espirituales. Este servicio solo es posible gracias a la visión de Paramahamsa Vishwanada, el compromiso de nuestros voluntarios y la generosidad de nuestros donantes.</p>",
+        "button_text": "Dona hoy",
+        "button_url": "shopify://products/make-a-donation",
+        "button_style": "btn",
+        "anchor_to_pricing": false,
+        "video_title": "",
+        "horizontal_position": "justify-center",
+        "vertical_position": "items-center"
+      }
+    },
+    "section_rich_text_GJV7N4": {
+      "type": "section__rich-text",
+      "disabled": true,
+      "settings": {
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "padding_top": "pt-0",
+        "padding_bottom": "pb-0",
+        "desktop_margin_top": "tabletl:mt-md",
+        "desktop_margin_bottom": "inherit",
+        "desktop_padding_top": "tabletl:pt-xl",
+        "desktop_padding_bottom": "inherit",
+        "content": "<h2>Otras formas de donar</h2><p>No tienes por qué limitar tus donaciones. Podemos aceptar donaciones que no sean en efectivo, incluidas acciones y criptomonedas.</p>",
+        "text_alignment": "center",
+        "max_width": "",
+        "apply_max_width": false
+      }
+    },
+    "section_icon_grid_YxB9bL": {
+      "type": "section__icon-grid",
+      "blocks": {
+        "content_block_NQRia9": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify://shop_images/icon-placeholder.png",
+            "title": "",
+            "title_tag": "h3",
+            "title_font_style": "h5",
+            "description": "<p>Stocks, Bonds and mutual funds</p>",
+            "content_align": "items-center"
+          }
+        },
+        "content_block_KHg7dc": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify://shop_images/icon-placeholder.png",
+            "title": "",
+            "title_tag": "h3",
+            "title_font_style": "h5",
+            "description": "<p>Retirement Assets and Trusts</p>",
+            "content_align": "items-center"
+          }
+        },
+        "content_block_VFcNq3": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify://shop_images/icon-placeholder.png",
+            "title": "",
+            "title_tag": "h3",
+            "title_font_style": "h5",
+            "description": "<p>Cryptocurrency, Bitcoin and more </p>",
+            "content_align": "items-center"
+          }
+        },
+        "content_block_BG9kd3": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify://shop_images/icon-placeholder.png",
+            "title": "",
+            "title_tag": "h3",
+            "title_font_style": "h5",
+            "description": "<p>Other Donations welcome</p>",
+            "content_align": "items-center"
+          }
+        }
+      },
+      "block_order": [
+        "content_block_NQRia9",
+        "content_block_KHg7dc",
+        "content_block_VFcNq3",
+        "content_block_BG9kd3"
+      ],
+      "disabled": true,
+      "custom_css": [],
+      "settings": {
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "padding_top": "pt-0",
+        "padding_bottom": "pb-0",
+        "desktop_margin_top": "tabletl:mt-xl",
+        "desktop_margin_bottom": "tabletl:mb-xxxl",
+        "desktop_padding_top": "inherit",
+        "desktop_padding_bottom": "inherit",
+        "cols_mobile": "1",
+        "cols_desktop": "4",
+        "text_align": "text-center",
+        "title": "",
+        "subtitle": "",
+        "button_text": "Donar ahora",
+        "button_url": "mailto:donate@bhaktimarga.com",
+        "button_style": "btn btn--gold"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "section_hero_cBpMpY",
+    "section_icon_grid_BFYa8i",
+    "section_text_content_da8qWR",
+    "section_text_content_fGhEg9",
+    "section_rich_text_BBqkkC",
+    "section_hero_EmDBMy",
+    "section_rich_text_GJV7N4",
+    "section_icon_grid_YxB9bL"
+  ]
+}

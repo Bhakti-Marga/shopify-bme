@@ -1,0 +1,159 @@
+<div class="program-header">
+  <div class="program-header__title-wrapper bg-blue text-white">
+    <div class="container py-32 tabletl:py-xxl tabletp:flex tabletp:justify-between">
+      <{{ section.settings.title_tag }} class="program-header__title mb-md  leading-[1.15] max-w-[15ch] tabletp:leading-none tabletp:mb-0 {% if section.settings.title_font_style != blank %}{{  section.settings.title_font_style  }}{% endif %}">
+        {{ page.title | escape }}
+      </{{ section.settings.title_tag }}>  
+      <div class="program-header__description text-18 tabletp:text-20 max-w-[44ch] tabletp:ml-xl">{{ page.content  }}</div>
+    </div>
+  </div>
+  <div class="program-header__grid-wrapper">
+    <ul class="program-header-grid container grid gap-md grid-cols-1 tabletl:flex tabletl:justify-between"
+      style="--item-width: calc((100% - 20px) / 2 )">
+      {%- for block in section.blocks -%}
+        <li class="program-header-grid__item aspect-square text-[var(--color)] rounded relative p-20 flex flex-col justify-end h-auto flex-grow tabletl:aspect-[4/3] tabletl:w-[var(--item-width)] tabletl:p-32"
+          style="--color: {{ block.settings.text_color }};">
+          {% if block.settings.image != blank %}
+            {% render 'lazy-image',
+              image: block.settings.image,
+              img_classes: 'object-cover rounded absolute top-0 left-0 h-full'
+            %}
+          {% endif %}
+          <div class="program-header-grid__content relative">
+            {% if block.settings.title != blank %}
+              <h2 class="program-header-grid__title h4 leading-none mb-md">
+                {{ block.settings.title }}
+              </h2>  
+            {% endif %}
+
+            {% if block.settings.description != blank %}
+              <div class="program-header-grid__description text-18 font-500 mb-md tabletl:text-20">{{ block.settings.description }}</div>
+            {% endif %}
+
+            {% if block.settings.cta_klaviyo_embed != blank %}
+              <button class="klaviyo_form_trigger-{{ block.settings.cta_klaviyo_embed }} {{ block.settings.button_style }} inline-block mt-md">{{ block.settings.btn_label }}</button>
+              <script type="text/javascript">
+                document.querySelector('.klaviyo_form_trigger-{{ block.settings.cta_klaviyo_embed }}').addEventListener('click', function (){
+                  window._klOnsite = window._klOnsite || []; 
+                  window._klOnsite.push(['openForm', '{{ block.settings.cta_klaviyo_embed }}']);
+                });
+              </script>
+            {% elsif block.settings.btn_label != blank and block.settings.btn_link != blank %}
+              <a
+                class="{{ block.settings.button_style }} inline-block mt-md"
+                href="{{ block.settings.btn_link }}"
+              >
+                {{ block.settings.btn_label }}
+              </a>
+            {% endif %}
+          </div>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+
+{% schema %}
+{
+"name": "Program Header",
+"settings": [
+  {
+    "type": "header",
+    "content": "Header Title Settings"
+  },
+  {
+    "type": "select",
+    "id": "title_tag",
+    "label": "Semantic HTML Title Tag",
+    "options": [
+      { "value": "h1", "label": "H1" },
+      { "value": "h2", "label": "H2" },
+      { "value": "h3", "label": "H3" },
+      { "value": "h4", "label": "H4" },
+      { "value": "h5", "label": "H5" },
+      { "value": "h6", "label": "H6" }
+    ],
+    "default": "h1"
+  },
+  {
+    "type": "select",
+    "id": "title_font_style",
+    "label": "Title Font Style",
+    "options": [
+      { "value": "h1", "label": "H1 - 120px / 80px" },
+      { "value": "h2", "label": "H2 - 88px / 48px" },
+      { "value": "h3", "label": "H3 - 56px / 40px" },
+      { "value": "h4", "label": "H4 - 40px / 32px" },
+      { "value": "h5", "label": "H5 - 32px / 24px" }
+    ],
+    "default": "h2"
+  }
+],
+  "blocks": [
+    {
+      "type": "heading",
+      "name": "Program Block",
+      "limit": 2,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "richtext",
+          "id": "description",
+          "label": "Description"
+        }, 
+        {
+          "type": "select",
+          "id": "text_color",
+          "label": "Text Color",
+          "options": [
+            {
+              "value": "white",
+              "label": "White"
+            },
+            {
+              "value": "black",
+              "label": "Black"
+            }
+          ],
+          "default": "black"
+        },
+        {
+          "type": "text",
+          "id": "btn_label",
+          "label": "Button Label"
+        },
+        {
+          "type": "url",
+          "id": "btn_link",
+          "label": "Button Link"
+        },
+        {
+          "type": "select",
+          "id": "button_style",
+          "label": "Button - Style",
+          "options": [
+            { "value": "btn", "label": "White Button" },
+            { "value": "btn btn--gold", "label": "Gold Button" },
+            { "value": "btn btn--black text-white", "label": "Black Button" }
+          ],
+          "default": "btn btn--black text-white"
+        },
+        {
+          "type": "textarea",
+          "id": "cta_klaviyo_embed",
+          "label": "Klaviyo Popup Form ID"
+        }
+      ]
+    }
+  ],
+}
+{% endschema %}

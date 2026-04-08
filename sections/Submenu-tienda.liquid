@@ -1,0 +1,77 @@
+<nav class="collection-submenu-tienda" aria-label="Navegación de colecciones" id="submenu-tienda">
+  <div class="collection-submenu-tienda__container">
+    {% for link in linklists['submenu-de-tienda'].links %}
+      <a href="{{ link.url }}" class="collection-submenu-tienda__item {% if link.active %}collection-submenu-tienda__item--active{% endif %}">
+        {{ link.title }}
+      </a>
+    {% endfor %}
+  </div>
+</nav>
+
+<style>
+  .collection-submenu-tienda {
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 0;
+  }
+  
+  .collection-submenu-tienda__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem 2rem;
+    flex-wrap: wrap;
+  }
+  
+  .collection-submenu-tienda__item {
+    text-decoration: none;
+    color: #333;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+  }
+  
+  .collection-submenu-tienda__item:hover {
+    background-color: #e8e8e8;
+    color: #000;
+  }
+  
+  .collection-submenu-tienda__item--active {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  @media (max-width: 768px) {
+    .collection-submenu-tienda__container {
+      gap: 1rem;
+      padding: 0.75rem 1rem;
+    }
+    
+    .collection-submenu-tienda__item {
+      font-size: 0.9rem;
+      padding: 0.4rem 0.8rem;
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Submenús de Tienda",
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "Esta sección muestra automáticamente los enlaces del menú 'Submenus de Tienda': Esenciales bhakti, Libros y música, y Todos los productos."
+    }
+  ],
+  "presets": [
+    {
+      "name": "Submenús de Tienda"
+    }
+  ]
+}
+{% endschema %}

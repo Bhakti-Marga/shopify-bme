@@ -1,0 +1,304 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "page__main",
+      "disabled": true,
+      "settings": {}
+    },
+    "section_hero_cBpMpY": {
+      "type": "section__hero",
+      "settings": {
+        "padding_top": "0px",
+        "desktop_padding_top": "inherit",
+        "padding_bottom": "40px",
+        "desktop_padding_bottom": "60px",
+        "padding_horizontal": "px-0",
+        "desktop_padding_horizontal": "inherit",
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "use_container": true,
+        "set_100vh": true,
+        "set_100vh_desktop": true,
+        "border_radius": 16,
+        "aspect_ratio": "9\/16",
+        "aspect_ratio_desktop": "4\/3",
+        "image": "shopify:\/\/shop_images\/Bhutabhrteshwarnath_Mandir-poster.jpg",
+        "image_desktop": "shopify:\/\/shop_images\/Bhutabhrteshwarnath_Mandir-poster.jpg",
+        "bg_color": "#16254c",
+        "content_width": "max-w-5xl",
+        "text_align": "text-left",
+        "text_color": "#ffffff",
+        "title": "Bhutabhrteshwarnath Mandir",
+        "title_font_style": "h3",
+        "subtitle": "<h5>DEEPEN YOUR JOURNEY TOWARDS LOVE<\/h5>",
+        "button_text": "Retreats & Events",
+        "button_url": "shopify:\/\/pages\/all-programs",
+        "button_style": "btn btn--gold",
+        "anchor_to_pricing": false,
+        "video_title": "",
+        "poster_image": "shopify:\/\/shop_images\/IMG_1144-Edit.jpg",
+        "poster_image_desktop": "shopify:\/\/shop_images\/IMG_1144-Edit.jpg",
+        "horizontal_position": "justify-center",
+        "vertical_position": "items-end"
+      }
+    },
+    "section_events_carousel_LEJzgw": {
+      "type": "section__events-carousel",
+      "blocks": {
+        "block_WxMXQ7": {
+          "type": "block",
+          "settings": {
+            "article": "events\/shivaratri-2025"
+          }
+        },
+        "block_39E9Bm": {
+          "type": "block",
+          "settings": {
+            "article": "events\/maha-abhishekam-fire-ceremony-elmira-new-york"
+          }
+        },
+        "block_rjjER4": {
+          "type": "block",
+          "settings": {
+            "article": "events\/paramahamsa-vishwanandas-birthday-2025"
+          }
+        },
+        "block_NiiU7D": {
+          "type": "block",
+          "settings": {
+            "article": "events\/gurupurnima-2025"
+          }
+        },
+        "block_U8LwjC": {
+          "type": "block",
+          "settings": {
+            "article": "events-1\/krishna-janmashtami-2025"
+          }
+        },
+        "block_DfzgkA": {
+          "type": "block",
+          "settings": {
+            "article": "events\/navaratri-2025"
+          }
+        },
+        "block_EygxcV": {
+          "type": "block",
+          "settings": {
+            "article": "events-1\/darshan-blessing-elmira-new-york-1"
+          }
+        }
+      },
+      "block_order": [
+        "block_WxMXQ7",
+        "block_39E9Bm",
+        "block_rjjER4",
+        "block_NiiU7D",
+        "block_U8LwjC",
+        "block_DfzgkA",
+        "block_EygxcV"
+      ],
+      "settings": {
+        "padding_top": "pt-xl",
+        "padding_bottom": "pb-xl",
+        "desktop_padding_top": "inherit",
+        "desktop_padding_bottom": "inherit",
+        "set_dark_theme": false,
+        "apply_gradient": true,
+        "title": "Upcoming Events",
+        "title_tag": "h2",
+        "cta_label": "Discover Events",
+        "cta_url": "shopify:\/\/blogs\/events",
+        "hide_arrows_desktop": false
+      }
+    },
+    "section_image_text_blocks_XJ9kGW": {
+      "type": "section__image_text_blocks",
+      "blocks": {
+        "image_block_qrJaRt": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/narasimha-poster.jpg",
+            "height": "50vh",
+            "desktop_height": "inherit"
+          }
+        },
+        "content_block_TFpAMn": {
+          "type": "content_block",
+          "settings": {
+            "title": "Daily Livestream",
+            "title_tag": "h3",
+            "title_font_style": "h4",
+            "description": "<p>Join us every day by livestream for Morning Prayers and Evening Arati, direct from the Sri Bhutabhrteshwarnath Mandir. Central European Time:<\/p><ul><li>Morning Prayers: 7:00 to 8:20<\/li><li>Sunday Morning Prayers: 9:00 to 11:30<\/li><li>Evening Arati: 20:00 to 20:10<\/li><\/ul>",
+            "credits": "",
+            "cta_url": "#",
+            "cta_label": "Join Live",
+            "text_align": "left",
+            "desktop_text_align": "inherit",
+            "vertical_padding": "py-lg",
+            "vertical_padding_desktop": "tabletl:py-xxl"
+          }
+        }
+      },
+      "block_order": [
+        "image_block_qrJaRt",
+        "content_block_TFpAMn"
+      ],
+      "settings": {
+        "margin_top": "mt-xl",
+        "margin_bottom": "mb-xxl",
+        "desktop_margin_top": "tabletl:mt-xl",
+        "desktop_margin_bottom": "tabletl:mb-xxl",
+        "vertical_align": "center",
+        "flip_columns_desktop": false
+      }
+    },
+    "section_hero_XrFNy3": {
+      "type": "section__hero",
+      "settings": {
+        "padding_top": "0px",
+        "desktop_padding_top": "0px",
+        "padding_bottom": "0px",
+        "desktop_padding_bottom": "inherit",
+        "padding_horizontal": "px-0",
+        "desktop_padding_horizontal": "inherit",
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "use_container": false,
+        "set_100vh": true,
+        "set_100vh_desktop": true,
+        "border_radius": 0,
+        "aspect_ratio": "9\/16",
+        "aspect_ratio_desktop": "16\/9",
+        "image": "shopify:\/\/shop_images\/temple-card.jpg",
+        "bg_color": "",
+        "content_width": "max-w-5xl",
+        "text_align": "text-left",
+        "text_color": "#ffffff",
+        "title": "Bhutabhrteshwarnath Mandir",
+        "title_font_style": "h2",
+        "subtitle": "<p>Your Spiritual Home in the Heart of Europe<\/p>",
+        "button_text": "Visit the Temple",
+        "button_url": "shopify:\/\/pages\/calendar",
+        "button_style": "btn",
+        "anchor_to_pricing": false,
+        "video_title": "",
+        "horizontal_position": "justify-center",
+        "vertical_position": "items-center"
+      }
+    },
+    "section_text_image_grid_q8FKHB": {
+      "type": "section__text-image-grid",
+      "blocks": {
+        "image_block_RA3nVQ": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/temple-pag1.jpg"
+          }
+        },
+        "image_block_Dee9xw": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/temple-pag4.jpg"
+          }
+        },
+        "image_block_qhpXeT": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/temple-pag3.jpg"
+          }
+        },
+        "image_block_gKfa4C": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/temple-pag2.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "image_block_RA3nVQ",
+        "image_block_Dee9xw",
+        "image_block_qhpXeT",
+        "image_block_gKfa4C"
+      ],
+      "custom_css": [],
+      "settings": {
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "padding_top": "pt-xl",
+        "padding_bottom": "pb-xxl",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "desktop_padding_top": "tabletl:pt-xxxl",
+        "desktop_padding_bottom": "tabletl:pb-xxxl",
+        "mobile_position": "top",
+        "position": "left",
+        "title": "There’s a place for you here",
+        "title_tag": "h2",
+        "description": "<p>The Bhutabhrteshwarnath Narasimha Temple is a spiritual center dedicated to helping you bring more love and devotion into your daily life. Through daily prayers, uplifting weekly events, and transformational Vedic festivals, we encourage each individual to express their unique loving devotion for God. All are welcome to explore this beautiful path.<\/p>"
+      }
+    },
+    "section_image_text_blocks_H63g8U": {
+      "type": "section__image_text_blocks",
+      "blocks": {
+        "image_block_NzKizB": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/come-visit-us-the-ashram_e2674f5e-3d18-4d52-b625-e1803430a964.webp",
+            "height": "50vh",
+            "desktop_height": "inherit"
+          }
+        },
+        "content_block_JYJVtf": {
+          "type": "content_block",
+          "settings": {
+            "title": "The Bhutabhrteshwarnath Narasimha Temple",
+            "title_tag": "h4",
+            "title_font_style": "h4",
+            "description": "<h5>Your Spiritual Home in the Heart of Europe<\/h5>",
+            "credits": "",
+            "cta_url": "shopify:\/\/pages\/calendar",
+            "cta_label": "Visit the Temple",
+            "text_align": "left",
+            "desktop_text_align": "inherit",
+            "vertical_padding": "py-lg",
+            "vertical_padding_desktop": "tabletl:py-xxl"
+          }
+        }
+      },
+      "block_order": [
+        "image_block_NzKizB",
+        "content_block_JYJVtf"
+      ],
+      "settings": {
+        "margin_top": "mt-xl",
+        "margin_bottom": "mb-xl",
+        "desktop_margin_top": "tabletl:mt-xl",
+        "desktop_margin_bottom": "tabletl:mb-xxxl",
+        "vertical_align": "center",
+        "flip_columns_desktop": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "section_hero_cBpMpY",
+    "section_events_carousel_LEJzgw",
+    "section_image_text_blocks_XJ9kGW",
+    "section_hero_XrFNy3",
+    "section_text_image_grid_q8FKHB",
+    "section_image_text_blocks_H63g8U"
+  ]
+}

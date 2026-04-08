@@ -1,0 +1,218 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "general": {
+    "password_page": {
+      "login_form_heading": "Entra en tu usuario usando tu contraseña",
+      "login_password_button": "Introduce tu contraseña",
+      "login_form_password_label": "Contraseña",
+      "login_form_password_placeholder": "Tu contraseña",
+      "login_form_error": "Contraseña errónea",
+      "login_form_submit": "Aceptar",
+      "modal": "Contraseña Modal",
+      "powered_by_shopify_html": "Esta tienda está gestoinada por Shopify"
+    },
+    "social": {
+      "alt_text": {
+        "share_on_facebook": "Comparte en Facebook",
+        "share_on_twitter": "Comparte en twitter",
+        "share_on_pinterest": "Comparte en Pinterest"
+      }
+    },
+    "continue_shopping": "Continúa eligiendo",
+    "pagination": {
+      "label": "Paginación",
+      "page": "Página {{number}}",
+      "next": "Próxima página",
+      "previous": "Página Anterior"
+    },
+    "search": {
+      "search": "Buscar"
+    },
+    "cart": {
+      "view": "Ver carrito ({{count}})",
+      "item_added": "Artículo añadido al carrito"
+    },
+    "share": {
+      "copy_to_clipboard": "Copiar link",
+      "share": "Compartir",
+      "share_url": "Compartir link",
+      "success_message": "Link copiado"
+    }
+  },
+  "newsletter": {
+    "label": "Tu email",
+    "success": "Gracias por suscribirte",
+    "button_label": "Suscribir"
+  },
+  "accessibility": {
+    "skip_to_product_info": "Saltar a la información de producto",
+    "close": "Cerrar",
+    "unit_price_separator": "por",
+    "vendor": "Vendedor",
+    "link_messages": {
+      "new_window": "Abre en una ventana nueva",
+      "external": "Abre una web diferente"
+    },
+    "of": "de",
+    "next_slide": "Siguiente",
+    "previous_slide": "Anterior",
+    "loading": "Cargando..."
+  },
+  "blogs": {
+    "article": {
+      "read_more_title": "Leer más {{ title}}",
+      "read_more": "Leer más",
+      "comments": {
+        "one": "{{ count }} comentario",
+        "other": "{{ count }} comentarios"
+      },
+      "comment_form_title": "Deja tu comentario",
+      "name": "Nombre",
+      "email": "Email",
+      "message": "Comentario",
+      "post": "Comentario del Artículo",
+      "back_to_blog": "vovler al Blog",
+      "share": "Compartir este artículo",
+      "success": "Tu comentario ha sido enviado. Gracias",
+      "success_moderated": "Tu comentario será revisado. Gracias"
+    }
+  },
+  "templates": {
+    "search": {
+      "no_results": "No se han encontrado resultados para \"{{ terms }}\". Vuelve a intentarlo.",
+      "page": "Página",
+      "results_with_count": {
+        "one": "{{ count }} resultados para \"{{ term }}\".",
+        "other": "{{ count }} resultados para \"{{ terms }}\"."
+      },
+      "title": "Resultados de la Búsqueda"
+    },
+    "cart": {
+      "cart": "Carrito"
+    },
+    "contact": {
+      "form": {
+        "name": "Nombre",
+        "email": "Email",
+        "phone": "Número de teléfono",
+        "comment": "Comentario",
+        "send": "Enviar",
+        "post_success": "Gracias por contactar con nosotros. Nos pondremos en contacto contigo lo antes posible",
+        "error_heading": "Por favor ajunta lo siguiente:"
+      }
+    },
+    "404": {
+      "title": "Página no encontrada",
+      "subtext": "404"
+    }
+  },
+  "localization": {
+    "country_label": "País/Región",
+    "language_label": "Lengua",
+    "update_language": "Lengua actualizada",
+    "update_country": "País/Región actualizado"
+  },
+  "gift_cards": {
+    "issued": {
+      "title": "Aquí está tu tarjeta de {{ value }} para la {{ shop }}",
+      "subtext": "Tu tarjeta regalo",
+      "gift_card_code": "El código de tu tarjeta regalo",
+      "shop_link": "Continúa eligiendo",
+      "add_to_apple_wallet": "Añadir a Apple Wallet",
+      "qr_image_alt": "Código QR - Escanealo",
+      "copy_code": "Copiar código",
+      "expired": "Caducado",
+      "copy_code_success": "Código copiado con éxito",
+      "print_gift_card": "Imprimir"
+    }
+  },
+  "sections": {
+    "header": {
+      "announcement": "Anuncio",
+      "menu": "Menu",
+      "cart_count": {
+        "one": "{{ count }} artículo",
+        "other": "{{ count }} artículos"
+      }
+    },
+    "cart": {
+      "title": "Tu carrito",
+      "caption": "Artículos",
+      "remove_title": "Eliminar {{ title }}",
+      "new_subtotal": "Nuevo subtotal",
+      "note": "Necesitas darnos unas instrucciones específicas:",
+      "checkout": "Confirmar y pagar",
+      "empty": "Tu carrito está vacío",
+      "cart_quantity_error_html": "Solo puedes añadir [quantity] de este artículo a tu carrito. Vuelve a intentarlo",
+      "headings": {
+        "product": "Prodcuto",
+        "price": "Precio",
+        "total": "Total",
+        "quantity": "Cantidad"
+      },
+      "update": "Actualizar"
+    },
+    "footer": {
+      "social_placeholder": "Síguenos en redes sociales",
+      "payment": "Métodos de pago"
+    },
+    "featured_blog": {
+      "view_all": "Ver todo",
+      "onboarding_title": "Artículo del Blog"
+    },
+    "featured_collection": {
+      "view_all": "Ver todo",
+      "view_all_label": "Ver todos los productos de la colección {{ collection_name }}"
+    },
+    "collection_list": {
+      "view_all": "Ver todo"
+    },
+    "collection_template": {
+      "apply": "Aplicar",
+      "clear": "Borrar",
+      "clear_all": "Borrar todo",
+      "empty": "No se han encontrado productos",
+      "from": "De",
+      "filter_and_sort": "Filtra y selecciona ",
+      "filter_by_label": "Filtrar por",
+      "filter_button": "Filtro",
+      "filters_selected": {
+        "one": "{{ count }} seleccionado",
+        "other": "{{ count }} seleccionados"
+      },
+      "sort_button": "Ordenar",
+      "sort_by_label": "Ordenar por",
+      "title": "Colección",
+      "to": "para"
+    }
+  },
+  "products": {
+    "product": {
+      "add_to_cart": "Añadir al carrito",
+      "description": "Descripción",
+      "on_sale": "Oportunidad",
+      "product_variants": "Variantes del producto",
+      "quantity": {
+        "label": "Cantidad"
+      },
+      "share": "Comparte",
+      "sold_out": "Vendido",
+      "unavailable": "No disponible"
+    }
+  },
+  "shopify": {
+    "checkout": {
+      "general": {
+        "back_button_label": "Etiqueta de devolución"
+      }
+    }
+  }
+}

@@ -1,0 +1,315 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "page__main",
+      "disabled": true,
+      "settings": {}
+    },
+    "section_hero_cBpMpY": {
+      "type": "section__hero",
+      "custom_css": [
+        ".hero__content-wrapper {background: #0000004a; z-index: 1; position: sticky;}"
+      ],
+      "settings": {
+        "padding_top": "0px",
+        "desktop_padding_top": "inherit",
+        "padding_bottom": "40px",
+        "desktop_padding_bottom": "60px",
+        "padding_horizontal": "px-0",
+        "desktop_padding_horizontal": "inherit",
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "use_container": true,
+        "set_100vh": true,
+        "set_100vh_desktop": true,
+        "border_radius": 16,
+        "aspect_ratio": "auto",
+        "aspect_ratio_desktop": "4/3",
+        "image": "shopify://shop_images/the-path-rituals-worship_94dee33a-97ee-4193-971e-a64d840f6d69.jpg",
+        "bg_color": "#16254c",
+        "content_width": "max-w-5xl",
+        "text_align": "text-left",
+        "text_color": "#ffffff",
+        "title": "Rituales",
+        "title_font_style": "h3",
+        "subtitle": "<p>Como Paramahamsa Vishwananda dice a menudo, el amor es la veneración más elevada. Te darás cuenta de que en Bhakti Marga ponemos una extraordinaria cantidad de amor y atención al detalle en cada ritual. Para nosotros, el ritual no es solo una ceremonia vacía, sino una oportunidad de encontrar a Dios y expresar nuestro amor hacia Él.</p>",
+        "button_text": "",
+        "button_url": "",
+        "button_style": "btn",
+        "anchor_to_pricing": false,
+        "video_title": "",
+        "video_url": "shopify://files/videos/Start-your-Journey-with-Rituals.mp4",
+        "poster_video": "shopify://files/videos/Start-your-Journey-with-Rituals.mp4",
+        "horizontal_position": "justify-center",
+        "vertical_position": "items-end"
+      }
+    },
+    "bm_event_slider_hjnETm": {
+      "type": "BM-event-slider",
+      "name": "Product Carousel",
+      "settings": {
+        "product_collection": "events",
+        "set_dark_theme": true,
+        "apply_gradient": true,
+        "title": "Próximos cursos",
+        "title_tag": "h2",
+        "cta_label": "",
+        "cta_url": "",
+        "padding_top": "pt-xl",
+        "padding_bottom": "pb-xl",
+        "desktop_padding_top": "inherit",
+        "desktop_padding_bottom": "inherit"
+      }
+    },
+    "section_image_text_blocks_PHhidM": {
+      "type": "section__image_text_blocks",
+      "blocks": {
+        "image_block_jfBVbY": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/paramahamsa-vishwananda-performing-arati-service-worship_c7eb72f7-7192-46b9-9c36-a2f22d0cb0cd.jpg",
+            "height": "auto",
+            "desktop_height": "auto"
+          }
+        },
+        "content_block_gVQiM6": {
+          "type": "content_block",
+          "settings": {
+            "title": "El amante y el Amado",
+            "title_tag": "h3",
+            "title_font_style": "h4",
+            "description": "<p>Si estamos en el camino espiritual, es porque nuestro Amado Señor nos llama para recordarnos nuestra relación eterna con Él.</p><p>Al recitar Su Nombre Divino y ofrecerle veneración devocional con amor, puedes invitarlo a formar parte de tu vida. De esta manera, podrás disfrutar de la relación definitiva entre Amante y Amado con Él.</p><p>Esto es <em>bhakti</em> vivo.</p>",
+            "credits": "",
+            "cta_url": "",
+            "cta_label": "",
+            "text_align": "left",
+            "desktop_text_align": "inherit",
+            "vertical_padding": "py-lg",
+            "vertical_padding_desktop": "tabletl:py-xxl"
+          }
+        }
+      },
+      "block_order": [
+        "image_block_jfBVbY",
+        "content_block_gVQiM6"
+      ],
+      "custom_css": [],
+      "settings": {
+        "margin_top": "mt-xl",
+        "margin_bottom": "mb-0",
+        "desktop_margin_top": "tabletl:mt-xxxl",
+        "desktop_margin_bottom": "tabletl:mb-xl",
+        "vertical_align": "center",
+        "flip_columns_desktop": false
+      }
+    },
+    "section_image_text_blocks_Ma8hkT": {
+      "type": "section__image_text_blocks",
+      "blocks": {
+        "image_block_kFgjfN": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/puja-ceremonial-worship_c861736f-d1df-45fe-9327-3f82d7a039ef.jpg",
+            "height": "auto",
+            "desktop_height": "auto"
+          }
+        },
+        "content_block_bdB8cq": {
+          "type": "content_block",
+          "settings": {
+            "title": "Veneración ceremonial",
+            "title_tag": "h3",
+            "title_font_style": "h4",
+            "description": "<p>En la tradición hindú se dice: \"si crees que una piedra es una piedra, será una piedra. Pero si crees que es Dios, se convertirá en Dios\". El servicio devocional realizado con plena fe invoca la presencia divina en una deidad.</p><p>A través de un ritual de veneración llamado <em>puja</em>, podemos disfrutar de la dulzura de cuidar a lo Divino como lo haríamos con cualquier ser querido. Bañar, vestir y alimentar a tu Amado, a tu manera única, te permite expresar tu amor y disfrutar de la intimidad de un tiempo sagrado juntos.</p>",
+            "credits": "",
+            "cta_url": "",
+            "cta_label": "",
+            "text_align": "left",
+            "desktop_text_align": "inherit",
+            "vertical_padding": "py-lg",
+            "vertical_padding_desktop": "tabletl:py-xxl"
+          }
+        }
+      },
+      "block_order": [
+        "image_block_kFgjfN",
+        "content_block_bdB8cq"
+      ],
+      "settings": {
+        "margin_top": "mt-xl",
+        "margin_bottom": "mb-0",
+        "desktop_margin_top": "tabletl:mt-xxxl",
+        "desktop_margin_bottom": "tabletl:mb-xl",
+        "vertical_align": "center",
+        "flip_columns_desktop": true
+      }
+    },
+    "section_image_text_blocks_GNDjm8": {
+      "type": "section__image_text_blocks",
+      "blocks": {
+        "image_block_XXcBbM": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/vedic-chanting_3cc5c269-558a-4d18-9b4e-c33a9452453d.jpg",
+            "height": "auto",
+            "desktop_height": "auto"
+          }
+        },
+        "content_block_8hGYFw": {
+          "type": "content_block",
+          "settings": {
+            "title": "Canto védico",
+            "title_tag": "h3",
+            "title_font_style": "h4",
+            "description": "<p>El sánscrito es un lenguaje vibratorio que se ha utilizado en rituales de oración durante miles de años. Las frecuencias vibratorias generadas al recitar mantras en sánscrito calman la mente y te sumergen en el corazón, donde reside lo Divino.</p><p>Cada Nombre Divino invoca la presencia de esa forma de divinidad. Recitar el Nombre de tu Amado te acerca a Él para que puedas disfrutar de Su compañía y Él pueda disfrutar de tu atención exclusiva.</p>",
+            "credits": "",
+            "cta_url": "shopify://pages/vedic-chanting",
+            "cta_label": "Más información",
+            "text_align": "left",
+            "desktop_text_align": "inherit",
+            "vertical_padding": "py-lg",
+            "vertical_padding_desktop": "tabletl:py-xxl"
+          }
+        }
+      },
+      "block_order": [
+        "image_block_XXcBbM",
+        "content_block_8hGYFw"
+      ],
+      "settings": {
+        "margin_top": "mt-xl",
+        "margin_bottom": "mb-0",
+        "desktop_margin_top": "tabletl:mt-xxxl",
+        "desktop_margin_bottom": "tabletl:mb-xl",
+        "vertical_align": "center",
+        "flip_columns_desktop": false
+      }
+    },
+    "section_program_header_bmYHKy": {
+      "type": "section__program-header",
+      "blocks": {
+        "heading_hJgkiA": {
+          "type": "heading",
+          "settings": {
+            "image": "shopify://shop_images/SimplePuja-Request-Thumbnails-2021-09.webp",
+            "title": "",
+            "description": "",
+            "text_color": "black",
+            "btn_label": "Request now",
+            "btn_link": "shopify://products/solicita-puja-personal",
+            "button_style": "btn btn--gold",
+            "cta_klaviyo_embed": ""
+          }
+        },
+        "heading_Vx4BPE": {
+          "type": "heading",
+          "settings": {
+            "image": "shopify://shop_images/YajnaPuja-Request-Thumbnails-2021-09.webp",
+            "title": "",
+            "description": "",
+            "text_color": "black",
+            "btn_label": "Request now",
+            "btn_link": "shopify://products/solicita-puja-personal",
+            "button_style": "btn btn--gold",
+            "cta_klaviyo_embed": ""
+          }
+        },
+        "heading_wzXWdQ": {
+          "type": "heading",
+          "settings": {
+            "image": "shopify://shop_images/KailashPuja-Request-Thumbnails-2021-09.webp",
+            "title": "",
+            "description": "",
+            "text_color": "black",
+            "btn_label": "Request now",
+            "btn_link": "shopify://products/solicita-puja-personal",
+            "button_style": "btn btn--gold",
+            "cta_klaviyo_embed": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_hJgkiA",
+        "heading_Vx4BPE",
+        "heading_wzXWdQ"
+      ],
+      "name": "Program Header",
+      "settings": {
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "padding_top": "pt-xl",
+        "padding_bottom": "pb-xl",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "desktop_padding_top": "inherit",
+        "desktop_padding_bottom": "inherit",
+        "title": "Solicita tu puja personal",
+        "title_tag": "h3",
+        "title_font_style": "h3",
+        "description": "<p>A través de un ritual de veneración llamado <em>puja</em>, podemos disfrutar de la dulzura de cuidar a lo Divino como lo haríamos con cualquier ser querido. Bañar, vestir y alimentar a tu Amado con tu propio estilo te permite expresar tu amor y disfrutar de la intimidad del tiempo sagrado juntos.</p>"
+      }
+    },
+    "section_image_text_blocks_Xfh44d": {
+      "type": "section__image_text_blocks",
+      "blocks": {
+        "image_block_k6rWMK": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/2022-07-13-p-0899_56a6bd0f-2a20-4dad-93e3-d01be27af8ab.jpg",
+            "height": "auto",
+            "desktop_height": "auto"
+          }
+        },
+        "content_block_8FN3f3": {
+          "type": "content_block",
+          "settings": {
+            "title": "Solicitar un curso",
+            "title_tag": "h3",
+            "title_font_style": "h4",
+            "description": "<p>¿No hay próximos cursos o profesores en tu zona? </p><p>Ponte en contacto con nosotros, haremos todo lo posible para ayudarte a comenzar tu viaje en Atma Kriya Yoga.</p>",
+            "credits": "",
+            "cta_url": "shopify://pages/request-a-course",
+            "cta_label": "Solicitar ahora",
+            "text_align": "left",
+            "desktop_text_align": "inherit",
+            "vertical_padding": "py-lg",
+            "vertical_padding_desktop": "tabletl:py-xxl"
+          }
+        }
+      },
+      "block_order": [
+        "image_block_k6rWMK",
+        "content_block_8FN3f3"
+      ],
+      "settings": {
+        "margin_top": "mt-xl",
+        "margin_bottom": "mb-0",
+        "desktop_margin_top": "tabletl:mt-xxxl",
+        "desktop_margin_bottom": "tabletl:mb-xl",
+        "vertical_align": "center",
+        "flip_columns_desktop": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "section_hero_cBpMpY",
+    "bm_event_slider_hjnETm",
+    "section_image_text_blocks_PHhidM",
+    "section_image_text_blocks_Ma8hkT",
+    "section_image_text_blocks_GNDjm8",
+    "section_program_header_bmYHKy",
+    "section_image_text_blocks_Xfh44d"
+  ]
+}

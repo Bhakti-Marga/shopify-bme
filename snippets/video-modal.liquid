@@ -1,0 +1,25 @@
+{%- comment -%}
+  Video Modal Snippet
+  @param modal_id - modal id
+  @param selector_open - open selector for modal
+  @param selector_close - close selector for modal
+  @param video_url - URL of the video to be displayed
+{%- endcomment -%}
+
+<s-modal
+  id="{{ modal_id }}"
+  open="[{{ selectors_open }}]"
+  close="[{{ selectors_close }}]"
+  class="video-modal w-[90vw] max-w-5xl aspect-video"
+>
+  <div class="video-modal__container h-full">
+    <button class="video-modal__close absolute right-12 top-12 text-white sr-only" {{ selectors_close }}>
+      {% render 'icon-close' %}
+    </button>
+    <div class="video-modal__content h-full">
+      <s-video-modal class="video-modal__player block w-full h-full" data-modal-id="{{ modal_id }}">
+        {{ video_url | video_tag: controls: true, muted: true, image_size: '1024x', class: 'w-full h-full object-cover object-center'}}
+      </s-video-modal>
+    </div>
+  </div>
+</s-modal>

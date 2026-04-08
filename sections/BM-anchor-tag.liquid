@@ -1,0 +1,96 @@
+<section class="bm-button-section-{{ section.id }}" id="bm-sticky-button-{{ section.id }}">
+  {% for block in section.blocks %}
+    {% if block.settings.label != blank and block.settings.link != blank %}
+      <a href="{{ block.settings.link }}" class="bm-button-{{ section.id }}">
+        {{ block.settings.label }}
+      </a>
+    {% endif %}
+  {% endfor %}
+</section>
+
+<style>
+  .bm-button-section-{{ section.id }} {
+    background-color: #16254c;
+    text-align: center;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+    z-index: 1000;
+  }
+
+  .bm-button-section-{{ section.id }}.fixed-sticky-{{ section.id }} {
+    position: fixed;
+    top: 60px; /* Adjust based on your nav height */
+    left: 0;
+    width: 100%;
+  }
+
+  .bm-button-{{ section.id }} {
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    margin: 10px;
+    display: inline-block;
+    border-radius: 40px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    font-size: 1rem;
+    line-height: 1.5em;
+    padding: 10px 2rem;
+  }
+
+  .bm-button-{{ section.id }}:hover {
+    background-color: #e5e5e5;
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const buttonSection = document.getElementById('bm-sticky-button-{{ section.id }}');
+    const heroSection = document.querySelector('.hero'); // Replace with actual hero section selector
+
+    if (buttonSection && heroSection) {
+      const heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
+
+      window.addEventListener('scroll', function () {
+        if (window.scrollY >= heroBottom) {
+          buttonSection.classList.add('fixed-sticky-{{ section.id }}');
+        } else {
+          buttonSection.classList.remove('fixed-sticky-{{ section.id }}');
+        }
+      });
+    }
+  });
+</script>
+
+{% schema %}
+{
+  "name": "BM Anchor Section",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "button",
+      "name": "Button",
+      "settings": [
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Button Label",
+          "default": "Click me"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Button Link"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 10,
+  "presets": [
+    {
+      "name": "BM Anchor Section",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}

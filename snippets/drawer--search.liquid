@@ -1,0 +1,36 @@
+<s-drawer id="SearchDrawer" class="bg-transparent" position='top' open="[js-search-drawer-open]" close="[js-close-search]" body-open-class="search-drawer-opened">
+  <div class="relative flex justify-center p-lg pt-xxxl tabletl:pt-[160px]">
+    <predictive-search class="block w-full max-w-[680px]">
+      <form action="{{ routes.search_url }}" method="get" role="search" class="search-form rounded overflow-y-auto">
+        <div class="sticky top-0 z-2 flex-1">
+          <label for="header-search" class="visually-hidden">Buscar</label>
+          <input
+            id="header-search"
+            class="search-form__input block w-full py-md pl-[56px] rounded pr-lg text-18 border-2 border-transparent text-gray-light placeholder:text-gray-light"
+            type="search"
+            name="q"
+            value="{{ search.terms | escape }}"
+            {%- if settings.predictive_search_enabled -%}
+              role="combobox"
+              aria-expanded="false"
+              aria-owns="predictive-search-results-list"
+              aria-controls="predictive-search-results-list"
+              aria-haspopup="listbox"
+              aria-autocomplete="list"
+              autocorrect="off"
+              autocomplete="off"
+              autocapitalize="off"
+              spellcheck="false"
+            {%- endif -%}
+            placeholder="Buscar..."
+          >
+          <input name="options[prefix]" type="hidden" value="last">
+          <div class="block absolute left-20 top-[14px]"><i class='inline-block w-md'>{% render 'icon--search' %}</i></div>
+          <button type="button" class="block absolute right-12 w-[20px] top-[14px] hidden focus-outline text-blue-light" js-clear><i class='inline-block w-md'>{% render 'icon--close' %}</i></button>
+        </div>
+        <div class="hidden w-full bg-white -mt-md pt-md rounded-bl rounded-br" tabindex="-1" js-predictive-search></div>
+      </form>
+      <button class="search-form__close absolute p-xs top-lg right-lg text-white" js-close-search><i class='inline-block w-lg'>{% render 'icon--close' %}</i></button>
+    </predictive-search>
+  </div>
+</s-drawer>

@@ -1,0 +1,479 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "page__main",
+      "disabled": true,
+      "settings": {}
+    },
+    "section_hero_cBpMpY": {
+      "type": "section__hero",
+      "custom_css": [],
+      "settings": {
+        "padding_top": "0px",
+        "desktop_padding_top": "inherit",
+        "padding_bottom": "40px",
+        "desktop_padding_bottom": "60px",
+        "padding_horizontal": "px-0",
+        "desktop_padding_horizontal": "inherit",
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "use_container": true,
+        "set_100vh": true,
+        "set_100vh_desktop": true,
+        "border_radius": 16,
+        "aspect_ratio": "auto",
+        "aspect_ratio_desktop": "4/3",
+        "image": "shopify://shop_images/2022-07-14-p-0291-Gradient.jpg",
+        "image_desktop": "shopify://shop_images/2022-07-14-p-0291-Gradient.jpg",
+        "bg_color": "#16254c",
+        "content_width": "max-w-5xl",
+        "text_align": "text-left",
+        "text_color": "#ffffff",
+        "title": "El maestro revolucionario que transforma el mundo moderno",
+        "title_font_style": "h3",
+        "subtitle": "<p>Paramahamsa Vishwananda es una fuerza transformadora para nuestro tiempo. Está redefiniendo el <em>bhakti-yoga</em> para el siglo XXI, haciendo que la sabiduría ancestral sea accesible y relevante para todos.</p>",
+        "button_text": "",
+        "button_url": "",
+        "button_style": "btn",
+        "anchor_to_pricing": false,
+        "video_title": "",
+        "horizontal_position": "justify-center",
+        "vertical_position": "items-end"
+      }
+    },
+    "section_hero_EmDBMy": {
+      "type": "section__hero",
+      "settings": {
+        "padding_top": "0px",
+        "desktop_padding_top": "0px",
+        "padding_bottom": "0px",
+        "desktop_padding_bottom": "inherit",
+        "padding_horizontal": "px-0",
+        "desktop_padding_horizontal": "inherit",
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "use_container": false,
+        "set_100vh": false,
+        "set_100vh_desktop": true,
+        "border_radius": 0,
+        "aspect_ratio": "9/16",
+        "aspect_ratio_desktop": "16/9",
+        "image": "shopify://shop_images/Image_Open_Hearts_of_Humanity-edit.jpg",
+        "bg_color": "",
+        "content_width": "max-w-5xl",
+        "text_align": "text-center",
+        "text_color": "#ffffff",
+        "title": "Paramahamsa Sri Swami Vishwananda: \"Mi misión es abrir los corazones de la humanidad\".",
+        "title_font_style": "h3",
+        "subtitle": "<p>Solo alguien que conoce a Dios puede guiarte hacia la meta final</p>",
+        "button_text": "",
+        "button_url": "",
+        "button_style": "btn",
+        "anchor_to_pricing": false,
+        "video_title": "",
+        "horizontal_position": "justify-center",
+        "vertical_position": "items-center"
+      }
+    },
+    "section_image_text_blocks_PHhidM": {
+      "type": "section__image_text_blocks",
+      "blocks": {
+        "image_block_jfBVbY": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/themaster-splitimg1.jpg",
+            "height": "auto",
+            "desktop_height": "auto"
+          }
+        },
+        "content_block_gVQiM6": {
+          "type": "content_block",
+          "settings": {
+            "title": "Amor sin egoismo",
+            "title_tag": "h2",
+            "title_font_style": "h3",
+            "description": "<p>Personas de todos los rincones del mundo, de todas las culturas, orígenes y experiencias, hablan de la presencia divina y el amor desinteresado de Paramahamsa Vishwananda. Pero el verdadero milagro es la profunda transformación que experimentan al descubrir el amor de Dios, la alegría y la dicha en sus propias vidas. Y tú también puedes experimentarlo.</p>",
+            "credits": "",
+            "cta_url": "",
+            "cta_label": "",
+            "text_align": "left",
+            "desktop_text_align": "inherit",
+            "vertical_padding": "py-lg",
+            "vertical_padding_desktop": "tabletl:py-xxl"
+          }
+        }
+      },
+      "block_order": [
+        "image_block_jfBVbY",
+        "content_block_gVQiM6"
+      ],
+      "custom_css": [],
+      "settings": {
+        "margin_top": "mt-xl",
+        "margin_bottom": "mb-0",
+        "desktop_margin_top": "tabletl:mt-xxxl",
+        "desktop_margin_bottom": "tabletl:mb-xl",
+        "vertical_align": "center",
+        "flip_columns_desktop": false
+      }
+    },
+    "section_image_text_blocks_Kixczp": {
+      "type": "section__image_text_blocks",
+      "blocks": {
+        "image_block_4RXENQ": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/themaster-splitimg2.jpg",
+            "height": "auto",
+            "desktop_height": "inherit"
+          }
+        },
+        "content_block_rLPL9a": {
+          "type": "content_block",
+          "settings": {
+            "title": "Fundador de Bhakti Marga",
+            "title_tag": "h2",
+            "title_font_style": "h3",
+            "description": "<p>Paramahamsa Vishwananda es el visionario detrás de Bhakti Marga, un movimiento global que se traduce como el \"Camino de la Devoción\". A través del poder del Amor, Guruji ha inspirado a una comunidad mundial para difundir Su profunda sabiduría, enseñanzas y prácticas espirituales. </p><p>En el corazón de Bhakti Marga está la misión de despertar el <em>bhakti, </em>amor puro y devoción a Dios, en cada corazón. Cada esfuerzo, cada ofrenda, está dedicada a ayudarte a vivir una vida inmersa en esta experiencia transformadora de amor.</p>",
+            "credits": "",
+            "cta_url": "",
+            "cta_label": "",
+            "text_align": "left",
+            "desktop_text_align": "inherit",
+            "vertical_padding": "py-lg",
+            "vertical_padding_desktop": "tabletl:py-xxl"
+          }
+        }
+      },
+      "block_order": [
+        "image_block_4RXENQ",
+        "content_block_rLPL9a"
+      ],
+      "custom_css": [],
+      "settings": {
+        "margin_top": "mt-xl",
+        "margin_bottom": "mb-0",
+        "desktop_margin_top": "tabletl:mt-xl",
+        "desktop_margin_bottom": "tabletl:mb-xl",
+        "vertical_align": "center",
+        "flip_columns_desktop": true
+      }
+    },
+    "section_image_text_blocks_94GqbY": {
+      "type": "section__image_text_blocks",
+      "blocks": {
+        "image_block_wUVFUh": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/themaster-splitimg3.jpg",
+            "height": "auto",
+            "desktop_height": "inherit"
+          }
+        },
+        "content_block_tpUJcx": {
+          "type": "content_block",
+          "settings": {
+            "title": "",
+            "title_tag": "h2",
+            "title_font_style": "h3",
+            "description": "<p><em>\"Bhakti Marga no es un grupo cerrado. Es una conciencia abierta a todos. '</em>Bhakti'<em>significa amor y este amor es un amor universal que todo el mundo lleva consigo. 'Marga' significa el camino hacia ese amor dentro del propio corazón, así que todo el mundo forma parte de Bhakti Marga\".</em></p>",
+            "credits": "PARAMAHAMSA VISHWANANDA",
+            "cta_url": "",
+            "cta_label": "",
+            "text_align": "left",
+            "desktop_text_align": "inherit",
+            "vertical_padding": "py-lg",
+            "vertical_padding_desktop": "tabletl:py-xxl"
+          }
+        }
+      },
+      "block_order": [
+        "image_block_wUVFUh",
+        "content_block_tpUJcx"
+      ],
+      "settings": {
+        "margin_top": "mt-xl",
+        "margin_bottom": "mb-0",
+        "desktop_margin_top": "tabletl:mt-xl",
+        "desktop_margin_bottom": "tabletl:mb-xl",
+        "vertical_align": "center",
+        "flip_columns_desktop": false
+      }
+    },
+    "section_quote_blocks_gmdNRL": {
+      "type": "section__quote-blocks",
+      "blocks": {
+        "block_ALXnJi": {
+          "type": "block",
+          "settings": {
+            "title": "Satguru",
+            "description": "<p>Paramahamsa Vishwananda es un <em>satguru</em> vivo, siempre en perfecta unión con lo Divino. Su consciencia de Dios no fue el resultado de estudio o esfuerzo, es parte de Su propio ser. Nació con esta naturaleza divina. Como Guruji humildemente dice, Su misión es simple: abrir nuestros corazones y recordarnos el ilimitado Amor de Dios.</p>"
+          }
+        },
+        "block_eRwq9R": {
+          "type": "block",
+          "settings": {
+            "title": "Maestro de kriya-yoga",
+            "description": "<p>Nacido como Maestro de <em>kriya-yoga</em>, Paramahamsa Vishwananda está completamente en sintonía con cada técnica de <em>kriya-yoga</em>. A través de Su gracia divina y la bendición de Su gurú, Mahavatar Babaji, el mundo ha recibido Atma Kriya Yoga, la forma más completa de <em>kriya-yoga</em> jamás compartida con la humanidad.</p>"
+          }
+        },
+        "block_WEEBYW": {
+          "type": "block",
+          "settings": {
+            "title": "Fuente de gracia",
+            "description": "<p>Más que un maestro, Guruji es una fuente de gracia divina que aporta una transformación poderosa y duradera a todos los que acuden a Él. Sus enseñanzas van más allá de la teoría, llegan directamente al alma. Su gracia es como una mano tendida para elevarnos más alto, ayudándonos a lograr lo que nunca podríamos lograr solos.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "block_ALXnJi",
+        "block_eRwq9R",
+        "block_WEEBYW"
+      ],
+      "settings": {
+        "padding_top": "pt-xl",
+        "padding_bottom": "pb-0",
+        "desktop_padding_top": "tabletl:pt-xl",
+        "desktop_padding_bottom": "tabletl:pb-xl",
+        "cols_mobile": "1",
+        "cols_desktop": "3"
+      }
+    },
+    "section_grid_images_ywkfnd": {
+      "type": "section__grid-images",
+      "blocks": {
+        "image_block_WfcQqw": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/THE-MASTER-FACTS-01_d68c1f57-6538-4788-b73e-e1bb2e78e2af.png"
+          }
+        },
+        "image_block_9UWt9D": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/THE-MASTER-FACTS-02_64f8524d-7b55-4e26-9e80-a7d8513ba09e.png"
+          }
+        },
+        "image_block_YzmY34": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/THE-MASTER-FACTS-03_8eb87d8e-a0f8-467f-b8ef-ea1df986ba8f.png"
+          }
+        }
+      },
+      "block_order": [
+        "image_block_WfcQqw",
+        "image_block_9UWt9D",
+        "image_block_YzmY34"
+      ],
+      "custom_css": [],
+      "settings": {
+        "margin_top": "mt-xl",
+        "margin_bottom": "mb-0",
+        "padding_top": "pt-0",
+        "padding_bottom": "pb-0",
+        "desktop_margin_top": "tabletl:mt-xl",
+        "desktop_margin_bottom": "tabletl:mb-xl",
+        "desktop_padding_top": "inherit",
+        "desktop_padding_bottom": "inherit",
+        "main_image": "shopify://shop_images/Image.jpg",
+        "secondary_video_poster": "shopify://files/videos/2025-02-12-BM3Web-AboutTheMaster-F02.mp4",
+        "video_url": "shopify://files/videos/2025-02-12-BM3Web-AboutTheMaster-F02.mp4",
+        "yt": "",
+        "text": "<p>Los verdaderos <em>satgurus</em> son raros y realmente especiales. No tienen intenciones ocultas: todo lo que hacen es por el bienestar espiritual de los demás. Un <em>satguru</em> nos ve como realmente somos, comprendiendo nuestros puntos fuertes y nuestras luchas de un modo que no siempre podemos ver nosotros mismos. Con una visión profunda, nos guía con amor, ofreciéndonos la transformación que necesitamos, sin esperar nada a cambio. Su misión es sencilla: ayudarnos a convertirnos en la mejor versión de nosotros mismos, y lo hacen con un corazón lleno de gracia.</p>",
+        "cta_url": "",
+        "cta_label": ""
+      }
+    },
+    "section_playlist_WUtnJ6": {
+      "type": "section__playlist",
+      "blocks": {
+        "media_block_E9faDk": {
+          "type": "media_block",
+          "settings": {
+            "image": "shopify://shop_images/maxresdefault-6.jpg",
+            "title": "God's Hand in Our Lives",
+            "name": "Paramahamsa Vishwananda",
+            "url": "https://www.youtube.com/watch?v=ONJ6Litz0VA"
+          }
+        },
+        "media_block_6mjdHh": {
+          "type": "media_block",
+          "settings": {
+            "image": "shopify://shop_images/maxresdefault-2.jpg",
+            "title": "What Is The Soul?",
+            "name": "Paramahamsa Vishwananda",
+            "url": "https://www.youtube.com/watch?v=RVkqksto2oI"
+          }
+        },
+        "media_block_gjUJwe": {
+          "type": "media_block",
+          "settings": {
+            "image": "shopify://shop_images/maxresdefault-3.jpg",
+            "title": "Stop Worrying and Start Living",
+            "name": "Paramahamsa Vishwananda",
+            "url": "https://www.youtube.com/watch?v=OPdIi4Hlc6k"
+          }
+        },
+        "media_block_KbceXq": {
+          "type": "media_block",
+          "settings": {
+            "image": "shopify://shop_images/maxresdefault-7.jpg",
+            "title": "Be Honest With Yourself",
+            "name": "Paramahamsa Vishwananda",
+            "url": "https://www.youtube.com/watch?v=nwKlvc6MLGc"
+          }
+        },
+        "media_block_Ai3yfJ": {
+          "type": "media_block",
+          "settings": {
+            "image": "shopify://shop_images/maxresdefault-5.jpg",
+            "title": "How to Stop Letting Others Dictate Your Happiness",
+            "name": "Paramahamsa Vishwananda",
+            "url": "https://www.youtube.com/watch?v=yPIu4NxpAIA&t="
+          }
+        }
+      },
+      "block_order": [
+        "media_block_E9faDk",
+        "media_block_6mjdHh",
+        "media_block_gjUJwe",
+        "media_block_KbceXq",
+        "media_block_Ai3yfJ"
+      ],
+      "custom_css": [],
+      "settings": {
+        "margin_top": "mt-xl",
+        "margin_bottom": "mb-0",
+        "padding_top": "pt-0",
+        "padding_bottom": "pb-0",
+        "desktop_margin_top": "tabletl:mt-xl",
+        "desktop_margin_bottom": "tabletl:mb-xl",
+        "desktop_padding_top": "inherit",
+        "desktop_padding_bottom": "tabletl:pb-0",
+        "playlist_position": "right",
+        "image": "shopify://shop_images/Purple_Illustrative_Lavender_Desktop_Wallpaper-2_1.png",
+        "title": "Insights from Paramahamsa...",
+        "title_tag": "h3",
+        "avatar": "shopify://shop_images/2021-07-03-p-0095-Edit.jpg",
+        "name": "By Paramahamsa Sri Swami Vishwananda",
+        "video_count": "323",
+        "url": "https://www.youtube.com/playlist?list=PLRJzEHCmzsf2K-ETOxFTNC0r6QNbqSE5A",
+        "cta_label": "Reproducir"
+      }
+    },
+    "section_social_3Fr3Cy": {
+      "type": "section__social",
+      "blocks": {
+        "media_block_EfAiMA": {
+          "type": "media_block",
+          "settings": {
+            "image": "shopify://shop_images/IMG_3034.jpg",
+            "image_url": "https://www.instagram.com/p/DF8D7WfoY4H/",
+            "accessibility_label": ""
+          }
+        },
+        "media_block_HDkzN9": {
+          "type": "media_block",
+          "settings": {
+            "image": "shopify://shop_images/IMG_3030.jpg",
+            "image_url": "https://www.instagram.com/p/DESwfu_ulWf/",
+            "accessibility_label": ""
+          }
+        },
+        "media_block_HjgcQ7": {
+          "type": "media_block",
+          "settings": {
+            "image": "shopify://shop_images/IMG_3042.jpg",
+            "image_url": "https://www.instagram.com/p/CiLcofIDYjJ/",
+            "accessibility_label": ""
+          }
+        }
+      },
+      "block_order": [
+        "media_block_EfAiMA",
+        "media_block_HDkzN9",
+        "media_block_HjgcQ7"
+      ],
+      "settings": {
+        "padding_top": "pt-xl",
+        "padding_bottom": "pb-0",
+        "desktop_padding_top": "inherit",
+        "desktop_padding_bottom": "tabletl:pb-xl",
+        "title": "<p>Sigue @Paramahamsa_Vishwananda </p>",
+        "title_icon": "instagram"
+      }
+    },
+    "section_social_cRkwRq": {
+      "type": "section__social",
+      "blocks": {
+        "content_block_gJMEGP": {
+          "type": "content_block",
+          "settings": {
+            "avatar": "shopify://shop_images/2021-07-03-p-0095-Edit.jpg",
+            "name": "Paramahamsa Vishwananda",
+            "description": "<p>El amor es la relación más pura. Cualquier posesividad que sientas es solo tu ilusión, no <em>prem</em>. El amor te hace humilde. Te hace sentir completamente indigno del resplandor glorioso del amado. Sin embargo, no te hace negativo hacia ti mismo, hacia otros, o hacia el amado en tu sentimiento de ser pequeño e indigno.</p>",
+            "url": "https://x.com/vishwananda/status/1808658834417717370?s=46&t=x_7aMeCdZMHBEVJNixge4g"
+          }
+        },
+        "content_block_BGkPpi": {
+          "type": "content_block",
+          "settings": {
+            "avatar": "shopify://shop_images/2021-07-03-p-0095-Edit.jpg",
+            "name": "Paramahamsa Vishwananda",
+            "description": "<p>Muchas personas temen tantas cosas. Algunos temen ser engañados, otros temen estar solos. Uno puede temer no conseguir nada, mientras que otro puede temer ser infeliz. Pero hay una cosa que la gente debería temer de verdad, pero que todo el mundo da por sentada todo el tiempo. El miedo a no haber amado lo suficiente mientras uno estaba vivo y bien.</p>",
+            "url": "https://x.com/vishwananda/status/1887261337820275179?s=46&t=x_7aMeCdZMHBEVJNixge4g"
+          }
+        },
+        "content_block_3AwcwE": {
+          "type": "content_block",
+          "settings": {
+            "avatar": "shopify://shop_images/2021-07-03-p-0095-Edit.jpg",
+            "name": "Paramahamsa Vishwananda",
+            "description": "<p>Los caminos del gurú son increíbles. A veces Él responde de una manera que nuestra mente entiende fácilmente. Hacemos una pregunta y Él nos da una respuesta. A veces la respuesta es directa... Otras veces, parece que el gurú no ha respondido en absoluto... Pero en realidad Él es el único que responde todo el tiempo.</p>",
+            "url": "https://x.com/vishwananda/status/1818447133290201143"
+          }
+        }
+      },
+      "block_order": [
+        "content_block_gJMEGP",
+        "content_block_BGkPpi",
+        "content_block_3AwcwE"
+      ],
+      "settings": {
+        "padding_top": "pt-xl",
+        "padding_bottom": "pb-xl",
+        "desktop_padding_top": "inherit",
+        "desktop_padding_bottom": "tabletl:pb-xxxl",
+        "title": "<p>Sigue @Paramahamsa_Vishwananda </p>",
+        "title_icon": "x"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "section_hero_cBpMpY",
+    "section_hero_EmDBMy",
+    "section_image_text_blocks_PHhidM",
+    "section_image_text_blocks_Kixczp",
+    "section_image_text_blocks_94GqbY",
+    "section_quote_blocks_gmdNRL",
+    "section_grid_images_ywkfnd",
+    "section_playlist_WUtnJ6",
+    "section_social_3Fr3Cy",
+    "section_social_cRkwRq"
+  ]
+}

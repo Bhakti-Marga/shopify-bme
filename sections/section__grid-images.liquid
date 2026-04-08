@@ -1,0 +1,337 @@
+{% capture modal_id %}VideoModal-{{ section.id }}{% endcapture %}
+{% capture modal_open_selector %}js-open-modal-{{ section.id }}{% endcapture %}
+{% capture modal_close_selector %}js-close-modal-{{ section.id }}{% endcapture %}
+
+{% liquid
+  assign container_classes = ""
+
+  if section.settings.margin_top != "mt-0"
+      assign container_classes = container_classes | append: " " | append: section.settings.margin_top
+  endif
+
+  if section.settings.margin_bottom != "mb-0"
+      assign container_classes = container_classes | append: " " | append: section.settings.margin_bottom
+  endif
+
+  if section.settings.desktop_margin_top != "inherit"
+      assign container_classes = container_classes | append: " " | append: section.settings.desktop_margin_top
+  endif
+
+  if section.settings.desktop_margin_bottom != "inherit"
+      assign container_classes = container_classes | append: " " | append: section.settings.desktop_margin_bottom
+  endif
+
+  if section.settings.padding_top != "pt-0"
+      assign container_classes = container_classes | append: " " | append: section.settings.padding_top
+  endif
+
+  if section.settings.padding_bottom != "pb-0"
+      assign container_classes = container_classes | append: " " | append: section.settings.padding_bottom
+  endif
+
+  if section.settings.desktop_padding_top != "inherit"
+      assign container_classes = container_classes | append: " " | append: section.settings.desktop_padding_top
+  endif
+
+  if section.settings.desktop_padding_bottom != "inherit"
+      assign container_classes = container_classes | append: " " | append: section.settings.desktop_padding_bottom
+  endif
+
+  assign container_classes = container_classes | strip
+%}
+
+<section class="grid-images container {% if container_classes != blank %} {{ container_classes }}{% endif %}">
+  <div class="mb-xl flex flex-col items-stretch tabletl:mb-0 tabletl:flex-row">
+    <div class="flex h-auto w-full items-end tabletl:w-2/3 tabletl:order-first">
+      <div class="relative z-1 flex aspect-[6/5] w-full translate-x-0 items-center justify-center overflow-hidden rounded-lg tabletl:aspect-video ">
+        {% if section.settings.main_image != blank %}
+          <div>
+            {% render 'lazy-image',
+              image: section.settings.main_image,
+              image_desktop: section.settings.desktop_main_image,
+              img_classes: 'object-cover absolute top-0 left-0 h-full'
+              %}
+          </div>
+        {% endif %}
+      </div>
+    </div>
+    <div class="relative z-1 order-first flex flex-col w-full justify-center px-sm pb-xxl tabletl:w-1/3 tabletl:p-xl tabletl:order-last">
+      {% if section.settings.text != blank %}
+        <div class="rte">
+            {{ section.settings.text }}
+        </div>
+      {% endif %}
+      {% if section.settings.cta_url != blank and section.settings.cta_label != blank %}
+        <a href="{{ section.settings.cta_url }}" class="btn btn--gold inline-block mt-md self-start">
+          {{ section.settings.cta_label }}
+        </a>
+      {% endif %}
+    </div>
+  </div>
+  <div class="flex flex-col tabletl:flex-row">
+    <div class="hidden relative z-1 p-xl pl-0 justify-between gap-md items-center tabletl:flex tabletl:w-2/3">
+      {%- for block in section.blocks -%}
+        {% if block.settings.image != blank %}
+          <div class="aspect-square w-1/3 rounded relative">
+            {% render 'lazy-image',
+              image: block.settings.image,
+              img_classes: 'object-cover rounded absolute top-0 left-0 h-full'
+            %}
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+    <div class="relative w-full overflow-visible tabletl:w-1/3">
+      <div class="relative flex aspect-[6/5] translate-x-0 items-center justify-center overflow-hidden rounded-lg">
+        {% if section.settings.secondary_video_poster != blank and section.settings.video_url != blank %}
+          {{ section.settings.secondary_video_poster | video_tag: autoplay: true, loop: true, muted: true, controls: false, image_size: '1024x', class: 'w-full h-full object-cover block' }}
+          <div class="p-lg absolute inset-0 flex items-center justify-center z-1">
+            <button
+              class="video-modal-trigger btn flex items-center bg-opacity-30 text-white hover:bg-opacity-50"
+              aria-label="Play video"
+              {{ modal_open_selector }}
+            >
+              <span class="video-modal-trigger__icon flex items-center justify-center w-12 h-12 mr-12">
+                {% render 'icon--play' %}
+              </span>
+              <span class="video-modal-trigger__text">
+                Ver
+              </span>
+            </button>
+          </div>    
+        {% elsif section.settings.secondary_image != blank %}
+          <div>
+            {% render 'lazy-image',
+              image: section.settings.secondary_image,
+              image_desktop: section.settings.desktop_secondary_image,
+              img_classes: 'object-cover absolute top-0 left-0 h-full'
+              %}
+          </div>
+        {% endif %}
+        {% if section.settings.yt %}
+          <iframe style="border-radius: 25px;" width="560" height="315" src="{{ section.settings.yt }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        {% endif %}  
+      </div>
+    </div>
+  </div>
+  {% render 'video-modal',
+    modal_id: modal_id,
+    video_url: section.settings.video_url,
+    selectors_open: modal_open_selector,
+    selectors_close: modal_close_selector
+  %}
+</section>
+
+{% schema %}
+{
+  "name": "Grid Images",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "select",
+      "id": "margin_top",
+      "label": "Margin Top",
+      "options": [
+        { "value": "mt-0", "label": "None" },
+        { "value": "mt-sm", "label": "Small - 8px" },
+        { "value": "mt-md", "label": "Medium - 16px" },
+        { "value": "mt-lg", "label": "Large - 24px" },
+        { "value": "mt-xl", "label": "X-Large - 40px" },
+        { "value": "mt-xxl", "label": "XX-Large - 60px" },
+        { "value": "mt-xxxl", "label": "XXX-Large - 80px" }
+      ],
+      "default": "mt-0"
+    },
+    {
+      "type": "select",
+      "id": "margin_bottom",
+      "label": "Margin Bottom",
+      "options": [
+        { "value": "mb-0", "label": "None" },
+        { "value": "mb-sm", "label": "Small - 8px" },
+        { "value": "mb-md", "label": "Medium - 16px" },
+        { "value": "mb-lg", "label": "Large - 24px" },
+        { "value": "mb-xl", "label": "X-Large - 40px" },
+        { "value": "mb-xxl", "label": "XX-Large - 60px" },
+        { "value": "mb-xxxl", "label": "XXX-Large - 80px" }
+      ],
+      "default": "mb-0"
+    },
+    {
+      "type": "select",
+      "id": "padding_top",
+      "label": "Padding Top",
+      "options": [
+        { "value": "pt-0", "label": "None" },
+        { "value": "pt-sm", "label": "Small - 8px" },
+        { "value": "pt-md", "label": "Medium - 16px" },
+        { "value": "pt-lg", "label": "Large - 24px" },
+        { "value": "pt-xl", "label": "X-Large - 40px" },
+        { "value": "pt-xxl", "label": "XX-Large - 60px" },
+        { "value": "pt-xxxl", "label": "XXX-Large - 80px" }
+      ],
+      "default": "pt-0"
+    },
+    {
+      "type": "select",
+      "id": "padding_bottom",
+      "label": "Padding Bottom",
+      "options": [
+        { "value": "pb-0", "label": "None" },
+        { "value": "pb-sm", "label": "Small - 8px" },
+        { "value": "pb-md", "label": "Medium - 16px" },
+        { "value": "pb-lg", "label": "Large - 24px" },
+        { "value": "pb-xl", "label": "X-Large - 40px" },
+        { "value": "pb-xxl", "label": "XX-Large - 60px" },
+        { "value": "pb-xxxl", "label": "XXX-Large - 80px" }
+      ],
+      "default": "pb-0"
+    },
+    {
+      "type": "select",
+      "id": "desktop_margin_top",
+      "label": "Desktop - Margin Top",
+      "options": [
+        { "value": "inherit", "label": "Inherit" },
+        { "value": "tabletl:mt-0", "label": "None" },
+        { "value": "tabletl:mt-sm", "label": "Small - 8px" },
+        { "value": "tabletl:mt-md", "label": "Medium - 16px" },
+        { "value": "tabletl:mt-lg", "label": "Large - 24px" },
+        { "value": "tabletl:mt-xl", "label": "X-Large - 40px" },
+        { "value": "tabletl:mt-xxl", "label": "XX-Large - 60px" },
+        { "value": "tabletl:mt-xxxl", "label": "XXX-Large - 80px" }
+      ],
+      "default": "inherit"
+    },
+    {
+      "type": "select",
+      "id": "desktop_margin_bottom",
+      "label": "Desktop - Margin Bottom",
+      "options": [
+        { "value": "inherit", "label": "Inherit" },
+        { "value": "tabletl:mb-0", "label": "None" },
+        { "value": "tabletl:mb-sm", "label": "Small - 8px" },
+        { "value": "tabletl:mb-md", "label": "Medium - 16px" },
+        { "value": "tabletl:mb-lg", "label": "Large - 24px" },
+        { "value": "tabletl:mb-xl", "label": "X-Large - 40px" },
+        { "value": "tabletl:mb-xxl", "label": "XX-Large - 60px" },
+        { "value": "tabletl:mb-xxxl", "label": "XXX-Large - 80px" }
+      ],
+      "default": "inherit"
+    },
+    {
+      "type": "select",
+      "id": "desktop_padding_top",
+      "label": "Desktop - Padding Top",
+      "options": [
+        { "value": "inherit", "label": "Inherit" },
+        { "value": "tabletl:pt-0", "label": "None" },
+        { "value": "tabletl:pt-sm", "label": "Small - 8px" },
+        { "value": "tabletl:pt-md", "label": "Medium - 16px" },
+        { "value": "tabletl:pt-lg", "label": "Large - 24px" },
+        { "value": "tabletl:pt-xl", "label": "X-Large - 40px" },
+        { "value": "tabletl:pt-xxl", "label": "XX-Large - 60px" },
+        { "value": "tabletl:pt-xxxl", "label": "XXX-Large - 80px" }
+      ],
+      "default": "inherit"
+    },
+    {
+      "type": "select",
+      "id": "desktop_padding_bottom",
+      "label": "Desktop - Padding Bottom",
+      "options": [
+        { "value": "inherit", "label": "Inherit" },
+        { "value": "tabletl:pb-0", "label": "None" },
+        { "value": "tabletl:pb-sm", "label": "Small - 8px" },
+        { "value": "tabletl:pb-md", "label": "Medium - 16px" },
+        { "value": "tabletl:pb-lg", "label": "Large - 24px" },
+        { "value": "tabletl:pb-xl", "label": "X-Large - 40px" },
+        { "value": "tabletl:pb-xxl", "label": "XX-Large - 60px" },
+        { "value": "tabletl:pb-xxxl", "label": "XXX-Large - 80px" }
+      ],
+      "default": "inherit"
+    },
+    {
+      "type": "header",
+      "content": "Content Settings"
+    },
+    {
+      "type": "image_picker",
+      "id": "main_image",
+      "label": "Main Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "desktop_main_image",
+      "label": "Main Image - Desktop"
+    },
+    {
+      "type": "image_picker",
+      "id": "secondary_image",
+      "label": "Secondary Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "desktop_secondary_image",
+      "label": "Secondary Image - Desktop"
+    },
+    {
+      "type": "video",
+      "id": "secondary_video_poster",
+      "label": "Secondary Video Poster"
+    },
+    {
+      "type": "video",
+      "id": "video_url",
+      "label": "Video"
+    },
+    {
+      "type": "url",
+      "id": "yt",
+      "label": "Youtube URL"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text"
+    },
+    {
+      "type": "url",
+      "id": "cta_url",
+      "label": "CTA Link"
+    },
+    {
+      "type": "text",
+      "id": "cta_label",
+      "label": "CTA Label"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image_block",
+      "name": "Image Block",
+      "limit": 3,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Grid Images",
+      "blocks": [
+        {
+          "type": "image_block"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

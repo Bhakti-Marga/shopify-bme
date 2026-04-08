@@ -1,0 +1,908 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "hero": {
+      "type": "article__hero",
+      "settings": {
+        "apply_gradient": false,
+        "gradient_height": 40,
+        "gradient_color": "#000000"
+      }
+    },
+    "main": {
+      "type": "article__main",
+      "disabled": true,
+      "settings": {}
+    },
+    "section_text_content_YVPHBf": {
+      "type": "section__text-content",
+      "settings": {
+        "margin_top": "mt-xl",
+        "margin_bottom": "mb-xl",
+        "padding_top": "pt-0",
+        "padding_bottom": "pb-0",
+        "desktop_margin_top": "tabletl:mt-xxxl",
+        "desktop_margin_bottom": "tabletl:mb-xxxl",
+        "desktop_padding_top": "inherit",
+        "desktop_padding_bottom": "inherit",
+        "max_width": "",
+        "pretitle": "You're Invited to the Two Year Anniversary of the Paranitya Narasimha Temple!",
+        "title": "Celebrating a Temple for the Upliftment of Humanity",
+        "title_tag": "h2",
+        "title_font_style": "h3",
+        "description": "<p><em>Purely through the Grace of Paramahamsa Vishwananda, in just two years, the Paranitya Narasimha Temple has touched the hearts and lives of thousands of spiritual seekers worldwide. <br\/><br\/>We are beyond blessed to have Paramahamsa Vishwananda join us for this beyond epic celebration! Join us as we re-live the magic and miracles of the temple inauguration and show our love and gratitude to Guruji and our Beloved Temple Deities.<br\/><br\/>Maha Abhishekam only happens 2x a year: Don't miss it!<br\/><\/em><\/p>",
+        "credits": ""
+      }
+    },
+    "section_video_TMtkEK": {
+      "type": "section__video",
+      "settings": {
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "padding_top": "pt-0",
+        "padding_bottom": "pb-0",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "desktop_padding_top": "inherit",
+        "desktop_padding_bottom": "inherit",
+        "set_100vh": false,
+        "aspect_ratio": "16\/9",
+        "aspect_ratio_desktop": "16\/9",
+        "video_url": "shopify:\/\/files\/videos\/2025-03-30-BM3Web-clip-anniversery-01.mp4",
+        "poster_video": "shopify:\/\/files\/videos\/2025-03-30-BM3Web-clip-anniversery-01.mp4",
+        "poster_video_desktop": "shopify:\/\/files\/videos\/2025-03-30-BM3Web-clip-anniversery-01.mp4"
+      }
+    },
+    "section_text_content_NGRdYj": {
+      "type": "section__text-content",
+      "settings": {
+        "margin_top": "mt-xl",
+        "margin_bottom": "mb-xl",
+        "padding_top": "pt-0",
+        "padding_bottom": "pb-0",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "desktop_padding_top": "tabletl:pt-xxxl",
+        "desktop_padding_bottom": "inherit",
+        "max_width": "80ch",
+        "pretitle": "",
+        "title": "An Epic Celebration Not to be Missed!",
+        "title_tag": "h2",
+        "title_font_style": "h3",
+        "description": "<p>There are few places in this world that are soley dedicated to prayer for humanity. At the Paranitya Narasimha Temple and Ashram, the monks pray day and night, creating an incredibly high vibrational atmosphere of Love and positivity for all to soak in.<\/p><p>This event will be filled with Maha Abhishekam, ecstatic singing, joyful dancing, delicious blessed food, and spiritual inspiration to align you with your highest purpose and authentic self.<\/p><p>Register today to experience it for yourself at the Temple Anniversary Celebration with Paramahamsa Vishwananda!<\/p>",
+        "credits": ""
+      }
+    },
+    "section_text_content_ikgUYc": {
+      "type": "section__text-content",
+      "settings": {
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "padding_top": "pt-0",
+        "padding_bottom": "pb-0",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "desktop_padding_top": "inherit",
+        "desktop_padding_bottom": "inherit",
+        "max_width": "",
+        "pretitle": "",
+        "title": "",
+        "title_tag": "h2",
+        "title_font_style": "h3",
+        "description": "",
+        "credits": ""
+      }
+    },
+    "section_featured_master_section_kUWppT": {
+      "type": "section__featured-master-section",
+      "blocks": {
+        "featured_master_item_Gdbhxa": {
+          "type": "Featured_Master_item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/2023-09-02-p-0121.jpg",
+            "col-span": "6"
+          }
+        },
+        "featured_master_item_MBtrAX": {
+          "type": "Featured_Master_item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/2023-09-03-p-1943.jpg",
+            "col-span": "8"
+          }
+        },
+        "featured_master_item_9WaL7B": {
+          "type": "Featured_Master_item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/2023-09-03-p-1620.jpg",
+            "col-span": "4"
+          }
+        },
+        "featured_master_item_PRgqgH": {
+          "type": "Featured_Master_item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/2023-09-03-p-1149.jpg",
+            "col-span": "6"
+          }
+        },
+        "featured_master_item_X8bNJz": {
+          "type": "Featured_Master_item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/2023-09-01-p-1518_9873d3ad-45fe-4ced-9b32-f79c9ec7b013.jpg",
+            "col-span": "6"
+          }
+        }
+      },
+      "block_order": [
+        "featured_master_item_Gdbhxa",
+        "featured_master_item_MBtrAX",
+        "featured_master_item_9WaL7B",
+        "featured_master_item_PRgqgH",
+        "featured_master_item_X8bNJz"
+      ],
+      "settings": {
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "padding_top": "pt-0",
+        "padding_bottom": "pb-0",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "desktop_padding_top": "inherit",
+        "desktop_padding_bottom": "tabletl:pb-xxxl",
+        "title": "Experience the Blessings of Narasimha",
+        "content": "<p>Narasimha is the fourth Avatar (Divine incarnation) of Maha Vishnu, and the main Deity of the amazing Paranitya Narasimha Temple. He incarnated as our Divine Protector, and the one who is very active in our lives; who is always serving and loving us, helping us to realize who we are, and live a life of Love in service to the Divine.<br\/><br\/>The Paranitya Narasimha Temple is dedicated to Paranitya Narasimha - The Supreme Eternal form of Narasimha - a very special murti whom was materialized by Paramahamsa Vishwananda Himself. The 8.5 foot Narasimha you see on the Altar is a replica of the original Paranitya Narasimha, and is a form which was previously secret, only seen by a handful of blessed souls. <\/p>",
+        "marquee_speed": 28
+      }
+    },
+    "section_text_content_dDgmnw": {
+      "type": "section__text-content",
+      "settings": {
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "padding_top": "pt-0",
+        "padding_bottom": "pb-0",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "desktop_padding_top": "inherit",
+        "desktop_padding_bottom": "inherit",
+        "max_width": "",
+        "pretitle": "",
+        "title": "A Rare Ceremony Filled with Love and Grace",
+        "title_tag": "h2",
+        "title_font_style": "h3",
+        "description": "",
+        "credits": ""
+      }
+    },
+    "section_icon_grid_QfR3bE": {
+      "type": "section__icon-grid",
+      "blocks": {
+        "content_block_88fU6F": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Maha_Abhishekam.png",
+            "title": "Maha Abhishekam",
+            "title_tag": "h3",
+            "title_font_style": "h5",
+            "description": "<p>A powerful Vedic ritual that only happens 2 times each year! This powerful ritual invokes blessings, purity, and divine grace for all present. <\/p>"
+          }
+        },
+        "content_block_bRpdR3": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Kirtan_-_Devotional_Music.png",
+            "title": "Devotional Music",
+            "title_tag": "h3",
+            "title_font_style": "h5",
+            "description": "<p>One of the highlights of any event at the Temple – amazing kirtan! Kirtan is a powerful and fun way to open the heart and be filled with the Love of the Divine.<\/p>"
+          }
+        },
+        "content_block_g4G4Lh": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Blessed_Food.png",
+            "title": "Blessed Food",
+            "title_tag": "h3",
+            "title_font_style": "h5",
+            "description": "<p>Enjoy prasadam—prepared with devotion, infused with grace, and served with love. More than just a meal, it’s a sacred blessing that uplifts and transforms from within. <\/p>"
+          }
+        },
+        "content_block_FzqmmK": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Spiritual_Talks.png",
+            "title": "Spiritual Talks",
+            "title_tag": "h3",
+            "title_font_style": "h5",
+            "description": "<p>Satsang with Paramahamsa Vishwananda is more than an inspiring talk - it’s a <strong>direct transmission of wisdom, love, and divine grace<\/strong> from a fully realized Master. <\/p>"
+          }
+        },
+        "content_block_q7wQy8": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Vedic_Chanting.png",
+            "title": "Vedic Chanting",
+            "title_tag": "h3",
+            "title_font_style": "h5",
+            "description": "<p>Sanskrit is a powerful, vibrational language which uplifts our consciousness simply by listening. Enjoy the high vibrations of stotrams chanted by the monks daily.<\/p>"
+          }
+        },
+        "content_block_arD8jE": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Offer_to_Narasimha.png",
+            "title": "Offer to Narasimha",
+            "title_tag": "h3",
+            "title_font_style": "h5",
+            "description": "<p>Throughout the ceremony, participants will have the opportunity to offer water, flowers, and arati to Narasimha! This is a rare and powerful blessing. <\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "content_block_88fU6F",
+        "content_block_bRpdR3",
+        "content_block_g4G4Lh",
+        "content_block_FzqmmK",
+        "content_block_q7wQy8",
+        "content_block_arD8jE"
+      ],
+      "settings": {
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-xl",
+        "padding_top": "pt-0",
+        "padding_bottom": "pb-0",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "tabletl:mb-xxxl",
+        "desktop_padding_top": "inherit",
+        "desktop_padding_bottom": "inherit",
+        "cols_mobile": "1",
+        "cols_desktop": "3",
+        "text_align": "text-left",
+        "title": "",
+        "subtitle": "",
+        "button_text": "",
+        "button_url": "",
+        "button_style": "btn"
+      }
+    },
+    "section_hero_jPCMza": {
+      "type": "section__hero",
+      "settings": {
+        "padding_top": "0px",
+        "desktop_padding_top": "0px",
+        "padding_bottom": "0px",
+        "desktop_padding_bottom": "inherit",
+        "padding_horizontal": "px-0",
+        "desktop_padding_horizontal": "inherit",
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "use_container": false,
+        "set_100vh": false,
+        "border_radius": 0,
+        "aspect_ratio": "auto",
+        "aspect_ratio_desktop": "auto",
+        "bg_color": "#16254c",
+        "content_width": "max-w-5xl",
+        "text_align": "text-center",
+        "text_color": "#ffffff",
+        "title": "Celebrate Paranitya Narasimha!",
+        "title_font_style": "h3",
+        "subtitle": "<p>Express your love and gratitude to Guruji and Narasimha or experience for the first time<\/p>",
+        "button_text": "Join the Temple Anniversary",
+        "button_url": "#",
+        "button_style": "btn",
+        "anchor_to_pricing": true,
+        "video_title": "",
+        "horizontal_position": "justify-center",
+        "vertical_position": "items-center"
+      }
+    },
+    "section_image_text_blocks_hjR6aP": {
+      "type": "section__image_text_blocks",
+      "blocks": {
+        "image_block_WPMCWX": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/photo_2023-09-17_16-17-25.jpg",
+            "height": "auto",
+            "desktop_height": "inherit"
+          }
+        },
+        "content_block_iVedkM": {
+          "type": "content_block",
+          "settings": {
+            "title": "The Temple",
+            "title_tag": "h3",
+            "title_font_style": "h3",
+            "description": "<p>There are few places in this world that are soley dedicated to prayer for humanity. At the Paranitya Narasimha Temple and Ashram, the monks pray day and night, creating an incredibly high vibrational atmosphere of Love and positivity for all to soak in.<\/p><p>Temple Deities include: Paranitya Narasimha, Maha Lakshmi, Rukmini Panduranga, Ramanuja Acharya, Mahavatar Babaji, and Tulsi Devi. We pray all who visit the temple come closer to the Love of the Divine in their own heart and lives.<br\/><br\/>Paranitya Narasimha Temple <br\/>1100 W. Church St. Elmira, NY<\/p>",
+            "credits": "",
+            "cta_url": "",
+            "cta_label": "",
+            "text_align": "left",
+            "desktop_text_align": "inherit",
+            "vertical_padding": "py-lg",
+            "vertical_padding_desktop": "tabletl:py-xxl"
+          }
+        }
+      },
+      "block_order": [
+        "image_block_WPMCWX",
+        "content_block_iVedkM"
+      ],
+      "settings": {
+        "margin_top": "mt-xl",
+        "margin_bottom": "mb-xl",
+        "desktop_margin_top": "tabletl:mt-xxxl",
+        "desktop_margin_bottom": "tabletl:mb-xxxl",
+        "vertical_align": "center",
+        "flip_columns_desktop": true
+      }
+    },
+    "section_content_grid_89gq9j": {
+      "type": "section__content-grid",
+      "blocks": {
+        "content_block_V6QDQF": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/bm-01-meditationtechniques.jpg",
+            "title": "Meditation Techniques",
+            "title_tag": "h2",
+            "title_font_style": "h5",
+            "description": "<p>Lorem ipsum dolor sit amet consectetur. Duis habitasse pellentesque platea mauris ligula sed scelerisque. <\/p>",
+            "cta_link": "",
+            "cta_label": "",
+            "cta_style": "btn btn--black",
+            "cta_klaviyo_embed": ""
+          }
+        },
+        "content_block_VBLpVd": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/bm-02-asanas.jpg",
+            "title": "Asanas",
+            "title_tag": "h2",
+            "title_font_style": "h5",
+            "description": "<p>Lorem ipsum dolor sit amet consectetur. Duis habitasse pellentesque platea mauris ligula sed scelerisque. <\/p>",
+            "cta_link": "",
+            "cta_label": "",
+            "cta_style": "btn btn--black",
+            "cta_klaviyo_embed": ""
+          }
+        },
+        "content_block_Nf4DGF": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/bm-03-mainokriya.jpg",
+            "title": "Maino Kriya",
+            "title_tag": "h2",
+            "title_font_style": "h4",
+            "description": "<p>Lorem ipsum dolor sit amet consectetur. Duis habitasse pellentesque platea mauris ligula sed scelerisque. <\/p>",
+            "cta_link": "",
+            "cta_label": "",
+            "cta_style": "btn btn--black",
+            "cta_klaviyo_embed": ""
+          }
+        },
+        "content_block_Hph6ri": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/bm-04-shaktipatinitiation.jpg",
+            "title": "Shaktipat Initiation",
+            "title_tag": "h2",
+            "title_font_style": "h4",
+            "description": "<p>For the first time ever, Paramahamsa Vishwananda will personally give the Grace of “shaktipat”, direct initiation into the Kriya Yoga lineage. This is an unfathomable blessing not to be missed! <\/p>",
+            "cta_link": "",
+            "cta_label": "",
+            "cta_style": "btn btn--black",
+            "cta_klaviyo_embed": ""
+          }
+        }
+      },
+      "block_order": [
+        "content_block_V6QDQF",
+        "content_block_VBLpVd",
+        "content_block_Nf4DGF",
+        "content_block_Hph6ri"
+      ],
+      "disabled": true,
+      "settings": {
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "padding_top": "pt-0",
+        "padding_bottom": "pb-0",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "desktop_padding_top": "inherit",
+        "desktop_padding_bottom": "inherit",
+        "bg_color": "",
+        "cols_mobile": "1",
+        "cols_desktop": "2",
+        "horizontal_gap_mobile": "gap-x-md",
+        "horizontal_gap_desktop": "tabletl:gap-x-md",
+        "vertical_gap_mobile": "gap-y-md",
+        "vertical_gap_desktop": "tabletl:gap-y-md",
+        "format": "alongside",
+        "text_color": "#000",
+        "apply_gradient": false,
+        "gradient_height": 40,
+        "gradient_color": "#000"
+      }
+    },
+    "section_image_text_blocks_ixBKwy": {
+      "type": "section__image_text_blocks",
+      "blocks": {
+        "image_block_BMiYBN": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/bm-thewisdom.jpg",
+            "height": "auto",
+            "desktop_height": "inherit"
+          }
+        },
+        "content_block_pnHMw7": {
+          "type": "content_block",
+          "settings": {
+            "title": "The Wisdom",
+            "title_tag": "h2",
+            "title_font_style": "h3",
+            "description": "<p>At Soul Awakening, Paramahamsa VIshwananda will reveal step by step life-changing wisdom of the Bhakti Path. This wisdom gives you the inspiration and spiritual knowledge you need to build a strong, lasting foundation that infuses love and positivity into all areas of your life.<\/p>",
+            "credits": "",
+            "cta_url": "",
+            "cta_label": "",
+            "text_align": "left",
+            "desktop_text_align": "inherit",
+            "vertical_padding": "py-lg",
+            "vertical_padding_desktop": "tabletl:py-xxl"
+          }
+        }
+      },
+      "block_order": [
+        "image_block_BMiYBN",
+        "content_block_pnHMw7"
+      ],
+      "disabled": true,
+      "settings": {
+        "margin_top": "mt-xl",
+        "margin_bottom": "mb-xl",
+        "desktop_margin_top": "tabletl:mt-xxxl",
+        "desktop_margin_bottom": "tabletl:mb-xxxl",
+        "vertical_align": "center",
+        "flip_columns_desktop": true
+      }
+    },
+    "section_content_grid_Nycc68": {
+      "type": "section__content-grid",
+      "blocks": {
+        "content_block_dj9Th4": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/bm-05-nineformsofbhakti.jpg",
+            "title": "Nine Forms of Bhakti",
+            "title_tag": "h2",
+            "title_font_style": "h5",
+            "description": "<p>Lorem ipsum dolor sit amet consectetur. Duis habitasse pellentesque platea mauris ligula sed scelerisque. <\/p>",
+            "cta_link": "",
+            "cta_label": "",
+            "cta_style": "btn btn--black",
+            "cta_klaviyo_embed": ""
+          }
+        },
+        "content_block_9JYMm7": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/bm-06-sacredvedictexts.jpg",
+            "title": "Sacred Vedic texts",
+            "title_tag": "h2",
+            "title_font_style": "h5",
+            "description": "",
+            "cta_link": "",
+            "cta_label": "",
+            "cta_style": "btn btn--black",
+            "cta_klaviyo_embed": ""
+          }
+        },
+        "content_block_p6aFFm": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/bm-07-storiesofsaints.jpg",
+            "title": "Stories of Saints",
+            "title_tag": "h2",
+            "title_font_style": "h4",
+            "description": "<p>Lorem ipsum dolor sit amet consectetur. Duis habitasse pellentesque platea mauris ligula sed scelerisque. <\/p>",
+            "cta_link": "",
+            "cta_label": "",
+            "cta_style": "btn btn--black",
+            "cta_klaviyo_embed": ""
+          }
+        }
+      },
+      "block_order": [
+        "content_block_dj9Th4",
+        "content_block_9JYMm7",
+        "content_block_p6aFFm"
+      ],
+      "disabled": true,
+      "settings": {
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "padding_top": "pt-0",
+        "padding_bottom": "pb-0",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "desktop_padding_top": "inherit",
+        "desktop_padding_bottom": "inherit",
+        "bg_color": "",
+        "cols_mobile": "1",
+        "cols_desktop": "2",
+        "horizontal_gap_mobile": "gap-x-md",
+        "horizontal_gap_desktop": "tabletl:gap-x-md",
+        "vertical_gap_mobile": "gap-y-md",
+        "vertical_gap_desktop": "tabletl:gap-y-md",
+        "format": "alongside",
+        "text_color": "#000",
+        "apply_gradient": false,
+        "gradient_height": 40,
+        "gradient_color": "#000"
+      }
+    },
+    "section_event_calendar_fF9RNM": {
+      "type": "section__event-calendar",
+      "blocks": {
+        "calendar_item_zrtK3J": {
+          "type": "Calendar_item",
+          "settings": {
+            "date_title": "Day 1",
+            "title": "Discovery",
+            "content": "<p>Lorem ipsum dolor sit amet consectetur. Sit auctor nisi in lacus blandit enim orci ultrices laoreet. Sem in sagittis sed pulvinar neque pellentesque pretium. Vel fames est luctus arcu. Velit felis est quis sodales non fames.<\/p>",
+            "image": "shopify:\/\/shop_images\/day01.jpg"
+          }
+        },
+        "calendar_item_wCjn8G": {
+          "type": "Calendar_item",
+          "settings": {
+            "date_title": "Day 2",
+            "title": "Awakening",
+            "content": "<p>Lorem ipsum dolor sit amet consectetur. Sit auctor nisi in lacus blandit enim orci ultrices laoreet. Sem in sagittis sed pulvinar neque pellentesque pretium. Vel fames est luctus arcu. Velit felis est quis sodales non fames.<\/p>",
+            "image": "shopify:\/\/shop_images\/day02.jpg"
+          }
+        },
+        "calendar_item_ArQz9V": {
+          "type": "Calendar_item",
+          "settings": {
+            "date_title": "Day 3",
+            "title": "Mastery",
+            "content": "<p>Lorem ipsum dolor sit amet consectetur. Sit auctor nisi in lacus blandit enim orci ultrices laoreet. Sem in sagittis sed pulvinar neque pellentesque pretium. Vel fames est luctus arcu. Velit felis est quis sodales non fames.<\/p>",
+            "image": "shopify:\/\/shop_images\/day03.jpg"
+          }
+        },
+        "calendar_item_cfHkfC": {
+          "type": "Calendar_item",
+          "settings": {
+            "date_title": "Day 4",
+            "title": "Transformation - Intiation \/ Shaktipat",
+            "content": "<p>Lorem ipsum dolor sit amet consectetur. Sit auctor nisi in lacus blandit enim orci ultrices laoreet. Sem in sagittis sed pulvinar neque pellentesque pretium. Vel fames est luctus arcu. Velit felis est quis sodales non fames.<\/p>",
+            "image": "shopify:\/\/shop_images\/day04.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "calendar_item_zrtK3J",
+        "calendar_item_wCjn8G",
+        "calendar_item_ArQz9V",
+        "calendar_item_cfHkfC"
+      ],
+      "disabled": true,
+      "settings": {
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "padding_top": "pt-xl",
+        "padding_bottom": "pb-xl",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "desktop_padding_top": "tabletl:pt-xxxl",
+        "desktop_padding_bottom": "tabletl:pb-xxxl",
+        "title": "Four Days, Unlimited Potential",
+        "description": "<p>4 Unforgettable Days, Lifetimes of Transformation<\/p>"
+      }
+    },
+    "section_ticket_tier_7YGiea": {
+      "type": "section__ticket-tier",
+      "blocks": {
+        "block_HyiKeh": {
+          "type": "block",
+          "settings": {
+            "title": "General Access Pass",
+            "price": "FREE",
+            "subtitle": "Enjoy the Temple Anniversary! First come, first serve seating",
+            "description": "<ul><li>Experience the epic Maha Abhishekam on all temple deities<\/li><li>Enjoy blessed prasadam<\/li><li>Opportunities to offer directly to Paranitya Narasimha <\/li><\/ul><p><\/p>",
+            "note": "Unlimited Passes Available",
+            "cta_label": "Entrada gratuita",
+            "cta_link": "https:\/\/bhaktimarga-us.myshopify.com\/products\/temple-anniversary-with-paramahamsa-vishwananda-september-3?variant=41658512343102",
+            "cta_style": "btn btn--black text-white"
+          }
+        },
+        "block_ETLd9E": {
+          "type": "block",
+          "settings": {
+            "title": "Premium Access Pass",
+            "price": "$108",
+            "subtitle": "Enjoy everything from General Access Pass Plus:",
+            "description": "<ul><li>Front row seats for the entire event! <\/li><li>Seperate expedited check-in <\/li><\/ul>",
+            "note": "50 Passes Available",
+            "cta_label": "Entrada premium",
+            "cta_link": "https:\/\/bhaktimarga-us.myshopify.com\/products\/temple-anniversary-with-paramahamsa-vishwananda-september-3?variant=41658512375870",
+            "cta_style": "btn btn--black text-white"
+          }
+        },
+        "block_NEXjNY": {
+          "type": "block",
+          "disabled": true,
+          "settings": {
+            "title": "In-Person Pass",
+            "price": "$895",
+            "subtitle": "Get 4-day in person admission to the program INCLUDING:",
+            "description": "<ul><li>Full Training in Atma Kriya Yoga <\/li><li>Shaktipat Initiation directly from Paramahamsa Vishwananda<\/li><li>Atma Kriya Yoga Course Manual (physical & pdf)<\/li><li>Access to on-going advanced training & free refresher courses<\/li><\/ul><p><\/p>",
+            "note": "Limited Passes Available",
+            "cta_label": "Entrada presencial",
+            "cta_link": "#",
+            "cta_style": "btn btn--gold text-black"
+          }
+        }
+      },
+      "block_order": [
+        "block_HyiKeh",
+        "block_ETLd9E",
+        "block_NEXjNY"
+      ],
+      "settings": {
+        "margin_top": "mt-lg",
+        "margin_bottom": "mb-lg",
+        "desktop_margin_top": "tabletl:mt-xxl",
+        "desktop_margin_bottom": "tabletl:mb-xxl",
+        "title": "Celebrate the Temple Anniversary!",
+        "content": "Wednesday, September 3rd at 6pm EST | 1100 W. Church St. Elmira, New York"
+      }
+    },
+    "section_review_carousel_dNJAUb": {
+      "type": "section__review-carousel",
+      "blocks": {
+        "content_block_tzKzba": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/2024-07-20-p-1779.jpg",
+            "content": "<p>Lorem ipsum dolor sit amet consectetur. Sagittis nunc proin accumsan mattis imperdiet nulla gravida. Odio senectus odio fermentum vitae tortor lacus sed.<\/p>",
+            "credits": "user name"
+          }
+        },
+        "content_block_N7pUYF": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/The_Tools.jpg",
+            "content": "<p>Lorem ipsum dolor sit amet consectetur. Sagittis nunc proin accumsan mattis imperdiet nulla gravida. Odio senectus odio fermentum vitae tortor lacus sed.<\/p>",
+            "credits": "user name"
+          }
+        },
+        "content_block_qBj7b4": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Asana.jpg",
+            "content": "<p>Lorem ipsum dolor sit amet consectetur. Sagittis nunc proin accumsan mattis imperdiet nulla gravida. Odio senectus odio fermentum vitae tortor lacus sed.<\/p>",
+            "credits": "user name"
+          }
+        },
+        "content_block_Dw8dUV": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Stories_Of_Saints.jpg",
+            "content": "<p>Lorem ipsum dolor sit amet consectetur. Sagittis nunc proin accumsan mattis imperdiet nulla gravida. Odio senectus odio fermentum vitae tortor lacus sed.<\/p>",
+            "credits": "user name"
+          }
+        },
+        "content_block_WkWfBL": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Soul_Awake_1.jpg",
+            "content": "<p>Lorem ipsum dolor sit amet consectetur. Sagittis nunc proin accumsan mattis imperdiet nulla gravida. Odio senectus odio fermentum vitae tortor lacus sed.<\/p>",
+            "credits": "user name"
+          }
+        },
+        "content_block_eQzmnx": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rounded_Rectangle_944aac6a-abc2-4cef-a80f-5f6beee2e2d7.png",
+            "content": "<p>Lorem ipsum dolor sit amet consectetur. Sagittis nunc proin accumsan mattis imperdiet nulla gravida. Odio senectus odio fermentum vitae tortor lacus sed.<\/p>",
+            "credits": "user name"
+          }
+        }
+      },
+      "block_order": [
+        "content_block_tzKzba",
+        "content_block_N7pUYF",
+        "content_block_qBj7b4",
+        "content_block_Dw8dUV",
+        "content_block_WkWfBL",
+        "content_block_eQzmnx"
+      ],
+      "disabled": true,
+      "settings": {
+        "padding_top": "pt-md",
+        "padding_bottom": "pb-md",
+        "desktop_padding_top": "tabletl:pt-xl",
+        "desktop_padding_bottom": "tabletl:pb-xl",
+        "title": "See what others are saying",
+        "title_tag": "h3"
+      }
+    },
+    "section_accordion_eVtHNJ": {
+      "type": "section__accordion",
+      "blocks": {
+        "accordion_item_7CKjgY": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "What should I wear to this event?",
+            "content": "<p>All are welcome to come as they are—<strong>no formal Hindu attire is required!<\/strong> We simply ask that you dress modestly out of respect for the temple and monks. Please no tank tops (or wear a shawl over your shoulders) and avoiding short shorts or skirts. <br\/><br\/>Many women choose to wear long skirts, while men often wear pants and normal shirts or kurtas and dhotis. <br\/><br\/>Sarees are, of course, welcome but not required. <br\/><strong><br\/>The most important thing is that you feel comfortable while honoring the sacred space. 🙏✨<\/strong><\/p>"
+          }
+        },
+        "accordion_item_emUQpJ": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Who is this program for? Do I need to be religious to join the program?",
+            "content": "<p>This is a traditional Hindu event, complete with sacred rituals, Vedic chanting, and devotional celebrations. While you don’t need to be Hindu or religious to attend, we invite everyone to experience the beauty and depth of spirituality here at the temple. <br\/><br\/>The teachings are universal, and we’re happy to explain any aspects of the tradition and ceremony. Whether you come as a devotee or simply with an open heart, you are warmly welcome!<\/p>"
+          }
+        },
+        "accordion_item_7TFdiQ": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Is the Temple handicap\/ wheelchair assessable?",
+            "content": "<p><strong>Yes!<\/strong> Our temple is wheelchair accessible through a separate entrance. However, please note that we do not have an elevator to access the lower level. If you need any assistance during your visit, our team will be happy to help ensure you have a comfortable and enriching experience. Let us know how we can support you! <\/p>"
+          }
+        },
+        "accordion_item_mQ3rJ9": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Can I sponsor the event from a far?",
+            "content": "<p>Yes, you can absolutely <strong>sponsor the event from afar<\/strong>! We are grateful for any support, whether near or far, and would be honored to have you contribute to this special occasion. If you're interested in sponsoring, please reach out to us for more details on how you can be part of this meaningful celebration. Your support helps make this event even more impactful! <br\/><br\/>Official sponsorship link to come soon!<\/p>"
+          }
+        },
+        "accordion_item_Bpxjbg": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Will it be livestreamed?",
+            "content": "<p><strong>Yes!<\/strong> We are excited to offer a <strong>high-quality livestream<\/strong> of the event, thanks to our new equipment and an incredible team behind the cameras. Whether you’re joining in person or from afar, we want you to have an immersive and uplifting experience. Tune in and be part of the celebration! <\/p>"
+          }
+        },
+        "accordion_item_a6Qb7Q": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "How do I get to Elmira, New York?",
+            "content": "<p>Getting to <strong>Elmira, NY<\/strong> is easy with several nearby airports offering travel options. Here's how you can plan your trip:<\/p><p><strong>Direct Flights<\/strong><br\/><br\/>The <strong>Elmira Corning Regional Airport (ELM)<\/strong> is the closest airport to the ashram, just a 15-minute drive away. While direct flights to Elmira may be limited and sometimes more expensive, you can fly to one of the following airports with direct flights to Elmira:<\/p><p>Detroit (DTW)<br\/>Orlando (SFB)<br\/>Punta Gorda (PGD)<br\/>Tampa (PIE) <\/p><p><strong>Nearest Airports<\/strong><br\/><br\/>Elmira Corning Regional (ELM) – 15 minute drive <\/p><p>Ithaca Tompkins International(ITH) – 45 minute drive <\/p><p>Syracuse Hancock International (SYR) – 1 hr 45 min. drive <\/p><p>Greater Rochester International (ROC) – 2 hour drive <\/p><p>Newark Liberty International (EWR) – 3.5 hour drive<br\/><strong><br\/>Coming from NYC<br\/><br\/><\/strong>Drive: 4.5 (depending on traffic) <\/p><p>Bus: There are affordable buses from NYC using OurBus. ($50, 5.5 hours)  <a href=\"https:\/\/www.ourbus.com\/\">https:\/\/www.ourbus.com<\/a><\/p><p>Flight from Ithaca: You can find a direct flight from NYC to the Ithaca Tompkins airport <br\/><br\/>Safe travels, and we look forward to welcoming you! 🙏✨<\/p>"
+          }
+        },
+        "accordion_item_VUUMin": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "What is the refund policy?",
+            "content": "<p><strong>What is the refund policy?<\/strong><\/p><p>Request a refund at least <strong>14 days before<\/strong> the program start date to receive a <strong>100% refund<\/strong> of your payment.<br\/><br\/>If you request a refund between <strong>7-13 days before<\/strong> the start date, you will receive a <strong>50% refund<\/strong>.<br\/><br\/>Refund requests made <strong>less than 7 days before<\/strong> the program start date are not eligible, as program resources and preparations will already be in place.<br\/><\/p><p><strong>How to Request a Refund:<\/strong><\/p><p>To request a refund, please contact our support team at info@bhaktimarga.us with your registration details. Refunds will be processed to the original payment method within <strong>7-10 business days<\/strong>.<\/p><p><strong>Exceptions:<\/strong><\/p><p>Refunds will not be issued for missed sessions, schedule conflicts, or personal circumstances. However, in cases of <strong>extraordinary situations<\/strong>, please reach out to discuss possible options.<\/p><p>We appreciate your understanding and look forward to supporting you on your spiritual journey with <strong>Bhakti Marga!<\/strong><\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "accordion_item_7CKjgY",
+        "accordion_item_emUQpJ",
+        "accordion_item_7TFdiQ",
+        "accordion_item_mQ3rJ9",
+        "accordion_item_Bpxjbg",
+        "accordion_item_a6Qb7Q",
+        "accordion_item_VUUMin"
+      ],
+      "settings": {
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "padding_top": "pt-0",
+        "padding_bottom": "pb-xl",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "desktop_padding_top": "inherit",
+        "desktop_padding_bottom": "tabletl:pb-xxxl",
+        "max_width": "",
+        "title": "FAQs",
+        "cta_url": "shopify:\/\/pages\/contacto",
+        "cta_label": "Contáctanos",
+        "title_position": "left"
+      }
+    },
+    "section_hero_9MnEcf": {
+      "type": "section__hero",
+      "settings": {
+        "padding_top": "0px",
+        "desktop_padding_top": "0px",
+        "padding_bottom": "0px",
+        "desktop_padding_bottom": "inherit",
+        "padding_horizontal": "px-0",
+        "desktop_padding_horizontal": "inherit",
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "use_container": false,
+        "set_100vh": false,
+        "border_radius": 0,
+        "aspect_ratio": "1\/1",
+        "aspect_ratio_desktop": "16\/9",
+        "image": "shopify:\/\/shop_images\/2023-09-03-p-1356.jpg",
+        "image_desktop": "shopify:\/\/shop_images\/2023-09-03-p-1356.jpg",
+        "bg_color": "",
+        "content_width": "max-w-5xl",
+        "text_align": "text-center",
+        "text_color": "#ffffff",
+        "title": "Join the Temple Anniversary",
+        "title_font_style": "h2",
+        "subtitle": "",
+        "button_text": "Save your Spot",
+        "button_url": "#",
+        "button_style": "btn",
+        "anchor_to_pricing": true,
+        "video_title": "",
+        "horizontal_position": "justify-center",
+        "vertical_position": "items-center"
+      }
+    },
+    "section_grid_images_HiU7jG": {
+      "type": "section__grid-images",
+      "blocks": {
+        "image_block_kPyb8r": {
+          "type": "image_block",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "image_block_kPyb8r"
+      ],
+      "disabled": true,
+      "settings": {
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "padding_top": "pt-0",
+        "padding_bottom": "pb-0",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "desktop_padding_top": "inherit",
+        "desktop_padding_bottom": "inherit",
+        "text": "",
+        "cta_url": "",
+        "cta_label": ""
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "main",
+    "section_text_content_YVPHBf",
+    "section_video_TMtkEK",
+    "section_text_content_NGRdYj",
+    "section_text_content_ikgUYc",
+    "section_featured_master_section_kUWppT",
+    "section_text_content_dDgmnw",
+    "section_icon_grid_QfR3bE",
+    "section_hero_jPCMza",
+    "section_image_text_blocks_hjR6aP",
+    "section_content_grid_89gq9j",
+    "section_image_text_blocks_ixBKwy",
+    "section_content_grid_Nycc68",
+    "section_event_calendar_fF9RNM",
+    "section_ticket_tier_7YGiea",
+    "section_review_carousel_dNJAUb",
+    "section_accordion_eVtHNJ",
+    "section_hero_9MnEcf",
+    "section_grid_images_HiU7jG"
+  ]
+}

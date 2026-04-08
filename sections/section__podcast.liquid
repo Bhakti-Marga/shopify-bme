@@ -1,0 +1,411 @@
+{% liquid
+  assign container_margin_classes = ""
+  assign container_top_padding_classes = ""
+  assign container_bottom_padding_classes = ""
+
+  if section.settings.margin_top != "mt-0"
+    assign container_margin_classes = container_margin_classes | append: " " | append: section.settings.margin_top
+  endif
+
+  if section.settings.margin_bottom != "mb-0"
+    assign container_margin_classes = container_margin_classes | append: " " | append: section.settings.margin_bottom
+  endif
+
+  if section.settings.desktop_margin_top != "inherit"
+    assign container_margin_classes = container_margin_classes | append: " " | append: section.settings.desktop_margin_top
+  endif
+
+  if section.settings.desktop_margin_bottom != "inherit"
+    assign container_margin_classes = container_margin_classes | append: " " | append: section.settings.desktop_margin_bottom
+  endif
+
+  if section.settings.padding_top != "pt-0"
+      assign container_top_padding_classes = container_top_padding_classes | append: " " | append: section.settings.padding_top
+  endif
+
+  if section.settings.padding_bottom != "pb-0"
+      assign container_bottom_padding_classes = container_bottom_padding_classes | append: " " | append: section.settings.padding_bottom
+  endif
+
+  if section.settings.desktop_padding_top != "inherit"
+      assign container_top_padding_classes = container_top_padding_classes | append: " " | append: section.settings.desktop_padding_top
+  endif
+
+  if section.settings.desktop_padding_bottom != "inherit"
+      assign container_bottom_padding_classes = container_bottom_padding_classes | append: " " | append: section.settings.desktop_padding_bottom
+  endif
+
+  assign container_margin_classes = container_margin_classes | strip
+  assign container_top_padding_classes = container_top_padding_classes | strip
+  assign container_bottom_padding_classes = container_bottom_padding_classes | strip
+%}
+
+{%- capture carousel_options -%}
+  {
+    "slidesPerView": "auto",
+    "loop": false,
+    "spaceBetween": "16",
+    "freeMode": true,
+    "touchRatio": 1,
+    "momentum": true,
+    "mousewheel": {
+      "forceToAxis": true
+    },
+    "simulateTouch": true 
+  }
+{%- endcapture -%}
+
+<s-podcast role="section" class="podcast block {% if container_margin_classes != blank %} {{ container_margin_classes }}{% endif %}">
+  <div class="podcast-header-wrapper {% if container_top_padding_classes != blank %} {{ container_top_padding_classes }}{% endif %}"
+    style="{% if section.settings.primary_bg_color != blank %}background-color: {{ section.settings.primary_bg_color }};{% endif %}">
+    <div class="podcast-header container text-[var(--color)]"
+      style="--color: {{ section.settings.heading_color }};">
+      {% if section.settings.title != blank %}
+        <{{ section.settings.title_tag }} class="podcast-header__title leading-tight mb-md {% if section.settings.title_font_style != blank %}{{  section.settings.title_font_style  }}{% endif %}">
+            {{ section.settings.title }}
+        </{{ section.settings.title_tag }}>  
+      {% endif %}
+      {% if section.settings.description != blank %}
+        <div class="podcast-header__description mb-32 rte">
+          {{ section.settings.description }}
+        </div>
+      {% endif %}
+      <div class="flex gap-md flex-wrap pb-lg tabletl:pb-[52px]">
+        {% assign topics = "" %}
+        {% for block in section.blocks %}
+          {% if block.settings.topic != blank %}
+            {% if topics != "" %}
+              {% capture topics %}{{ topics }},{{ block.settings.topic | downcase }}{% endcapture %}
+            {% else %}
+              {% capture topics %}{{ block.settings.topic | downcase }}{% endcapture %}
+            {% endif %}
+          {% endif %}
+        {% endfor %}
+
+        {% assign unique_topics = topics | split: "," | uniq %}
+
+        {% if topics != "" %}
+          <button class="podcast__filter-btn active  {% if section.settings.heading_color == "black" %}tabletp:hover:text-black/50 {% else %} tabletp:hover:text-white/50  {% endif %}" data-topic="all" js-filter-button>
+            Todos los temas
+          </button>
+          {% for topic in unique_topics %}
+            <button class="podcast__filter-btn {% if section.settings.heading_color == "black" %}tabletp:hover:text-black/50 {% else %} tabletp:hover:text-white/50  {% endif %}" data-topic="{{ topic | handleize}}" js-filter-button>
+              {{ topic | capitalize }}
+            </button>
+          {% endfor %}
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+  <div class="podcast-carousel-wrapper text-[var(--text-color)] {% if container_bottom_padding_classes != blank %} {{ container_bottom_padding_classes }}{% endif %}"
+    style="{% if section.settings.primary_bg_color != blank and section.settings.secondary_bg_color != blank %}background: linear-gradient(to bottom, {{ section.settings.primary_bg_color }} 50%, {{ section.settings.secondary_bg_color }} 50%);{% endif %}
+    --text-color: {{ section.settings.card_color }};">
+
+    <s-carousel class="grid grid-cols-1" data-options='{{carousel_options}}'>
+      <div id="{{ section.id }}--carousel" class="swiper w-full swiper--left-offset pt-xs pb-12" js-carousel>
+        <ul class="swiper-wrapper block w-full tabletp:pl-20 tabletl:pl-xl">
+          
+            {%- for block in section.blocks -%}
+              {% if block.settings.title != blank or block.settings.image != blank %}
+                <li class="podcast__slide block swiper-slide box-content {% if forloop.last %} pr-md tabletp:pr-20 tabletl:pr-xl{% endif %}" data-topic="{{ block.settings.topic | downcase | handleize}}" js-carousel-slide>  
+                  <article class="podcast__content-card h-full group">
+                    <a href="{{ block.settings.link }}" class="block h-full pb-md" aria-label="{{ block.settings.title }}">
+                      {% if block.settings.image != blank %}
+                        <div class="overflow-hidden rounded aspect-square relative mb-md">
+                          {% render 'lazy-image',
+                            image: block.settings.image,
+                            img_classes: 'object-cover absolute top-0 left-0 h-full' %}
+                        </div>
+                      {% endif %}
+                      <div class="flex justify-between gap-md font-600 text-14 tabletl:text-16 mb-md {% if section.settings.card_color == "black" %}text-black/50 {% else %} text-white/50  {% endif %}">
+                        {% if block.settings.topic != blank %}
+                          <span>
+                            {{ block.settings.topic }}
+                          </span>
+                        {% endif %}
+                        {% if block.settings.date != blank %}
+                          <span>
+                            {{ block.settings.date }}
+                          </span>
+                        {% endif %}
+                      </div>
+                      {% if block.settings.title != blank %}
+                        <p class="text-18 font-500 duration-500 {% if section.settings.card_color == "black" %}tabletp:group-hover:text-black/50 {% else %} tabletp:group-hover:text-white/50  {% endif %}">
+                          {{ block.settings.title }}
+                        </p>
+                      {% endif %}
+                    </a>
+                  </article>
+                </li>
+              {% endif %}
+            {% endfor %}
+          </ul> 
+      </div>
+    </s-carousel>
+  </div>
+</s-podcast>
+
+{% schema %}
+{
+  "name": "Podcast Grid",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "select",
+      "id": "margin_top",
+      "label": "Margin Top",
+      "options": [
+        { "value": "mt-0", "label": "None" },
+        { "value": "mt-sm", "label": "Small - 8px" },
+        { "value": "mt-md", "label": "Medium - 16px" },
+        { "value": "mt-lg", "label": "Large - 24px" },
+        { "value": "mt-xl", "label": "X-Large - 40px" },
+        { "value": "mt-xxl", "label": "XX-Large - 60px" },
+        { "value": "mt-xxxl", "label": "XXX-Large - 80px" }
+      ],
+      "default": "mt-0"
+    },
+    {
+      "type": "select",
+      "id": "margin_bottom",
+      "label": "Margin Bottom",
+      "options": [
+        { "value": "mb-0", "label": "None" },
+        { "value": "mb-sm", "label": "Small - 8px" },
+        { "value": "mb-md", "label": "Medium - 16px" },
+        { "value": "mb-lg", "label": "Large - 24px" },
+        { "value": "mb-xl", "label": "X-Large - 40px" },
+        { "value": "mb-xxl", "label": "XX-Large - 60px" },
+        { "value": "mb-xxxl", "label": "XXX-Large - 80px" }
+      ],
+      "default": "mb-0"
+    },
+    {
+      "type": "select",
+      "id": "padding_top",
+      "label": "Padding Top",
+      "options": [
+        { "value": "pt-0", "label": "None" },
+        { "value": "pt-sm", "label": "Small - 8px" },
+        { "value": "pt-md", "label": "Medium - 16px" },
+        { "value": "pt-lg", "label": "Large - 24px" },
+        { "value": "pt-xl", "label": "X-Large - 40px" },
+        { "value": "pt-xxl", "label": "XX-Large - 60px" },
+        { "value": "pt-xxxl", "label": "XXX-Large - 80px" }
+      ],
+      "default": "pt-0"
+    },
+    {
+      "type": "select",
+      "id": "padding_bottom",
+      "label": "Padding Bottom",
+      "options": [
+        { "value": "pb-0", "label": "None" },
+        { "value": "pb-sm", "label": "Small - 8px" },
+        { "value": "pb-md", "label": "Medium - 16px" },
+        { "value": "pb-lg", "label": "Large - 24px" },
+        { "value": "pb-xl", "label": "X-Large - 40px" },
+        { "value": "pb-xxl", "label": "XX-Large - 60px" },
+        { "value": "pb-xxxl", "label": "XXX-Large - 80px" }
+      ],
+      "default": "pb-0"
+    },
+    {
+      "type": "select",
+      "id": "desktop_margin_top",
+      "label": "Desktop - Margin Top",
+      "options": [
+        { "value": "inherit", "label": "Inherit" },
+        { "value": "tabletl:mt-0", "label": "None" },
+        { "value": "tabletl:mt-sm", "label": "Small - 8px" },
+        { "value": "tabletl:mt-md", "label": "Medium - 16px" },
+        { "value": "tabletl:mt-lg", "label": "Large - 24px" },
+        { "value": "tabletl:mt-xl", "label": "X-Large - 40px" },
+        { "value": "tabletl:mt-xxl", "label": "XX-Large - 60px" },
+        { "value": "tabletl:mt-xxxl", "label": "XXX-Large - 80px" }
+      ],
+      "default": "inherit"
+    },
+    {
+      "type": "select",
+      "id": "desktop_margin_bottom",
+      "label": "Desktop - Margin Bottom",
+      "options": [
+        { "value": "inherit", "label": "Inherit" },
+        { "value": "tabletl:mb-0", "label": "None" },
+        { "value": "tabletl:mb-sm", "label": "Small - 8px" },
+        { "value": "tabletl:mb-md", "label": "Medium - 16px" },
+        { "value": "tabletl:mb-lg", "label": "Large - 24px" },
+        { "value": "tabletl:mb-xl", "label": "X-Large - 40px" },
+        { "value": "tabletl:mb-xxl", "label": "XX-Large - 60px" },
+        { "value": "tabletl:mb-xxxl", "label": "XXX-Large - 80px" }
+      ],
+      "default": "inherit"
+    },
+    {
+      "type": "select",
+      "id": "desktop_padding_top",
+      "label": "Desktop - Padding Top",
+      "options": [
+        { "value": "inherit", "label": "Inherit" },
+        { "value": "tabletl:pt-0", "label": "None" },
+        { "value": "tabletl:pt-sm", "label": "Small - 8px" },
+        { "value": "tabletl:pt-md", "label": "Medium - 16px" },
+        { "value": "tabletl:pt-lg", "label": "Large - 24px" },
+        { "value": "tabletl:pt-xl", "label": "X-Large - 40px" },
+        { "value": "tabletl:pt-xxl", "label": "XX-Large - 60px" },
+        { "value": "tabletl:pt-xxxl", "label": "XXX-Large - 80px" }
+      ],
+      "default": "tabletl:pt-0"
+    },
+    {
+      "type": "select",
+      "id": "desktop_padding_bottom",
+      "label": "Desktop - Padding Bottom",
+      "options": [
+        { "value": "inherit", "label": "Inherit" },
+        { "value": "tabletl:pb-0", "label": "None" },
+        { "value": "tabletl:pb-sm", "label": "Small - 8px" },
+        { "value": "tabletl:pb-md", "label": "Medium - 16px" },
+        { "value": "tabletl:pb-lg", "label": "Large - 24px" },
+        { "value": "tabletl:pb-xl", "label": "X-Large - 40px" },
+        { "value": "tabletl:pb-xxl", "label": "XX-Large - 60px" },
+        { "value": "tabletl:pb-xxxl", "label": "XXX-Large - 80px" }
+      ],
+      "default": "tabletl:pb-0"
+    },
+    {
+      "type": "header",
+      "content": "Header Settings"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "select",
+      "id": "title_tag",
+      "label": "Semantic HTML Title Tag",
+      "options": [
+        { "value": "h1", "label": "H1" },
+        { "value": "h2", "label": "H2" },
+        { "value": "h3", "label": "H3" },
+        { "value": "h4", "label": "H4" },
+        { "value": "h5", "label": "H5" },
+        { "value": "h6", "label": "H6" }
+      ],
+      "default": "h2"
+    },
+    {
+      "type": "select",
+      "id": "title_font_style",
+      "label": "Title Font Style",
+      "options": [
+        { "value": "h1", "label": "H1 - 120px / 80px" },
+        { "value": "h2", "label": "H2 - 88px / 48px" },
+        { "value": "h3", "label": "H3 - 56px / 40px" },
+        { "value": "h4", "label": "H4 - 40px / 32px" },
+        { "value": "h5", "label": "H5 - 32px / 24px" }
+      ],
+      "default": "h2"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Content"
+    },
+    {
+      "type": "header",
+      "content": "Colors Settings"
+    },
+    {
+      "type": "color",
+      "id": "primary_bg_color",
+      "label": "Primary Background Color",
+      "default": "#16254C"
+    },
+    {
+      "type": "color",
+      "id": "secondary_bg_color",
+      "label": "Secondary Background Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "select",
+      "id": "heading_color",
+      "label": "Heading Color",
+      "options": [
+        {
+          "value": "white",
+          "label": "White"
+        },
+        {
+          "value": "black",
+          "label": "Black"
+        }
+      ],
+      "default": "white"
+    },
+    {
+      "type": "select",
+      "id": "card_color",
+      "label": "Card Color",
+      "options": [
+        {
+          "value": "white",
+          "label": "Light"
+        },
+        {
+          "value": "black",
+          "label": "Dark"
+        }
+      ],
+      "default": "black"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "content_block",
+      "name": "Content Block",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "text",
+          "id": "topic",
+          "label": "Topic"
+        },
+        {
+          "type": "text",
+          "id": "date",
+          "label": "Date"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link"
+        },
+      ]
+    },
+ 
+  ],
+  "presets": [
+    {
+      "name": "Podcast Grid"
+    }
+  ]
+}
+{% endschema %}

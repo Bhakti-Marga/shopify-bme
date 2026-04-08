@@ -1,0 +1,334 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "section_hero_EkgEmY": {
+      "type": "section__hero",
+      "custom_css": [],
+      "settings": {
+        "padding_top": "0px",
+        "desktop_padding_top": "0px",
+        "padding_bottom": "16px",
+        "desktop_padding_bottom": "40px",
+        "padding_horizontal": "px-0",
+        "desktop_padding_horizontal": "inherit",
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "tabletl:mb-0",
+        "use_container": true,
+        "set_100vh": false,
+        "set_100vh_desktop": true,
+        "border_radius": 16,
+        "aspect_ratio": "1/1",
+        "aspect_ratio_desktop": "16/9",
+        "image": "shopify://shop_images/BM-USA-HOMEPAGE-HERO-Edit.jpg",
+        "image_desktop": "shopify://shop_images/BM-USA-HOMEPAGE-HERO-Edit-2.jpg",
+        "bg_color": "#16254c",
+        "content_width": "max-w-2xl",
+        "text_align": "text-left",
+        "text_color": "#ffffff",
+        "title": "Descubrir el amor de Dios",
+        "title_font_style": "h3",
+        "subtitle": "<h4>Bhakti Marga es el camino de la devoción.</h4><p>Un viaje de la mente al corazón, guiado por un maestro vivo.</p>",
+        "button_text": "Más información",
+        "button_url": "shopify://blogs/events/4-days-to-soul-awakening-with-paramahamsa-vishwananda",
+        "button_style": "btn",
+        "anchor_to_pricing": false,
+        "video_title": "",
+        "horizontal_position": "justify-start",
+        "vertical_position": "items-end"
+      }
+    },
+    "section_events_carousel_KydBCi": {
+      "type": "section__events-carousel",
+      "blocks": {
+        "block_mBTHLE": {
+          "type": "block",
+          "settings": {
+            "article": "events/shivaratri-2025"
+          }
+        },
+        "block_NqbVje": {
+          "type": "block",
+          "settings": {
+            "article": "events/maha-abhishekam-fire-ceremony-elmira-new-york"
+          }
+        },
+        "block_wiAcxG": {
+          "type": "block",
+          "settings": {
+            "article": "events-1/darshan-blessing-elmira-new-york-1"
+          }
+        },
+        "block_8zLGrr": {
+          "type": "block",
+          "settings": {
+            "article": "events/paramahamsa-vishwanandas-birthday-2025"
+          }
+        },
+        "block_FaGDjR": {
+          "type": "block",
+          "settings": {
+            "article": "events/gurupurnima-2025"
+          }
+        },
+        "block_iBnFGB": {
+          "type": "block",
+          "settings": {
+            "article": "events/maha-abhishekam-fire-ceremony-elmira-new-york-1"
+          }
+        },
+        "block_HXgDWL": {
+          "type": "block",
+          "settings": {
+            "article": "events-1/krishna-janmashtami-2025"
+          }
+        },
+        "block_jY3pWq": {
+          "type": "block",
+          "settings": {
+            "article": "events/navaratri-2025"
+          }
+        }
+      },
+      "block_order": [
+        "block_mBTHLE",
+        "block_NqbVje",
+        "block_wiAcxG",
+        "block_8zLGrr",
+        "block_FaGDjR",
+        "block_iBnFGB",
+        "block_HXgDWL",
+        "block_jY3pWq"
+      ],
+      "custom_css": [],
+      "settings": {
+        "padding_top": "pt-xl",
+        "padding_bottom": "pb-xxl",
+        "desktop_padding_top": "inherit",
+        "desktop_padding_bottom": "inherit",
+        "set_dark_theme": true,
+        "apply_gradient": true,
+        "title": "Próximos Eventos",
+        "title_tag": "h2",
+        "cta_label": "Descubre Eventos",
+        "cta_url": "shopify://blogs/events",
+        "hide_arrows_desktop": false
+      }
+    },
+    "section_hero_nbPWj9": {
+      "type": "section__hero",
+      "custom_css": [],
+      "settings": {
+        "padding_top": "pt-0",
+        "desktop_padding_top": "tabletl:pt-0",
+        "padding_bottom": "pb-0",
+        "desktop_padding_bottom": "inherit",
+        "padding_horizontal": "px-0",
+        "desktop_padding_horizontal": "inherit",
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "use_container": false,
+        "set_100vh": false,
+        "set_100vh_desktop": true,
+        "border_radius": 0,
+        "aspect_ratio": "9/16",
+        "aspect_ratio_desktop": "16/9",
+        "video": "shopify://files/videos/2025-02-12-BM3Web-GurujiMontage-Loop-04.mp4",
+        "bg_color": "",
+        "content_width": "max-w-5xl",
+        "text_align": "text-center",
+        "text_color": "#ffffff",
+        "title": "Un maestro revolucionario de nuestro tiempo.",
+        "title_font_style": "h2",
+        "subtitle": "<p>La oportunidad de conocer a un Maestro Iluminado y <em>satguru</em> vivo es extremadamente rara.</p>",
+        "button_text": "Conócelo",
+        "button_url": "shopify://pages/el-maestro",
+        "button_style": "btn",
+        "anchor_to_pricing": false,
+        "video_title": "",
+        "horizontal_position": "justify-center",
+        "vertical_position": "items-center"
+      }
+    },
+    "section_hero_Pc4c7p": {
+      "type": "section__hero",
+      "custom_css": [],
+      "settings": {
+        "padding_top": "8px",
+        "desktop_padding_top": "tabletl:pt-0",
+        "padding_bottom": "8px",
+        "desktop_padding_bottom": "inherit",
+        "padding_horizontal": "px-0",
+        "desktop_padding_horizontal": "inherit",
+        "margin_top": "mt-xl",
+        "margin_bottom": "mb-xl",
+        "desktop_margin_top": "tabletl:mt-xxxl",
+        "desktop_margin_bottom": "inherit",
+        "use_container": true,
+        "set_100vh": false,
+        "set_100vh_desktop": true,
+        "border_radius": 16,
+        "aspect_ratio": "9/16",
+        "aspect_ratio_desktop": "16/9",
+        "image": "shopify://shop_images/HOME-PAGE-Place_For_You-MOBILE.jpg",
+        "image_desktop": "shopify://shop_images/HOME-PAGE-PLACE-FOR-YOU-Edit.jpg",
+        "bg_color": "",
+        "content_width": "max-w-3xl",
+        "text_align": "text-left",
+        "text_color": "#ffffff",
+        "title": "Aquí hay un lugar para ti.",
+        "title_font_style": "h2",
+        "subtitle": "<p>Bhakti Marga es el camino del despertar de la devoción en la vida diaria. Somos una comunidad que se reúne en múltiples lugares de todo el mundo donde animamos a cada individuo a expresar su devoción amorosa por Dios. Nos reunimos semanalmente online para unirnos y profundizar en el camino del <em>bhakti</em>.</p>",
+        "button_text": "Asistir",
+        "button_url": "shopify://pages/bhakti-sundays",
+        "button_style": "btn",
+        "anchor_to_pricing": false,
+        "video_title": "",
+        "horizontal_position": "justify-start",
+        "vertical_position": "items-end"
+      }
+    },
+    "image_text_blocks": {
+      "type": "section__image_text_blocks",
+      "blocks": {
+        "image": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/Rounded_Rectangle.png",
+            "height": "auto",
+            "desktop_height": "inherit"
+          }
+        },
+        "content": {
+          "type": "content_block",
+          "settings": {
+            "title": "Rezar por el mundo",
+            "title_tag": "h2",
+            "title_font_style": "h3",
+            "description": "<p>El amor es la mayor forma de oración.  Una vez al mes, únete a Paramahamsa Vishwananda en directo a través de una oración guiada por la paz mundial y por los necesitados.</p>",
+            "credits": "",
+            "cta_url": "https://events.bhaktimarga.org/pages/pray-for-the-world",
+            "cta_label": "Enviar una oración",
+            "text_align": "center",
+            "desktop_text_align": "inherit",
+            "vertical_padding": "py-xxl",
+            "vertical_padding_desktop": "tabletl:py-xxl"
+          }
+        }
+      },
+      "block_order": [
+        "image",
+        "content"
+      ],
+      "custom_css": [],
+      "settings": {
+        "margin_top": "mt-xl",
+        "margin_bottom": "mb-xl",
+        "desktop_margin_top": "tabletl:mt-xl",
+        "desktop_margin_bottom": "inherit",
+        "vertical_align": "top",
+        "flip_columns_desktop": false
+      }
+    },
+    "section_image_text_blocks_hznqgT": {
+      "type": "section__image_text_blocks",
+      "blocks": {
+        "image_block_ckKFYY": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/anirudha_f9fb1963-1391-4312-9e2d-2f6fce3ab8dc.jpg",
+            "height": "auto",
+            "desktop_height": "inherit"
+          }
+        },
+        "content_block_FnWaaW": {
+          "type": "content_block",
+          "settings": {
+            "title": "Satsang diario en el templo",
+            "title_tag": "h2",
+            "title_font_style": "h3",
+            "description": "<p>Sabiduría intemporal para descubrir el propósito de la vida</p>",
+            "credits": "",
+            "cta_url": "https://courses.bhaktimarga.us/yogicphilosophy",
+            "cta_label": "Únete online",
+            "text_align": "center",
+            "desktop_text_align": "inherit",
+            "vertical_padding": "py-xxl",
+            "vertical_padding_desktop": "tabletl:py-xxl"
+          }
+        }
+      },
+      "block_order": [
+        "image_block_ckKFYY",
+        "content_block_FnWaaW"
+      ],
+      "custom_css": [],
+      "settings": {
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-xl",
+        "desktop_margin_top": "tabletl:mt-lg",
+        "desktop_margin_bottom": "tabletl:mb-xxxl",
+        "vertical_align": "center",
+        "flip_columns_desktop": true
+      }
+    },
+    "section_hero_6Jyrcc": {
+      "type": "section__hero",
+      "custom_css": [],
+      "settings": {
+        "padding_top": "0px",
+        "desktop_padding_top": "inherit",
+        "padding_bottom": "pb-0",
+        "desktop_padding_bottom": "inherit",
+        "padding_horizontal": "px-0",
+        "desktop_padding_horizontal": "inherit",
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "use_container": false,
+        "set_100vh": false,
+        "set_100vh_desktop": true,
+        "border_radius": 0,
+        "aspect_ratio": "auto",
+        "aspect_ratio_desktop": "16/9",
+        "image": "shopify://shop_images/Revolutionary_Master_b89ce6b5-cd05-4996-a1d1-924cd49c7ccf.jpg",
+        "image_desktop": "shopify://shop_images/Revolutionary_Master_b89ce6b5-cd05-4996-a1d1-924cd49c7ccf.jpg",
+        "bg_color": "rgba(0,0,0,0)",
+        "content_width": "max-w-5xl",
+        "text_align": "text-center",
+        "text_color": "#ffffff",
+        "title": "¿Preparado para vivir una vida de amor?",
+        "title_font_style": "h2",
+        "subtitle": "",
+        "button_text": "Empezar ahora",
+        "button_url": "shopify://pages/start-now",
+        "button_style": "btn",
+        "anchor_to_pricing": false,
+        "video_title": "",
+        "horizontal_position": "justify-center",
+        "vertical_position": "items-center"
+      }
+    }
+  },
+  "order": [
+    "section_hero_EkgEmY",
+    "section_events_carousel_KydBCi",
+    "section_hero_nbPWj9",
+    "section_hero_Pc4c7p",
+    "image_text_blocks",
+    "section_image_text_blocks_hznqgT",
+    "section_hero_6Jyrcc"
+  ]
+}

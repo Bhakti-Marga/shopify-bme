@@ -1,0 +1,40 @@
+{%- if localization.available_languages.size > 1 -%}
+  <localization-form>
+    {%- form 'localization', id: 'FooterLanguageForm', class: 'relative' -%}
+      <div class="disclosure relative">
+        <button
+          type="button"
+          class="disclosure__button"
+          aria-expanded="false"
+          aria-controls="FooterLanguageList"
+        >
+          <span>{{ localization.language.endonym_name | capitalize }}</span>
+          <i class='inline-block w-md'>{% render 'icon--caret' %}</i>
+        </button>
+          <ul id="FooterLanguageList" role="list" class="disclosure__list list-unstyled absolute bottom-md w-[220px] overflow-hidden rounded-sm p-xs shadow-lg bg-white text-black focus:outline-none" hidden>
+            {%- for language in localization.available_languages -%}
+              <li class="disclosure__item" tabindex="-1">
+                <a
+                  class="disclosure__item-link inline-block w-full px-md py-sm rounded-xs {% unless language.iso_code == localization.language.iso_code %}tabletl:hover:bg-gray-dark {% endunless %}{% if language.iso_code == localization.language.iso_code %}selected opacity-50 bg-gray cursor-not-allowed{% endif %}"
+                  href="#"
+                  hreflang="{{ language.iso_code }}"
+                  lang="{{ language.iso_code }}"
+                  {% if language.iso_code == localization.language.iso_code %}
+                    aria-current="true"
+                  {% endif %}
+                  data-value="{{ language.iso_code }}"
+                >
+                  <span>
+                    {{ language.endonym_name | capitalize }} 
+                  </span>
+                  <span class="uppercase opacity-50">({{language.iso_code}})</span>
+                </a>
+              </li>
+            {%- endfor -%}
+          </ul>
+      </div>
+      <input type="hidden" name="language_code" value="{{ localization.language.iso_code }}">
+  
+    {%- endform -%}
+  </localization-form>
+{%- endif -%}

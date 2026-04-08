@@ -1,0 +1,19 @@
+{% comment %}
+
+Example:
+{%
+  render 'blog-header',
+  title: blog.title,
+  description: blog.metafields.custom.description,
+  classes: "py-sm"
+%}
+
+{% endcomment %}
+
+
+<header class="blog-header bg-blue text-white{% if classes != blank %} {{ classes }}{% endif %}">
+  <div class="blog-header__container container tabletp:flex tabletp:justify-between tabletp:gap-xl">
+    <h1 class="blog-header__title h3 leading-[1.15] max-w-[15ch] tabletp:max-w-[20ch] mb-md tabletp:mb-0">{{ title }}</h1>
+    <p class="blog-header__description text-18 tabletp:text-20 max-w-[44ch]">{{ description | metafield_tag }}</p>
+  </div>
+</header>

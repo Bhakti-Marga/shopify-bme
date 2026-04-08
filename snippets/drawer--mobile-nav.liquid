@@ -1,0 +1,51 @@
+{% assign nav_linklist = linklists['seed-header'] %}
+
+<s-drawer id="MobileNavDrawer" position='bottom' open="[js-open-mobile-nav]" close="[js-close-mobile-nav]" body-open-class="mobile-nav-drawer-opened">
+  <div class="mobile-nav h-full flex flex-col justify-between gap-md bg-blue text-white container overflow-y-auto pb-md">
+    <ul class="mobile-nav__main py-sm flex flex-col border-t border-white/20 text-white">
+      {% for parent in nav_linklist.links %}
+        {% unless parent.title == 'Enseñanzas' %}
+        {% if parent.links != blank %}
+          <s-accordion data-manual-collapse="false" class="mobile-nav__item" js-accordion>
+            <div class="accordion-item" js-accordion-item>
+              <button class="accordion-header w-full flex justify-between items-center py-sm" aria-expanded="false" aria-controls="MobileNavLink{{ forloop.index }}" js-accordion-header>
+                <span class="">{{ parent.title }}</span>
+                <span class="accordion-icon w-lg transform transition-transform duration-500 mr-xs">{% render 'icon--caret' %}</span>
+              </button>
+              <div id="MobileNavLink{{ forloop.index }}" class="accordion-content rounded-sm bg-white/10" aria-hidden="true" js-accordion-content>
+                <ul class="mobile-nav__links p-sm">
+                  {% for child_link in parent.links %}
+                    <li class="mobile-nav__link-item">
+                      <a href="{{ child_link.url }}" class="mobile-nav__link inline-block text-16 px-12 py-sm">{{ child_link.title }}</a>
+                    </li>
+                  {% endfor %}
+                </ul>
+              </div>
+            </div>
+        </s-accordion>
+        {% else %}
+          <li class="mobile-nav__item py-sm">
+            <a href="{{ parent.url }}" class="inline-block w-full">
+              {{ parent.title }}
+            </a>
+          </li>
+        {% endif %}
+        {% endunless %}
+      {% endfor %}
+    </ul>
+    <div class="mobile-nav__footer px-md">
+      <div class="grid grid-cols-2 gap-sm">
+        <a class="btn inline-flex items-center justify-center text-14"  href="#">
+          <span>Empieza ahora</span>
+        </a>
+        {% if customer %}
+          <a href="{{ routes.account_url }}" class="">{{ customer.name }}</a>
+        {% else %}
+          <a class="btn inline-flex items-center justify-center bg-white/10 text-14 text-white" rel="noopener noreferrer" href="{{ routes.account_login_url }}">
+            <span>Iniciar sesión</span>
+          </a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</s-drawer>

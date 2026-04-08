@@ -1,0 +1,250 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "page__main",
+      "disabled": true,
+      "settings": {}
+    },
+    "section_hero_cBpMpY": {
+      "type": "section__hero",
+      "settings": {
+        "padding_top": "0px",
+        "desktop_padding_top": "inherit",
+        "padding_bottom": "40px",
+        "desktop_padding_bottom": "60px",
+        "padding_horizontal": "px-0",
+        "desktop_padding_horizontal": "inherit",
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "use_container": true,
+        "set_100vh": true,
+        "set_100vh_desktop": true,
+        "border_radius": 16,
+        "aspect_ratio": "9\/16",
+        "aspect_ratio_desktop": "4\/3",
+        "image": "shopify:\/\/shop_images\/come-visit-us-the-ashram_e2674f5e-3d18-4d52-b625-e1803430a964.webp",
+        "image_desktop": "shopify:\/\/shop_images\/come-visit-us-the-ashram_e2674f5e-3d18-4d52-b625-e1803430a964.webp",
+        "bg_color": "#16254c",
+        "content_width": "max-w-5xl",
+        "text_align": "text-left",
+        "text_color": "#ffffff",
+        "title": "Shree Peetha Nilaya",
+        "title_font_style": "h3",
+        "subtitle": "<h5>Find your inner peace<\/h5>",
+        "button_text": "Retreats & Events",
+        "button_url": "shopify:\/\/pages\/all-programs",
+        "button_style": "btn btn--gold",
+        "anchor_to_pricing": false,
+        "video_title": "",
+        "horizontal_position": "justify-start",
+        "vertical_position": "items-end"
+      }
+    },
+    "bm_event_slider_rjEKCX": {
+      "type": "BM-event-slider",
+      "name": "Product Carousel",
+      "settings": {
+        "product_collection": "events",
+        "set_dark_theme": true,
+        "apply_gradient": true,
+        "title": "Upcoming Events",
+        "title_tag": "h2",
+        "cta_label": "",
+        "cta_url": "",
+        "padding_top": "pt-xl",
+        "padding_bottom": "pb-xl",
+        "desktop_padding_top": "inherit",
+        "desktop_padding_bottom": "inherit"
+      }
+    },
+    "section_image_text_blocks_XJ9kGW": {
+      "type": "section__image_text_blocks",
+      "blocks": {
+        "image_block_qrJaRt": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/book-a-room.jpg",
+            "height": "50vh",
+            "desktop_height": "inherit"
+          }
+        },
+        "content_block_TFpAMn": {
+          "type": "content_block",
+          "settings": {
+            "title": "Stay with us",
+            "title_tag": "h3",
+            "title_font_style": "h4",
+            "description": "<p>Experience a truly spiritual lifestyle of service and prayer, discover practices to open your heart, and calm your mind in our delightful escape from the rush of the world.<br\/>We have the room options:<\/p><ul><li>Single-Double-Triple Room <\/li><li>Bed in Shared Room for 5 people <\/li><li>Family Room (3-5 people)<\/li><\/ul>",
+            "credits": "",
+            "cta_url": "#",
+            "cta_label": "Más información",
+            "text_align": "left",
+            "desktop_text_align": "inherit",
+            "vertical_padding": "py-lg",
+            "vertical_padding_desktop": "tabletl:py-xxl"
+          }
+        }
+      },
+      "block_order": [
+        "image_block_qrJaRt",
+        "content_block_TFpAMn"
+      ],
+      "settings": {
+        "margin_top": "mt-xl",
+        "margin_bottom": "mb-xxl",
+        "desktop_margin_top": "tabletl:mt-xl",
+        "desktop_margin_bottom": "tabletl:mb-xxl",
+        "vertical_align": "center",
+        "flip_columns_desktop": false
+      }
+    },
+    "section_hero_XrFNy3": {
+      "type": "section__hero",
+      "settings": {
+        "padding_top": "0px",
+        "desktop_padding_top": "0px",
+        "padding_bottom": "0px",
+        "desktop_padding_bottom": "inherit",
+        "padding_horizontal": "px-0",
+        "desktop_padding_horizontal": "inherit",
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "use_container": false,
+        "set_100vh": true,
+        "set_100vh_desktop": true,
+        "border_radius": 0,
+        "aspect_ratio": "9\/16",
+        "aspect_ratio_desktop": "16\/9",
+        "image": "shopify:\/\/shop_images\/spn.jpg",
+        "bg_color": "",
+        "content_width": "max-w-5xl",
+        "text_align": "text-left",
+        "text_color": "#ffffff",
+        "title": "A sacred place with many possibilities",
+        "title_font_style": "h2",
+        "subtitle": "",
+        "button_text": "Visítanos",
+        "button_url": "shopify:\/\/pages\/calendario",
+        "button_style": "btn",
+        "anchor_to_pricing": false,
+        "video_title": "",
+        "horizontal_position": "justify-center",
+        "vertical_position": "items-center"
+      }
+    },
+    "section_text_image_grid_q8FKHB": {
+      "type": "section__text-image-grid",
+      "blocks": {
+        "image_block_RA3nVQ": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/SPN-garden.jpg"
+          }
+        },
+        "image_block_Dee9xw": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/spn_b3dc4350-572d-4014-91ed-ca9fd1d318c7.jpg"
+          }
+        },
+        "image_block_qhpXeT": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/spn-2.jpg"
+          }
+        },
+        "image_block_gKfa4C": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/spn-landscape.webp"
+          }
+        }
+      },
+      "block_order": [
+        "image_block_RA3nVQ",
+        "image_block_Dee9xw",
+        "image_block_qhpXeT",
+        "image_block_gKfa4C"
+      ],
+      "custom_css": [],
+      "settings": {
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "padding_top": "pt-xl",
+        "padding_bottom": "pb-xxl",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "desktop_padding_top": "tabletl:pt-xxxl",
+        "desktop_padding_bottom": "tabletl:pb-xxxl",
+        "mobile_position": "top",
+        "position": "left",
+        "title": "The right environment for going deeper",
+        "title_tag": "h2",
+        "description": "<p>Walking the path around the ashram, visiting the lake, discover tranquility in spaces designed for reflection and meditation, visit the Meditation Cave, Hindu Museum, and more. Embark on a journey of discovery through our temple, museum, sacred sites, and more.<\/p>"
+      }
+    },
+    "section_image_text_blocks_H63g8U": {
+      "type": "section__image_text_blocks",
+      "blocks": {
+        "image_block_NzKizB": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/come-visit-us-the-ashram_e2674f5e-3d18-4d52-b625-e1803430a964.webp",
+            "height": "50vh",
+            "desktop_height": "inherit"
+          }
+        },
+        "content_block_JYJVtf": {
+          "type": "content_block",
+          "settings": {
+            "title": "Shree Peetha Nilaya",
+            "title_tag": "h4",
+            "title_font_style": "h4",
+            "description": "<h5>Your Spiritual Home in the Heart of Europe<\/h5>",
+            "credits": "",
+            "cta_url": "shopify:\/\/pages\/calendar",
+            "cta_label": "Visita el Templo",
+            "text_align": "left",
+            "desktop_text_align": "inherit",
+            "vertical_padding": "py-lg",
+            "vertical_padding_desktop": "tabletl:py-xxl"
+          }
+        }
+      },
+      "block_order": [
+        "image_block_NzKizB",
+        "content_block_JYJVtf"
+      ],
+      "settings": {
+        "margin_top": "mt-xl",
+        "margin_bottom": "mb-xl",
+        "desktop_margin_top": "tabletl:mt-xl",
+        "desktop_margin_bottom": "tabletl:mb-xxxl",
+        "vertical_align": "center",
+        "flip_columns_desktop": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "section_hero_cBpMpY",
+    "bm_event_slider_rjEKCX",
+    "section_image_text_blocks_XJ9kGW",
+    "section_hero_XrFNy3",
+    "section_text_image_grid_q8FKHB",
+    "section_image_text_blocks_H63g8U"
+  ]
+}

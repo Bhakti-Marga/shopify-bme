@@ -1,0 +1,148 @@
+{%- if collection.metafields.custom.texto_adicional != blank -%}
+  <section id="CollectionExtended-{{ section.id }}" class="collection-extended-text">
+    <div class="collection-extended-text__container">
+      <div class="collection-extended-text__content">
+        {%- comment -%} 
+          IMPORTANTE: Usamos .value y el filtro metafield_tag 
+          para que respete negritas, saltos de línea y enlaces.
+        {%- endcomment -%}
+        {{ collection.metafields.custom.texto_adicional | metafield_tag }}
+      </div>
+    </div>
+  </section>
+
+  <style>
+    #CollectionExtended-{{ section.id }} {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+      background-color: {{ section.settings.background_color }};
+    }
+    
+    #CollectionExtended-{{ section.id }} .collection-extended-text__container {
+      max-width: {{ section.settings.max_width }}px;
+      margin: 0 auto;
+    }
+    
+    #CollectionExtended-{{ section.id }} .collection-extended-text__content {
+      font-size: {{ section.settings.font_size }}px;
+      line-height: {{ section.settings.line_height }};
+      color: {{ section.settings.text_color }};
+      text-align: {{ section.settings.text_align }};
+    }
+    
+    /* Estilos para los párrafos dentro del texto enriquecido */
+    #CollectionExtended-{{ section.id }} .collection-extended-text__content p {
+      margin-bottom: 1.5em;
+    }
+    
+    #CollectionExtended-{{ section.id }} .collection-extended-text__content p:last-child {
+      margin-bottom: 0;
+    }
+
+    @media (max-width: 768px) {
+      #CollectionExtended-{{ section.id }} {
+        padding-top: {{ section.settings.padding_top | divided_by: 2 }}px;
+        padding-bottom: {{ section.settings.padding_bottom | divided_by: 2 }}px;
+      }
+      
+      #CollectionExtended-{{ section.id }} .collection-extended-text__content {
+        font-size: {{ section.settings.font_size | minus: 2 | at_least: 14 }}px;
+      }
+    }
+  </style>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Texto Adicional Colección",
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "Asegúrate de que el metafield sea 'custom.texto_adicional' de tipo Multi-line text o Rich text."
+    },
+    {
+      "type": "range",
+      "id": "max_width",
+      "min": 600,
+      "max": 1400,
+      "step": 50,
+      "unit": "px",
+      "label": "Ancho máximo",
+      "default": 1000
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Espaciado superior",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Espaciado inferior",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "font_size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Tamaño de fuente",
+      "default": 16
+    },
+    {
+      "type": "select",
+      "id": "line_height",
+      "label": "Altura de línea",
+      "options": [
+        {"value": "1.3", "label": "Compacta"},
+        {"value": "1.5", "label": "Normal"},
+        {"value": "1.7", "label": "Espaciada"},
+        {"value": "2", "label": "Muy espaciada"}
+      ],
+      "default": "1.5"
+    },
+    {
+      "type": "select",
+      "id": "text_align",
+      "label": "Alineación del texto",
+      "options": [
+        {"value": "left", "label": "Izquierda"},
+        {"value": "center", "label": "Centro"},
+        {"value": "right", "label": "Derecha"},
+        {"value": "justify", "label": "Justificado"}
+      ],
+      "default": "left"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Color de fondo",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Color del texto",
+      "default": "#333333"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Texto Adicional Colección"
+    }
+  ]
+}
+{% endschema %}

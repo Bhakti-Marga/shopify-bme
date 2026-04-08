@@ -1,0 +1,183 @@
+<section
+  class="sangha-hero-section"
+  style="
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    min-height: 56vw;
+    max-height: 520px;
+    background-color: #0e1a35;
+    background-image: url('{% if section.settings.image != blank %}{{ section.settings.image | image_url: width: 1800 }}{% else %}https://cdn.shopify.com/s/files/1/0929/1415/5864/files/HOME-PAGE-PLACE-FOR-YOU-Edit.jpg?v=1754573742{% endif %}');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  "
+>
+
+  {%- comment -%} Dark overlay {%- endcomment -%}
+  <div
+    aria-hidden="true"
+    style="
+      position: absolute;
+      inset: 0;
+      background-color: rgba(14, 26, 53, 0.55);
+      z-index: 1;
+    "
+  ></div>
+
+  {%- comment -%} Content {%- endcomment -%}
+  <div
+    class="sangha-hero-section__inner"
+    style="
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 48px 40px;
+      box-sizing: border-box;
+    "
+  >
+    <div
+      class="sangha-hero-section__content"
+      style="
+        max-width: 600px;
+        color: #ffffff;
+      "
+    >
+
+      {%- if section.settings.title != blank -%}
+        <h1
+          class="sangha-hero-section__title"
+          style="
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 800;
+            line-height: 1.1;
+            margin: 0 0 20px 0;
+            color: #ffffff;
+          "
+        >
+          {{ section.settings.title }}
+        </h1>
+      {%- endif -%}
+
+      {%- if section.settings.description != blank -%}
+        <div
+          class="sangha-hero-section__description"
+          style="
+            font-size: 16px;
+            line-height: 1.65;
+            opacity: 0.9;
+            max-width: 500px;
+            margin: 0 0 32px 0;
+            color: #ffffff;
+          "
+        >
+          {{ section.settings.description }}
+        </div>
+      {%- endif -%}
+
+      {%- if section.settings.button_text != blank -%}
+        {%- assign btn_url = section.settings.button_url | default: '#comunidades' -%}
+        <a
+          href="{{ btn_url }}"
+          class="sangha-hero-section__cta"
+          style="
+            display: inline-block;
+            background-color: #ffffff;
+            color: #16254c;
+            font-size: 14px;
+            font-weight: 700;
+            text-decoration: none;
+            padding: 14px 32px;
+            border-radius: 50px;
+            border: none;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+          "
+          onmouseover="this.style.backgroundColor='#e8e8e8';"
+          onmouseout="this.style.backgroundColor='#ffffff';"
+        >
+          {{ section.settings.button_text }}
+        </a>
+      {%- endif -%}
+
+    </div>
+  </div>
+
+  <style>
+    html { scroll-behavior: smooth; }
+    @media screen and (max-width: 749px) {
+      .sangha-hero-section {
+        min-height: 56.25vw !important;
+        max-height: none !important;
+      }
+      .sangha-hero-section__inner {
+        padding: 36px 20px !important;
+      }
+    }
+  </style>
+
+</section>
+
+{% schema %}
+{
+  "name": "Sangha Hero",
+  "tag": "section",
+  "class": "sangha-hero-section-wrapper",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Imagen"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Imagen de fondo",
+      "info": "Si no se selecciona ninguna imagen, se usará la imagen predeterminada del Ashram."
+    },
+    {
+      "type": "header",
+      "content": "Contenido"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Título",
+      "default": "Aquí hay un lugar para ti."
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Descripción",
+      "default": "<p>Bhakti Marga es el camino del despertar de la devoción en la vida diaria. Somos una comunidad que se reúne en múltiples lugares de España donde animamos a cada individuo a expresar su devoción amorosa por Dios. Nos reunimos semanalmente para unirnos y profundizar en el camino del <em>bhakti<\/em>.<\/p>"
+    },
+    {
+      "type": "header",
+      "content": "Botón"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Texto del botón",
+      "default": "Asistir"
+    },
+    {
+      "type": "url",
+      "id": "button_url",
+      "label": "URL del botón"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Sangha Hero",
+      "settings": {
+        "title": "Aquí hay un lugar para ti.",
+        "button_text": "Asistir"
+      }
+    }
+  ]
+}
+{% endschema %}

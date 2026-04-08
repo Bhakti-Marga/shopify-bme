@@ -1,0 +1,204 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "page__main",
+      "disabled": true,
+      "settings": {}
+    },
+    "section_hero_cBpMpY": {
+      "type": "section__hero",
+      "settings": {
+        "padding_top": "0px",
+        "desktop_padding_top": "inherit",
+        "padding_bottom": "80px",
+        "desktop_padding_bottom": "24px",
+        "padding_horizontal": "px-0",
+        "desktop_padding_horizontal": "inherit",
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "use_container": true,
+        "set_100vh": false,
+        "set_100vh_desktop": false,
+        "border_radius": 16,
+        "aspect_ratio": "3/2",
+        "aspect_ratio_desktop": "16/9",
+        "image": "shopify://shop_images/the-path-rituals-worship_94dee33a-97ee-4193-971e-a64d840f6d69.jpg",
+        "image_desktop": "shopify://shop_images/the-path-rituals-worship_94dee33a-97ee-4193-971e-a64d840f6d69.jpg",
+        "bg_color": "#16254c",
+        "content_width": "max-w-sm",
+        "text_align": "text-left",
+        "text_color": "#000000",
+        "title": "Solicita una Puja Personal",
+        "title_font_style": "h3",
+        "subtitle": "<p>Eleva tu intención en una ofrenda sagrada de amor y devoción. </p>",
+        "button_text": "Solicítala",
+        "button_url": "shopify://products/solicita-puja-personal",
+        "button_style": "btn btn--gold",
+        "anchor_to_pricing": false,
+        "video_title": "",
+        "horizontal_position": "justify-start",
+        "vertical_position": "items-end"
+      }
+    },
+    "1750841109ec6ceaaa": {
+      "type": "apps",
+      "blocks": {
+        "forms_inline_qAUUx9": {
+          "type": "shopify://apps/forms/blocks/inline/8744a304-fcb1-4347-b211-bb6b4759a76a",
+          "settings": {
+            "form_id": "528631",
+            "text_color": "#16254c",
+            "button_background_color": "#16254c",
+            "button_label_color": "#ffffff",
+            "links_color": "#1878b9",
+            "errors_color": "#e02229",
+            "text_alignment": "left",
+            "form_alignment": "center",
+            "padding_top": 40,
+            "padding_bottom": 40,
+            "padding_right": 0,
+            "padding_left": 0
+          }
+        }
+      },
+      "block_order": [
+        "forms_inline_qAUUx9"
+      ],
+      "settings": {}
+    },
+    "article_hero_FUUjpx": {
+      "type": "article__hero",
+      "name": "Article Hero",
+      "settings": {
+        "apply_gradient": false,
+        "gradient_height": 40,
+        "gradient_color": "#000000"
+      }
+    },
+    "section_image_text_blocks_LUjxP7": {
+      "type": "section__image_text_blocks",
+      "blocks": {
+        "image_block_EJCfKb": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/paramahamsa-vishwananda-performing-arati-service-worship_6991dcb4-d8d3-42fb-8b48-23275c6c0aaa.jpg",
+            "height": "33vh",
+            "desktop_height": "inherit"
+          }
+        },
+        "content_block_xdJAct": {
+          "type": "content_block",
+          "settings": {
+            "title": "Conecta con la Gracia Divina",
+            "title_tag": "h2",
+            "title_font_style": "h5",
+            "description": "<p>Una ceremonia sagrada realizada exclusivamente para tu intención, salud o agradecimiento bajo la guía de Paramahamsa Vishwananda. Ideal para cumpleaños, nuevos proyectos o protección. <br/>Invoca la bendición de las Deidades y eleva tu vibración espiritual con este ritual sagrado.</p>",
+            "credits": "",
+            "cta_url": "shopify://products/solicita-puja-personal",
+            "cta_label": "Solicitar Puja Personal",
+            "text_align": "left",
+            "desktop_text_align": "inherit",
+            "vertical_padding": "py-lg",
+            "vertical_padding_desktop": "tabletl:py-xxl"
+          }
+        }
+      },
+      "block_order": [
+        "image_block_EJCfKb",
+        "content_block_xdJAct"
+      ],
+      "name": "Image Text Blocks",
+      "settings": {
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "desktop_margin_top": "tabletl:mt-lg",
+        "desktop_margin_bottom": "tabletl:mb-lg",
+        "vertical_align": "top",
+        "flip_columns_desktop": false
+      }
+    },
+    "section_quote_blocks_gaXX9a": {
+      "type": "section__quote-blocks",
+      "blocks": {
+        "block_mheGcw": {
+          "type": "block",
+          "settings": {
+            "title": "",
+            "description": "<p><strong>\"Patraṁ puṣpaṁ phalaṁ toyaṁ yo Me bhaktyā prayacchati;</strong><br/><strong>tad ahaṁ bhakty-upahṛtam aśnāmi prayatātmanaḥ.\"</strong></p><p><em>\"Si uno Me ofrece con devoción una hoja, una flor, un fruto o agua, Yo acepto esa ofrenda de amor de quien tiene la mente pura.\"</em></p><p>(Verso 9.26 del Bhagavad Gita - <br/>Fuente Traducción: Bhagavad Gita Essentials - Comentarios de Paramahamsa Vishwananda)<br/><br/></p>"
+          }
+        }
+      },
+      "block_order": [
+        "block_mheGcw"
+      ],
+      "name": "Quote Blocks",
+      "settings": {
+        "padding_top": "pt-sm",
+        "padding_bottom": "pb-0",
+        "desktop_padding_top": "tabletl:pt-md",
+        "desktop_padding_bottom": "tabletl:pb-md",
+        "cols_mobile": "1",
+        "cols_desktop": "1"
+      }
+    },
+    "section_events_carousel_qyfnng": {
+      "type": "section__events-carousel",
+      "name": "Events Carousel",
+      "settings": {
+        "padding_top": "pt-md",
+        "padding_bottom": "pb-md",
+        "desktop_padding_top": "inherit",
+        "desktop_padding_bottom": "inherit",
+        "set_dark_theme": true,
+        "apply_gradient": true,
+        "title": "Únete a Las Celebraciones",
+        "title_tag": "h2",
+        "cta_label": "",
+        "cta_url": "shopify://collections/events",
+        "hide_arrows_desktop": false
+      }
+    },
+    "section_text_content_XGRgbm": {
+      "type": "section__text-content",
+      "name": "Text Content",
+      "settings": {
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "padding_top": "pt-0",
+        "padding_bottom": "pb-0",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "desktop_padding_top": "inherit",
+        "desktop_padding_bottom": "inherit",
+        "max_width": "",
+        "pretitle": "",
+        "title": "Puja Personal: Un Diálogo Sagrado con lo Divino",
+        "title_tag": "h2",
+        "title_font_style": "h3",
+        "description": "{{ page.content }}",
+        "credits": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "section_hero_cBpMpY",
+    "1750841109ec6ceaaa",
+    "article_hero_FUUjpx",
+    "section_image_text_blocks_LUjxP7",
+    "section_quote_blocks_gaXX9a",
+    "section_events_carousel_qyfnng",
+    "section_text_content_XGRgbm"
+  ]
+}

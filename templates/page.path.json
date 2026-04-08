@@ -1,0 +1,694 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "page__main",
+      "disabled": true,
+      "settings": {}
+    },
+    "section_hero_cBpMpY": {
+      "type": "section__hero",
+      "custom_css": [],
+      "settings": {
+        "padding_top": "0px",
+        "desktop_padding_top": "inherit",
+        "padding_bottom": "16px",
+        "desktop_padding_bottom": "60px",
+        "padding_horizontal": "px-0",
+        "desktop_padding_horizontal": "inherit",
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "use_container": true,
+        "set_100vh": true,
+        "set_100vh_desktop": true,
+        "border_radius": 16,
+        "aspect_ratio": "9/16",
+        "aspect_ratio_desktop": "4/3",
+        "video": "shopify://files/videos/2025-03-28-BM3Web-ThePath-01.mp4",
+        "bg_color": "#16254c",
+        "content_width": "max-w-5xl",
+        "text_align": "text-left",
+        "text_color": "#ffffff",
+        "title": "El camino",
+        "title_font_style": "h3",
+        "subtitle": "<p>Nuestra espiritualidad es a la vez expresiva y vivencial. Sigue el camino del <em>bhakti</em>, construido con maestría por nuestro <em>satguru</em>, para experimentar una profunda conexión personal con lo Divino a través del amor y el servicio.</p>",
+        "button_text": "",
+        "button_url": "",
+        "button_style": "btn",
+        "anchor_to_pricing": false,
+        "video_title": "",
+        "video_url": "shopify://files/videos/2025-03-28-BM3Web-ThePath-01.mp4",
+        "horizontal_position": "justify-center",
+        "vertical_position": "items-end"
+      }
+    },
+    "section_image_text_blocks_PHhidM": {
+      "type": "section__image_text_blocks",
+      "blocks": {
+        "image_block_jfBVbY": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/2021-05-25-p-0531.jpg",
+            "height": "auto",
+            "desktop_height": "auto"
+          }
+        },
+        "content_block_gVQiM6": {
+          "type": "content_block",
+          "settings": {
+            "title": "El camino del bhakti",
+            "title_tag": "h2",
+            "title_font_style": "h3",
+            "description": "<p>Nuestra espiritualidad es a la vez expresiva y vivencial. Sigue el camino del <em>bhakti</em>, construido con maestría por nuestro <em>satguru</em>, para experimentar una profunda conexión personal con lo divino a través del amor y el servicio.</p>",
+            "credits": "",
+            "cta_url": "",
+            "cta_label": "",
+            "text_align": "left",
+            "desktop_text_align": "inherit",
+            "vertical_padding": "py-lg",
+            "vertical_padding_desktop": "tabletl:py-xxl"
+          }
+        }
+      },
+      "block_order": [
+        "image_block_jfBVbY",
+        "content_block_gVQiM6"
+      ],
+      "custom_css": [],
+      "settings": {
+        "margin_top": "mt-xl",
+        "margin_bottom": "mb-0",
+        "desktop_margin_top": "tabletl:mt-xxxl",
+        "desktop_margin_bottom": "tabletl:mb-xl",
+        "vertical_align": "center",
+        "flip_columns_desktop": false
+      }
+    },
+    "section_image_text_blocks_idDHbJ": {
+      "type": "section__image_text_blocks",
+      "blocks": {
+        "image_block_bETM7j": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/2024-08-15-p-0744.jpg",
+            "height": "auto",
+            "desktop_height": "inherit"
+          }
+        },
+        "content_block_qJxeRc": {
+          "type": "content_block",
+          "settings": {
+            "title": "Explora el camino del bhakti",
+            "title_tag": "h3",
+            "title_font_style": "h3",
+            "description": "<p>Paramahamsa Vishwananda ha proporcionado poderosas herramientas y enseñanzas que ayudan a cada individuo a vivir una vida auténtica y significativa, llena del amor de Dios. </p><p>Si buscas vivir una vida llena de amor desde el interior, este camino te ofrece todo lo que necesitas y mucho más.</p>",
+            "credits": "",
+            "cta_url": "",
+            "cta_label": "",
+            "text_align": "left",
+            "desktop_text_align": "inherit",
+            "vertical_padding": "py-lg",
+            "vertical_padding_desktop": "tabletl:py-xxl"
+          }
+        }
+      },
+      "block_order": [
+        "image_block_bETM7j",
+        "content_block_qJxeRc"
+      ],
+      "custom_css": [],
+      "settings": {
+        "margin_top": "mt-xl",
+        "margin_bottom": "mb-0",
+        "desktop_margin_top": "tabletl:mt-xl",
+        "desktop_margin_bottom": "tabletl:mb-xl",
+        "vertical_align": "center",
+        "flip_columns_desktop": true
+      }
+    },
+    "section_accordion_UezKHE": {
+      "type": "section__accordion",
+      "blocks": {
+        "accordion_item_pTnKEj": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "El propósito de la vida",
+            "content": "<p>Estamos aquí para experimentar una relación amorosa con lo Divino, sin importar dónde estemos, qué hagamos o quiénes seamos. El Amor de Dios, la meta de la vida, no es algo que nos espera después de la muerte, está disponible para todos, aquí y ahora. Por la gracia y la guía de Paramahamsa Vishwananda, se ha convertido en una realidad muy tangible para decenas de miles de personas en todo el mundo.<br/><br/></p>"
+          }
+        },
+        "accordion_item_DawVUM": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Bhakti diario",
+            "content": "<p>Nuestra espiritualidad no es una oración ocasional o un momento de meditación. Es una elección diaria, un compromiso intencionado de integrar prácticas devocionales en nuestra vida cotidiana. Al vivir nuestra espiritualidad en nuestra vida diaria, incluso las acciones aparentemente mundanas se transforman en actos de amor, un amor que Dios corresponde. El resultado es una relación genuina con lo Divino y una vida llena de celebración, conexión y el más profundo sentido de plenitud. </p>"
+          }
+        },
+        "accordion_item_H3nJMM": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Just love (Simplemente ama)",
+            "content": "<p>El mensaje de Paramahamsa Vishwananda es este: Just Love (Simplemente ama). Pero no el tipo de amor que se desvanece cuando la vida se vuelve difícil. Este es más profundo. No es un sentimiento fugaz ni algo de lo que te enamoras y te desenamoras. Es un amor que fluye desde tu corazón y toca lo más profundo de tu alma. Es amor divino. Se llama <em>prema</em>. Y esta es la verdad: el viaje más importante que jamás emprenderás no se mide en kilómetros, sino que es el que te lleva de tu mente a tu corazón. Ahí es donde la vida se vuelve real. Ahí es donde <em>prema</em> alimenta una vida espiritual auténtica y sólida. Porque el amor, el amor verdadero, no es solo algo que hacemos. Es lo que somos.</p>"
+          }
+        },
+        "accordion_item_mHjLdW": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Sé tú mismo",
+            "content": "<p>Para tener éxito en este camino del <em>bhakti</em>, debemos dejar atrás nuestro ego y convertirnos en nuestro verdadero ser. Esto significa convertirnos en quienes siempre estuvimos destinados a ser: valientes, amorosos y bondadosos. Con la guía y la gracia de Paramahamsa Vishwananda, puedes conectarte con tu verdadera esencia y experimentar la verdadera libertad y alegría que proviene de ser <em>exactamente</em> quien fuiste creado para ser y no en lo que te has permitido convertirte.</p>"
+          }
+        },
+        "accordion_item_N9Ycbi": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Comunidad",
+            "content": "<p>La comunidad (<em>sangha</em>) de Bhakti Marga es un entorno acogedor e inclusivo en el que personas de todos los orígenes se reúnen, tanto en persona como online, con un propósito común: crecer en el amor y la devoción a lo Divino bajo la guía de nuestro <em>satguru</em>. Formar parte de la <em>sangha</em> significa tener una familia espiritual que se apoya mutuamente en cada etapa del camino. Es un lugar para establecer relaciones auténticas y significativas con personas afines.</p>"
+          }
+        },
+        "accordion_item_YzWNPr": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Gracia transformadora",
+            "content": "<p>La gracia divina es una fuerza vital y transformadora que guía suavemente al corazón para que se abra, a la mente para que se calme y al alma para que se eleve hacia la luz del Amor Divino más allá de nuestros deseos impulsados por el ego. Esta gracia crea una transformación interior que va más allá de la comprensión intelectual y toca lo más profundo de nuestro ser. Creemos que Paramahamsa Vishwananda encarna esa gracia como pocos lo han hecho, y es Su propia mano guía la que sirve de base para nuestro camino.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "accordion_item_pTnKEj",
+        "accordion_item_DawVUM",
+        "accordion_item_H3nJMM",
+        "accordion_item_mHjLdW",
+        "accordion_item_N9Ycbi",
+        "accordion_item_YzWNPr"
+      ],
+      "settings": {
+        "margin_top": "mt-xl",
+        "margin_bottom": "mb-0",
+        "padding_top": "pt-0",
+        "padding_bottom": "pb-0",
+        "desktop_margin_top": "tabletl:mt-xl",
+        "desktop_margin_bottom": "tabletl:mb-xl",
+        "desktop_padding_top": "inherit",
+        "desktop_padding_bottom": "inherit",
+        "max_width": "870px",
+        "title": "Nuestro camino",
+        "cta_url": "",
+        "cta_label": "",
+        "title_position": "top"
+      }
+    },
+    "section_image_text_blocks_KcfxKd": {
+      "type": "section__image_text_blocks",
+      "blocks": {
+        "image_block_frPcye": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/2022-07-16-p-0413.jpg",
+            "height": "auto",
+            "desktop_height": "inherit"
+          }
+        },
+        "content_block_x4pPWN": {
+          "type": "content_block",
+          "settings": {
+            "title": "Nuestras herramientas",
+            "title_tag": "h2",
+            "title_font_style": "h3",
+            "description": "<p>Bhakti Yoga Sadhana</p><p>Todas las ideas del bhakti deben ponerse en práctica: la teoría y el conocimiento deben convertirse en experiencia y sabiduría. Para ello, Paramahamsa Vishwananda nos ha proporcionado una serie de herramientas diseñadas para ayudarnos en nuestro camino hacia la conexión con Dios y con nuestro verdadero ser.</p>",
+            "credits": "",
+            "cta_url": "shopify://blogs/events/4-days-to-soul-awakening-with-paramahamsa-vishwananda",
+            "cta_label": "Explorar herramientas",
+            "text_align": "left",
+            "desktop_text_align": "inherit",
+            "vertical_padding": "py-lg",
+            "vertical_padding_desktop": "tabletl:py-xxl"
+          }
+        }
+      },
+      "block_order": [
+        "image_block_frPcye",
+        "content_block_x4pPWN"
+      ],
+      "custom_css": [],
+      "settings": {
+        "margin_top": "mt-xl",
+        "margin_bottom": "mb-0",
+        "desktop_margin_top": "tabletl:mt-xxl",
+        "desktop_margin_bottom": "tabletl:mb-xl",
+        "vertical_align": "top",
+        "flip_columns_desktop": true
+      }
+    },
+    "section_image_text_blocks_KNgGYt": {
+      "type": "section__image_text_blocks",
+      "blocks": {
+        "image_block_hkgd9R": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/2024-07-18-p-0176.jpg",
+            "height": "auto",
+            "desktop_height": "inherit"
+          }
+        },
+        "content_block_zCnUmN": {
+          "type": "content_block",
+          "settings": {
+            "title": "Práctica diaria",
+            "title_tag": "h2",
+            "title_font_style": "h3",
+            "description": "<p>Imagina una vida en la que sientes una profunda paz más allá de las fluctuaciones de la mente.</p><p>Para encontrar esta paz auténtica y transformar verdaderamente la mente, Paramahamsa Vishwananda nos ha enseñado la práctica diaria de recitar mantras, también conocida como <em>japa</em>.</p><p>Al recitar el Nombre de Dios, nos sintonizamos con lo Divino, despertando este Amor eterno en nuestros corazones y mentes con cada respiración. </p><p>Paramahamsa Vishwananda recomienda que recitemos durante una hora al día para recibir todo el potencial del mantra en nuestras vidas. </p><p>Recitamos no solo para nuestra transformación personal, sino como una ofrenda de oraciones por los necesitados, nuestros seres queridos y la humanidad.</p>",
+            "credits": "",
+            "cta_url": "",
+            "cta_label": "",
+            "text_align": "left",
+            "desktop_text_align": "inherit",
+            "vertical_padding": "py-lg",
+            "vertical_padding_desktop": "tabletl:py-xxl"
+          }
+        }
+      },
+      "block_order": [
+        "image_block_hkgd9R",
+        "content_block_zCnUmN"
+      ],
+      "custom_css": [],
+      "settings": {
+        "margin_top": "mt-xl",
+        "margin_bottom": "mb-0",
+        "desktop_margin_top": "tabletl:mt-xl",
+        "desktop_margin_bottom": "tabletl:mb-xl",
+        "vertical_align": "top",
+        "flip_columns_desktop": false
+      }
+    },
+    "section_hero_EmDBMy": {
+      "type": "section__hero",
+      "custom_css": [],
+      "settings": {
+        "padding_top": "0px",
+        "desktop_padding_top": "0px",
+        "padding_bottom": "0px",
+        "desktop_padding_bottom": "inherit",
+        "padding_horizontal": "px-0",
+        "desktop_padding_horizontal": "inherit",
+        "margin_top": "mt-xl",
+        "margin_bottom": "mb-xxl",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "tabletl:mb-xl",
+        "use_container": true,
+        "set_100vh": false,
+        "set_100vh_desktop": true,
+        "border_radius": 16,
+        "aspect_ratio": "auto",
+        "aspect_ratio_desktop": "16/9",
+        "image": "shopify://shop_images/Shaktipat_7d76054a-ba0b-4464-b6c5-fe36196d1693.jpg",
+        "image_desktop": "shopify://shop_images/Shaktipat.jpg",
+        "bg_color": "",
+        "content_width": "max-w-5xl",
+        "text_align": "text-center",
+        "text_color": "#ffffff",
+        "title": "\"Cuanto más recites, más disminuirá el poder de la mente, más estarás en la dicha divina y más se abrirá tu corazón al amor divino\"",
+        "title_font_style": "h4",
+        "subtitle": "<p>Paramahamsa Vishwananda</p>",
+        "button_text": "",
+        "button_url": "",
+        "button_style": "btn",
+        "anchor_to_pricing": false,
+        "video_title": "",
+        "horizontal_position": "justify-center",
+        "vertical_position": "items-center"
+      }
+    },
+    "section_hero_tK9b6d": {
+      "type": "section__hero",
+      "custom_css": [],
+      "settings": {
+        "padding_top": "0px",
+        "desktop_padding_top": "inherit",
+        "padding_bottom": "0px",
+        "desktop_padding_bottom": "inherit",
+        "padding_horizontal": "px-0",
+        "desktop_padding_horizontal": "inherit",
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-lg",
+        "desktop_margin_top": "tabletl:mt-xl",
+        "desktop_margin_bottom": "tabletl:mb-xxl",
+        "use_container": false,
+        "set_100vh": false,
+        "set_100vh_desktop": true,
+        "border_radius": 0,
+        "aspect_ratio": "9/16",
+        "aspect_ratio_desktop": "16/9",
+        "image": "shopify://shop_images/2024-07-18-p-0173.jpg",
+        "video": "shopify://files/videos/2025-03-28-BM3Web-SVGPBN-01.mp4",
+        "bg_color": "",
+        "content_width": "max-w-5xl",
+        "text_align": "text-center",
+        "text_color": "#ffffff",
+        "title": "Śrī Viṭṭhala Giridhārī Parabrahmane Namaḥ",
+        "title_font_style": "h4",
+        "subtitle": "<p>\"Mi respeto al Supremo Señor Vitthala que es el refugio y protector de todos\"</p>",
+        "button_text": "",
+        "button_url": "",
+        "button_style": "btn",
+        "anchor_to_pricing": false,
+        "video_title": "",
+        "horizontal_position": "justify-center",
+        "vertical_position": "items-center"
+      }
+    },
+    "section_playlist_WUtnJ6": {
+      "type": "section__playlist",
+      "blocks": {
+        "media_block_E9faDk": {
+          "type": "media_block",
+          "settings": {
+            "image": "shopify://shop_images/maxresdefault-7_1.jpg",
+            "title": "Sri Vitthala Giridhari Parabrahmane Namah",
+            "name": "Paramahamsa Vishwananda",
+            "url": "https://www.youtube.com/watch?v=ExSzrVJtYzE&list=PL1I_xPvgBqRDXck7BAayzisQgaPFIyaCy&index=29"
+          }
+        },
+        "media_block_6mjdHh": {
+          "type": "media_block",
+          "settings": {
+            "image": "shopify://shop_images/maxresdefault-8.jpg",
+            "title": "OM Chanting Meditation Music",
+            "name": "Paramahamsa Vishwananda",
+            "url": "https://www.youtube.com/watch?v=xn3ZL77LZUY&list=PL1I_xPvgBqRDXck7BAayzisQgaPFIyaCy&index=30"
+          }
+        },
+        "media_block_gjUJwe": {
+          "type": "media_block",
+          "settings": {
+            "image": "shopify://shop_images/maxresdefault-9.jpg",
+            "title": "Sri Vitthala Giridhari",
+            "name": "Nikunja",
+            "url": "https://www.youtube.com/watch?v=Fk-Cd_5gjhc&list=PL1I_xPvgBqRDXck7BAayzisQgaPFIyaCy&index=27"
+          }
+        },
+        "media_block_KbceXq": {
+          "type": "media_block",
+          "settings": {
+            "image": "shopify://shop_images/maxresdefault-10.jpg",
+            "title": "Mahavatar Babaji Gayatri",
+            "name": "Bhadraananda",
+            "url": "https://www.youtube.com/watch?v=ct7OLbgY3ko&list=PL1I_xPvgBqRDXck7BAayzisQgaPFIyaCy&index=37"
+          }
+        },
+        "media_block_Ai3yfJ": {
+          "type": "media_block",
+          "settings": {
+            "image": "shopify://shop_images/maxresdefault-11.jpg",
+            "title": "Sri Vitthala Giridhari Parabrahmane Namaha",
+            "name": "Paramahamsa Vishwananda",
+            "url": "https://www.youtube.com/watch?v=7SDbCv-Iwa0&list=PL1I_xPvgBqRDXck7BAayzisQgaPFIyaCy&index=11"
+          }
+        }
+      },
+      "block_order": [
+        "media_block_E9faDk",
+        "media_block_6mjdHh",
+        "media_block_gjUJwe",
+        "media_block_KbceXq",
+        "media_block_Ai3yfJ"
+      ],
+      "custom_css": [],
+      "settings": {
+        "margin_top": "mt-xl",
+        "margin_bottom": "mb-0",
+        "padding_top": "pt-0",
+        "padding_bottom": "pb-0",
+        "desktop_margin_top": "tabletl:mt-xl",
+        "desktop_margin_bottom": "tabletl:mb-xl",
+        "desktop_padding_top": "inherit",
+        "desktop_padding_bottom": "tabletl:pb-0",
+        "playlist_position": "left",
+        "image": "shopify://shop_images/guruji-japa.jpg",
+        "title": "Insights from Paramahamsa ...",
+        "title_tag": "h3",
+        "avatar": "shopify://shop_images/2021-07-03-p-0095-Edit.jpg",
+        "name": "By Paramahamsa Sri Swami Vishwananda",
+        "video_count": "323",
+        "url": "https://www.youtube.com/playlist?list=PLRJzEHCmzsf2K-ETOxFTNC0r6QNbqSE5A",
+        "cta_label": "Play Now"
+      }
+    },
+    "section_image_text_blocks_HMkAqw": {
+      "type": "section__image_text_blocks",
+      "blocks": {
+        "image_block_aAX3Dy": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/2016-09-23-p-1034.jpg",
+            "height": "auto",
+            "desktop_height": "inherit"
+          }
+        },
+        "content_block_GPVcFG": {
+          "type": "content_block",
+          "settings": {
+            "title": "Yoga y Meditación",
+            "title_tag": "h2",
+            "title_font_style": "h3",
+            "description": "<p>De todas las herramientas que Paramahamsa Vishwananda nos ha dado en este ámbito, Atma Kriya Yoga es su joya más preciada. Atma Kriya Yoga es un sistema yóguico completo destinado a ayudarte a sumergirte en tu corazón y conectar con lo Divino. Se trata de una práctica diaria que consiste en poderosas técnicas centradas en el recitar, la respiración y la meditación, diseñadas para adaptarse a nuestras vidas modernas. En pocas palabras, cuando se practica con sinceridad y amor, despertarás tu alma, experimentarás el amor de Dios y te convertirás en tu verdadero ser.</p>",
+            "credits": "",
+            "cta_url": "shopify://blogs/events/4-days-to-soul-awakening-with-paramahamsa-vishwananda",
+            "cta_label": "Programa Despertar del Alma",
+            "text_align": "left",
+            "desktop_text_align": "inherit",
+            "vertical_padding": "py-lg",
+            "vertical_padding_desktop": "tabletl:py-xxl"
+          }
+        }
+      },
+      "block_order": [
+        "image_block_aAX3Dy",
+        "content_block_GPVcFG"
+      ],
+      "custom_css": [],
+      "settings": {
+        "margin_top": "mt-xl",
+        "margin_bottom": "mb-0",
+        "desktop_margin_top": "tabletl:mt-xxl",
+        "desktop_margin_bottom": "tabletl:mb-xl",
+        "vertical_align": "top",
+        "flip_columns_desktop": true
+      }
+    },
+    "section_image_text_blocks_AGAr6n": {
+      "type": "section__image_text_blocks",
+      "blocks": {
+        "image_block_GVLkJK": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/The_Path_-_Knowledge.jpg",
+            "height": "auto",
+            "desktop_height": "inherit"
+          }
+        },
+        "content_block_LgwiPx": {
+          "type": "content_block",
+          "settings": {
+            "title": "Conocimiento",
+            "title_tag": "h2",
+            "title_font_style": "h3",
+            "description": "<p>La sabiduría es más que simple información: se trata de descubrir quién eres realmente, quién es Dios y profundizar tu conexión con Él. Eso es lo que hace que estudiar el<em> Bhagavad Gita</em> sea tan poderoso. No es solo otro libro más, es un modelo de filosofía yóguica para vivir una vida con propósito, rectitud y amor. Sus profundas enseñanzas se comprenden mejor cuando las explica alguien que conoce y vive profundamente su tema. Paramahamsa Vishwananda nos ha proporcionado un comentario sencillo y elegante que estudiamos a diario.</p>",
+            "credits": "",
+            "cta_url": "https://courses.bhaktimarga.us/yogicphilosophy",
+            "cta_label": "Curso de Filosofía Yóguica",
+            "text_align": "left",
+            "desktop_text_align": "inherit",
+            "vertical_padding": "py-lg",
+            "vertical_padding_desktop": "tabletl:py-xxl"
+          }
+        }
+      },
+      "block_order": [
+        "image_block_GVLkJK",
+        "content_block_LgwiPx"
+      ],
+      "custom_css": [],
+      "settings": {
+        "margin_top": "mt-xl",
+        "margin_bottom": "mb-0",
+        "desktop_margin_top": "tabletl:mt-xl",
+        "desktop_margin_bottom": "tabletl:mb-xl",
+        "vertical_align": "top",
+        "flip_columns_desktop": false
+      }
+    },
+    "section_image_text_blocks_rKfcjn": {
+      "type": "section__image_text_blocks",
+      "blocks": {
+        "image_block_ijMLPk": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/2023-08-29-p-1110.jpg",
+            "height": "auto",
+            "desktop_height": "inherit"
+          }
+        },
+        "content_block_gF7imH": {
+          "type": "content_block",
+          "settings": {
+            "title": "Rituales",
+            "title_tag": "h2",
+            "title_font_style": "h3",
+            "description": "<p>Nuestros templos son el corazón de la misión Bhakti Marga. Reunirnos para venerar a Dios a través de recitar cantos divinos, oraciones, mantras y rituales es una de las muchas cosas que hacen que el camino del <em>bhakti</em> sea tan tangible y práctico. Paramahamsa Vishwananda nos anima a llevar el espíritu del templo a nuestras comunidades, hogares y vidas cotidianas. A través de un ritual de veneración tradicional llamado <em>puja</em>, podemos disfrutar de la dulzura de cuidar a lo Divino como lo haríamos con cualquier ser querido. Bañar, vestir y alimentar a tu Amado con tu propio estilo único te permite expresar tu amor y disfrutar de la intimidad de un tiempo sagrado juntos.</p>",
+            "credits": "",
+            "cta_url": "https://ashram.bhaktimarga.us",
+            "cta_label": "Centro Paranitya Narasimha",
+            "text_align": "left",
+            "desktop_text_align": "inherit",
+            "vertical_padding": "py-lg",
+            "vertical_padding_desktop": "tabletl:py-xxl"
+          }
+        }
+      },
+      "block_order": [
+        "image_block_ijMLPk",
+        "content_block_gF7imH"
+      ],
+      "custom_css": [],
+      "settings": {
+        "margin_top": "mt-xl",
+        "margin_bottom": "mb-0",
+        "desktop_margin_top": "tabletl:mt-xl",
+        "desktop_margin_bottom": "tabletl:mb-xl",
+        "vertical_align": "top",
+        "flip_columns_desktop": true
+      }
+    },
+    "section_image_text_blocks_RYbwtF": {
+      "type": "section__image_text_blocks",
+      "blocks": {
+        "image_block_BqX6EP": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/2023-07-28-p-0249.jpg",
+            "height": "auto",
+            "desktop_height": "inherit"
+          }
+        },
+        "content_block_jetaBB": {
+          "type": "content_block",
+          "settings": {
+            "title": "Artes devocionales",
+            "title_tag": "h2",
+            "title_font_style": "h3",
+            "description": "<p>Desde que tenemos memoria, las artes nos han cautivado, ya sea la música, la literatura, la danza o cualquier otra forma de expresión creativa. Las artes tienen una forma única de hablar a nuestros corazones, conectándonos con emociones y experiencias más profundas. Pero cuando dirigimos esa energía hacia lo Divino, ocurre algo increíble. Vamos más allá de nuestra mente pensante y nos adentramos en nuestro corazón, sumergiéndonos por completo en el amor de Dios. No se trata de talento o habilidad, sino de la sinceridad de tu corazón. Paramahamsa Vishwananda anima a todo el mundo a abrazar las artes devocionales, de la forma que te resulte más natural. ¿El único requisito? Un anhelo genuino por Dios.</p>",
+            "credits": "",
+            "cta_url": "shopify://pages/bhakti-sundays",
+            "cta_label": "Domingos bhakti",
+            "text_align": "left",
+            "desktop_text_align": "inherit",
+            "vertical_padding": "py-lg",
+            "vertical_padding_desktop": "tabletl:py-xxl"
+          }
+        }
+      },
+      "block_order": [
+        "image_block_BqX6EP",
+        "content_block_jetaBB"
+      ],
+      "custom_css": [],
+      "settings": {
+        "margin_top": "mt-xl",
+        "margin_bottom": "mb-md",
+        "desktop_margin_top": "tabletl:mt-xl",
+        "desktop_margin_bottom": "tabletl:mb-xxxl",
+        "vertical_align": "top",
+        "flip_columns_desktop": false
+      }
+    },
+    "section_content_grid_fEGyLA": {
+      "type": "section__content-grid",
+      "blocks": {
+        "content_block_9mykND": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify://shop_images/Newsletter_Signup-2-MOBILE.jpg",
+            "desktop_image": "shopify://shop_images/Newsletter_Signup-2.jpg",
+            "title": "Suscripción al boletín de noticias",
+            "title_tag": "h2",
+            "title_font_style": "h4",
+            "description": "<p>¿Quieres recursos gratuitos para vivir una vida de amor? Inscríbete para recibir actualizaciones de eventos especiales y recursos gratuitos.</p>",
+            "cta_link": "",
+            "cta_label": "Únete a la comunidad",
+            "cta_style": "btn btn--gold",
+            "cta_klaviyo_embed": "SEA9Ef"
+          }
+        },
+        "content_block_NqaExD": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify://shop_images/Free_Meditation_Course-2-MOBILE.jpg",
+            "desktop_image": "shopify://shop_images/Free_Meditation_Course-2.jpg",
+            "title": "Curso gratuito de meditación",
+            "title_tag": "h2",
+            "title_font_style": "h4",
+            "description": "<p>Aprende a meditar y despierta el amor en tu vida con nuestro curso gratuito de meditación de 5 lecciones.</p>",
+            "cta_link": "",
+            "cta_label": "Curso gratuito para aprender a meditar",
+            "cta_style": "btn btn--gold",
+            "cta_klaviyo_embed": "RxziKK"
+          }
+        }
+      },
+      "block_order": [
+        "content_block_9mykND",
+        "content_block_NqaExD"
+      ],
+      "custom_css": [],
+      "settings": {
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "padding_top": "pt-xl",
+        "padding_bottom": "pb-md",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "desktop_padding_top": "tabletl:pt-xxxl",
+        "desktop_padding_bottom": "tabletl:pb-xxxl",
+        "bg_color": "#16254c",
+        "cols_mobile": "1",
+        "cols_desktop": "2",
+        "horizontal_gap_mobile": "gap-x-md",
+        "horizontal_gap_desktop": "tabletl:gap-x-md",
+        "vertical_gap_mobile": "gap-y-md",
+        "vertical_gap_desktop": "tabletl:gap-y-md",
+        "format": "inside",
+        "text_color": "#000000",
+        "apply_gradient": false,
+        "gradient_height": 40,
+        "gradient_color": "#000000"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "section_hero_cBpMpY",
+    "section_image_text_blocks_PHhidM",
+    "section_image_text_blocks_idDHbJ",
+    "section_accordion_UezKHE",
+    "section_image_text_blocks_KcfxKd",
+    "section_image_text_blocks_KNgGYt",
+    "section_hero_EmDBMy",
+    "section_hero_tK9b6d",
+    "section_playlist_WUtnJ6",
+    "section_image_text_blocks_HMkAqw",
+    "section_image_text_blocks_AGAr6n",
+    "section_image_text_blocks_rKfcjn",
+    "section_image_text_blocks_RYbwtF",
+    "section_content_grid_fEGyLA"
+  ]
+}

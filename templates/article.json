@@ -1,0 +1,50 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "hero": {
+      "type": "article__hero",
+      "settings": {}
+    },
+    "section_quote_blocks_xnR3k8": {
+      "type": "section__quote-blocks",
+      "blocks": {
+        "block_3Jkh3W": {
+          "type": "block",
+          "settings": {
+            "title": "‘In meditation, when the mind is calm, you have a personal contact with the Divine, not outside, but within you. And this inner contact is the most wonderful and the most powerful contact you can ever have.’",
+            "description": "<p>Paramahamsa Vishwananda<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "block_3Jkh3W"
+      ],
+      "settings": {
+        "padding_top": "pt-0",
+        "padding_bottom": "pb-0",
+        "desktop_padding_top": "tabletl:pt-0",
+        "desktop_padding_bottom": "tabletl:pb-0",
+        "cols_mobile": "1",
+        "cols_desktop": "1"
+      }
+    },
+    "main": {
+      "type": "article__main",
+      "disabled": true,
+      "settings": {}
+    }
+  },
+  "order": [
+    "hero",
+    "section_quote_blocks_xnR3k8",
+    "main"
+  ]
+}

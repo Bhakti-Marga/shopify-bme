@@ -1,0 +1,225 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "page__main",
+      "disabled": true,
+      "settings": {}
+    },
+    "section_hero_video_signup_PF4yGy": {
+      "type": "section__hero-video-signup",
+      "settings": {
+        "padding_top": "0px",
+        "desktop_padding_top": "0px",
+        "padding_bottom": "16px",
+        "desktop_padding_bottom": "40px",
+        "padding_horizontal": "px-0",
+        "desktop_padding_horizontal": "inherit",
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "use_container": true,
+        "set_100vh": false,
+        "border_radius": 16,
+        "aspect_ratio": "16\/9",
+        "aspect_ratio_desktop": "16\/9",
+        "image": "shopify:\/\/shop_images\/placeholder-img.png",
+        "bg_color": "#16254c",
+        "text_color": "",
+        "form_background_color": "255, 255, 255",
+        "title": "Paramahamsa Vishwananda",
+        "subtitle": "Receive an Online Blessing",
+        "description": "<p>No matter where you are in the world, you can have a personal encounter with a God-realised master. Use this form to register for your first three free online darshan blessings.<\/p>",
+        "klaviyo_embed": "(replace with klaviyo embed in customizer)"
+      }
+    },
+    "section_review_carousel_qYGRHK": {
+      "type": "section__review-carousel",
+      "blocks": {
+        "content_block_DALTyx": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/placeholder-img.png",
+            "content": "<h5>Eyes of God<\/h5><p><br\/>‘After darshan, my 85-year-old grandmother was crying. I asked her why. She said she realized that God was looking at her and she was looking into God’s eyes.’<\/p>",
+            "credits": "Sathya, Germany"
+          }
+        }
+      },
+      "block_order": [
+        "content_block_DALTyx"
+      ],
+      "settings": {
+        "padding_top": "pt-xl",
+        "padding_bottom": "pb-xl",
+        "desktop_padding_top": "tabletl:pt-xxxl",
+        "desktop_padding_bottom": "tabletl:pb-xxxl",
+        "title": "Darshan Experiences",
+        "title_tag": "h2"
+      }
+    },
+    "section_content_grid_VJTCyE": {
+      "type": "section__content-grid",
+      "blocks": {
+        "content_block_WAX4RG": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/placeholder-img.png",
+            "title": "",
+            "title_tag": "h2",
+            "title_font_style": "h4",
+            "description": "<p>More Darshan Experiences<\/p>",
+            "cta_link": "https:\/\/www.youtube.com\/playlist?list=PLSF0qVopuohpMzXU8h39a6mJ7qRv-0DSZ",
+            "cta_label": "Explorar",
+            "cta_style": "btn btn--black"
+          }
+        },
+        "content_block_PqEfkx": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/placeholder-img.png",
+            "title": "",
+            "title_tag": "h2",
+            "title_font_style": "h4",
+            "description": "<p>Experiences with Parahamamsa Vishwananda<\/p>",
+            "cta_link": "https:\/\/www.youtube.com\/playlist?list=PLoHNK6wuDxZlwBKNn5htRKX9wy2OStT0A",
+            "cta_label": "Explorar",
+            "cta_style": "btn btn--black"
+          }
+        },
+        "content_block_WPcWrc": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/placeholder-img.png",
+            "title": "",
+            "title_tag": "h2",
+            "title_font_style": "h4",
+            "description": "<p>New to Online Darshan?<\/p>",
+            "cta_link": "shopify:\/\/pages\/start-now",
+            "cta_label": "Explorar",
+            "cta_style": "btn btn--black"
+          }
+        }
+      },
+      "block_order": [
+        "content_block_WAX4RG",
+        "content_block_PqEfkx",
+        "content_block_WPcWrc"
+      ],
+      "settings": {
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "padding_top": "pt-0",
+        "padding_bottom": "pb-lg",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "desktop_padding_top": "inherit",
+        "desktop_padding_bottom": "tabletl:pb-xxxl",
+        "bg_color": "",
+        "cols_mobile": "1",
+        "cols_desktop": "3",
+        "horizontal_gap_mobile": "gap-x-md",
+        "horizontal_gap_desktop": "tabletl:gap-x-md",
+        "vertical_gap_mobile": "gap-y-md",
+        "vertical_gap_desktop": "tabletl:gap-y-md",
+        "format": "inside"
+      }
+    },
+    "section_accordion_q7q4Yh": {
+      "type": "section__accordion",
+      "blocks": {
+        "accordion_item_73X76x": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Who is this program for? Do I need to be religious to join the program?",
+            "content": "<p>Need content.<\/p>"
+          }
+        },
+        "accordion_item_kEjCYt": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "What is the difference between the online and in-person Soul Awakening program?",
+            "content": "<p>need content.<\/p>"
+          }
+        },
+        "accordion_item_NWkj9t": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "What if I have a physical limitation? Can I still learn Atma Kriya?",
+            "content": "<p>need content.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "accordion_item_73X76x",
+        "accordion_item_kEjCYt",
+        "accordion_item_NWkj9t"
+      ],
+      "settings": {
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "padding_top": "pt-lg",
+        "padding_bottom": "pb-lg",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "desktop_padding_top": "tabletl:pt-xxxl",
+        "desktop_padding_bottom": "tabletl:pb-xxxl",
+        "max_width": "",
+        "title": "FAQs",
+        "cta_url": "",
+        "cta_label": "",
+        "title_position": "left"
+      }
+    },
+    "section_hero_FNtMQw": {
+      "type": "section__hero",
+      "settings": {
+        "padding_top": "0px",
+        "desktop_padding_top": "0px",
+        "padding_bottom": "0px",
+        "desktop_padding_bottom": "inherit",
+        "padding_horizontal": "px-0",
+        "desktop_padding_horizontal": "inherit",
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "use_container": false,
+        "set_100vh": false,
+        "border_radius": 0,
+        "aspect_ratio": "auto",
+        "aspect_ratio_desktop": "16\/9",
+        "image": "shopify:\/\/shop_images\/placeholder-img.png",
+        "bg_color": "",
+        "content_width": "max-w-5xl",
+        "text_align": "text-center",
+        "text_color": "",
+        "title": "Say Yes to your soul",
+        "title_font_style": "h4",
+        "subtitle": "<p>Build a foundation for a life of deep love, meaning, and purpose.<\/p>",
+        "button_text": "",
+        "button_url": "",
+        "button_style": "btn",
+        "video_title": "",
+        "horizontal_position": "justify-center",
+        "vertical_position": "items-center"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "section_hero_video_signup_PF4yGy",
+    "section_review_carousel_qYGRHK",
+    "section_content_grid_VJTCyE",
+    "section_accordion_q7q4Yh",
+    "section_hero_FNtMQw"
+  ]
+}

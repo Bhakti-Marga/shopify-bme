@@ -1,0 +1,27 @@
+<div class="social-media-links flex text-white -ml-sm">
+  {% if settings.social_instagram != blank %}
+    <a href="{{ settings.social_instagram }}" class="p-sm duration-500 tabletp:hover:opacity-50" target="_blank" rel="noopener noreferrer">
+      <i class="inline-block w-32">{% render 'icon--instagram' %}</i>
+    </a>
+  {% endif %}
+  {% if settings.social_facebook != blank %}
+    <a href="{{ settings.social_facebook }}" class="p-sm duration-500 tabletp:hover:opacity-50" target="_blank" rel="noopener noreferrer">
+      <i class="inline-block w-32">{% render 'icon--facebook' %}</i>
+    </a>
+  {% endif %}
+  {% if settings.social_twitter != blank %}
+    <a href="{{ settings.social_twitter }}" class="p-sm duration-500 tabletp:hover:opacity-50" target="_blank" rel="noopener noreferrer">
+      <i class="inline-block w-32">{% render 'icon--x' %}</i>
+    </a>
+  {% endif %}
+  {% if settings.social_youtube != blank %}
+    <a href="{{ settings.social_youtube }}" class="p-sm duration-500 tabletp:hover:opacity-50" target="_blank" rel="noopener noreferrer">
+      <i class="inline-block w-32">{% render 'icon--youtube' %}</i>
+    </a>
+  {% endif %}
+  {% if settings.social_flickr != blank %}
+    <a href="{{ settings.social_flickr }}" class="p-sm duration-500 tabletp:hover:opacity-50" target="_blank" rel="noopener noreferrer">
+      <i class="inline-block w-32">{% render 'icon--flickr' %}</i>
+    </a>
+  {% endif %}
+</div>

@@ -1,0 +1,364 @@
+{% assign section_title = section.settings.title | default: 'Nuestras Comunidades' %}
+{% assign section_subtitle = section.settings.subtitle | default: 'Encuentra la sangha o templo más cercano a ti' %}
+
+<style>
+  .sangha-cards-section {
+    background: #f8f7f4;
+    padding: 60px 20px;
+  }
+
+  .sangha-cards-section__header {
+    text-align: center;
+    margin-bottom: 48px;
+  }
+
+  .sangha-cards-section__title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #16254c;
+    margin: 0 0 12px;
+    line-height: 1.2;
+  }
+
+  .sangha-cards-section__subtitle {
+    font-size: 16px;
+    color: #888;
+    margin: 0;
+  }
+
+  .sangha-cards-section__inner {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .scards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  @media (max-width: 900px) {
+    .scards-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 600px) {
+    .scards-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .scard {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .scard__img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+  }
+
+  .scard__body {
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .scard__badge {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 4px 10px;
+    border-radius: 20px;
+    align-self: flex-start;
+  }
+
+  .scard__badge--temple {
+    background: #D4AF37;
+    color: #16254c;
+  }
+
+  .scard__badge--sangha {
+    background: #16254c;
+    color: #fff;
+  }
+
+  .scard__name {
+    font-size: 18px;
+    font-weight: 700;
+    color: #16254c;
+    margin: 10px 0 4px;
+    line-height: 1.3;
+  }
+
+  .scard__city {
+    font-size: 13px;
+    color: #888;
+    margin-bottom: 12px;
+    margin-top: 0;
+  }
+
+  .scard__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 16px;
+  }
+
+  .scard__tag {
+    font-size: 11px;
+    background: #f0f0f0;
+    color: #555;
+    padding: 3px 10px;
+    border-radius: 12px;
+  }
+
+  .scard__btn {
+    display: block;
+    background: #16254c;
+    color: #fff;
+    text-align: center;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    margin-top: auto;
+    transition: background 0.2s ease;
+  }
+
+  .scard__btn:hover {
+    background: #0d1a36;
+    color: #fff;
+    text-decoration: none;
+  }
+</style>
+
+<section class="sangha-cards-section" id="sangha-cards">
+  <div class="sangha-cards-section__inner">
+
+    <div class="sangha-cards-section__header">
+      <h2 class="sangha-cards-section__title">{{ section_title }}</h2>
+      <p class="sangha-cards-section__subtitle">{{ section_subtitle }}</p>
+    </div>
+
+    <div class="scards-grid">
+
+      <!-- TEMPLES -->
+
+      <!-- Templo Bhava Narasimha -->
+      <div class="scard">
+        <img class="scard__img" src="https://picsum.photos/seed/temple1/400/220" alt="Templo Bhava Narasimha" loading="lazy">
+        <div class="scard__body">
+          <span class="scard__badge scard__badge--temple">Templo</span>
+          <h3 class="scard__name">Templo Bhava Narasimha</h3>
+          <p class="scard__city">📍 Benamocarra, Málaga</p>
+          <div class="scard__tags">
+            <span class="scard__tag">Puja diaria</span>
+            <span class="scard__tag">Kirtan</span>
+            <span class="scard__tag">Abhishekam</span>
+          </div>
+          <a href="#" class="scard__btn">Ver Templo</a>
+        </div>
+      </div>
+
+      <!-- Templo Hari Hara -->
+      <div class="scard">
+        <img class="scard__img" src="https://picsum.photos/seed/temple2/400/220" alt="Templo Hari Hara" loading="lazy">
+        <div class="scard__body">
+          <span class="scard__badge scard__badge--temple">Templo</span>
+          <h3 class="scard__name">Templo Hari Hara</h3>
+          <p class="scard__city">📍 Lanzarote</p>
+          <div class="scard__tags">
+            <span class="scard__tag">Puja diaria</span>
+            <span class="scard__tag">Kirtan</span>
+            <span class="scard__tag">Atma Kriya Yoga</span>
+          </div>
+          <a href="#" class="scard__btn">Ver Templo</a>
+        </div>
+      </div>
+
+      <!-- SANGHAS -->
+
+      <!-- Sangha Galicia -->
+      <div class="scard">
+        <img class="scard__img" src="https://picsum.photos/seed/sangha1/400/220" alt="Sangha Galicia" loading="lazy">
+        <div class="scard__body">
+          <span class="scard__badge scard__badge--sangha">Sangha</span>
+          <h3 class="scard__name">Sangha Galicia</h3>
+          <p class="scard__city">📍 Turzás, Galicia</p>
+          <div class="scard__tags">
+            <span class="scard__tag">Kirtan</span>
+            <span class="scard__tag">Atma Kriya Yoga</span>
+            <span class="scard__tag">Babaji Surya Namaskar</span>
+          </div>
+          <a href="#" class="scard__btn">Ver Sangha</a>
+        </div>
+      </div>
+
+      <!-- Sangha Valencia -->
+      <div class="scard">
+        <img class="scard__img" src="https://picsum.photos/seed/sangha2/400/220" alt="Sangha Valencia" loading="lazy">
+        <div class="scard__body">
+          <span class="scard__badge scard__badge--sangha">Sangha</span>
+          <h3 class="scard__name">Sangha Valencia</h3>
+          <p class="scard__city">📍 Valencia</p>
+          <div class="scard__tags">
+            <span class="scard__tag">Clases de conocimiento</span>
+            <span class="scard__tag">Canto OM</span>
+            <span class="scard__tag">Kirtan</span>
+          </div>
+          <a href="#" class="scard__btn">Ver Sangha</a>
+        </div>
+      </div>
+
+      <!-- Sangha Barcelona -->
+      <div class="scard">
+        <img class="scard__img" src="https://picsum.photos/seed/sangha3/400/220" alt="Sangha Barcelona" loading="lazy">
+        <div class="scard__body">
+          <span class="scard__badge scard__badge--sangha">Sangha</span>
+          <h3 class="scard__name">Sangha Barcelona</h3>
+          <p class="scard__city">📍 Barcelona</p>
+          <div class="scard__tags">
+            <span class="scard__tag">Kirtan</span>
+            <span class="scard__tag">Meditación Sri Yantra</span>
+            <span class="scard__tag">Atma Kriya Yoga</span>
+          </div>
+          <a href="#" class="scard__btn">Ver Sangha</a>
+        </div>
+      </div>
+
+      <!-- Sangha Gipuzkoa -->
+      <div class="scard">
+        <img class="scard__img" src="https://picsum.photos/seed/sangha4/400/220" alt="Sangha Gipuzkoa" loading="lazy">
+        <div class="scard__body">
+          <span class="scard__badge scard__badge--sangha">Sangha</span>
+          <h3 class="scard__name">Sangha Gipuzkoa</h3>
+          <p class="scard__city">📍 Gipuzkoa</p>
+          <div class="scard__tags">
+            <span class="scard__tag">Kirtan</span>
+            <span class="scard__tag">Babaji Surya Namaskar</span>
+          </div>
+          <a href="#" class="scard__btn">Ver Sangha</a>
+        </div>
+      </div>
+
+      <!-- Sangha Euskadi -->
+      <div class="scard">
+        <img class="scard__img" src="https://picsum.photos/seed/sangha5/400/220" alt="Sangha Euskadi" loading="lazy">
+        <div class="scard__body">
+          <span class="scard__badge scard__badge--sangha">Sangha</span>
+          <h3 class="scard__name">Sangha Euskadi</h3>
+          <p class="scard__city">📍 Euskadi</p>
+          <div class="scard__tags">
+            <span class="scard__tag">Kirtan</span>
+            <span class="scard__tag">Atma Kriya Yoga</span>
+          </div>
+          <a href="#" class="scard__btn">Ver Sangha</a>
+        </div>
+      </div>
+
+      <!-- Sangha Málaga -->
+      <div class="scard">
+        <img class="scard__img" src="https://picsum.photos/seed/sangha6/400/220" alt="Sangha Málaga" loading="lazy">
+        <div class="scard__body">
+          <span class="scard__badge scard__badge--sangha">Sangha</span>
+          <h3 class="scard__name">Sangha Málaga</h3>
+          <p class="scard__city">📍 Málaga</p>
+          <div class="scard__tags">
+            <span class="scard__tag">Canto OM</span>
+            <span class="scard__tag">Kirtan</span>
+            <span class="scard__tag">Meditación</span>
+          </div>
+          <a href="#" class="scard__btn">Ver Sangha</a>
+        </div>
+      </div>
+
+      <!-- Sangha Riba-Roja -->
+      <div class="scard">
+        <img class="scard__img" src="https://picsum.photos/seed/sangha7/400/220" alt="Sangha Riba-Roja" loading="lazy">
+        <div class="scard__body">
+          <span class="scard__badge scard__badge--sangha">Sangha</span>
+          <h3 class="scard__name">Sangha Riba-Roja</h3>
+          <p class="scard__city">📍 Riba-Roja de Túria, Valencia</p>
+          <div class="scard__tags">
+            <span class="scard__tag">Kirtan</span>
+            <span class="scard__tag">Clases de conocimiento</span>
+          </div>
+          <a href="#" class="scard__btn">Ver Sangha</a>
+        </div>
+      </div>
+
+      <!-- Sangha Canals -->
+      <div class="scard">
+        <img class="scard__img" src="https://picsum.photos/seed/sangha8/400/220" alt="Sangha Canals" loading="lazy">
+        <div class="scard__body">
+          <span class="scard__badge scard__badge--sangha">Sangha</span>
+          <h3 class="scard__name">Sangha Canals</h3>
+          <p class="scard__city">📍 Canals, Valencia</p>
+          <div class="scard__tags">
+            <span class="scard__tag">Kirtan</span>
+            <span class="scard__tag">Atma Kriya Yoga</span>
+            <span class="scard__tag">Canto OM</span>
+          </div>
+          <a href="#" class="scard__btn">Ver Sangha</a>
+        </div>
+      </div>
+
+      <!-- Sangha Madrid -->
+      <div class="scard">
+        <img class="scard__img" src="https://picsum.photos/seed/sangha9/400/220" alt="Sangha Madrid" loading="lazy">
+        <div class="scard__body">
+          <span class="scard__badge scard__badge--sangha">Sangha</span>
+          <h3 class="scard__name">Sangha Madrid</h3>
+          <p class="scard__city">📍 Madrid</p>
+          <div class="scard__tags">
+            <span class="scard__tag">Clases de conocimiento</span>
+            <span class="scard__tag">Kirtan</span>
+            <span class="scard__tag">Babaji Surya Namaskar</span>
+          </div>
+          <a href="#" class="scard__btn">Ver Sangha</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Sangha Cards",
+  "tag": "section",
+  "class": "section-sangha-cards",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Título de la sección",
+      "default": "Nuestras Comunidades"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtítulo de la sección",
+      "default": "Encuentra la sangha o templo más cercano a ti"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Sangha Cards"
+    }
+  ]
+}
+{% endschema %}
