@@ -39,34 +39,25 @@
   .leaflet-popup-content-wrapper {
     border-radius: 12px;
     border-top: 4px solid #16254c;
-    padding: 0;
+    padding: 4px;
   }
   .leaflet-popup-content {
-    margin: 14px 18px;
+    margin: 20px 24px;
   }
-  .smap-popup__type {
-    font-size: 11px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    margin-bottom: 4px;
-  }
-  .smap-popup__type--temple { color: #D4AF37; }
-  .smap-popup__type--sangha { color: #16254c; }
   .smap-popup__name {
-    font-size: 15px;
+    font-size: 17px;
     font-weight: 700;
     color: #16254c;
-    margin-bottom: 2px;
+    margin-bottom: 4px;
   }
   .smap-popup__city {
     font-size: 13px;
     color: #888;
   }
-  .smap-popup__divider { border: none; border-top: 1px solid #eee; margin: 10px 0; }
+  .smap-popup__divider { border: none; border-top: 1px solid #eee; margin: 14px 0; }
   .smap-popup__label { font-weight: 700; font-size: 13px; color: #16254c; }
-  .smap-popup__row { font-size: 13px; margin-bottom: 6px; color: #444; }
-  .smap-popup__activities { font-size: 13px; color: #444; margin-bottom: 12px; }
+  .smap-popup__row { font-size: 13px; margin-bottom: 10px; color: #444; }
+  .smap-popup__activities { font-size: 13px; color: #444; margin-bottom: 16px; line-height: 1.5; }
   .smap-popup__btn {
     display: block;
     background: #16254c;
@@ -81,6 +72,9 @@
     margin-top: 4px;
   }
   .smap-popup__btn:hover { background: #0d1a36; }
+  .smap-popup__btn--accent { background: #D4AF37; }
+  .smap-popup__btn--accent:hover { background: #B8960C; }
+  .smap-popup__btn + .smap-popup__btn { margin-top: 8px; }
 </style>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
