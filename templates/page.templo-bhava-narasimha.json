@@ -1,0 +1,274 @@
+{
+  "sections": {
+    "main": {
+      "type": "page__main",
+      "disabled": true,
+      "settings": {}
+    },
+    "section_hero_cBpMpY": {
+      "type": "section__hero",
+      "settings": {
+        "padding_top": "0px",
+        "desktop_padding_top": "inherit",
+        "padding_bottom": "40px",
+        "desktop_padding_bottom": "60px",
+        "padding_horizontal": "px-0",
+        "desktop_padding_horizontal": "inherit",
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "use_container": true,
+        "set_100vh": true,
+        "set_100vh_desktop": true,
+        "border_radius": 16,
+        "aspect_ratio": "9\/16",
+        "aspect_ratio_desktop": "4\/3",
+        "image": "shopify:\/\/shop_images\/Bhutabhrteshwarnath_Mandir-poster.jpg",
+        "image_desktop": "shopify:\/\/shop_images\/Bhutabhrteshwarnath_Mandir-poster.jpg",
+        "bg_color": "#16254c",
+        "content_width": "max-w-5xl",
+        "text_align": "text-left",
+        "text_color": "#ffffff",
+        "title": "Templo Bhava Narasimha",
+        "title_font_style": "h3",
+        "subtitle": "<h5>PROFUNDIZA TU CAMINO HACIA EL AMOR DIVINO<\/h5>",
+        "button_text": "Retiros y Eventos",
+        "button_url": "shopify:\/\/pages\/all-programs",
+        "button_style": "btn btn--gold",
+        "anchor_to_pricing": false,
+        "video_title": "",
+        "poster_image": "shopify:\/\/shop_images\/IMG_1144-Edit.jpg",
+        "poster_image_desktop": "shopify:\/\/shop_images\/IMG_1144-Edit.jpg",
+        "horizontal_position": "justify-center",
+        "vertical_position": "items-end"
+      }
+    },
+    "section_events_carousel_LEJzgw": {
+      "type": "section__events-carousel",
+      "blocks": {
+        "block_WxMXQ7": {
+          "type": "block",
+          "settings": {
+            "article": "events\/shivaratri-2025"
+          }
+        },
+        "block_39E9Bm": {
+          "type": "block",
+          "settings": {
+            "article": "events\/paramahamsa-vishwanandas-birthday-2025"
+          }
+        },
+        "block_rjjER4": {
+          "type": "block",
+          "settings": {
+            "article": "events\/gurupurnima-2025"
+          }
+        },
+        "block_NiiU7D": {
+          "type": "block",
+          "settings": {
+            "article": "events\/navaratri-2025"
+          }
+        }
+      },
+      "block_order": [
+        "block_WxMXQ7",
+        "block_39E9Bm",
+        "block_rjjER4",
+        "block_NiiU7D"
+      ],
+      "settings": {
+        "padding_top": "pt-xl",
+        "padding_bottom": "pb-xl",
+        "desktop_padding_top": "inherit",
+        "desktop_padding_bottom": "inherit",
+        "set_dark_theme": false,
+        "apply_gradient": true,
+        "title": "Próximos Eventos",
+        "title_tag": "h2",
+        "cta_label": "Ver Todos los Eventos",
+        "cta_url": "shopify:\/\/blogs\/events",
+        "hide_arrows_desktop": false
+      }
+    },
+    "section_image_text_blocks_XJ9kGW": {
+      "type": "section__image_text_blocks",
+      "blocks": {
+        "image_block_qrJaRt": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/narasimha-poster.jpg",
+            "height": "50vh",
+            "desktop_height": "inherit"
+          }
+        },
+        "content_block_TFpAMn": {
+          "type": "content_block",
+          "settings": {
+            "title": "Transmisión en Directo Diaria",
+            "title_tag": "h3",
+            "title_font_style": "h4",
+            "description": "<p>Únete cada día por transmisión en directo a las Oraciones Matutinas y al Arati Vespertino, desde el Templo Bhava Narasimha. Hora Central Europea:<\/p><ul><li>Oraciones Matutinas: 7:00 a 8:20<\/li><li>Oraciones del Domingo: 9:00 a 11:30<\/li><li>Arati Vespertino: 20:00 a 20:10<\/li><\/ul>",
+            "credits": "",
+            "cta_url": "#",
+            "cta_label": "Unirse al Directo",
+            "text_align": "left",
+            "desktop_text_align": "inherit",
+            "vertical_padding": "py-lg",
+            "vertical_padding_desktop": "tabletl:py-xxl"
+          }
+        }
+      },
+      "block_order": [
+        "image_block_qrJaRt",
+        "content_block_TFpAMn"
+      ],
+      "settings": {
+        "margin_top": "mt-xl",
+        "margin_bottom": "mb-xxl",
+        "desktop_margin_top": "tabletl:mt-xl",
+        "desktop_margin_bottom": "tabletl:mb-xxl",
+        "vertical_align": "center",
+        "flip_columns_desktop": false
+      }
+    },
+    "section_hero_XrFNy3": {
+      "type": "section__hero",
+      "settings": {
+        "padding_top": "0px",
+        "desktop_padding_top": "0px",
+        "padding_bottom": "0px",
+        "desktop_padding_bottom": "inherit",
+        "padding_horizontal": "px-0",
+        "desktop_padding_horizontal": "inherit",
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "use_container": false,
+        "set_100vh": true,
+        "set_100vh_desktop": true,
+        "border_radius": 0,
+        "aspect_ratio": "9\/16",
+        "aspect_ratio_desktop": "16\/9",
+        "image": "shopify:\/\/shop_images\/temple-card.jpg",
+        "bg_color": "",
+        "content_width": "max-w-5xl",
+        "text_align": "text-left",
+        "text_color": "#ffffff",
+        "title": "Templo Bhava Narasimha",
+        "title_font_style": "h2",
+        "subtitle": "<p>Tu Hogar Espiritual en España<\/p>",
+        "button_text": "Visitar el Templo",
+        "button_url": "shopify:\/\/pages\/calendar",
+        "button_style": "btn",
+        "anchor_to_pricing": false,
+        "video_title": "",
+        "horizontal_position": "justify-center",
+        "vertical_position": "items-center"
+      }
+    },
+    "section_text_image_grid_q8FKHB": {
+      "type": "section__text-image-grid",
+      "blocks": {
+        "image_block_RA3nVQ": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/temple-pag1.jpg"
+          }
+        },
+        "image_block_Dee9xw": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/temple-pag4.jpg"
+          }
+        },
+        "image_block_qhpXeT": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/temple-pag3.jpg"
+          }
+        },
+        "image_block_gKfa4C": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/temple-pag2.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "image_block_RA3nVQ",
+        "image_block_Dee9xw",
+        "image_block_qhpXeT",
+        "image_block_gKfa4C"
+      ],
+      "custom_css": [],
+      "settings": {
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "padding_top": "pt-xl",
+        "padding_bottom": "pb-xxl",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "desktop_padding_top": "tabletl:pt-xxxl",
+        "desktop_padding_bottom": "tabletl:pb-xxxl",
+        "mobile_position": "top",
+        "position": "left",
+        "title": "Aquí hay un lugar para ti",
+        "title_tag": "h2",
+        "description": "<p>El Templo Bhava Narasimha es un centro espiritual dedicado a ayudarte a llevar más amor y devoción a tu vida cotidiana. A través de oraciones diarias, eventos semanales inspiradores y festivales védicos transformadores, animamos a cada persona a expresar su devoción única hacia Dios. Todos son bienvenidos a explorar este hermoso camino.<\/p>"
+      }
+    },
+    "section_image_text_blocks_H63g8U": {
+      "type": "section__image_text_blocks",
+      "blocks": {
+        "image_block_NzKizB": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/come-visit-us-the-ashram_e2674f5e-3d18-4d52-b625-e1803430a964.webp",
+            "height": "50vh",
+            "desktop_height": "inherit"
+          }
+        },
+        "content_block_JYJVtf": {
+          "type": "content_block",
+          "settings": {
+            "title": "Templo Bhava Narasimha",
+            "title_tag": "h4",
+            "title_font_style": "h4",
+            "description": "<h5>Tu Hogar Espiritual en España<\/h5>",
+            "credits": "",
+            "cta_url": "shopify:\/\/pages\/calendar",
+            "cta_label": "Visitar el Templo",
+            "text_align": "left",
+            "desktop_text_align": "inherit",
+            "vertical_padding": "py-lg",
+            "vertical_padding_desktop": "tabletl:py-xxl"
+          }
+        }
+      },
+      "block_order": [
+        "image_block_NzKizB",
+        "content_block_JYJVtf"
+      ],
+      "settings": {
+        "margin_top": "mt-xl",
+        "margin_bottom": "mb-xl",
+        "desktop_margin_top": "tabletl:mt-xl",
+        "desktop_margin_bottom": "tabletl:mb-xxxl",
+        "vertical_align": "center",
+        "flip_columns_desktop": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "section_hero_cBpMpY",
+    "section_events_carousel_LEJzgw",
+    "section_image_text_blocks_XJ9kGW",
+    "section_hero_XrFNy3",
+    "section_text_image_grid_q8FKHB",
+    "section_image_text_blocks_H63g8U"
+  ]
+}

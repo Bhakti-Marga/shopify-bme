@@ -1,0 +1,168 @@
+{
+  "sections": {
+    "main": {
+      "type": "page__main",
+      "disabled": true,
+      "settings": {}
+    },
+    "sangha_ciudad": {
+      "type": "page__sangha-ciudad",
+      "blocks": {
+        "photo_1": {
+          "type": "photo",
+          "settings": {}
+        },
+        "photo_2": {
+          "type": "photo",
+          "settings": {}
+        },
+        "photo_3": {
+          "type": "photo",
+          "settings": {}
+        },
+        "photo_4": {
+          "type": "photo",
+          "settings": {}
+        },
+        "photo_5": {
+          "type": "photo",
+          "settings": {}
+        },
+        "photo_6": {
+          "type": "photo",
+          "settings": {}
+        },
+        "location_all": {
+          "type": "location",
+          "settings": {
+            "location_name": "All Locations",
+            "location_key": "all"
+          }
+        },
+        "event_1": {
+          "type": "event",
+          "settings": {
+            "title": "Meditación OM Chanting",
+            "category": "Meditación",
+            "cta1_label": "Registrarse Aquí",
+            "cta1_style": "gold",
+            "show_calendar": true
+          }
+        },
+        "omc_1": {
+          "type": "omc_card",
+          "settings": {
+            "icon": "✨",
+            "title": "Mejora tu Bienestar",
+            "body": "El OM Chanting promueve la paz interior, la claridad mental, la libertad emocional y la salud física. Muchas personas experimentan cambios positivos."
+          }
+        },
+        "omc_2": {
+          "type": "omc_card",
+          "settings": {
+            "icon": "🌀",
+            "title": "Transforma la Negatividad",
+            "body": "El OM Chanting genera una frecuencia vibratoria que libera la negatividad, la transforma y baña a los participantes con energía positiva."
+          }
+        },
+        "omc_3": {
+          "type": "omc_card",
+          "settings": {
+            "icon": "🌿",
+            "title": "Purifica el Entorno",
+            "body": "Las ondas vibratorias creadas por el OM Chanting se extienden en un radio de 2 kilómetros, generando armonía, paz y unidad con la naturaleza."
+          }
+        },
+        "aky_1": {
+          "type": "aky_card",
+          "settings": {
+            "icon": "💛",
+            "title": "Despierta el Amor Divino",
+            "body": "El Atma Kriya Yoga es una práctica sagrada revelada por Paramahamsa Vishwananda para despertar el Amor Divino en el corazón y profundizar tu relación con lo Divino."
+          }
+        },
+        "aky_2": {
+          "type": "aky_card",
+          "settings": {
+            "icon": "🔥",
+            "title": "Transforma desde Adentro",
+            "body": "A través de la respiración, el mantra, la meditación y la devoción, el Atma Kriya Yoga apoya la purificación interior, el equilibrio emocional y la transformación espiritual."
+          }
+        },
+        "aky_3": {
+          "type": "aky_card",
+          "settings": {
+            "icon": "🕊",
+            "title": "Una Práctica para la Vida Cotidiana",
+            "body": "Simple pero profundo, el Atma Kriya Yoga puede practicarse diariamente e integrarse en la vida moderna, ayudándote a mantenerte conectado, centrado y en paz."
+          }
+        },
+        "monk_1": {
+          "type": "monk",
+          "settings": {
+            "role": "Swami",
+            "name": "Swami Aniruddha",
+            "subtitle": "Compartiendo la Transformación a través de la Devoción",
+            "bio": "Swami Aniruddha lleva más de 20 años en el camino espiritual. En 2008, conoció a su Satguru, Paramahamsa Vishwananda — un encuentro que marcó un punto de inflexión en su vida espiritual. Su misión es mejorar la vida de las personas y ayudarles a alcanzar el Amor Divino.",
+            "instagram_url": "https://www.instagram.com/sv.aniruddha/",
+            "podcast_url": "https://www.youtube.com/@SwamiAniruddha"
+          }
+        }
+      },
+      "block_order": [
+        "photo_1",
+        "photo_2",
+        "photo_3",
+        "photo_4",
+        "photo_5",
+        "photo_6",
+        "location_all",
+        "event_1",
+        "omc_1",
+        "omc_2",
+        "omc_3",
+        "aky_1",
+        "aky_2",
+        "aky_3",
+        "monk_1"
+      ],
+      "settings": {
+        "city_name": "Valencia",
+        "hero_subtitle": "Comunidad Bhakti Marga Valencia. Conecta con almas afines, encuentra eventos y ponte en contacto con nosotros.",
+        "hero_cta_label": "Encontrar una Reunión Cerca de Mí",
+        "hero_cta2_label": "Contáctanos",
+        "welcome_headline": "No importa en qué punto de tu camino espiritual estés,",
+        "welcome_subheadline": "eres bienvenido aquí.",
+        "events_eyebrow": "Encuentra Reuniones Cerca de Ti",
+        "events_title": "Explora las reuniones locales de Bhakti Marga. Todos son bienvenidos.",
+        "tab_all_label": "Ver Todas las Ubicaciones",
+        "whatsapp_join_label": "Unirte a la Comunidad",
+        "show_omc": true,
+        "omc_eyebrow": "EL PODER DEL OM CHANTING",
+        "omc_title": "OM Chanting",
+        "show_aky": true,
+        "aky_eyebrow": "ATMA KRIYA YOGA",
+        "aky_title": "Una Práctica Milenaria",
+        "aky_cta_label": "Contáctanos para aprender Atma Kriya Yoga",
+        "show_countdown": false,
+        "show_monks": true,
+        "monks_eyebrow": "Conoce a los Monjes",
+        "monks_title": "Swamis & Rishis",
+        "contact_eyebrow": "Conectemos.",
+        "contact_title": "¿Cómo Podemos Ayudarte?",
+        "contact_body": "¿Tienes preguntas? ¿Quieres organizar un evento? Rellena este formulario y alguien se pondrá en contacto contigo pronto.",
+        "contact_submit": "ENVIAR",
+        "contact_note": "Nunca compartiremos ni venderemos tu información. Este formulario es únicamente para ponernos en contacto y responder a tus preguntas.",
+        "label_name": "Nombre",
+        "label_email": "Email",
+        "label_message": "Mensaje",
+        "floating_whatsapp_label": "Unirse por WhatsApp",
+        "floating_email_label": "Enviar un Email"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "sangha_ciudad"
+  ]
+}

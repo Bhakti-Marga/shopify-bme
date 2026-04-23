@@ -229,6 +229,7 @@
   "products": {
     "product": {
       "add_to_cart": "Añadir al carrito",
+      "view_on_maps": "Ver en Google Maps",
       "description": "Descripción",
       "on_sale": "Oportunidad",
       "product_variants": "Variantes del producto",

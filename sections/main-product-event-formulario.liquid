@@ -40,12 +40,12 @@
     display: flex;
     flex-wrap: wrap;
     gap: 25px;
-    margin-top: 1rem;
+    margin-top: 2rem;
   }
 
   .highlight-item img {
-    width: 50px;
-    height: 50px;
+    width: 140px;
+    height: 140px;
     object-fit: contain;
   }
 
@@ -81,7 +81,7 @@
 
     {% if product.metafields.custom.highlights != blank %}
       <div class="event-section-divider">
-        <h2>Highlights</h2>
+        <h2>Aspectos destacados</h2>
         <div class="highlights-grid">
           {% for highlight in product.metafields.custom.highlights.value %}
             <div class="highlight-item">

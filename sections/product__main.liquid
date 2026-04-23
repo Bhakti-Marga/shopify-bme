@@ -87,6 +87,20 @@
               <p class="mt-sm">{{ product.metafields.event.location }}</p>
             {%- endif -%}
           {% endif %}
+          {% if product.metafields.custom.localizacion != blank %}
+            {% for loc in product.metafields.custom.localizacion.value %}
+              <div class="mt-sm">
+                {% if loc.name %}
+                  <p class="font-600">{{ loc.name.value }}</p>
+                {% endif %}
+                {% if loc.latitude and loc.longitude %}
+                  <a href="https://www.google.com/maps?q={{ loc.latitude.value }},{{ loc.longitude.value }}" target="_blank" rel="noopener" class="text-16 underline">
+                    {{ 'products.product.view_on_maps' | t }}
+                  </a>
+                {% endif %}
+              </div>
+            {% endfor %}
+          {% endif %}
         </div>
       {% endif %}
 

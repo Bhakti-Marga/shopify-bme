@@ -1,0 +1,265 @@
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+<div class="profesores-map-section" id="profesores">
+
+  <div class="container py-xl text-center">
+    <h2 class="h2" style="color:#fff;">{{ section.settings.title }}</h2>
+    <p class="mt-md text-16 opacity-70" style="color:#fff;">{{ section.settings.subtitle }}</p>
+  </div>
+
+  <!-- Legend -->
+  <div class="container mb-lg">
+    <div class="pmap__legend">
+      <div class="pmap__legend-item">
+        <svg width="22" height="30" viewBox="0 0 32 45" xmlns="http://www.w3.org/2000/svg">
+          <path d="M16 0C7.163 0 0 7.163 0 16c0 11 16 29 16 29S32 27 32 16C32 7.163 24.837 0 16 0z" fill="#D4AF37" stroke="#B8960C" stroke-width="1.5"/>
+          <circle cx="16" cy="16" r="6" fill="white"/>
+        </svg>
+        <span class="pmap__legend-label">Profesor</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div id="profesores-map" style="height:460px;width:100%;border-radius:16px;overflow:hidden;"></div>
+  </div>
+
+  <!-- Cards -->
+  <div class="container py-xl">
+    <div class="pmap__cards" id="pmap-cards"></div>
+  </div>
+
+</div>
+
+<style>
+  .profesores-map-section {
+    background: #16254c;
+    padding-bottom: 60px;
+  }
+  .pmap__legend {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    width: fit-content;
+    background: #ffffff;
+    padding: 14px 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    margin-bottom: 24px;
+  }
+  .pmap__legend-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .pmap__legend-label {
+    font-size: 14px;
+    color: #16254c;
+    font-weight: 500;
+  }
+  .leaflet-popup-content-wrapper {
+    border-radius: 12px;
+    border-top: 4px solid #D4AF37;
+    padding: 4px;
+  }
+  .leaflet-popup-content { margin: 20px 24px; }
+  .pmap-popup__name {
+    font-size: 17px;
+    font-weight: 700;
+    color: #16254c;
+    margin-bottom: 2px;
+  }
+  .pmap-popup__city { font-size: 13px; color: #888; }
+  .pmap-popup__divider { border: none; border-top: 1px solid #eee; margin: 14px 0; }
+  .pmap-popup__label { font-weight: 700; font-size: 13px; color: #16254c; }
+  .pmap-popup__row { font-size: 13px; margin-bottom: 10px; color: #444; }
+  .pmap-popup__skills { font-size: 13px; color: #444; margin-bottom: 16px; line-height: 1.5; }
+  .pmap-popup__btn {
+    display: block;
+    background: #D4AF37;
+    color: #fff !important;
+    text-align: center;
+    padding: 10px 14px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-decoration: none;
+    margin-top: 4px;
+  }
+  .pmap-popup__btn:hover { background: #B8960C; }
+
+  /* Cards */
+  .pmap__cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 20px;
+  }
+  .pmap__card {
+    background: #fff;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    display: flex;
+    flex-direction: column;
+  }
+  .pmap__card-header {
+    background: #D4AF37;
+    height: 6px;
+  }
+  .pmap__card-body {
+    padding: 24px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  .pmap__card-avatar {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: #f0ece0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    margin-bottom: 14px;
+    overflow: hidden;
+  }
+  .pmap__card-avatar img { width: 100%; height: 100%; object-fit: cover; }
+  .pmap__card-name {
+    font-size: 18px;
+    font-weight: 700;
+    color: #16254c;
+    margin-bottom: 4px;
+  }
+  .pmap__card-city {
+    font-size: 13px;
+    color: #888;
+    margin-bottom: 12px;
+  }
+  .pmap__card-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 16px;
+    flex: 1;
+  }
+  .pmap__card-skill {
+    background: #f0ece0;
+    color: #16254c;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 20px;
+    letter-spacing: 0.04em;
+  }
+  .pmap__card-btn {
+    display: block;
+    background: #D4AF37;
+    color: #fff !important;
+    text-align: center;
+    padding: 11px 14px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-decoration: none;
+    margin-top: auto;
+  }
+  .pmap__card-btn:hover { background: #B8960C; }
+</style>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+
+  var map = L.map('profesores-map', { scrollWheelZoom: false });
+
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>',
+    subdomains: 'abcd',
+    maxZoom: 19
+  }).addTo(map);
+
+  function makePin() {
+    var size = 32;
+    var svg = '<svg width="'+size+'" height="'+(size*1.4)+'" viewBox="0 0 32 44" xmlns="http://www.w3.org/2000/svg">'
+      + '<path d="M16 0C7.163 0 0 7.163 0 16c0 10 16 28 16 28S32 26 32 16C32 7.163 24.837 0 16 0z" fill="#D4AF37" stroke="#B8960C" stroke-width="1.5"/>'
+      + '<circle cx="16" cy="16" r="6" fill="white"/>'
+      + '</svg>';
+    return L.divIcon({
+      className: '',
+      html: svg,
+      iconSize:   [size, size*1.4],
+      iconAnchor: [size/2, size*1.4],
+      popupAnchor:[0, -(size*1.4)]
+    });
+  }
+
+  var profesores = [
+    {
+      name: 'Govindaramandnda',
+      city: 'Madrid',
+      lat: 40.4168,
+      lng: -3.7038,
+      skills: ['Atma Kriya Yoga', 'Meditación', 'Kirtan'],
+      telegram: 'https://t.me/'
+    }
+  ];
+
+  profesores.forEach(function(p) {
+    L.marker([p.lat, p.lng], { icon: makePin() })
+      .bindPopup(
+        '<div class="pmap-popup__name">' + p.name + '</div>' +
+        '<div class="pmap-popup__city">' + p.city + '</div>' +
+        '<hr class="pmap-popup__divider">' +
+        '<div class="pmap-popup__skills"><span class="pmap-popup__label">Especialidades:</span><br>' + p.skills.join(', ') + '</div>' +
+        (p.telegram ? '<a href="' + p.telegram + '" class="pmap-popup__btn" target="_blank" rel="noopener">CONTACTAR POR TELEGRAM</a>' : '')
+      )
+      .addTo(map);
+  });
+
+  // Fit map to Spain including Canary Islands
+  map.fitBounds([[27.4, -18.5], [43.8, 4.3]], { padding: [30, 30] });
+
+  // Render cards
+  var container = document.getElementById('pmap-cards');
+  profesores.forEach(function(p) {
+    var skillTags = p.skills.map(function(s) {
+      return '<span class="pmap__card-skill">' + s + '</span>';
+    }).join('');
+    var card = '<div class="pmap__card">'
+      + '<div class="pmap__card-header"></div>'
+      + '<div class="pmap__card-body">'
+      + '<div class="pmap__card-avatar">🙏</div>'
+      + '<div class="pmap__card-name">' + p.name + '</div>'
+      + '<div class="pmap__card-city">' + p.city + '</div>'
+      + '<div class="pmap__card-skills">' + skillTags + '</div>'
+      + (p.telegram ? '<a href="' + p.telegram + '" class="pmap__card-btn" target="_blank" rel="noopener">CONTACTAR POR TELEGRAM</a>' : '')
+      + '</div></div>';
+    container.innerHTML += card;
+  });
+
+});
+</script>
+
+{% schema %}
+{
+  "name": "Profesores Map",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Título",
+      "default": "Encuentra tu Profesor"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtítulo",
+      "default": "Descubre profesores certificados de Bhakti Marga en España"
+    }
+  ],
+  "presets": [{ "name": "Profesores Map" }]
+}
+{% endschema %}

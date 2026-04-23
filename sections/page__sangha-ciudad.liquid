@@ -1,0 +1,1323 @@
+{% liquid
+  assign city = section.settings.city_name | default: 'Nuestra Ciudad'
+  assign whatsapp_url = section.settings.whatsapp_community_url | default: '#'
+  assign contact_email = section.settings.contact_email | default: '#'
+%}
+
+<style>
+  .sc-root {
+    --sc-navy: #16254c;
+    --sc-gold: #D6BF90;
+    --sc-gold-light: #e8dcc0;
+    --sc-white: #fafaf8;
+    --sc-cream: #f4f0e8;
+    --sc-text: #1a1a18;
+    --sc-muted: #6b6b67;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── HERO ─────────────────────────────────── */
+  .sc-hero {
+    background-color: var(--sc-navy);
+    color: #fff;
+    padding: 80px 20px 60px;
+    position: relative;
+    overflow: hidden;
+  }
+  .sc-hero__bg {
+    position: absolute; inset: 0;
+    background-size: cover; background-position: center;
+    opacity: 0.25;
+  }
+  .sc-hero__overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(to top, var(--sc-navy) 0%, rgba(22,37,76,.45) 60%, rgba(22,37,76,.2) 100%);
+  }
+  .sc-hero__inner {
+    position: relative; max-width: 1200px; margin: 0 auto;
+  }
+  .sc-eyebrow {
+    font-size: 11px; letter-spacing: .2em; text-transform: uppercase;
+    font-weight: 600; margin-bottom: 14px;
+  }
+  .sc-hero__title {
+    font-size: clamp(2.4rem, 6vw, 5rem);
+    font-weight: 600; line-height: 1.05; margin-bottom: 18px;
+    letter-spacing: -.01em;
+  }
+  .sc-hero__sub {
+    font-size: 17px; line-height: 1.75; color: rgba(255,255,255,.8);
+    max-width: 560px; margin-bottom: 28px;
+  }
+  .sc-hero__ctas { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+
+  /* ── WELCOME ──────────────────────────────── */
+  .sc-welcome {
+    padding: 72px 20px;
+    background: var(--sc-white);
+  }
+  .sc-welcome__inner {
+    max-width: 1200px; margin: 0 auto;
+  }
+  .sc-welcome__lead {
+    font-size: clamp(1.1rem, 2vw, 1.3rem);
+    font-weight: 600; color: var(--sc-navy);
+    margin-bottom: 16px; line-height: 1.4; max-width: 780px;
+  }
+  .sc-welcome__lead em { font-style: italic; font-weight: 400; }
+  .sc-welcome__body {
+    font-size: 16px; line-height: 1.85; color: var(--sc-muted);
+    max-width: 720px; margin-bottom: 0;
+  }
+  .sc-section-title {
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    font-weight: 600; color: var(--sc-navy);
+    margin-bottom: 8px; line-height: 1.15;
+  }
+  .sc-section-body {
+    font-size: 16px; line-height: 1.85; color: var(--sc-muted); margin-bottom: 0;
+  }
+
+  /* ── PHOTO GRID ───────────────────────────── */
+  .sc-photos { padding: 0 20px 64px; }
+  .sc-photos__inner { max-width: 1200px; margin: 0 auto; }
+  .sc-photos__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 220px;
+    gap: 8px; border-radius: 16px; overflow: hidden;
+  }
+  .sc-photos__item {
+    overflow: hidden; background: rgba(22,37,76,.12);
+  }
+  .sc-photos__item img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .sc-photos__item--placeholder {
+    display: flex; align-items: center; justify-content: center;
+    background: rgba(22,37,76,.08);
+    font-family: monospace; font-size: 10px;
+    color: rgba(22,37,76,.3); text-align: center; line-height: 1.6;
+  }
+  @media (max-width: 640px) {
+    .sc-photos__grid { grid-template-columns: 1fr 1fr; grid-auto-rows: 150px; }
+  }
+
+  /* ── EVENTS ───────────────────────────────── */
+  .sc-events { padding: 72px 20px; background: var(--sc-cream); }
+  .sc-events__inner { max-width: 1200px; margin: 0 auto; }
+  .sc-events__header {
+    display: flex; align-items: flex-end; justify-content: space-between;
+    gap: 20px; flex-wrap: wrap; margin-bottom: 32px;
+  }
+  .sc-location-tabs { display: flex; gap: 8px; flex-wrap: wrap; }
+  .sc-tab {
+    padding: 7px 18px; border-radius: 999px; font-size: 12px; font-weight: 500;
+    letter-spacing: .06em; cursor: pointer; border: 1.5px solid transparent;
+    transition: all .18s; background: #fff; color: var(--sc-muted);
+  }
+  .sc-tab--active { background: var(--sc-navy); color: #fff; }
+  .sc-tab:hover:not(.sc-tab--active) { border-color: var(--sc-navy); color: var(--sc-navy); }
+  .sc-events__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  @media (max-width: 900px) { .sc-events__grid { grid-template-columns: repeat(2,1fr); } }
+  @media (max-width: 560px) { .sc-events__grid { grid-template-columns: 1fr; } }
+
+  .sc-event-card {
+    background: #fff; border-radius: 14px; overflow: hidden;
+    display: flex; flex-direction: column;
+    transition: transform .2s, box-shadow .2s;
+  }
+  .sc-event-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(22,37,76,.1); }
+  .sc-event-card__img {
+    aspect-ratio: 16/9; overflow: hidden;
+    background: rgba(22,37,76,.08);
+    display: flex; align-items: center; justify-content: center;
+  }
+  .sc-event-card__img img { width:100%; height:100%; object-fit:cover; display:block; }
+  .sc-event-card__img-placeholder {
+    font-family: monospace; font-size: 9px;
+    color: rgba(22,37,76,.25); text-align: center; line-height: 1.6;
+  }
+  .sc-event-card__body { padding: 18px; flex: 1; display: flex; flex-direction: column; }
+  .sc-event-card__meta {
+    display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;
+  }
+  .sc-badge {
+    display: inline-block; padding: 3px 10px; border-radius: 999px;
+    font-size: 10px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase;
+  }
+  .sc-badge--meditacion { background: #e6f4ea; color: #1e6e38; }
+  .sc-badge--satsang    { background: #fef3e2; color: #8f5c0c; }
+  .sc-badge--kirtan     { background: #fde8f0; color: #87184a; }
+  .sc-badge--ceremonia  { background: #e8edf8; color: #1a3870; }
+  .sc-badge--yoga       { background: #f0e8f8; color: #581d8a; }
+  .sc-badge--bhakti     { background: #f8ece8; color: #8a2b1d; }
+  .sc-badge--default    { background: rgba(22,37,76,.08); color: var(--sc-navy); }
+  .sc-event-card__date { font-size: 12px; color: var(--sc-muted); }
+  .sc-event-card__title {
+    font-size: 1.15rem; font-weight: 600; color: var(--sc-navy);
+    margin-bottom: 6px; line-height: 1.3;
+  }
+  .sc-event-card__loc {
+    font-size: 12px; color: var(--sc-muted); margin-bottom: 14px;
+  }
+  .sc-event-card__actions {
+    margin-top: auto; display: flex; gap: 8px; flex-wrap: wrap;
+  }
+
+  /* ── BUTTONS ──────────────────────────────── */
+  .sc-btn {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: .7rem 1.6rem; border-radius: 999px;
+    font-size: 13px; font-weight: 500; letter-spacing: .07em; text-transform: uppercase;
+    text-decoration: none; cursor: pointer; transition: opacity .18s, transform .15s;
+    border: none; line-height: 1;
+  }
+  .sc-btn:hover { opacity: .82; transform: translateY(-1px); }
+  .sc-btn--sm { padding: .5rem 1.1rem; font-size: 11px; }
+  .sc-btn--gold { background: var(--sc-gold); color: var(--sc-navy); }
+  .sc-btn--navy { background: var(--sc-navy); color: #fff; }
+  .sc-btn--white { background: #fff; color: var(--sc-navy); }
+  .sc-btn--outline { background: transparent; color: var(--sc-navy); border: 1.5px solid var(--sc-navy); }
+  .sc-btn--outline-white { background: transparent; color: #fff; border: 1.5px solid rgba(255,255,255,.55); }
+  .sc-btn--whatsapp { background: #25D366; color: #fff; }
+  .sc-btn--email { background: #1a1a18; color: #fff; }
+
+  /* ── INFO CARDS (OM / AKY) ────────────────── */
+  .sc-info { padding: 72px 20px; background: var(--sc-white); }
+  .sc-info__inner { max-width: 1200px; margin: 0 auto; }
+  .sc-info__header { margin-bottom: 36px; }
+  .sc-info__grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
+  @media (max-width: 860px) { .sc-info__grid { grid-template-columns: 1fr; } }
+  .sc-info-card {
+    background: var(--sc-cream); border-radius: 16px; padding: 32px 28px;
+    transition: transform .2s;
+  }
+  .sc-info-card:hover { transform: translateY(-3px); }
+  .sc-info-card__icon { font-size: 1.8rem; margin-bottom: 14px; }
+  .sc-info-card__title {
+    font-size: 1.1rem; font-weight: 600; color: var(--sc-navy);
+    margin-bottom: 10px; line-height: 1.3;
+  }
+  .sc-info-card__body { font-size: 14px; line-height: 1.75; color: var(--sc-muted); }
+
+  /* ── COUNTDOWN ────────────────────────────── */
+  .sc-countdown {
+    background: var(--sc-navy); color: #fff;
+    padding: 72px 20px; text-align: center;
+  }
+  .sc-countdown__inner { max-width: 800px; margin: 0 auto; }
+  .sc-countdown__timer {
+    display: flex; justify-content: center; gap: 32px;
+    margin: 40px 0; flex-wrap: wrap;
+  }
+  .sc-countdown__unit { text-align: center; }
+  .sc-countdown__num {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: 700; line-height: 1; color: var(--sc-gold);
+    display: block;
+  }
+  .sc-countdown__label {
+    font-size: 10px; letter-spacing: .18em; text-transform: uppercase;
+    color: rgba(255,255,255,.5); margin-top: 6px;
+  }
+
+  /* ── MONKS ────────────────────────────────── */
+  .sc-monks { padding: 72px 20px; background: var(--sc-cream); }
+  .sc-monks__inner { max-width: 1200px; margin: 0 auto; }
+  .sc-monks__grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 48px; margin-top: 40px; }
+  @media (max-width: 720px) { .sc-monks__grid { grid-template-columns: 1fr; gap: 32px; } }
+  .sc-monk {
+    display: grid; grid-template-columns: 110px 1fr; gap: 24px; align-items: start;
+  }
+  @media (max-width: 400px) { .sc-monk { grid-template-columns: 1fr; } }
+  .sc-monk__photo {
+    width: 110px; height: 110px; border-radius: 50%; overflow: hidden;
+    background: rgba(22,37,76,.1); flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .sc-monk__photo img { width:100%; height:100%; object-fit:cover; }
+  .sc-monk__photo-placeholder {
+    font-family: monospace; font-size: 9px;
+    color: rgba(22,37,76,.3); text-align: center; line-height: 1.6;
+  }
+  .sc-monk__role {
+    font-size: 10px; letter-spacing: .16em; text-transform: uppercase;
+    color: var(--sc-gold); font-weight: 600; margin-bottom: 4px;
+  }
+  .sc-monk__name {
+    font-size: 1.35rem; font-weight: 600; color: var(--sc-navy);
+    margin-bottom: 10px; line-height: 1.2;
+  }
+  .sc-monk__bio { font-size: 14px; line-height: 1.75; color: var(--sc-muted); margin-bottom: 12px; }
+  .sc-monk__links { display: flex; gap: 12px; flex-wrap: wrap; }
+  .sc-monk__link {
+    font-size: 11px; letter-spacing: .08em; text-transform: uppercase;
+    color: var(--sc-navy); text-decoration: none; font-weight: 600;
+    display: flex; align-items: center; gap: 4px;
+    border-bottom: 1px solid rgba(22,37,76,.25); padding-bottom: 1px;
+    transition: border-color .15s;
+  }
+  .sc-monk__link:hover { border-color: var(--sc-navy); }
+
+  /* ── CONTACT ──────────────────────────────── */
+  .sc-contact { padding: 72px 20px; background: var(--sc-white); }
+  .sc-contact__inner { max-width: 680px; margin: 0 auto; text-align: center; }
+  .sc-contact__form {
+    background: var(--sc-cream); border-radius: 20px;
+    padding: 40px 36px; margin-top: 32px; text-align: left;
+  }
+  @media (max-width: 560px) { .sc-contact__form { padding: 28px 20px; } }
+  .sc-contact__row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  @media (max-width: 560px) { .sc-contact__row { grid-template-columns: 1fr; } }
+  .sc-field { margin-bottom: 16px; }
+  .sc-label {
+    display: block; font-size: 11px; letter-spacing: .1em;
+    text-transform: uppercase; color: var(--sc-muted); font-weight: 500; margin-bottom: 6px;
+  }
+  .sc-input {
+    width: 100%; padding: .75rem 1rem; border-radius: 10px;
+    border: 1.5px solid rgba(22,37,76,.15); font-size: 15px;
+    font-family: inherit; color: var(--sc-text); background: #fff;
+    transition: border-color .18s;
+  }
+  .sc-input:focus { outline: none; border-color: var(--sc-navy); }
+  textarea.sc-input { resize: vertical; min-height: 100px; }
+  .sc-contact__note {
+    font-size: 12px; color: var(--sc-muted); text-align: center; margin-top: 12px; line-height: 1.6;
+  }
+
+  /* ── FLOATING CTAs ────────────────────────── */
+  .sc-floating {
+    position: fixed; right: 20px; bottom: 24px;
+    display: flex; flex-direction: column; gap: 10px; z-index: 999;
+  }
+  .sc-floating__btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 12px 18px; border-radius: 999px;
+    font-size: 13px; font-weight: 600; color: #fff;
+    text-decoration: none; box-shadow: 0 8px 24px rgba(0,0,0,.18);
+    transition: transform .2s, box-shadow .2s;
+  }
+  .sc-floating__btn:hover { transform: translateY(-2px); box-shadow: 0 14px 30px rgba(0,0,0,.22); }
+  .sc-floating__btn--wa { background: #25D366; }
+  .sc-floating__btn--email { background: var(--sc-navy); }
+
+  /* ── DIVIDER ──────────────────────────────── */
+  .sc-divider {
+    max-width: 1200px; margin: 0 auto 0; padding: 0 20px;
+    border: none; border-top: 1px solid rgba(22,37,76,.1);
+  }
+
+  /* ── JOIN CTA STRIP ───────────────────────── */
+  .sc-join-strip {
+    background: var(--sc-gold); padding: 20px; text-align: center;
+  }
+  .sc-join-strip p {
+    font-size: 15px; color: var(--sc-navy); font-weight: 500; margin-bottom: 12px;
+  }
+</style>
+
+<div class="sc-root">
+
+  {%- comment -%}════════════════ HERO ════════════════{%- endcomment -%}
+  <section class="sc-hero">
+    {% if section.settings.hero_image != blank %}
+      <div class="sc-hero__bg" style="background-image: url('{{ section.settings.hero_image | image_url: width: 1600 }}');"></div>
+    {% endif %}
+    <div class="sc-hero__overlay"></div>
+    <div class="sc-hero__inner">
+      <p class="sc-eyebrow" style="color: var(--sc-gold);">Bhakti Marga · Comunidad</p>
+      <h1 class="sc-hero__title">Comunidad {{ city }}</h1>
+      <p class="sc-hero__sub">{{ section.settings.hero_subtitle }}</p>
+      <div class="sc-hero__ctas">
+        <a href="#sc-eventos" class="sc-btn sc-btn--gold">{{ section.settings.hero_cta_label | default: 'Encontrar una Reunión Cerca de Mí' }}</a>
+        <a href="#sc-contacto" class="sc-btn sc-btn--outline-white">{{ section.settings.hero_cta2_label | default: 'Contáctanos' }}</a>
+      </div>
+    </div>
+  </section>
+
+  {%- comment -%}════════════════ WELCOME ════════════════{%- endcomment -%}
+  <section class="sc-welcome">
+    <div class="sc-welcome__inner">
+      <p class="sc-welcome__lead">
+        <strong>{{ section.settings.welcome_headline | default: 'No importa en qué punto de tu camino espiritual estés,' }}</strong>
+        <em> {{ section.settings.welcome_subheadline | default: 'eres bienvenido aquí.' }}</em>
+      </p>
+      <div class="sc-welcome__body">{{ section.settings.welcome_body }}</div>
+    </div>
+  </section>
+
+  {%- comment -%}════════════════ PHOTO GRID ════════════════{%- endcomment -%}
+  {%- assign photo_blocks = section.blocks | where: 'type', 'photo' -%}
+  {% if photo_blocks.size > 0 %}
+    <div class="sc-photos">
+      <div class="sc-photos__inner">
+        <div class="sc-photos__grid">
+          {% for block in photo_blocks %}
+            <div class="sc-photos__item" {{ block.shopify_attributes }}>
+              {% if block.settings.image != blank %}
+                {% render 'lazy-image',
+                  image: block.settings.image,
+                  img_classes: 'w-full h-full object-cover'
+                %}
+              {% else %}
+                <div class="sc-photos__item--placeholder">foto<br>comunidad</div>
+              {% endif %}
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  {% endif %}
+
+  {%- comment -%}════════════════ EVENTS ════════════════{%- endcomment -%}
+  {%- assign event_blocks = section.blocks | where: 'type', 'event' -%}
+  {%- assign location_blocks = section.blocks | where: 'type', 'location' -%}
+  <section class="sc-events" id="sc-eventos">
+    <div class="sc-events__inner">
+      <div class="sc-events__header">
+        <div>
+          <p class="sc-eyebrow" style="color:var(--sc-gold);">{{ section.settings.events_eyebrow | default: 'Próximas Reuniones' }}</p>
+          <h2 class="sc-section-title">{{ section.settings.events_title | default: 'Encuentra Reuniones Cerca de Ti' }}</h2>
+          {% if section.settings.events_subtitle != blank %}
+            <p class="sc-section-body" style="margin-top:6px;max-width:560px;">{{ section.settings.events_subtitle }}</p>
+          {% endif %}
+        </div>
+        {% if location_blocks.size > 0 %}
+          <div class="sc-location-tabs">
+            <button class="sc-tab sc-tab--active" onclick="scFilterEvents(this,'all')">
+              {{ section.settings.tab_all_label | default: 'Ver Todas las Ubicaciones' }}
+            </button>
+            {% for block in location_blocks %}
+              <button class="sc-tab" onclick="scFilterEvents(this,'{{ block.settings.location_key }}')" {{ block.shopify_attributes }}>
+                {{ block.settings.location_name }}
+              </button>
+            {% endfor %}
+          </div>
+        {% endif %}
+      </div>
+
+      <div class="sc-events__grid" id="sc-events-grid">
+        {% for block in event_blocks %}
+          {%- assign badge_class = 'sc-badge--default' -%}
+          {%- assign cat_lower = block.settings.category | downcase -%}
+          {%- if cat_lower contains 'medit' -%}{%- assign badge_class = 'sc-badge--meditacion' -%}
+          {%- elsif cat_lower contains 'satsang' -%}{%- assign badge_class = 'sc-badge--satsang' -%}
+          {%- elsif cat_lower contains 'kirtan' -%}{%- assign badge_class = 'sc-badge--kirtan' -%}
+          {%- elsif cat_lower contains 'ceremon' or cat_lower contains 'yajna' or cat_lower contains 'puja' -%}{%- assign badge_class = 'sc-badge--ceremonia' -%}
+          {%- elsif cat_lower contains 'yoga' or cat_lower contains 'kriya' -%}{%- assign badge_class = 'sc-badge--yoga' -%}
+          {%- elsif cat_lower contains 'bhakti' or cat_lower contains 'noche' -%}{%- assign badge_class = 'sc-badge--bhakti' -%}
+          {%- endif -%}
+          <div class="sc-event-card" data-location="{{ block.settings.location_key }}" {{ block.shopify_attributes }}>
+            <div class="sc-event-card__img">
+              {% if block.settings.image != blank %}
+                {% render 'lazy-image', image: block.settings.image, img_classes: 'w-full h-full object-cover' %}
+              {% else %}
+                <div class="sc-event-card__img-placeholder">imagen<br>evento</div>
+              {% endif %}
+            </div>
+            <div class="sc-event-card__body">
+              <div class="sc-event-card__meta">
+                {% if block.settings.category != blank %}
+                  <span class="sc-badge {{ badge_class }}">{{ block.settings.category }}</span>
+                {% endif %}
+                {% if block.settings.date != blank %}
+                  <span class="sc-event-card__date">{{ block.settings.date }}</span>
+                {% endif %}
+              </div>
+              <h3 class="sc-event-card__title">{{ block.settings.title }}</h3>
+              {% if block.settings.location != blank %}
+                <p class="sc-event-card__loc">📍 {{ block.settings.location }}</p>
+              {% endif %}
+              <div class="sc-event-card__actions">
+                {% if block.settings.cta1_label != blank %}
+                  {%- assign cta1_style = 'sc-btn--gold' -%}
+                  {%- if block.settings.cta1_style == 'whatsapp' -%}{%- assign cta1_style = 'sc-btn--whatsapp' -%}{%- endif -%}
+                  {%- if block.settings.cta1_style == 'email' -%}{%- assign cta1_style = 'sc-btn--email' -%}{%- endif -%}
+                  {%- if block.settings.cta1_style == 'outline' -%}{%- assign cta1_style = 'sc-btn--outline' -%}{%- endif -%}
+                  <a href="{{ block.settings.cta1_url }}" class="sc-btn sc-btn--sm {{ cta1_style }}" target="_blank">{{ block.settings.cta1_label }}</a>
+                {% endif %}
+                {% if block.settings.cta2_label != blank %}
+                  {%- assign cta2_style = 'sc-btn--outline' -%}
+                  {%- if block.settings.cta2_style == 'whatsapp' -%}{%- assign cta2_style = 'sc-btn--whatsapp' -%}{%- endif -%}
+                  {%- if block.settings.cta2_style == 'email' -%}{%- assign cta2_style = 'sc-btn--email' -%}{%- endif -%}
+                  <a href="{{ block.settings.cta2_url }}" class="sc-btn sc-btn--sm {{ cta2_style }}" target="_blank">{{ block.settings.cta2_label }}</a>
+                {% endif %}
+                {% if block.settings.show_calendar %}
+                  <a href="#" class="sc-btn sc-btn--sm sc-btn--outline" onclick="scAddToCalendar(event,'{{ block.settings.title | escape }}','{{ block.settings.date | escape }}','{{ block.settings.location | escape }}')">+ Calendario</a>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        {% else %}
+          <p style="color:var(--sc-muted);font-size:15px;grid-column:1/-1;">
+            No hay eventos configurados aún. Añade bloques de tipo "Evento" desde el editor de Shopify.
+          </p>
+        {% endfor %}
+      </div>
+
+      {% if whatsapp_url != '#' %}
+        <div style="text-align:center;margin-top:40px;">
+          <a href="{{ whatsapp_url }}" class="sc-btn sc-btn--whatsapp" target="_blank">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            {{ section.settings.whatsapp_join_label | default: 'Unirte a la Comunidad' }}
+          </a>
+        </div>
+      {% endif %}
+    </div>
+  </section>
+
+  {%- comment -%}════════════════ OM CHANTING ════════════════{%- endcomment -%}
+  {% if section.settings.show_omc %}
+    {%- assign omc_blocks = section.blocks | where: 'type', 'omc_card' -%}
+    <section class="sc-info">
+      <div class="sc-info__inner">
+        <div class="sc-info__header">
+          <p class="sc-eyebrow" style="color:var(--sc-gold);">{{ section.settings.omc_eyebrow | default: 'EL PODER DEL OM CHANTING' }}</p>
+          <h2 class="sc-section-title">{{ section.settings.omc_title | default: 'OM Chanting' }}</h2>
+          {% if section.settings.omc_body != blank %}
+            <p class="sc-section-body" style="margin-top:10px;max-width:680px;">{{ section.settings.omc_body }}</p>
+          {% endif %}
+        </div>
+        <div class="sc-info__grid">
+          {% for block in omc_blocks %}
+            <div class="sc-info-card" {{ block.shopify_attributes }}>
+              {% if block.settings.icon != blank %}
+                <div class="sc-info-card__icon">{{ block.settings.icon }}</div>
+              {% endif %}
+              <h3 class="sc-info-card__title">{{ block.settings.title }}</h3>
+              <p class="sc-info-card__body">{{ block.settings.body }}</p>
+            </div>
+          {% else %}
+            <div class="sc-info-card">
+              <div class="sc-info-card__icon">✨</div>
+              <h3 class="sc-info-card__title">Enhance Well-Being</h3>
+              <p class="sc-info-card__body">OM Chanting promotes inner peace, mental clarity, emotional freedom, and physical health.</p>
+            </div>
+            <div class="sc-info-card">
+              <div class="sc-info-card__icon">🌀</div>
+              <h3 class="sc-info-card__title">Transforms Negativity</h3>
+              <p class="sc-info-card__body">OM Chanting generates a vibrational frequency that releases negativity and showers participants with positive energy.</p>
+            </div>
+            <div class="sc-info-card">
+              <div class="sc-info-card__icon">🌿</div>
+              <h3 class="sc-info-card__title">Purify the Environment</h3>
+              <p class="sc-info-card__body">The vibrational waves created by OM Chanting spread within a 2-kilometer radius, creating harmony and peace.</p>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+  {% endif %}
+
+  {%- comment -%}════════════════ ATMA KRIYA YOGA ════════════════{%- endcomment -%}
+  {% if section.settings.show_aky %}
+    {%- assign aky_blocks = section.blocks | where: 'type', 'aky_card' -%}
+    <section class="sc-info" style="background:var(--sc-cream);">
+      <div class="sc-info__inner">
+        <div class="sc-info__header">
+          <p class="sc-eyebrow" style="color:var(--sc-gold);">{{ section.settings.aky_eyebrow | default: 'ATMA KRIYA YOGA' }}</p>
+          <h2 class="sc-section-title">{{ section.settings.aky_title | default: 'Una Práctica Milenaria' }}</h2>
+          {% if section.settings.aky_body != blank %}
+            <p class="sc-section-body" style="margin-top:10px;max-width:680px;">{{ section.settings.aky_body }}</p>
+          {% endif %}
+          {% if section.settings.aky_cta_label != blank %}
+            <a href="{{ section.settings.aky_cta_url | default: '#sc-contacto' }}" class="sc-btn sc-btn--navy" style="margin-top:20px;display:inline-flex;">{{ section.settings.aky_cta_label }}</a>
+          {% endif %}
+        </div>
+        <div class="sc-info__grid">
+          {% for block in aky_blocks %}
+            <div class="sc-info-card" {{ block.shopify_attributes }}>
+              {% if block.settings.icon != blank %}
+                <div class="sc-info-card__icon">{{ block.settings.icon }}</div>
+              {% endif %}
+              <h3 class="sc-info-card__title">{{ block.settings.title }}</h3>
+              <p class="sc-info-card__body">{{ block.settings.body }}</p>
+            </div>
+          {% else %}
+            <div class="sc-info-card">
+              <div class="sc-info-card__icon">💛</div>
+              <h3 class="sc-info-card__title">Awaken Divine Love</h3>
+              <p class="sc-info-card__body">Atma Kriya Yoga is a sacred practice revealed by Paramahamsa Vishwananda to awaken Divine love within the heart.</p>
+            </div>
+            <div class="sc-info-card">
+              <div class="sc-info-card__icon">🔥</div>
+              <h3 class="sc-info-card__title">Transform from Within</h3>
+              <p class="sc-info-card__body">Through breath, mantra, meditation, and devotion, Atma Kriya Yoga supports inner purification and spiritual transformation.</p>
+            </div>
+            <div class="sc-info-card">
+              <div class="sc-info-card__icon">🕊</div>
+              <h3 class="sc-info-card__title">A Practice for Daily Life</h3>
+              <p class="sc-info-card__body">Simple yet profound, Atma Kriya Yoga can be practiced daily and integrated into modern life.</p>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+  {% endif %}
+
+  {%- comment -%}════════════════ COUNTDOWN ════════════════{%- endcomment -%}
+  {% if section.settings.show_countdown and section.settings.countdown_date != blank %}
+    <section class="sc-countdown">
+      <div class="sc-countdown__inner">
+        {% if section.settings.countdown_eyebrow != blank %}
+          <p class="sc-eyebrow" style="color:var(--sc-gold);text-align:center;margin-bottom:16px;">{{ section.settings.countdown_eyebrow }}</p>
+        {% endif %}
+        <h2 class="sc-section-title" style="color:#fff;">{{ section.settings.countdown_title | default: 'Se Acerca una Visita Especial' }}</h2>
+        {% if section.settings.countdown_body != blank %}
+          <p style="font-size:16px;line-height:1.75;color:rgba(255,255,255,.7);max-width:600px;margin:14px auto 0;">{{ section.settings.countdown_body }}</p>
+        {% endif %}
+        <div class="sc-countdown__timer" id="sc-countdown-timer">
+          <div class="sc-countdown__unit"><span class="sc-countdown__num" id="sc-days">00</span><div class="sc-countdown__label">Days</div></div>
+          <div class="sc-countdown__unit"><span class="sc-countdown__num" id="sc-hours">00</span><div class="sc-countdown__label">Hours</div></div>
+          <div class="sc-countdown__unit"><span class="sc-countdown__num" id="sc-mins">00</span><div class="sc-countdown__label">Mins</div></div>
+          <div class="sc-countdown__unit"><span class="sc-countdown__num" id="sc-secs">00</span><div class="sc-countdown__label">Secs</div></div>
+        </div>
+        {% if section.settings.countdown_cta_label != blank %}
+          <a href="{{ section.settings.countdown_cta_url | default: '#' }}" class="sc-btn sc-btn--gold" target="_blank">{{ section.settings.countdown_cta_label }}</a>
+        {% endif %}
+      </div>
+    </section>
+  {% endif %}
+
+  {%- comment -%}════════════════ MONKS ════════════════{%- endcomment -%}
+  {% if section.settings.show_monks %}
+    {%- assign monk_blocks = section.blocks | where: 'type', 'monk' -%}
+    {% if monk_blocks.size > 0 %}
+      <section class="sc-monks">
+        <div class="sc-monks__inner">
+          <p class="sc-eyebrow" style="color:var(--sc-gold);">{{ section.settings.monks_eyebrow | default: 'Conoce a los Monjes' }}</p>
+          <h2 class="sc-section-title">{{ section.settings.monks_title | default: 'Swamis & Rishis que visitan ' | append: city }}</h2>
+          {% if section.settings.monks_body != blank %}
+            <p class="sc-section-body" style="margin-top:10px;max-width:640px;">{{ section.settings.monks_body }}</p>
+          {% endif %}
+          <div class="sc-monks__grid">
+            {% for block in monk_blocks %}
+              <div class="sc-monk" {{ block.shopify_attributes }}>
+                <div class="sc-monk__photo">
+                  {% if block.settings.image != blank %}
+                    {% render 'lazy-image', image: block.settings.image, img_classes: 'w-full h-full object-cover' %}
+                  {% else %}
+                    <div class="sc-monk__photo-placeholder">foto</div>
+                  {% endif %}
+                </div>
+                <div>
+                  {% if block.settings.role != blank %}
+                    <p class="sc-monk__role">{{ block.settings.role }}</p>
+                  {% endif %}
+                  <h3 class="sc-monk__name">{{ block.settings.name }}</h3>
+                  {% if block.settings.subtitle != blank %}
+                    <p style="font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--sc-gold);font-weight:600;margin-bottom:8px;">{{ block.settings.subtitle }}</p>
+                  {% endif %}
+                  {% if block.settings.bio != blank %}
+                    <p class="sc-monk__bio">{{ block.settings.bio }}</p>
+                  {% endif %}
+                  <div class="sc-monk__links">
+                    {% if block.settings.instagram_url != blank %}
+                      <a href="{{ block.settings.instagram_url }}" class="sc-monk__link" target="_blank">Instagram →</a>
+                    {% endif %}
+                    {% if block.settings.podcast_url != blank %}
+                      <a href="{{ block.settings.podcast_url }}" class="sc-monk__link" target="_blank">Podcast →</a>
+                    {% endif %}
+                    {% if block.settings.cta_label != blank and block.settings.cta_url != blank %}
+                      <a href="{{ block.settings.cta_url }}" class="sc-monk__link" target="_blank">{{ block.settings.cta_label }} →</a>
+                    {% endif %}
+                  </div>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      </section>
+    {% endif %}
+  {% endif %}
+
+  {%- comment -%}════════════════ CONTACT ════════════════{%- endcomment -%}
+  <section class="sc-contact" id="sc-contacto">
+    <div class="sc-contact__inner">
+      <p class="sc-eyebrow" style="color:var(--sc-gold);text-align:center;">{{ section.settings.contact_eyebrow | default: "Let's Connect" }}</p>
+      <h2 class="sc-section-title">{{ section.settings.contact_title | default: '¿Cómo Podemos Ayudarte?' }}</h2>
+      <p class="sc-section-body" style="margin-top:12px;">{{ section.settings.contact_body | default: '¿Tienes preguntas? ¿Quieres organizar un evento? Rellena este formulario y alguien se pondrá en contacto contigo pronto.' }}</p>
+      <div class="sc-contact__form">
+        {% form 'contact', id: 'sc-contact-form' %}
+          {% if form.posted_successfully? %}
+            <p style="color:#1e6e38;font-size:15px;text-align:center;padding:16px 0;">✓ {{ section.settings.contact_success | default: '¡Mensaje enviado! Nos pondremos en contacto pronto.' }}</p>
+          {% else %}
+            <div class="sc-contact__row">
+              <div class="sc-field">
+                <label class="sc-label" for="sc-fname">{{ section.settings.label_name | default: 'Nombre' }}</label>
+                <input type="text" id="sc-fname" name="contact[name]" class="sc-input" placeholder="{{ section.settings.placeholder_name | default: 'Tu nombre' }}" required>
+              </div>
+              <div class="sc-field">
+                <label class="sc-label" for="sc-email">{{ section.settings.label_email | default: 'Email' }}</label>
+                <input type="email" id="sc-email" name="contact[email]" class="sc-input" placeholder="{{ section.settings.placeholder_email | default: 'tu@email.com' }}" required>
+              </div>
+            </div>
+            <div class="sc-field">
+              <label class="sc-label" for="sc-msg">{{ section.settings.label_message | default: 'Mensaje' }}</label>
+              <textarea id="sc-msg" name="contact[body]" class="sc-input" placeholder="{{ section.settings.placeholder_message | default: '¿En qué podemos ayudarte?' }}"></textarea>
+            </div>
+            <button type="submit" class="sc-btn sc-btn--navy" style="width:100%;justify-content:center;">{{ section.settings.contact_submit | default: 'Enviar Mensaje' }}</button>
+            <p class="sc-contact__note">{{ section.settings.contact_note | default: 'Nunca compartiremos ni venderemos tu información.' }}</p>
+          {% endif %}
+        {% endform %}
+      </div>
+    </div>
+  </section>
+
+</div><!-- /sc-root -->
+
+{%- comment -%}════════════════ FLOATING CTAs ════════════════{%- endcomment -%}
+{% if section.settings.floating_whatsapp_url != blank or section.settings.floating_email_url != blank %}
+  <div class="sc-floating">
+    {% if section.settings.floating_whatsapp_url != blank %}
+      <a href="{{ section.settings.floating_whatsapp_url }}" class="sc-floating__btn sc-floating__btn--wa" target="_blank" rel="noopener">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        {{ section.settings.floating_whatsapp_label | default: 'Unirse por WhatsApp' }}
+      </a>
+    {% endif %}
+    {% if section.settings.floating_email_url != blank %}
+      <a href="{{ section.settings.floating_email_url }}" class="sc-floating__btn sc-floating__btn--email">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+        {{ section.settings.floating_email_label | default: 'Enviar un Email' }}
+      </a>
+    {% endif %}
+  </div>
+{% endif %}
+
+<script>
+  // ── Location filter ──────────────────────────
+  function scFilterEvents(btn, location) {
+    document.querySelectorAll('.sc-tab').forEach(b => b.classList.remove('sc-tab--active'));
+    btn.classList.add('sc-tab--active');
+    document.querySelectorAll('.sc-event-card').forEach(card => {
+      const show = location === 'all' || !card.dataset.location || card.dataset.location === location;
+      card.style.display = show ? 'flex' : 'none';
+    });
+  }
+
+  // ── Countdown timer ──────────────────────────
+  (function() {
+    var targetDate = '{{ section.settings.countdown_date }}';
+    if (!targetDate) return;
+    var target = new Date(targetDate).getTime();
+    function tick() {
+      var now = Date.now();
+      var diff = target - now;
+      if (diff <= 0) diff = 0;
+      var d = Math.floor(diff / 86400000);
+      var h = Math.floor((diff % 86400000) / 3600000);
+      var m = Math.floor((diff % 3600000) / 60000);
+      var s = Math.floor((diff % 60000) / 1000);
+      function pad(n) { return String(n).padStart(2,'0'); }
+      var dEl = document.getElementById('sc-days');
+      var hEl = document.getElementById('sc-hours');
+      var mEl = document.getElementById('sc-mins');
+      var sEl = document.getElementById('sc-secs');
+      if (dEl) dEl.textContent = pad(d);
+      if (hEl) hEl.textContent = pad(h);
+      if (mEl) mEl.textContent = pad(m);
+      if (sEl) sEl.textContent = pad(s);
+    }
+    tick();
+    setInterval(tick, 1000);
+  })();
+
+  // ── Add to Calendar (basic .ics) ─────────────
+  function scAddToCalendar(e, title, dateStr, location) {
+    e.preventDefault();
+    var now = new Date().toISOString().replace(/[-:]/g,'').split('.')[0]+'Z';
+    var ics = [
+      'BEGIN:VCALENDAR','VERSION:2.0','BEGIN:VEVENT',
+      'SUMMARY:' + title,
+      'DTSTART:' + now,
+      'LOCATION:' + location,
+      'END:VEVENT','END:VCALENDAR'
+    ].join('\r\n');
+    var blob = new Blob([ics], {type:'text/calendar'});
+    var a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = 'event.ics';
+    a.click();
+  }
+</script>
+
+{% schema %}
+{
+  "name": "Sangha Ciudad",
+  "tag": "section",
+  "class": "sangha-ciudad-section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "🏙 Ciudad"
+    },
+    {
+      "type": "text",
+      "id": "city_name",
+      "label": "Nombre de la Ciudad",
+      "default": "Colorado"
+    },
+    {
+      "type": "header",
+      "content": "🖼 Hero"
+    },
+    {
+      "type": "image_picker",
+      "id": "hero_image",
+      "label": "Imagen de Fondo (Hero)"
+    },
+    {
+      "type": "textarea",
+      "id": "hero_subtitle",
+      "label": "Subtítulo del Hero",
+      "default": "Connect with likeminded souls, find events, and get in touch with your local Bhakti Marga community."
+    },
+    {
+      "type": "text",
+      "id": "hero_cta_label",
+      "label": "Botón 1 – Texto",
+      "default": "Encontrar una Reunión Cerca de Mí"
+    },
+    {
+      "type": "text",
+      "id": "hero_cta2_label",
+      "label": "Botón 2 – Texto",
+      "default": "Contáctanos"
+    },
+    {
+      "type": "header",
+      "content": "👋 Bienvenida"
+    },
+    {
+      "type": "text",
+      "id": "welcome_headline",
+      "label": "Titular de Bienvenida",
+      "default": "No importa en qué punto de tu camino espiritual estés,"
+    },
+    {
+      "type": "text",
+      "id": "welcome_subheadline",
+      "label": "Subtitular (en cursiva)",
+      "default": "eres bienvenido aquí."
+    },
+    {
+      "type": "richtext",
+      "id": "welcome_body",
+      "label": "Texto de Bienvenida"
+    },
+    {
+      "type": "header",
+      "content": "📅 Sección de Eventos"
+    },
+    {
+      "type": "text",
+      "id": "events_eyebrow",
+      "label": "Eyebrow de Eventos",
+      "default": "Encuentra Reuniones Cerca de Ti"
+    },
+    {
+      "type": "text",
+      "id": "events_title",
+      "label": "Título de Eventos",
+      "default": "Explora las reuniones locales de Bhakti Marga. Todos son bienvenidos."
+    },
+    {
+      "type": "textarea",
+      "id": "events_subtitle",
+      "label": "Subtítulo de Eventos"
+    },
+    {
+      "type": "text",
+      "id": "tab_all_label",
+      "label": "Etiqueta del tab 'Ver Todos'",
+      "default": "Ver Todas las Ubicaciones"
+    },
+    {
+      "type": "url",
+      "id": "whatsapp_community_url",
+      "label": "URL de la Comunidad de WhatsApp"
+    },
+    {
+      "type": "text",
+      "id": "whatsapp_join_label",
+      "label": "Texto botón WhatsApp",
+      "default": "Join Comunidad"
+    },
+    {
+      "type": "header",
+      "content": "🕉 OM Chanting"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_omc",
+      "label": "Mostrar sección OM Chanting",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "omc_eyebrow",
+      "label": "Eyebrow",
+      "default": "EL PODER DEL OM CHANTING"
+    },
+    {
+      "type": "text",
+      "id": "omc_title",
+      "label": "Título",
+      "default": "OM Chanting"
+    },
+    {
+      "type": "textarea",
+      "id": "omc_body",
+      "label": "Descripción"
+    },
+    {
+      "type": "header",
+      "content": "🌸 Atma Kriya Yoga"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_aky",
+      "label": "Mostrar sección Atma Kriya Yoga",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "aky_eyebrow",
+      "label": "Eyebrow",
+      "default": "ATMA KRIYA YOGA"
+    },
+    {
+      "type": "text",
+      "id": "aky_title",
+      "label": "Título",
+      "default": "Una Práctica Milenaria"
+    },
+    {
+      "type": "textarea",
+      "id": "aky_body",
+      "label": "Descripción"
+    },
+    {
+      "type": "text",
+      "id": "aky_cta_label",
+      "label": "CTA – Texto",
+      "default": "Contáctanos para aprender Atma Kriya Yoga"
+    },
+    {
+      "type": "url",
+      "id": "aky_cta_url",
+      "label": "CTA – URL"
+    },
+    {
+      "type": "header",
+      "content": "⏳ Cuenta Regresiva"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_countdown",
+      "label": "Mostrar cuenta regresiva",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "countdown_eyebrow",
+      "label": "Eyebrow del countdown"
+    },
+    {
+      "type": "text",
+      "id": "countdown_title",
+      "label": "Título del countdown",
+      "default": "Paramahamsa Vishwananda is Coming!"
+    },
+    {
+      "type": "textarea",
+      "id": "countdown_body",
+      "label": "Descripción"
+    },
+    {
+      "type": "text",
+      "id": "countdown_date",
+      "label": "Fecha objetivo (ISO 8601, ej: 2026-09-01T00:00:00)"
+    },
+    {
+      "type": "text",
+      "id": "countdown_cta_label",
+      "label": "CTA – Texto"
+    },
+    {
+      "type": "url",
+      "id": "countdown_cta_url",
+      "label": "CTA – URL"
+    },
+    {
+      "type": "header",
+      "content": "🙏 Monjes / Swamis"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_monks",
+      "label": "Mostrar sección de Monjes",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "monks_eyebrow",
+      "label": "Eyebrow",
+      "default": "Conoce a los Monjes"
+    },
+    {
+      "type": "text",
+      "id": "monks_title",
+      "label": "Título",
+      "default": "Swamis & Rishis"
+    },
+    {
+      "type": "textarea",
+      "id": "monks_body",
+      "label": "Descripción"
+    },
+    {
+      "type": "header",
+      "content": "📬 Formulario de Contacto"
+    },
+    {
+      "type": "text",
+      "id": "contact_eyebrow",
+      "label": "Eyebrow",
+      "default": "Conectemos."
+    },
+    {
+      "type": "text",
+      "id": "contact_title",
+      "label": "Título",
+      "default": "¿Cómo Podemos Ayudarte?"
+    },
+    {
+      "type": "textarea",
+      "id": "contact_body",
+      "label": "Descripción"
+    },
+    {
+      "type": "text",
+      "id": "contact_submit",
+      "label": "Texto del botón Enviar",
+      "default": "ENVIAR"
+    },
+    {
+      "type": "text",
+      "id": "contact_success",
+      "label": "Mensaje de éxito"
+    },
+    {
+      "type": "text",
+      "id": "contact_note",
+      "label": "Nota de privacidad",
+      "default": "We will never share or sell your information."
+    },
+    {
+      "type": "text",
+      "id": "label_name",
+      "label": "Label – Nombre",
+      "default": "Nombre"
+    },
+    {
+      "type": "text",
+      "id": "label_email",
+      "label": "Label – Email",
+      "default": "Email"
+    },
+    {
+      "type": "text",
+      "id": "label_message",
+      "label": "Label – Mensaje",
+      "default": "Mensaje"
+    },
+    {
+      "type": "text",
+      "id": "placeholder_name",
+      "label": "Placeholder – Nombre"
+    },
+    {
+      "type": "text",
+      "id": "placeholder_email",
+      "label": "Placeholder – Email"
+    },
+    {
+      "type": "text",
+      "id": "placeholder_message",
+      "label": "Placeholder – Mensaje"
+    },
+    {
+      "type": "header",
+      "content": "💬 Botones Flotantes"
+    },
+    {
+      "type": "url",
+      "id": "floating_whatsapp_url",
+      "label": "WhatsApp – URL"
+    },
+    {
+      "type": "text",
+      "id": "floating_whatsapp_label",
+      "label": "WhatsApp – Texto",
+      "default": "Join WhatsApp Comunidad"
+    },
+    {
+      "type": "url",
+      "id": "floating_email_url",
+      "label": "Email – URL (puede ser #sc-contacto)"
+    },
+    {
+      "type": "text",
+      "id": "floating_email_label",
+      "label": "Email – Texto",
+      "default": "Enviar un Email"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "photo",
+      "name": "📷 Foto de Comunidad",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Imagen"
+        }
+      ]
+    },
+    {
+      "type": "location",
+      "name": "📍 Filtro de Ubicación",
+      "settings": [
+        {
+          "type": "text",
+          "id": "location_name",
+          "label": "Nombre visible del tab",
+          "default": "Denver"
+        },
+        {
+          "type": "text",
+          "id": "location_key",
+          "label": "Clave interna (sin espacios, minúsculas)",
+          "default": "denver"
+        }
+      ]
+    },
+    {
+      "type": "event",
+      "name": "📅 Evento",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Imagen del Evento"
+        },
+        {
+          "type": "text",
+          "id": "category",
+          "label": "Categoría",
+          "info": "Ej: Meditation, Satsang & Kirtan, Ceremony, Yoga, Bhakti Night"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Título del Evento"
+        },
+        {
+          "type": "text",
+          "id": "date",
+          "label": "Fecha y Hora",
+          "info": "Ej: March 12 | 6:30 – 8:30 PM"
+        },
+        {
+          "type": "text",
+          "id": "location",
+          "label": "Lugar"
+        },
+        {
+          "type": "text",
+          "id": "location_key",
+          "label": "Clave de ubicación (para filtro)",
+          "info": "Debe coincidir con la clave del bloque de filtro"
+        },
+        {
+          "type": "select",
+          "id": "cta1_style",
+          "label": "Botón 1 – Estilo",
+          "options": [
+            { "value": "gold",      "label": "Dorado" },
+            { "value": "whatsapp",  "label": "WhatsApp (verde)" },
+            { "value": "outline",   "label": "Outline" },
+            { "value": "email",     "label": "Email (negro)" }
+          ],
+          "default": "gold"
+        },
+        {
+          "type": "text",
+          "id": "cta1_label",
+          "label": "Botón 1 – Texto",
+          "default": "Registrarse Aquí"
+        },
+        {
+          "type": "url",
+          "id": "cta1_url",
+          "label": "Botón 1 – URL"
+        },
+        {
+          "type": "select",
+          "id": "cta2_style",
+          "label": "Botón 2 – Estilo",
+          "options": [
+            { "value": "outline",   "label": "Outline" },
+            { "value": "whatsapp",  "label": "WhatsApp" },
+            { "value": "email",     "label": "Email" },
+            { "value": "gold",      "label": "Dorado" }
+          ],
+          "default": "outline"
+        },
+        {
+          "type": "text",
+          "id": "cta2_label",
+          "label": "Botón 2 – Texto"
+        },
+        {
+          "type": "url",
+          "id": "cta2_url",
+          "label": "Botón 2 – URL"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_calendar",
+          "label": "Mostrar botón + Calendario",
+          "default": true
+        }
+      ]
+    },
+    {
+      "type": "omc_card",
+      "name": "🕉 OM Chanting – Tarjeta",
+      "settings": [
+        {
+          "type": "text",
+          "id": "icon",
+          "label": "Emoji / Icono",
+          "default": "✨"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Título de la Tarjeta"
+        },
+        {
+          "type": "textarea",
+          "id": "body",
+          "label": "Descripción"
+        }
+      ]
+    },
+    {
+      "type": "aky_card",
+      "name": "🌸 Atma Kriya – Tarjeta",
+      "settings": [
+        {
+          "type": "text",
+          "id": "icon",
+          "label": "Emoji / Icono",
+          "default": "💛"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Título de la Tarjeta"
+        },
+        {
+          "type": "textarea",
+          "id": "body",
+          "label": "Descripción"
+        }
+      ]
+    },
+    {
+      "type": "monk",
+      "name": "🙏 Monje / Swami / Rishi",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Foto"
+        },
+        {
+          "type": "text",
+          "id": "role",
+          "label": "Rol",
+          "info": "Ej: Swami, Rishi, Rishika",
+          "default": "Swami"
+        },
+        {
+          "type": "text",
+          "id": "name",
+          "label": "Nombre"
+        },
+        {
+          "type": "text",
+          "id": "subtitle",
+          "label": "Subtítulo / Lema"
+        },
+        {
+          "type": "textarea",
+          "id": "bio",
+          "label": "Biografía"
+        },
+        {
+          "type": "url",
+          "id": "instagram_url",
+          "label": "Instagram URL"
+        },
+        {
+          "type": "url",
+          "id": "podcast_url",
+          "label": "Podcast / YouTube URL"
+        },
+        {
+          "type": "text",
+          "id": "cta_label",
+          "label": "Link adicional – Texto"
+        },
+        {
+          "type": "url",
+          "id": "cta_url",
+          "label": "Link adicional – URL"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Sangha Ciudad",
+      "blocks": [
+        { "type": "photo" },
+        { "type": "photo" },
+        { "type": "photo" },
+        { "type": "photo" },
+        { "type": "photo" },
+        { "type": "photo" },
+        { "type": "location", "settings": { "location_name": "All Cities", "location_key": "all" } },
+        { "type": "event", "settings": { "title": "Meditación OM Chanting", "category": "Meditation", "cta1_label": "Registrarse Aquí", "cta1_style": "gold" } },
+        { "type": "omc_card", "settings": { "icon": "✨", "title": "Mejora tu Bienestar", "body": "OM Chanting promotes inner peace, mental clarity, emotional freedom, and physical health." } },
+        { "type": "omc_card", "settings": { "icon": "🌀", "title": "Transforma la Negatividad", "body": "OM Chanting generates a vibrational frequency that releases negativity and showers participants with positive energy." } },
+        { "type": "omc_card", "settings": { "icon": "🌿", "title": "Purifica el Entorno", "body": "The vibrational waves created by OM Chanting spread within a 2-kilometer radius, creating harmony and peace." } },
+        { "type": "aky_card", "settings": { "icon": "💛", "title": "Despierta el Amor Divino", "body": "Atma Kriya Yoga awakens Divine love within the heart and deepens your relationship with the Divine." } },
+        { "type": "aky_card", "settings": { "icon": "🔥", "title": "Transforma desde Adentro", "body": "Through breath, mantra, meditation, and devotion, Atma Kriya Yoga supports inner purification." } },
+        { "type": "aky_card", "settings": { "icon": "🕊", "title": "Una Práctica para la Vida Cotidiana", "body": "Simple yet profound, Atma Kriya Yoga can be practiced daily and integrated into modern life." } },
+        { "type": "monk", "settings": { "role": "Swami", "name": "Swami Aniruddha", "subtitle": "Compartiendo la Transformación a través de la Devoción" } }
+      ]
+    }
+  ]
+}
+{% endschema %}
