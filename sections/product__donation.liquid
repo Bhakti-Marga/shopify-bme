@@ -71,10 +71,10 @@
         <div class="flex gap-[4px] p-[16px] border border-solid border-gray-light w-full rounded-[50px] text-16 font-600 leading-6">
           <span class="text-gray-light" js-currency-symbol>{{ cart.currency.symbol }}</span>
           <input
-            class=""
+            class="w-full bg-transparent text-black outline-none"
             type="number"
-            name=""
-            id=""
+            name="quantity"
+            id="DonationAmount"
             placeholder="{{ 1000 | money_without_currency }}"
             min="0"
             step="1"
