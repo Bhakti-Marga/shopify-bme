@@ -104,7 +104,7 @@
             {% else %}
               <button
                 class="bg-gold px-20 py-[14px] rounded-[25px] min-w-[93px] text-16 font-600 leading-6 ease-in-out"
-                data-amount="{{ variant.price | money_without_currency }}"
+                data-amount="{{ variant.price | divided_by: 100.0 }}"
                 data-name="{{ variant.title }}"
                 data-variant-id="{{ variant.id }}"
                 type="button"
