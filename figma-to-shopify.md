@@ -2,6 +2,7 @@
 > Extraído del sitemap de Figma (archivo `6tFHS9TCH3SRBhtaDUQhJ7`, sección `44:1436`)
 > Fecha: 2026-04-28
 > Última auditoría de templates: 2026-04-28
+> Última actualización con análisis Figma: 2026-04-29
 
 ---
 
@@ -38,11 +39,13 @@
 
 | Estado | Páginas |
 |--------|---------|
-| ✅ Templates confirmados (página o template existe) | ~22 |
+| ✅ Templates confirmados (página o template existe) | ~24 |
 | 🟨 Templates existen, verificar asignación en Admin | ~10 |
-| 🔴 Páginas genuinamente nuevas por construir | 7 |
+| 🔴 Páginas genuinamente nuevas por construir | 8 |
 | ⚠️ Templates en inglés que requieren revisión | 5 |
 | 🔮 Features interactivas nuevas | 2 |
+
+> Actualizado 2026-04-29: templos confirmados ✅, hub "Templos" confirmado ✅, nueva página "Adopta un deity" 🔴 descubierta.
 
 ---
 
@@ -129,15 +132,30 @@ Secciones a crear:
 
 ---
 
+### 8. Adopta un deity ⭐ NUEVO
+**URL sugerida:** `/pages/adopta-un-deity`
+**Color:** Azul marino `#002656`
+**Estado:** 🔴 No existe template — nueva concept descubierta en análisis Figma abril 2026
+
+Concepto: adopción/patrocinio de deidades como feature de donación/engagement.
+
+- [ ] Validar con stakeholders el modelo (precio, fulfillment, qué ofrece el "adoption")
+- [ ] Crear template una vez confirmadas las decisiones de negocio
+- [ ] 1 sección TBD (pendiente diseño final)
+
+> Nota: Tarjeta con cabecera azul marino, 1 sección gris "TBD". Bloquear en fase 8 hasta que se defina el modelo.
+
+---
+
 ## 🟡 PÁGINAS EXISTENTES CON SECCIONES QUE FALTAN
 
 ### Sobre Paramahamsa Vishwananda
-**Template:** ✅ `templates/page.master.json` (11 secciones)
+**Template:** ✅ `templates/page.master.json` (18 secciones total — confirmado abril 2026)
 **URL actual:** (verificar slug — asignar a página correcta en Admin)
 
-Secciones existentes ✅: Portada/intro, Misión, Amor incondicional, Fundador de BM, Cita de Guruji, Es Satguru/Kriya Yogi, Satgurus son especiales, Estadísticas, YouTube Insights from Guruji, Darshan, Síguele en Instagram, Síguele en X, Portada outro misión
+Secciones existentes ✅ (13 teal/gray): Portada/intro, Misión, Amor incondicional, Fundador de BM, Cita de Guruji, Es Satguru/Kriya Yogi, Satgurus son especiales, Estadísticas, YouTube Insights from Guruji, Darshan, Síguele en Instagram, Síguele en X, Portada outro misión
 
-**Secciones que FALTAN 🔴:**
+**Secciones que FALTAN 🔴 (5 orange en Figma):**
 - [ ] Eventos con Él (widget/lista de próximos eventos con Guruji)
 - [ ] Festivales (sección con próximos festivales)
 - [ ] Peregrinajes (sección con información de peregrinajes)
@@ -148,12 +166,23 @@ Secciones existentes ✅: Portada/intro, Misión, Amor incondicional, Fundador d
 
 ### Homepage
 **URL:** `/`
+**Total secciones Figma (confirmado abril 2026):** 12
 
-Secciones existentes ✅: Portada, Darshan, Eventos y Festivales, Encuentros locales, Cursos online, Visita un templo, Project Mantra, Rezar por el Mundo, Prácticas diarias Bhakti, Suscríbete
+Secciones existentes ✅ (10 teal):
+1. Portada: Conócele / Sobre Él *(antes "Portada")*
+2. Darshan
+3. Eventos y Festivales
+4. Encuentros locales
+5. Cursos online
+6. Visita un templo
+7. Project Mantra
+8. Rezar por el Mundo
+9. Prácticas diarias Bhakti
+10. Suscríbete
 
-**Secciones que FALTAN ⚪ (estado incierto):**
-- [ ] Nuestras creencias (icono gris — confirmar si va o no)
-- [ ] Nuestros valores (icono gris — confirmar si va o no)
+**Secciones ⚪ (estado incierto — gris en Figma, diseñadora las conserva sin decidir):**
+- [ ] Nuestras creencias (node 62:7324 — confirmar si va o no)
+- [ ] Nuestros valores (node 62:7325 — confirmar si va o no)
 
 ---
 
@@ -170,14 +199,15 @@ Secciones existentes 🩵: Yoga y meditación, Conocimiento, Rituales, Artes dev
 
 ---
 
-### Templos
+### Templos (hub)
 **URL:** `/pages/templos` (verificar)
+**Estado:** ✅ confirmada en Figma (abril 2026) — cabecera azul marino `#002656`, 3 secciones todas gray
 
 Secciones existentes ✅: Portada/intro, Templo Lanzarote: Hari Hara, Templo Málaga: Bhava Narasimha
 
-**Estado ⚪:**
-- [ ] Verificar que la portada/intro esté bien
-- [ ] Cada templo necesita su página individual (ver abajo — templates ya existen)
+**Tareas:**
+- [ ] Verificar que `/pages/templos` está publicada en Admin
+- [ ] Verificar que los links a los dos templos individuales funcionan
 
 ---
 
@@ -200,8 +230,8 @@ Estas páginas están en el sitemap con todas las secciones en teal (existen):
 | Calendario de eventos | `page.calendar.liquid` | `/calendario` | ✅ Funcional |
 | Sanghas | `page.sangha-map.liquid` | `/pages/sanghas` | ✅ Con mapa |
 | Profesores | `page.profesores.liquid` | `/pages/profesores` | ✅ Con mapa |
-| Templo Lanzarote: Hari Hara | `page.templo-hari-hara.json` | `/pages/templo-lanzarote` | 🟨 Verificar slug y asignación |
-| Templo Málaga: Bhava Narasimha | `page.templo-bhava-narasimha.json` | `/pages/templo-malaga` | 🟨 Verificar slug y asignación |
+| Templo Lanzarote: Hari Hara | `page.templo-hari-hara.json` | `/pages/templo-lanzarote` | ✅ Confirmado teal en Figma (6 secciones) — verificar slug en Admin |
+| Templo Málaga: Bhava Narasimha | `page.templo-bhava-narasimha.json` | `/pages/templo-malaga` | ✅ Confirmado teal en Figma (6 secciones) — verificar slug en Admin |
 | Bhakti Marga España | `page.mission.json` | `/pages/bhakti-marga-espana` | 🟨 Verificar |
 | El camino Bhakti | `page.path.json` | `/pages/practicas-bhakti` | 🟨 Verificar slug |
 | Haz una donación | `page.give.json` | `/pages/donacion` | 🟨 Verificar |
@@ -221,15 +251,15 @@ Resultado de la auditoría: la mayoría YA tienen template. Verificar asignació
 | Project Mantra | `page.project-mantra.json` | 🟨 Template existe | 6 secciones |
 | Puja | `page.request-a-puja.json` | 🟨 Template existe | 8 secciones |
 | Canto de oraciones | `page.vedic-chanting.json` | 🟨 Template existe | 7 secciones |
-| Kirtan: Canto devocional | — | 🔴 No encontrado | Crear o integrar en Artes Devocionales |
-| Pintura de arte devocional | — | 🔴 No encontrado | Crear o integrar en Artes Devocionales |
+| Kirtan: Canto devocional *(antes "Kirtan")* | — | 🔴 No encontrado | Crear o integrar en Artes Devocionales |
+| Pintura de arte devocional *(antes "Pintura devocional")* | — | 🔴 No encontrado | Crear o integrar en Artes Devocionales |
 | Yoga y Meditación | `page.y-m.json` | 🟨 Template existe | 9 secciones |
 | Conocimiento | `page.knowledge.json` | 🟨 Template existe | 9 secciones |
 | Rituales | `page.rituals.json` | 🟨 Template existe | 8 secciones |
 | Artes Devocionales | `page.devotional-arts.json` | 🟨 Template existe | 5 secciones |
 | Sri Yantra | `page.sri-yantra.json` | 🟨 Template existe | 7 secciones |
-| Templo Lanzarote: Hari Hara | `page.templo-hari-hara.json` | 🟨 Template existe | 7 secciones |
-| Templo Málaga: Bhava Narasimha | `page.templo-bhava-narasimha.json` | 🟨 Template existe | 7 secciones |
+| Templo Lanzarote: Hari Hara | `page.templo-hari-hara.json` | ✅ Confirmado teal en Figma | 6 secciones (ver tabla páginas existentes) |
+| Templo Málaga: Bhava Narasimha | `page.templo-bhava-narasimha.json` | ✅ Confirmado teal en Figma | 6 secciones (ver tabla páginas existentes) |
 
 ---
 
@@ -299,6 +329,42 @@ Identificadas en el sitemap con iconos dorados `#927244`:
 11. **Encuentra tu profesor** — añadir filtros por práctica al template existente
 12. **Conocimiento** — configurar links a productos de libros
 13. **Darshan Lanzarote 2026** — cuando se confirmen detalles
+
+---
+
+## 🧭 NAVEGACIÓN — Estructura confirmada (análisis Figma abril 2026)
+
+**Estructura de 6 items** extraída de los pills de nivel en el sitemap de Figma:
+
+| # | Ítem principal | Contenido |
+|---|---|---|
+| 1 | Conoce al Maestro | Sobre Paramahamsa Vishwananda + columna Homepage |
+| 2 | Prácticas Bhakti | Páginas de prácticas Bhakti |
+| 3 | Experiencias locales | Sanghas, Templos, encuentros locales |
+| 4 | Cursos online | Páginas de cursos online |
+| 5 | Donaciones | Haz una donación, Adopta un deity |
+| 6 | Tienda ↗ | Todos los productos ↗, Esenciales bhakti ↗, Libros y música ↗ |
+
+> Nota: No existe diseño de UI de navegación en Figma. La nav se gestiona en Shopify Admin → Navigation → linklists. Los nombres anteriores son de los pills del sitemap.
+
+---
+
+## 🦶 FOOTER — Estado (análisis Figma abril 2026)
+
+**No existe diseño de footer en Figma.** El archivo Figma contiene únicamente el diagrama del sitemap.
+
+**Footer ✅ construido y funcional:**
+- `sections/footer.liquid` — cuadrícula 12 columnas: 6 col nav (`footer_nav` linklist) + 5 col contacto/social
+- Bloque de contacto: `contact_title` + `contact_body` (configurables en Admin)
+- Redes sociales: Instagram, X, YouTube, Facebook, Flickr (`snippets/social-media-links.liquid`)
+- Subfooter: selector de idioma + `subfooter_nav` linklist + copyright
+- Todos los links son configurables en Admin (sin hardcode)
+
+**Tareas pendientes (solo Admin — sin cambios de código):**
+- [ ] Publicar páginas legales (Aviso Legal, Política de Cookies, Política de Privacidad)
+- [ ] Añadir sus links al menú `subfooter_nav` en Admin una vez publicadas
+- [ ] Añadir logo BM al footer (gap de contenido)
+- [ ] Añadir CIF G76198209 / info asociación (gap de contenido)
 
 ---
 
