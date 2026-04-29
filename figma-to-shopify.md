@@ -209,22 +209,55 @@ Root: `bhaktimarga.es`
 
 ---
 
-## 🦶 Footer — estado (abril 2026)
+## 🦶 Footer — diseño final (Figma: `Zv83zUiKu6Vjz8Ba3NP5Wi`, node `1:2`)
 
-**`sections/footer.liquid` ✅ construido y funcional.** No existe diseño de footer en Figma (archivo solo tiene el sitemap).
+**Diseño definitivo confirmado por la diseñadora.** El footer actual en Shopify (`sections/footer.liquid`) NO coincide con el diseño final — requiere reescritura.
 
-| Componente | Estado |
-|---|---|
-| Grid nav principal (`footer_nav` linklist) | ✅ |
-| Bloque contacto (`contact_title` + `contact_body`) | ✅ |
-| Iconos sociales: Instagram, X, YouTube, Facebook, Flickr | ✅ |
-| Barra subfooter con `subfooter_nav` + copyright | ✅ |
-| Selector de idioma | ✅ |
-| Aviso Legal / Política de Cookies / Política de Privacidad | 🔴 Páginas no publicadas |
+### Especificación final Figma
 
-**Pendiente (solo Admin — sin cambios de código):**
-- [ ] Publicar páginas legales y añadir sus links a `subfooter_nav`
-- [ ] Añadir logo BM y CIF G76198209 al footer (contenido)
+**Fondo:** `#16254c` · **Padding:** 91px arriba, 90px abajo, 66px laterales
+
+**ZONA SUPERIOR — 6 columnas flex, gap 44px, ancho completo:**
+
+| Columna | Encabezado | Sub-items |
+|---------|-----------|-----------|
+| 1 | El Maestro | Paramahamsa Vishwananda · Darshan Lanzarote 2026 · Todos los eventos con Él |
+| 2 | Experiencias | Calendario de eventos · Cursos online · Prácticas Bhakti · Templos · Sanghas · Profesores |
+| 3 | Donaciones | Apoya con una donación · Adopta un Deity |
+| 4 | Tienda | Todos los productos · Libros y música · Esenciales bhakti |
+| 5 | Aprende con Bhakti+ | *(sin sub-items — solo encabezado)* |
+| 6 | Bhakti Marga | Contáctanos · Bhakti Marga Internacional · Shree Peetha Nilaya Ashram |
+
+**ZONA INFERIOR — flex-col, gap 20px:**
+- Fila 1: links legales (gap 40px) + iconos sociales (derecha): Política de privacidad y cookies · Aviso Legal · Términos del Servicio · © año Todos los derechos reservados
+- Fila 2: `Asociación BHAKTI MARGA ESPAÑA, CIF G76198209. Calle Pablo Picasso, 11, 29719 Benamocarra, Málaga. Email: spain@bhaktimarga.es.`
+
+**Iconos sociales:** Instagram, Facebook, YouTube — alineados a la derecha en la fila 1 inferior
+**Tipografía encabezados:** 14px bold white · Sub-items: 14px white 50% opacidad · Zona inferior: 12px white 50% opacidad
+
+### Cambios respecto al footer actual
+
+| Elemento | Antes | Después |
+|----------|-------|---------|
+| Encabezados de columna | Ocultos (`class="hidden"`) | Visibles, bold |
+| Columnas de nav | 6 genéricas sin títulos | 6 con títulos específicos (ver tabla) |
+| Bloque de contacto (`contact_title`/`contact_body`) | ✅ presente | 🔴 Eliminar |
+| Selector de idioma | ✅ presente | 🔴 Eliminar (no está en Figma) |
+| Dirección legal / CIF | ❌ ausente | ✅ Añadir como setting |
+| Iconos sociales | Columna derecha | Fila inferior derecha |
+| Fondo | `bg-blue` | `#16254c` |
+| Copyright | Dentro de `subfooter_nav` | Fila inferior, año dinámico |
+
+### Cambios de código necesarios (`sections/footer.liquid`)
+- [ ] Mostrar encabezados de columna (quitar `class="hidden"`)
+- [ ] Reorganizar layout: columnas arriba, zona legal abajo
+- [ ] Eliminar bloque contacto (quitar settings `contact_title`, `contact_body`)
+- [ ] Eliminar selector de idioma
+- [ ] Añadir setting `legal_address` (textarea) con texto de dirección
+- [ ] Mover social icons a la fila inferior derecha
+- [ ] Actualizar fondo a `#16254c`
+- [ ] Mantener `footer_nav` y `subfooter_nav` linklists (admin-configurable)
+- [ ] Publicar páginas legales y añadir a `subfooter_nav` en Admin
 
 ---
 
