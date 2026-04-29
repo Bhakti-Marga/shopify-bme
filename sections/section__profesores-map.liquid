@@ -204,11 +204,11 @@ document.addEventListener('DOMContentLoaded', function() {
         {
           name:     {{ p.name.value | json }},
           city:     {{ p.city.value | json }},
-          lat:      {{ p.lat.value }},
-          lng:      {{ p.lng.value }},
+          lat:      {{ p.lat.value | default: "null" }},
+          lng:      {{ p.lng.value | default: "null" }},
           skills:   {{ p.skills.value | json }},
           telegram: {{ p.telegram_url.value | default: "" | json }},
-          photo:    "{{ p.photo.value | image_url: width: 200 }}"
+          photo:    {{ p.photo.value | image_url: width: 200 | json }},
         }
         {%- assign is_first = false -%}
       {%- endif -%}
