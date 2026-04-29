@@ -348,7 +348,28 @@ Cuando se desbloquee:
 
 ---
 
-### Fase 7 — "Encuentra tu profesor" (filtros por práctica)
+### Fase 7 — Migrar directorios a Metaobjects (profesores + sanghas)
+
+**Por qué:** Los mapas de profesores y sanghas tienen los datos hardcodeados en JavaScript dentro del Liquid — añadir un nuevo profesor o sangha requiere tocar código. La solución es Shopify Metaobjects: el equipo puede gestionar el directorio entero desde Admin → Contenido → Metaobjects, sin código.
+
+**Archivos afectados:**
+- `sections/section__profesores-map.liquid` — datos hardcodeados en `var profesores = [...]`
+- `sections/section__sangha-map.liquid` (o equivalente) — misma situación
+
+**Tareas:**
+- [ ] Crear definición de Metaobject `profesor` en Admin: campos name, city, lat, lng, practices (list), telegram_url, photo
+- [ ] Crear definición de Metaobject `sangha` en Admin: campos name, city, lat, lng, schedule, address, contact_url
+- [ ] Actualizar `section__profesores-map.liquid`: reemplazar el array hardcodeado por un loop `for profesor in shop.metaobjects.profesor.values`
+- [ ] Actualizar el mapa de sanghas con el mismo patrón
+- [ ] Migrar los datos existentes a Admin → Metaobjects (entrada por entrada)
+- [ ] Verificar en dev: `shopify theme dev --store d016j0-nz.myshopify.com`
+- [ ] Commit
+
+> Una vez hecho, cualquier miembro del equipo puede añadir/editar/borrar profesores y sanghas desde Admin sin tocar código.
+
+---
+
+### Fase 8 — "Encuentra tu profesor" (filtros por práctica)
 
 - [ ] Leer `templates/page.profesores.liquid` — identificar qué filtros faltan
 - [ ] Añadir chips de filtro por práctica (AKY, Om Chanting, BSN…)
