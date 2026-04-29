@@ -1,7 +1,7 @@
 # Figma → Shopify: Plan de trabajo
 > Extraído del sitemap de Figma (archivo `6tFHS9TCH3SRBhtaDUQhJ7`, sección `44:1436`)
 > Última auditoría de templates: 2026-04-28
-> Última actualización con análisis Figma: 2026-04-29
+> Última actualización: 2026-04-29
 
 ---
 
@@ -35,13 +35,14 @@
 
 | Estado | Páginas |
 |--------|---------|
-| ✅ Confirmadas (template + página) | ~24 |
+| ✅ Confirmadas (template + página) | ~28 |
+| 🟨 Template creado, contenido pendiente de negocio | ~3 |
 | 🟨 Template existe, verificar asignación en Admin | ~10 |
-| 🔴 Nuevas por construir | 8 |
+| 🔴 Nuevas por construir | 5 |
 | ⚠️ Templates en inglés (revisar) | 5 |
 | 🔮 Features interactivas por completar | 2 |
 
-> 2026-04-29: templos confirmados ✅, hub "Templos" confirmado ✅, nueva página "Adopta un deity" 🔴 descubierta.
+> 2026-04-29: menú principal ✅, footer ✅, hub Templos ✅, páginas Darshan Lanzarote / Eventos con Él / Adopta un Deity creadas con template placeholder.
 
 ---
 
@@ -73,14 +74,18 @@
 - [ ] Beneficios
 - [ ] Reseñas
 
-### 4. Darshan Lanzarote 2026
+### 4. Darshan Lanzarote 2026 🟨 Template creado (2026-04-29)
 **URL:** `/pages/darshan-lanzarote-2026` · Azul marino
-**Bloqueado:** decisiones de negocio
-- [ ] 2 secciones TBD — pendiente de confirmación
+**Bloqueado:** decisiones de negocio (ver `darshan.md`)
+- [x] `templates/page.darshan-lanzarote.json` creado — hero placeholder "Próximamente"
+- [x] Página creada en Admin y asignada al template
+- [ ] 2 secciones TBD — pendiente de confirmación de negocio
 
-### 5. Todos los eventos con Él
-**URL:** `/pages/eventos-con-el` o colección filtrada · Azul marino
-- [ ] Página/colección de todos los eventos con Paramahamsa Vishwananda
+### 5. Todos los eventos con Él 🟨 Template creado (2026-04-29)
+**URL:** `/pages/eventos-con-el` · Azul marino
+- [x] `templates/page.eventos-con-el.json` creado — hero con título y subtítulo
+- [x] Página creada en Admin y asignada al template
+- [ ] Añadir sección de listado de eventos (colección filtrada) cuando exista el catálogo
 
 ### 6. Encuentra tu profesor (standalone)
 **URL:** `/pages/encuentra-tu-profesor` · Morado `#5c5a8c`
@@ -91,10 +96,12 @@
 **URL:** `/collections/cursos` o `/pages/cursos-online`
 - [ ] Página/colección de cursos online disponibles
 
-### 8. Adopta un deity ⭐ NUEVO (descubierto abril 2026)
+### 8. Adopta un deity ⭐ NUEVO (descubierto abril 2026) 🟨 Template creado (2026-04-29)
 **URL:** `/pages/adopta-un-deity` · Azul marino
+- [x] `templates/page.adopta-un-deity.json` creado — hero placeholder "Próximamente"
+- [x] Página creada en Admin y asignada al template
 - [ ] Validar modelo con stakeholders (precio, fulfillment, qué ofrece la "adopción")
-- [ ] 1 sección TBD — construir una vez confirmadas las decisiones de negocio
+- [ ] Construir secciones definitivas una vez confirmadas las decisiones de negocio
 
 ---
 
@@ -141,10 +148,10 @@ Secciones inciertas ⚪: Video introducción · El camino Bhakti · Prácticas d
 
 ---
 
-### Templos (hub)
-**Template:** 🟨 verificar `/pages/templos` — ✅ confirmada en Figma (abril 2026), 3 secciones todas gray
-- [ ] Verificar que `/pages/templos` está publicada
-- [ ] Verificar que los links a los dos templos individuales funcionan
+### Templos (hub) ✅ COMPLETADO (2026-04-29)
+**Template:** `templates/page.templos.json` — hero + icon grid (Hari Hara + Bhava Narasimha), 3 secciones
+- [x] `templates/page.templos.json` creado y página publicada en Admin
+- [x] Links a los dos templos individuales funcionan
 
 ---
 
@@ -209,9 +216,9 @@ Root: `bhaktimarga.es`
 
 ---
 
-## 🦶 Footer — diseño final (Figma: `Zv83zUiKu6Vjz8Ba3NP5Wi`, node `1:2`)
+## 🦶 Footer ✅ COMPLETADO (2026-04-29) — diseño final (Figma: `Zv83zUiKu6Vjz8Ba3NP5Wi`, node `1:2`)
 
-**Diseño definitivo confirmado por la diseñadora.** El footer actual en Shopify (`sections/footer.liquid`) NO coincide con el diseño final — requiere reescritura.
+**Diseño definitivo confirmado por la diseñadora.** `sections/footer.liquid` reescrito desde cero — coincide con el diseño Figma.
 
 ### Especificación final Figma
 
@@ -248,16 +255,16 @@ Root: `bhaktimarga.es`
 | Fondo | `bg-blue` | `#16254c` |
 | Copyright | Dentro de `subfooter_nav` | Fila inferior, año dinámico |
 
-### Cambios de código necesarios (`sections/footer.liquid`)
-- [ ] Mostrar encabezados de columna (quitar `class="hidden"`)
-- [ ] Reorganizar layout: columnas arriba, zona legal abajo
-- [ ] Eliminar bloque contacto (quitar settings `contact_title`, `contact_body`)
-- [ ] Eliminar selector de idioma
-- [ ] Añadir setting `legal_address` (textarea) con texto de dirección
-- [ ] Mover social icons a la fila inferior derecha
-- [ ] Actualizar fondo a `#16254c`
-- [ ] Mantener `footer_nav` y `subfooter_nav` linklists (admin-configurable)
-- [ ] Publicar páginas legales y añadir a `subfooter_nav` en Admin
+### Cambios de código (`sections/footer.liquid`) ✅ todos completados
+- [x] Mostrar encabezados de columna (quitar `class="hidden"`)
+- [x] Reorganizar layout: columnas arriba, zona legal abajo
+- [x] Eliminar bloque contacto (quitar settings `contact_title`, `contact_body`)
+- [x] Eliminar selector de idioma
+- [x] Añadir setting `legal_address` (textarea) con texto de dirección
+- [x] Mover social icons a la fila inferior derecha (justify-content: space-between)
+- [x] Actualizar fondo a `#16254c`
+- [x] Mantener `footer_nav` y `subfooter_nav` linklists (admin-configurable)
+- [ ] Publicar páginas legales y añadir a `subfooter_nav` en Admin — pendiente (ver `legal.md`)
 
 ---
 
@@ -314,13 +321,13 @@ Cruzados todos los `templates/page.*` con el sitemap. Resultado: ~22 templates y
 
 ---
 
-### Fase 1 — Menú principal (Shopify Admin)
+### Fase 1 — Menú principal ✅ COMPLETADO (2026-04-29)
 
 **Sin código.** El header lee de `linklists[section.settings.header_nav]`.
 
-- [ ] Crear/reordenar el menú en Admin → Navigation → Main menu con los 6 ítems confirmados
-- [ ] Verificar en dev: `shopify theme dev --store d016j0-nz.myshopify.com`
-- [ ] Comprobar todos los dropdowns y el drawer móvil
+- [x] Crear/reordenar el menú en Admin → Navigation → Main menu con los 6 ítems confirmados
+- [x] Verificar en dev
+- [x] Dropdowns y drawer móvil operativos
 
 ---
 
@@ -358,14 +365,13 @@ Ver `admin-url-changes.md` para la lista completa.
 
 ---
 
-### Fase 5 — Templos (verificar)
+### Fase 5 — Templos ✅ COMPLETADO (2026-04-29)
 
 Ambas páginas ✅ confirmadas teal en Figma.
 
-- [ ] Verificar que `/pages/templo-lanzarote` (o slug correcto) está publicada
-- [ ] Verificar que `/pages/templo-malaga` está publicada
-- [ ] Verificar que `/pages/templos` (hub) está publicada y que los links funcionan
-- [ ] Si algo falta, crear la página en Admin y asignar el template correcto
+- [x] `/pages/templo-lanzarote` publicada
+- [x] `/pages/templo-malaga` publicada
+- [x] `/pages/templos` (hub) publicada y links a templos individuales funcionando
 
 ---
 
@@ -381,7 +387,7 @@ Cuando se desbloquee:
 
 ---
 
-### Fase 7 — Migrar directorios a Metaobjects (profesores + sanghas)
+### Fase 7 — Migrar directorios a Metaobjects ✅ Profesores completado (2026-04-29) | Sanghas pendiente
 
 **Por qué:** Los mapas de profesores y sanghas tienen los datos hardcodeados en JavaScript dentro del Liquid — añadir un nuevo profesor o sangha requiere tocar código. La solución es Shopify Metaobjects: el equipo puede gestionar el directorio entero desde Admin → Contenido → Metaobjects, sin código.
 
@@ -390,13 +396,12 @@ Cuando se desbloquee:
 - `sections/section__sangha-map.liquid` (o equivalente) — misma situación
 
 **Tareas:**
-- [ ] Crear definición de Metaobject `profesor` en Admin: campos name, city, lat, lng, practices (list), telegram_url, photo
-- [ ] Crear definición de Metaobject `sangha` en Admin: campos name, city, lat, lng, schedule, address, contact_url
-- [ ] Actualizar `section__profesores-map.liquid`: reemplazar el array hardcodeado por un loop `for profesor in shop.metaobjects.profesor.values`
-- [ ] Actualizar el mapa de sanghas con el mismo patrón
-- [ ] Migrar los datos existentes a Admin → Metaobjects (entrada por entrada)
-- [ ] Verificar en dev: `shopify theme dev --store d016j0-nz.myshopify.com`
-- [ ] Commit
+- [x] Crear definición de Metaobject `profesor` en Admin (8 campos: name, city, lat, lng, skills, telegram_url, photo, active)
+- [x] Actualizar `section__profesores-map.liquid`: array hardcodeado reemplazado por loop Liquid + filtro URL `?practica=slug`
+- [x] Migrar datos de profesores existentes a Admin → Metaobjects
+- [ ] Crear definición de Metaobject `sangha` en Admin (pendiente)
+- [ ] Actualizar el mapa de sanghas con el mismo patrón (pendiente)
+- [ ] Migrar datos de sanghas a Admin → Metaobjects (pendiente)
 
 > Una vez hecho, cualquier miembro del equipo puede añadir/editar/borrar profesores y sanghas desde Admin sin tocar código.
 
