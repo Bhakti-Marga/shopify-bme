@@ -1,0 +1,93 @@
+{
+  "sections": {
+    "main": {
+      "type": "page__main",
+      "disabled": true,
+      "settings": {}
+    },
+    "section_hero_templos": {
+      "type": "section__hero",
+      "settings": {
+        "padding_top": "0px",
+        "desktop_padding_top": "inherit",
+        "padding_bottom": "40px",
+        "desktop_padding_bottom": "60px",
+        "padding_horizontal": "px-0",
+        "desktop_padding_horizontal": "inherit",
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "use_container": true,
+        "set_100vh": false,
+        "set_100vh_desktop": false,
+        "border_radius": 16,
+        "aspect_ratio": "auto",
+        "aspect_ratio_desktop": "16\/9",
+        "bg_color": "#16254c",
+        "content_width": "max-w-5xl",
+        "text_align": "text-center",
+        "text_color": "#ffffff",
+        "title": "Nuestros Templos en España",
+        "title_font_style": "h2",
+        "subtitle": "<p>Visita los templos de Bhakti Marga en España y vive una experiencia espiritual única.</p>",
+        "button_text": "",
+        "button_url": "",
+        "button_style": "btn",
+        "anchor_to_pricing": false,
+        "video_title": "",
+        "horizontal_position": "justify-center",
+        "vertical_position": "items-center"
+      }
+    },
+    "section_icon_grid_templos": {
+      "type": "section__icon-grid",
+      "blocks": {
+        "templo_lanzarote": {
+          "type": "content_block",
+          "settings": {
+            "title": "Hari Hara — Lanzarote",
+            "title_tag": "h3",
+            "title_font_style": "h4",
+            "description": "<p>Templo en Lanzarote. <a href=\"/pages/templo-lanzarote\">Ver más →</a></p>",
+            "content_align": "items-center"
+          }
+        },
+        "templo_malaga": {
+          "type": "content_block",
+          "settings": {
+            "title": "Bhava Narasimha — Málaga",
+            "title_tag": "h3",
+            "title_font_style": "h4",
+            "description": "<p>Templo en Málaga. <a href=\"/pages/templo-malaga\">Ver más →</a></p>",
+            "content_align": "items-center"
+          }
+        }
+      },
+      "block_order": ["templo_lanzarote", "templo_malaga"],
+      "settings": {
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "padding_top": "pt-xl",
+        "padding_bottom": "pb-xl",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "desktop_padding_top": "tabletl:pt-xxxl",
+        "desktop_padding_bottom": "tabletl:pb-xxxl",
+        "cols_mobile": "1",
+        "cols_desktop": "2",
+        "text_align": "text-center",
+        "title": "",
+        "subtitle": "",
+        "button_text": "",
+        "button_url": "",
+        "button_style": "btn"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "section_hero_templos",
+    "section_icon_grid_templos"
+  ]
+}

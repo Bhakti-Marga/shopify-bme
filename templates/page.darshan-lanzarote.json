@@ -1,0 +1,48 @@
+{
+  "sections": {
+    "main": {
+      "type": "page__main",
+      "disabled": true,
+      "settings": {}
+    },
+    "section_hero_darshan": {
+      "type": "section__hero",
+      "settings": {
+        "padding_top": "0px",
+        "desktop_padding_top": "inherit",
+        "padding_bottom": "40px",
+        "desktop_padding_bottom": "60px",
+        "padding_horizontal": "px-0",
+        "desktop_padding_horizontal": "inherit",
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "use_container": true,
+        "set_100vh": false,
+        "set_100vh_desktop": true,
+        "border_radius": 16,
+        "aspect_ratio": "auto",
+        "aspect_ratio_desktop": "auto",
+        "bg_color": "#16254c",
+        "content_width": "max-w-3xl",
+        "text_align": "text-center",
+        "text_color": "#ffffff",
+        "title": "Darshan Lanzarote 2026",
+        "title_font_style": "h1",
+        "subtitle": "<p>Próximamente. Mantente atento para conocer todos los detalles.</p>",
+        "button_text": "",
+        "button_url": "",
+        "button_style": "btn",
+        "anchor_to_pricing": false,
+        "video_title": "",
+        "horizontal_position": "justify-center",
+        "vertical_position": "items-center"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "section_hero_darshan"
+  ]
+}
