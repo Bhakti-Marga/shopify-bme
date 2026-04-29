@@ -197,15 +197,41 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   var profesores = [
-    {
-      name: 'Govindaramandnda',
-      city: 'Madrid',
-      lat: 40.4168,
-      lng: -3.7038,
-      skills: ['Atma Kriya Yoga', 'Meditación', 'Kirtan'],
-      telegram: 'https://t.me/'
-    }
+    {%- assign is_first = true -%}
+    {%- for p in shop.metaobjects.profesor.values -%}
+      {%- if p.active.value == true -%}
+        {%- unless is_first -%},{%- endunless -%}
+        {
+          name:     {{ p.name.value | json }},
+          city:     {{ p.city.value | json }},
+          lat:      {{ p.lat.value }},
+          lng:      {{ p.lng.value }},
+          skills:   {{ p.skills.value | json }},
+          telegram: {{ p.telegram_url.value | default: "" | json }},
+          photo:    "{{ p.photo.value | image_url: width: 200 }}"
+        }
+        {%- assign is_first = false -%}
+      {%- endif -%}
+    {%- endfor -%}
   ];
+
+  function skillToSlug(str) {
+    return str.toLowerCase()
+      .replace(/[áàä]/g, 'a').replace(/[éèë]/g, 'e')
+      .replace(/[íìï]/g, 'i').replace(/[óòö]/g, 'o')
+      .replace(/[úùüû]/g, 'u').replace(/ñ/g, 'n')
+      .replace(/\s+/g, '-');
+  }
+
+  var params = new URLSearchParams(window.location.search);
+  var filtro = params.get('practica');
+  if (filtro) {
+    profesores = profesores.filter(function(p) {
+      return p.skills.some(function(s) {
+        return skillToSlug(s) === filtro;
+      });
+    });
+  }
 
   profesores.forEach(function(p) {
     L.marker([p.lat, p.lng], { icon: makePin() })
@@ -231,7 +257,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var card = '<div class="pmap__card">'
       + '<div class="pmap__card-header"></div>'
       + '<div class="pmap__card-body">'
-      + '<div class="pmap__card-avatar">🙏</div>'
+      + '<div class="pmap__card-avatar">' + (p.photo ? '<img src="' + p.photo + '" alt="' + p.name + '">' : '🙏') + '</div>'
       + '<div class="pmap__card-name">' + p.name + '</div>'
       + '<div class="pmap__card-city">' + p.city + '</div>'
       + '<div class="pmap__card-skills">' + skillTags + '</div>'
