@@ -2,7 +2,7 @@
 {% assign subfooter_linklist = linklists[section.settings.subfooter_nav] %}
 
 <footer class="site-footer" style="background-color: #16254c;">
-  <div class="container text-white" style="padding-top: 91px; padding-bottom: 90px; padding-left: 66px; padding-right: 66px;">
+  <div class="text-white" style="padding: 91px 66px 90px; width: 100%;">
 
     {%- comment -%} TOP ZONE — nav columns {%- endcomment -%}
     <div class="site-footer__nav flex" style="gap: 44px; width: 100%;">
@@ -34,7 +34,7 @@
                 <a href="{{ link.url }}" class="site-footer__legal-link" style="font-size: 12px; color: rgba(255,255,255,0.5); text-decoration: none;">{{ link.title }}</a>
               </li>
             {% endfor %}
-            <li style="font-size: 12px; color: rgba(255,255,255,0.5);">&copy; {{ 'now' | date: '%Y' }} Todos los derechos reservados</li>
+            <li style="font-size: 12px; color: rgba(255,255,255,0.5);">{{ 'now' | date: '%Y' }} Todos los derechos reservados</li>
           </ul>
         </nav>
         <div class="site-footer__socials inline-flex items-center" style="gap: 16px;">
