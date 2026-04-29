@@ -1,53 +1,187 @@
 {% assign footer_linklist = linklists[section.settings.footer_nav] %}
 {% assign subfooter_linklist = linklists[section.settings.subfooter_nav] %}
 
-<footer class="site-footer" style="background-color: #16254c;">
-  <div class="text-white" style="padding: 91px 66px 90px; width: 100%;">
+<style>
+  .site-footer,
+  .site-footer * { box-sizing: border-box; }
+  .site-footer ul { list-style: none; margin: 0; padding: 0; }
+  .site-footer a { color: inherit; text-decoration: none; }
 
-    {%- comment -%} TOP ZONE — nav columns {%- endcomment -%}
-    <div class="site-footer__nav flex" style="gap: 44px; width: 100%;">
+  .site-footer {
+    background-color: #16254c;
+    color: rgba(255,255,255,0.5);
+    font-size: 14px;
+    line-height: 1.5;
+    padding: 91px clamp(24px, 5vw, 66px) 90px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .site-footer__inner {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  /* Nav columns */
+  .site-footer__nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px 44px;
+    margin-bottom: 60px;
+  }
+
+  .footer-col { flex: 1 1 0; min-width: 100px; }
+
+  .footer-col__heading {
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 16px;
+    line-height: 1.3;
+  }
+
+  .footer-col__list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .footer-col__list a {
+    color: rgba(255,255,255,0.5);
+    transition: color 160ms ease;
+  }
+  .footer-col__list a:hover { color: #fff; }
+
+  /* Legal row */
+  .site-footer__legal {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px 40px;
+    font-size: 12px;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 20px;
+  }
+
+  .site-footer__legal a {
+    color: rgba(255,255,255,0.5);
+    transition: color 160ms ease;
+  }
+  .site-footer__legal a:hover { color: #fff; }
+
+  /* Social icons */
+  .site-footer__social {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-left: auto;
+  }
+
+  .site-footer__social a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255,255,255,0.5);
+    transition: color 160ms ease, transform 160ms ease;
+  }
+  .site-footer__social a:hover {
+    color: #fff;
+    transform: translateY(-1px);
+  }
+  .site-footer__social svg { width: 18px; height: 18px; display: block; }
+
+  /* Fine print */
+  .site-footer__fineprint {
+    font-size: 12px;
+    color: rgba(255,255,255,0.5);
+    margin: 0;
+  }
+
+  /* Responsive: 2-col grid on mobile */
+  @media (max-width: 600px) {
+    .site-footer__nav {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 32px;
+    }
+    .site-footer__social {
+      margin-left: 0;
+      width: 100%;
+      order: -1;
+      margin-bottom: 8px;
+    }
+  }
+</style>
+
+<footer class="site-footer" role="contentinfo">
+  <div class="site-footer__inner">
+
+    {%- comment -%} TOP ZONE — nav columns from linklist {%- endcomment -%}
+    <nav class="site-footer__nav" aria-label="Pie de página">
       {% for link in footer_linklist.links %}
-        <div class="site-footer__col flex flex-col" style="gap: 16px; flex: 1;">
-          <p class="site-footer__col-heading text-white" style="font-size: 14px; font-weight: 700; margin: 0;">{{ link.title }}</p>
+        <div class="footer-col">
+          <h3 class="footer-col__heading">{{ link.title }}</h3>
           {% if link.links.size > 0 %}
-            <ul class="site-footer__col-links" style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 16px;">
-              {% for child_link in link.links %}
-                <li>
-                  <a href="{{ child_link.url }}" class="site-footer__sub-link" style="font-size: 14px; color: rgba(255,255,255,0.5); text-decoration: none;">{{ child_link.title }}</a>
-                </li>
+            <ul class="footer-col__list">
+              {% for child in link.links %}
+                <li><a href="{{ child.url }}">{{ child.title }}</a></li>
               {% endfor %}
             </ul>
           {% endif %}
         </div>
       {% endfor %}
+    </nav>
+
+    {%- comment -%} BOTTOM ZONE — legal + socials + address {%- endcomment -%}
+    <div class="site-footer__legal">
+      {% for link in subfooter_linklist.links %}
+        <a href="{{ link.url }}">{{ link.title }}</a>
+      {% endfor %}
+      <span>{{ 'now' | date: '%Y' }} Todos los derechos reservados</span>
+
+      <ul class="site-footer__social" aria-label="Redes sociales">
+        {% if settings.social_instagram != blank %}
+          <li>
+            <a href="{{ settings.social_instagram }}" aria-label="Instagram" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="3" y="3" width="18" height="18" rx="5"/>
+                <circle cx="12" cy="12" r="4"/>
+                <circle cx="17.5" cy="6.5" r="0.6" fill="currentColor"/>
+              </svg>
+            </a>
+          </li>
+        {% endif %}
+        {% if settings.social_facebook != blank %}
+          <li>
+            <a href="{{ settings.social_facebook }}" aria-label="Facebook" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M13.5 21v-7.5h2.5l.4-3h-2.9V8.6c0-.87.24-1.46 1.49-1.46H16.6V4.43c-.27-.04-1.21-.12-2.3-.12-2.27 0-3.83 1.39-3.83 3.94V10.5H8v3h2.47V21h3.03z"/>
+              </svg>
+            </a>
+          </li>
+        {% endif %}
+        {% if settings.social_youtube != blank %}
+          <li>
+            <a href="{{ settings.social_youtube }}" aria-label="YouTube" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M21.6 7.2a2.5 2.5 0 0 0-1.76-1.77C18.27 5 12 5 12 5s-6.27 0-7.84.43A2.5 2.5 0 0 0 2.4 7.2 26 26 0 0 0 2 12a26 26 0 0 0 .4 4.8 2.5 2.5 0 0 0 1.76 1.77C5.73 19 12 19 12 19s6.27 0 7.84-.43a2.5 2.5 0 0 0 1.76-1.77A26 26 0 0 0 22 12a26 26 0 0 0-.4-4.8zM10 15V9l5.2 3-5.2 3z"/>
+              </svg>
+            </a>
+          </li>
+        {% endif %}
+        {% if settings.social_twitter != blank %}
+          <li>
+            <a href="{{ settings.social_twitter }}" aria-label="X (Twitter)" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.26 5.632 5.905-5.632zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/>
+              </svg>
+            </a>
+          </li>
+        {% endif %}
+      </ul>
     </div>
 
-    {%- comment -%} BOTTOM ZONE {%- endcomment -%}
-    <div class="site-footer__bottom flex flex-col" style="gap: 20px; margin-top: 60px;">
+    <p class="site-footer__fineprint">{{ section.settings.legal_address }}</p>
 
-      {%- comment -%} Row 1: legal links + social icons {%- endcomment -%}
-      <div class="site-footer__subfooter flex items-center justify-between">
-        <nav class="site-footer__legal-nav">
-          <ul class="flex items-center" style="list-style: none; margin: 0; padding: 0; gap: 40px; flex-wrap: wrap;">
-            {% for link in subfooter_linklist.links %}
-              <li>
-                <a href="{{ link.url }}" class="site-footer__legal-link" style="font-size: 12px; color: rgba(255,255,255,0.5); text-decoration: none;">{{ link.title }}</a>
-              </li>
-            {% endfor %}
-            <li style="font-size: 12px; color: rgba(255,255,255,0.5);">{{ 'now' | date: '%Y' }} Todos los derechos reservados</li>
-          </ul>
-        </nav>
-        <div class="site-footer__socials inline-flex items-center" style="gap: 16px;">
-          {% render 'social-media-links' %}
-        </div>
-      </div>
-
-      {%- comment -%} Row 2: legal address {%- endcomment -%}
-      <p class="site-footer__legal-address" style="font-size: 12px; color: rgba(255,255,255,0.5); margin: 0;">
-        {{ section.settings.legal_address }}
-      </p>
-
-    </div>
   </div>
 </footer>
 
