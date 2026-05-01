@@ -30,6 +30,45 @@
         "aspect_ratio": "1/1",
         "aspect_ratio_desktop": "16/9",
         "image": "shopify://shop_images/BM-USA-HOMEPAGE-HERO-Edit.jpg",
+        "image_desktop": "shopify://shop_images/Rectangle_4.jpg",
+        "bg_color": "#16254c",
+        "content_width": "max-w-2xl",
+        "text_align": "text-left",
+        "text_color": "#ffffff",
+        "title": "Solo Amor",
+        "title_font_style": "h2",
+        "subtitle": "<p>Paramahamsa Vishwananda es un Maestro iluminado que enseña el camino del Amor o Bhakti.</p>",
+        "button_text": "Conócele",
+        "button_url": "shopify://blogs/events/4-days-to-soul-awakening-with-paramahamsa-vishwananda",
+        "button_style": "btn",
+        "anchor_to_pricing": false,
+        "video_title": "",
+        "horizontal_position": "justify-start",
+        "vertical_position": "items-end"
+      }
+    },
+    "section_hero_zpbgVf": {
+      "type": "section__hero",
+      "disabled": true,
+      "custom_css": [],
+      "settings": {
+        "padding_top": "0px",
+        "desktop_padding_top": "0px",
+        "padding_bottom": "16px",
+        "desktop_padding_bottom": "40px",
+        "padding_horizontal": "px-0",
+        "desktop_padding_horizontal": "inherit",
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "tabletl:mb-0",
+        "use_container": true,
+        "set_100vh": false,
+        "set_100vh_desktop": true,
+        "border_radius": 16,
+        "aspect_ratio": "1/1",
+        "aspect_ratio_desktop": "16/9",
+        "image": "shopify://shop_images/BM-USA-HOMEPAGE-HERO-Edit.jpg",
         "image_desktop": "shopify://shop_images/BM-USA-HOMEPAGE-HERO-Edit-2.jpg",
         "bg_color": "#16254c",
         "content_width": "max-w-2xl",
@@ -247,7 +286,6 @@
         "image_block_ckKFYY": {
           "type": "image_block",
           "settings": {
-            "image": "shopify://shop_images/anirudha_f9fb1963-1391-4312-9e2d-2f6fce3ab8dc.jpg",
             "height": "auto",
             "desktop_height": "inherit"
           }
@@ -283,6 +321,169 @@
         "flip_columns_desktop": true
       }
     },
+    "section_icon_grid_creencias": {
+      "type": "section__icon-grid",
+      "blocks": {
+        "block_creencia_1": {
+          "type": "content_block",
+          "settings": {
+            "title": "El amor es la naturaleza de Dios",
+            "title_tag": "h3",
+            "title_font_style": "h5",
+            "description": "<p>Dios es amor puro e incondicional. Su naturaleza es amar y ser amado.</p>",
+            "content_align": "items-center"
+          }
+        },
+        "block_creencia_2": {
+          "type": "content_block",
+          "settings": {
+            "title": "Todos somos hijos de Dios",
+            "title_tag": "h3",
+            "title_font_style": "h5",
+            "description": "<p>Sin importar nuestra fe o tradición, todos somos hijos amados de Dios.</p>",
+            "content_align": "items-center"
+          }
+        },
+        "block_creencia_3": {
+          "type": "content_block",
+          "settings": {
+            "title": "El corazón es el camino",
+            "title_tag": "h3",
+            "title_font_style": "h5",
+            "description": "<p>El verdadero conocimiento espiritual no viene de la mente, sino del corazón abierto.</p>",
+            "content_align": "items-center"
+          }
+        },
+        "block_creencia_4": {
+          "type": "content_block",
+          "settings": {
+            "title": "La devoción transforma",
+            "title_tag": "h3",
+            "title_font_style": "h5",
+            "description": "<p>La práctica diaria del bhakti despierta el amor dormido en cada alma.</p>",
+            "content_align": "items-center"
+          }
+        },
+        "block_creencia_5": {
+          "type": "content_block",
+          "settings": {
+            "title": "Un Maestro iluminado es una gracia",
+            "title_tag": "h3",
+            "title_font_style": "h5",
+            "description": "<p>La presencia de un Satguru vivo es un regalo extraordinario que acelera el camino espiritual.</p>",
+            "content_align": "items-center"
+          }
+        },
+        "block_creencia_6": {
+          "type": "content_block",
+          "settings": {
+            "title": "Servicio como adoración",
+            "title_tag": "h3",
+            "title_font_style": "h5",
+            "description": "<p>Servir a los demás con amor es una de las formas más elevadas de adoración a Dios.</p>",
+            "content_align": "items-center"
+          }
+        }
+      },
+      "block_order": [
+        "block_creencia_1",
+        "block_creencia_2",
+        "block_creencia_3",
+        "block_creencia_4",
+        "block_creencia_5",
+        "block_creencia_6"
+      ],
+      "custom_css": [],
+      "settings": {
+        "margin_top": "mt-xl",
+        "margin_bottom": "mb-xl",
+        "desktop_margin_top": "tabletl:mt-xxxl",
+        "desktop_margin_bottom": "tabletl:mb-xxxl",
+        "padding_top": "pt-0",
+        "padding_bottom": "pb-0",
+        "desktop_padding_top": "inherit",
+        "desktop_padding_bottom": "inherit",
+        "cols_mobile": "1",
+        "cols_desktop": "3",
+        "text_align": "text-center",
+        "title": "Nuestras creencias",
+        "subtitle": "",
+        "button_text": "",
+        "button_url": "",
+        "button_style": "btn"
+      }
+    },
+    "section_our_values_homepage": {
+      "type": "section__our-values",
+      "blocks": {
+        "block_valor_1": {
+          "type": "content_block",
+          "settings": {
+            "title": "Amor",
+            "cta_label": "Explorar prácticas",
+            "cta_link": "/pages/practicas-bhakti",
+            "cta_style": "btn btn--black"
+          }
+        },
+        "block_valor_2": {
+          "type": "content_block",
+          "settings": {
+            "title": "Devoción",
+            "cta_label": "",
+            "cta_link": "",
+            "cta_style": "btn btn--black"
+          }
+        },
+        "block_valor_3": {
+          "type": "content_block",
+          "settings": {
+            "title": "Servicio",
+            "cta_label": "",
+            "cta_link": "",
+            "cta_style": "btn btn--black"
+          }
+        },
+        "block_valor_4": {
+          "type": "content_block",
+          "settings": {
+            "title": "Compasión",
+            "cta_label": "",
+            "cta_link": "",
+            "cta_style": "btn btn--black"
+          }
+        },
+        "block_valor_5": {
+          "type": "content_block",
+          "settings": {
+            "title": "Comunidad",
+            "cta_label": "",
+            "cta_link": "",
+            "cta_style": "btn btn--black"
+          }
+        }
+      },
+      "block_order": [
+        "block_valor_1",
+        "block_valor_2",
+        "block_valor_3",
+        "block_valor_4",
+        "block_valor_5"
+      ],
+      "custom_css": [],
+      "settings": {
+        "margin_top": "mt-xl",
+        "margin_bottom": "mb-xl",
+        "desktop_margin_top": "tabletl:mt-xxxl",
+        "desktop_margin_bottom": "tabletl:mb-xxxl",
+        "padding_top": "pt-0",
+        "padding_bottom": "pb-0",
+        "desktop_padding_top": "inherit",
+        "desktop_padding_bottom": "inherit",
+        "title": "Nuestros valores",
+        "title_tag": "h2",
+        "content": ""
+      }
+    },
     "section_hero_6Jyrcc": {
       "type": "section__hero",
       "custom_css": [],
@@ -303,8 +504,6 @@
         "border_radius": 0,
         "aspect_ratio": "auto",
         "aspect_ratio_desktop": "16/9",
-        "image": "shopify://shop_images/Revolutionary_Master_b89ce6b5-cd05-4996-a1d1-924cd49c7ccf.jpg",
-        "image_desktop": "shopify://shop_images/Revolutionary_Master_b89ce6b5-cd05-4996-a1d1-924cd49c7ccf.jpg",
         "bg_color": "rgba(0,0,0,0)",
         "content_width": "max-w-5xl",
         "text_align": "text-center",
@@ -324,11 +523,14 @@
   },
   "order": [
     "section_hero_EkgEmY",
+    "section_hero_zpbgVf",
     "section_events_carousel_KydBCi",
     "section_hero_nbPWj9",
     "section_hero_Pc4c7p",
     "image_text_blocks",
     "section_image_text_blocks_hznqgT",
+    "section_icon_grid_creencias",
+    "section_our_values_homepage",
     "section_hero_6Jyrcc"
   ]
 }
