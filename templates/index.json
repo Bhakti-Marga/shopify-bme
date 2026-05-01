@@ -422,7 +422,7 @@
         "desktop_margin_bottom": "inherit",
         "use_container": false,
         "set_100vh": false,
-        "set_100vh_desktop": true,
+        "set_100vh_desktop": false,
         "border_radius": 0,
         "aspect_ratio": "auto",
         "aspect_ratio_desktop": "16/9",
