@@ -359,7 +359,7 @@
         "desktop_margin_top": "tabletl:mt-xl",
         "desktop_margin_bottom": "inherit",
         "vertical_align": "top",
-        "flip_columns_desktop": true
+        "flip_columns_desktop": false
       }
     },
     "section_image_text_blocks_valores": {
@@ -400,7 +400,7 @@
         "desktop_margin_top": "tabletl:mt-lg",
         "desktop_margin_bottom": "tabletl:mb-xxxl",
         "vertical_align": "center",
-        "flip_columns_desktop": false
+        "flip_columns_desktop": true
       }
     },
     "section_hero_6Jyrcc": {
