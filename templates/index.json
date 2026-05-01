@@ -286,6 +286,7 @@
         "image_block_ckKFYY": {
           "type": "image_block",
           "settings": {
+            "image": "shopify://shop_images/vedic-chanting.jpg",
             "height": "auto",
             "desktop_height": "inherit"
           }
@@ -327,6 +328,7 @@
         "image_block_creencias": {
           "type": "image_block",
           "settings": {
+            "image": "shopify://shop_images/study.png",
             "height": "auto",
             "desktop_height": "inherit"
           }
@@ -368,6 +370,7 @@
         "image_block_valores": {
           "type": "image_block",
           "settings": {
+            "image": "shopify://shop_images/2024-07-20-p-1779.jpg",
             "height": "auto",
             "desktop_height": "inherit"
           }
