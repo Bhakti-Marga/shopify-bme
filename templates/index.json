@@ -321,167 +321,86 @@
         "flip_columns_desktop": true
       }
     },
-    "section_icon_grid_creencias": {
-      "type": "section__icon-grid",
+    "section_image_text_blocks_creencias": {
+      "type": "section__image_text_blocks",
       "blocks": {
-        "block_creencia_1": {
-          "type": "content_block",
+        "image_block_creencias": {
+          "type": "image_block",
           "settings": {
-            "title": "El amor es la naturaleza de Dios",
-            "title_tag": "h3",
-            "title_font_style": "h5",
-            "description": "<p>Dios es amor puro e incondicional. Su naturaleza es amar y ser amado.</p>",
-            "content_align": "items-center"
+            "height": "auto",
+            "desktop_height": "inherit"
           }
         },
-        "block_creencia_2": {
+        "content_block_creencias": {
           "type": "content_block",
           "settings": {
-            "title": "Todos somos hijos de Dios",
-            "title_tag": "h3",
-            "title_font_style": "h5",
-            "description": "<p>Sin importar nuestra fe o tradición, todos somos hijos amados de Dios.</p>",
-            "content_align": "items-center"
-          }
-        },
-        "block_creencia_3": {
-          "type": "content_block",
-          "settings": {
-            "title": "El corazón es el camino",
-            "title_tag": "h3",
-            "title_font_style": "h5",
-            "description": "<p>El verdadero conocimiento espiritual no viene de la mente, sino del corazón abierto.</p>",
-            "content_align": "items-center"
-          }
-        },
-        "block_creencia_4": {
-          "type": "content_block",
-          "settings": {
-            "title": "La devoción transforma",
-            "title_tag": "h3",
-            "title_font_style": "h5",
-            "description": "<p>La práctica diaria del bhakti despierta el amor dormido en cada alma.</p>",
-            "content_align": "items-center"
-          }
-        },
-        "block_creencia_5": {
-          "type": "content_block",
-          "settings": {
-            "title": "Un Maestro iluminado es una gracia",
-            "title_tag": "h3",
-            "title_font_style": "h5",
-            "description": "<p>La presencia de un Satguru vivo es un regalo extraordinario que acelera el camino espiritual.</p>",
-            "content_align": "items-center"
-          }
-        },
-        "block_creencia_6": {
-          "type": "content_block",
-          "settings": {
-            "title": "Servicio como adoración",
-            "title_tag": "h3",
-            "title_font_style": "h5",
-            "description": "<p>Servir a los demás con amor es una de las formas más elevadas de adoración a Dios.</p>",
-            "content_align": "items-center"
+            "title": "Nuestras creencias",
+            "title_tag": "h2",
+            "title_font_style": "h3",
+            "description": "<p>Creemos que Dios es amor puro e incondicional y que cada alma está llamada a descubrir ese amor en su propio corazón. Todos somos hijos de Dios, sin importar nuestra fe o tradición.</p>",
+            "credits": "",
+            "cta_url": "shopify://pages/el-camino-bhakti",
+            "cta_label": "Conoce el camino",
+            "text_align": "center",
+            "desktop_text_align": "inherit",
+            "vertical_padding": "py-xxl",
+            "vertical_padding_desktop": "tabletl:py-xxl"
           }
         }
       },
       "block_order": [
-        "block_creencia_1",
-        "block_creencia_2",
-        "block_creencia_3",
-        "block_creencia_4",
-        "block_creencia_5",
-        "block_creencia_6"
+        "image_block_creencias",
+        "content_block_creencias"
       ],
       "custom_css": [],
       "settings": {
         "margin_top": "mt-xl",
         "margin_bottom": "mb-xl",
-        "desktop_margin_top": "tabletl:mt-xxxl",
-        "desktop_margin_bottom": "tabletl:mb-xxxl",
-        "padding_top": "pt-0",
-        "padding_bottom": "pb-0",
-        "desktop_padding_top": "inherit",
-        "desktop_padding_bottom": "inherit",
-        "cols_mobile": "1",
-        "cols_desktop": "3",
-        "text_align": "text-center",
-        "title": "Nuestras creencias",
-        "subtitle": "",
-        "button_text": "",
-        "button_url": "",
-        "button_style": "btn"
+        "desktop_margin_top": "tabletl:mt-xl",
+        "desktop_margin_bottom": "inherit",
+        "vertical_align": "top",
+        "flip_columns_desktop": true
       }
     },
-    "section_our_values_homepage": {
-      "type": "section__our-values",
+    "section_image_text_blocks_valores": {
+      "type": "section__image_text_blocks",
       "blocks": {
-        "block_valor_1": {
-          "type": "content_block",
+        "image_block_valores": {
+          "type": "image_block",
           "settings": {
-            "title": "Amor",
-            "cta_label": "Explorar prácticas",
-            "cta_link": "/pages/practicas-bhakti",
-            "cta_style": "btn btn--black"
+            "height": "auto",
+            "desktop_height": "inherit"
           }
         },
-        "block_valor_2": {
+        "content_block_valores": {
           "type": "content_block",
           "settings": {
-            "title": "Devoción",
-            "cta_label": "",
-            "cta_link": "",
-            "cta_style": "btn btn--black"
-          }
-        },
-        "block_valor_3": {
-          "type": "content_block",
-          "settings": {
-            "title": "Servicio",
-            "cta_label": "",
-            "cta_link": "",
-            "cta_style": "btn btn--black"
-          }
-        },
-        "block_valor_4": {
-          "type": "content_block",
-          "settings": {
-            "title": "Compasión",
-            "cta_label": "",
-            "cta_link": "",
-            "cta_style": "btn btn--black"
-          }
-        },
-        "block_valor_5": {
-          "type": "content_block",
-          "settings": {
-            "title": "Comunidad",
-            "cta_label": "",
-            "cta_link": "",
-            "cta_style": "btn btn--black"
+            "title": "Nuestros valores",
+            "title_tag": "h2",
+            "title_font_style": "h3",
+            "description": "<p>Amor, devoción, servicio y comunidad: estos son los pilares que guían la vida en Bhakti Marga. Vivimos el bhakti no solo en el templo, sino en cada acto del día a día.</p>",
+            "credits": "",
+            "cta_url": "shopify://pages/bhakti-marga-espana",
+            "cta_label": "Quiénes somos",
+            "text_align": "center",
+            "desktop_text_align": "inherit",
+            "vertical_padding": "py-xxl",
+            "vertical_padding_desktop": "tabletl:py-xxl"
           }
         }
       },
       "block_order": [
-        "block_valor_1",
-        "block_valor_2",
-        "block_valor_3",
-        "block_valor_4",
-        "block_valor_5"
+        "image_block_valores",
+        "content_block_valores"
       ],
       "custom_css": [],
       "settings": {
-        "margin_top": "mt-xl",
+        "margin_top": "mt-0",
         "margin_bottom": "mb-xl",
-        "desktop_margin_top": "tabletl:mt-xxxl",
+        "desktop_margin_top": "tabletl:mt-lg",
         "desktop_margin_bottom": "tabletl:mb-xxxl",
-        "padding_top": "pt-0",
-        "padding_bottom": "pb-0",
-        "desktop_padding_top": "inherit",
-        "desktop_padding_bottom": "inherit",
-        "title": "Nuestros valores",
-        "title_tag": "h2",
-        "content": ""
+        "vertical_align": "center",
+        "flip_columns_desktop": false
       }
     },
     "section_hero_6Jyrcc": {
@@ -529,8 +448,8 @@
     "section_hero_Pc4c7p",
     "image_text_blocks",
     "section_image_text_blocks_hznqgT",
-    "section_icon_grid_creencias",
-    "section_our_values_homepage",
+    "section_image_text_blocks_creencias",
+    "section_image_text_blocks_valores",
     "section_hero_6Jyrcc"
   ]
 }
