@@ -29,6 +29,7 @@
     <div class="pmap__cards" id="pmap-cards"></div>
   </div>
 
+
 </div>
 
 <style>
@@ -142,7 +143,6 @@
     flex-wrap: wrap;
     gap: 6px;
     margin-bottom: 16px;
-    flex: 1;
   }
   .pmap__card-skill {
     background: #f0ece0;
@@ -169,104 +169,104 @@
   .pmap__card-btn:hover { background: #B8960C; }
 </style>
 
+<script type="application/json" id="profesores-data">
+[{%- for p in shop.metaobjects.profesores.values -%}{%- unless forloop.first -%},{%- endunless -%}{%- assign _photo = p.photo.value.preview.image | image_url: width: 200 -%}{"name":{{ p.name.value | json }},"city":{{ p.city.value | json }},"lat":{{ p.lat.value | default: "null" }},"lng":{{ p.lng.value | default: "null" }},"skills":{{ p.skills.value | json }},"telegram":{{ p.telegram_url.value | default: "" | json }},"photo":{{ _photo | json }},"active":{{ p.active.value | json }}}{%- endfor -%}]
+</script>
+
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-
-  var map = L.map('profesores-map', { scrollWheelZoom: false });
-
-  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>',
-    subdomains: 'abcd',
-    maxZoom: 19
-  }).addTo(map);
-
-  function makePin() {
-    var size = 32;
-    var svg = '<svg width="'+size+'" height="'+(size*1.4)+'" viewBox="0 0 32 44" xmlns="http://www.w3.org/2000/svg">'
-      + '<path d="M16 0C7.163 0 0 7.163 0 16c0 10 16 28 16 28S32 26 32 16C32 7.163 24.837 0 16 0z" fill="#D4AF37" stroke="#B8960C" stroke-width="1.5"/>'
-      + '<circle cx="16" cy="16" r="6" fill="white"/>'
-      + '</svg>';
-    return L.divIcon({
-      className: '',
-      html: svg,
-      iconSize:   [size, size*1.4],
-      iconAnchor: [size/2, size*1.4],
-      popupAnchor:[0, -(size*1.4)]
-    });
+(function() {
+  var profesores;
+  try {
+    profesores = JSON.parse(document.getElementById('profesores-data').textContent);
+  } catch(e) {
+    return;
   }
 
-  var profesores = [
-    {%- assign is_first = true -%}
-    {%- for p in shop.metaobjects.profesores.values -%}
-      {%- unless p.active.value == false -%}
-        {%- unless is_first -%},{%- endunless -%}
-        {
-          name:     {{ p.name.value | json }},
-          city:     {{ p.city.value | json }},
-          lat:      {{ p.lat.value | default: "null" }},
-          lng:      {{ p.lng.value | default: "null" }},
-          skills:   {{ p.skills.value | json }},
-          telegram: {{ p.telegram_url.value | default: "" | json }},
-          photo:    {{ p.photo.value | image_url: width: 200 | json }}
-        }
-        {%- assign is_first = false -%}
-      {%- endunless -%}
-    {%- endfor -%}
-  ];
+  profesores = profesores.filter(function(p) { return p.active !== false; });
 
-  function skillToSlug(str) {
-    return str.toLowerCase()
-      .replace(/[áàä]/g, 'a').replace(/[éèë]/g, 'e')
-      .replace(/[íìï]/g, 'i').replace(/[óòö]/g, 'o')
-      .replace(/[úùüû]/g, 'u').replace(/ñ/g, 'n')
-      .replace(/\s+/g, '-');
-  }
+  profesores.forEach(function(p) {
+    p.lat = parseFloat(p.lat);
+    p.lng = parseFloat(p.lng);
+    if (!p.lat || !p.lng) { p.lat = 40.4168; p.lng = -3.7038; }
+    p.skills = Array.isArray(p.skills) ? p.skills : [];
+  });
 
-  var params = new URLSearchParams(window.location.search);
-  var filtro = params.get('practica');
-  if (filtro) {
-    profesores = profesores.filter(function(p) {
-      return p.skills.some(function(s) {
-        return skillToSlug(s) === filtro;
+  try {
+    var map = L.map('profesores-map', { scrollWheelZoom: false });
+
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>',
+      subdomains: 'abcd',
+      maxZoom: 19
+    }).addTo(map);
+
+    function makePin() {
+      var size = 32;
+      var svg = '<svg width="'+size+'" height="'+(size*1.4)+'" viewBox="0 0 32 44" xmlns="http://www.w3.org/2000/svg">'
+        + '<path d="M16 0C7.163 0 0 7.163 0 16c0 10 16 28 16 28S32 26 32 16C32 7.163 24.837 0 16 0z" fill="#D4AF37" stroke="#B8960C" stroke-width="1.5"/>'
+        + '<circle cx="16" cy="16" r="6" fill="white"/>'
+        + '</svg>';
+      return L.divIcon({
+        className: '',
+        html: svg,
+        iconSize:   [size, size*1.4],
+        iconAnchor: [size/2, size*1.4],
+        popupAnchor:[0, -(size*1.4)]
       });
+    }
+
+    function skillToSlug(str) {
+      return str.toLowerCase()
+        .replace(/[áàä]/g, 'a').replace(/[éèë]/g, 'e')
+        .replace(/[íìï]/g, 'i').replace(/[óòö]/g, 'o')
+        .replace(/[úùüû]/g, 'u').replace(/ñ/g, 'n')
+        .replace(/\s+/g, '-');
+    }
+
+    var params = new URLSearchParams(window.location.search);
+    var filtro = params.get('practica');
+    if (filtro) {
+      profesores = profesores.filter(function(p) {
+        return p.skills.some(function(s) { return skillToSlug(s) === filtro; });
+      });
+    }
+
+    profesores.forEach(function(p) {
+      L.marker([p.lat, p.lng], { icon: makePin() })
+        .bindPopup(
+          '<div class="pmap-popup__name">' + p.name + '</div>' +
+          '<div class="pmap-popup__city">' + p.city + '</div>' +
+          '<hr class="pmap-popup__divider">' +
+          '<div class="pmap-popup__skills"><span class="pmap-popup__label">Especialidades:</span><br>' + p.skills.join(', ') + '</div>' +
+          (p.telegram ? '<a href="' + p.telegram + '" class="pmap-popup__btn" target="_blank" rel="noopener">CONTACTAR POR TELEGRAM</a>' : '')
+        )
+        .addTo(map);
     });
+
+    map.fitBounds([[27.4, -18.5], [43.8, 4.3]], { padding: [30, 30] });
+
+    var container = document.getElementById('pmap-cards');
+    profesores.forEach(function(p) {
+      var skillTags = p.skills.map(function(s) {
+        return '<span class="pmap__card-skill">' + s + '</span>';
+      }).join('');
+      var card = '<div class="pmap__card">'
+        + '<div class="pmap__card-header"></div>'
+        + '<div class="pmap__card-body">'
+        + '<div class="pmap__card-avatar">' + (p.photo ? '<img src="' + p.photo + '" alt="' + p.name + '">' : '🙏') + '</div>'
+        + '<div class="pmap__card-name">' + p.name + '</div>'
+        + '<div class="pmap__card-city">' + p.city + '</div>'
+        + '<div class="pmap__card-skills">' + skillTags + '</div>'
+        + (p.telegram ? '<a href="' + p.telegram + '" class="pmap__card-btn" target="_blank" rel="noopener">CONTACTAR POR TELEGRAM</a>' : '')
+        + '</div></div>';
+      container.innerHTML += card;
+    });
+
+  } catch(e) {
+    dbg('MAP ERROR: ' + e.message);
   }
-
-  profesores.forEach(function(p) {
-    L.marker([p.lat, p.lng], { icon: makePin() })
-      .bindPopup(
-        '<div class="pmap-popup__name">' + p.name + '</div>' +
-        '<div class="pmap-popup__city">' + p.city + '</div>' +
-        '<hr class="pmap-popup__divider">' +
-        '<div class="pmap-popup__skills"><span class="pmap-popup__label">Especialidades:</span><br>' + p.skills.join(', ') + '</div>' +
-        (p.telegram ? '<a href="' + p.telegram + '" class="pmap-popup__btn" target="_blank" rel="noopener">CONTACTAR POR TELEGRAM</a>' : '')
-      )
-      .addTo(map);
-  });
-
-  // Fit map to Spain including Canary Islands
-  map.fitBounds([[27.4, -18.5], [43.8, 4.3]], { padding: [30, 30] });
-
-  // Render cards
-  var container = document.getElementById('pmap-cards');
-  profesores.forEach(function(p) {
-    var skillTags = p.skills.map(function(s) {
-      return '<span class="pmap__card-skill">' + s + '</span>';
-    }).join('');
-    var card = '<div class="pmap__card">'
-      + '<div class="pmap__card-header"></div>'
-      + '<div class="pmap__card-body">'
-      + '<div class="pmap__card-avatar">' + (p.photo ? '<img src="' + p.photo + '" alt="' + p.name + '">' : '🙏') + '</div>'
-      + '<div class="pmap__card-name">' + p.name + '</div>'
-      + '<div class="pmap__card-city">' + p.city + '</div>'
-      + '<div class="pmap__card-skills">' + skillTags + '</div>'
-      + (p.telegram ? '<a href="' + p.telegram + '" class="pmap__card-btn" target="_blank" rel="noopener">CONTACTAR POR TELEGRAM</a>' : '')
-      + '</div></div>';
-    container.innerHTML += card;
-  });
-
-});
+})();
 </script>
 
 {% schema %}
