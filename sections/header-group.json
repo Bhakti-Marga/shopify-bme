@@ -15,14 +15,19 @@
       "type": "header",
       "settings": {
         "header_nav": "seed-header",
-        "button_link": "https://pages.bhaktimarga.org/es/proyecto-mantra",
-        "button_label": "Project Mantra",
+        "button_link": "",
+        "button_label": "",
         "announcement_text_color": "#ffffff",
         "announcement_bg_color": "#000000"
       }
+    },
+    "1777987203b7aa100f": {
+      "type": "_blocks",
+      "settings": {}
     }
   },
   "order": [
-    "header"
+    "header",
+    "1777987203b7aa100f"
   ]
 }

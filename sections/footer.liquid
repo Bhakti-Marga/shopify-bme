@@ -54,12 +54,19 @@
   /* Legal row */
   .site-footer__legal {
     display: flex;
-    flex-wrap: wrap;
+    justify-content: space-between;
     align-items: center;
-    gap: 12px 40px;
+    gap: 12px;
     font-size: 12px;
     color: rgba(255,255,255,0.5);
     margin-bottom: 20px;
+  }
+
+  .site-footer__legal-links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px 24px;
   }
 
   .site-footer__legal a {
@@ -73,7 +80,7 @@
     display: flex;
     align-items: center;
     gap: 12px;
-    margin-left: auto;
+    flex-shrink: 0;
   }
 
   .site-footer__social a {
@@ -103,11 +110,12 @@
       grid-template-columns: repeat(2, 1fr);
       row-gap: 32px;
     }
+    .site-footer__legal {
+      flex-direction: column;
+      align-items: flex-start;
+    }
     .site-footer__social {
-      margin-left: 0;
-      width: 100%;
-      order: -1;
-      margin-bottom: 8px;
+      margin-top: 8px;
     }
   }
 </style>
@@ -133,10 +141,12 @@
 
     {%- comment -%} BOTTOM ZONE — legal + socials + address {%- endcomment -%}
     <div class="site-footer__legal">
-      {% for link in subfooter_linklist.links %}
-        <a href="{{ link.url }}">{{ link.title }}</a>
-      {% endfor %}
-      <span>{{ 'now' | date: '%Y' }} Todos los derechos reservados</span>
+      <div class="site-footer__legal-links">
+        {% for link in subfooter_linklist.links %}
+          <a href="{{ link.url }}">{{ link.title }}</a>
+        {% endfor %}
+        <span>{{ 'now' | date: '%Y' }} Todos los derechos reservados</span>
+      </div>
 
       <ul class="site-footer__social" aria-label="Redes sociales">
         {% if settings.social_instagram != blank %}

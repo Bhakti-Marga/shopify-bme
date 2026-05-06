@@ -9,9 +9,50 @@
  */
 {
   "sections": {
-    "section_hero_EkgEmY": {
+    "section_hero_NpwwTP": {
       "type": "section__hero",
       "custom_css": [],
+      "name": "Solo Amor",
+      "settings": {
+        "padding_top": "0px",
+        "desktop_padding_top": "0px",
+        "padding_bottom": "40px",
+        "desktop_padding_bottom": "40px",
+        "padding_horizontal": "px-0",
+        "desktop_padding_horizontal": "inherit",
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "tabletl:mb-0",
+        "use_container": true,
+        "set_100vh": true,
+        "set_100vh_desktop": true,
+        "border_radius": 16,
+        "aspect_ratio": "4/3",
+        "aspect_ratio_desktop": "16/9",
+        "image": "shopify://shop_images/2024-07-20-p-1466.jpg",
+        "image_desktop": "shopify://shop_images/2024-07-20-p-1466.jpg",
+        "bg_color": "#16254c",
+        "content_width": "max-w-2xl",
+        "text_align": "text-left",
+        "text_color": "#ffffff",
+        "title": "Solo Amor",
+        "title_font_style": "h2",
+        "subtitle": "<p>Paramahamsa Vishwananda es un Maestro iluminado que enseña el camino del Amor o Bhakti.</p>",
+        "button_text": "Conócelo",
+        "button_url": "shopify://blogs/events/4-days-to-soul-awakening-with-paramahamsa-vishwananda",
+        "button_style": "btn",
+        "anchor_to_pricing": false,
+        "video_title": "",
+        "horizontal_position": "justify-start",
+        "vertical_position": "items-end"
+      }
+    },
+    "section_hero_EkgEmY": {
+      "type": "section__hero",
+      "disabled": true,
+      "custom_css": [],
+      "name": "Solo Amor",
       "settings": {
         "padding_top": "0px",
         "desktop_padding_top": "0px",
@@ -38,7 +79,7 @@
         "title": "Solo Amor",
         "title_font_style": "h2",
         "subtitle": "<p>Paramahamsa Vishwananda es un Maestro iluminado que enseña el camino del Amor o Bhakti.</p>",
-        "button_text": "Conócele",
+        "button_text": "Conócelo",
         "button_url": "shopify://blogs/events/4-days-to-soul-awakening-with-paramahamsa-vishwananda",
         "button_style": "btn",
         "anchor_to_pricing": false,
@@ -51,6 +92,7 @@
       "type": "section__hero",
       "disabled": true,
       "custom_css": [],
+      "name": "Descubrir el amor de Dios",
       "settings": {
         "padding_top": "0px",
         "desktop_padding_top": "0px",
@@ -89,6 +131,12 @@
     "section_events_carousel_KydBCi": {
       "type": "section__events-carousel",
       "blocks": {
+        "block_taQwA3": {
+          "type": "block",
+          "settings": {
+            "article": ""
+          }
+        },
         "block_mBTHLE": {
           "type": "block",
           "settings": {
@@ -131,6 +179,18 @@
             "article": "events-1/krishna-janmashtami-2025"
           }
         },
+        "block_fxMgGz": {
+          "type": "block",
+          "settings": {
+            "article": ""
+          }
+        },
+        "block_gFHLEg": {
+          "type": "block",
+          "settings": {
+            "article": ""
+          }
+        },
         "block_jY3pWq": {
           "type": "block",
           "settings": {
@@ -139,6 +199,7 @@
         }
       },
       "block_order": [
+        "block_taQwA3",
         "block_mBTHLE",
         "block_NqbVje",
         "block_wiAcxG",
@@ -146,9 +207,12 @@
         "block_FaGDjR",
         "block_iBnFGB",
         "block_HXgDWL",
+        "block_fxMgGz",
+        "block_gFHLEg",
         "block_jY3pWq"
       ],
       "custom_css": [],
+      "name": "Próximos Eventos",
       "settings": {
         "padding_top": "pt-xl",
         "padding_bottom": "pb-xxl",
@@ -165,7 +229,9 @@
     },
     "section_hero_nbPWj9": {
       "type": "section__hero",
+      "disabled": true,
       "custom_css": [],
+      "name": "Un maestro revolucionario",
       "settings": {
         "padding_top": "pt-0",
         "desktop_padding_top": "tabletl:pt-0",
@@ -179,7 +245,7 @@
         "desktop_margin_bottom": "inherit",
         "use_container": false,
         "set_100vh": false,
-        "set_100vh_desktop": true,
+        "set_100vh_desktop": false,
         "border_radius": 0,
         "aspect_ratio": "9/16",
         "aspect_ratio_desktop": "16/9",
@@ -200,9 +266,49 @@
         "vertical_position": "items-center"
       }
     },
-    "section_hero_Pc4c7p": {
+    "section_hero_z78CFm": {
       "type": "section__hero",
       "custom_css": [],
+      "name": "Recibe Darshan",
+      "settings": {
+        "padding_top": "pt-0",
+        "desktop_padding_top": "tabletl:pt-0",
+        "padding_bottom": "pb-0",
+        "desktop_padding_bottom": "inherit",
+        "padding_horizontal": "px-0",
+        "desktop_padding_horizontal": "inherit",
+        "margin_top": "mt-xl",
+        "margin_bottom": "mb-0",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "use_container": true,
+        "set_100vh": false,
+        "set_100vh_desktop": false,
+        "border_radius": 16,
+        "aspect_ratio": "9/16",
+        "aspect_ratio_desktop": "16/9",
+        "video": "shopify://files/videos/Darshan-Guruji.mp4",
+        "bg_color": "",
+        "content_width": "max-w-4xl",
+        "text_align": "text-center",
+        "text_color": "#ffffff",
+        "title": "Recibe Darshan",
+        "title_font_style": "h3",
+        "subtitle": "<p>Mira a los ojos del amor incondicional verdadero y deja que abra tu corazón. Su bendición te ayudará a encontrar un sentido más profundo a tu vida. </p>",
+        "button_text": "Próximos Darshan",
+        "button_url": "https://pages.bhaktimarga.org/in-person-darshan",
+        "button_style": "btn",
+        "anchor_to_pricing": false,
+        "video_title": "",
+        "horizontal_position": "justify-center",
+        "vertical_position": "items-center"
+      }
+    },
+    "section_hero_Pc4c7p": {
+      "type": "section__hero",
+      "disabled": true,
+      "custom_css": [],
+      "name": "Aquí hay un lugar para tí",
       "settings": {
         "padding_top": "8px",
         "desktop_padding_top": "tabletl:pt-0",
@@ -244,7 +350,7 @@
         "image": {
           "type": "image_block",
           "settings": {
-            "image": "shopify://shop_images/Rounded_Rectangle.png",
+            "image": "shopify://shop_images/Rounded_Rectangle_png.webp",
             "height": "auto",
             "desktop_height": "inherit"
           }
@@ -252,16 +358,16 @@
         "content": {
           "type": "content_block",
           "settings": {
-            "title": "Rezar por el mundo",
+            "title": "Reza por el mundo",
             "title_tag": "h2",
             "title_font_style": "h3",
-            "description": "<p>El amor es la mayor forma de oración.  Una vez al mes, únete a Paramahamsa Vishwananda en directo a través de una oración guiada por la paz mundial y por los necesitados.</p>",
+            "description": "<p>Una vez al mes, participa en directo junto a Paramahamsa Vishwananda en una oración guiada por Él por la paz mundial y por quienes más lo necesitan. Puedes enviar los nombres de tus seres queridos para que se rece por ellos.</p>",
             "credits": "",
             "cta_url": "https://events.bhaktimarga.org/pages/pray-for-the-world",
-            "cta_label": "Enviar una oración",
+            "cta_label": "Reza con Él",
             "text_align": "center",
             "desktop_text_align": "inherit",
-            "vertical_padding": "py-xxl",
+            "vertical_padding": "py-lg",
             "vertical_padding_desktop": "tabletl:py-xxl"
           }
         }
@@ -271,13 +377,57 @@
         "content"
       ],
       "custom_css": [],
+      "name": "Reza por el mundo",
       "settings": {
         "margin_top": "mt-xl",
         "margin_bottom": "mb-xl",
         "desktop_margin_top": "tabletl:mt-xl",
         "desktop_margin_bottom": "inherit",
-        "vertical_align": "top",
+        "vertical_align": "center",
         "flip_columns_desktop": false
+      }
+    },
+    "section_image_text_blocks_qhG8mq": {
+      "type": "section__image_text_blocks",
+      "blocks": {
+        "image_block_X4KGdB": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/project-mantra.jpg",
+            "height": "auto",
+            "desktop_height": "auto"
+          }
+        },
+        "content_block_wAmhfC": {
+          "type": "content_block",
+          "settings": {
+            "title": "Recita el mantra",
+            "title_tag": "h2",
+            "title_font_style": "h3",
+            "description": "<p>A través del canto de mantras —una forma de meditación sencilla pero poderosa— se despierta una alegría profunda y duradera. Durante 40 días, este programa gratuito y guiado te acompaña para desarrollar y consolidar esta práctica. Es ideal tanto para principiantes como para practicantes avanzados.</p>",
+            "credits": "",
+            "cta_url": "https://pages.bhaktimarga.org/project-mantra",
+            "cta_label": "Acepta el reto",
+            "text_align": "center",
+            "desktop_text_align": "inherit",
+            "vertical_padding": "py-lg",
+            "vertical_padding_desktop": "tabletl:py-xxl"
+          }
+        }
+      },
+      "block_order": [
+        "image_block_X4KGdB",
+        "content_block_wAmhfC"
+      ],
+      "custom_css": [],
+      "name": "Recita el mantra",
+      "settings": {
+        "margin_top": "mt-xl",
+        "margin_bottom": "mb-xl",
+        "desktop_margin_top": "tabletl:mt-xl",
+        "desktop_margin_bottom": "inherit",
+        "vertical_align": "center",
+        "flip_columns_desktop": true
       }
     },
     "section_image_text_blocks_hznqgT": {
@@ -312,7 +462,9 @@
         "image_block_ckKFYY",
         "content_block_FnWaaW"
       ],
+      "disabled": true,
       "custom_css": [],
+      "name": "Satsang diario en el teplo",
       "settings": {
         "margin_top": "mt-0",
         "margin_bottom": "mb-xl",
@@ -354,7 +506,9 @@
         "image_block_creencias",
         "content_block_creencias"
       ],
+      "disabled": true,
       "custom_css": [],
+      "name": "Nuestras creencias",
       "settings": {
         "margin_top": "mt-xl",
         "margin_bottom": "mb-xl",
@@ -396,7 +550,9 @@
         "image_block_valores",
         "content_block_valores"
       ],
+      "disabled": true,
       "custom_css": [],
+      "name": "Nuestros valores",
       "settings": {
         "margin_top": "mt-0",
         "margin_bottom": "mb-xl",
@@ -406,9 +562,341 @@
         "flip_columns_desktop": true
       }
     },
-    "section_hero_6Jyrcc": {
+    "section_image_text_blocks_8DrFQT": {
+      "type": "section__image_text_blocks",
+      "blocks": {
+        "image_block_VNGzVB": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/Bhutabhrteshwarnath_Mandir_Inauguration.jpg",
+            "height": "auto",
+            "desktop_height": "auto"
+          }
+        },
+        "content_block_iR9gQz": {
+          "type": "content_block",
+          "settings": {
+            "title": "Visita un templo",
+            "title_tag": "h2",
+            "title_font_style": "h3",
+            "description": "<p>Los templos son centros espirituales dedicados a ayudarte a llevar más amor y devoción a tu vida cotidiana.</p>",
+            "credits": "",
+            "cta_url": "https://pages.bhaktimarga.org/project-mantra",
+            "cta_label": "Encuentra un templo",
+            "text_align": "center",
+            "desktop_text_align": "inherit",
+            "vertical_padding": "py-lg",
+            "vertical_padding_desktop": "tabletl:py-xxl"
+          }
+        }
+      },
+      "block_order": [
+        "image_block_VNGzVB",
+        "content_block_iR9gQz"
+      ],
+      "disabled": true,
+      "custom_css": [],
+      "name": "Visita un templo",
+      "settings": {
+        "margin_top": "mt-xl",
+        "margin_bottom": "mb-xl",
+        "desktop_margin_top": "tabletl:mt-xl",
+        "desktop_margin_bottom": "inherit",
+        "vertical_align": "center",
+        "flip_columns_desktop": false
+      }
+    },
+    "section_image_text_blocks_rLEA9M": {
+      "type": "section__image_text_blocks",
+      "blocks": {
+        "image_block_enkTtA": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/encuentros.jpg",
+            "height": "auto",
+            "desktop_height": "auto"
+          }
+        },
+        "content_block_MeW4qK": {
+          "type": "content_block",
+          "settings": {
+            "title": "Encuentros locales",
+            "title_tag": "h2",
+            "title_font_style": "h3",
+            "description": "<p>Participa en programas con comunidades cercanas.</p>",
+            "credits": "",
+            "cta_url": "https://pages.bhaktimarga.org/project-mantra",
+            "cta_label": "Próximos encuentros",
+            "text_align": "center",
+            "desktop_text_align": "inherit",
+            "vertical_padding": "py-lg",
+            "vertical_padding_desktop": "tabletl:py-xxl"
+          }
+        }
+      },
+      "block_order": [
+        "image_block_enkTtA",
+        "content_block_MeW4qK"
+      ],
+      "disabled": true,
+      "custom_css": [],
+      "name": "Encuentros locales",
+      "settings": {
+        "margin_top": "mt-xl",
+        "margin_bottom": "mb-xl",
+        "desktop_margin_top": "tabletl:mt-xl",
+        "desktop_margin_bottom": "inherit",
+        "vertical_align": "center",
+        "flip_columns_desktop": true
+      }
+    },
+    "section_image_text_blocks_GgjxDy": {
+      "type": "section__image_text_blocks",
+      "blocks": {
+        "image_block_7QiKaq": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/BG.jpg",
+            "height": "auto",
+            "desktop_height": "auto"
+          }
+        },
+        "content_block_FpRKKT": {
+          "type": "content_block",
+          "settings": {
+            "title": "Programas online",
+            "title_tag": "h2",
+            "title_font_style": "h3",
+            "description": "<p>Nos reunimos online para unirnos y profundizar en el camino del bhakti.</p>",
+            "credits": "",
+            "cta_url": "https://pages.bhaktimarga.org/project-mantra",
+            "cta_label": "Próximos programas",
+            "text_align": "center",
+            "desktop_text_align": "inherit",
+            "vertical_padding": "py-lg",
+            "vertical_padding_desktop": "tabletl:py-xxl"
+          }
+        }
+      },
+      "block_order": [
+        "image_block_7QiKaq",
+        "content_block_FpRKKT"
+      ],
+      "disabled": true,
+      "custom_css": [],
+      "name": "Programas online",
+      "settings": {
+        "margin_top": "mt-xl",
+        "margin_bottom": "mb-xl",
+        "desktop_margin_top": "tabletl:mt-xl",
+        "desktop_margin_bottom": "inherit",
+        "vertical_align": "center",
+        "flip_columns_desktop": false
+      }
+    },
+    "section_hero_k9kPtn": {
       "type": "section__hero",
       "custom_css": [],
+      "name": "Visita un templo",
+      "settings": {
+        "padding_top": "8px",
+        "desktop_padding_top": "tabletl:pt-0",
+        "padding_bottom": "8px",
+        "desktop_padding_bottom": "inherit",
+        "padding_horizontal": "px-0",
+        "desktop_padding_horizontal": "inherit",
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "desktop_margin_top": "tabletl:mt-xl",
+        "desktop_margin_bottom": "inherit",
+        "use_container": true,
+        "set_100vh": false,
+        "set_100vh_desktop": false,
+        "border_radius": 16,
+        "aspect_ratio": "1/1",
+        "aspect_ratio_desktop": "16/9",
+        "image": "shopify://shop_images/visita-mobile.jpg",
+        "image_desktop": "shopify://shop_images/visita.jpg",
+        "bg_color": "",
+        "content_width": "max-w-lg",
+        "text_align": "text-left",
+        "text_color": "#ffffff",
+        "title": "Visita un templo",
+        "title_font_style": "h3",
+        "subtitle": "<p>Los templos son centros espirituales dedicados a ayudarte a llevar más amor y devoción a tu vida cotidiana.</p>",
+        "button_text": "Encuentra un templo",
+        "button_url": "shopify://pages/templos",
+        "button_style": "btn",
+        "anchor_to_pricing": false,
+        "video_title": "",
+        "horizontal_position": "justify-start",
+        "vertical_position": "items-end"
+      }
+    },
+    "17779777429721abd3": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_7ef7938_VbkDtf": {
+          "type": "ai_gen_block_7ef7938",
+          "settings": {
+            "desktop_width_percent": 100,
+            "column_gap": 24,
+            "container_bg_color": "#ffffff",
+            "image_1": "shopify://shop_images/encuentros-locales-2.jpg",
+            "heading_1": "Atiende un encuentro local",
+            "text_1": "Participa en programas con comunidades cercanas.",
+            "button_text_1": "Próximos encuentros",
+            "button_url_1": "shopify://pages/calendario",
+            "image_2": "shopify://shop_images/BG-2.jpg",
+            "heading_2": "Toma un programa online",
+            "text_2": "Nos reunimos online para unirnos y profundizar en el camino del bhakti.",
+            "button_text_2": "Próximos programas online",
+            "button_url_2": "",
+            "content_top_padding": 35,
+            "content_padding": 20,
+            "heading_size": 44,
+            "heading_color": "#ffffff",
+            "text_color": "#ffffff",
+            "text_spacing": 12,
+            "button_spacing": 16,
+            "button_bg_color": "#ffffff",
+            "button_text_color": "#000000",
+            "button_padding_vertical": 12,
+            "button_padding_horizontal": 24
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_7ef7938_VbkDtf"
+      ],
+      "name": "Encuentros/programas",
+      "settings": {}
+    },
+    "section_hero_AiHVCV": {
+      "type": "section__hero",
+      "custom_css": [],
+      "name": "Únete a Bhakti+",
+      "settings": {
+        "padding_top": "0px",
+        "desktop_padding_top": "0px",
+        "padding_bottom": "0px",
+        "desktop_padding_bottom": "0px",
+        "padding_horizontal": "px-0",
+        "desktop_padding_horizontal": "tabletl:px-0",
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "desktop_margin_top": "tabletl:mt-0",
+        "desktop_margin_bottom": "tabletl:mb-0",
+        "use_container": false,
+        "set_100vh": true,
+        "set_100vh_desktop": false,
+        "border_radius": 0,
+        "aspect_ratio": "auto",
+        "aspect_ratio_desktop": "16/9",
+        "image": "shopify://shop_images/unsubscribed-hero-bg-CU32zjo0_png.webp",
+        "image_desktop": "shopify://shop_images/unsubscribed-hero-bg-CU32zjo0_png.webp",
+        "bg_color": "",
+        "content_width": "max-w-3xl",
+        "text_align": "text-center",
+        "text_color": "#ffffff",
+        "title": "Únete a Bhakti+",
+        "title_font_style": "h3",
+        "subtitle": "<p>Como Netflix pero con toda la sabiduría de Paramahamsa Vishwananda.<br/>Disfrútala donde quieras, cuando quieras. Disponible en Español.</p>",
+        "button_text": "Más información",
+        "button_url": "https://bhakti.plus/es/es",
+        "button_style": "btn",
+        "anchor_to_pricing": false,
+        "video_title": "",
+        "horizontal_position": "justify-center",
+        "vertical_position": "items-center"
+      }
+    },
+    "section_hero_7PWVQ7": {
+      "type": "section__hero",
+      "disabled": true,
+      "custom_css": [],
+      "name": "Únete a Bhakti+ (container)",
+      "settings": {
+        "padding_top": "8px",
+        "desktop_padding_top": "tabletl:pt-0",
+        "padding_bottom": "8px",
+        "desktop_padding_bottom": "inherit",
+        "padding_horizontal": "px-0",
+        "desktop_padding_horizontal": "inherit",
+        "margin_top": "mt-xl",
+        "margin_bottom": "mb-xl",
+        "desktop_margin_top": "tabletl:mt-xl",
+        "desktop_margin_bottom": "inherit",
+        "use_container": true,
+        "set_100vh": false,
+        "set_100vh_desktop": false,
+        "border_radius": 16,
+        "aspect_ratio": "9/16",
+        "aspect_ratio_desktop": "16/9",
+        "image": "shopify://shop_images/HOME-PAGE-Place_For_You-MOBILE.jpg",
+        "image_desktop": "shopify://shop_images/unsubscribed-hero-bg-CU32zjo0_png.webp",
+        "bg_color": "",
+        "content_width": "max-w-3xl",
+        "text_align": "text-center",
+        "text_color": "#ffffff",
+        "title": "Únete a Bhakti+",
+        "title_font_style": "h3",
+        "subtitle": "<p>Como Netflix pero con toda la sabiduría de Paramahamsa Vishwananda.<br/>Disfrútala donde quieras, cuando quieras. Disponible en Español.</p>",
+        "button_text": "Más información",
+        "button_url": "shopify://pages/bhakti-sundays",
+        "button_style": "btn",
+        "anchor_to_pricing": false,
+        "video_title": "",
+        "horizontal_position": "justify-center",
+        "vertical_position": "items-center"
+      }
+    },
+    "section_hero_EepXE4": {
+      "type": "section__hero",
+      "disabled": true,
+      "custom_css": [],
+      "name": "Aquí hay un lugar para tí",
+      "settings": {
+        "padding_top": "0px",
+        "desktop_padding_top": "0px",
+        "padding_bottom": "0px",
+        "desktop_padding_bottom": "0px",
+        "padding_horizontal": "px-0",
+        "desktop_padding_horizontal": "tabletl:px-0",
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "desktop_margin_top": "tabletl:mt-0",
+        "desktop_margin_bottom": "tabletl:mb-0",
+        "use_container": false,
+        "set_100vh": false,
+        "set_100vh_desktop": false,
+        "border_radius": 0,
+        "aspect_ratio": "4/3",
+        "aspect_ratio_desktop": "16/9",
+        "image": "shopify://shop_images/HOME-PAGE-Place_For_You-MOBILE.jpg",
+        "image_desktop": "shopify://shop_images/HOME-PAGE-PLACE-FOR-YOU-Edit.jpg",
+        "bg_color": "",
+        "content_width": "max-w-2xl",
+        "text_align": "text-left",
+        "text_color": "#ffffff",
+        "title": "Aquí hay un lugar para ti.",
+        "title_font_style": "h3",
+        "subtitle": "<p>Somos una comunidad que se reúne semanalmente para unirnos y profundizar en el camino del <em>bhakti</em>.</p>",
+        "button_text": "Encuentra una Sangha",
+        "button_url": "shopify://pages/bhakti-sundays",
+        "button_style": "btn",
+        "anchor_to_pricing": false,
+        "video_title": "",
+        "horizontal_position": "justify-start",
+        "vertical_position": "items-center"
+      }
+    },
+    "section_hero_6Jyrcc": {
+      "type": "section__hero",
+      "disabled": true,
+      "custom_css": [],
+      "name": "Empezar ahora",
       "settings": {
         "padding_top": "0px",
         "desktop_padding_top": "0px",
@@ -426,7 +914,6 @@
         "border_radius": 0,
         "aspect_ratio": "auto",
         "aspect_ratio_desktop": "16/9",
-        "image": "shopify://shop_images/Revolutionary_Master_b89ce6b5-cd05-4996-a1d1-924cd49c7ccf.jpg",
         "image_desktop": "shopify://shop_images/2018-12-07-p-0245.jpg",
         "bg_color": "rgba(0,0,0,0)",
         "content_width": "max-w-5xl",
@@ -446,15 +933,26 @@
     }
   },
   "order": [
+    "section_hero_NpwwTP",
     "section_hero_EkgEmY",
     "section_hero_zpbgVf",
     "section_events_carousel_KydBCi",
     "section_hero_nbPWj9",
+    "section_hero_z78CFm",
     "section_hero_Pc4c7p",
     "image_text_blocks",
+    "section_image_text_blocks_qhG8mq",
     "section_image_text_blocks_hznqgT",
     "section_image_text_blocks_creencias",
     "section_image_text_blocks_valores",
+    "section_image_text_blocks_8DrFQT",
+    "section_image_text_blocks_rLEA9M",
+    "section_image_text_blocks_GgjxDy",
+    "section_hero_k9kPtn",
+    "17779777429721abd3",
+    "section_hero_AiHVCV",
+    "section_hero_7PWVQ7",
+    "section_hero_EepXE4",
     "section_hero_6Jyrcc"
   ]
 }

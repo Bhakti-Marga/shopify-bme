@@ -1,6 +1,6 @@
 # needs.md — BhaktiMarga España Shopify Store
 
-> Status audit: 2026-04-18
+> Status audit: 2026-04-29
 > Theme: SEED v1.0.0 — d016j0-nz.myshopify.com
 > Entity: Asociación Bhakti Marga España — CIF G76198209
 > Based on: darshan.md · legal.md · admin-url-changes.md · snippets and translation.md · theme audit

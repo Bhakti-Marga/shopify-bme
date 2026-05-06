@@ -16,7 +16,9 @@
     },
     "section_hero_cBpMpY": {
       "type": "section__hero",
+      "disabled": true,
       "custom_css": [],
+      "name": "El maestro revolucionario",
       "settings": {
         "padding_top": "0px",
         "desktop_padding_top": "inherit",
@@ -41,8 +43,8 @@
         "text_align": "text-left",
         "text_color": "#ffffff",
         "title": "El maestro revolucionario que transforma el mundo moderno",
-        "title_font_style": "h3",
-        "subtitle": "<p>Paramahamsa Vishwananda es una fuerza transformadora para nuestro tiempo. Está redefiniendo el <em>bhakti-yoga</em> para el siglo XXI, haciendo que la sabiduría ancestral sea accesible y relevante para todos.</p>",
+        "title_font_style": "h2",
+        "subtitle": "<p>Paramahamsa Vishwananda es una fuerza transformadora para nuestro tiempo. Está redefiniendo el bhaki yoga para el siglo XXI, haciendo que la sabiduría ancestral sea accesible y relevante para todos.</p>",
         "button_text": "",
         "button_url": "",
         "button_style": "btn",
@@ -52,13 +54,16 @@
         "vertical_position": "items-end"
       }
     },
-    "section_hero_EmDBMy": {
+    "section_hero_PnwkDm": {
       "type": "section__hero",
+      "disabled": true,
+      "custom_css": [],
+      "name": "Un maestro revolucionario",
       "settings": {
         "padding_top": "0px",
-        "desktop_padding_top": "0px",
+        "desktop_padding_top": "inherit",
         "padding_bottom": "0px",
-        "desktop_padding_bottom": "inherit",
+        "desktop_padding_bottom": "0px",
         "padding_horizontal": "px-0",
         "desktop_padding_horizontal": "inherit",
         "margin_top": "mt-0",
@@ -66,19 +71,57 @@
         "desktop_margin_top": "inherit",
         "desktop_margin_bottom": "inherit",
         "use_container": false,
-        "set_100vh": false,
+        "set_100vh": true,
         "set_100vh_desktop": true,
         "border_radius": 0,
-        "aspect_ratio": "9/16",
-        "aspect_ratio_desktop": "16/9",
-        "image": "shopify://shop_images/Image_Open_Hearts_of_Humanity-edit.jpg",
-        "bg_color": "",
-        "content_width": "max-w-5xl",
+        "aspect_ratio": "auto",
+        "aspect_ratio_desktop": "4/3",
+        "video_desktop": "shopify://files/videos/2025-02-12-BM3Web-GurujiMontage-Loop-04.mp4",
+        "bg_color": "#16254c",
+        "content_width": "max-w-3xl",
         "text_align": "text-center",
         "text_color": "#ffffff",
-        "title": "Paramahamsa Sri Swami Vishwananda: \"Mi misión es abrir los corazones de la humanidad\".",
-        "title_font_style": "h3",
-        "subtitle": "<p>Solo alguien que conoce a Dios puede guiarte hacia la meta final</p>",
+        "title": "Un maestro revolucionario de nuestro tiempo.",
+        "title_font_style": "h2",
+        "subtitle": "<p>Paramahamsa Vishwananda es un maestro iluminado y Satguru viviente que nos da  directa experiencia al Amor Divino.</p>",
+        "button_text": "",
+        "button_url": "",
+        "button_style": "btn",
+        "anchor_to_pricing": false,
+        "video_title": "",
+        "horizontal_position": "justify-center",
+        "vertical_position": "items-center"
+      }
+    },
+    "section_hero_fPFMDP": {
+      "type": "section__hero",
+      "custom_css": [],
+      "name": "Un maestro revolucionario",
+      "settings": {
+        "padding_top": "0px",
+        "desktop_padding_top": "inherit",
+        "padding_bottom": "0px",
+        "desktop_padding_bottom": "0px",
+        "padding_horizontal": "px-0",
+        "desktop_padding_horizontal": "inherit",
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "use_container": false,
+        "set_100vh": true,
+        "set_100vh_desktop": true,
+        "border_radius": 0,
+        "aspect_ratio": "auto",
+        "aspect_ratio_desktop": "4/3",
+        "video_desktop": "shopify://files/videos/guruji.mp4",
+        "bg_color": "#16254c",
+        "content_width": "max-w-3xl",
+        "text_align": "text-center",
+        "text_color": "#ffffff",
+        "title": "Un maestro revolucionario de nuestro tiempo.",
+        "title_font_style": "h2",
+        "subtitle": "<p>Paramahamsa Vishwananda es un maestro iluminado y Satguru viviente que nos da  directa experiencia al Amor Divino.</p>",
         "button_text": "",
         "button_url": "",
         "button_style": "btn",
@@ -172,45 +215,41 @@
         "flip_columns_desktop": true
       }
     },
-    "section_image_text_blocks_94GqbY": {
-      "type": "section__image_text_blocks",
-      "blocks": {
-        "image_block_wUVFUh": {
-          "type": "image_block",
-          "settings": {
-            "image": "shopify://shop_images/themaster-splitimg3.jpg",
-            "height": "auto",
-            "desktop_height": "inherit"
-          }
-        },
-        "content_block_tpUJcx": {
-          "type": "content_block",
-          "settings": {
-            "title": "",
-            "title_tag": "h2",
-            "title_font_style": "h3",
-            "description": "<p><em>\"Bhakti Marga no es un grupo cerrado. Es una conciencia abierta a todos. '</em>Bhakti'<em>significa amor y este amor es un amor universal que todo el mundo lleva consigo. 'Marga' significa el camino hacia ese amor dentro del propio corazón, así que todo el mundo forma parte de Bhakti Marga\".</em></p>",
-            "credits": "PARAMAHAMSA VISHWANANDA",
-            "cta_url": "",
-            "cta_label": "",
-            "text_align": "left",
-            "desktop_text_align": "inherit",
-            "vertical_padding": "py-lg",
-            "vertical_padding_desktop": "tabletl:py-xxl"
-          }
-        }
-      },
-      "block_order": [
-        "image_block_wUVFUh",
-        "content_block_tpUJcx"
-      ],
+    "section_hero_EmDBMy": {
+      "type": "section__hero",
+      "name": "Mi misión",
       "settings": {
-        "margin_top": "mt-xl",
+        "padding_top": "0px",
+        "desktop_padding_top": "0px",
+        "padding_bottom": "0px",
+        "desktop_padding_bottom": "inherit",
+        "padding_horizontal": "px-0",
+        "desktop_padding_horizontal": "inherit",
+        "margin_top": "mt-0",
         "margin_bottom": "mb-0",
-        "desktop_margin_top": "tabletl:mt-xl",
-        "desktop_margin_bottom": "tabletl:mb-xl",
-        "vertical_align": "center",
-        "flip_columns_desktop": false
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "use_container": false,
+        "set_100vh": false,
+        "set_100vh_desktop": true,
+        "border_radius": 0,
+        "aspect_ratio": "9/16",
+        "aspect_ratio_desktop": "16/9",
+        "image": "shopify://shop_images/Image_Open_Hearts_of_Humanity-edit.jpg",
+        "bg_color": "",
+        "content_width": "max-w-5xl",
+        "text_align": "text-center",
+        "text_color": "#ffffff",
+        "title": "\"Mi misión es abrir los corazones de la humanidad\"",
+        "title_font_style": "h3",
+        "subtitle": "<p>– Paramahamsa Sri Swami Vishwananda<br/>Solo alguien que conoce a Dios puede guiarte hacia la meta final</p>",
+        "button_text": "",
+        "button_url": "",
+        "button_style": "btn",
+        "anchor_to_pricing": false,
+        "video_title": "",
+        "horizontal_position": "justify-center",
+        "vertical_position": "items-center"
       }
     },
     "section_quote_blocks_gmdNRL": {
@@ -258,19 +297,19 @@
         "image_block_WfcQqw": {
           "type": "image_block",
           "settings": {
-            "image": "shopify://shop_images/THE-MASTER-FACTS-01_d68c1f57-6538-4788-b73e-e1bb2e78e2af.png"
+            "image": "shopify://shop_images/stats-2.png"
           }
         },
         "image_block_9UWt9D": {
           "type": "image_block",
           "settings": {
-            "image": "shopify://shop_images/THE-MASTER-FACTS-02_64f8524d-7b55-4e26-9e80-a7d8513ba09e.png"
+            "image": "shopify://shop_images/stats-1.png"
           }
         },
         "image_block_YzmY34": {
           "type": "image_block",
           "settings": {
-            "image": "shopify://shop_images/THE-MASTER-FACTS-03_8eb87d8e-a0f8-467f-b8ef-ea1df986ba8f.png"
+            "image": "shopify://shop_images/stats-3.png"
           }
         }
       },
@@ -296,6 +335,47 @@
         "text": "<p>Los verdaderos <em>satgurus</em> son raros y realmente especiales. No tienen intenciones ocultas: todo lo que hacen es por el bienestar espiritual de los demás. Un <em>satguru</em> nos ve como realmente somos, comprendiendo nuestros puntos fuertes y nuestras luchas de un modo que no siempre podemos ver nosotros mismos. Con una visión profunda, nos guía con amor, ofreciéndonos la transformación que necesitamos, sin esperar nada a cambio. Su misión es sencilla: ayudarnos a convertirnos en la mejor versión de nosotros mismos, y lo hacen con un corazón lleno de gracia.</p>",
         "cta_url": "",
         "cta_label": ""
+      }
+    },
+    "section_image_text_blocks_94GqbY": {
+      "type": "section__image_text_blocks",
+      "blocks": {
+        "image_block_wUVFUh": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/themaster-splitimg3.jpg",
+            "height": "auto",
+            "desktop_height": "inherit"
+          }
+        },
+        "content_block_tpUJcx": {
+          "type": "content_block",
+          "settings": {
+            "title": "",
+            "title_tag": "h2",
+            "title_font_style": "h3",
+            "description": "<p><em>\"Bhakti Marga no es un grupo cerrado. Es una conciencia abierta a todos. '</em>Bhakti'<em>significa amor y este amor es un amor universal que todo el mundo lleva consigo. 'Marga' significa el camino hacia ese amor dentro del propio corazón, así que todo el mundo forma parte de Bhakti Marga\".</em></p>",
+            "credits": "PARAMAHAMSA VISHWANANDA",
+            "cta_url": "",
+            "cta_label": "",
+            "text_align": "left",
+            "desktop_text_align": "inherit",
+            "vertical_padding": "py-lg",
+            "vertical_padding_desktop": "tabletl:py-xxl"
+          }
+        }
+      },
+      "block_order": [
+        "image_block_wUVFUh",
+        "content_block_tpUJcx"
+      ],
+      "settings": {
+        "margin_top": "mt-xl",
+        "margin_bottom": "mb-0",
+        "desktop_margin_top": "tabletl:mt-xl",
+        "desktop_margin_bottom": "tabletl:mb-xl",
+        "vertical_align": "center",
+        "flip_columns_desktop": false
       }
     },
     "section_playlist_WUtnJ6": {
@@ -461,19 +541,66 @@
         "title": "<p>Sigue @Paramahamsa_Vishwananda </p>",
         "title_icon": "x"
       }
+    },
+    "section_content_grid_ary3mf": {
+      "type": "section__content-grid",
+      "blocks": {
+        "content_block_xfE7TF": {
+          "type": "content_block",
+          "settings": {
+            "title": "",
+            "title_tag": "h2",
+            "title_font_style": "h4",
+            "description": "",
+            "cta_link": "",
+            "cta_label": "",
+            "cta_style": "btn btn--black text-white",
+            "cta_klaviyo_embed": ""
+          }
+        }
+      },
+      "block_order": [
+        "content_block_xfE7TF"
+      ],
+      "name": "Content Grid",
+      "settings": {
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "padding_top": "pt-0",
+        "padding_bottom": "pb-0",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "desktop_padding_top": "inherit",
+        "desktop_padding_bottom": "inherit",
+        "bg_color": "",
+        "cols_mobile": "1",
+        "cols_desktop": "2",
+        "horizontal_gap_mobile": "gap-x-md",
+        "horizontal_gap_desktop": "tabletl:gap-x-md",
+        "vertical_gap_mobile": "gap-y-md",
+        "vertical_gap_desktop": "tabletl:gap-y-md",
+        "format": "inside",
+        "text_color": "#000",
+        "apply_gradient": false,
+        "gradient_height": 40,
+        "gradient_color": "#000"
+      }
     }
   },
   "order": [
     "main",
     "section_hero_cBpMpY",
-    "section_hero_EmDBMy",
+    "section_hero_PnwkDm",
+    "section_hero_fPFMDP",
     "section_image_text_blocks_PHhidM",
     "section_image_text_blocks_Kixczp",
-    "section_image_text_blocks_94GqbY",
+    "section_hero_EmDBMy",
     "section_quote_blocks_gmdNRL",
     "section_grid_images_ywkfnd",
+    "section_image_text_blocks_94GqbY",
     "section_playlist_WUtnJ6",
     "section_social_3Fr3Cy",
-    "section_social_cRkwRq"
+    "section_social_cRkwRq",
+    "section_content_grid_ary3mf"
   ]
 }

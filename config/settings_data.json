@@ -25,12 +25,18 @@
         "settings": {
           "footer_nav": "seed-footer",
           "subfooter_nav": "seed-subfooter",
-          "contact_title": "",
-          "contact_body": "<p>Asociación<br/>BHAKTI MARGA ESPAÑA <br/>CIF G76198209<br/>Calle Pablo Picasso, 11<br/>29719 Benamocarra (Málaga)<br/><br/>Email: <a href=\"mailto:spain@bhaktimarga.es\" title=\"mailto:spain@bhaktimarga.es\">spain@bhaktimarga.es</a><br/><br/><a href=\"/pages/ayuda\" title=\"Help Center\">Centro Ayuda</a><br/><a href=\"/pages/contacto\" title=\"Contact\">Contactanos</a></p>"
+          "legal_address": "Asociación BHAKTI MARGA ESPAÑA, CIF G76198209. Calle Pablo Picasso, 11, 29719 Benamocarra, Málaga. Email: spain@bhaktimarga.es."
         }
       }
     },
-    "content_for_index": []
+    "content_for_index": [],
+    "blocks": {
+      "341186785192672687": {
+        "type": "shopify://apps/seal-subscriptions/blocks/subscription-script-append/13b25004-a140-4ab7-b5fe-29918f759699",
+        "disabled": false,
+        "settings": {}
+      }
+    }
   },
   "platform_customizations": {
     "custom_css": []

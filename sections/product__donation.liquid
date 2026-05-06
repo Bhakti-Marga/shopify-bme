@@ -7,6 +7,12 @@
 {%- capture carousel_options -%}
   {
     "slidesPerView": "auto",
+    "freeMode": true,
+    "touchRatio": 1,
+    "momentum": true,
+    "mousewheel": {
+      "forceToAxis": true
+    },
     "loop": false,
     "spaceBetween": "16",
     "pagination": {
@@ -17,8 +23,8 @@
   }
 {%- endcapture -%}
 
-<s-donation role="section" class="product block container py-md tabletl:py-xl" data-section-id="{{ section.id }}">
-  <a class="skip-to-content-link sr-only" href="#ProductInfo-{{ section.id }}">Ir a la información del producto</a>
+<s-product role="section" class="product block container py-md tabletl:py-xl" data-section-id="{{ section.id }}">
+  <a class="skip-to-content-link sr-only" href="#ProductInfo-{{ section.id }}">Skip to product information</a>
   <div class="product__layout tabletl:grid tabletl:grid-cols-2 tabletl:gap-md">
     <div class="product__images">
       <s-carousel data-init="belowLaptop" data-options='{{carousel_options}}'>
@@ -61,118 +67,92 @@
 
     <div class="product__information h-[min-content] py-lg tabletl:py-xl tabletl:px-xxl tabletl:sticky tabletl:top-[var(--header-height)]" id="ProductInfo-{{ section.id }}">
       <h1 class="product__title h5 leading-tight mb-lg">{{ product.title }}</h1>
-      <div class="product__description text-14 mb-lg">{{ product.description }}</div>
+      <div class="product__price mb-lg text-18 tabletl:text-20" js-price>{{current_variant.price | money }}</div>
+      {% if product.metafields.event.date_time != blank or product.metafields.event.teacher != blank or product.metafields.event.location != blank %}
+        <div class="product__event-info-wrapper mb-lg text-18 tabletl:text-20">
+          {% if product.metafields.event.date_time != blank %}
+            <p class="font-700">{{ product.metafields.event.date_time }}</p>
+          {% endif %}
+          {% if product.metafields.event.teacher != blank %}
+            <p class="mt-sm">{{ product.metafields.event.teacher }}</p>
+          {% endif %}
+          {% if product.metafields.event.type != blank and product.metafields.event.location != blank %}
+            {%- assign event_type = product.metafields.event.type | downcase -%}
+              {%- if event_type contains "in-person" -%}
+                <p class="mt-sm">{{ product.metafields.event.location }}</p>
+              {%- endif -%}
+          {% endif %}
+        </div>
+      {% endif %}
+      <div class="product__description text-16 mb-lg tabletl:text-18">{{ product.description }}</div>
       {%- comment -%}
         * Product Form
       {%- endcomment -%}
-      {%- form 'product', product, id: product_form_id, class: 'form flex flex-col gap-[24px]', novalidate: 'novalidate', js-product-form: true -%}
-
-
-        <div class="flex gap-[4px] p-[16px] border border-solid border-gray-light w-full rounded-[50px] text-16 font-600 leading-6">
-          <span class="text-gray-light" js-currency-symbol>{{ cart.currency.symbol }}</span>
-          <input
-            class="w-full bg-transparent text-black outline-none"
-            type="number"
-            name="quantity"
-            id="DonationAmount"
-            placeholder="{{ 1000 | money_without_currency }}"
-            min="0"
-            step="1"
-            pattern="[0-9]*"
-            inputmode="numeric"
-            js-amount-input
-          >
-        </div>
-
-        <select class="sr-only" name="id" js-master-select>
-          {% for variant in product.variants %}
-            <option value="{{ variant.id }}" {% if variant.price == 1000 %} selected {% endif %}>{{ variant.title }}</option>
-          {% endfor %}
-        </select>
-
-        <div class="flex flex-wrap gap-[16px] max-w-lg">
-          {% for variant in product.variants %}
-            {% if variant.title == "Custom Amount" %}
-              <button
-                class="bg-gold px-20 py-[14px] rounded-[25px] min-w-[93px] text-16 font-600 leading-6 ease-in-out"
-                data-amount="custom"
-                data-name="{{ variant.title }}"
-                data-variant-id="{{ variant.id }}"
-                type="button"
-                js-quick-select
-              >{{ variant.title }}</button>
-            {% else %}
-              <button
-                class="bg-gold px-20 py-[14px] rounded-[25px] min-w-[93px] text-16 font-600 leading-6 ease-in-out"
-                data-amount="{{ variant.price | divided_by: 100.0 }}"
-                data-name="{{ variant.title }}"
-                data-variant-id="{{ variant.id }}"
-                type="button"
-                js-quick-select
-              >{{ variant.price | money }}</button>
-            {% endif %}
-          {% endfor %}
-        </div>
-
-        <div class="subscription-container flex items-center gap-[16px]">
-          <div class="flex items-center">
-            <label class="flex items-center gap-[15px] cursor-pointer px-[15px]">
-              <div class="relative flex items-center">
-                <div>
-                  <input 
-                    type="checkbox" 
-                    class="sr-only"
-                    js-subscription-checkbox
-                  >
-                  <div class="w-[14px] h-[14px] border border-gray-light rounded-full transition-colors" data-checkbox>
-                    <div class="absolute inset-0 flex items-center justify-center opacity-0 transition-opacity" data-checkbox-inner>
-                      <div class="h-sm w-sm bg-gray-light rounded-full" data-checkbox-dot></div>
-                    </div>
-                  </div>
-                </div>
-                </div>
-              <span class="text-16 text-gray-light font-600 leading-6">Hacer esta donación cada</span>
-            </label>
-          </div>
-          <div class="relative flex min-w-[115px] gap-[4px] p-[16px] border border-solid border-gray-light w-auto rounded-[50px] text-16 font-600 leading-6 text-gray-light">
-            <select 
-              name="selling_plan" 
-              id="selling_plan"
-              class="appearance-none bg-transparent pr-[24px] text-gray-light"
-              js-subscription-select
-            >
-              {% for group in product.selling_plan_groups %}
-                {% for plan in group.selling_plans %}
-                  
-                  {% assign frequency = "" %}
-
-                  {% if plan.name == "Monthly" %}
-                    {% assign frequency = "Mensual" %}
-                  {% elsif plan.name == "Quarterly" %}
-                    {% assign frequency = "Trimestral" %}
-                  {% elsif plan.name == "Yearly" %}
-                    {% assign frequency = "Anual" %}
-                  {% else %}
-                    {% assign frequency = plan.name %}
-                  {% endif %}
-
-                  <option value="{{ plan.id }}">{{ frequency }}</option>
-                {% endfor %}
-              {% endfor %}
-            </select>
-            <div class="absolute right-[16px] -translate-y-1/2 top-1/2">
-              {% render 'icon--chevron' %}
-            </div>
-          </div>
-        </div>
+      {%- form 'product', product, id: product_form_id, class: 'form', novalidate: 'novalidate', js-product-form: true -%}
         
+        {%- comment -%} Product Variant Master Select {%- endcomment -%}
+        {% render 'master-variant-select',
+          variants: product.variants,
+          id: master_select_id,
+          current_variant: current_variant
+        %}
+
+        {% unless product.has_only_default_variant %}
+          <product-options class="no-js-hidden block" data-product='ProductJSON' data-master-select-id="{{ master_select_id }}" data-enable-history-state>
+            {% for option in product.options_with_values %}
+              {% render 'product-option-selector' 
+                option: option
+                type: 'select'
+                section_id: section.id
+                product_id: product.id
+              %}
+            {% endfor %}
+          </product-options>
+        {% endunless %}
+
+        <label class="form__label inline-block font-600 text-16 mb-md" for="Quantity-{{ section.id }}">
+          {%- assign product_type = product.type | downcase -%}
+          {%- if product_type contains "event" -%}
+            Attendees:
+          {%- else -%}
+            <spam style="display: none;">Qty:</spam>
+          {%- endif -%}
+        </label>
+        {%- if product_type contains "event" -%}
+          <input class="quantity__input hidden"
+                type="number"
+                name="quantity"
+                id="Quantity-{{ section.id }}"
+                min="1"
+                value="1"
+                form="{{ product_form_id }}"
+              >
+        {%- else -%}
+          <quantity-input class="quantity flex justify-between items-center w-[130px] py-12 px-lg border rounded-full mb-lg">
+            <button class="quantity__button" name="minus" type="button" aria-label="Decrease quantity for {{ product.title }}" title="Decrease quantity for {{ product.title }}">&minus;</button>
+            <input class="quantity__input w-full bg-transparent text-center font-500 text-20"
+                type="number"
+                name="quantity"
+                id="Quantity-{{ section.id }}"
+                min="1"
+                value="1"
+                form="{{ product_form_id }}"
+              >
+            <button class="quantity__button" name="plus" type="button" aria-label="Increase quantity for {{ product.title }}" title="Increase quantity for {{ product.title }}">&plus;</button>
+          </quantity-input>
+        {%- endif -%}
+
+        {%- for block in section.blocks -%}
+          {% render block %}
+        {%- endfor -%}
+
         <button 
           class="btn btn--gold py-md w-full uppercase relative"
           type="submit" 
           {% unless current_variant.available %} disabled {% endunless %}
           js-add-to-cart>
           <loading-spinner style="--size: 3rem; --bg-opacity: 100%;"></loading-spinner>
-          Donar ahora
+          {% if current_variant.available %} Donar ahora {% else %} Agotado {% endif %}
         </button>
         <p class="hidden" js-error-message></p>
 
@@ -182,7 +162,9 @@
 
   <script type="application/json" id="ProductJSON">{{ product | json }}</script>
 
-</s-donation>
+<script type="application/json" id="ProductJSON">{{ product | json }}</script>
+
+</s-product>
 
 {%- liquid
   if product.selected_or_first_available_variant.featured_media
@@ -229,6 +211,11 @@
 
 {% schema %}
 {
-  "name": "Donation"
+  "name": "Donation",
+  "blocks": [
+    {
+      "type": "@app"
+    }
+  ]
 }
 {% endschema %}

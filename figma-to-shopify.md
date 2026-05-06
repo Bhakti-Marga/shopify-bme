@@ -1,7 +1,7 @@
 # Figma → Shopify: Plan de trabajo
 > Extraído del sitemap de Figma (archivo `6tFHS9TCH3SRBhtaDUQhJ7`, sección `44:1436`)
 > Última auditoría de templates: 2026-04-28
-> Última actualización: 2026-04-29
+> Última actualización: 2026-05-06
 
 ---
 
@@ -15,8 +15,8 @@
 | 🟡 Dorado `#927244` | Enlace a producto de tienda |
 | 🟣 Morado `#5c5a8c` | Feature interactiva especial (mapa, directorio) |
 
-**Color de cabecera = categoría:**
-`#002656` azul marino = BM España / PV · `#00a3b2` teal = Comunidad / Prácticas · `#927244` dorado = sub-página de práctica · `#5c5a8c` morado = feature especial
+**Color de cabecera = nivel jerárquico:**
+`#002656` azul = páginas primarias · `#00a3b2` turquesa = páginas secundarias · `#927244` marrón = páginas terciarias · `#5c5a8c` morado = feature interactiva especial
 
 ---
 
@@ -59,6 +59,7 @@
 - [ ] Project Mantra widget
 - [ ] El poder de la oración
 - [ ] El poder de la intención
+- [ ] Formulario
 
 ### 2. Suscríbete
 **URL:** `/pages/suscribete` · Teal header
@@ -108,9 +109,11 @@
 ## 🟡 Páginas existentes con secciones que faltan
 
 ### Sobre Paramahamsa Vishwananda
-**Template:** ✅ `templates/page.master.json` · 18 secciones (13 existentes + 5 naranjas)
+**Template:** ✅ `templates/page.master.json` · 22 secciones (13 existentes + 5 naranjas + 4 TBD nuevas)
 
 Secciones existentes ✅: Portada, Misión, Amor incondicional, Fundador de BM, Cita de Guruji, Es Satguru/Kriya Yogi, Satgurus son especiales, Estadísticas, YouTube Insights from Guruji, Darshan, Síguele en Instagram, Síguele en X, Portada outro misión
+
+> ⚠️ 2026-05-06: la diseñadora ha bajado 9 de las 13 secciones existentes a ⬛INCIERTO en Figma (solo Darshan, YouTube, Instagram, X siguen teal). No implica que el código no funcione — revisar con ella cuáles quiere modificar.
 
 **Secciones que faltan 🔴:**
 - [ ] Eventos con Él
@@ -118,6 +121,12 @@ Secciones existentes ✅: Portada, Misión, Amor incondicional, Fundador de BM, 
 - [ ] Peregrinajes
 - [ ] Lo que otros dicen (testimonios/reseñas)
 - [ ] Darshan en Lanzarote 2026 (banner/CTA)
+
+**Secciones TBD nuevas (añadidas por la diseñadora 2026-05-06) 🔴:**
+- [ ] TBD
+- [ ] TBD
+- [ ] TBD
+- [ ] TBD
 
 ---
 
@@ -130,7 +139,7 @@ Secciones existentes ✅: Portada, Misión, Amor incondicional, Fundador de BM, 
 | 2 | Darshan | ✅ teal |
 | 3 | Eventos y Festivales | ✅ teal |
 | 4 | Encuentros locales | ✅ teal |
-| 5 | Cursos online | ✅ teal |
+| 5 | Programas online | ✅ teal |
 | 6 | Visita un templo | ✅ teal |
 | 7 | Project Mantra | ✅ teal |
 | 8 | Rezar por el Mundo | ✅ teal |
