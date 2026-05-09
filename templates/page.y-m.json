@@ -160,9 +160,9 @@
         "image_block_4RXENQ": {
           "type": "image_block",
           "settings": {
-            "image": "shopify://shop_images/omc.jpg",
-            "height": "auto",
-            "desktop_height": "inherit"
+            "image": "shopify://shop_images/om-chanting.jpg",
+            "height": "50vh",
+            "desktop_height": "50vh"
           }
         },
         "content_block_rLPL9a": {
@@ -243,20 +243,20 @@
         "image_block_hbAiH7": {
           "type": "image_block",
           "settings": {
-            "image": "shopify://shop_images/project-mantra-challenge-japa-mala.webp",
-            "height": "auto",
-            "desktop_height": "inherit"
+            "image": "shopify://shop_images/Screenshot_2026-05-08_at_7.26.45_PM.png",
+            "height": "50vh",
+            "desktop_height": "50vh"
           }
         },
         "content_block_ktXfKC": {
           "type": "content_block",
           "settings": {
-            "title": "Project Mantra",
+            "title": "Proyecto Mantra",
             "title_tag": "h3",
             "title_font_style": "h4",
-            "description": "<p>Recitar los nombres divinos es una de las prácticas de meditación más fáciles que puedes hacer. Es especialmente significativo cuando conviertes cada repetición en una oración sincera. Aunque parece muy sencillo, ¡puede llevarte hasta Dios!</p><p>Todo el mundo puede hacerlo, en cualquier momento y en cualquier lugar, incluso los niños. Es perfecto para principiantes que desean una herramienta sencilla y eficaz para aquietar la mente y abrir el corazón.</p><p>Project Mantra es un programa gratuito diseñado para ayudarte a establecer y desarrollar gradualmente una práctica diaria de recitación a lo largo de un reto de 40 días.</p>",
+            "description": "<p>Recitar los nombres divinos es una de las prácticas de meditación más fáciles que puedes hacer. Es especialmente significativo cuando conviertes cada repetición en una oración sincera. Aunque parece muy sencillo, ¡puede llevarte hasta Dios!</p><p>Todo el mundo puede hacerlo, en cualquier momento y en cualquier lugar, incluso los niños. Es perfecto para principiantes que desean una herramienta sencilla y eficaz para aquietar la mente y abrir el corazón.</p><p>Proyecto Mantra es un programa gratuito diseñado para ayudarte a establecer y desarrollar gradualmente una práctica diaria de recitación a lo largo de un reto de 40 días.</p>",
             "credits": "",
-            "cta_url": "shopify://pages/project-mantra",
+            "cta_url": "shopify://pages/proyecto-mantra",
             "cta_label": "Más información",
             "text_align": "left",
             "desktop_text_align": "inherit",
@@ -283,21 +283,15 @@
       "blocks": {
         "image_block_AnHDVr": {
           "type": "image_block",
-          "settings": {
-            "image": "shopify://shop_images/Image_Container_c306694f-4f97-47a5-9350-d5ccdb1367ce.jpg"
-          }
+          "settings": {}
         },
         "image_block_6p8Vji": {
           "type": "image_block",
-          "settings": {
-            "image": "shopify://shop_images/2022-07-16-p-0413_e3435448-1a61-490a-a09e-61188c0388ad.jpg"
-          }
+          "settings": {}
         },
         "image_block_RfTJix": {
           "type": "image_block",
-          "settings": {
-            "image": "shopify://shop_images/2024-07-19-p-1143_06f7af54-b5e1-4542-a5b6-e06f1df2d89f.jpg"
-          }
+          "settings": {}
         }
       },
       "block_order": [
@@ -305,21 +299,89 @@
         "image_block_6p8Vji",
         "image_block_RfTJix"
       ],
+      "disabled": true,
       "name": "Grid Images",
       "settings": {
         "margin_top": "mt-0",
         "margin_bottom": "mb-0",
-        "padding_top": "pt-0",
-        "padding_bottom": "pb-xl",
-        "desktop_margin_top": "inherit",
+        "padding_top": "pt-xxxl",
+        "padding_bottom": "pb-0",
+        "desktop_margin_top": "tabletl:mt-xxxl",
         "desktop_margin_bottom": "inherit",
         "desktop_padding_top": "inherit",
         "desktop_padding_bottom": "inherit",
         "main_image": "shopify://shop_images/meditation-essentials-shankaridasi.jpg",
-        "yt": "https://www.youtube.com/embed/pDOHcU1Jq4Q?si=J4hHz319IT1aiP61",
+        "yt": "",
         "text": "<p><strong>EXPERIMENTA LA MEDITACIÓN</strong></p><p>Siéntate y relájate. En este vídeo, Aksharananda, uno de nuestros profesores de yoga y meditación, explica brevemente qué es la meditación y cómo puede ayudarte a acercarte a Dios. También te guía a través de dos breves meditaciones para que puedas experimentarla por ti mismo.</p>",
         "cta_url": "",
         "cta_label": ""
+      }
+    },
+    "section_rich_text_PfpzGd": {
+      "type": "section__rich-text",
+      "name": "Rich Text Section",
+      "settings": {
+        "margin_top": "mt-xxxl",
+        "margin_bottom": "mb-0",
+        "padding_top": "pt-0",
+        "padding_bottom": "pb-0",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "desktop_padding_top": "inherit",
+        "desktop_padding_bottom": "inherit",
+        "content": "<h5>– Descubre los otros brazos de prácticas Bhakti –</h5>",
+        "text_alignment": "center",
+        "max_width": "",
+        "apply_max_width": true
+      }
+    },
+    "bm_custom_carousel_cards_rtiLWa": {
+      "type": "BM-custom-carousel-cards",
+      "blocks": {
+        "content_block_T6DBcg": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify://shop_images/Stories_Of_Saints.jpg",
+            "heading": "Conocimiento",
+            "description": "<p>La sabiduría es más que simple información</p>",
+            "button_text": "Descúbrelo",
+            "button_link": "shopify://pages/knowledge"
+          }
+        },
+        "content_block_QhTQNf": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify://shop_images/2023-08-29-p-1110.jpg",
+            "heading": "Rituales",
+            "description": "<p>Desarrolla tu relación con Dios</p>",
+            "button_text": "Descúbrelo",
+            "button_link": "shopify://pages/rituals"
+          }
+        },
+        "content_block_JVHaEq": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify://shop_images/2023-07-28-p-0249.jpg",
+            "heading": "Artes devocionales",
+            "description": "<p>Más allá del placer, encuentra la alegría</p>",
+            "button_text": "Descúbrelo",
+            "button_link": "shopify://pages/devotional-arts"
+          }
+        }
+      },
+      "block_order": [
+        "content_block_T6DBcg",
+        "content_block_QhTQNf",
+        "content_block_JVHaEq"
+      ],
+      "name": "Explora otros brazos",
+      "settings": {
+        "padding_top": "pt-lg",
+        "padding_bottom": "pb-xxxl",
+        "desktop_padding_top": "tabletl:pt-lg",
+        "desktop_padding_bottom": "tabletl:pb-xxxl",
+        "title": "",
+        "title_tag": "h2"
       }
     }
   },
@@ -332,6 +394,8 @@
     "section_image_text_blocks_Kixczp",
     "section_image_text_blocks_94GqbY",
     "section_image_text_blocks_cFYAEn",
-    "section_grid_images_GjYKDk"
+    "section_grid_images_GjYKDk",
+    "section_rich_text_PfpzGd",
+    "bm_custom_carousel_cards_rtiLWa"
   ]
 }

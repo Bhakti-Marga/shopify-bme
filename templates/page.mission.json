@@ -39,8 +39,8 @@
         "content_width": "max-w-5xl",
         "text_align": "text-left",
         "text_color": "#ffffff",
-        "title": "Nuestra misión es ayudar a cada persona a experimentar el amor de Dios.",
-        "title_font_style": "h3",
+        "title": "Despertar el amor Divino en cada persona",
+        "title_font_style": "h2",
         "subtitle": "<p>Así es como podemos lograr un cambio. Y es el motor de todo lo que hacemos.</p>",
         "button_text": "",
         "button_url": "",
@@ -97,7 +97,7 @@
         "desktop_padding_bottom": "tabletl:pb-xxxl",
         "mobile_position": "top",
         "position": "left",
-        "title": "Nuestra historia",
+        "title": "Historia de Bhakti Marga",
         "title_tag": "h2",
         "description": "<p>Cuando Bhakti Marga comenzó en 2005, nos reuníamos en cualquier espacio que pudiera acogernos. Hoy, Bhakti Marga es un grupo diverso de personas que se reúnen en templos, <em>ashrams</em> y ciudades de 75 países de todo el mundo. La <em>sangha</em>, o comunidad, es más que un lugar al que ir, es lo que somos como buscadores espirituales.</p>"
       }
@@ -122,7 +122,6 @@
         "aspect_ratio": "9/16",
         "aspect_ratio_desktop": "16/9",
         "image": "shopify://shop_images/MISSION-BELIEVE-MOBILE.jpg",
-        "image_desktop": "shopify://shop_images/MISSION-BELIEVE-2_7e7376b3-e81b-4ec6-9655-84bf3c4a2992.jpg",
         "bg_color": "",
         "content_width": "max-w-5xl",
         "text_align": "text-center",
@@ -291,7 +290,7 @@
         "image_block_jfBVbY": {
           "type": "image_block",
           "settings": {
-            "image": "shopify://shop_images/Experience_Bhakti_Marga_For_Yourself_4ef546c2-cf45-4648-b7aa-dbfa1a0034a0.jpg",
+            "image": "shopify://shop_images/OM-Chanting-Circle.jpg",
             "height": "auto",
             "desktop_height": "auto"
           }
@@ -304,8 +303,8 @@
             "title_font_style": "h3",
             "description": "<p>Únete a nuestro programa semanal gratuito online de los domingos, donde nos reunimos para unirnos y profundizar en el camino del <em>bhakti</em>.</p>",
             "credits": "",
-            "cta_url": "shopify://pages/bhakti-sundays",
-            "cta_label": "Programa del Domingo",
+            "cta_url": "shopify://pages/the-path",
+            "cta_label": "Prácticas Bhakti",
             "text_align": "left",
             "desktop_text_align": "inherit",
             "vertical_padding": "py-lg",
@@ -319,9 +318,9 @@
       ],
       "custom_css": [],
       "settings": {
-        "margin_top": "mt-xl",
-        "margin_bottom": "mb-xl",
-        "desktop_margin_top": "tabletl:mt-xl",
+        "margin_top": "mt-xxxl",
+        "margin_bottom": "mb-xxxl",
+        "desktop_margin_top": "tabletl:mt-xxxl",
         "desktop_margin_bottom": "tabletl:mb-xxxl",
         "vertical_align": "center",
         "flip_columns_desktop": false

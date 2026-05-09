@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -46,40 +55,154 @@
         "templo_hari_hara": {
           "type": "content_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Bhutabhrteshwarnath_Mandir-poster.jpg",
+            "image": "shopify://shop_images/HH.jpg",
             "image_url": "",
             "location": "Lanzarote",
-            "title": "Hari Hara — Lanzarote",
-            "description": "Templo en Lanzarote.",
-            "cta_label": "Ver más",
-            "cta_url": "\/pages\/templo-hari-hara"
+            "title": "Hari Hara",
+            "description": "El Templo Hari Hara en Lanzarote es un espacio de oración, devoción y paz interior situado en Guatiza. Rodeado por la energía única de la isla, el templo ofrece pujas, canto de kirtan, meditación y celebraciones espirituales abiertas a todos. Dedicado a Hari y Hara —Vishnu y Shiva—, es un lugar para conectar con el amor divino, la comunidad y el camino del Bhakti Yoga.",
+            "cta_label": "Saber más",
+            "cta_url": "/pages/templo-hari-hara"
           }
         },
         "templo_bhava_narasimha": {
           "type": "content_block",
           "settings": {
-            "image": "",
-            "image_url": "https:\/\/cdn.shopify.com\/s\/files\/1\/0929\/1415\/5864\/files\/narasimha-5.jpg?v=1754573666",
+            "image": "shopify://shop_images/BN4.jpg",
+            "image_url": "https://cdn.shopify.com/s/files/1/0929/1415/5864/files/narasimha-5.jpg?v=1754573666",
             "location": "Málaga",
-            "title": "Bhava Narasimha — Málaga",
-            "description": "Templo en Málaga.",
-            "cta_label": "Ver más",
-            "cta_url": "\/pages\/templo-bhava-narasimha"
+            "title": "Bhava Narasimha",
+            "description": "El Templo Bhava Narasimha en Málaga es un espacio espiritual dedicado a la devoción, la oración y la transformación interior. En un ambiente de paz y acogida, el templo ofrece pujas, kirtan, meditación y encuentros espirituales abiertos a todos. Dedicado a Narasimha, la forma protectora del Señor Vishnu, es un lugar para profundizar en el Bhakti Yoga y experimentar amor, fuerza y conexión divina.",
+            "cta_label": "Saber más",
+            "cta_url": "/pages/templo-bhava-narasimha"
           }
         }
       },
-      "block_order": ["templo_hari_hara", "templo_bhava_narasimha"],
+      "block_order": [
+        "templo_hari_hara",
+        "templo_bhava_narasimha"
+      ],
       "settings": {
         "padding_top": "pt-xl",
         "padding_bottom": "pb-xxl",
         "desktop_padding_top": "tabletl:pt-xxxl",
         "desktop_padding_bottom": "tabletl:pb-xxxl"
       }
+    },
+    "section_text_content_LDHdjN": {
+      "type": "section__text-content",
+      "disabled": true,
+      "name": "Text Content",
+      "settings": {
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "padding_top": "pt-0",
+        "padding_bottom": "pb-0",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "desktop_padding_top": "inherit",
+        "desktop_padding_bottom": "inherit",
+        "max_width": "",
+        "pretitle": "",
+        "title": "Templos Internacionales",
+        "title_tag": "h4",
+        "title_font_style": "h5",
+        "description": "",
+        "credits": ""
+      }
+    },
+    "section_image_text_blocks_Fm6Lt8": {
+      "type": "section__image_text_blocks",
+      "blocks": {
+        "image_block_J7QbJe": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/shree-peetha-nilaya-temple-prayers.jpg",
+            "height": "auto",
+            "desktop_height": "inherit"
+          }
+        },
+        "content_block_MyhKhE": {
+          "type": "content_block",
+          "settings": {
+            "title": "Shree Peetha Nilaya",
+            "title_tag": "h2",
+            "title_font_style": "h4",
+            "description": "<p>El Ashram es el “hogar de la madre divina” y actualmente la residencia permanente de Paramahamsa Vishwananda. Es la sede mundial conjunta de la misión Bhakti Marga.</p>",
+            "credits": "",
+            "cta_url": "https://shreepeethanilaya.org",
+            "cta_label": "Más información",
+            "text_align": "left",
+            "desktop_text_align": "inherit",
+            "vertical_padding": "py-lg",
+            "vertical_padding_desktop": "tabletl:py-xxl"
+          }
+        }
+      },
+      "block_order": [
+        "image_block_J7QbJe",
+        "content_block_MyhKhE"
+      ],
+      "disabled": true,
+      "name": "Image Text Blocks",
+      "settings": {
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "desktop_margin_top": "tabletl:mt-xxl",
+        "desktop_margin_bottom": "tabletl:mb-xxl",
+        "vertical_align": "top",
+        "flip_columns_desktop": false
+      }
+    },
+    "section_image_text_blocks_FA9DtQ": {
+      "type": "section__image_text_blocks",
+      "blocks": {
+        "image_block_pa7kMM": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/temple-paranitya-narasimha-banner.jpg",
+            "height": "auto",
+            "desktop_height": "inherit"
+          }
+        },
+        "content_block_tFJBWb": {
+          "type": "content_block",
+          "settings": {
+            "title": "Paranitya Narasimha Center  Elmira, New York",
+            "title_tag": "h2",
+            "title_font_style": "h4",
+            "description": "<p>El Ashram es el “hogar de la madre divina” y actualmente la residencia permanente de Paramahamsa Vishwananda. Es la sede mundial conjunta de la misión Bhakti Marga.</p>",
+            "credits": "",
+            "cta_url": "https://shreepeethanilaya.org",
+            "cta_label": "Más información",
+            "text_align": "left",
+            "desktop_text_align": "inherit",
+            "vertical_padding": "py-lg",
+            "vertical_padding_desktop": "tabletl:py-xxl"
+          }
+        }
+      },
+      "block_order": [
+        "image_block_pa7kMM",
+        "content_block_tFJBWb"
+      ],
+      "disabled": true,
+      "name": "Image Text Blocks",
+      "settings": {
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "desktop_margin_top": "tabletl:mt-xxl",
+        "desktop_margin_bottom": "tabletl:mb-xxl",
+        "vertical_align": "top",
+        "flip_columns_desktop": true
+      }
     }
   },
   "order": [
     "main",
     "section_hero_templos",
-    "section_templos_grid"
+    "section_templos_grid",
+    "section_text_content_LDHdjN",
+    "section_image_text_blocks_Fm6Lt8",
+    "section_image_text_blocks_FA9DtQ"
   ]
 }

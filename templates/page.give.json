@@ -16,6 +16,7 @@
     },
     "section_hero_cBpMpY": {
       "type": "section__hero",
+      "disabled": true,
       "custom_css": [],
       "settings": {
         "padding_top": "0px",
@@ -34,15 +35,15 @@
         "border_radius": 16,
         "aspect_ratio": "auto",
         "aspect_ratio_desktop": "16/9",
-        "image": "shopify://shop_images/GIVE-PAGE-HERO-Edit.jpg",
+        "image": "shopify://shop_images/Newsletter_Signup.jpg",
         "bg_color": "#16254c",
         "content_width": "max-w-5xl",
         "text_align": "text-left",
         "text_color": "#ffffff",
-        "title": "Tus donaciones están cambiando el mundo.",
+        "title": "La generosidad abre el corazón y cambia el mundo",
         "title_font_style": "h2",
-        "subtitle": "<p>Puedes apoyar la misión de Bhakti Marga de abrir los corazones de la humanidad en todo el mundo. Bhakti Marga es una organización gestionada por voluntarios y su objetivo es aportar las herramientas y la sabiduría necesarias para ayudar a todos a experimentar el amor de Dios en sus vidas. Tu apoyo y donación ayudarán a llegar a todos aquellos que necesiten estas herramientas.</p>",
-        "button_text": "Donar ahora",
+        "subtitle": "<p>Bhakti Marga es una organización gestionada por voluntarios y su objetivo es aportar las herramientas y la sabiduría necesarias para ayudar a todos a experimentar el amor de Dios en sus vidas. Tu apoyo y donación ayudarán a llegar a todos aquellos que necesiten estas herramientas.</p>",
+        "button_text": "Haz tu donación",
         "button_url": "shopify://products/make-a-donation",
         "button_style": "btn",
         "anchor_to_pricing": false,
@@ -51,60 +52,152 @@
         "vertical_position": "items-end"
       }
     },
-    "section_icon_grid_BFYa8i": {
+    "section_hero_WpefTK": {
+      "type": "section__hero",
+      "custom_css": [],
+      "settings": {
+        "padding_top": "0px",
+        "desktop_padding_top": "inherit",
+        "padding_bottom": "16px",
+        "desktop_padding_bottom": "60px",
+        "padding_horizontal": "px-0",
+        "desktop_padding_horizontal": "inherit",
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "use_container": true,
+        "set_100vh": false,
+        "set_100vh_desktop": true,
+        "border_radius": 16,
+        "aspect_ratio": "auto",
+        "aspect_ratio_desktop": "16/9",
+        "image": "shopify://shop_images/donate.jpg",
+        "image_desktop": "shopify://shop_images/donate.jpg",
+        "bg_color": "#16254c",
+        "content_width": "max-w-5xl",
+        "text_align": "text-left",
+        "text_color": "#ffffff",
+        "title": "La generosidad abre el corazón y cambia el mundo",
+        "title_font_style": "h2",
+        "subtitle": "<p>La misión de Bhakti Marga de difundir el mensaje de Amor Divino ha tocado cientos de miles de vidas en todo el mundo a través de sus programas y centros espirituales. Este servicio solo es posible gracias a la visión de Paramahamsa Vishwanada, el compromiso de nuestros voluntarios y la generosidad de nuestros donantes.</p>",
+        "button_text": "Haz tu donación",
+        "button_url": "shopify://products/make-a-donation",
+        "button_style": "btn",
+        "anchor_to_pricing": false,
+        "video_title": "",
+        "horizontal_position": "justify-start",
+        "vertical_position": "items-end"
+      }
+    },
+    "section_icon_grid_A9BBK4": {
       "type": "section__icon-grid",
       "blocks": {
-        "content_block_VGaw7Y": {
+        "content_block_a8aHg7": {
           "type": "content_block",
           "settings": {
-            "image": "shopify://shop_images/Make_your_giving_recurring.png",
-            "title": "Haz que tus donaciones sean recurrentes",
+            "image": "shopify://shop_images/Frame_40.png",
+            "title": "Fácil y rápido",
             "title_tag": "h3",
             "title_font_style": "h5",
-            "description": "<p>Solo tienes que pulsar el botón de repetición y establecer la frecuencia que más te convenga. </p>",
-            "content_align": "items-center"
+            "description": "<p>Puedes hacerlo con tarjeta de crédito, ACH, Apple Pay y Google Pay</p>",
+            "content_align": "items-start"
           }
         },
-        "content_block_MxbrVy": {
+        "content_block_wBGYzH": {
           "type": "content_block",
-          "disabled": true,
           "settings": {
-            "image": "shopify://shop_images/icon-placeholder.png",
-            "title": "Select offerings",
+            "image": "shopify://shop_images/Frame_39.png",
+            "title": "Opción recurrente",
             "title_tag": "h3",
             "title_font_style": "h5",
-            "description": "<p>Selecciona entre 4 ofertas específicas que sean significativas para ti</p>",
-            "content_align": "items-center"
+            "description": "<p>Solo tienes que pulsar el botón de repetición y establecer la frecuencia que más te convenga.</p>",
+            "content_align": "items-start"
+          }
+        },
+        "content_block_9faAxx": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify://shop_images/Frame_38.png",
+            "title": "Otras formas de dar",
+            "title_tag": "h3",
+            "title_font_style": "h5",
+            "description": "<p>Podemos aceptar donaciones que no sean en efectivo, incluidas acciones y criptomonedas.</p>",
+            "content_align": "items-start"
           }
         }
       },
       "block_order": [
-        "content_block_VGaw7Y",
-        "content_block_MxbrVy"
+        "content_block_a8aHg7",
+        "content_block_wBGYzH",
+        "content_block_9faAxx"
       ],
-      "custom_css": [],
+      "name": "Icon Grid",
       "settings": {
         "margin_top": "mt-0",
         "margin_bottom": "mb-0",
-        "padding_top": "pt-xl",
+        "padding_top": "pt-xxl",
         "padding_bottom": "pb-0",
-        "desktop_margin_top": "inherit",
-        "desktop_margin_bottom": "inherit",
+        "desktop_margin_top": "tabletl:mt-lg",
+        "desktop_margin_bottom": "tabletl:mb-0",
         "desktop_padding_top": "inherit",
-        "desktop_padding_bottom": "tabletl:pb-xl",
+        "desktop_padding_bottom": "inherit",
         "cols_mobile": "1",
-        "cols_desktop": "1",
-        "text_align": "text-center",
-        "title": "Facilidad de donación",
+        "cols_desktop": "3",
+        "text_align": "text-left",
+        "title": "",
         "subtitle": "",
         "button_text": "",
         "button_url": "",
         "button_style": "btn"
       }
     },
+    "blocks_Eqkb9P": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_7ef7938_XibxD7": {
+          "type": "ai_gen_block_7ef7938",
+          "settings": {
+            "desktop_width_percent": 100,
+            "column_gap": 24,
+            "container_bg_color": "#ffffff",
+            "image_1": "shopify://shop_images/omc.jpg",
+            "heading_1": "Es fácil",
+            "text_1": "Hacemos que dar sea más fácil que nunca con tarjeta de crédito, ACH, Apple Pay y Google Pay",
+            "button_text_1": "",
+            "button_url_1": "",
+            "image_2": "shopify://shop_images/project-mantra-chanting-the-divine-name.jpg",
+            "heading_2": "Haz donaciones recurrentes",
+            "text_2": "Solo tienes que pulsar el botón de repetición y establecer la frecuencia que más te convenga.",
+            "button_text_2": "",
+            "button_url_2": "",
+            "content_top_padding": 100,
+            "content_padding": 20,
+            "heading_size": 48,
+            "heading_color": "#ffffff",
+            "text_color": "#ffffff",
+            "text_spacing": 12,
+            "button_spacing": 16,
+            "button_bg_color": "#ffffff",
+            "button_text_color": "#000000",
+            "button_padding_vertical": 12,
+            "button_padding_horizontal": 32
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_7ef7938_XibxD7"
+      ],
+      "disabled": true,
+      "name": "Features",
+      "settings": {}
+    },
     "section_text_content_da8qWR": {
       "type": "section__text-content",
+      "disabled": true,
       "custom_css": [],
+      "name": "ApplePay",
       "settings": {
         "margin_top": "mt-0",
         "margin_bottom": "mb-0",
@@ -165,6 +258,7 @@
     },
     "section_hero_EmDBMy": {
       "type": "section__hero",
+      "disabled": true,
       "custom_css": [],
       "settings": {
         "padding_top": "0px",
@@ -292,17 +386,144 @@
         "button_url": "mailto:donate@bhaktimarga.com",
         "button_style": "btn btn--gold"
       }
+    },
+    "section_image_text_blocks_3yBpBY": {
+      "type": "section__image_text_blocks",
+      "blocks": {
+        "image_block_4VrRmD": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/2019-09-14-p-0208.jpg",
+            "height": "auto",
+            "desktop_height": "inherit"
+          }
+        },
+        "content_block_qYQazh": {
+          "type": "content_block",
+          "settings": {
+            "title": "Difundamos amor",
+            "title_tag": "h2",
+            "title_font_style": "h3",
+            "description": "<p>Tu donación asegura la financiación sostenible de la misión de Paramahamsa Vishwananda y de Bhakti Marga de abrir los corazones de la humanidad en todo el mundo.<br/><br/>Cada euro que donas financia programas gratuitos, reuniones comunitarias, espacios sagrados y la construcción de nuevos templos donde los buscadores descubren su camino, muchos de ellos por primera vez. </p><p>Cada donación, sin importar el tamaño, tiene un impacto significativo en las vidas que tocamos. <strong>Gracias por tu apoyo.</strong></p>",
+            "credits": "",
+            "cta_url": "",
+            "cta_label": "",
+            "text_align": "left",
+            "desktop_text_align": "inherit",
+            "vertical_padding": "py-xl",
+            "vertical_padding_desktop": "tabletl:py-xxl"
+          }
+        }
+      },
+      "block_order": [
+        "image_block_4VrRmD",
+        "content_block_qYQazh"
+      ],
+      "name": "Difundamos amor",
+      "settings": {
+        "margin_top": "mt-xl",
+        "margin_bottom": "mb-xxl",
+        "desktop_margin_top": "tabletl:mt-xxl",
+        "desktop_margin_bottom": "tabletl:mb-xxxl",
+        "vertical_align": "top",
+        "flip_columns_desktop": false
+      }
+    },
+    "section_image_text_blocks_gUfhCa": {
+      "type": "section__image_text_blocks",
+      "blocks": {
+        "image_block_3q4pr3": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/Newsletter_Signup.jpg",
+            "height": "auto",
+            "desktop_height": "inherit"
+          }
+        },
+        "content_block_ridqfV": {
+          "type": "content_block",
+          "settings": {
+            "title": "Financia amor",
+            "title_tag": "h2",
+            "title_font_style": "h3",
+            "description": "<p>Tu donación asegura la financiación sostenible de la misión de Paramahamsa Vishwananda y de Bhakti Marga.<br/><br/>Cada euro que donas financia programas gratuitos, reuniones comunitarias, espacios sagrados y la construcción de nuevos templos donde los buscadores descubren su camino, muchos de ellos por primera vez. </p><p>Cada donación, sin importar el tamaño, tiene un impacto significativo en las vidas que tocamos. </p>",
+            "credits": "",
+            "cta_url": "",
+            "cta_label": "",
+            "text_align": "left",
+            "desktop_text_align": "inherit",
+            "vertical_padding": "py-xl",
+            "vertical_padding_desktop": "tabletl:py-xxl"
+          }
+        }
+      },
+      "block_order": [
+        "image_block_3q4pr3",
+        "content_block_ridqfV"
+      ],
+      "disabled": true,
+      "name": "Financia amor",
+      "settings": {
+        "margin_top": "mt-xl",
+        "margin_bottom": "mb-xl",
+        "desktop_margin_top": "tabletl:mt-xxl",
+        "desktop_margin_bottom": "tabletl:mb-xxxl",
+        "vertical_align": "top",
+        "flip_columns_desktop": true
+      }
+    },
+    "section_hero_cXCHaF": {
+      "type": "section__hero",
+      "disabled": true,
+      "settings": {
+        "padding_top": "0px",
+        "desktop_padding_top": "0px",
+        "padding_bottom": "0px",
+        "desktop_padding_bottom": "0px",
+        "padding_horizontal": "px-0",
+        "desktop_padding_horizontal": "tabletl:px-0",
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "use_container": false,
+        "set_100vh": false,
+        "set_100vh_desktop": true,
+        "border_radius": 0,
+        "aspect_ratio": "auto",
+        "aspect_ratio_desktop": "auto",
+        "image": "shopify://shop_images/2019-09-14-p-0208.jpg",
+        "bg_color": "rgba(0,0,0,0)",
+        "content_width": "max-w-5xl",
+        "text_align": "text-center",
+        "text_color": "#ffffff",
+        "title": "Haz que tus donaciones sean recurrentes",
+        "title_font_style": "h3",
+        "subtitle": "<p>La misión de Bhakti Marga ha tocado cientos de miles de vidas en todo el mundo a través de sus programas y centros espirituales. Este servicio solo es posible gracias a la visión de Paramahamsa Vishwanada, el compromiso de nuestros voluntarios y la generosidad de nuestros donantes.</p>",
+        "button_text": "",
+        "button_url": "",
+        "button_style": "btn",
+        "anchor_to_pricing": false,
+        "video_title": "",
+        "horizontal_position": "justify-center",
+        "vertical_position": "items-center"
+      }
     }
   },
   "order": [
     "main",
     "section_hero_cBpMpY",
-    "section_icon_grid_BFYa8i",
+    "section_hero_WpefTK",
+    "section_icon_grid_A9BBK4",
+    "blocks_Eqkb9P",
     "section_text_content_da8qWR",
     "section_text_content_fGhEg9",
     "section_rich_text_BBqkkC",
     "section_hero_EmDBMy",
     "section_rich_text_GJV7N4",
-    "section_icon_grid_YxB9bL"
+    "section_icon_grid_YxB9bL",
+    "section_image_text_blocks_3yBpBY",
+    "section_image_text_blocks_gUfhCa",
+    "section_hero_cXCHaF"
   ]
 }

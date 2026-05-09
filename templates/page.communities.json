@@ -29,21 +29,23 @@
         "desktop_margin_bottom": "inherit",
         "use_container": true,
         "set_100vh": true,
+        "set_100vh_desktop": true,
         "border_radius": 16,
         "aspect_ratio": "auto",
         "aspect_ratio_desktop": "auto",
-        "image": "shopify:\/\/shop_images\/placeholder-img.png",
-        "image_desktop": "shopify:\/\/shop_images\/2018-12-07-p-0245.jpg",
+        "image": "shopify://shop_images/placeholder-img.png",
+        "image_desktop": "shopify://shop_images/2018-12-07-p-0245.jpg",
         "bg_color": "#16254c",
         "content_width": "max-w-5xl",
         "text_align": "text-left",
         "text_color": "#ffffff",
         "title": "Bhakti Marga Community",
         "title_font_style": "h2",
-        "subtitle": "<p>Be part of a vibrant, spiritual family that gathers regularly to experience and share the Love of God”<\/p>",
+        "subtitle": "<p>Be part of a vibrant, spiritual family that gathers regularly to experience and share the Love of God”</p>",
         "button_text": "Find Your Community",
         "button_url": "#",
         "button_style": "btn",
+        "anchor_to_pricing": false,
         "video_title": "",
         "horizontal_position": "justify-center",
         "vertical_position": "items-end"
@@ -55,79 +57,85 @@
         "content_block_9pPMLd": {
           "type": "content_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/placeholder-img.png",
+            "image": "shopify://shop_images/placeholder-img.png",
             "title": "",
             "title_tag": "h2",
             "title_font_style": "h4",
             "description": "",
             "cta_link": "",
             "cta_label": "",
-            "cta_style": "btn btn--black"
+            "cta_style": "btn btn--black",
+            "cta_klaviyo_embed": ""
           }
         },
         "content_block_TL6zKT": {
           "type": "content_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/placeholder-img.png",
+            "image": "shopify://shop_images/placeholder-img.png",
             "title": "",
             "title_tag": "h2",
             "title_font_style": "h4",
             "description": "",
             "cta_link": "",
             "cta_label": "",
-            "cta_style": "btn btn--black"
+            "cta_style": "btn btn--black",
+            "cta_klaviyo_embed": ""
           }
         },
         "content_block_BgRX3i": {
           "type": "content_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/placeholder-img.png",
+            "image": "shopify://shop_images/placeholder-img.png",
             "title": "",
             "title_tag": "h2",
             "title_font_style": "h4",
             "description": "",
             "cta_link": "",
             "cta_label": "",
-            "cta_style": "btn btn--black"
+            "cta_style": "btn btn--black",
+            "cta_klaviyo_embed": ""
           }
         },
         "content_block_4xMXn9": {
           "type": "content_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/placeholder-img.png",
+            "image": "shopify://shop_images/placeholder-img.png",
             "title": "",
             "title_tag": "h2",
             "title_font_style": "h4",
             "description": "",
             "cta_link": "",
             "cta_label": "",
-            "cta_style": "btn btn--black"
+            "cta_style": "btn btn--black",
+            "cta_klaviyo_embed": ""
           }
         },
         "content_block_iqp3iT": {
           "type": "content_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/placeholder-img.png",
+            "image": "shopify://shop_images/placeholder-img.png",
             "title": "",
             "title_tag": "h2",
             "title_font_style": "h4",
             "description": "",
             "cta_link": "",
             "cta_label": "",
-            "cta_style": "btn btn--black"
+            "cta_style": "btn btn--black",
+            "cta_klaviyo_embed": ""
           }
         },
         "content_block_y9aKh9": {
           "type": "content_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/placeholder-img.png",
+            "image": "shopify://shop_images/placeholder-img.png",
             "title": "",
             "title_tag": "h2",
             "title_font_style": "h4",
             "description": "",
             "cta_link": "",
             "cta_label": "",
-            "cta_style": "btn btn--black"
+            "cta_style": "btn btn--black",
+            "cta_klaviyo_embed": ""
           }
         }
       },
@@ -155,7 +163,11 @@
         "horizontal_gap_desktop": "tabletl:gap-x-md",
         "vertical_gap_mobile": "gap-y-md",
         "vertical_gap_desktop": "tabletl:gap-y-md",
-        "format": "inside"
+        "format": "inside",
+        "text_color": "#000000",
+        "apply_gradient": false,
+        "gradient_height": 40,
+        "gradient_color": "#000000"
       }
     },
     "section_image_text_blocks_PHhidM": {
@@ -164,7 +176,7 @@
         "image_block_jfBVbY": {
           "type": "image_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/2023-09-02-p-0121.jpg",
+            "image": "shopify://shop_images/2023-09-02-p-0121.jpg",
             "height": "auto",
             "desktop_height": "50vh"
           }
@@ -175,7 +187,7 @@
             "title": "Paranitya Narasimha Center  Elmira, New York",
             "title_tag": "h2",
             "title_font_style": "h4",
-            "description": "<p>The Center is home to a world-renowned Narasimha temple and is the co-global headquarters of the Bhakti Marga’s mission. <\/p>",
+            "description": "<p>The Center is home to a world-renowned Narasimha temple and is the co-global headquarters of the Bhakti Marga’s mission. </p>",
             "credits": "",
             "cta_url": "#",
             "cta_label": "Visítanos",
@@ -206,7 +218,7 @@
         "image_block_4RXENQ": {
           "type": "image_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/placeholder-img.png",
+            "image": "shopify://shop_images/placeholder-img.png",
             "height": "auto",
             "desktop_height": "inherit"
           }
@@ -217,9 +229,9 @@
             "title": "Shree Peetha Nilaya Springen, Germany",
             "title_tag": "h2",
             "title_font_style": "h4",
-            "description": "<p>The Ashram is the “home of the divine mother” and currently the permanent residence of Paramahamsa Vishwananda. It's the co-global headquarters of the Bhakti Marga mission.<\/p>",
+            "description": "<p>The Ashram is the “home of the divine mother” and currently the permanent residence of Paramahamsa Vishwananda. It's the co-global headquarters of the Bhakti Marga mission.</p>",
             "credits": "",
-            "cta_url": "#",
+            "cta_url": "https://shreepeethanilaya.org",
             "cta_label": "Saber más",
             "text_align": "left",
             "desktop_text_align": "inherit",

@@ -155,17 +155,25 @@
               <div class="hero__subtitle text-18 font-500 mb-md tabletl:text-20">{{ section.settings.subtitle }}</div>
             {% endif %}
 
-            {% if section.settings.button_text != blank and section.settings.button_url != blank %}
-              <a
-                {% if section.settings.anchor_to_pricing %} 
+            {% if section.settings.button_text != blank %}
+              {% if section.settings.anchor_to_pricing %}
+                <a
                   href="#prices"
-                {% else %}
+                  onclick="event.preventDefault();var t=document.querySelector('#prices');if(t){window.scrollTo({top:t.getBoundingClientRect().top+window.pageYOffset,behavior:'smooth'});}"
+                  class="hero__cta {{ section.settings.button_style }} inline-block"
+                >{{ section.settings.button_text }}</a>
+              {% elsif section.settings.button_anchor != blank %}
+                <a
+                  href="{{ section.settings.button_anchor }}"
+                  onclick="event.preventDefault();var t=document.querySelector('{{ section.settings.button_anchor }}');if(t){window.scrollTo({top:t.getBoundingClientRect().top+window.pageYOffset,behavior:'smooth'});}"
+                  class="hero__cta {{ section.settings.button_style }} inline-block"
+                >{{ section.settings.button_text }}</a>
+              {% else %}
+                <a
                   href="{{ section.settings.button_url }}"
-                {% endif %}
-                class="hero__cta {{ section.settings.button_style }} inline-block"
-              >
-                {{ section.settings.button_text }}
-              </a>
+                  class="hero__cta {{ section.settings.button_style }} inline-block"
+                >{{ section.settings.button_text }}</a>
+              {% endif %}
             {% endif %}
           </div>
 
@@ -575,6 +583,11 @@
       "type": "url",
       "id": "button_url",
       "label": "Button URL"
+    },
+    {
+      "type": "text",
+      "id": "button_anchor",
+      "label": "Button anchor (overrides URL, e.g. #section-id)"
     },
     {
       "type": "select",

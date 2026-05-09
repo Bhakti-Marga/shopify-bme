@@ -14,11 +14,12 @@
       "disabled": true,
       "settings": {}
     },
-    "section_hero_cBpMpY": {
+    "section_hero_Yxjj9h": {
       "type": "section__hero",
       "custom_css": [
         ".hero__content-wrapper {background: #0000004a; z-index: 1; position: sticky;}"
       ],
+      "name": "Portada",
       "settings": {
         "padding_top": "0px",
         "desktop_padding_top": "inherit",
@@ -42,7 +43,7 @@
         "content_width": "max-w-5xl",
         "text_align": "text-left",
         "text_color": "#ffffff",
-        "title": "Project Mantra",
+        "title": "Proyecto Mantra",
         "title_font_style": "h3",
         "subtitle": "<p>Experimenta un sistema yóguico completo que te ayudará a sumergirte en tu corazón y conectar con lo Divino.</p>",
         "button_text": "",
@@ -61,6 +62,7 @@
       "custom_css": [
         ".hero__content-wrapper {background: #0000004a; z-index: 1; position: sticky;}"
       ],
+      "name": "Cita Guruji",
       "settings": {
         "padding_top": "0px",
         "desktop_padding_top": "0px",
@@ -85,7 +87,48 @@
         "text_color": "#ffffff",
         "title": "\"Cuanto más recites, más disminuirá el poder de la mente, más estarás en la dicha divina y más se abrirá tu corazón al amor divino\".",
         "title_font_style": "h5",
-        "subtitle": "<p>Paramahamsa Vishwananda</p>",
+        "subtitle": "<p><br/>Paramahamsa Vishwananda</p>",
+        "button_text": "",
+        "button_url": "",
+        "button_style": "btn",
+        "anchor_to_pricing": false,
+        "video_title": "",
+        "horizontal_position": "justify-center",
+        "vertical_position": "items-center"
+      }
+    },
+    "section_hero_wCNAyr": {
+      "type": "section__hero",
+      "disabled": true,
+      "custom_css": [
+        ".hero__content-wrapper {background: #0000004a; z-index: 1; position: sticky;}"
+      ],
+      "name": "Cita Guruji",
+      "settings": {
+        "padding_top": "0px",
+        "desktop_padding_top": "0px",
+        "padding_bottom": "0px",
+        "desktop_padding_bottom": "inherit",
+        "padding_horizontal": "px-0",
+        "desktop_padding_horizontal": "inherit",
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-xxxl",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "use_container": false,
+        "set_100vh": false,
+        "set_100vh_desktop": true,
+        "border_radius": 0,
+        "aspect_ratio": "9/16",
+        "aspect_ratio_desktop": "16/9",
+        "image": "shopify://shop_images/Shaktipat.jpg",
+        "bg_color": "",
+        "content_width": "max-w-5xl",
+        "text_align": "text-center",
+        "text_color": "#ffffff",
+        "title": "\"Cuanto más recites, más disminuirá el poder de la mente, más estarás en la dicha divina y más se abrirá tu corazón al amor divino\"",
+        "title_font_style": "h5",
+        "subtitle": "<p><br/>Paramahamsa Vishwananda</p>",
         "button_text": "",
         "button_url": "",
         "button_style": "btn",
@@ -101,7 +144,7 @@
         "image_block_jfBVbY": {
           "type": "image_block",
           "settings": {
-            "image": "shopify://shop_images/project-mantra-chanting-the-divine-name_e6e3c39b-c8cf-4ea9-bd66-bfaf50c843da.jpg",
+            "image": "shopify://shop_images/Atma-Kriya-Yoga-mantra-japa.webp",
             "height": "auto",
             "desktop_height": "auto"
           }
@@ -109,13 +152,13 @@
         "content_block_gVQiM6": {
           "type": "content_block",
           "settings": {
-            "title": "¿Qué es Project Mantra?",
+            "title": "¿Qué es Proyecto Mantra?",
             "title_tag": "h3",
             "title_font_style": "h4",
             "description": "<p>El recitar de mantras es una forma sencilla pero<strong> poderosa de meditación</strong> que despierta una alegría profunda y duradera.</p><p>Project Mantra es un <strong>viaje guiado gratuito de 40 días</strong> que te ayudará a desarrollar la práctica de la meditación con mantras.</p><p>Es perfecto tanto para principiantes como para practicantes avanzados.</p>",
             "credits": "",
-            "cta_url": "https://pages.bhaktimarga.org/project-mantra",
-            "cta_label": "Más información",
+            "cta_url": "",
+            "cta_label": "",
             "text_align": "left",
             "desktop_text_align": "inherit",
             "vertical_padding": "py-lg",
@@ -168,8 +211,8 @@
         "accordion_item_wWaaBW"
       ],
       "settings": {
-        "margin_top": "mt-lg",
-        "margin_bottom": "mb-0",
+        "margin_top": "mt-xl",
+        "margin_bottom": "mb-xxxl",
         "padding_top": "pt-0",
         "padding_bottom": "pb-0",
         "desktop_margin_top": "inherit",
@@ -181,6 +224,45 @@
         "cta_url": "",
         "cta_label": "",
         "title_position": "left"
+      }
+    },
+    "section_hero_DKbTwb": {
+      "type": "section__hero",
+      "custom_css": [
+        ".hero__content-wrapper {background: #0000004a; z-index: 1; position: sticky;}"
+      ],
+      "settings": {
+        "padding_top": "0px",
+        "desktop_padding_top": "0px",
+        "padding_bottom": "0px",
+        "desktop_padding_bottom": "inherit",
+        "padding_horizontal": "px-0",
+        "desktop_padding_horizontal": "inherit",
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "use_container": false,
+        "set_100vh": false,
+        "set_100vh_desktop": true,
+        "border_radius": 0,
+        "aspect_ratio": "9/16",
+        "aspect_ratio_desktop": "16/9",
+        "video_desktop": "shopify://files/videos/2025-03-28-BM3Web-SVGPBN-01.mp4",
+        "bg_color": "",
+        "content_width": "max-w-5xl",
+        "text_align": "text-center",
+        "text_color": "#ffffff",
+        "title": "Sri Vitthala Giridhari Parabrahmane Namaha",
+        "title_font_style": "h5",
+        "subtitle": "<p><em>\"Mis reverencias al Señor Supremo, refugio y protección de todos\"</em></p>",
+        "button_text": "",
+        "button_url": "",
+        "button_style": "btn",
+        "anchor_to_pricing": false,
+        "video_title": "",
+        "horizontal_position": "justify-center",
+        "vertical_position": "items-center"
       }
     },
     "section_review_carousel_rxy9jF": {
@@ -196,7 +278,7 @@
         "content_block_q8eN4C": {
           "type": "content_block",
           "settings": {
-            "content": "<p>\"Antes de Project Mantra, sentía que mi práctica espiritual era como una obligación. Ahora me siento más en paz. Me siento más dedicada a mi práctica espiritual diaria. Tengo muchas ganas de recitar mi mantra todos los días».</p>",
+            "content": "<p>\"Antes de Proyecto Mantra, sentía que mi práctica espiritual era como una obligación. Ahora me siento más en paz. Me siento más dedicada a mi práctica espiritual diaria. Tengo muchas ganas de recitar mi mantra todos los días».</p>",
             "credits": "Anette Anderson"
           }
         },
@@ -214,21 +296,92 @@
         "content_block_DNL9XK"
       ],
       "settings": {
-        "padding_top": "pt-xl",
-        "padding_bottom": "pb-0",
+        "padding_top": "pt-xxxl",
+        "padding_bottom": "pb-xxxl",
         "desktop_padding_top": "inherit",
         "desktop_padding_bottom": "inherit",
         "title": "Lo que dice la gente",
         "title_tag": "h5"
       }
+    },
+    "section_rich_text_rNpnAV": {
+      "type": "section__rich-text",
+      "name": "Rich Text Section",
+      "settings": {
+        "margin_top": "mt-xl",
+        "margin_bottom": "mb-0",
+        "padding_top": "pt-0",
+        "padding_bottom": "pb-0",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "desktop_padding_top": "inherit",
+        "desktop_padding_bottom": "inherit",
+        "content": "<h5>– Descubre las otras prácticas de yoga y meditación –</h5>",
+        "text_alignment": "center",
+        "max_width": "",
+        "apply_max_width": false
+      }
+    },
+    "bm_custom_carousel_cards_3Cct9E": {
+      "type": "BM-custom-carousel-cards",
+      "blocks": {
+        "content_block_qgwpcy": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify://shop_images/mahavatar-babaji-yogi.jpg",
+            "heading": "Atma Kriya Yoga",
+            "description": "<p>Manifesta cualidades Divinas</p>",
+            "button_text": "Más info",
+            "button_link": "shopify://pages/atma-kriya-yoga"
+          }
+        },
+        "content_block_yqdRik": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify://shop_images/om-chanting.jpg",
+            "heading": "OM Chanting",
+            "description": "<p>Utiliza el poder transformador del OM</p>",
+            "button_text": "Más info",
+            "button_link": "shopify://pages/om-chanting"
+          }
+        },
+        "content_block_MpMwtw": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify://shop_images/babaji-surya-namaskar-align-body-mind-and-spirit.jpg",
+            "heading": "Babaji Surya Namaskar",
+            "description": "<p>Celebra la divinidad del templo humano</p>",
+            "button_text": "Más info",
+            "button_link": "shopify://pages/babaji-surya-namaskar"
+          }
+        }
+      },
+      "block_order": [
+        "content_block_qgwpcy",
+        "content_block_yqdRik",
+        "content_block_MpMwtw"
+      ],
+      "name": "BM Custom Carousel Cards",
+      "settings": {
+        "padding_top": "pt-lg",
+        "padding_bottom": "pb-xxxl",
+        "desktop_padding_top": "inherit",
+        "desktop_padding_bottom": "inherit",
+        "title": "",
+        "title_tag": "h2"
+      }
     }
   },
   "order": [
     "main",
-    "section_hero_cBpMpY",
+    "section_hero_Yxjj9h",
     "section_hero_EmDBMy",
+    "section_hero_wCNAyr",
     "section_image_text_blocks_PHhidM",
     "section_accordion_bPkzp9",
-    "section_review_carousel_rxy9jF"
+    "section_hero_DKbTwb",
+    "section_review_carousel_rxy9jF",
+    "section_rich_text_rNpnAV",
+    "bm_custom_carousel_cards_3Cct9E"
   ]
 }

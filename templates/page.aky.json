@@ -78,6 +78,7 @@
       "custom_css": [
         ".hero__content-wrapper {background: #0000004a; z-index: 1; position: sticky;}"
       ],
+      "name": "Cita",
       "settings": {
         "padding_top": "0px",
         "desktop_padding_top": "0px",
@@ -95,12 +96,12 @@
         "border_radius": 0,
         "aspect_ratio": "9/16",
         "aspect_ratio_desktop": "16/9",
-        "image": "shopify://shop_images/The_Path_-_Yoga_Meditation_56496ae6-3a20-4df8-beba-bfce6ecdbea8.jpg",
+        "image_desktop": "shopify://shop_images/Asana.jpg",
         "bg_color": "",
         "content_width": "max-w-5xl",
         "text_align": "text-center",
         "text_color": "#ffffff",
-        "title": "Atma Kriya Yoga es un sistema yóguico completo que incluye meditación, así como ejercicios yóguicos energéticos y físicos. La práctica es completa y lo suficientemente flexible como para incorporarla a un estilo de vida ajetreado.",
+        "title": "Atma Kriya Yoga es un sistema yóguico completo que incluye meditación, así como ejercicios energéticos y físicos. La práctica es completa y lo suficientemente flexible como para incorporarla a un estilo de vida ajetreado.",
         "title_font_style": "h5",
         "subtitle": "",
         "button_text": "",
@@ -112,46 +113,60 @@
         "vertical_position": "items-center"
       }
     },
-    "section_image_text_blocks_PHhidM": {
-      "type": "section__image_text_blocks",
+    "section_text_image_grid_NcYma4": {
+      "type": "section__text-image-grid",
       "blocks": {
-        "image_block_jfBVbY": {
+        "image_block_XE4iM8": {
+          "type": "image_block",
+          "settings": {}
+        },
+        "image_block_pwGRCw": {
           "type": "image_block",
           "settings": {
-            "image": "shopify://shop_images/mahavatar-babaji-yogi.jpg",
-            "height": "auto",
-            "desktop_height": "auto"
+            "image": "shopify://shop_images/soul-awakening-grid-image-1.png"
           }
         },
-        "content_block_gVQiM6": {
-          "type": "content_block",
+        "image_block_BYhtDy": {
+          "type": "image_block",
           "settings": {
-            "title": "Atma Kriya Yoga",
-            "title_tag": "h3",
-            "title_font_style": "h4",
-            "description": "<p>Atma Kriya Yoga es absolutamente único. Aunque las técnicas aquietan la mente, el objetivo espiritual es despertar el alma en su relación eterna con Dios mediante el cultivo de diversas formas de <em>bhakti</em>: amor y devoción.<br/><br/>A medida que tu práctica se hace más profunda, las cualidades divinas comienzan a manifestarse de forma natural: paz, autocontrol, fuerza, sabiduría, humildad, compasión, vitalidad y mucho más.<br/><br/>Gracias a la gracia de la iniciación <em>shaktipat</em>, las técnicas son lo suficientemente sencillas como para que las aprendan los principiantes, pero lo suficientemente poderosas como para llevar incluso a los meditadores más avanzados a nuevas cotas de conexión divina.</p>",
-            "credits": "",
-            "cta_url": "",
-            "cta_label": "",
-            "text_align": "left",
-            "desktop_text_align": "inherit",
-            "vertical_padding": "py-lg",
-            "vertical_padding_desktop": "tabletl:py-xxl"
+            "image": "shopify://shop_images/soul-awakening-grid-image-6.png"
+          }
+        },
+        "image_block_MxBkXT": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/soul-awakening-grid-image-9.png"
+          }
+        },
+        "image_block_U8hYi8": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/soul-awakening-grid-image-2.png"
           }
         }
       },
       "block_order": [
-        "image_block_jfBVbY",
-        "content_block_gVQiM6"
+        "image_block_XE4iM8",
+        "image_block_pwGRCw",
+        "image_block_BYhtDy",
+        "image_block_MxBkXT",
+        "image_block_U8hYi8"
       ],
-      "custom_css": [],
+      "name": "Sobre la práctica",
       "settings": {
-        "margin_top": "mt-xl",
-        "margin_bottom": "mb-0",
-        "desktop_margin_top": "tabletl:mt-xxxl",
-        "desktop_margin_bottom": "tabletl:mb-xl",
-        "vertical_align": "center",
-        "flip_columns_desktop": false
+        "margin_top": "mt-xxxl",
+        "margin_bottom": "mb-xxxl",
+        "padding_top": "pt-0",
+        "padding_bottom": "pb-0",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "desktop_padding_top": "inherit",
+        "desktop_padding_bottom": "inherit",
+        "mobile_position": "top",
+        "position": "left",
+        "title": "Sobre la práctica",
+        "title_tag": "h2",
+        "description": "<p>Con el tiempo, muchos practicantes describen una transformación profunda en su relación con el miedo, la duda y la mente. A través de la respiración, el mantra y la indagación interior, esta práctica deja de sentirse como una técnica y se convierte en una experiencia viva de presencia y conexión con el Ser. Los participantes hablan de una atención más enfocada, una sensación de cercanía con lo Divino y el redescubrimiento de una dimensión más auténtica de sí mismos, más allá de las etiquetas de éxito, fracaso o limitación.</p>"
       }
     },
     "section_accordion_bPkzp9": {
@@ -248,7 +263,7 @@
         "accordion_item_npze4h",
         "accordion_item_wWaaBW"
       ],
-      "name": "Accordion",
+      "name": "Detalles del curso",
       "settings": {
         "margin_top": "mt-lg",
         "margin_bottom": "mb-0",
@@ -271,7 +286,6 @@
         "image_block_k6rWMK": {
           "type": "image_block",
           "settings": {
-            "image": "shopify://shop_images/2022-07-13-p-0899_56a6bd0f-2a20-4dad-93e3-d01be27af8ab.jpg",
             "height": "auto",
             "desktop_height": "auto"
           }
@@ -297,6 +311,50 @@
         "image_block_k6rWMK",
         "content_block_8FN3f3"
       ],
+      "disabled": true,
+      "settings": {
+        "margin_top": "mt-xl",
+        "margin_bottom": "mb-0",
+        "desktop_margin_top": "tabletl:mt-xxxl",
+        "desktop_margin_bottom": "tabletl:mb-xl",
+        "vertical_align": "center",
+        "flip_columns_desktop": false
+      }
+    },
+    "section_image_text_blocks_PHhidM": {
+      "type": "section__image_text_blocks",
+      "blocks": {
+        "image_block_jfBVbY": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/mahavatar-babaji-yogi.jpg",
+            "height": "auto",
+            "desktop_height": "auto"
+          }
+        },
+        "content_block_gVQiM6": {
+          "type": "content_block",
+          "settings": {
+            "title": "Lineaje Kriya",
+            "title_tag": "h3",
+            "title_font_style": "h4",
+            "description": "<p>Atma Kriya Yoga es absolutamente único. Aunque las técnicas aquietan la mente, el objetivo espiritual es despertar el alma en su relación eterna con Dios mediante el cultivo de diversas formas de <em>bhakti</em>: amor y devoción.<br/><br/>A medida que tu práctica se hace más profunda, las cualidades divinas comienzan a manifestarse de forma natural: paz, autocontrol, fuerza, sabiduría, humildad, compasión, vitalidad y mucho más.<br/><br/>Gracias a la gracia de la iniciación <em>shaktipat</em>, las técnicas son lo suficientemente sencillas como para que las aprendan los principiantes, pero lo suficientemente poderosas como para llevar incluso a los meditadores más avanzados a nuevas cotas de conexión divina.</p>",
+            "credits": "",
+            "cta_url": "",
+            "cta_label": "",
+            "text_align": "left",
+            "desktop_text_align": "inherit",
+            "vertical_padding": "py-lg",
+            "vertical_padding_desktop": "tabletl:py-xxl"
+          }
+        }
+      },
+      "block_order": [
+        "image_block_jfBVbY",
+        "content_block_gVQiM6"
+      ],
+      "custom_css": [],
+      "name": "Lineaje Kriya",
       "settings": {
         "margin_top": "mt-xl",
         "margin_bottom": "mb-0",
@@ -348,11 +406,77 @@
         "content_block_kmn7Bt",
         "content_block_7eHX9f"
       ],
-      "disabled": true,
-      "name": "Review Carousel",
+      "name": "Experiencias",
       "settings": {
+        "padding_top": "pt-xxxl",
+        "padding_bottom": "pb-0",
+        "desktop_padding_top": "inherit",
+        "desktop_padding_bottom": "inherit",
+        "title": "La práctica deja de ser instrucción y se convierte en experiencia",
+        "title_tag": "h4"
+      }
+    },
+    "section_rich_text_TAJheq": {
+      "type": "section__rich-text",
+      "name": "Rich Text Section",
+      "settings": {
+        "margin_top": "mt-xxl",
+        "margin_bottom": "mb-0",
         "padding_top": "pt-0",
         "padding_bottom": "pb-0",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "desktop_padding_top": "inherit",
+        "desktop_padding_bottom": "inherit",
+        "content": "<h5>– Descubre las otras prácticas de yoga y meditación –</h5>",
+        "text_alignment": "center",
+        "max_width": "",
+        "apply_max_width": false
+      }
+    },
+    "bm_custom_carousel_cards_rcFkCX": {
+      "type": "BM-custom-carousel-cards",
+      "blocks": {
+        "content_block_iUkwQr": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify://shop_images/om-chanting.jpg",
+            "heading": "OM Chanting",
+            "description": "<p>Utiliza el poder transformador del OM</p>",
+            "button_text": "Más info",
+            "button_link": "shopify://pages/om-chanting"
+          }
+        },
+        "content_block_Fzar6X": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify://shop_images/babaji-surya-namaskar-align-body-mind-and-spirit.jpg",
+            "heading": "Babaji Surya Namaskar",
+            "description": "<p>Celebra la divinidad del templo humano</p>",
+            "button_text": "Más info",
+            "button_link": "shopify://pages/babaji-surya-namaskar"
+          }
+        },
+        "content_block_atjrwN": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify://shop_images/Screenshot_2026-05-08_at_7.26.45_PM.png",
+            "heading": "Proyecto Mantra",
+            "description": "<p>Despierta una alegría profunda y duradera</p>",
+            "button_text": "Más info",
+            "button_link": "shopify://pages/proyecto-mantra"
+          }
+        }
+      },
+      "block_order": [
+        "content_block_iUkwQr",
+        "content_block_Fzar6X",
+        "content_block_atjrwN"
+      ],
+      "name": "BM Custom Carousel Cards",
+      "settings": {
+        "padding_top": "pt-lg",
+        "padding_bottom": "pb-xxxl",
         "desktop_padding_top": "inherit",
         "desktop_padding_bottom": "inherit",
         "title": "",
@@ -365,9 +489,12 @@
     "section_hero_cBpMpY",
     "bm_event_slider_FakRgW",
     "section_hero_EmDBMy",
-    "section_image_text_blocks_PHhidM",
+    "section_text_image_grid_NcYma4",
     "section_accordion_bPkzp9",
     "section_image_text_blocks_Xfh44d",
-    "section_review_carousel_rxy9jF"
+    "section_image_text_blocks_PHhidM",
+    "section_review_carousel_rxy9jF",
+    "section_rich_text_TAJheq",
+    "bm_custom_carousel_cards_rcFkCX"
   ]
 }

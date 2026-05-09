@@ -36,7 +36,7 @@
         "border_radius": 16,
         "aspect_ratio": "auto",
         "aspect_ratio_desktop": "4/3",
-        "image": "shopify://shop_images/the-path-knowledge-scriptures_8ea5e551-5019-45fa-9f6a-377c1bfc0178.jpg",
+        "image_desktop": "shopify://shop_images/The_Path_-_Knowledge.jpg",
         "bg_color": "#16254c",
         "content_width": "max-w-5xl",
         "text_align": "text-left",
@@ -99,9 +99,9 @@
         "content_width": "max-w-5xl",
         "text_align": "text-center",
         "text_color": "#ffffff",
-        "title": "El conocimiento es importante para vivir el bhakti. Proporciona las raíces para comprender el camino y la inspiración para vivir, amar y crecer con el tiempo.",
-        "title_font_style": "h5",
-        "subtitle": "",
+        "title": "",
+        "title_font_style": "h4",
+        "subtitle": "<h5>El conocimiento es importante para vivir el bhakti. Proporciona las raíces para comprender el camino y la inspiración para vivir, amar y crecer con el tiempo.</h5>",
         "button_text": "",
         "button_url": "",
         "button_style": "btn",
@@ -159,7 +159,7 @@
         "image_block_kFgjfN": {
           "type": "image_block",
           "settings": {
-            "image": "shopify://shop_images/lord-krishna-bhagavad-gita-song-of-love_a56e3b37-d4a3-412e-99bb-a7b727274f77.jpg",
+            "image": "shopify://shop_images/paramahamsa-vishwananda-holding-bhagavad-gita_1.jpg",
             "height": "auto",
             "desktop_height": "auto"
           }
@@ -200,7 +200,7 @@
         "image_block_XXcBbM": {
           "type": "image_block",
           "settings": {
-            "image": "shopify://shop_images/essence-of-shreemad-bhagavatam_a9241391-b6d9-4803-8658-dacff6d8d33d.jpg",
+            "image": "shopify://shop_images/essence-of-shreemad-bhagavatam.jpg",
             "height": "auto",
             "desktop_height": "auto"
           }
@@ -230,7 +230,7 @@
         "margin_top": "mt-xl",
         "margin_bottom": "mb-0",
         "desktop_margin_top": "tabletl:mt-xxxl",
-        "desktop_margin_bottom": "tabletl:mb-xl",
+        "desktop_margin_bottom": "tabletl:mb-xxxl",
         "vertical_align": "center",
         "flip_columns_desktop": false
       }
@@ -279,11 +279,11 @@
       ],
       "name": "Podcast Grid",
       "settings": {
-        "margin_top": "mt-0",
+        "margin_top": "mt-xxl",
         "margin_bottom": "mb-0",
-        "padding_top": "pt-xl",
-        "padding_bottom": "pb-0",
-        "desktop_margin_top": "inherit",
+        "padding_top": "pt-xxl",
+        "padding_bottom": "pb-xxxl",
+        "desktop_margin_top": "tabletl:mt-0",
         "desktop_margin_bottom": "inherit",
         "desktop_padding_top": "inherit",
         "desktop_padding_bottom": "inherit",
@@ -292,7 +292,7 @@
         "title_font_style": "h3",
         "description": "<p>A través de los años Paramahamsa Vishwananda ha dado innumerables <em>satsangs</em> y comentarios de varias escrituras, que ahora están disponibles para todos los buscadores en forma de libros. Puedes encontrar esos y muchos otros libros con las enseñanzas de Guruji en nuestra Bhakti Shop.</p>",
         "primary_bg_color": "#16254c",
-        "secondary_bg_color": "#ffffff",
+        "secondary_bg_color": "#16254c",
         "heading_color": "white",
         "card_color": "black"
       }
@@ -329,6 +329,7 @@
         "image_block_k6rWMK",
         "content_block_8FN3f3"
       ],
+      "disabled": true,
       "settings": {
         "margin_top": "mt-xl",
         "margin_bottom": "mb-0",
@@ -336,6 +337,73 @@
         "desktop_margin_bottom": "tabletl:mb-xl",
         "vertical_align": "center",
         "flip_columns_desktop": false
+      }
+    },
+    "section_rich_text_L9ejfC": {
+      "type": "section__rich-text",
+      "name": "Rich Text Section",
+      "settings": {
+        "margin_top": "mt-xxxl",
+        "margin_bottom": "mb-0",
+        "padding_top": "pt-0",
+        "padding_bottom": "pb-0",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "desktop_padding_top": "inherit",
+        "desktop_padding_bottom": "inherit",
+        "content": "<h5>– Descubre los otros brazos de prácticas Bhakti –</h5>",
+        "text_alignment": "center",
+        "max_width": "",
+        "apply_max_width": false
+      }
+    },
+    "bm_custom_carousel_cards_cbbXJD": {
+      "type": "BM-custom-carousel-cards",
+      "blocks": {
+        "content_block_B7hFzF": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify://shop_images/2023-08-29-p-1110.jpg",
+            "heading": "Rituales",
+            "description": "<p>Desarrolla tu relación con Dios</p>",
+            "button_text": "Descúbrelo",
+            "button_link": "shopify://pages/rituals"
+          }
+        },
+        "content_block_kECeTk": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify://shop_images/2023-07-28-p-0249.jpg",
+            "heading": "Artes devocionales",
+            "description": "<p>Más allá del placer, encuentra la alegría</p>",
+            "button_text": "Descúbrelo",
+            "button_link": "shopify://pages/devotional-arts"
+          }
+        },
+        "content_block_AxhGfR": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify://shop_images/mudra1.webp",
+            "heading": "Yoga y meditación",
+            "description": "<p>Despierta tu alma</p>",
+            "button_text": "Descúbrelo",
+            "button_link": "shopify://pages/yoga-meditation"
+          }
+        }
+      },
+      "block_order": [
+        "content_block_B7hFzF",
+        "content_block_kECeTk",
+        "content_block_AxhGfR"
+      ],
+      "name": "BM Custom Carousel Cards",
+      "settings": {
+        "padding_top": "pt-lg",
+        "padding_bottom": "pb-xxxl",
+        "desktop_padding_top": "tabletl:pt-lg",
+        "desktop_padding_bottom": "tabletl:pb-xxxl",
+        "title": "",
+        "title_tag": "h2"
       }
     }
   },
@@ -348,6 +416,8 @@
     "section_image_text_blocks_Ma8hkT",
     "section_image_text_blocks_GNDjm8",
     "section_podcast_4Bx7gc",
-    "section_image_text_blocks_Xfh44d"
+    "section_image_text_blocks_Xfh44d",
+    "section_rich_text_L9ejfC",
+    "bm_custom_carousel_cards_cbbXJD"
   ]
 }

@@ -35,23 +35,23 @@
         "set_100vh_desktop": true,
         "border_radius": 16,
         "aspect_ratio": "auto",
-        "aspect_ratio_desktop": "4\/3",
-        "image": "shopify:\/\/shop_images\/omc-hero.jpg",
-        "image_desktop": "shopify:\/\/shop_images\/omc-hero.jpg",
+        "aspect_ratio_desktop": "4/3",
+        "image": "shopify://shop_images/omc-hero.jpg",
+        "image_desktop": "shopify://shop_images/omc-hero.jpg",
         "bg_color": "#16254c",
         "content_width": "max-w-5xl",
         "text_align": "text-left",
         "text_color": "#ffffff",
         "title": "OM Chanting",
         "title_font_style": "h3",
-        "subtitle": "<p>God creates by vibration. Om is the seed vibration. Bathing in its resonance clears mental and physical blockages.<br\/><br\/>As a group practice, it’s also a great way to connect with people. You can find a group or even start your own.<\/p>",
+        "subtitle": "<p>God creates by vibration. Om is the seed vibration. Bathing in its resonance clears mental and physical blockages.<br/><br/>As a group practice, it’s also a great way to connect with people. You can find a group or even start your own.</p>",
         "button_text": "",
         "button_url": "",
         "button_style": "btn",
         "anchor_to_pricing": false,
         "video_title": "",
-        "video_url": "shopify:\/\/files\/videos\/Intro to OM Chanting.mp4",
-        "poster_video": "shopify:\/\/files\/videos\/Intro to OM Chanting.mp4",
+        "video_url": "shopify://files/videos/Intro to OM Chanting.mp4",
+        "poster_video": "shopify://files/videos/Intro to OM Chanting.mp4",
         "horizontal_position": "justify-center",
         "vertical_position": "items-end"
       }
@@ -93,9 +93,9 @@
         "set_100vh": false,
         "set_100vh_desktop": true,
         "border_radius": 0,
-        "aspect_ratio": "9\/16",
-        "aspect_ratio_desktop": "16\/9",
-        "image": "shopify:\/\/shop_images\/omc_b5127473-0a55-454d-b35c-af61996a22dc.jpg",
+        "aspect_ratio": "9/16",
+        "aspect_ratio_desktop": "16/9",
+        "image_desktop": "shopify://shop_images/curso-de-om-chanting-yoga-meditacion-esquema.webp",
         "bg_color": "",
         "content_width": "max-w-5xl",
         "text_align": "text-center",
@@ -118,7 +118,7 @@
         "image_block_jfBVbY": {
           "type": "image_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/omc1.jpg",
+            "image": "shopify://shop_images/omc1.jpg",
             "height": "auto",
             "desktop_height": "auto"
           }
@@ -129,7 +129,7 @@
             "title": "OM Chanting",
             "title_tag": "h3",
             "title_font_style": "h4",
-            "description": "<p>OM Chanting promotes inner peace, mental clarity, emotional freedom and physical health. Many people experience positive shifts. <\/p><p>It also generates a vibrational frequency that releases negativity, transforms it and showers participants with positive energy.<\/p><p>And the vibrational waves created by the OM Chanting practise spreads out in a 2-kilometre radius, creating a harmonious, peaceful environment and a unity between humans and nature.<\/p>",
+            "description": "<p>OM Chanting promotes inner peace, mental clarity, emotional freedom and physical health. Many people experience positive shifts. </p><p>It also generates a vibrational frequency that releases negativity, transforms it and showers participants with positive energy.</p><p>And the vibrational waves created by the OM Chanting practise spreads out in a 2-kilometre radius, creating a harmonious, peaceful environment and a unity between humans and nature.</p>",
             "credits": "",
             "cta_url": "#",
             "cta_label": "",
@@ -160,7 +160,7 @@
         "image_block_k6rWMK": {
           "type": "image_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/omc2.jpg",
+            "image": "shopify://shop_images/omc2.jpg",
             "height": "auto",
             "desktop_height": "auto"
           }
@@ -171,9 +171,9 @@
             "title": "Request a course",
             "title_tag": "h3",
             "title_font_style": "h4",
-            "description": "<p>You can also become a OM Chanting organizer, please click on the button bellow and sign-up the form.<\/p>",
+            "description": "<p>You can also become a OM Chanting organizer, please click on the button bellow and sign-up the form.</p>",
             "credits": "",
-            "cta_url": "shopify:\/\/pages\/request-a-course",
+            "cta_url": "shopify://pages/request-a-course",
             "cta_label": "Enviar mi nombre",
             "text_align": "left",
             "desktop_text_align": "inherit",
@@ -194,6 +194,73 @@
         "vertical_align": "center",
         "flip_columns_desktop": true
       }
+    },
+    "section_rich_text_TdKDQt": {
+      "type": "section__rich-text",
+      "name": "Rich Text Section",
+      "settings": {
+        "margin_top": "mt-xxl",
+        "margin_bottom": "mb-0",
+        "padding_top": "pt-0",
+        "padding_bottom": "pb-0",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "desktop_padding_top": "inherit",
+        "desktop_padding_bottom": "inherit",
+        "content": "<h5>– Descubre las otras prácticas de yoga y meditación –</h5>",
+        "text_alignment": "center",
+        "max_width": "",
+        "apply_max_width": false
+      }
+    },
+    "bm_custom_carousel_cards_EDBcTh": {
+      "type": "BM-custom-carousel-cards",
+      "blocks": {
+        "content_block_pay6PY": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify://shop_images/babaji-surya-namaskar-align-body-mind-and-spirit.jpg",
+            "heading": "Babaji Surya Namaskar",
+            "description": "<p>Celebra la divinidad del templo humano</p>",
+            "button_text": "Más info",
+            "button_link": "shopify://pages/babaji-surya-namaskar"
+          }
+        },
+        "content_block_gbNxGw": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify://shop_images/Screenshot_2026-05-08_at_7.26.45_PM.png",
+            "heading": "Proyecto Mantra",
+            "description": "<p>Despierta una alegría profunda y duradera</p>",
+            "button_text": "Más info",
+            "button_link": "shopify://pages/proyecto-mantra"
+          }
+        },
+        "content_block_XFYE7g": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify://shop_images/mahavatar-babaji-yogi.jpg",
+            "heading": "Atma Kriya Yoga",
+            "description": "<p>Manifesta cualidades Divinas</p>",
+            "button_text": "Más info",
+            "button_link": "shopify://pages/atma-kriya-yoga"
+          }
+        }
+      },
+      "block_order": [
+        "content_block_pay6PY",
+        "content_block_gbNxGw",
+        "content_block_XFYE7g"
+      ],
+      "name": "BM Custom Carousel Cards",
+      "settings": {
+        "padding_top": "pt-lg",
+        "padding_bottom": "pb-xxxl",
+        "desktop_padding_top": "inherit",
+        "desktop_padding_bottom": "inherit",
+        "title": "",
+        "title_tag": "h2"
+      }
     }
   },
   "order": [
@@ -202,6 +269,8 @@
     "bm_event_slider_mzXtyt",
     "section_hero_EmDBMy",
     "section_image_text_blocks_PHhidM",
-    "section_image_text_blocks_Xfh44d"
+    "section_image_text_blocks_Xfh44d",
+    "section_rich_text_TdKDQt",
+    "bm_custom_carousel_cards_EDBcTh"
   ]
 }

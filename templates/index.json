@@ -40,7 +40,7 @@
         "title_font_style": "h2",
         "subtitle": "<p>Paramahamsa Vishwananda es un Maestro iluminado que enseña el camino del Amor o Bhakti.</p>",
         "button_text": "Conócelo",
-        "button_url": "shopify://blogs/events/4-days-to-soul-awakening-with-paramahamsa-vishwananda",
+        "button_url": "shopify://pages/el-maestro",
         "button_style": "btn",
         "anchor_to_pricing": false,
         "video_title": "",
@@ -363,7 +363,7 @@
             "title_font_style": "h3",
             "description": "<p>Una vez al mes, participa en directo junto a Paramahamsa Vishwananda en una oración guiada por Él por la paz mundial y por quienes más lo necesitan. Puedes enviar los nombres de tus seres queridos para que se rece por ellos.</p>",
             "credits": "",
-            "cta_url": "https://events.bhaktimarga.org/pages/pray-for-the-world",
+            "cta_url": "https://alexandrabenet108.github.io/rezar/",
             "cta_label": "Reza con Él",
             "text_align": "center",
             "desktop_text_align": "inherit",
@@ -406,8 +406,8 @@
             "title_font_style": "h3",
             "description": "<p>A través del canto de mantras —una forma de meditación sencilla pero poderosa— se despierta una alegría profunda y duradera. Durante 40 días, este programa gratuito y guiado te acompaña para desarrollar y consolidar esta práctica. Es ideal tanto para principiantes como para practicantes avanzados.</p>",
             "credits": "",
-            "cta_url": "https://pages.bhaktimarga.org/project-mantra",
-            "cta_label": "Acepta el reto",
+            "cta_url": "shopify://pages/proyecto-mantra",
+            "cta_label": "Más información",
             "text_align": "center",
             "desktop_text_align": "inherit",
             "vertical_padding": "py-lg",
@@ -421,6 +421,50 @@
       ],
       "custom_css": [],
       "name": "Recita el mantra",
+      "settings": {
+        "margin_top": "mt-xl",
+        "margin_bottom": "mb-xl",
+        "desktop_margin_top": "tabletl:mt-xl",
+        "desktop_margin_bottom": "inherit",
+        "vertical_align": "center",
+        "flip_columns_desktop": true
+      }
+    },
+    "section_image_text_blocks_YA4xYr": {
+      "type": "section__image_text_blocks",
+      "blocks": {
+        "image_block_fVjNKr": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/2022-07-16-p-0413.jpg",
+            "height": "auto",
+            "desktop_height": "auto"
+          }
+        },
+        "content_block_8jEJPj": {
+          "type": "content_block",
+          "settings": {
+            "title": "Prácticas Bhakti",
+            "title_tag": "h2",
+            "title_font_style": "h3",
+            "description": "<p>A través del canto de mantras —una forma de meditación sencilla pero poderosa— se despierta una alegría profunda y duradera. Durante 40 días, este programa gratuito y guiado te acompaña para desarrollar y consolidar esta práctica. Es ideal tanto para principiantes como para practicantes avanzados.</p>",
+            "credits": "",
+            "cta_url": "shopify://pages/proyecto-mantra",
+            "cta_label": "Más información",
+            "text_align": "center",
+            "desktop_text_align": "inherit",
+            "vertical_padding": "py-lg",
+            "vertical_padding_desktop": "tabletl:py-xxl"
+          }
+        }
+      },
+      "block_order": [
+        "image_block_fVjNKr",
+        "content_block_8jEJPj"
+      ],
+      "disabled": true,
+      "custom_css": [],
+      "name": "Prácticas Bhakti",
       "settings": {
         "margin_top": "mt-xl",
         "margin_bottom": "mb-xl",
@@ -701,7 +745,7 @@
       "settings": {
         "padding_top": "8px",
         "desktop_padding_top": "tabletl:pt-0",
-        "padding_bottom": "8px",
+        "padding_bottom": "80px",
         "desktop_padding_bottom": "inherit",
         "padding_horizontal": "px-0",
         "desktop_padding_horizontal": "inherit",
@@ -770,6 +814,7 @@
       "block_order": [
         "ai_gen_block_7ef7938_VbkDtf"
       ],
+      "disabled": true,
       "name": "Encuentros/programas",
       "settings": {}
     },
@@ -930,6 +975,46 @@
         "horizontal_position": "justify-center",
         "vertical_position": "items-center"
       }
+    },
+    "darshan_popup": {
+      "type": "section__darshan-popup",
+      "name": "Popup Darshan",
+      "settings": {
+        "enabled": true,
+        "start_date": "",
+        "end_date": "",
+        "delay_ms": 1500,
+        "dismiss_duration": "pageload",
+        "media_type": "video",
+        "video_url": "https://cdn.shopify.com/videos/c/o/v/06a9cabe30f1402c8b2b42d3d16c2ca1.mp4",
+        "badge_text": "",
+        "eyebrow": "Evento especial · 2026",
+        "title": "Darshan en Lanzarote",
+        "description": "Recibe la bendición de Paramahamsa Vishwananda. Una mirada de amor incondicional que abre el corazón y trae un sentido más profundo a tu vida.",
+        "date_label": "Sábado 21 de noviembre de 2026",
+        "location_label": "Lanzarote, Islas Canarias",
+        "cta_text": "Reserva tu plaza",
+        "cta_url": "/products/darshan",
+        "dismiss_text": "No, gracias"
+      }
+    },
+    "section_our_values_Un3TGa": {
+      "type": "section__our-values",
+      "disabled": true,
+      "name": "Our Values",
+      "settings": {
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "padding_top": "pt-0",
+        "padding_bottom": "pb-0",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "desktop_padding_top": "inherit",
+        "desktop_padding_bottom": "inherit",
+        "title": "",
+        "title_tag": "h2",
+        "content": ""
+      }
     }
   },
   "order": [
@@ -942,6 +1027,7 @@
     "section_hero_Pc4c7p",
     "image_text_blocks",
     "section_image_text_blocks_qhG8mq",
+    "section_image_text_blocks_YA4xYr",
     "section_image_text_blocks_hznqgT",
     "section_image_text_blocks_creencias",
     "section_image_text_blocks_valores",
@@ -953,6 +1039,8 @@
     "section_hero_AiHVCV",
     "section_hero_7PWVQ7",
     "section_hero_EepXE4",
-    "section_hero_6Jyrcc"
+    "section_hero_6Jyrcc",
+    "darshan_popup",
+    "section_our_values_Un3TGa"
   ]
 }

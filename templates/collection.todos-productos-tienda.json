@@ -23,18 +23,18 @@
         "desktop_margin_top": "tabletl:mt-0",
         "desktop_margin_bottom": "tabletl:mb-md",
         "use_container": true,
-        "set_100vh": false,
+        "set_100vh": true,
         "set_100vh_desktop": false,
         "border_radius": 16,
-        "aspect_ratio": "1/1",
-        "aspect_ratio_desktop": "auto",
+        "aspect_ratio": "9/16",
+        "aspect_ratio_desktop": "16/9",
         "image": "shopify://shop_images/2020-11-21-p-0501.jpg",
         "image_desktop": "shopify://shop_images/2020-11-21-p-0501.jpg",
         "bg_color": "#16254c",
-        "content_width": "max-w-sm",
+        "content_width": "max-w-md",
         "text_align": "text-left",
         "text_color": "#ffffff",
-        "title": "Abraza tu vida espiritual",
+        "title": "Dale vida a tu camino espiritual",
         "title_font_style": "h3",
         "subtitle": "<p>Al servicio de los buscadores espirituales con productos inspiradores que apoyan y enriquecen un estilo de vida devocional.</p>",
         "button_text": "",
@@ -56,11 +56,11 @@
       "custom_css": [
         ".product-card__title,.card__heading,.product-item__title {font-size: 0.9rem !important;}",
         ".price__regular * {font-size: 0.65rem !important;}",
-        "/* Ocultar categoría sugerida */.card__information > .caption-with-letter-spacing:first-child,.card-information .caption:first-of-type {display: none !important;}",
-        "/* Mover título arriba del todo */.card__inner {display: flex; flex-direction: column;}",
+        " /* Ocultar categoría sugerida */.card__information > .caption-with-letter-spacing:first-child,.card-information .caption:first-of-type {display: none !important;}",
+        " /* Mover título arriba del todo */.card__inner {display: flex; flex-direction: column;}",
         ".card__heading {order: -2 !important;}",
         ".card__media {order: -1 !important;}",
-        "/* Precio más pequeño */"
+        " /* Precio más pequeño */"
       ],
       "settings": {}
     },
@@ -102,6 +102,7 @@
         "content_block_hrCUqg",
         "content_block_x4qiqJ"
       ],
+      "disabled": true,
       "settings": {
         "margin_top": "mt-0",
         "margin_bottom": "mb-0",

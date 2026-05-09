@@ -93,7 +93,7 @@
         "border_radius": 0,
         "aspect_ratio": "9/16",
         "aspect_ratio_desktop": "16/9",
-        "image": "shopify://shop_images/The_Path_-_Yoga_Meditation_56496ae6-3a20-4df8-beba-bfce6ecdbea8.jpg",
+        "image_desktop": "shopify://shop_images/babaji-surya-namaskar-align-body-mind-and-spirit.jpg",
         "bg_color": "",
         "content_width": "max-w-5xl",
         "text_align": "text-center",
@@ -116,7 +116,7 @@
         "image_block_jfBVbY": {
           "type": "image_block",
           "settings": {
-            "image": "shopify://shop_images/babaji-surya-namaskar-align-body-mind-and-spirit_0e47ee43-8a9e-438c-9f69-67834f60b303.jpg",
+            "image": "shopify://shop_images/mahavatar-babaji-yogi.jpg",
             "height": "auto",
             "desktop_height": "auto"
           }
@@ -184,6 +184,7 @@
         "image_block_k6rWMK",
         "content_block_8FN3f3"
       ],
+      "disabled": true,
       "settings": {
         "margin_top": "mt-xl",
         "margin_bottom": "mb-0",
@@ -191,6 +192,73 @@
         "desktop_margin_bottom": "tabletl:mb-xl",
         "vertical_align": "center",
         "flip_columns_desktop": true
+      }
+    },
+    "section_rich_text_pyH4Fn": {
+      "type": "section__rich-text",
+      "name": "Rich Text Section",
+      "settings": {
+        "margin_top": "mt-xxl",
+        "margin_bottom": "mb-0",
+        "padding_top": "pt-0",
+        "padding_bottom": "pb-0",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "desktop_padding_top": "inherit",
+        "desktop_padding_bottom": "inherit",
+        "content": "<h5>– Descubre las otras prácticas de yoga y meditación –</h5>",
+        "text_alignment": "center",
+        "max_width": "",
+        "apply_max_width": false
+      }
+    },
+    "bm_custom_carousel_cards_tUhQhK": {
+      "type": "BM-custom-carousel-cards",
+      "blocks": {
+        "content_block_pwDAKk": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify://shop_images/Screenshot_2026-05-08_at_7.26.45_PM.png",
+            "heading": "Proyecto Mantra",
+            "description": "<p>Despierta una alegría profunda y duradera</p>",
+            "button_text": "Más info",
+            "button_link": "shopify://pages/proyecto-mantra"
+          }
+        },
+        "content_block_aFr7jp": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify://shop_images/mahavatar-babaji-yogi.jpg",
+            "heading": "Atma Kriya Yoga",
+            "description": "<p>Manifesta cualidades Divinas</p>",
+            "button_text": "Más info",
+            "button_link": "shopify://pages/atma-kriya-yoga"
+          }
+        },
+        "content_block_pnMTd4": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify://shop_images/om-chanting.jpg",
+            "heading": "Om Chanting",
+            "description": "<p>Utiliza el poder transformador del OM</p>",
+            "button_text": "Más info",
+            "button_link": "shopify://pages/om-chanting"
+          }
+        }
+      },
+      "block_order": [
+        "content_block_pwDAKk",
+        "content_block_aFr7jp",
+        "content_block_pnMTd4"
+      ],
+      "name": "BM Custom Carousel Cards",
+      "settings": {
+        "padding_top": "pt-lg",
+        "padding_bottom": "pb-xxxl",
+        "desktop_padding_top": "inherit",
+        "desktop_padding_bottom": "inherit",
+        "title": "",
+        "title_tag": "h2"
       }
     }
   },
@@ -200,6 +268,8 @@
     "bm_event_slider_wL67nE",
     "section_hero_EmDBMy",
     "section_image_text_blocks_PHhidM",
-    "section_image_text_blocks_Xfh44d"
+    "section_image_text_blocks_Xfh44d",
+    "section_rich_text_pyH4Fn",
+    "bm_custom_carousel_cards_tUhQhK"
   ]
 }

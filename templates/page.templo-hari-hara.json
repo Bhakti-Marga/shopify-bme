@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -7,6 +16,7 @@
     },
     "section_hero_cBpMpY": {
       "type": "section__hero",
+      "disabled": true,
       "settings": {
         "padding_top": "0px",
         "desktop_padding_top": "inherit",
@@ -22,119 +32,32 @@
         "set_100vh": true,
         "set_100vh_desktop": true,
         "border_radius": 16,
-        "aspect_ratio": "9\/16",
-        "aspect_ratio_desktop": "4\/3",
-        "image": "shopify:\/\/shop_images\/Bhutabhrteshwarnath_Mandir-poster.jpg",
-        "image_desktop": "shopify:\/\/shop_images\/Bhutabhrteshwarnath_Mandir-poster.jpg",
+        "aspect_ratio": "9/16",
+        "aspect_ratio_desktop": "4/3",
+        "image": "shopify://shop_images/Bhutabhrteshwarnath_Mandir-poster.jpg",
+        "image_desktop": "shopify://shop_images/HH-Mural.jpg",
         "bg_color": "#16254c",
         "content_width": "max-w-5xl",
         "text_align": "text-left",
         "text_color": "#ffffff",
         "title": "Templo Hari Hara",
         "title_font_style": "h3",
-        "subtitle": "<h5>PROFUNDIZA TU CAMINO HACIA EL AMOR DIVINO<\/h5>",
+        "subtitle": "<h5>PROFUNDIZA TU CAMINO HACIA EL AMOR DIVINO</h5>",
         "button_text": "Retiros y Eventos",
-        "button_url": "shopify:\/\/pages\/all-programs",
+        "button_url": "shopify://pages/all-programs",
+        "button_anchor": "",
         "button_style": "btn btn--gold",
         "anchor_to_pricing": false,
         "video_title": "",
-        "poster_image": "shopify:\/\/shop_images\/IMG_1144-Edit.jpg",
-        "poster_image_desktop": "shopify:\/\/shop_images\/IMG_1144-Edit.jpg",
+        "poster_image": "shopify://shop_images/IMG_1144-Edit.jpg",
+        "poster_image_desktop": "shopify://shop_images/IMG_1144-Edit.jpg",
         "horizontal_position": "justify-center",
         "vertical_position": "items-end"
       }
     },
-    "section_events_carousel_LEJzgw": {
-      "type": "section__events-carousel",
-      "blocks": {
-        "block_WxMXQ7": {
-          "type": "block",
-          "settings": {
-            "article": "events\/shivaratri-2025"
-          }
-        },
-        "block_39E9Bm": {
-          "type": "block",
-          "settings": {
-            "article": "events\/paramahamsa-vishwanandas-birthday-2025"
-          }
-        },
-        "block_rjjER4": {
-          "type": "block",
-          "settings": {
-            "article": "events\/gurupurnima-2025"
-          }
-        },
-        "block_NiiU7D": {
-          "type": "block",
-          "settings": {
-            "article": "events\/navaratri-2025"
-          }
-        }
-      },
-      "block_order": [
-        "block_WxMXQ7",
-        "block_39E9Bm",
-        "block_rjjER4",
-        "block_NiiU7D"
-      ],
-      "settings": {
-        "padding_top": "pt-xl",
-        "padding_bottom": "pb-xl",
-        "desktop_padding_top": "inherit",
-        "desktop_padding_bottom": "inherit",
-        "set_dark_theme": false,
-        "apply_gradient": true,
-        "title": "Próximos Eventos",
-        "title_tag": "h2",
-        "cta_label": "Ver Todos los Eventos",
-        "cta_url": "shopify:\/\/blogs\/events",
-        "hide_arrows_desktop": false
-      }
-    },
-    "section_image_text_blocks_XJ9kGW": {
-      "type": "section__image_text_blocks",
-      "blocks": {
-        "image_block_qrJaRt": {
-          "type": "image_block",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/narasimha-poster.jpg",
-            "height": "50vh",
-            "desktop_height": "inherit"
-          }
-        },
-        "content_block_TFpAMn": {
-          "type": "content_block",
-          "settings": {
-            "title": "Transmisión en Directo Diaria",
-            "title_tag": "h3",
-            "title_font_style": "h4",
-            "description": "<p>Únete cada día por transmisión en directo a las Oraciones Matutinas y al Arati Vespertino, desde el Templo Hari Hara. Hora Central Europea:<\/p><ul><li>Oraciones Matutinas: 7:00 a 8:20<\/li><li>Oraciones del Domingo: 9:00 a 11:30<\/li><li>Arati Vespertino: 20:00 a 20:10<\/li><\/ul>",
-            "credits": "",
-            "cta_url": "#",
-            "cta_label": "Unirse al Directo",
-            "text_align": "left",
-            "desktop_text_align": "inherit",
-            "vertical_padding": "py-lg",
-            "vertical_padding_desktop": "tabletl:py-xxl"
-          }
-        }
-      },
-      "block_order": [
-        "image_block_qrJaRt",
-        "content_block_TFpAMn"
-      ],
-      "settings": {
-        "margin_top": "mt-xl",
-        "margin_bottom": "mb-xxl",
-        "desktop_margin_top": "tabletl:mt-xl",
-        "desktop_margin_bottom": "tabletl:mb-xxl",
-        "vertical_align": "center",
-        "flip_columns_desktop": false
-      }
-    },
     "section_hero_XrFNy3": {
       "type": "section__hero",
+      "name": "Portada",
       "settings": {
         "padding_top": "0px",
         "desktop_padding_top": "0px",
@@ -150,18 +73,19 @@
         "set_100vh": true,
         "set_100vh_desktop": true,
         "border_radius": 0,
-        "aspect_ratio": "9\/16",
-        "aspect_ratio_desktop": "16\/9",
-        "image": "shopify:\/\/shop_images\/temple-card.jpg",
+        "aspect_ratio": "9/16",
+        "aspect_ratio_desktop": "16/9",
+        "image": "shopify://shop_images/hari-hara.jpg",
         "bg_color": "",
         "content_width": "max-w-5xl",
         "text_align": "text-left",
         "text_color": "#ffffff",
         "title": "Templo Hari Hara",
         "title_font_style": "h2",
-        "subtitle": "<p>Tu Hogar Espiritual en España<\/p>",
-        "button_text": "Visitar el Templo",
-        "button_url": "shopify:\/\/pages\/calendar",
+        "subtitle": "<p>Tu hogar espiritual en Lanzarote</p>",
+        "button_text": "Visita el Templo",
+        "button_url": "shopify://pages/templo-hari-hara",
+        "button_anchor": "#shopify-section-template--28224459899224__section_image_text_blocks_dj6J3e",
         "button_style": "btn",
         "anchor_to_pricing": false,
         "video_title": "",
@@ -169,55 +93,194 @@
         "vertical_position": "items-center"
       }
     },
+    "section_events_carousel_LEJzgw": {
+      "type": "section__events-carousel",
+      "blocks": {
+        "block_WxMXQ7": {
+          "type": "block",
+          "settings": {
+            "article": "events/shivaratri-2025"
+          }
+        },
+        "block_39E9Bm": {
+          "type": "block",
+          "settings": {
+            "article": "events/paramahamsa-vishwanandas-birthday-2025"
+          }
+        },
+        "block_rjjER4": {
+          "type": "block",
+          "settings": {
+            "article": "events/gurupurnima-2025"
+          }
+        },
+        "block_NiiU7D": {
+          "type": "block",
+          "settings": {
+            "article": "events/navaratri-2025"
+          }
+        }
+      },
+      "block_order": [
+        "block_WxMXQ7",
+        "block_39E9Bm",
+        "block_rjjER4",
+        "block_NiiU7D"
+      ],
+      "disabled": true,
+      "settings": {
+        "padding_top": "pt-xl",
+        "padding_bottom": "pb-xl",
+        "desktop_padding_top": "inherit",
+        "desktop_padding_bottom": "inherit",
+        "set_dark_theme": false,
+        "apply_gradient": true,
+        "title": "Próximos Eventos",
+        "title_tag": "h2",
+        "cta_label": "Ver Todos los Eventos",
+        "cta_url": "shopify://blogs/events",
+        "hide_arrows_desktop": false
+      }
+    },
+    "section_image_text_blocks_XJ9kGW": {
+      "type": "section__image_text_blocks",
+      "blocks": {
+        "image_block_qrJaRt": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/HH-Entrance.jpg",
+            "height": "50vh",
+            "desktop_height": "inherit"
+          }
+        },
+        "content_block_TFpAMn": {
+          "type": "content_block",
+          "settings": {
+            "title": "Horario",
+            "title_tag": "h3",
+            "title_font_style": "h4",
+            "description": "<p>Estamos abiertos todos los días y hacemos oraciones matutinas y verpertinas los Sábados. Hora Central Europea.<strong><br/></strong></p><p><strong>Horario apertura</strong></p><ul><li>Lunes a Viernes: 9:00 a 11:00 y 18:00 a 20:00</li><li>Sábados: 18:00 a 20:00</li><li>Domingos: 9:00 a 12:00 y 18:00 a 20:00<br/></li></ul><p><strong>Oraciones diarias</strong></p><ul><li>Lunes a Viernes: 9:00</li><li>Sábados: 18:00</li><li>Domingos: 9:00</li></ul>",
+            "credits": "",
+            "cta_url": "#",
+            "cta_label": "",
+            "text_align": "left",
+            "desktop_text_align": "inherit",
+            "vertical_padding": "py-lg",
+            "vertical_padding_desktop": "tabletl:py-xxl"
+          }
+        }
+      },
+      "block_order": [
+        "image_block_qrJaRt",
+        "content_block_TFpAMn"
+      ],
+      "name": "Horario",
+      "settings": {
+        "margin_top": "mt-xl",
+        "margin_bottom": "mb-xxl",
+        "desktop_margin_top": "tabletl:mt-xxxl",
+        "desktop_margin_bottom": "tabletl:mb-xxl",
+        "vertical_align": "center",
+        "flip_columns_desktop": true
+      }
+    },
     "section_text_image_grid_q8FKHB": {
       "type": "section__text-image-grid",
       "blocks": {
+        "image_block_4tkC8R": {
+          "type": "image_block",
+          "settings": {}
+        },
         "image_block_RA3nVQ": {
           "type": "image_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/temple-pag1.jpg"
+            "image": "shopify://shop_images/HH-Guruji1.jpg"
           }
         },
         "image_block_Dee9xw": {
           "type": "image_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/temple-pag4.jpg"
+            "image": "shopify://shop_images/HH.jpg"
           }
         },
         "image_block_qhpXeT": {
           "type": "image_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/temple-pag3.jpg"
+            "image": "shopify://shop_images/HH-Mural.jpg"
           }
         },
         "image_block_gKfa4C": {
           "type": "image_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/temple-pag2.jpg"
+            "image": "shopify://shop_images/HH-Other-murti.jpg"
           }
         }
       },
       "block_order": [
+        "image_block_4tkC8R",
         "image_block_RA3nVQ",
         "image_block_Dee9xw",
         "image_block_qhpXeT",
         "image_block_gKfa4C"
       ],
       "custom_css": [],
+      "name": "Un lugar para tí",
       "settings": {
-        "margin_top": "mt-0",
-        "margin_bottom": "mb-0",
-        "padding_top": "pt-xl",
-        "padding_bottom": "pb-xxl",
-        "desktop_margin_top": "inherit",
-        "desktop_margin_bottom": "inherit",
-        "desktop_padding_top": "tabletl:pt-xxxl",
-        "desktop_padding_bottom": "tabletl:pb-xxxl",
+        "margin_top": "mt-lg",
+        "margin_bottom": "mb-lg",
+        "padding_top": "pt-lg",
+        "padding_bottom": "pb-lg",
+        "desktop_margin_top": "tabletl:mt-xl",
+        "desktop_margin_bottom": "tabletl:mb-xl",
+        "desktop_padding_top": "tabletl:pt-lg",
+        "desktop_padding_bottom": "tabletl:pb-0",
         "mobile_position": "top",
         "position": "left",
-        "title": "Aquí hay un lugar para ti",
+        "title": "Sobre el templo",
         "title_tag": "h2",
-        "description": "<p>El Templo Hari Hara es un centro espiritual dedicado a ayudarte a llevar más amor y devoción a tu vida cotidiana. A través de oraciones diarias, eventos semanales inspiradores y festivales védicos transformadores, animamos a cada persona a expresar su devoción única hacia Dios. Todos son bienvenidos a explorar este hermoso camino.<\/p>"
+        "description": "<p>El Templo Hari Hara es un precioso templo hindú en la isla de Lanzarote. Es el primer templo de Paramahamsa Vishwananda y de Bhakti Marga en España. Fue inaugurado por Él propio el 20 de diciembre de 2017 dando vida a las deidades del Templo: Akarshana Giridhari (Krishna) y Panchamukha Shiva Lingam (Shiva Lingam de cinco caras).</p>"
+      }
+    },
+    "section_image_text_blocks_dj6J3e": {
+      "type": "section__image_text_blocks",
+      "blocks": {
+        "image_block_TCJdYE": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/HH-map.png",
+            "height": "50vh",
+            "desktop_height": "inherit"
+          }
+        },
+        "content_block_hDiPnX": {
+          "type": "content_block",
+          "settings": {
+            "title": "Visita el templo",
+            "title_tag": "h3",
+            "title_font_style": "h4",
+            "description": "<p>Te invitamos a visitar el templo y disfrutar de un espacio de paz, oración y conexión espiritual en el corazón de Lanzarote. Todos son bienvenidos.<br/><br/>Calle Adonis, 8 <br/>Guatiza, 35544 <br/>Lanzarote</p>",
+            "credits": "",
+            "cta_url": "https://www.google.com/maps/place/C.+Adonis,+8,+35544+Guatiza,+Las+Palmas/@29.0778879,-13.4763895,17z/data=!3m1!4b1!4m6!3m5!1s0xc489f15a5745401:0x5690ba77bb75c422!8m2!3d29.0778879!4d-13.4763895!16s%2Fg%2F11c4dzddfy?entry=ttu&g_ep=EgoyMDI2MDUwMi4wIKXMDSoASAFQAw%3D%3D",
+            "cta_label": "Ver en mapa",
+            "text_align": "left",
+            "desktop_text_align": "inherit",
+            "vertical_padding": "py-lg",
+            "vertical_padding_desktop": "tabletl:py-xxl"
+          }
+        }
+      },
+      "block_order": [
+        "image_block_TCJdYE",
+        "content_block_hDiPnX"
+      ],
+      "name": "Visita el templo",
+      "settings": {
+        "margin_top": "mt-xl",
+        "margin_bottom": "mb-xxxl",
+        "desktop_margin_top": "tabletl:mt-xxxl",
+        "desktop_margin_bottom": "tabletl:mb-xxxl",
+        "vertical_align": "center",
+        "flip_columns_desktop": true
       }
     },
     "section_image_text_blocks_H63g8U": {
@@ -226,7 +289,6 @@
         "image_block_NzKizB": {
           "type": "image_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/come-visit-us-the-ashram_e2674f5e-3d18-4d52-b625-e1803430a964.webp",
             "height": "50vh",
             "desktop_height": "inherit"
           }
@@ -237,9 +299,9 @@
             "title": "Templo Hari Hara",
             "title_tag": "h4",
             "title_font_style": "h4",
-            "description": "<h5>Tu Hogar Espiritual en España<\/h5>",
+            "description": "<h5>Tu Hogar Espiritual en España</h5>",
             "credits": "",
-            "cta_url": "shopify:\/\/pages\/calendar",
+            "cta_url": "shopify://pages/calendar",
             "cta_label": "Visitar el Templo",
             "text_align": "left",
             "desktop_text_align": "inherit",
@@ -252,6 +314,8 @@
         "image_block_NzKizB",
         "content_block_JYJVtf"
       ],
+      "disabled": true,
+      "name": "Visitar el templo",
       "settings": {
         "margin_top": "mt-xl",
         "margin_bottom": "mb-xl",
@@ -260,15 +324,60 @@
         "vertical_align": "center",
         "flip_columns_desktop": true
       }
+    },
+    "section_social_BXK9bt": {
+      "type": "section__social",
+      "blocks": {
+        "media_block_JntBjD": {
+          "type": "media_block",
+          "settings": {
+            "image": "shopify://shop_images/HH-Guruji2.jpg",
+            "image_url": "https://www.instagram.com/p/CawepGEgMIg/",
+            "accessibility_label": ""
+          }
+        },
+        "media_block_7Uc9e6": {
+          "type": "media_block",
+          "settings": {
+            "image": "shopify://shop_images/Gemini_Generated_Image_9v5grj9v5grj9v5g.png",
+            "image_url": "https://www.instagram.com/p/DBRQtCEMTc5/",
+            "accessibility_label": ""
+          }
+        },
+        "media_block_M3WeUG": {
+          "type": "media_block",
+          "settings": {
+            "image": "shopify://shop_images/HH-Room_60ba9ff9-bbee-48a3-a7b3-a57ca9b1f693.jpg",
+            "image_url": "https://www.instagram.com/p/CMcisJKgK5n/?img_index=1",
+            "accessibility_label": ""
+          }
+        }
+      },
+      "block_order": [
+        "media_block_JntBjD",
+        "media_block_7Uc9e6",
+        "media_block_M3WeUG"
+      ],
+      "name": "Social",
+      "settings": {
+        "padding_top": "pt-xl",
+        "padding_bottom": "pb-xl",
+        "desktop_padding_top": "tabletl:pt-xl",
+        "desktop_padding_bottom": "tabletl:pb-xl",
+        "title": "<p>Sigue @hariharatemple</p>",
+        "title_icon": "instagram"
+      }
     }
   },
   "order": [
     "main",
     "section_hero_cBpMpY",
+    "section_hero_XrFNy3",
     "section_events_carousel_LEJzgw",
     "section_image_text_blocks_XJ9kGW",
-    "section_hero_XrFNy3",
     "section_text_image_grid_q8FKHB",
-    "section_image_text_blocks_H63g8U"
+    "section_image_text_blocks_dj6J3e",
+    "section_image_text_blocks_H63g8U",
+    "section_social_BXK9bt"
   ]
 }

@@ -337,6 +337,58 @@
         "cta_label": ""
       }
     },
+    "section_text_image_grid_WkciLb": {
+      "type": "section__text-image-grid",
+      "blocks": {
+        "image_block_eEwMJF": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/CIMG1012_jpg.webp"
+          }
+        },
+        "image_block_3dPfdJ": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/CIMG1926_Switzerland_2006_jpg.webp"
+          }
+        },
+        "image_block_tNT7PE": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/102-IMG_0267_jpg.webp"
+          }
+        },
+        "image_block_JPy8AA": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/2023-11-05-p-1146_jpg.webp"
+          }
+        }
+      },
+      "block_order": [
+        "image_block_eEwMJF",
+        "image_block_3dPfdJ",
+        "image_block_tNT7PE",
+        "image_block_JPy8AA"
+      ],
+      "disabled": true,
+      "name": "Historia",
+      "settings": {
+        "margin_top": "mt-xxxl",
+        "margin_bottom": "mb-xxxl",
+        "padding_top": "pt-0",
+        "padding_bottom": "pb-0",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "desktop_padding_top": "inherit",
+        "desktop_padding_bottom": "inherit",
+        "mobile_position": "top",
+        "position": "left",
+        "title": "La historia de Bhakti Marga",
+        "title_tag": "h2",
+        "description": "<p>Cuando Bhakti Marga comenzó en 2005, nos reuníamos en cualquier espacio que pudiera acogernos. Hoy, Bhakti Marga es un grupo diverso de personas que se reúnen en templos, <em>ashrams</em> y ciudades de 75 países de todo el mundo. La <em>sangha</em>, o comunidad, es más que un lugar al que ir, es lo que somos como buscadores espirituales.</p>"
+      }
+    },
     "section_image_text_blocks_94GqbY": {
       "type": "section__image_text_blocks",
       "blocks": {
@@ -541,50 +593,6 @@
         "title": "<p>Sigue @Paramahamsa_Vishwananda </p>",
         "title_icon": "x"
       }
-    },
-    "section_content_grid_ary3mf": {
-      "type": "section__content-grid",
-      "blocks": {
-        "content_block_xfE7TF": {
-          "type": "content_block",
-          "settings": {
-            "title": "",
-            "title_tag": "h2",
-            "title_font_style": "h4",
-            "description": "",
-            "cta_link": "",
-            "cta_label": "",
-            "cta_style": "btn btn--black text-white",
-            "cta_klaviyo_embed": ""
-          }
-        }
-      },
-      "block_order": [
-        "content_block_xfE7TF"
-      ],
-      "name": "Content Grid",
-      "settings": {
-        "margin_top": "mt-0",
-        "margin_bottom": "mb-0",
-        "padding_top": "pt-0",
-        "padding_bottom": "pb-0",
-        "desktop_margin_top": "inherit",
-        "desktop_margin_bottom": "inherit",
-        "desktop_padding_top": "inherit",
-        "desktop_padding_bottom": "inherit",
-        "bg_color": "",
-        "cols_mobile": "1",
-        "cols_desktop": "2",
-        "horizontal_gap_mobile": "gap-x-md",
-        "horizontal_gap_desktop": "tabletl:gap-x-md",
-        "vertical_gap_mobile": "gap-y-md",
-        "vertical_gap_desktop": "tabletl:gap-y-md",
-        "format": "inside",
-        "text_color": "#000",
-        "apply_gradient": false,
-        "gradient_height": 40,
-        "gradient_color": "#000"
-      }
     }
   },
   "order": [
@@ -597,10 +605,10 @@
     "section_hero_EmDBMy",
     "section_quote_blocks_gmdNRL",
     "section_grid_images_ywkfnd",
+    "section_text_image_grid_WkciLb",
     "section_image_text_blocks_94GqbY",
     "section_playlist_WUtnJ6",
     "section_social_3Fr3Cy",
-    "section_social_cRkwRq",
-    "section_content_grid_ary3mf"
+    "section_social_cRkwRq"
   ]
 }

@@ -36,7 +36,7 @@
         "border_radius": 16,
         "aspect_ratio": "auto",
         "aspect_ratio_desktop": "4/3",
-        "image": "shopify://shop_images/the-path-rituals-worship_94dee33a-97ee-4193-971e-a64d840f6d69.jpg",
+        "image_desktop": "shopify://shop_images/2023-08-29-p-1110.jpg",
         "bg_color": "#16254c",
         "content_width": "max-w-5xl",
         "text_align": "text-left",
@@ -78,7 +78,7 @@
         "image_block_jfBVbY": {
           "type": "image_block",
           "settings": {
-            "image": "shopify://shop_images/paramahamsa-vishwananda-performing-arati-service-worship_c7eb72f7-7192-46b9-9c36-a2f22d0cb0cd.jpg",
+            "image": "shopify://shop_images/paramahamsa-vishwananda-performing-arati-service-worship.jpg",
             "height": "auto",
             "desktop_height": "auto"
           }
@@ -86,7 +86,7 @@
         "content_block_gVQiM6": {
           "type": "content_block",
           "settings": {
-            "title": "El amante y el Amado",
+            "title": "El Amante y el Amado",
             "title_tag": "h3",
             "title_font_style": "h4",
             "description": "<p>Si estamos en el camino espiritual, es porque nuestro Amado Señor nos llama para recordarnos nuestra relación eterna con Él.</p><p>Al recitar Su Nombre Divino y ofrecerle veneración devocional con amor, puedes invitarlo a formar parte de tu vida. De esta manera, podrás disfrutar de la relación definitiva entre Amante y Amado con Él.</p><p>Esto es <em>bhakti</em> vivo.</p>",
@@ -105,6 +105,7 @@
         "content_block_gVQiM6"
       ],
       "custom_css": [],
+      "name": "El Amante y el Amado",
       "settings": {
         "margin_top": "mt-xl",
         "margin_bottom": "mb-0",
@@ -120,7 +121,7 @@
         "image_block_kFgjfN": {
           "type": "image_block",
           "settings": {
-            "image": "shopify://shop_images/puja-ceremonial-worship_c861736f-d1df-45fe-9327-3f82d7a039ef.jpg",
+            "image": "shopify://shop_images/2022-07-16-p-1583_1.jpg",
             "height": "auto",
             "desktop_height": "auto"
           }
@@ -128,13 +129,13 @@
         "content_block_bdB8cq": {
           "type": "content_block",
           "settings": {
-            "title": "Veneración ceremonial",
+            "title": "Puja",
             "title_tag": "h3",
             "title_font_style": "h4",
             "description": "<p>En la tradición hindú se dice: \"si crees que una piedra es una piedra, será una piedra. Pero si crees que es Dios, se convertirá en Dios\". El servicio devocional realizado con plena fe invoca la presencia divina en una deidad.</p><p>A través de un ritual de veneración llamado <em>puja</em>, podemos disfrutar de la dulzura de cuidar a lo Divino como lo haríamos con cualquier ser querido. Bañar, vestir y alimentar a tu Amado, a tu manera única, te permite expresar tu amor y disfrutar de la intimidad de un tiempo sagrado juntos.</p>",
             "credits": "",
-            "cta_url": "",
-            "cta_label": "",
+            "cta_url": "shopify://pages/solicita-puja-personal",
+            "cta_label": "Más información",
             "text_align": "left",
             "desktop_text_align": "inherit",
             "vertical_padding": "py-lg",
@@ -146,6 +147,7 @@
         "image_block_kFgjfN",
         "content_block_bdB8cq"
       ],
+      "name": "Puja",
       "settings": {
         "margin_top": "mt-xl",
         "margin_bottom": "mb-0",
@@ -161,7 +163,7 @@
         "image_block_XXcBbM": {
           "type": "image_block",
           "settings": {
-            "image": "shopify://shop_images/vedic-chanting_3cc5c269-558a-4d18-9b4e-c33a9452453d.jpg",
+            "image": "shopify://shop_images/We_change_the_world_by_changing_ourselves.jpg",
             "height": "auto",
             "desktop_height": "auto"
           }
@@ -169,12 +171,12 @@
         "content_block_8hGYFw": {
           "type": "content_block",
           "settings": {
-            "title": "Canto védico",
+            "title": "Canto de oraciones",
             "title_tag": "h3",
             "title_font_style": "h4",
             "description": "<p>El sánscrito es un lenguaje vibratorio que se ha utilizado en rituales de oración durante miles de años. Las frecuencias vibratorias generadas al recitar mantras en sánscrito calman la mente y te sumergen en el corazón, donde reside lo Divino.</p><p>Cada Nombre Divino invoca la presencia de esa forma de divinidad. Recitar el Nombre de tu Amado te acerca a Él para que puedas disfrutar de Su compañía y Él pueda disfrutar de tu atención exclusiva.</p>",
             "credits": "",
-            "cta_url": "shopify://pages/vedic-chanting",
+            "cta_url": "shopify://pages/canto-vedico",
             "cta_label": "Más información",
             "text_align": "left",
             "desktop_text_align": "inherit",
@@ -187,11 +189,12 @@
         "image_block_XXcBbM",
         "content_block_8hGYFw"
       ],
+      "name": "Canto de oraciones",
       "settings": {
         "margin_top": "mt-xl",
         "margin_bottom": "mb-0",
         "desktop_margin_top": "tabletl:mt-xxxl",
-        "desktop_margin_bottom": "tabletl:mb-xl",
+        "desktop_margin_bottom": "tabletl:mb-xxxl",
         "vertical_align": "center",
         "flip_columns_desktop": false
       }
@@ -244,7 +247,8 @@
         "heading_Vx4BPE",
         "heading_wzXWdQ"
       ],
-      "name": "Program Header",
+      "disabled": true,
+      "name": "Solicita tu puja",
       "settings": {
         "margin_top": "mt-0",
         "margin_bottom": "mb-0",
@@ -266,7 +270,6 @@
         "image_block_k6rWMK": {
           "type": "image_block",
           "settings": {
-            "image": "shopify://shop_images/2022-07-13-p-0899_56a6bd0f-2a20-4dad-93e3-d01be27af8ab.jpg",
             "height": "auto",
             "desktop_height": "auto"
           }
@@ -292,6 +295,8 @@
         "image_block_k6rWMK",
         "content_block_8FN3f3"
       ],
+      "disabled": true,
+      "name": "Solicita un curso",
       "settings": {
         "margin_top": "mt-xl",
         "margin_bottom": "mb-0",
@@ -299,6 +304,73 @@
         "desktop_margin_bottom": "tabletl:mb-xl",
         "vertical_align": "center",
         "flip_columns_desktop": true
+      }
+    },
+    "section_rich_text_VeEGLg": {
+      "type": "section__rich-text",
+      "name": "Rich Text Section",
+      "settings": {
+        "margin_top": "mt-xxxl",
+        "margin_bottom": "mb-0",
+        "padding_top": "pt-0",
+        "padding_bottom": "pb-0",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "desktop_padding_top": "inherit",
+        "desktop_padding_bottom": "inherit",
+        "content": "<h5>– Descubre los otros brazos de prácticas Bhakti –</h5>",
+        "text_alignment": "center",
+        "max_width": "",
+        "apply_max_width": false
+      }
+    },
+    "bm_custom_carousel_cards_wHE3rK": {
+      "type": "BM-custom-carousel-cards",
+      "blocks": {
+        "content_block_D7LDk6": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify://shop_images/2023-07-28-p-0249.jpg",
+            "heading": "Artes devocionales",
+            "description": "<p>Más allá del placer, encuentra la alegría</p>",
+            "button_text": "Descúbrelo",
+            "button_link": "shopify://pages/devotional-arts"
+          }
+        },
+        "content_block_r7tYzz": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify://shop_images/mudra1.webp",
+            "heading": "Yoga y meditación",
+            "description": "<p>Despierta tu alma</p>",
+            "button_text": "Descúbrelo",
+            "button_link": "shopify://pages/yoga-meditation"
+          }
+        },
+        "content_block_mVYJAy": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify://shop_images/Stories_Of_Saints.jpg",
+            "heading": "Conocimiento",
+            "description": "<p>La sabiduría es más que simple información</p>",
+            "button_text": "Descúbrelo",
+            "button_link": "shopify://pages/knowledge"
+          }
+        }
+      },
+      "block_order": [
+        "content_block_D7LDk6",
+        "content_block_r7tYzz",
+        "content_block_mVYJAy"
+      ],
+      "name": "BM Custom Carousel Cards",
+      "settings": {
+        "padding_top": "pt-lg",
+        "padding_bottom": "pb-xxxl",
+        "desktop_padding_top": "inherit",
+        "desktop_padding_bottom": "tabletl:pb-xxxl",
+        "title": "",
+        "title_tag": "h2"
       }
     }
   },
@@ -310,6 +382,8 @@
     "section_image_text_blocks_Ma8hkT",
     "section_image_text_blocks_GNDjm8",
     "section_program_header_bmYHKy",
-    "section_image_text_blocks_Xfh44d"
+    "section_image_text_blocks_Xfh44d",
+    "section_rich_text_VeEGLg",
+    "bm_custom_carousel_cards_wHE3rK"
   ]
 }
