@@ -262,6 +262,8 @@
             "credits": "",
             "cta_url": "https://www.google.com/maps/place/C.+Adonis,+8,+35544+Guatiza,+Las+Palmas/@29.0778879,-13.4763895,17z/data=!3m1!4b1!4m6!3m5!1s0xc489f15a5745401:0x5690ba77bb75c422!8m2!3d29.0778879!4d-13.4763895!16s%2Fg%2F11c4dzddfy?entry=ttu&g_ep=EgoyMDI2MDUwMi4wIKXMDSoASAFQAw%3D%3D",
             "cta_label": "Ver en mapa",
+            "cta_2_url": "https://t.me/+34639906697",
+            "cta_2_label": "Contacta",
             "text_align": "left",
             "desktop_text_align": "inherit",
             "vertical_padding": "py-lg",
