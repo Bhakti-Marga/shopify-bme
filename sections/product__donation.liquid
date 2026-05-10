@@ -209,6 +209,46 @@
   }
 </script>
 
+<script>
+(function() {
+  var sectionEl = document.querySelector('s-product[data-section-id="{{ section.id }}"]');
+  if (!sectionEl) return;
+  var form = sectionEl.querySelector('[js-product-form]');
+  if (!form) return;
+  var productId = {{ product.id }};
+  var busy = false;
+
+  form.addEventListener('submit', function handler(e) {
+    if (busy) return;
+    e.preventDefault();
+    e.stopImmediatePropagation();
+    busy = true;
+
+    fetch('/cart.js')
+      .then(function(r) { return r.json(); })
+      .then(function(cart) {
+        var existing = cart.items.find(function(item) {
+          return item.product_id === productId;
+        });
+        if (existing) {
+          return fetch('/cart/change.js', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ id: existing.key, quantity: 0 })
+          }).then(function(r) { return r.json(); });
+        }
+      })
+      .then(function() {
+        busy = false;
+        form.dispatchEvent(new Event('submit', { bubbles: true, cancelable: true }));
+      })
+      .catch(function() {
+        busy = false;
+      });
+  }, true);
+})();
+</script>
+
 {% schema %}
 {
   "name": "Donation",
