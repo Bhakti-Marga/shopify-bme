@@ -99,15 +99,29 @@
 
           <div class="donation-widget__frequency mb-lg" role="group" aria-label="Frecuencia de donación">
             <button type="button" class="donation-freq-btn active" data-freq="once" aria-pressed="true">Una vez</button>
-            <button type="button" class="donation-freq-btn" data-freq="monthly" aria-pressed="false">Mensual</button>
+            <button type="button" class="donation-freq-btn" data-freq="monthly" aria-pressed="false">Recurrente</button>
           </div>
 
           <div class="donation-widget__plans mb-lg" id="DonationPlans-{{ section.id }}" aria-hidden="true" style="display:none">
-            <div class="donation-plans-grid">
-              <button type="button" class="donation-plan-btn" data-plan="mensual">Mensual</button>
-              <button type="button" class="donation-plan-btn" data-plan="trimestral">Trimestral</button>
-              <button type="button" class="donation-plan-btn" data-plan="semestral">Semestral</button>
-              <button type="button" class="donation-plan-btn" data-plan="anual">Anual</button>
+            <div class="donation-recur">
+              <div class="donation-recur__row">
+                <label class="donation-recur__label">
+                  <input type="radio" name="donation-plan-{{ section.id }}" class="donation-plan-radio" data-plan="mensual" checked> Cada mes
+                </label>
+                <span class="donation-recur__badge">Más impacto</span>
+              </div>
+              <div class="donation-recur__row">
+                <label class="donation-recur__label">
+                  <input type="radio" name="donation-plan-{{ section.id }}" class="donation-plan-radio" data-plan="trimestral"> Cada 3 meses
+                </label>
+                <span class="donation-recur__tag">trimestral</span>
+              </div>
+              <div class="donation-recur__row">
+                <label class="donation-recur__label">
+                  <input type="radio" name="donation-plan-{{ section.id }}" class="donation-plan-radio" data-plan="anual"> Cada año
+                </label>
+                <span class="donation-recur__tag">anual</span>
+              </div>
             </div>
           </div>
 
@@ -141,7 +155,10 @@
             </div>
           </div>
 
-          <div class="donation-widget__impact mb-lg" id="DonationImpact-{{ section.id }}" aria-live="polite"></div>
+          <div class="donation-widget__impact mb-lg" id="DonationImpact-{{ section.id }}" aria-live="polite" style="display:none">
+            <span class="donation-impact__icon" aria-hidden="true">★</span>
+            <span class="donation-impact__text"></span>
+          </div>
 
           <div class="seal-anchor" id="SealAnchor-{{ section.id }}" aria-hidden="true" style="display:none">
             {%- for block in section.blocks -%}
@@ -159,7 +176,7 @@
           </button>
           <p class="hidden" js-error-message></p>
 
-          <p class="donation-widget__trust text-14 text-center mt-sm">Pago seguro · Cancelar en cualquier momento</p>
+          <p class="donation-widget__trust text-14 text-center mt-sm">Pago seguro · Tarjeta · Apple Pay · Cancela cuando quieras</p>
         </div><!-- .donation-widget -->
 
       {%- endform -%}
@@ -173,109 +190,145 @@
 <style>
 /* donation-widget */
 .donation-widget__frequency {
-  display: flex;
-  gap: 0;
-  border: 1px solid #e7e3d8;
-  border-radius: 62.4375rem;
-  overflow: hidden;
-  width: fit-content;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: #f3efe4;
+  padding: 4px;
+  border-radius: 999px;
+  margin-bottom: 1rem;
 }
 .donation-freq-btn {
-  padding: 0.625rem 1.5rem;
+  padding: 0.5625rem 0.75rem;
   background: transparent;
   border: none;
   cursor: pointer;
-  font-size: 1rem;
-  font-weight: 500;
-  color: inherit;
-  transition: background-color 0.15s ease-out, color 0.15s ease-out;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: #2b3a5e;
+  border-radius: 999px;
+  transition: background-color 0.15s, color 0.15s, box-shadow 0.15s;
   line-height: 1.5;
+  text-align: center;
 }
 .donation-freq-btn.active {
-  background-color: #d6bf90;
-  color: #16254c;
-  font-weight: 600;
+  background-color: #16254c;
+  color: #fff;
+  box-shadow: 0 1px 0 rgba(0,0,0,.04);
 }
 .donation-freq-btn:hover:not(.active) {
-  background-color: #e8dbc0;
+  background-color: rgba(22,37,76,.06);
 }
-.donation-plans-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0.5rem;
-}
-.donation-plan-btn {
-  padding: 0.75rem 1rem;
+/* recurring plans list */
+.donation-recur {
+  background: #fbf9f3;
   border: 1px solid #e7e3d8;
-  border-radius: 0.5rem;
-  background: transparent;
+  border-radius: 0.625rem;
+  padding: 0.75rem;
+}
+.donation-recur__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.625rem;
+  font-size: 0.8125rem;
+}
+.donation-recur__row + .donation-recur__row {
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px dashed #e7e3d8;
+}
+.donation-recur__label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   cursor: pointer;
-  font-size: 0.875rem;
-  font-weight: 500;
-  text-align: center;
-  transition: all 0.15s ease-out;
+  color: #2b3a5e;
 }
-.donation-plan-btn.active {
-  background-color: #d6bf90;
-  border-color: #d6bf90;
-  color: #16254c;
-  font-weight: 600;
+.donation-recur__label input[type="radio"] {
+  accent-color: #16254c;
+  cursor: pointer;
 }
-.donation-plan-btn:hover:not(.active) {
-  border-color: #d6bf90;
+.donation-recur__badge {
+  font-size: 0.6875rem;
+  color: #7a6533;
+  background: #e8dbc0;
+  padding: 2px 6px;
+  border-radius: 4px;
+  white-space: nowrap;
 }
+.donation-recur__tag {
+  font-size: 0.6875rem;
+  color: #6b6f7a;
+  white-space: nowrap;
+}
+/* amount grid */
 .donation-amounts-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 0.5rem;
 }
 .donation-amount-btn {
-  padding: 0.75rem 0.5rem;
+  padding: 0.875rem 0.5rem;
   border: 1px solid #e7e3d8;
   border-radius: 0.5rem;
-  background: transparent;
+  background: #fff;
   cursor: pointer;
   font-size: 1rem;
   font-weight: 600;
+  color: #16254c;
   text-align: center;
   transition: all 0.15s ease-out;
-}
-.donation-amount-btn.active {
-  background-color: #d6bf90;
-  border-color: #d6bf90;
-  color: #16254c;
+  position: relative;
 }
 .donation-amount-btn:hover:not(.active):not([disabled]) {
-  border-color: #d6bf90;
+  border-color: #16254c;
+}
+.donation-amount-btn.active {
+  border-color: #16254c;
+  background: #16254c;
+  color: #fff;
+}
+.donation-amount-btn.active::after {
+  content: "✓";
+  position: absolute;
+  top: 4px;
+  right: 6px;
+  font-size: 0.625rem;
+  opacity: 0.7;
 }
 .donation-amount-btn[disabled] {
   opacity: 0.4;
   cursor: not-allowed;
 }
+/* custom amount */
 .donation-custom__wrapper {
   display: flex;
   align-items: center;
   border: 1px solid #e7e3d8;
   border-radius: 0.5rem;
-  padding: 0 1rem;
+  padding: 0 0.875rem;
+  background: #fff;
   transition: border-color 0.15s ease-out;
 }
 .donation-custom__wrapper:focus-within {
-  border-color: #d6bf90;
-  outline: 2px solid #d6bf9040;
+  border-color: #16254c;
 }
 .donation-custom__prefix {
-  font-weight: 600;
-  color: #16254c;
+  font-weight: 500;
+  color: #6b7280;
   padding-right: 0.5rem;
-  font-size: 1rem;
+  border-right: 1px solid #e7e3d8;
+  font-size: 0.875rem;
   user-select: none;
+  line-height: 1;
 }
 .donation-custom__input {
   flex: 1;
   border: none;
-  padding: 0.75rem 0;
+  padding: 0.875rem;
   font-size: 1rem;
+  font-weight: 600;
+  color: #16254c;
   background: transparent;
   outline: none;
   width: 100%;
@@ -286,11 +339,21 @@
   -webkit-appearance: none;
   margin: 0;
 }
+/* impact line */
 .donation-widget__impact {
-  font-size: 0.875rem;
-  color: #16254c;
-  min-height: 1.5rem;
-  font-style: italic;
+  display: flex;
+  gap: 0.625rem;
+  align-items: flex-start;
+  font-size: 0.8125rem;
+  color: #2b3a5e;
+  background: #fbf9f3;
+  border-left: 3px solid #d6bf90;
+  padding: 0.625rem 0.75rem;
+  border-radius: 0 0.375rem 0.375rem 0;
+}
+.donation-impact__icon {
+  flex-shrink: 0;
+  color: #d6bf90;
 }
 .donation-widget__trust {
   color: #6b7280;
@@ -375,8 +438,9 @@
         }
       })
       .then(function() {
-        busy = false;
+        busy = true;
         form.dispatchEvent(new Event('submit', { bubbles: true, cancelable: true }));
+        busy = false;
       })
       .catch(function() {
         busy = false;
@@ -423,7 +487,11 @@
       if (freq === 'monthly') {
         plansPanel.style.display = '';
         plansPanel.setAttribute('aria-hidden', 'false');
-        selectPlan(state.plan || 'mensual');
+        var activePlan = state.plan || 'mensual';
+        var firstRadio = sectionEl.querySelector('.donation-plan-radio[data-plan="' + activePlan + '"]')
+                      || sectionEl.querySelector('.donation-plan-radio');
+        if (firstRadio && !firstRadio.checked) firstRadio.checked = true;
+        selectPlan(firstRadio ? firstRadio.dataset.plan : activePlan);
       } else {
         plansPanel.style.display = 'none';
         plansPanel.setAttribute('aria-hidden', 'true');
@@ -431,17 +499,17 @@
       }
     }
 
-    /* Plan cards */
-    sectionEl.querySelectorAll('[data-plan]').forEach(function(btn) {
-      btn.addEventListener('click', function() {
-        selectPlan(btn.dataset.plan);
+    /* Plan radios */
+    sectionEl.querySelectorAll('.donation-plan-radio').forEach(function(radio) {
+      radio.addEventListener('change', function() {
+        if (radio.checked) selectPlan(radio.dataset.plan);
       });
     });
 
     function selectPlan(planName) {
       state.plan = planName;
-      sectionEl.querySelectorAll('[data-plan]').forEach(function(b) {
-        b.classList.toggle('active', b.dataset.plan === planName);
+      sectionEl.querySelectorAll('.donation-plan-radio').forEach(function(r) {
+        r.checked = (r.dataset.plan === planName);
       });
       clickSealPlan(planName);
     }
@@ -524,7 +592,7 @@
         b.classList.remove('active');
       });
       if (state.freq === 'monthly') {
-        setFreq('once');
+        setFreq('once'); /* custom amounts are one-time only */
       }
       syncIO(val);
       if (otroVariantId) {
@@ -566,11 +634,15 @@
     /* Impact line */
     function showImpact(amount) {
       if (!impactEl) return;
+      var textEl = impactEl.querySelector('.donation-impact__text');
       if (!amount || isNaN(amount) || amount <= 0) {
-        impactEl.textContent = '';
+        impactEl.style.display = 'none';
+        if (textEl) textEl.textContent = '';
         return;
       }
-      impactEl.textContent = 'Tu donación de ' + Math.round(amount) + '€ ayuda a mantener el templo abierto.';
+      var msg = 'Tu donación de <b>' + Math.round(amount) + '€' + (state.freq === 'monthly' ? ' al mes' : '') + '</b> ayuda a sostener la comunidad.';
+      if (textEl) textEl.innerHTML = msg;
+      impactEl.style.display = 'flex';
     }
 
     /* Auto-select first preset on load */
