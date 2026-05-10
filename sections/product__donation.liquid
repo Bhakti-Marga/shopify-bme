@@ -66,98 +66,104 @@
     </div><!-- .product__images-container -->
 
     <div class="product__information h-[min-content] py-lg tabletl:py-xl tabletl:px-xxl tabletl:sticky tabletl:top-[var(--header-height)]" id="ProductInfo-{{ section.id }}">
-      <h1 class="product__title h5 leading-tight mb-lg">{{ product.title }}</h1>
-      <div class="product__price mb-lg text-18 tabletl:text-20" js-price>{{current_variant.price | money }}</div>
-      {% if product.metafields.event.date_time != blank or product.metafields.event.teacher != blank or product.metafields.event.location != blank %}
-        <div class="product__event-info-wrapper mb-lg text-18 tabletl:text-20">
-          {% if product.metafields.event.date_time != blank %}
-            <p class="font-700">{{ product.metafields.event.date_time }}</p>
-          {% endif %}
-          {% if product.metafields.event.teacher != blank %}
-            <p class="mt-sm">{{ product.metafields.event.teacher }}</p>
-          {% endif %}
-          {% if product.metafields.event.type != blank and product.metafields.event.location != blank %}
-            {%- assign event_type = product.metafields.event.type | downcase -%}
-              {%- if event_type contains "in-person" -%}
-                <p class="mt-sm">{{ product.metafields.event.location }}</p>
-              {%- endif -%}
-          {% endif %}
-        </div>
-      {% endif %}
-      <div class="product__description text-16 mb-lg tabletl:text-18">{{ product.description }}</div>
-      {%- comment -%}
-        * Product Form
-      {%- endcomment -%}
       {%- form 'product', product, id: product_form_id, class: 'form', novalidate: 'novalidate', js-product-form: true -%}
-        
-        {%- comment -%} Product Variant Master Select {%- endcomment -%}
+
+        {%- comment -%} Hidden native variant select — driven by widget JS {%- endcomment -%}
         {% render 'master-variant-select',
           variants: product.variants,
           id: master_select_id,
-          current_variant: current_variant
+          current_variant: current_variant,
+          display: 'hidden'
         %}
+        <input type="hidden" name="quantity" value="1">
 
-        {% unless product.has_only_default_variant %}
-          <product-options class="no-js-hidden block" data-product='ProductJSON' data-master-select-id="{{ master_select_id }}" data-enable-history-state>
-            {% for option in product.options_with_values %}
-              {% render 'product-option-selector' 
-                option: option
-                type: 'select'
-                section_id: section.id
-                product_id: product.id
-              %}
-            {% endfor %}
-          </product-options>
-        {% endunless %}
-
-        <label class="form__label inline-block font-600 text-16 mb-md" for="Quantity-{{ section.id }}">
-          {%- assign product_type = product.type | downcase -%}
-          {%- if product_type contains "event" -%}
-            Attendees:
-          {%- else -%}
-            <spam style="display: none;">Qty:</spam>
+        {%- comment -%} Find "Otro" variant id for custom amount JS routing {%- endcomment -%}
+        {%- assign otro_variant_id = '' -%}
+        {%- for variant in product.variants -%}
+          {%- assign vtitle = variant.title | downcase -%}
+          {%- if vtitle == 'otro' or vtitle contains 'otro' or vtitle contains 'otra' -%}
+            {%- assign otro_variant_id = variant.id -%}
           {%- endif -%}
-        </label>
-        {%- if product_type contains "event" -%}
-          <input class="quantity__input hidden"
-                type="number"
-                name="quantity"
-                id="Quantity-{{ section.id }}"
-                min="1"
-                value="1"
-                form="{{ product_form_id }}"
-              >
-        {%- else -%}
-          <quantity-input class="quantity flex justify-between items-center w-[130px] py-12 px-lg border rounded-full mb-lg">
-            <button class="quantity__button" name="minus" type="button" aria-label="Decrease quantity for {{ product.title }}" title="Decrease quantity for {{ product.title }}">&minus;</button>
-            <input class="quantity__input w-full bg-transparent text-center font-500 text-20"
-                type="number"
-                name="quantity"
-                id="Quantity-{{ section.id }}"
-                min="1"
-                value="1"
-                form="{{ product_form_id }}"
-              >
-            <button class="quantity__button" name="plus" type="button" aria-label="Increase quantity for {{ product.title }}" title="Increase quantity for {{ product.title }}">&plus;</button>
-          </quantity-input>
-        {%- endif -%}
-
-        {%- for block in section.blocks -%}
-          {% render block %}
         {%- endfor -%}
 
-        <button 
-          class="btn btn--gold py-md w-full uppercase relative"
-          type="submit" 
-          {% unless current_variant.available %} disabled {% endunless %}
-          js-add-to-cart>
-          <loading-spinner style="--size: 3rem; --bg-opacity: 100%;"></loading-spinner>
-          {% if current_variant.available %} Donar ahora {% else %} Agotado {% endif %}
-        </button>
-        <p class="hidden" js-error-message></p>
+        <div class="donation-widget"
+             id="DonationWidget-{{ section.id }}"
+             data-otro-variant="{{ otro_variant_id }}"
+             data-section-id="{{ section.id }}">
+
+          <h1 class="product__title h5 leading-tight mb-lg">{{ product.title }}</h1>
+
+          {% if product.description != blank %}
+            <div class="donation-widget__description rte text-16 mb-lg tabletl:text-18">{{ product.description }}</div>
+          {% endif %}
+
+          <div class="donation-widget__frequency mb-lg" role="group" aria-label="Frecuencia de donación">
+            <button type="button" class="donation-freq-btn active" data-freq="once" aria-pressed="true">Una vez</button>
+            <button type="button" class="donation-freq-btn" data-freq="monthly" aria-pressed="false">Mensual</button>
+          </div>
+
+          <div class="donation-widget__plans mb-lg" id="DonationPlans-{{ section.id }}" aria-hidden="true" style="display:none">
+            <div class="donation-plans-grid">
+              <button type="button" class="donation-plan-btn" data-plan="mensual">Mensual</button>
+              <button type="button" class="donation-plan-btn" data-plan="trimestral">Trimestral</button>
+              <button type="button" class="donation-plan-btn" data-plan="semestral">Semestral</button>
+              <button type="button" class="donation-plan-btn" data-plan="anual">Anual</button>
+            </div>
+          </div>
+
+          <div class="donation-widget__amounts mb-lg">
+            <div class="donation-amounts-grid">
+              {%- for variant in product.variants -%}
+                {%- assign vtitle = variant.title | downcase -%}
+                {%- unless vtitle == 'otro' or vtitle contains 'otro' or vtitle contains 'otra' -%}
+                  <button type="button"
+                          class="donation-amount-btn"
+                          data-variant-id="{{ variant.id }}"
+                          data-price="{{ variant.price | divided_by: 100.0 }}"
+                          {% unless variant.available %}disabled{% endunless %}>
+                    {{ variant.price | money_without_trailing_zeros }}
+                  </button>
+                {%- endunless -%}
+              {%- endfor -%}
+            </div>
+          </div>
+
+          <div class="donation-widget__custom mb-lg">
+            <div class="donation-custom__wrapper">
+              <span class="donation-custom__prefix" aria-hidden="true">€</span>
+              <input type="number"
+                     class="donation-custom__input"
+                     id="DonationCustom-{{ section.id }}"
+                     placeholder="Otra cantidad"
+                     min="1"
+                     step="1"
+                     aria-label="Otra cantidad en euros">
+            </div>
+          </div>
+
+          <div class="donation-widget__impact mb-lg" id="DonationImpact-{{ section.id }}" aria-live="polite"></div>
+
+          <div class="seal-anchor" id="SealAnchor-{{ section.id }}" aria-hidden="true" style="display:none">
+            {%- for block in section.blocks -%}
+              {% render block %}
+            {%- endfor -%}
+          </div>
+
+          <button
+            class="btn btn--gold py-md w-full uppercase relative"
+            type="submit"
+            {% unless current_variant.available %} disabled {% endunless %}
+            js-add-to-cart>
+            <loading-spinner style="--size: 3rem; --bg-opacity: 100%;"></loading-spinner>
+            Donar ahora
+          </button>
+          <p class="hidden" js-error-message></p>
+
+          <p class="donation-widget__trust text-14 text-center mt-sm">Pago seguro · Cancelar en cualquier momento</p>
+        </div><!-- .donation-widget -->
 
       {%- endform -%}
-    </div><!-- .product__images-container -->
+    </div><!-- .product__information -->
   </div><!-- .product__layout -->
 
   <script type="application/json" id="ProductJSON">{{ product | json }}</script>
