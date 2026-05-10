@@ -387,6 +387,213 @@
 })();
 </script>
 
+<script>
+(function() {
+  'use strict';
+
+  function initDonationWidget(sectionId) {
+    var sectionEl = document.querySelector('s-product[data-section-id="' + sectionId + '"]');
+    if (!sectionEl) return;
+
+    var widgetEl    = sectionEl.querySelector('#DonationWidget-' + sectionId);
+    var masterSel   = sectionEl.querySelector('#MasterSelect-' + sectionId);
+    var sealAnchor  = sectionEl.querySelector('#SealAnchor-' + sectionId);
+    var plansPanel  = sectionEl.querySelector('#DonationPlans-' + sectionId);
+    var impactEl    = sectionEl.querySelector('#DonationImpact-' + sectionId);
+    var customInput = sectionEl.querySelector('#DonationCustom-' + sectionId);
+    var otroVariantId = widgetEl ? widgetEl.dataset.otroVariant : null;
+    var ioInput     = null;
+
+    if (!widgetEl || !masterSel) return;
+
+    var state = { freq: 'once', plan: 'mensual', custom: false };
+
+    /* Frequency toggle */
+    sectionEl.querySelectorAll('[data-freq]').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        setFreq(btn.dataset.freq);
+      });
+    });
+
+    function setFreq(freq) {
+      state.freq = freq;
+      sectionEl.querySelectorAll('[data-freq]').forEach(function(b) {
+        var on = b.dataset.freq === freq;
+        b.classList.toggle('active', on);
+        b.setAttribute('aria-pressed', on ? 'true' : 'false');
+      });
+      if (freq === 'monthly') {
+        plansPanel.style.display = '';
+        plansPanel.setAttribute('aria-hidden', 'false');
+        selectPlan(state.plan || 'mensual');
+      } else {
+        plansPanel.style.display = 'none';
+        plansPanel.setAttribute('aria-hidden', 'true');
+        clickSealOneTime();
+      }
+    }
+
+    /* Plan cards */
+    sectionEl.querySelectorAll('[data-plan]').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        selectPlan(btn.dataset.plan);
+      });
+    });
+
+    function selectPlan(planName) {
+      state.plan = planName;
+      sectionEl.querySelectorAll('[data-plan]').forEach(function(b) {
+        b.classList.toggle('active', b.dataset.plan === planName);
+      });
+      clickSealPlan(planName);
+    }
+
+    function clickSealPlan(planName) {
+      if (!sealAnchor) return;
+      var radios = sealAnchor.querySelectorAll('input[type="radio"]');
+      var matched = false;
+      radios.forEach(function(radio) {
+        if (matched) return;
+        var labelEl = sealAnchor.querySelector('label[for="' + radio.id + '"]')
+                    || radio.closest('label')
+                    || radio.parentElement;
+        var text = (labelEl ? labelEl.textContent : '').toLowerCase().trim();
+        if (text.indexOf(planName.toLowerCase()) !== -1) {
+          radio.click();
+          matched = true;
+        }
+      });
+    }
+
+    function clickSealOneTime() {
+      if (!sealAnchor) return;
+      var radios = sealAnchor.querySelectorAll('input[type="radio"]');
+      var oneTimeTerms = ['vez', 'once', 'única', 'unica', 'one-time', 'one time', 'compra'];
+      var matched = false;
+      radios.forEach(function(radio) {
+        if (matched) return;
+        var labelEl = sealAnchor.querySelector('label[for="' + radio.id + '"]')
+                    || radio.closest('label')
+                    || radio.parentElement;
+        var text = (labelEl ? labelEl.textContent : '').toLowerCase();
+        oneTimeTerms.forEach(function(term) {
+          if (!matched && text.indexOf(term) !== -1) {
+            radio.click();
+            matched = true;
+          }
+        });
+      });
+    }
+
+    /* Amount buttons */
+    sectionEl.querySelectorAll('[data-variant-id]').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        if (btn.disabled) return;
+        state.custom = false;
+        clearCustomField();
+        setActiveAmountBtn(btn);
+        setVariant(btn.dataset.variantId);
+        showImpact(parseFloat(btn.dataset.price));
+      });
+    });
+
+    function setActiveAmountBtn(activeBtn) {
+      sectionEl.querySelectorAll('[data-variant-id]').forEach(function(b) {
+        b.classList.toggle('active', b === activeBtn);
+      });
+    }
+
+    function setVariant(variantId) {
+      if (!masterSel) return;
+      masterSel.value = variantId;
+      masterSel.dispatchEvent(new Event('change', { bubbles: true }));
+    }
+
+    /* Custom amount */
+    if (customInput) {
+      customInput.addEventListener('input', handleCustomInput);
+    }
+
+    function handleCustomInput() {
+      var val = (customInput.value || '').trim();
+      if (!val || parseFloat(val) <= 0) {
+        state.custom = false;
+        clearIO();
+        return;
+      }
+      state.custom = true;
+      sectionEl.querySelectorAll('[data-variant-id]').forEach(function(b) {
+        b.classList.remove('active');
+      });
+      if (state.freq === 'monthly') {
+        setFreq('once');
+      }
+      syncIO(val);
+      if (otroVariantId) {
+        setVariant(otroVariantId);
+      } else {
+        var firstOption = masterSel.options[0];
+        if (firstOption) setVariant(firstOption.value);
+      }
+      showImpact(parseFloat(val));
+    }
+
+    function syncIO(val) {
+      resolveIO();
+      if (ioInput) {
+        ioInput.value = val;
+        ioInput.dispatchEvent(new Event('input', { bubbles: true }));
+        ioInput.dispatchEvent(new Event('change', { bubbles: true }));
+      }
+    }
+
+    function clearIO() {
+      resolveIO();
+      if (ioInput) ioInput.value = '';
+    }
+
+    function resolveIO() {
+      if (ioInput) return;
+      var container = document.querySelector('#infiniteoptions-container');
+      if (container) {
+        ioInput = container.querySelector('input[type="text"], input[type="number"], textarea');
+      }
+    }
+
+    function clearCustomField() {
+      if (customInput) customInput.value = '';
+      clearIO();
+    }
+
+    /* Impact line */
+    function showImpact(amount) {
+      if (!impactEl) return;
+      if (!amount || isNaN(amount) || amount <= 0) {
+        impactEl.textContent = '';
+        return;
+      }
+      impactEl.textContent = 'Tu donación de ' + Math.round(amount) + '€ ayuda a mantener el templo abierto.';
+    }
+
+    /* Auto-select first preset on load */
+    var firstBtn = sectionEl.querySelector('[data-variant-id]');
+    if (firstBtn && !firstBtn.disabled) {
+      firstBtn.classList.add('active');
+      setVariant(firstBtn.dataset.variantId);
+      showImpact(parseFloat(firstBtn.dataset.price));
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function() {
+      initDonationWidget('{{ section.id }}');
+    });
+  } else {
+    initDonationWidget('{{ section.id }}');
+  }
+})();
+</script>
+
 {% schema %}
 {
   "name": "Donation",
