@@ -128,7 +128,7 @@
                 form="{{ product_form_id }}"
               >
         {%- else -%}
-          <quantity-input class="quantity flex justify-between items-center w-[130px] py-12 px-lg border rounded-full mb-lg">
+          <quantity-input id="QuantityWrapper-{{ section.id }}" class="quantity flex justify-between items-center w-[130px] py-12 px-lg border rounded-full mb-lg">
             <button class="quantity__button" name="minus" type="button" aria-label="Decrease quantity for {{ product.title }}" title="Decrease quantity for {{ product.title }}">&minus;</button>
             <input class="quantity__input w-full bg-transparent text-center font-500 text-20"
                 type="number"
@@ -140,6 +140,23 @@
               >
             <button class="quantity__button" name="plus" type="button" aria-label="Increase quantity for {{ product.title }}" title="Increase quantity for {{ product.title }}">&plus;</button>
           </quantity-input>
+
+          <div id="DonationCustomAmount-{{ section.id }}" class="hidden mb-lg">
+            <label class="inline-block font-600 text-16 mb-md" for="CustomAmountInput-{{ section.id }}">
+              Importe (€):
+            </label>
+            <div class="flex items-center gap-sm border rounded-full py-12 px-lg w-[180px]">
+              <span class="font-600 text-20">€</span>
+              <input
+                id="CustomAmountInput-{{ section.id }}"
+                class="w-full bg-transparent text-center font-500 text-20"
+                type="number"
+                min="1"
+                step="1"
+                placeholder="0"
+              >
+            </div>
+          </div>
         {%- endif -%}
 
         {%- for block in section.blocks -%}
@@ -246,6 +263,66 @@
         busy = false;
       });
   }, true);
+})();
+</script>
+
+<script>
+(function() {
+  var sid = '{{ section.id }}';
+  var masterSelect = document.getElementById('MasterSelect-' + sid);
+  var qtyWrapper   = document.getElementById('QuantityWrapper-' + sid);
+  var customDiv    = document.getElementById('DonationCustomAmount-' + sid);
+  var customInput  = customDiv && customDiv.querySelector('input');
+  var qtyInput     = document.getElementById('Quantity-' + sid);
+  var priceEl      = document.querySelector('[js-price]');
+  if (!masterSelect || !qtyWrapper || !customDiv || !customInput || !qtyInput) return;
+
+  function isOtro() {
+    var opt = masterSelect.options[masterSelect.selectedIndex];
+    return opt && opt.textContent.trim().toLowerCase() === 'otro';
+  }
+
+  function syncQty() {
+    var v = parseInt(customInput.value, 10);
+    qtyInput.value = (!isNaN(v) && v >= 1) ? v : 1;
+    if (priceEl) priceEl.textContent = (!isNaN(v) && v >= 1) ? v + ',00 €' : '—';
+  }
+
+  function update() {
+    if (isOtro()) {
+      qtyWrapper.classList.add('hidden');
+      customDiv.classList.remove('hidden');
+      syncQty();
+    } else {
+      customDiv.classList.add('hidden');
+      qtyWrapper.classList.remove('hidden');
+      qtyInput.value = 1;
+    }
+  }
+
+  var productOptions = document.querySelector('product-options');
+  if (productOptions) productOptions.addEventListener('variant:change', update);
+
+  customInput.addEventListener('input', syncQty);
+
+  var form = document.getElementById('{{ product_form_id }}');
+  if (form) {
+    form.addEventListener('submit', function(e) {
+      if (!isOtro()) return;
+      var v = parseInt(customInput.value, 10);
+      if (isNaN(v) || v < 1) {
+        e.preventDefault();
+        e.stopImmediatePropagation();
+        customInput.setCustomValidity('Introduce un importe de al menos €1');
+        customInput.reportValidity();
+      } else {
+        customInput.setCustomValidity('');
+        syncQty();
+      }
+    });
+  }
+
+  update();
 })();
 </script>
 
