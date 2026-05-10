@@ -118,12 +118,12 @@
             {% endif %}
 
           {% if block.settings.cta_url != blank and block.settings.cta_label != blank %}
-            <div class="flex gap-sm flex-wrap">
-              <a href="{{ block.settings.cta_url }}" class="btn btn--gold inline-block">
+            <div class="flex gap-sm flex-wrap {% if block.settings.text_align == 'center' %}justify-center{% endif %}">
+              <a href="{{ block.settings.cta_url }}" class="btn btn--gold inline-block text-center" style="min-width: 14rem">
                 {{ block.settings.cta_label }}
               </a>
               {% if block.settings.cta_2_url != blank and block.settings.cta_2_label != blank %}
-                <a href="{{ block.settings.cta_2_url }}" class="btn btn--gold inline-block">
+                <a href="{{ block.settings.cta_2_url }}" class="btn btn--gold inline-block text-center" style="min-width: 14rem">
                   {{ block.settings.cta_2_label }}
                 </a>
               {% endif %}
@@ -314,7 +314,7 @@
           "label": "CTA Label"
         },
         {
-          "type": "url",
+          "type": "text",
           "id": "cta_2_url",
           "label": "CTA 2 Link"
         },
