@@ -14,7 +14,7 @@
       "blocks": {
         "infinite_options_app_block_jMJTmD": {
           "type": "shopify://apps/infinite-options/blocks/app-block/7e73b6f9-82b0-45f5-9b9b-04f446ba1a9b",
-          "disabled": true,
+          "disabled": false,
           "settings": {}
         },
         "seal_subscriptions_subscription_widget_DXMRR7": {
