@@ -242,7 +242,7 @@ s-donation[data-section-id="{{ section.id }}"] {
   display: flex;
   align-items: center;
   gap: 10px;
-  color: #2b3a5e;
+  color: var(--don2-ink);
   font-size: 13px;
   margin: 0 2px;
   padding: 2px 0;
@@ -257,7 +257,7 @@ s-donation[data-section-id="{{ section.id }}"] {
   align-items: center;
   justify-content: center;
   font-size: 13px;
-  color: #7a6533;
+  color: var(--don2-muted);
   flex: none;
 }
 .don2-amounts { border-top: 1px solid var(--don2-line2); margin-bottom: 4px; }
@@ -327,7 +327,7 @@ s-donation[data-section-id="{{ section.id }}"] {
   transition: background .15s;
   position: relative;
 }
-.don2-cta:hover { background: #1f3168; }
+.don2-cta:hover { background: var(--don2-ink); }
 .don2-cta:disabled { opacity: .6; cursor: not-allowed; }
 .don2-trust { text-align: center; font-size: 12px; color: var(--don2-muted); margin-top: 12px; margin-bottom: 0; }
 .seal-anchor, #infiniteoptions-container { display: none !important; }
@@ -348,16 +348,16 @@ s-donation[data-section-id="{{ section.id }}"] {
 (function () {
   'use strict';
   function initDon2(sectionId) {
-    var root = document.querySelector('s-donation[data-section-id="' + sectionId + '"]');
+    const root = document.querySelector('s-donation[data-section-id="' + sectionId + '"]');
     if (!root) return;
-    var masterSel   = root.querySelector('[js-master-select]');
-    var subCheckbox = root.querySelector('[js-subscription-checkbox]');
-    var subSelect   = root.querySelector('[js-subscription-select]');
-    var totalEl     = root.querySelector('#Don2Total-' + sectionId);
-    var planDetail  = root.querySelector('#Don2PlanDetail-' + sectionId);
-    var rows        = root.querySelectorAll('.don2-row');
-    var freqLabels  = root.querySelectorAll('.don2-freq__row');
-    var state = { freq: 'once', plan: 'mensual', qtys: {} };
+    const masterSel   = root.querySelector('[js-master-select]');
+    const subCheckbox = root.querySelector('[js-subscription-checkbox]');
+    const subSelect   = root.querySelector('[js-subscription-select]');
+    const totalEl     = root.querySelector('#Don2Total-' + sectionId);
+    const planDetail  = root.querySelector('#Don2PlanDetail-' + sectionId);
+    const rows        = root.querySelectorAll('.don2-row');
+    const freqLabels  = root.querySelectorAll('.don2-freq__row');
+    const state = { freq: 'once', plan: 'mensual', qtys: {} };
     rows.forEach(function (row) { state.qtys[row.dataset.variantId] = 0; });
 
     freqLabels.forEach(function (label) {
@@ -371,7 +371,7 @@ s-donation[data-section-id="{{ section.id }}"] {
       });
       if (freq === 'monthly') {
         if (planDetail) planDetail.style.display = '';
-        var opt = subSelect && subSelect.querySelector('option[data-plan="' + state.plan + '"]');
+        const opt = subSelect && subSelect.querySelector('option[data-plan="' + state.plan + '"]');
         if (opt) { subSelect.value = opt.value; subSelect.dispatchEvent(new Event('change', { bubbles: true })); }
         if (subCheckbox) { subCheckbox.checked = true; subCheckbox.dispatchEvent(new Event('change', { bubbles: true })); }
       } else {
@@ -381,10 +381,10 @@ s-donation[data-section-id="{{ section.id }}"] {
     }
 
     rows.forEach(function (row) {
-      var vid   = row.dataset.variantId;
-      var minus = row.querySelector('.don2-stepper__minus');
-      var plus  = row.querySelector('.don2-stepper__plus');
-      var qtyEl = row.querySelector('.don2-stepper__qty');
+      const vid   = row.dataset.variantId;
+      const minus = row.querySelector('.don2-stepper__minus');
+      const plus  = row.querySelector('.don2-stepper__plus');
+      const qtyEl = row.querySelector('.don2-stepper__qty');
       plus.addEventListener('click', function () {
         state.qtys[vid]++;
         syncRow(row, vid, minus, qtyEl);
@@ -399,7 +399,7 @@ s-donation[data-section-id="{{ section.id }}"] {
     });
 
     function syncRow(row, vid, minus, qtyEl) {
-      var q = state.qtys[vid];
+      const q = state.qtys[vid];
       qtyEl.textContent = q;
       minus.disabled = q <= 0;
       row.classList.toggle('don2-row--active', q > 0);
@@ -410,29 +410,29 @@ s-donation[data-section-id="{{ section.id }}"] {
     }
 
     function recompute() {
-      var sum = 0;
+      let sum = 0;
       rows.forEach(function (row) {
-        var price = parseFloat(row.dataset.price) || 0;
+        const price = parseFloat(row.dataset.price) || 0;
         sum += price * (state.qtys[row.dataset.variantId] || 0);
       });
       if (totalEl) totalEl.textContent = sum.toLocaleString('es-ES', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' €';
     }
 
-    var form = root.querySelector('.form');
+    const form = root.querySelector('.form');
     if (form) {
       form.addEventListener('submit', function (e) {
         e.preventDefault();
-        var sellingPlanId = (state.freq === 'monthly' && subSelect) ? (subSelect.value || null) : null;
-        var items = [];
+        const sellingPlanId = (state.freq === 'monthly' && subSelect) ? (subSelect.value || null) : null;
+        const items = [];
         rows.forEach(function (row) {
-          var qty = state.qtys[row.dataset.variantId] || 0;
+          const qty = state.qtys[row.dataset.variantId] || 0;
           if (qty <= 0) return;
-          var item = { id: parseInt(row.dataset.variantId, 10), quantity: qty };
+          const item = { id: parseInt(row.dataset.variantId, 10), quantity: qty };
           if (sellingPlanId) item.selling_plan = parseInt(sellingPlanId, 10);
           items.push(item);
         });
         if (!items.length) return;
-        var cta = root.querySelector('.don2-cta');
+        const cta = root.querySelector('.don2-cta');
         if (cta) cta.disabled = true;
         fetch('/cart/add.js', {
           method: 'POST',
@@ -440,7 +440,7 @@ s-donation[data-section-id="{{ section.id }}"] {
           body: JSON.stringify({ items: items })
         })
         .then(function (r) {
-          if (!r.ok) throw new Error('cart/add ' + r.status);
+          if (!r.ok) throw new Error(r.status === 422 ? 'unavailable' : 'server');
           return r.json();
         })
         .then(function () {
@@ -449,8 +449,13 @@ s-donation[data-section-id="{{ section.id }}"] {
           window.dispatchEvent(new CustomEvent('cart:open'));
         })
         .catch(function (err) {
-          var errEl = root.querySelector('[js-error-message]');
-          if (errEl) { errEl.textContent = 'Error al añadir al carrito. Inténtalo de nuevo.'; errEl.classList.remove('hidden'); }
+          const errEl = root.querySelector('[js-error-message]');
+          if (errEl) {
+            errEl.textContent = err.message === 'unavailable'
+              ? 'Producto no disponible. Prueba con otra cantidad.'
+              : 'Error al añadir al carrito. Inténtalo de nuevo.';
+            errEl.classList.remove('hidden');
+          }
           console.error('[don2]', err);
         })
         .finally(function () { if (cta) cta.disabled = false; });
