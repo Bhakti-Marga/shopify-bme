@@ -1,0 +1,499 @@
+{% style %}
+  :root {
+    --reza-navy: #14224a;
+    --reza-navy-deep: #0f1a3a;
+    --reza-gold: #c9b377;
+    --reza-btn-gold: #d6bf90;
+    --reza-cream: #f4efe5;
+    --reza-cream-soft: #faf6ee;
+    --reza-ink: #14224a;
+    --reza-muted: #5a6378;
+    --reza-font: "Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    --reza-font-serif: "Cormorant Garamond", Georgia, serif;
+  }
+
+  /* ── Hero ── */
+  .reza-hero { background: var(--reza-navy); padding: 16px; }
+  .reza-hero__frame {
+    position: relative;
+    border-radius: 18px;
+    overflow: hidden;
+    aspect-ratio: 16 / 10;
+    background: center center / cover no-repeat #0a1230;
+    display: flex;
+    align-items: flex-end;
+  }
+  .reza-hero__frame::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(rgba(0,0,0,0) 40%, rgba(0,0,0,0.55) 100%);
+  }
+  .reza-hero__bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 30%;
+    display: block;
+  }
+  .reza-hero__content {
+    position: relative;
+    z-index: 1;
+    padding: 64px 72px;
+    color: #fff;
+    max-width: 880px;
+  }
+  .reza-hero__eyebrow {
+    font-family: var(--reza-font);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.75);
+    margin: 0 0 16px;
+  }
+  .reza-hero__title {
+    font-family: var(--reza-font);
+    font-size: 88px;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    color: #fff;
+    margin: 0 0 20px;
+  }
+  .reza-hero__subtitle {
+    font-family: var(--reza-font);
+    font-size: 18px;
+    line-height: 1.55;
+    color: rgba(255,255,255,0.95);
+    max-width: 640px;
+    margin: 0;
+  }
+
+  /* ── Shared section ── */
+  .reza-section { padding: 120px 48px; font-family: var(--reza-font); }
+  .reza-section--navy { background: var(--reza-navy); color: #fff; }
+  .reza-section--cream { background: var(--reza-cream-soft); }
+  .reza-container { max-width: 1200px; margin: 0 auto; }
+  .reza-twoup {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+  .reza-stack { display: flex; flex-direction: column; gap: 24px; }
+
+  /* ── Typography ── */
+  .reza-eyebrow {
+    font-family: var(--reza-font);
+    color: var(--reza-gold);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    margin: 0;
+  }
+  .reza-h2 {
+    font-family: var(--reza-font);
+    font-size: 56px;
+    font-weight: 600;
+    line-height: 1.08;
+    letter-spacing: -0.015em;
+    color: var(--reza-ink);
+    margin: 0;
+    text-wrap: balance;
+  }
+  .reza-h2--white { color: #fff; }
+  .reza-body {
+    font-family: var(--reza-font);
+    font-size: 16px;
+    line-height: 1.75;
+    color: var(--reza-ink);
+    max-width: 640px;
+    margin: 0;
+  }
+  .reza-blockquote {
+    font-family: var(--reza-font);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.75;
+    color: var(--reza-ink);
+    margin: 0;
+    max-width: 640px;
+  }
+
+  /* ── Buttons ── */
+  .reza-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 36px;
+    border-radius: 999px;
+    font-family: var(--reza-font);
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.15s;
+  }
+  .reza-btn:hover { opacity: 0.85; }
+  .reza-btn--gold { background: var(--reza-btn-gold); color: #000; }
+  .reza-btn--white { background: #fff; color: #000; }
+
+  /* ── Media ── */
+  .reza-media {
+    aspect-ratio: 1 / 1;
+    border-radius: 14px;
+    overflow: hidden;
+    background: #ddd;
+  }
+  .reza-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .reza-media--wide { aspect-ratio: 4 / 3; }
+
+  /* ── Dates section ── */
+  .reza-schedule-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+  .reza-save-card { width: 100%; }
+  .reza-save-card img { width: 100%; height: auto; display: block; }
+  .reza-dates-heading {
+    font-family: var(--reza-font);
+    font-size: 56px;
+    font-weight: 600;
+    line-height: 1.15;
+    color: #fff;
+    margin: 0 0 16px;
+    text-wrap: balance;
+  }
+  .reza-dates-time {
+    font-family: var(--reza-font);
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 16px;
+  }
+  .reza-dates-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 32px;
+    display: grid;
+    gap: 2px;
+  }
+  .reza-dates-list li {
+    font-family: var(--reza-font);
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    padding: 3px 0;
+  }
+
+  /* ── Mantra video ── */
+  .reza-mantra {
+    position: relative;
+    width: 100%;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: #0a1230;
+  }
+  .reza-mantra__video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+  }
+  .reza-mantra__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(rgba(10,18,48,0.35), rgba(10,18,48,0.45));
+    z-index: 1;
+  }
+  .reza-mantra__content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: #fff;
+    padding: 96px 24px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .reza-mantra__eyebrow {
+    font-family: var(--reza-font);
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--reza-gold);
+    margin: 0 0 20px;
+  }
+  .reza-mantra__heading {
+    font-family: var(--reza-font);
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    color: #fff;
+    margin: 0 0 20px;
+    text-wrap: balance;
+  }
+  .reza-mantra__translation {
+    font-family: var(--reza-font);
+    font-style: italic;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: rgba(255,255,255,0.92);
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  /* ── Mobile ── */
+  @media screen and (max-width: 749px) {
+    .reza-hero__frame { aspect-ratio: 4 / 5; }
+    .reza-hero__content { padding: 32px 28px; }
+    .reza-hero__title { font-size: 44px; }
+    .reza-hero__subtitle { font-size: 16px; }
+    .reza-section { padding: 64px 24px; }
+    .reza-twoup,
+    .reza-schedule-grid { grid-template-columns: 1fr; gap: 40px; }
+    .reza-h2 { font-size: 36px; }
+    .reza-dates-heading { font-size: 36px; }
+    .reza-mantra__heading { font-size: 28px; }
+    .reza-mantra__content { padding: 64px 24px; }
+  }
+{% endstyle %}
+
+{%- liquid
+  assign hero_img    = section.settings.hero_image
+  assign intro_img   = section.settings.intro_image
+  assign dates_img   = section.settings.dates_image
+  assign mantra_vid  = section.settings.mantra_video
+  assign mantra_img  = section.settings.mantra_image
+  assign project_img = section.settings.project_image
+  assign quote1_img  = section.settings.quote1_image
+  assign quote2_img  = section.settings.quote2_image
+-%}
+
+<!-- ① HERO -->
+<div class="reza-hero">
+  <div class="reza-hero__frame">
+    {% if hero_img %}
+      <img class="reza-hero__bg" src="{{ hero_img | image_url: width: 1600 }}" alt="{{ hero_img.alt | escape }}" loading="eager">
+    {% else %}
+      <img class="reza-hero__bg" src="{{ 'reza-hero.png' | asset_url }}" alt="Reza por el Mundo" loading="eager">
+    {% endif %}
+  </div>
+</div>
+
+<!-- ② INTRO -->
+<div class="reza-section">
+  <div class="reza-container">
+    <div class="reza-twoup">
+      <div class="reza-stack">
+        <h2 class="reza-h2">{{ section.settings.intro_title }}</h2>
+        <p class="reza-body">{{ section.settings.intro_body }}</p>
+        {% if section.settings.intro_button_text != blank %}
+          <div>
+            <a href="{{ section.settings.intro_button_url }}" class="reza-btn reza-btn--gold">
+              {{ section.settings.intro_button_text }}
+            </a>
+          </div>
+        {% endif %}
+      </div>
+      {% if intro_img %}
+        <div class="reza-media reza-media--wide">
+          <img src="{{ intro_img | image_url: width: 900 }}" alt="{{ intro_img.alt | escape }}" loading="lazy">
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+<!-- ③ GUARDA LAS FECHAS -->
+<div class="reza-section reza-section--navy">
+  <div class="reza-container">
+    <div class="reza-schedule-grid">
+      <div class="reza-save-card">
+        {% if dates_img %}
+          <img src="{{ dates_img | image_url: width: 800 }}" alt="{{ dates_img.alt | escape }}" loading="lazy">
+        {% endif %}
+      </div>
+      <div class="reza-stack">
+        <h2 class="reza-dates-heading">{{ section.settings.fechas_subtitle }}</h2>
+        <p class="reza-dates-time">{{ section.settings.fechas_time }}</p>
+        <ul class="reza-dates-list">
+          {%- for block in section.blocks -%}
+            {%- if block.type == 'date' -%}
+              <li {{ block.shopify_attributes }}>{{ block.settings.date_label }}</li>
+            {%- endif -%}
+          {%- endfor -%}
+        </ul>
+        {% if section.settings.fechas_button_text != blank %}
+          <div>
+            <a href="{{ section.settings.fechas_button_url }}" class="reza-btn reza-btn--white">
+              {{ section.settings.fechas_button_text }}
+            </a>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ④ MANTRA -->
+<div class="reza-mantra">
+  {% if mantra_vid != blank %}
+    <video class="reza-mantra__video" autoplay muted loop playsinline preload="auto">
+      <source src="{{ mantra_vid }}" type="video/mp4">
+    </video>
+  {% elsif mantra_img %}
+    <img class="reza-mantra__video" src="{{ mantra_img | image_url: width: 1600 }}" alt="" loading="lazy">
+  {% endif %}
+  <div class="reza-mantra__overlay" aria-hidden="true"></div>
+  <div class="reza-mantra__content">
+    <p class="reza-mantra__eyebrow">{{ section.settings.mantra_eyebrow }}</p>
+    <h2 class="reza-mantra__heading">{{ section.settings.mantra_heading }}</h2>
+    <p class="reza-mantra__translation">{{ section.settings.mantra_translation }}</p>
+  </div>
+</div>
+
+<!-- ⑤ PROJECT MANTRA -->
+<div class="reza-section" style="padding-bottom: 0">
+  <div class="reza-container">
+    <div class="reza-twoup">
+      <div class="reza-stack">
+        <p class="reza-eyebrow">{{ section.settings.project_eyebrow }}</p>
+        <h2 class="reza-h2">{{ section.settings.project_title }}</h2>
+        <p class="reza-body">{{ section.settings.project_body }}</p>
+        {% if section.settings.project_button_text != blank %}
+          <div>
+            <a href="{{ section.settings.project_button_url }}" class="reza-btn reza-btn--gold">
+              {{ section.settings.project_button_text }}
+            </a>
+          </div>
+        {% endif %}
+      </div>
+      <div class="reza-media">
+        {% if project_img %}
+          <img src="{{ project_img | image_url: width: 900 }}" alt="{{ project_img.alt | escape }}" loading="lazy">
+        {% else %}
+          <img src="https://cdn.shopify.com/s/files/1/0929/1415/5864/files/project-mantra-3.png?v=1778703403" alt="Project Mantra" loading="lazy">
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ⑥ EL PODER DE LA ORACIÓN — imagen izquierda, texto derecha -->
+<div class="reza-section" style="background: #fff; padding-bottom: 0">
+  <div class="reza-container">
+    <div class="reza-twoup">
+      {% if quote1_img %}
+        <div class="reza-media">
+          <img src="{{ quote1_img | image_url: width: 900 }}" alt="{{ quote1_img.alt | escape }}" loading="lazy">
+        </div>
+      {% endif %}
+      <div class="reza-stack">
+        <h2 class="reza-h2">{{ section.settings.quote1_title }}</h2>
+        <blockquote class="reza-blockquote">{{ section.settings.quote1_text }}</blockquote>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ⑦ EL PODER DE LA INTENCIÓN — texto izquierda, imagen derecha -->
+<div class="reza-section" style="background: #fff">
+  <div class="reza-container">
+    <div class="reza-twoup">
+      <div class="reza-stack">
+        <h2 class="reza-h2">{{ section.settings.quote2_title }}</h2>
+        <blockquote class="reza-blockquote">{{ section.settings.quote2_text }}</blockquote>
+      </div>
+      {% if quote2_img %}
+        <div class="reza-media">
+          <img src="{{ quote2_img | image_url: width: 900 }}" alt="{{ quote2_img.alt | escape }}" loading="lazy">
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Reza por el Mundo",
+  "tag": "div",
+  "settings": [
+    { "type": "header", "content": "① Hero" },
+    { "type": "image_picker", "id": "hero_image", "label": "Imagen de fondo" },
+    { "type": "text", "id": "hero_eyebrow", "label": "Eyebrow", "default": "Con Paramahamsa Vishwananda" },
+    { "type": "text", "id": "hero_title", "label": "Título", "default": "Reza por el Mundo" },
+    { "type": "text", "id": "hero_subtitle", "label": "Subtítulo", "default": "Juntémonos en rezo. Únete online una vez al mes desde donde estés." },
+
+    { "type": "header", "content": "② Intro" },
+    { "type": "text", "id": "intro_title", "label": "Título" },
+    { "type": "textarea", "id": "intro_body", "label": "Cuerpo" },
+    { "type": "text", "id": "intro_button_text", "label": "Botón texto", "default": "Envía nombres" },
+    { "type": "url", "id": "intro_button_url", "label": "Botón URL" },
+    { "type": "image_picker", "id": "intro_image", "label": "Imagen" },
+
+    { "type": "header", "content": "③ Guarda las fechas" },
+    { "type": "image_picker", "id": "dates_image", "label": "Imagen 'Guarda las fechas'" },
+    { "type": "text", "id": "fechas_subtitle", "label": "Título derecha", "default": "Únete a la oración una vez al mes" },
+    { "type": "text", "id": "fechas_time", "label": "Hora", "default": "16:00 CET" },
+    { "type": "text", "id": "fechas_button_text", "label": "Botón texto", "default": "Reza con nosotros" },
+    { "type": "url", "id": "fechas_button_url", "label": "Botón URL" },
+
+    { "type": "header", "content": "④ El Mantra" },
+    { "type": "text", "id": "mantra_video", "label": "URL del vídeo (mp4)" },
+    { "type": "image_picker", "id": "mantra_image", "label": "Imagen de fondo (si no hay vídeo)" },
+    { "type": "text", "id": "mantra_eyebrow", "label": "Eyebrow", "default": "El Mantra" },
+    { "type": "text", "id": "mantra_heading", "label": "Mantra", "default": "Sri Vitthala Giridhari Parabrahmane Namaha" },
+    { "type": "text", "id": "mantra_translation", "label": "Traducción", "default": "\"Mis reverencias al Señor Supremo, refugio y protección de todos\"" },
+
+    { "type": "header", "content": "⑤ Continúa rezando" },
+    { "type": "text", "id": "project_eyebrow", "label": "Eyebrow", "default": "Project Mantra" },
+    { "type": "text", "id": "project_title", "label": "Título", "default": "Continúa rezando" },
+    { "type": "textarea", "id": "project_body", "label": "Cuerpo" },
+    { "type": "text", "id": "project_button_text", "label": "Botón texto", "default": "Encuentra un grupo" },
+    { "type": "url", "id": "project_button_url", "label": "Botón URL" },
+    { "type": "image_picker", "id": "project_image", "label": "Imagen" },
+
+    { "type": "header", "content": "⑥ El poder de la oración" },
+    { "type": "text", "id": "quote1_title", "label": "Título", "default": "El poder de la oración" },
+    { "type": "textarea", "id": "quote1_text", "label": "Cita" },
+    { "type": "image_picker", "id": "quote1_image", "label": "Imagen" },
+
+    { "type": "header", "content": "⑦ El poder de la intención" },
+    { "type": "text", "id": "quote2_title", "label": "Título", "default": "El poder de la intención" },
+    { "type": "textarea", "id": "quote2_text", "label": "Cita" },
+    { "type": "image_picker", "id": "quote2_image", "label": "Imagen" }
+  ],
+  "blocks": [
+    {
+      "type": "date",
+      "name": "Fecha",
+      "settings": [
+        { "type": "text", "id": "date_label", "label": "Fecha", "default": "30 enero" }
+      ]
+    }
+  ],
+  "presets": [{ "name": "Reza por el Mundo" }]
+}
+{% endschema %}

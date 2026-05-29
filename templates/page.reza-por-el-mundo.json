@@ -1,0 +1,52 @@
+{
+  "sections": {
+    "reza_main": {
+      "type": "section__reza-por-el-mundo",
+      "blocks": {
+        "date_01": { "type": "date", "settings": { "date_label": "30 enero" } },
+        "date_02": { "type": "date", "settings": { "date_label": "28 febrero" } },
+        "date_03": { "type": "date", "settings": { "date_label": "30 marzo" } },
+        "date_04": { "type": "date", "settings": { "date_label": "30 abril" } },
+        "date_05": { "type": "date", "settings": { "date_label": "30 mayo" } },
+        "date_06": { "type": "date", "settings": { "date_label": "30 junio" } },
+        "date_07": { "type": "date", "settings": { "date_label": "30 julio" } },
+        "date_08": { "type": "date", "settings": { "date_label": "30 agosto" } },
+        "date_09": { "type": "date", "settings": { "date_label": "30 septiembre" } },
+        "date_10": { "type": "date", "settings": { "date_label": "30 octubre" } },
+        "date_11": { "type": "date", "settings": { "date_label": "30 noviembre" } },
+        "date_12": { "type": "date", "settings": { "date_label": "30 diciembre" } }
+      },
+      "block_order": [
+        "date_01","date_02","date_03","date_04","date_05","date_06",
+        "date_07","date_08","date_09","date_10","date_11","date_12"
+      ],
+      "settings": {
+        "hero_eyebrow": "Con Paramahamsa Vishwananda",
+        "hero_title": "Reza por el Mundo",
+        "hero_subtitle": "Juntémonos en rezo. Únete online una vez al mes desde donde estés.",
+        "intro_title": "Juntos rezaremos por aquellos que lo necesitan",
+        "intro_body": "Paramahamsa Vishwananda nos invita a compartir los nombres de las personas por las que deseamos orar. Este acto de compartir no se trata solo de enumerar nombres, sino de abrir nuestros corazones para incluir a otros en nuestro círculo de cuidado y preocupación. Ya sean amigos, familiares o incluso desconocidos, al mencionar sus nombres en nuestras oraciones, les extendemos una mano de amistad espiritual.",
+        "intro_button_text": "Envía nombres",
+        "intro_button_url": "https://pages.bhaktimarga.org/pray-for-the-world-request",
+        "fechas_subtitle": "Únete a la oración una vez al mes",
+        "fechas_time": "16:00 CET",
+        "fechas_button_text": "Reza con nosotros",
+        "fechas_button_url": "https://pages.bhaktimarga.org/pray-for-the-world-request",
+        "mantra_video": "https://cdn.shopify.com/videos/c/o/v/8f3fcb109a4c4423acabfa6009639a22.mp4",
+        "mantra_eyebrow": "El Mantra",
+        "mantra_heading": "Sri Vitthala Giridhari Parabrahmane Namaha",
+        "mantra_translation": "\"Mis reverencias al Señor Supremo, refugio y protección de todos\"",
+        "project_eyebrow": "Project Mantra",
+        "project_title": "Continúa rezando",
+        "project_body": "Únete al Project Mantra y mantén vivo en tu día a día el latido de la oración colectiva. Es gratuito.",
+        "project_button_text": "Encuentra un grupo",
+        "project_button_url": "shopify://pages/proyecto-mantra",
+        "quote1_title": "El poder de la oración",
+        "quote1_text": "\"Cuando se reúnen en oración, cuando los devotos vienen al satsang, cuando los devotos se juntan a cantar bhajan, kirtan, cuando los devotos vienen juntos y hacen su sadhana juntos, cuando vienen juntos y hacen kriya juntos, cuando hacen su meditación juntos, ¿saben qué tipo de energía se genera? Ese flujo espiritual de energía, esa fuerza que se crea durante su sadhana en común, esa fuerza inspira y purifica los corazones de muchos. La intensidad de la oración solo ocurre cuando la mente está plenamente conectada con Bhagavan.\"",
+        "quote2_title": "El poder de la intención",
+        "quote2_text": "\"La meditación en sí misma no hace nada. Es tu intención detrás de la meditación lo que lo hace todo. Cuando tu intención se vuelve clara, refuerza el poder de la meditación. Pero si tu intención no es la correcta, puedes meditar tanto como quieras: seguirás siendo el mismo, nada cambiará.\""
+      }
+    }
+  },
+  "order": ["reza_main"]
+}
