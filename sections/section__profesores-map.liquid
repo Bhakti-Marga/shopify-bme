@@ -170,7 +170,7 @@
 </style>
 
 <script type="application/json" id="profesores-data">
-[{%- for p in shop.metaobjects.profesores.values -%}{%- unless forloop.first -%},{%- endunless -%}{%- assign _photo = p.photo.value.preview.image | image_url: width: 200 -%}{"name":{{ p.name.value | json }},"city":{{ p.city.value | json }},"lat":{{ p.lat.value | default: "null" }},"lng":{{ p.lng.value | default: "null" }},"skills":{{ p.skills.value | json }},"telegram":{{ p.telegram_url.value | default: "" | json }},"photo":{{ _photo | json }},"active":{{ p.active.value | json }}}{%- endfor -%}]
+[{%- for p in shop.metaobjects.profesores.values -%}{%- unless forloop.first -%},{%- endunless -%}{%- assign _photo = p.photo.value | image_url: width: 200 -%}{"name":{{ p.name.value | json }},"city":{{ p.city.value | json }},"lat":{{ p.lat.value | default: "null" }},"lng":{{ p.lng.value | default: "null" }},"skills":{{ p.skills.value | json }},"telegram":{{ p.telegram_url.value | default: "" | json }},"photo":{{ _photo | json }},"active":{{ p.active.value | json }}}{%- endfor -%}]
 </script>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
@@ -232,15 +232,25 @@
       });
     }
 
+    function popupBlock(p) {
+      return '<div class="pmap-popup__name">' + p.name + '</div>' +
+        '<div class="pmap-popup__city">' + p.city + '</div>' +
+        '<div class="pmap-popup__skills"><span class="pmap-popup__label">Especialidades:</span><br>' + p.skills.join(', ') + '</div>' +
+        (p.telegram ? '<a href="' + p.telegram + '" class="pmap-popup__btn" target="_blank" rel="noopener">CONTACTAR POR TELEGRAM</a>' : '');
+    }
+
+    // Group teachers sharing the same coordinates so they don't stack into one hidden pin.
+    var byLocation = {};
     profesores.forEach(function(p) {
-      L.marker([p.lat, p.lng], { icon: makePin() })
-        .bindPopup(
-          '<div class="pmap-popup__name">' + p.name + '</div>' +
-          '<div class="pmap-popup__city">' + p.city + '</div>' +
-          '<hr class="pmap-popup__divider">' +
-          '<div class="pmap-popup__skills"><span class="pmap-popup__label">Especialidades:</span><br>' + p.skills.join(', ') + '</div>' +
-          (p.telegram ? '<a href="' + p.telegram + '" class="pmap-popup__btn" target="_blank" rel="noopener">CONTACTAR POR TELEGRAM</a>' : '')
-        )
+      var key = p.lat.toFixed(5) + ',' + p.lng.toFixed(5);
+      (byLocation[key] = byLocation[key] || []).push(p);
+    });
+
+    Object.keys(byLocation).forEach(function(key) {
+      var group = byLocation[key];
+      var html = group.map(popupBlock).join('<hr class="pmap-popup__divider">');
+      L.marker([group[0].lat, group[0].lng], { icon: makePin() })
+        .bindPopup(html)
         .addTo(map);
     });
 
