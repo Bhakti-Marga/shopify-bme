@@ -12,13 +12,13 @@
     "main": {
       "type": "product__main",
       "blocks": {
-        "infinite_options_app_block_GKBhiW": {
-          "type": "shopify://apps/infinite-options/blocks/app-block/7e73b6f9-82b0-45f5-9b9b-04f446ba1a9b",
+        "event_consent_geQaFa": {
+          "type": "event-consent",
           "settings": {}
         }
       },
       "block_order": [
-        "infinite_options_app_block_GKBhiW"
+        "event_consent_geQaFa"
       ],
       "settings": {}
     },
@@ -53,6 +53,7 @@
         "subtitle": "{{ product.metafields.event.first_content | metafield_tag }}",
         "button_text": "",
         "button_url": "",
+        "button_anchor": "",
         "button_style": "btn",
         "anchor_to_pricing": false,
         "video_title": "",
@@ -81,6 +82,8 @@
             "credits": "",
             "cta_url": "",
             "cta_label": "",
+            "cta_2_url": "",
+            "cta_2_label": "",
             "text_align": "left",
             "desktop_text_align": "inherit",
             "vertical_padding": "py-lg",
@@ -132,6 +135,7 @@
         "subtitle": "{{ product.metafields.event.third_content | metafield_tag }}",
         "button_text": "",
         "button_url": "",
+        "button_anchor": "",
         "button_style": "btn",
         "anchor_to_pricing": false,
         "video_title": "",

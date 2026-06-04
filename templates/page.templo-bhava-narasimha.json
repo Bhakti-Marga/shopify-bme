@@ -44,6 +44,7 @@
         "subtitle": "<p>Tu hogar espiritual en Málaga</p>",
         "button_text": "Visita el Templo",
         "button_url": "#shopify-section-template--28224459866456__section_image_text_blocks_fcCxci",
+        "button_anchor": "",
         "button_style": "btn",
         "anchor_to_pricing": false,
         "video_title": "",
@@ -83,6 +84,7 @@
         "subtitle": "<h5>PROFUNDIZA TU CAMINO HACIA EL AMOR DIVINO</h5>",
         "button_text": "Retiros y Eventos",
         "button_url": "shopify://pages/all-programs",
+        "button_anchor": "",
         "button_style": "btn btn--gold",
         "anchor_to_pricing": false,
         "video_title": "",
@@ -162,6 +164,8 @@
             "credits": "",
             "cta_url": "#",
             "cta_label": "",
+            "cta_2_url": "",
+            "cta_2_label": "",
             "text_align": "left",
             "desktop_text_align": "inherit",
             "vertical_padding": "py-lg",
@@ -176,8 +180,8 @@
       "name": "Horario",
       "settings": {
         "margin_top": "mt-xl",
-        "margin_bottom": "mb-xxl",
-        "desktop_margin_top": "tabletl:mt-xl",
+        "margin_bottom": "mb-md",
+        "desktop_margin_top": "tabletl:mt-lg",
         "desktop_margin_bottom": "tabletl:mb-xxl",
         "vertical_align": "center",
         "flip_columns_desktop": true
@@ -189,7 +193,7 @@
         "image_block_RA3nVQ": {
           "type": "image_block",
           "settings": {
-            "image": "shopify://shop_images/BN_Inauguration_c486129e-db08-4ea1-88cf-f7165bcc199f.jpg"
+            "image": "shopify://shop_images/Gemini_Generated_Image_1j2e5v1j2e5v1j2e.png"
           }
         },
         "image_block_Dee9xw": {
@@ -223,7 +227,7 @@
         "margin_top": "mt-0",
         "margin_bottom": "mb-0",
         "padding_top": "pt-xl",
-        "padding_bottom": "pb-xxl",
+        "padding_bottom": "pb-xl",
         "desktop_margin_top": "inherit",
         "desktop_margin_bottom": "inherit",
         "desktop_padding_top": "tabletl:pt-xxxl",
@@ -299,6 +303,8 @@
             "credits": "",
             "cta_url": "shopify://pages/calendar",
             "cta_label": "Visitar el Templo",
+            "cta_2_url": "",
+            "cta_2_label": "",
             "text_align": "left",
             "desktop_text_align": "inherit",
             "vertical_padding": "py-lg",
@@ -359,7 +365,7 @@
         "padding_bottom": "pb-xl",
         "desktop_padding_top": "tabletl:pt-xl",
         "desktop_padding_bottom": "tabletl:pb-xxl",
-        "title": "<p>Sígue @bhava_narasimha</p>",
+        "title": "<p><a href=\"https://www.instagram.com/bhava_narasimha/\" target=\"_blank\" title=\"https://www.instagram.com/bhava_narasimha/\">Sigue @bhava_narasimha</a></p>",
         "title_icon": "instagram"
       }
     }

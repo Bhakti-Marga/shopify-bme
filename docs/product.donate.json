@@ -1,0 +1,94 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+            "heading_tag": "h2"
+          }
+        },
+        "seal_subscriptions_subscription_widget_7d4nj4": {
+          "type": "shopify://apps/seal-subscriptions/blocks/subscription-widget/13b25004-a140-4ab7-b5fe-29918f759699",
+          "settings": {
+            "product": "{{product}}"
+          }
+        },
+        "multivariants_bulk_order_app_block_product_MR89nV": {
+          "type": "shopify://apps/multivariants-bulk-order/blocks/app-block-product/e556349f-fd26-4006-9dd9-dcbf70aa55b3",
+          "settings": {
+            "multivariants_custom_css": ""
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "seal_subscriptions_subscription_widget_7d4nj4",
+        "multivariants_bulk_order_app_block_product_MR89nV"
+      ],
+      "settings": {
+        "full_width": true,
+        "show_fixed_add_to_cart": true,
+        "desktop_media_width": 55,
+        "desktop_media_layout": "carousel_thumbnails_left",
+        "mobile_media_size": "expanded",
+        "mobile_carousel_control": "floating_dots",
+        "enable_video_autoplay": false,
+        "enable_video_looping": true,
+        "enable_image_zoom": true,
+        "max_image_zoom_level": 3,
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "input_background": "rgba(0,0,0,0)",
+        "input_text_color": ""
+      }
+    },
+    "rich_text_y4w8Cp": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_E7MeFA": {
+          "type": "heading",
+          "settings": {
+            "text": "Giving is a gift that keeps on giving",
+            "heading_tag": "h2",
+            "text_color": "",
+            "gradient": ""
+          }
+        },
+        "richtext_rKnENT": {
+          "type": "richtext",
+          "settings": {
+            "content": "<p>Thank you for following our call and support the Bhakti Marga Mission. Your endowment helps Bhakti Marga serve the needs of our growing international family and helps Paramahamsa Vishwananda spread His message of Divine Love throughout the world. Please do so by making an endowment to increase the assets of the Bhakti Marga Foundation. The foundation’s assets must be preserved in its holdings on a permanent basis and thus ensure that the foundation can use the proceeds to achieve its long-term purposes. In this way, we can ensure the sustainable financing of the mission of Paramahamsa Vishwananda and Bhakti Marga sustainably through the foundation. Your endowment also enables us to build new temples, and to make investments in Bhakti Marga Projects.<br/><br/>Please select an amount and then click on “continue” for your endowment to increase the assets of the Bhakti Marga Foundation.<br/><br/>For your endowment, you can receive a confirmation of donations for tax assertion (exemption) in Germany on request, in this case please send an e-mail to: fundraising@bhaktimarga.org</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_E7MeFA",
+        "richtext_rKnENT"
+      ],
+      "settings": {
+        "full_width": true,
+        "content_width": "large",
+        "text_position": "start",
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich_text_y4w8Cp"
+  ]
+}

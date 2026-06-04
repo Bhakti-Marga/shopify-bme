@@ -36,7 +36,7 @@
         "border_radius": 16,
         "aspect_ratio": "auto",
         "aspect_ratio_desktop": "4/3",
-        "image": "shopify://shop_images/bsn-hero.webp",
+        "image": "shopify://shop_images/bsn-hero-mobile.jpg",
         "image_desktop": "shopify://shop_images/bsn-hero.webp",
         "bg_color": "#16254c",
         "content_width": "max-w-5xl",
@@ -47,6 +47,7 @@
         "subtitle": "<p>Babaji Surya Namaskar es una meditación en movimiento que celebra la divinidad del templo del cuerpo humano. Esta práctica de asanas (posturas), sencilla pero poderosa, requiere menos de 15 minutos al día y aporta luz y vitalidad a todo tu ser.</p>",
         "button_text": "",
         "button_url": "",
+        "button_anchor": "",
         "button_style": "btn",
         "anchor_to_pricing": false,
         "video_title": "",
@@ -58,7 +59,7 @@
       "type": "BM-event-slider",
       "name": "Product Carousel",
       "settings": {
-        "product_collection": "events",
+        "product_collection": "babaji-surya-namaskar",
         "set_dark_theme": true,
         "apply_gradient": true,
         "title": "Próximos cursos",
@@ -73,6 +74,7 @@
     },
     "section_hero_EmDBMy": {
       "type": "section__hero",
+      "disabled": true,
       "custom_css": [
         ".hero__content-wrapper {background: #0000004a; z-index: 1; position: sticky;}"
       ],
@@ -103,11 +105,56 @@
         "subtitle": "",
         "button_text": "",
         "button_url": "",
+        "button_anchor": "",
         "button_style": "btn",
         "anchor_to_pricing": false,
         "video_title": "",
         "horizontal_position": "justify-center",
         "vertical_position": "items-center"
+      }
+    },
+    "section_image_text_blocks_KkHXFj": {
+      "type": "section__image_text_blocks",
+      "blocks": {
+        "image_block_GEdPgP": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/mahavatar-babaji-yogi.jpg",
+            "height": "auto",
+            "desktop_height": "auto"
+          }
+        },
+        "content_block_6btzcy": {
+          "type": "content_block",
+          "settings": {
+            "title": "El Linaje de Babaji Surya Namaskar",
+            "title_tag": "h3",
+            "title_font_style": "h4",
+            "description": "<p>Babaji Surya Namaskar es una meditación en movimiento sagrada que proviene del linaje de Mahavatar Babaji, venerado como el maestro eterno del Kriya Yoga. Más que una simple secuencia física de yoga, esta práctica integra respiración, movimiento, mantra y consciencia para armonizar cuerpo, mente y alma. </p>",
+            "credits": "",
+            "cta_url": "",
+            "cta_label": "",
+            "cta_2_url": "",
+            "cta_2_label": "",
+            "text_align": "left",
+            "desktop_text_align": "inherit",
+            "vertical_padding": "py-lg",
+            "vertical_padding_desktop": "tabletl:py-xxl"
+          }
+        }
+      },
+      "block_order": [
+        "image_block_GEdPgP",
+        "content_block_6btzcy"
+      ],
+      "custom_css": [],
+      "settings": {
+        "margin_top": "mt-lg",
+        "margin_bottom": "mb-0",
+        "desktop_margin_top": "tabletl:mt-xxxl",
+        "desktop_margin_bottom": "tabletl:mb-xxxl",
+        "vertical_align": "center",
+        "flip_columns_desktop": true
       }
     },
     "section_image_text_blocks_PHhidM": {
@@ -116,7 +163,7 @@
         "image_block_jfBVbY": {
           "type": "image_block",
           "settings": {
-            "image": "shopify://shop_images/mahavatar-babaji-yogi.jpg",
+            "image": "shopify://shop_images/babaji-surya-namaskar-align-body-mind-and-spirit.jpg",
             "height": "auto",
             "desktop_height": "auto"
           }
@@ -124,13 +171,15 @@
         "content_block_gVQiM6": {
           "type": "content_block",
           "settings": {
-            "title": "Babaji Surya Namaskar",
+            "title": "Sobre la práctica",
             "title_tag": "h3",
             "title_font_style": "h4",
-            "description": "<p>Funciona en todo el ser. Físicamente, la práctica fortalece el corazón y todos los principales grupos musculares del cuerpo. Mejora la digestión y te da un impulso de energía para sostenerte en tu ajetreada vida diaria. Solo unas pocas rondas te ayudarán a despejar la mente y a energizar todo tu ser.</p><p>A medida que la práctica diaria se arraiga profundamente en tu cuerpo, los pensamientos disminuyen y tus movimientos se convierten en una expresión suave y consciente de tu fuerza interior.</p>",
+            "description": "<p>Es una síntesis de las salutaciones al Sol y a la Luna, diseñada para favorecer la purificación interior, la vitalidad, la concentración y el crecimiento espiritual. Practicado con amor y devoción, cada movimiento se convierte en una oración de gratitud por la vida misma y en una ofrenda al Divino, reflejando la esencia del Bhakti: el camino de la devoción amorosa. Pon tu devoción en movimiento.</p>",
             "credits": "",
             "cta_url": "",
             "cta_label": "",
+            "cta_2_url": "",
+            "cta_2_label": "",
             "text_align": "left",
             "desktop_text_align": "inherit",
             "vertical_padding": "py-lg",
@@ -144,10 +193,10 @@
       ],
       "custom_css": [],
       "settings": {
-        "margin_top": "mt-xl",
+        "margin_top": "mt-lg",
         "margin_bottom": "mb-0",
-        "desktop_margin_top": "tabletl:mt-xxxl",
-        "desktop_margin_bottom": "tabletl:mb-xl",
+        "desktop_margin_top": "tabletl:mt-md",
+        "desktop_margin_bottom": "tabletl:mb-xxxl",
         "vertical_align": "center",
         "flip_columns_desktop": false
       }
@@ -173,6 +222,8 @@
             "credits": "",
             "cta_url": "shopify://pages/request-a-course",
             "cta_label": "Solicitar ahora",
+            "cta_2_url": "",
+            "cta_2_label": "",
             "text_align": "left",
             "desktop_text_align": "inherit",
             "vertical_padding": "py-lg",
@@ -267,6 +318,7 @@
     "section_hero_cBpMpY",
     "bm_event_slider_wL67nE",
     "section_hero_EmDBMy",
+    "section_image_text_blocks_KkHXFj",
     "section_image_text_blocks_PHhidM",
     "section_image_text_blocks_Xfh44d",
     "section_rich_text_pyH4Fn",

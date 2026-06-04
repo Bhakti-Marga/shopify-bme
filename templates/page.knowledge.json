@@ -46,6 +46,7 @@
         "subtitle": "<p>El conocimiento puesto a tu disposición a través de Bhakti Marga te ayuda a darte cuenta de quién eres realmente, de dónde vienes y cuál es el verdadero propósito de tu existencia humana.</p>",
         "button_text": "",
         "button_url": "",
+        "button_anchor": "",
         "button_style": "btn",
         "anchor_to_pricing": false,
         "video_title": "",
@@ -53,23 +54,6 @@
         "poster_video": "shopify://files/videos/Start-your-Journey-with-Knowledge.mp4",
         "horizontal_position": "justify-center",
         "vertical_position": "items-end"
-      }
-    },
-    "bm_event_slider_tyJBk4": {
-      "type": "BM-event-slider",
-      "name": "Product Carousel",
-      "settings": {
-        "product_collection": "events",
-        "set_dark_theme": true,
-        "apply_gradient": true,
-        "title": "Upcoming Courses",
-        "title_tag": "h2",
-        "cta_label": "",
-        "cta_url": "",
-        "padding_top": "pt-xl",
-        "padding_bottom": "pb-xl",
-        "desktop_padding_top": "inherit",
-        "desktop_padding_bottom": "inherit"
       }
     },
     "section_hero_EmDBMy": {
@@ -94,7 +78,8 @@
         "border_radius": 0,
         "aspect_ratio": "9/16",
         "aspect_ratio_desktop": "16/9",
-        "image": "shopify://shop_images/guru-gita-commentary-2024-guruji.jpg",
+        "image": "shopify://shop_images/guru-gita-commentary-2024-guruji-mobile.png",
+        "image_desktop": "shopify://shop_images/guru-gita-commentary-2024-guruji.jpg",
         "bg_color": "",
         "content_width": "max-w-5xl",
         "text_align": "text-center",
@@ -104,11 +89,21 @@
         "subtitle": "<h5>El conocimiento es importante para vivir el bhakti. Proporciona las raíces para comprender el camino y la inspiración para vivir, amar y crecer con el tiempo.</h5>",
         "button_text": "",
         "button_url": "",
+        "button_anchor": "",
         "button_style": "btn",
         "anchor_to_pricing": false,
         "video_title": "",
         "horizontal_position": "justify-center",
         "vertical_position": "items-center"
+      }
+    },
+    "bm_carrusel_eventos_KR9xVB": {
+      "type": "bm-carrusel-eventos",
+      "name": "BM - Carrusel Eventos",
+      "settings": {
+        "title": "Próximos Cursos",
+        "collection": "conocimiento",
+        "products_count": 4
       }
     },
     "section_image_text_blocks_PHhidM": {
@@ -117,7 +112,7 @@
         "image_block_jfBVbY": {
           "type": "image_block",
           "settings": {
-            "image": "shopify://shop_images/bhagavad-gita-essentials-book.jpg",
+            "image": "shopify://shop_images/Tadatmya_Vedanta.jpg",
             "height": "auto",
             "desktop_height": "auto"
           }
@@ -125,13 +120,15 @@
         "content_block_gVQiM6": {
           "type": "content_block",
           "settings": {
-            "title": "Bhagavad Gita, lo esencial",
+            "title": "Tadatmya Vedanta",
             "title_tag": "h3",
             "title_font_style": "h4",
-            "description": "<p>El <em>Bhagavad Gita</em>, en solo 700 versos, describe a Dios y cómo conectar con Él a través del <em>bhakti</em>. Es profundo y debe ser explicado por alguien que conozca a Dios. Paramahamsa Vishwananda ha dado el comentario más simple y elegante. Es fácil. Con él tú también puedes empezar a vivir el <em>bhakti</em>.</p>",
+            "description": "<p><br/>El tratado <em>Tādātmya Vedānta</em> fue escrito para sistematizar las enseñanzas de Paramahamsa Vishwananda en una filosofía vedántica coherente y preservarlas para las generaciones futuras. Debe verse como un marco que ayuda a los seguidores del Hari Bhakta Sampradāya a profundizar en su comprensión del camino que recorren. El enfoque de Vishwananda ha sido siempre <strong>la experiencia primero, el conocimiento después</strong></p>",
             "credits": "",
-            "cta_url": "https://bhaktishop.com/products/bhagavad-gita-essentials-1",
+            "cta_url": "shopify://products/tadatmya-vedanta-domingo",
             "cta_label": "Comprar ahora",
+            "cta_2_url": "",
+            "cta_2_label": "",
             "text_align": "left",
             "desktop_text_align": "inherit",
             "vertical_padding": "py-lg",
@@ -145,10 +142,10 @@
       ],
       "custom_css": [],
       "settings": {
-        "margin_top": "mt-xl",
-        "margin_bottom": "mb-0",
-        "desktop_margin_top": "tabletl:mt-xxxl",
-        "desktop_margin_bottom": "tabletl:mb-xl",
+        "margin_top": "mt-md",
+        "margin_bottom": "mb-md",
+        "desktop_margin_top": "tabletl:mt-md",
+        "desktop_margin_bottom": "tabletl:mb-md",
         "vertical_align": "center",
         "flip_columns_desktop": false
       }
@@ -172,8 +169,10 @@
             "title_font_style": "h4",
             "description": "<p>El <em>Bhagavad Gita</em> revela la verdad de la espiritualidad auténtica en solo 700 versos. Contiene todo lo que necesitas saber sobre cómo alcanzar la consciencia del Ser y de Dios a través del <em>bhakti</em>, el camino de la devoción.</p><p>El <em>Bhagavad Gita</em> proporciona a los buscadores espirituales un mapa hacia la fuente de la divinidad misma. </p><p>El comentario sencillo pero elegante de Paramahamsa Vishwananda da vida a este discurso atemporal y nos muestra cómo vivir su sabiduría en nuestra vida cotidiana.</p>",
             "credits": "",
-            "cta_url": "https://bhaktishop.com/products/shreemad-bhagavad-gita-the-song-of-love",
+            "cta_url": "shopify://products/bhagavad-gita-lo-esencial",
             "cta_label": "Comprar ahora",
+            "cta_2_url": "",
+            "cta_2_label": "",
             "text_align": "left",
             "desktop_text_align": "inherit",
             "vertical_padding": "py-lg",
@@ -186,53 +185,12 @@
         "content_block_bdB8cq"
       ],
       "settings": {
-        "margin_top": "mt-xl",
+        "margin_top": "mt-md",
         "margin_bottom": "mb-0",
-        "desktop_margin_top": "tabletl:mt-xxxl",
-        "desktop_margin_bottom": "tabletl:mb-xl",
+        "desktop_margin_top": "tabletl:mt-md",
+        "desktop_margin_bottom": "tabletl:mb-md",
         "vertical_align": "center",
         "flip_columns_desktop": true
-      }
-    },
-    "section_image_text_blocks_GNDjm8": {
-      "type": "section__image_text_blocks",
-      "blocks": {
-        "image_block_XXcBbM": {
-          "type": "image_block",
-          "settings": {
-            "image": "shopify://shop_images/essence-of-shreemad-bhagavatam.jpg",
-            "height": "auto",
-            "desktop_height": "auto"
-          }
-        },
-        "content_block_8hGYFw": {
-          "type": "content_block",
-          "settings": {
-            "title": "Shreemad Bhagavatam",
-            "title_tag": "h3",
-            "title_font_style": "h4",
-            "description": "<p>Esta escritura atemporal abre el corazón al Amor Divino. Está llena de conmovedoras historias sobre cómo el Señor Supremo nace a lo largo de los siglos para interactuar con Sus devotos en una amplia variedad de relaciones.</p><p>Paramahamsa Vishwananda ha destilado los 18 000 versos originales y los ha convertido en los relatos más entrañables. Sus perspicaces comentarios revelan el significado oculto de estas historias e ilustran cómo tomar en serio el conocimiento y avanzar en tu camino espiritual.</p>",
-            "credits": "",
-            "cta_url": "https://bhaktishop.com/products/the-essence-of-shreemad-bhagavatam",
-            "cta_label": "Comprar ahora",
-            "text_align": "left",
-            "desktop_text_align": "inherit",
-            "vertical_padding": "py-lg",
-            "vertical_padding_desktop": "tabletl:py-xxl"
-          }
-        }
-      },
-      "block_order": [
-        "image_block_XXcBbM",
-        "content_block_8hGYFw"
-      ],
-      "settings": {
-        "margin_top": "mt-xl",
-        "margin_bottom": "mb-0",
-        "desktop_margin_top": "tabletl:mt-xxxl",
-        "desktop_margin_bottom": "tabletl:mb-xxxl",
-        "vertical_align": "center",
-        "flip_columns_desktop": false
       }
     },
     "section_podcast_4Bx7gc": {
@@ -241,31 +199,31 @@
         "content_block_WyaaX8": {
           "type": "content_block",
           "settings": {
-            "image": "shopify://shop_images/just-love-book-paramahamsa-vishwananda-2.jpg",
+            "image": "shopify://shop_images/Just_Love_un_viaje_al_corazon_de_Dios_Swami_Vishwananda.webp",
             "title": "Just Love: Un viaje al corazón de Dios",
-            "topic": "Stories",
+            "topic": "",
             "date": "",
-            "link": "https://bhaktishop.com/products/just-love-a-journey-into-the-heart-of-god-1"
+            "link": "shopify://products/libro-viaje-al-corazon-de-dios-paramahamsa-vishwananda"
           }
         },
         "content_block_crGXMn": {
           "type": "content_block",
           "settings": {
-            "image": "shopify://shop_images/mukunda-mala-stotram-commentary-paramahamsa-vishwananda.jpg",
-            "title": "Mukunda Mala Stotram",
-            "topic": "Commentary",
+            "image": "shopify://shop_images/La_plenitud_del_Corazon_swami_Vishwananda.webp",
+            "title": "La plenitud del Corazón",
+            "topic": "",
             "date": "",
-            "link": "https://bhaktishop.com/products/mukunda-mala-stotram-german"
+            "link": "shopify://products/libro-la-plenitud-del-corazon-paramahamsa-vishwananda"
           }
         },
         "content_block_Myb7UY": {
           "type": "content_block",
           "settings": {
-            "image": "shopify://shop_images/sri-gopi-gita-commentary-paramahamsa-vishwananda.jpg",
-            "title": "Sri Gopi Gita",
-            "topic": "Commentary",
+            "image": "shopify://shop_images/Just_Love_swami_Vishwananda_Espanol__vol_1.webp",
+            "title": "Just Love: La esencia del Todo",
+            "topic": "",
             "date": "",
-            "link": "https://bhaktishop.com/collections/books-guruji"
+            "link": "shopify://products/libro-just-love-la-esencia-de-todo-paramahamsa-vishwanandaa"
           }
         }
       },
@@ -292,7 +250,7 @@
         "title_font_style": "h3",
         "description": "<p>A través de los años Paramahamsa Vishwananda ha dado innumerables <em>satsangs</em> y comentarios de varias escrituras, que ahora están disponibles para todos los buscadores en forma de libros. Puedes encontrar esos y muchos otros libros con las enseñanzas de Guruji en nuestra Bhakti Shop.</p>",
         "primary_bg_color": "#16254c",
-        "secondary_bg_color": "#16254c",
+        "secondary_bg_color": "#ffffff",
         "heading_color": "white",
         "card_color": "black"
       }
@@ -318,6 +276,8 @@
             "credits": "",
             "cta_url": "shopify://pages/request-a-course",
             "cta_label": "Solicitar ahora",
+            "cta_2_url": "",
+            "cta_2_label": "",
             "text_align": "left",
             "desktop_text_align": "inherit",
             "vertical_padding": "py-lg",
@@ -339,11 +299,54 @@
         "flip_columns_desktop": false
       }
     },
+    "section_image_text_blocks_GNDjm8": {
+      "type": "section__image_text_blocks",
+      "blocks": {
+        "image_block_XXcBbM": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/essence-of-shreemad-bhagavatam.jpg",
+            "height": "auto",
+            "desktop_height": "auto"
+          }
+        },
+        "content_block_8hGYFw": {
+          "type": "content_block",
+          "settings": {
+            "title": "Shreemad Bhagavatam",
+            "title_tag": "h3",
+            "title_font_style": "h4",
+            "description": "<p>Esta escritura atemporal abre el corazón al Amor Divino. Está llena de conmovedoras historias sobre cómo el Señor Supremo nace a lo largo de los siglos para interactuar con Sus devotos en una amplia variedad de relaciones.</p><p>Paramahamsa Vishwananda ha destilado los 18 000 versos originales y los ha convertido en los relatos más entrañables. Sus perspicaces comentarios revelan el significado oculto de estas historias e ilustran cómo tomar en serio el conocimiento y avanzar en tu camino espiritual.</p>",
+            "credits": "",
+            "cta_url": "",
+            "cta_label": "Comprar ahora",
+            "cta_2_url": "",
+            "cta_2_label": "",
+            "text_align": "left",
+            "desktop_text_align": "inherit",
+            "vertical_padding": "py-lg",
+            "vertical_padding_desktop": "tabletl:py-xxl"
+          }
+        }
+      },
+      "block_order": [
+        "image_block_XXcBbM",
+        "content_block_8hGYFw"
+      ],
+      "settings": {
+        "margin_top": "mt-md",
+        "margin_bottom": "mb-md",
+        "desktop_margin_top": "tabletl:mt-md",
+        "desktop_margin_bottom": "tabletl:mb-md",
+        "vertical_align": "center",
+        "flip_columns_desktop": false
+      }
+    },
     "section_rich_text_L9ejfC": {
       "type": "section__rich-text",
       "name": "Rich Text Section",
       "settings": {
-        "margin_top": "mt-xxxl",
+        "margin_top": "mt-md",
         "margin_bottom": "mb-0",
         "padding_top": "pt-0",
         "padding_bottom": "pb-0",
@@ -410,13 +413,13 @@
   "order": [
     "main",
     "section_hero_cBpMpY",
-    "bm_event_slider_tyJBk4",
     "section_hero_EmDBMy",
+    "bm_carrusel_eventos_KR9xVB",
     "section_image_text_blocks_PHhidM",
     "section_image_text_blocks_Ma8hkT",
-    "section_image_text_blocks_GNDjm8",
     "section_podcast_4Bx7gc",
     "section_image_text_blocks_Xfh44d",
+    "section_image_text_blocks_GNDjm8",
     "section_rich_text_L9ejfC",
     "bm_custom_carousel_cards_cbbXJD"
   ]

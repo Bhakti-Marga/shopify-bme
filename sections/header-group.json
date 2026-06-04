@@ -18,16 +18,11 @@
         "button_link": "",
         "button_label": "",
         "announcement_text_color": "#ffffff",
-        "announcement_bg_color": "#000000"
+        "announcement_bg_color": "#16254c"
       }
-    },
-    "1777987203b7aa100f": {
-      "type": "_blocks",
-      "settings": {}
     }
   },
   "order": [
-    "header",
-    "1777987203b7aa100f"
+    "header"
   ]
 }

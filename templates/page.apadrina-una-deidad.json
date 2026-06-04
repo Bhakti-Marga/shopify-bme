@@ -1,0 +1,563 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "page__main",
+      "disabled": true,
+      "settings": {}
+    },
+    "section_hero_cBpMpY": {
+      "type": "section__hero",
+      "disabled": true,
+      "settings": {
+        "padding_top": "0px",
+        "desktop_padding_top": "inherit",
+        "padding_bottom": "40px",
+        "desktop_padding_bottom": "60px",
+        "padding_horizontal": "px-0",
+        "desktop_padding_horizontal": "inherit",
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "use_container": true,
+        "set_100vh": true,
+        "set_100vh_desktop": true,
+        "border_radius": 16,
+        "aspect_ratio": "9/16",
+        "aspect_ratio_desktop": "4/3",
+        "image": "shopify://shop_images/Bhutabhrteshwarnath_Mandir-poster.jpg",
+        "image_desktop": "shopify://shop_images/HH-Mural.jpg",
+        "bg_color": "#16254c",
+        "content_width": "max-w-5xl",
+        "text_align": "text-left",
+        "text_color": "#ffffff",
+        "title": "Templo Hari Hara",
+        "title_font_style": "h3",
+        "subtitle": "<h5>PROFUNDIZA TU CAMINO HACIA EL AMOR DIVINO</h5>",
+        "button_text": "Retiros y Eventos",
+        "button_url": "shopify://pages/all-programs",
+        "button_anchor": "",
+        "button_style": "btn btn--gold",
+        "anchor_to_pricing": false,
+        "video_title": "",
+        "poster_image": "shopify://shop_images/IMG_1144-Edit.jpg",
+        "poster_image_desktop": "shopify://shop_images/IMG_1144-Edit.jpg",
+        "horizontal_position": "justify-center",
+        "vertical_position": "items-end"
+      }
+    },
+    "section_hero_XrFNy3": {
+      "type": "section__hero",
+      "name": "Portada",
+      "settings": {
+        "padding_top": "0px",
+        "desktop_padding_top": "0px",
+        "padding_bottom": "0px",
+        "desktop_padding_bottom": "inherit",
+        "padding_horizontal": "px-0",
+        "desktop_padding_horizontal": "inherit",
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "use_container": true,
+        "set_100vh": true,
+        "set_100vh_desktop": true,
+        "border_radius": 16,
+        "aspect_ratio": "9/16",
+        "aspect_ratio_desktop": "16/9",
+        "image": "shopify://shop_images/BN-BN.png",
+        "bg_color": "#16254c",
+        "content_width": "max-w-5xl",
+        "text_align": "text-center",
+        "text_color": "#ffffff",
+        "title": "Apadrina una Deidad",
+        "title_font_style": "h2",
+        "subtitle": "<p>Una oportunidad única y sagrada para apadrinar simbólicamente una Deidad de los templos de España.</p>",
+        "button_text": "Elige cuál",
+        "button_url": "shopify://pages/templo-hari-hara",
+        "button_anchor": "#shopify-section-template--28224459899224__section_image_text_blocks_dj6J3e",
+        "button_style": "btn",
+        "anchor_to_pricing": false,
+        "video_title": "",
+        "horizontal_position": "justify-center",
+        "vertical_position": "items-center"
+      }
+    },
+    "bm_event_slider_MDLAzH": {
+      "type": "BM-event-slider",
+      "name": "elige-deidad",
+      "settings": {
+        "product_collection": "deidades",
+        "set_dark_theme": true,
+        "apply_gradient": true,
+        "title": "Elige la Deidad que quieres apadrinar",
+        "title_tag": "h2",
+        "cta_label": "",
+        "cta_url": "",
+        "padding_top": "pt-xl",
+        "padding_bottom": "pb-xl",
+        "desktop_padding_top": "inherit",
+        "desktop_padding_bottom": "inherit"
+      }
+    },
+    "section_image_text_blocks_XJ9kGW": {
+      "type": "section__image_text_blocks",
+      "blocks": {
+        "image_block_qrJaRt": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/Screenshot_2026-05-08_at_1.23.09_PM.png",
+            "height": "50vh",
+            "desktop_height": "inherit"
+          }
+        },
+        "content_block_TFpAMn": {
+          "type": "content_block",
+          "settings": {
+            "title": "¿Qué es una Deidad?",
+            "title_tag": "h3",
+            "title_font_style": "h4",
+            "description": "<p>Las Deidades son manifestaciones vivas de lo Divino a través de la cual los devotos pueden experimentar una relación personal con Dios. Siguiendo las enseñanzas de Paramahamsa Vishwananda, las Deidades sagradas son veneradas con amor, devoción y servicio, ayudando a los devotos a profundizar su conexión con lo Divino mediante la oración, los rituales y la adoración diaria.</p>",
+            "credits": "",
+            "cta_url": "#",
+            "cta_label": "",
+            "cta_2_url": "",
+            "cta_2_label": "",
+            "text_align": "left",
+            "desktop_text_align": "inherit",
+            "vertical_padding": "py-lg",
+            "vertical_padding_desktop": "tabletl:py-xxl"
+          }
+        }
+      },
+      "block_order": [
+        "image_block_qrJaRt",
+        "content_block_TFpAMn"
+      ],
+      "name": "Que es una Deidad",
+      "settings": {
+        "margin_top": "mt-xl",
+        "margin_bottom": "mb-xxl",
+        "desktop_margin_top": "tabletl:mt-xxxl",
+        "desktop_margin_bottom": "tabletl:mb-xxl",
+        "vertical_align": "center",
+        "flip_columns_desktop": false
+      }
+    },
+    "section_image_text_blocks_4Gy4Ge": {
+      "type": "section__image_text_blocks",
+      "blocks": {
+        "image_block_ywB3aa": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/Gemini_Generated_Image_aix1v9aix1v9aix1.png",
+            "height": "50vh",
+            "desktop_height": "inherit"
+          }
+        },
+        "content_block_VUwWn7": {
+          "type": "content_block",
+          "settings": {
+            "title": "El apadrinamiento te da bendición",
+            "title_tag": "h3",
+            "title_font_style": "h4",
+            "description": "<p>Con el Programa Apadrina una Deidad, ayudas a asegurar que se cubran las necesidades financieras diarias de la Deidad y del templo. Con tus contribuciones, participas activamente en las bendiciones de la Deidad cada día. La bendición ayuda a restaurar el equilibrio y la armonía de los cinco elementos de la naturaleza. Esto contribuye a traer más armonía y estabilidad a nuestras vidas, lo que nos capacita para servir mejor a los demás. </p>",
+            "credits": "",
+            "cta_url": "#",
+            "cta_label": "",
+            "cta_2_url": "",
+            "cta_2_label": "",
+            "text_align": "left",
+            "desktop_text_align": "inherit",
+            "vertical_padding": "py-lg",
+            "vertical_padding_desktop": "tabletl:py-xxl"
+          }
+        }
+      },
+      "block_order": [
+        "image_block_ywB3aa",
+        "content_block_VUwWn7"
+      ],
+      "name": "El programa",
+      "settings": {
+        "margin_top": "mt-xl",
+        "margin_bottom": "mb-xxl",
+        "desktop_margin_top": "tabletl:mt-xl",
+        "desktop_margin_bottom": "tabletl:mb-xxl",
+        "vertical_align": "center",
+        "flip_columns_desktop": true
+      }
+    },
+    "section_text_content_4RqHwF": {
+      "type": "section__text-content",
+      "name": "Beneficios",
+      "settings": {
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "padding_top": "pt-xxxl",
+        "padding_bottom": "pb-xl",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "desktop_padding_top": "inherit",
+        "desktop_padding_bottom": "inherit",
+        "max_width": "",
+        "pretitle": "",
+        "title": "– Beneficios –",
+        "title_tag": "h2",
+        "title_font_style": "h4",
+        "description": "",
+        "credits": ""
+      }
+    },
+    "section_icon_grid_yRN3aG": {
+      "type": "section__icon-grid",
+      "blocks": {
+        "content_block_HeM46P": {
+          "type": "content_block",
+          "settings": {
+            "title": "Eliminación de el karma",
+            "title_tag": "h3",
+            "title_font_style": "h5",
+            "description": "<p>Las escrituras afirman que el darshan, el culto e incluso tocar a una Deidad ayuda a disolver el karma acumulado.</p>",
+            "content_align": "items-start"
+          }
+        },
+        "content_block_qBxYL7": {
+          "type": "content_block",
+          "settings": {
+            "title": "Protección a la negatividad",
+            "title_tag": "h3",
+            "title_font_style": "h5",
+            "description": "<p>El culto a la Deidad se describe como una práctica protectora frente a energías negativas y densas.</p>",
+            "content_align": "items-start"
+          }
+        },
+        "content_block_94Q6da": {
+          "type": "content_block",
+          "settings": {
+            "title": "Despierta la Bhakti",
+            "title_tag": "h3",
+            "title_font_style": "h5",
+            "description": "<p>Más allá de las bendiciones materiales, las escrituras destacan el despertar de la devoción y la entrega.</p>",
+            "content_align": "items-start"
+          }
+        }
+      },
+      "block_order": [
+        "content_block_HeM46P",
+        "content_block_qBxYL7",
+        "content_block_94Q6da"
+      ],
+      "name": "Beneficios",
+      "settings": {
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-md",
+        "padding_top": "pt-0",
+        "padding_bottom": "pb-0",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "desktop_padding_top": "inherit",
+        "desktop_padding_bottom": "inherit",
+        "cols_mobile": "1",
+        "cols_desktop": "3",
+        "text_align": "text-left",
+        "title": "",
+        "subtitle": "",
+        "button_text": "",
+        "button_url": "",
+        "button_style": "btn"
+      }
+    },
+    "section_icon_grid_3WkgrM": {
+      "type": "section__icon-grid",
+      "blocks": {
+        "content_block_HtWUzw": {
+          "type": "content_block",
+          "settings": {
+            "title": "Libera la carga ancestral",
+            "title_tag": "h3",
+            "title_font_style": "h5",
+            "description": "<p>Se dice que las ofrendas a una Deidad benefician al linaje familiar y ayudan a liberar cargas kármicas.</p>",
+            "content_align": "items-start"
+          }
+        },
+        "content_block_YjCcGC": {
+          "type": "content_block",
+          "settings": {
+            "title": "Cultiva la positividad",
+            "title_tag": "h3",
+            "title_font_style": "h5",
+            "description": "<p>El culto a la Deidad se describe como fuente de prosperidad, paz en el hogar y relaciones armoniosas.</p>",
+            "content_align": "items-start"
+          }
+        },
+        "content_block_wKePbB": {
+          "type": "content_block",
+          "settings": {
+            "title": "Conexión a la divinad",
+            "title_tag": "h3",
+            "title_font_style": "h5",
+            "description": "<p>Con el tiempo, la reverencia se transforma en una conexión profunda y silenciosa con la presencia divina en tu vida.</p>",
+            "content_align": "items-start"
+          }
+        }
+      },
+      "block_order": [
+        "content_block_HtWUzw",
+        "content_block_YjCcGC",
+        "content_block_wKePbB"
+      ],
+      "name": "Beneficios",
+      "settings": {
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-xxxl",
+        "padding_top": "pt-0",
+        "padding_bottom": "pb-0",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "desktop_padding_top": "inherit",
+        "desktop_padding_bottom": "inherit",
+        "cols_mobile": "1",
+        "cols_desktop": "3",
+        "text_align": "text-left",
+        "title": "",
+        "subtitle": "",
+        "button_text": "",
+        "button_url": "",
+        "button_style": "btn"
+      }
+    },
+    "section_text_image_grid_q8FKHB": {
+      "type": "section__text-image-grid",
+      "blocks": {
+        "image_block_4tkC8R": {
+          "type": "image_block",
+          "settings": {}
+        },
+        "image_block_RA3nVQ": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/Gemini_Generated_Image_5bb4ed5bb4ed5bb4.png"
+          }
+        },
+        "image_block_Dee9xw": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/Screenshot_2026-05-13_at_5.11.57_PM.png"
+          }
+        },
+        "image_block_qhpXeT": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/Screenshot_2026-05-13_at_5.11.33_PM.png"
+          }
+        },
+        "image_block_gKfa4C": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/Gemini_Generated_Image_wz0xbbwz0xbbwz0x.png"
+          }
+        }
+      },
+      "block_order": [
+        "image_block_4tkC8R",
+        "image_block_RA3nVQ",
+        "image_block_Dee9xw",
+        "image_block_qhpXeT",
+        "image_block_gKfa4C"
+      ],
+      "custom_css": [],
+      "name": "Cómo se utilizan tus donaciones",
+      "settings": {
+        "margin_top": "mt-lg",
+        "margin_bottom": "mb-xxxl",
+        "padding_top": "pt-lg",
+        "padding_bottom": "pb-xxxl",
+        "desktop_margin_top": "tabletl:mt-xl",
+        "desktop_margin_bottom": "tabletl:mb-xxxl",
+        "desktop_padding_top": "tabletl:pt-lg",
+        "desktop_padding_bottom": "tabletl:pb-xxxl",
+        "mobile_position": "top",
+        "position": "left",
+        "title": "Cómo se utilizan tus donaciones",
+        "title_tag": "h2",
+        "description": "<p>Tus donaciones se utilizan con gratitud para ayudar a cubrir la mayor parte de los gastos de funcionamiento de los hermosos templos en España. De hecho, solo gracias a su ayuda es posible llevar a cabo todos los siguientes servicios del templo:</p><p>Prasad: Las deidades reciben prasad fresco a diario.</p><p>Suministros, recipientes y equipo de limpieza para la puja: Suministro de los cinco elementos (leche, ghee, etc.) y otros artículos como incienso, kumkum, sándalo y más, tanto para el abhishekam como para las pujas y yajnas diarias.</p><p>Vestimenta y joyería para las deidades: Costos de conjuntos de ropa cosida a mano, diseñados y confeccionados para todas las deidades del templo, así como la compra de joyería a juego.</p><p>Festivales religiosos: Preparación, organización y realización de las ceremonias.</p><p>Servicios públicos: Costos de alquiler del edificio del templo; costos de agua, electricidad y calefacción; mantenimiento del equipo técnico y del edificio.</p><p>Administrar el templo es una labor de amor, ¡y la mayor parte es posible gracias a sus generosas contribuciones!</p>"
+      }
+    },
+    "section_text_content_xkgm6R": {
+      "type": "section__text-content",
+      "name": "Que sucede después",
+      "settings": {
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "padding_top": "pt-xxxl",
+        "padding_bottom": "pb-xl",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "desktop_padding_top": "inherit",
+        "desktop_padding_bottom": "inherit",
+        "max_width": "",
+        "pretitle": "",
+        "title": "– Que sucede después –",
+        "title_tag": "h2",
+        "title_font_style": "h4",
+        "description": "",
+        "credits": ""
+      }
+    },
+    "section_icon_grid_9PWK88": {
+      "type": "section__icon-grid",
+      "blocks": {
+        "content_block_nrwtfM": {
+          "type": "content_block",
+          "settings": {
+            "title": "1",
+            "title_tag": "h3",
+            "title_font_style": "h5",
+            "description": "",
+            "content_align": "items-center"
+          }
+        },
+        "content_block_JTHhgz": {
+          "type": "content_block",
+          "settings": {
+            "title": "Correo electrónico de confirmación",
+            "title_tag": "h3",
+            "title_font_style": "h5",
+            "description": "<p>Recibirás un correo electrónico de confirmación en pocos minutos con todos los detalles de tu adopción.</p>",
+            "content_align": "items-center"
+          }
+        },
+        "content_block_4t8hMR": {
+          "type": "content_block",
+          "settings": {
+            "title": "2",
+            "title_tag": "h3",
+            "title_font_style": "h5",
+            "description": "",
+            "content_align": "items-center"
+          }
+        },
+        "content_block_pLUedY": {
+          "type": "content_block",
+          "settings": {
+            "title": "Información sobre tu Deidad",
+            "title_tag": "h3",
+            "title_font_style": "h5",
+            "description": "<p>Recibirás una foto de alta resolución y el nombre de tu Deidad única en pocos días.</p>",
+            "content_align": "items-center"
+          }
+        },
+        "content_block_GCP9gy": {
+          "type": "content_block",
+          "settings": {
+            "title": "3",
+            "title_tag": "h3",
+            "title_font_style": "h5",
+            "description": "",
+            "content_align": "items-center"
+          }
+        },
+        "content_block_U8qWpe": {
+          "type": "content_block",
+          "settings": {
+            "title": "Únete al Grupo de la Deidad del Templo",
+            "title_tag": "h3",
+            "title_font_style": "h5",
+            "description": "<p>Recibirás un enlace para unirte a una comunidad privada de Deidades del templo con fotos y vídeos exclusivos.</p>",
+            "content_align": "items-center"
+          }
+        }
+      },
+      "block_order": [
+        "content_block_nrwtfM",
+        "content_block_JTHhgz",
+        "content_block_4t8hMR",
+        "content_block_pLUedY",
+        "content_block_GCP9gy",
+        "content_block_U8qWpe"
+      ],
+      "name": "Que sucede después",
+      "settings": {
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-xxxl",
+        "padding_top": "pt-0",
+        "padding_bottom": "pb-0",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "desktop_padding_top": "inherit",
+        "desktop_padding_bottom": "inherit",
+        "cols_mobile": "1",
+        "cols_desktop": "1",
+        "text_align": "text-center",
+        "title": "",
+        "subtitle": "",
+        "button_text": "",
+        "button_url": "",
+        "button_style": "btn"
+      }
+    },
+    "section_hero_QfNjra": {
+      "type": "section__hero",
+      "name": "Hero",
+      "settings": {
+        "padding_top": "0px",
+        "desktop_padding_top": "0px",
+        "padding_bottom": "0px",
+        "desktop_padding_bottom": "inherit",
+        "padding_horizontal": "px-0",
+        "desktop_padding_horizontal": "inherit",
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "use_container": false,
+        "set_100vh": false,
+        "set_100vh_desktop": false,
+        "border_radius": 0,
+        "aspect_ratio": "16/9",
+        "aspect_ratio_desktop": "16/9",
+        "bg_color": "#16254c",
+        "content_width": "max-w-5xl",
+        "text_align": "text-center",
+        "text_color": "#ffffff",
+        "title": "Elige tu Deidad",
+        "title_font_style": "h4",
+        "subtitle": "<p>Hay diferentes formas de Amor entre las que puedes elegir. Elige la que más resuene contigo o con un ser querido. Aquí tienes algunas de las cualidades más conocidas de cada una.</p>",
+        "button_text": "Elige cuál",
+        "button_url": "",
+        "button_anchor": "#elige-deidad",
+        "button_style": "btn",
+        "anchor_to_pricing": false,
+        "video_title": "",
+        "horizontal_position": "justify-center",
+        "vertical_position": "items-center"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "section_hero_cBpMpY",
+    "section_hero_XrFNy3",
+    "bm_event_slider_MDLAzH",
+    "section_image_text_blocks_XJ9kGW",
+    "section_image_text_blocks_4Gy4Ge",
+    "section_text_content_4RqHwF",
+    "section_icon_grid_yRN3aG",
+    "section_icon_grid_3WkgrM",
+    "section_text_image_grid_q8FKHB",
+    "section_text_content_xkgm6R",
+    "section_icon_grid_9PWK88",
+    "section_hero_QfNjra"
+  ]
+}

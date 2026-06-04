@@ -2,28 +2,33 @@
 
 ## Event Overview
 - **Event:** Darshan in Lanzarote
-- **Month:** November (year TBD)
+- **Date:** Sábado, 21 de noviembre de 2026
 - **Estimated capacity:** ~800 seats
-- **Venue:** TBD (indoors/outdoors unclear)
+- **Venue:** Hotel Beatriz Costa & Spa, Costa Teguise, Lanzarote
 
 ## Ticket Tiers & Pricing
 
-| Tier | Price | Quantity | Notes |
-|------|-------|----------|-------|
-| VIP (Cortesía) | €0 | Max 5 | Presidente federación + representantes institucionales de la isla. Si no se cubren → se venden a €108 |
-| Primeras filas | €108 | Filas 1-3 menos VIPs (si 4 VIPs → 1 más a €108) | Capacidad exacta TBD tras Semana Santa |
-| General | €10 | Resto del aforo | |
-| Niños (≤17 años) | Gratis | — | Menores de 17 incluidos no pagan |
+| Tier | Nombre en tienda | Price | Notas |
+|------|-----------------|-------|-------|
+| ~~VIP (Cortesía)~~ | ~~eliminado~~ | ~~€0~~ | ~~Eliminado del diseño final~~ |
+| Primeras Filas | Primeras Filas | €108 | Filas 1-3 · inventario limitado (~20 plazas) |
+| General | Entrada General | €10 | Resto del aforo |
+| Menores de 18 | Menores de 18 | Gratis | Entrada gratuita, acompañante adulto obligatorio |
 
 ### Política de edades
 - **Adultos (≥18 años):** pagan individualmente
-- **Niños (≤17 años, incluidos):** entrada gratuita
+- **Menores de 18 (incluidos):** entrada gratuita
 - **No existe descuento de familia numerosa**
 
 ### Política de accesibilidad
 - Minusválidos y acompañantes: **pagan independientemente** la entrada que elijan (sin descuento)
 - Por deferencia: Crowd Control los ubicará en **fila 3 o 4, o esquinas delanteras**, independientemente del precio pagado
 - Caso especial: hay 1 persona conocida en Darshans anteriores → siempre se coloca en primera fila
+
+### Política de cancelación
+- **Más de 14 días antes:** reembolso del 100%
+- **7-13 días antes:** reembolso del 50%
+- **Menos de 7 días:** sin reembolso
 
 ### Evento
 - Las entradas se venderán como **inscripción a un evento de fiesta** (nombre TBD)
@@ -37,7 +42,7 @@
 
 ### 1. Platform
 - **Shopify** (SEED - Production theme)
-- Product with 4 variants (one per tier) + inventory tracking per variant
+- Product with 3 variants (one per tier) + inventory tracking per variant
 
 ### 2. Purchase Flow
 - Buyer selects tier + quantity → checkout → pays → Shopify sends order confirmation email (native)
@@ -71,31 +76,30 @@
 ---
 
 ## Open Business Logic Questions (pending)
-1. **Capacidad total:** TBD — @Anushadasi y @Sumanglidasi confirmarán semana después de Semana Santa
+1. **Capacidad total:** TBD — @Anushadasi y @Sumanglidasi confirmarán
 2. **Nombre del evento:** TBD — debe enmarcarse como "evento de fiesta" (música, actividades, comida, bendición)
 3. **Comida en el hotel:** pendiente confirmar con el hotel
-4. **¿Niños gratis necesitan inscripción?** — ¿hace falta ticket gratuito para el conteo de aforo?
+4. **¿Menores gratis necesitan inscripción?** — ¿hace falta ticket gratuito para el conteo de aforo?
 5. **Canal de compra:** ¿solo online o también transferencia bancaria / presencial?
-6. **Política de cancelación:** ¿hasta cuándo? ¿devolución total, parcial o no?
-7. **CSV del año pasado:** ¿qué columnas/datos se recogieron?
-8. **API/app de QR:** ¿cuál se usará? (pendiente de confirmar)
+6. **CSV del año pasado:** ¿qué columnas/datos se recogieron?
+7. **API/app de QR:** ¿cuál se usará? (pendiente de confirmar)
 
 ---
 
 ## Roadmap & Checklist
 
-### Phase 1 — Business Logic (IN PROGRESS)
-- [x] Política de edades (adultos ≥18 pagan, niños ≤17 gratis) ✓
+### Phase 1 — Business Logic ✅
+- [x] Política de edades (adultos ≥18 pagan, menores gratis) ✓
 - [x] Sin descuento familia numerosa ✓
 - [x] Política accesibilidad (pagan igual, ubicación por deferencia) ✓
-- [x] Estructura de precios: VIP cortesía / €108 primeras filas / €10 resto ✓
+- [x] Estructura de precios: €108 primeras filas / €10 general / gratis menores ✓ — VIP eliminado
 - [x] Concepto de evento definido (fiesta con música, actividades, comida, bendición) ✓
-- [ ] Capacidad total — confirmación semana después de Semana Santa (@Anushadasi / @Sumanglidasi)
+- [x] Política de cancelación definida (14d 100% / 7-13d 50% / <7d sin reembolso) ✓
+- [ ] Capacidad total — confirmación pendiente (@Anushadasi / @Sumanglidasi)
 - [ ] Nombre del evento
 - [ ] Confirmar comida con el hotel
-- [ ] ¿Niños gratis necesitan ticket/inscripción?
+- [ ] ¿Menores gratis necesitan ticket/inscripción?
 - [ ] Canal de compra (online only vs transferencia)
-- [ ] Política de cancelación/reembolso
 - [ ] Revisar CSV del año pasado
 - [ ] Confirmar API/app de QR
 
@@ -103,10 +107,11 @@
 - [x] PayPal enabled ✓
 - [ ] Activate Shopify Payments (treasurer action — legal entity + IBAN + ID)
 
-### Phase 3 — Shopify Build
-- [ ] Create Darshan event product with 4 variants (VIP / Premium / Standard / Children)
-- [ ] Set inventory limits per variant
-- [ ] Configure order confirmation email template in Spanish
+### Phase 3 — Shopify Build (IN PROGRESS)
+- [~] Producto Darshan existe en tienda (`/products/darshan`) con 3 variantes — falta `templates/product.darshan.json` en el repo
+- [ ] Set inventory limits per variant (Primeras Filas: ~20 plazas)
+- [x] Email de confirmación de pedido en español — Shopify nativo, funciona automáticamente ✓
+- [ ] Asignar template `darshan` al producto en admin
 - [ ] Test checkout end-to-end (purchase + confirmation email)
 
 ### Phase 4 — QR Integration
@@ -122,5 +127,18 @@
 
 ---
 
+## Bugs conocidos — Formulario de producto (`/products/darshan`)
+
+| # | Problema | Capa | Causa raíz | Dónde se arregla | Esfuerzo |
+|---|---|---|---|---|---|
+| 1 | Obliga a marcar TODOS los checkboxes | App: Infinite Options | Los campos están marcados como `required` en el admin de IO | Admin Infinite Options → producto Darshan → desmarcar "Required" en campos opcionales | Bajo — solo config |
+| 2 | Menores de 18 no deberían marcar el checkbox de edad | App: Infinite Options | IO no detecta la variante seleccionada; muestra los mismos campos a todos | **Opción A:** IO Conditional Logic (feature de pago). **Opción B:** JS en `product__main.liquid` | A = Bajo · B = Medio |
+| 3 | El carrito no carga tras añadir producto | Tema Shopify (probable) | Bug 1 bloquea el submit → el handler `s-product` en `theme.js` nunca dispara | Resolver bug 1 primero. Si persiste: revisar consola del navegador para el error JS exacto | Desconocido |
+
+---
+
 ## Reference
 - Previous year: WordPress site, CSV export of attendee data available
+- Blog article del evento: `/blogs/events-1/darshan-blessing-lanzarote`
+- Sección venue: `sections/section__venue-map.liquid`
+- Template artículo: `templates/article.darshan.json`

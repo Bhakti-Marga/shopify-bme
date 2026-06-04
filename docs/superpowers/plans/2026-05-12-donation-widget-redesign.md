@@ -1,3 +1,81 @@
+# Donation Widget Redesign Implementation Plan
+
+> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
+
+**Goal:** Create `templates/product.haz-una-donacion.json` + `sections/product__haz-una-donacion.liquid` — a stepper-based donation page matching bhaktimarga.org, without touching `product.donation.*`.
+
+**Architecture:** Two new files only. The section keeps the same Liquid/form skeleton as `product__donation.liquid` (same `<s-donation>` wrapper, same hidden Seal wiring, same JSON-LD) but replaces the JS/HTML/CSS in the right column with: stacked-radio frequency rows → stepper rows per variant → total bar + CTA. A new JS IIFE replaces DonationMain.
+
+**Tech Stack:** Shopify Liquid, vanilla JS (IIFE, no framework), scoped CSS custom properties. No build step.
+
+---
+
+## Task 1: Create the JSON template
+
+**Files:**
+- Create: `templates/product.haz-una-donacion.json`
+
+- [ ] **Step 1: Write the file**
+
+```json
+{
+  "sections": {
+    "main": {
+      "type": "product__haz-una-donacion",
+      "blocks": {
+        "seal_subscriptions_subscription_widget_DXMRR7": {
+          "type": "shopify://apps/seal-subscriptions/blocks/subscription-widget/13b25004-a140-4ab7-b5fe-29918f759699",
+          "settings": {
+            "product": "{{product}}"
+          }
+        }
+      },
+      "block_order": [
+        "seal_subscriptions_subscription_widget_DXMRR7"
+      ],
+      "settings": {}
+    }
+  },
+  "order": ["main"]
+}
+```
+
+- [ ] **Step 2: Verify JSON is valid**
+
+```bash
+node -e "const fs=require('fs');JSON.parse(fs.readFileSync('templates/product.haz-una-donacion.json','utf8'));console.log('OK')"
+```
+
+Expected output: `OK`
+
+- [ ] **Step 3: Commit**
+
+```bash
+git add templates/product.haz-una-donacion.json
+git commit -m "feat: add product.haz-una-donacion.json template"
+```
+
+---
+
+## Task 2: Create the section file
+
+**Files:**
+- Create: `sections/product__haz-una-donacion.liquid`
+
+This is the main file. It contains Liquid HTML, scoped CSS, a JS IIFE, JSON-LD, and the schema block. Write it in full — do not split across partial files.
+
+**Context you need to know:**
+- The left column (image carousel) is copied verbatim from `sections/product__donation.liquid` lines 7–66. Do not modify it.
+- The right column (`don2-info`) is new — stacked radio rows + stepper rows + total bar.
+- CSS uses `--don2-*` custom properties scoped to `s-donation[data-section-id="{{ section.id }}"]`.
+- JS reads variant data from `#ProductJSON` (the inline `{{ product | json }}` tag). No global variables.
+- The hidden `.subscription-container` and `.seal-anchor` blocks must be preserved verbatim — Seal reads them.
+
+- [ ] **Step 1: Write the complete section file**
+
+Create `sections/product__haz-una-donacion.liquid` with this exact content:
+
+```liquid
 {%- liquid
   assign current_variant = product.selected_or_first_available_variant
   assign product_form_id = 'ProductForm-' | append: section.id | append: product.id
@@ -242,7 +320,7 @@ s-donation[data-section-id="{{ section.id }}"] {
   display: flex;
   align-items: center;
   gap: 10px;
-  color: var(--don2-ink);
+  color: #2b3a5e;
   font-size: 13px;
   margin: 0 2px;
   padding: 2px 0;
@@ -257,7 +335,7 @@ s-donation[data-section-id="{{ section.id }}"] {
   align-items: center;
   justify-content: center;
   font-size: 13px;
-  color: var(--don2-muted);
+  color: #7a6533;
   flex: none;
 }
 .don2-amounts { border-top: 1px solid var(--don2-line2); margin-bottom: 4px; }
@@ -327,7 +405,7 @@ s-donation[data-section-id="{{ section.id }}"] {
   transition: background .15s;
   position: relative;
 }
-.don2-cta:hover { background: var(--don2-ink); }
+.don2-cta:hover { background: #1f3168; }
 .don2-cta:disabled { opacity: .6; cursor: not-allowed; }
 .don2-trust { text-align: center; font-size: 12px; color: var(--don2-muted); margin-top: 12px; margin-bottom: 0; }
 .seal-anchor, #infiniteoptions-container { display: none !important; }
@@ -348,16 +426,16 @@ s-donation[data-section-id="{{ section.id }}"] {
 (function () {
   'use strict';
   function initDon2(sectionId) {
-    const root = document.querySelector('s-donation[data-section-id="' + sectionId + '"]');
+    var root = document.querySelector('s-donation[data-section-id="' + sectionId + '"]');
     if (!root) return;
-    const masterSel   = root.querySelector('[js-master-select]');
-    const subCheckbox = root.querySelector('[js-subscription-checkbox]');
-    const subSelect   = root.querySelector('[js-subscription-select]');
-    const totalEl     = root.querySelector('#Don2Total-' + sectionId);
-    const planDetail  = root.querySelector('#Don2PlanDetail-' + sectionId);
-    const rows        = root.querySelectorAll('.don2-row');
-    const freqLabels  = root.querySelectorAll('.don2-freq__row');
-    const state = { freq: 'once', plan: 'mensual', qtys: {} };
+    var masterSel   = root.querySelector('[js-master-select]');
+    var subCheckbox = root.querySelector('[js-subscription-checkbox]');
+    var subSelect   = root.querySelector('[js-subscription-select]');
+    var totalEl     = root.querySelector('#Don2Total-' + sectionId);
+    var planDetail  = root.querySelector('#Don2PlanDetail-' + sectionId);
+    var rows        = root.querySelectorAll('.don2-row');
+    var freqLabels  = root.querySelectorAll('.don2-freq__row');
+    var state = { freq: 'once', plan: 'mensual', qtys: {} };
     rows.forEach(function (row) { state.qtys[row.dataset.variantId] = 0; });
 
     freqLabels.forEach(function (label) {
@@ -371,7 +449,7 @@ s-donation[data-section-id="{{ section.id }}"] {
       });
       if (freq === 'monthly') {
         if (planDetail) planDetail.style.display = '';
-        const opt = subSelect && subSelect.querySelector('option[data-plan="' + state.plan + '"]');
+        var opt = subSelect && subSelect.querySelector('option[data-plan="' + state.plan + '"]');
         if (opt) { subSelect.value = opt.value; subSelect.dispatchEvent(new Event('change', { bubbles: true })); }
         if (subCheckbox) { subCheckbox.checked = true; subCheckbox.dispatchEvent(new Event('change', { bubbles: true })); }
       } else {
@@ -381,10 +459,10 @@ s-donation[data-section-id="{{ section.id }}"] {
     }
 
     rows.forEach(function (row) {
-      const vid   = row.dataset.variantId;
-      const minus = row.querySelector('.don2-stepper__minus');
-      const plus  = row.querySelector('.don2-stepper__plus');
-      const qtyEl = row.querySelector('.don2-stepper__qty');
+      var vid   = row.dataset.variantId;
+      var minus = row.querySelector('.don2-stepper__minus');
+      var plus  = row.querySelector('.don2-stepper__plus');
+      var qtyEl = row.querySelector('.don2-stepper__qty');
       plus.addEventListener('click', function () {
         state.qtys[vid]++;
         syncRow(row, vid, minus, qtyEl);
@@ -399,7 +477,7 @@ s-donation[data-section-id="{{ section.id }}"] {
     });
 
     function syncRow(row, vid, minus, qtyEl) {
-      const q = state.qtys[vid];
+      var q = state.qtys[vid];
       qtyEl.textContent = q;
       minus.disabled = q <= 0;
       row.classList.toggle('don2-row--active', q > 0);
@@ -410,29 +488,29 @@ s-donation[data-section-id="{{ section.id }}"] {
     }
 
     function recompute() {
-      let sum = 0;
+      var sum = 0;
       rows.forEach(function (row) {
-        const price = parseFloat(row.dataset.price) || 0;
+        var price = parseFloat(row.dataset.price) || 0;
         sum += price * (state.qtys[row.dataset.variantId] || 0);
       });
       if (totalEl) totalEl.textContent = sum.toLocaleString('es-ES', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' €';
     }
 
-    const form = root.querySelector('.form');
+    var form = root.querySelector('.form');
     if (form) {
       form.addEventListener('submit', function (e) {
         e.preventDefault();
-        const sellingPlanId = (state.freq === 'monthly' && subSelect) ? (subSelect.value || null) : null;
-        const items = [];
+        var sellingPlanId = (state.freq === 'monthly' && subSelect) ? (subSelect.value || null) : null;
+        var items = [];
         rows.forEach(function (row) {
-          const qty = state.qtys[row.dataset.variantId] || 0;
+          var qty = state.qtys[row.dataset.variantId] || 0;
           if (qty <= 0) return;
-          const item = { id: parseInt(row.dataset.variantId, 10), quantity: qty };
+          var item = { id: parseInt(row.dataset.variantId, 10), quantity: qty };
           if (sellingPlanId) item.selling_plan = parseInt(sellingPlanId, 10);
           items.push(item);
         });
         if (!items.length) return;
-        const cta = root.querySelector('.don2-cta');
+        var cta = root.querySelector('.don2-cta');
         if (cta) cta.disabled = true;
         fetch('/cart/add.js', {
           method: 'POST',
@@ -440,7 +518,7 @@ s-donation[data-section-id="{{ section.id }}"] {
           body: JSON.stringify({ items: items })
         })
         .then(function (r) {
-          if (!r.ok) throw new Error(r.status === 422 ? 'unavailable' : 'server');
+          if (!r.ok) throw new Error('cart/add ' + r.status);
           return r.json();
         })
         .then(function () {
@@ -449,13 +527,8 @@ s-donation[data-section-id="{{ section.id }}"] {
           window.dispatchEvent(new CustomEvent('cart:open'));
         })
         .catch(function (err) {
-          const errEl = root.querySelector('[js-error-message]');
-          if (errEl) {
-            errEl.textContent = err.message === 'unavailable'
-              ? 'Producto no disponible. Prueba con otra cantidad.'
-              : 'Error al añadir al carrito. Inténtalo de nuevo.';
-            errEl.classList.remove('hidden');
-          }
+          var errEl = root.querySelector('[js-error-message]');
+          if (errEl) { errEl.textContent = 'Error al añadir al carrito. Inténtalo de nuevo.'; errEl.classList.remove('hidden'); }
           console.error('[don2]', err);
         })
         .finally(function () { if (cta) cta.disabled = false; });
@@ -477,3 +550,104 @@ s-donation[data-section-id="{{ section.id }}"] {
   "blocks": [{"type": "@app"}]
 }
 {% endschema %}
+```
+
+- [ ] **Step 2: Verify the file exists and has content**
+
+```bash
+wc -l sections/product__haz-una-donacion.liquid
+```
+
+Expected: at least 200 lines.
+
+- [ ] **Step 3: Verify original files untouched**
+
+```bash
+git diff -- sections/product__donation.liquid templates/product.donation.json
+```
+
+Expected: no output (no changes to those files).
+
+- [ ] **Step 4: Commit**
+
+```bash
+git add sections/product__haz-una-donacion.liquid
+git commit -m "feat: add product__haz-una-donacion section — stepper donation widget v2"
+```
+
+---
+
+## Task 3: Assign template to product and test on dev store
+
+**Context:** The new template must be assigned to the donation product in Shopify admin for the page to render. The dev store is `d016j0-nz.myshopify.com`.
+
+- [ ] **Step 1: Push both files to the dev store**
+
+```bash
+shopify theme push --store d016j0-nz.myshopify.com --theme 183370088792 --allow-live --only templates/product.haz-una-donacion.json sections/product__haz-una-donacion.liquid
+```
+
+Expected: `✓ theme pushed` with no errors.
+
+- [ ] **Step 2: Assign the template to the donation product**
+
+In Shopify Admin → Products → "Hacer una donación" (or whatever the handle is) → Theme template → select `haz-una-donacion` → Save.
+
+Alternatively use the dev store preview URL with `?preview_theme_id=183370088792` appended.
+
+- [ ] **Step 3: Open the product page and run the test checklist**
+
+Navigate to the product URL. Open browser DevTools → Console tab. Run through:
+
+**Visual checks:**
+- [ ] Page renders without Liquid errors (no `Liquid error:` text on page)
+- [ ] Left column shows product image(s)
+- [ ] Right column: product title and description visible
+- [ ] Two stacked radio rows for frequency — "Donación única" (active by default) and "Donación mensual recurrente"
+- [ ] Active row has `#fbf9f3` background and filled blue dot
+- [ ] 5 stepper rows visible (1€, 5€, 10€, 50€, 100€)
+- [ ] Each row: label left, `−` `0` `+` right
+- [ ] `−` button starts disabled (opacity 0.35)
+- [ ] "Importe total: 0,00 €" visible below rows
+- [ ] "DONAR AHORA" CTA button visible, `#16254c` background
+- [ ] No console errors
+
+**Interaction checks:**
+- [ ] Click `+` on 10€ row → qty shows `1`, row bg turns `#fbf9f3`, total shows `10,00 €`, `−` enabled
+- [ ] Click `+` on 10€ again → qty shows `2`, total shows `20,00 €`
+- [ ] Click `+` on 50€ → total shows `70,00 €`
+- [ ] Click `−` on 10€ → qty `1`, total `60,00 €`
+- [ ] Click `−` until 0 → `−` disabled again, row bg resets to white
+- [ ] Click "Donación mensual recurrente" → row activates (dot fills), plan detail line appears
+- [ ] Click "Donación única" → plan detail hidden, dot resets
+- [ ] Click "DONAR AHORA" with nothing selected → nothing happens (no cart request)
+- [ ] Click `+` on any row, then "DONAR AHORA" → `POST /cart/add.js` fires (check Network tab), cart drawer opens
+
+**Mobile check (resize to < 768px):**
+- [ ] Single column layout (image above, controls below)
+- [ ] Total bar + CTA row sticks to viewport bottom
+
+- [ ] **Step 4: Commit test evidence**
+
+If all checks pass:
+
+```bash
+git commit --allow-empty -m "test: product__haz-una-donacion — all acceptance criteria verified on dev store"
+```
+
+---
+
+## Self-Review
+
+**Spec coverage check:**
+- ✅ JSON template created with correct section type and Seal block
+- ✅ Section HTML: title, description, frequency radios, stepper rows, total bar, CTA, trust line
+- ✅ CSS: frequency dot styles, stepper button styles, active row, total bar, mobile sticky
+- ✅ JS: frequency toggle → Seal wiring, stepper +/−, total recompute, cart submit with selling_plan
+- ✅ Liquid: master select, subscription-container, seal-anchor, blocks loop, JSON-LD all present
+- ✅ `product.donation.*` not touched (Task 2 Step 3 verifies)
+- ✅ Mobile sticky total bar in CSS
+
+**Placeholder scan:** None found — all code is complete.
+
+**Type consistency:** `state.qtys[row.dataset.variantId]` used consistently. `syncRow()` called in both `+` and `−` handlers. `don2-freq__row--active` class toggled in both `setFreq()` and initial HTML.

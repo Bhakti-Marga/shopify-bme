@@ -1,0 +1,278 @@
+/* Consent Form Styles */
+
+.consent-form {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+/* Text inputs */
+.p-form input[type="text"],
+.p-form input[type="url"],
+.p-form input[type="email"],
+.p-form input[type="password"],
+.p-form input[type="tel"],
+.p-form textarea {
+  width: 100%;
+  border: 1px solid rgba(38, 69, 109, 0.6);
+  outline: 0;
+  color: #26456d;
+  box-sizing: border-box;
+  padding: 5px 10px;
+  line-height: 19px;
+  border-radius: 8px;
+  font-size: 14px;
+  height: 40px;
+  font-family: inherit;
+}
+
+.p-form input[type="text"]:focus,
+.p-form input[type="email"]:focus {
+  border-color: #002554;
+  box-shadow: 0 0 0 1px rgba(0, 37, 84, 0.2);
+}
+
+/* Select dropdown */
+select.ddd-select {
+  width: 100%;
+  border: 1px solid rgba(38, 69, 109, 0.6);
+  color: #26456d;
+  padding: 5px 30px 5px 10px !important;
+  line-height: 19px;
+  border-radius: 8px;
+  font-size: 14px;
+  height: 40px;
+  background-color: #fff;
+  font-family: inherit;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%2326456d' d='M6 8.825L0.175 3 1.225 1.95 6 6.725 10.775 1.95 11.825 3z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  padding-right: 30px;
+}
+
+select.ddd-select:focus {
+  border-color: #002554;
+  box-shadow: 0 0 0 1px rgba(0, 37, 84, 0.2);
+  outline: none;
+}
+
+/* Container & label float */
+.ddd {
+  position: relative;
+  display: block;
+  margin-bottom: 7px;
+}
+
+.p-form {
+  margin-bottom: 0;
+}
+
+.p-form input[required][type="text"],
+.p-form input[required][type="email"] {
+  font-size: 1em;
+  padding: 0.9em 10px;
+  transition: padding 0.4s ease-in;
+}
+
+.p-form input[type="text"]:focus,
+.p-form input[type="email"]:focus {
+  padding: 1.4em 10px 0.4em !important;
+  transition: padding 0.4s ease-in;
+}
+
+.p-form input[required][type="text"]:focus,
+.p-form input[required][type="text"]:valid {
+  padding: 1.4em 10px 0.4em !important;
+}
+
+.p-form input[type="email"]:focus,
+.p-form input[type="email"]:valid {
+  padding: 1.4em 10px 0.4em !important;
+}
+
+.p-form input[type="text"]:focus ~ label,
+.p-form input[type="text"]:valid ~ label,
+.p-form input[type="email"]:focus ~ label,
+.p-form input[type="email"]:valid ~ label {
+  opacity: 1;
+}
+
+.p-form label {
+  display: block;
+  position: absolute;
+  top: 2px;
+  font-size: 12px;
+  padding: 0 10px;
+  margin: 0;
+  color: #002554;
+  opacity: 0;
+  overflow: hidden;
+  transition: opacity 0.4s ease-in;
+  pointer-events: none;
+}
+
+.p-form input[placeholder]::-webkit-input-placeholder {
+  transition: opacity 0.4s ease-in;
+  color: rgba(38, 69, 109, 0.6);
+}
+
+/* Consent checkboxes */
+.consent {
+  border: 1px solid rgba(0, 37, 84, 0.15);
+  border-radius: 8px;
+  padding: 12px 20px;
+  margin-bottom: 8px;
+}
+
+.consent-container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.consent-container input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkbox-consent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #fff;
+  border: 1px solid #002554;
+  border-radius: 4px;
+}
+
+.consent-container:hover input ~ .checkbox-consent {
+  background-color: #bee0ec;
+}
+
+.consent-container input:checked ~ .checkbox-consent {
+  background-color: #002554;
+}
+
+.checkbox-consent:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.consent-container input:checked ~ .checkbox-consent:after {
+  display: block;
+}
+
+.consent-container .checkbox-consent:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+/* VOLUNTARY CONSENTS heading — proper h2 size */
+.consent-form h2,
+.consent-form .footer-block__heading,
+.product__consent-form h2,
+.product__consent-form .footer-block__heading {
+  font-size: 28px;
+  line-height: 30px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  margin: 20px 0 12px;
+  color: #002554;
+}
+
+/* CSS-only accordion for "For more information" toggle */
+.css-accordion,
+.accordion {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.accordion-item {
+  list-style: none;
+  margin-bottom: 4px;
+}
+
+.accordion-item-input {
+  display: none;
+}
+
+.accordion-item-bd {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+  padding: 0;
+}
+
+.accordion-item-input:checked ~ .accordion-item-bd {
+  max-height: 600px;
+  padding: 8px 0;
+  transition: max-height 0.4s ease-in;
+}
+
+.accordion-item-bd p {
+  font-size: 13px !important;
+  font-weight: 400 !important;
+  line-height: 1.6;
+  color: rgba(0, 37, 84, 0.7);
+  margin: 0;
+}
+
+/* "For more information" link styling */
+.consent-container[style*="rgb(38, 69, 109, 0.6)"],
+.consent-info-toggle {
+  font-size: 13px !important;
+  margin-top: 4px;
+  padding-left: 0;
+}
+
+.consent-container[style*="rgb(38, 69, 109, 0.6)"] span,
+.consent-info-toggle span {
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.consent-container[style*="rgb(38, 69, 109, 0.6)"] span:hover,
+.consent-info-toggle span:hover {
+  opacity: 0.7;
+}
+
+/* Hide the checkbox visual for the accordion toggle (it's not a real consent) */
+.consent-container[style*="rgb(38, 69, 109, 0.6)"] .checkbox-consent {
+  display: none;
+}
+
+/* Consent notice text */
+.consent-notice {
+  font-size: 13px;
+  line-height: 1.6;
+  color: rgba(0, 37, 84, 0.7);
+  margin-bottom: 12px;
+}
+
+.consent-notice a {
+  color: #002554;
+  text-decoration: underline;
+}
+
+/* Form wrapper inside the product consent block */
+.product__consent-form .form-ddd {
+  margin-top: 8px;
+}

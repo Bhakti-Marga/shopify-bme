@@ -9,3 +9,8 @@ __pycache__/
 .DS_Store
 Thumbs.db
 .worktrees/
+.gstack/
+.superpowers/
+
+# Secrets — never commit
+shopify_recovery_codes.txt

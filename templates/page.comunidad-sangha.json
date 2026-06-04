@@ -1,0 +1,54 @@
+{
+  "sections": {
+    "main": {
+      "type": "page__main",
+      "disabled": true,
+      "settings": {}
+    },
+    "comunidad_sangha": {
+      "type": "seccion__comunidad-sangha",
+      "blocks": {
+        "group_horarios": {
+          "type": "group",
+          "settings": {
+            "heading": "Horarios",
+            "body": "<p>Configura los horarios de esta sangha desde el personalizador.</p>"
+          }
+        },
+        "group_direccion": {
+          "type": "group",
+          "settings": {
+            "heading": "Dirección",
+            "body": "<p>Añade la dirección desde el personalizador.</p>"
+          }
+        },
+        "group_contacto": {
+          "type": "group",
+          "settings": {
+            "heading": "Contáctanos",
+            "body": "<p>Añade el contacto desde el personalizador.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "group_horarios",
+        "group_direccion",
+        "group_contacto"
+      ],
+      "settings": {
+        "hero_eyebrow": "SANGHA",
+        "city_name": "",
+        "hero_subtitle": "",
+        "hero_cta_label": "Contáctanos",
+        "hero_cta_url": "#conectemos",
+        "welcome_line1": "No importa en qué punto de tu camino espiritual estés,",
+        "welcome_line2": "eres bienvenido aquí.",
+        "reuniones_title": "Reuniones"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "comunidad_sangha"
+  ]
+}

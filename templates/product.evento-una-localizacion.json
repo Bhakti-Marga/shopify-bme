@@ -180,7 +180,7 @@
         "desktop_margin_bottom": "inherit",
         "desktop_padding_top": "inherit",
         "desktop_padding_bottom": "inherit",
-        "max_width": "{{ product.metafields.custom.evento_metaobjeto_producto.value.fecha_y_hora | metafield_text }}{{ product.metafields.custom.evento_metaobjeto_producto.value.ubicacion.value }}{{ product.metafields.custom.evento_metaobjeto_producto.value.fecha.value }}{{ product.metafields.custom.evento_metaobjeto_producto.value.subtitulo_de_tarjeta.value }}{{ product.metafields.custom.evento_metaobjeto_producto.value.tipo_de_evento.value }}",
+        "max_width": "",
         "pretitle": "",
         "title": "",
         "title_tag": "h2",

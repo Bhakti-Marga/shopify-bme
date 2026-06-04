@@ -22,6 +22,26 @@
       "disabled": true,
       "settings": {}
     },
+    "section_hero_event_meta": {
+      "type": "section__text-content",
+      "settings": {
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "padding_top": "pt-xl",
+        "padding_bottom": "pb-xl",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "desktop_padding_top": "tabletl:pt-xxxl",
+        "desktop_padding_bottom": "tabletl:pb-xl",
+        "max_width": "80ch",
+        "pretitle": "Evento especial · Lanzarote 2026",
+        "title": "Una bendición única e inolvidable de Paramahamsa Vishwananda — Maestro vivo, Satguru e incarnación del Amor Divino.",
+        "title_tag": "h2",
+        "title_font_style": "h4",
+        "description": "<p>📅 Sábado, 21 de noviembre de 2026 &nbsp;·&nbsp; 🕐 13:00 h CET — apertura de puertas 12:00 &nbsp;·&nbsp; 📍 Hotel Beatriz Costa y Spa, Costa Teguise<\/p>",
+        "credits": ""
+      }
+    },
     "section_text_content_YVPHBf": {
       "type": "section__text-content",
       "settings": {
@@ -34,11 +54,11 @@
         "desktop_padding_top": "inherit",
         "desktop_padding_bottom": "inherit",
         "max_width": "",
-        "pretitle": "A Rare, Unforgettable Blessing from a Living Master",
-        "title": "Receive a Blessing of Pure, Divine Love.",
+        "pretitle": "Una bendición única e inolvidable de un Maestro vivo",
+        "title": "Recibe una bendición de Amor Divino puro.",
         "title_tag": "h2",
         "title_font_style": "h3",
-        "description": "<p><em>‘When you come for darshan and when I look at your soul at that moment, what I see is your Self, your True Self. And what I see is the beauty of what you hold inside of you. That’s what I want you to see and that’s what I want you to realise for yourself.’<\/em><br\/><br\/>- Paramahamsa Vishwananda <\/p>",
+        "description": "<p><em>«Cuando vienes al Darshan y miro tu alma en ese instante, lo que veo es tu Ser, tu verdadero Ser. Y veo la belleza de lo que llevas dentro. Eso es lo que quiero que veas y eso es lo que quiero que realices en ti.»<\/em><br\/><br\/>— Paramahamsa Vishwananda<\/p>",
         "credits": ""
       }
     },
@@ -73,30 +93,10 @@
         "desktop_padding_bottom": "inherit",
         "max_width": "80ch",
         "pretitle": "",
-        "title": "A blessing from an enlightened spiritual master can change the course of your life.",
+        "title": "Una bendición de un maestro espiritual iluminado puede cambiar el curso de tu vida.",
         "title_tag": "h2",
         "title_font_style": "h3",
-        "description": "<p>Darshan with Paramahamsa Vishwananda is a rare, direct, personal blessing from an enlightened Master. In this sacred moment, the veil is lifted, and one can perceive the Divine Love and Grace which is already present within and around us.<br\/><br\/>Just one moment can have a profound impact mentally, physically, emotionally, and spiritually.<br\/><br\/>People come away from encounters with Paramahamsa Vishwananda feeling a profound, heart-opening awakening of unconditional love and acceptance such as they have never felt before. Many receive healing from specific ailments, peace and calm of mind, and a feeling of being connected to the core essence of oneself — the soul.<br\/><em><br\/>Register today for this rare opportunity. Limited spaces available. <\/em><\/p>",
-        "credits": ""
-      }
-    },
-    "section_text_content_ikgUYc": {
-      "type": "section__text-content",
-      "settings": {
-        "margin_top": "mt-0",
-        "margin_bottom": "mb-0",
-        "padding_top": "pt-0",
-        "padding_bottom": "pb-0",
-        "desktop_margin_top": "inherit",
-        "desktop_margin_bottom": "inherit",
-        "desktop_padding_top": "inherit",
-        "desktop_padding_bottom": "inherit",
-        "max_width": "",
-        "pretitle": "",
-        "title": "",
-        "title_tag": "h2",
-        "title_font_style": "h3",
-        "description": "",
+        "description": "<p>El Darshan con Paramahamsa Vishwananda es una bendición rara, directa y personal de un Maestro iluminado. En ese instante sagrado, el velo se levanta y es posible percibir el Amor y la Gracia Divinos que ya están presentes dentro y alrededor de nosotros.<br\/><br\/>Un solo momento puede tener un impacto profundo a nivel mental, físico, emocional y espiritual.<br\/><br\/>Las personas que han recibido el Darshan describen un despertar profundo del corazón, un amor incondicional y una aceptación que nunca habían sentido antes. Muchos reciben sanación de dolencias concretas, paz mental, calma y la sensación de estar conectados con la esencia más profunda de sí mismos: el alma.<br\/><em><br\/>Inscríbete hoy. Plazas limitadas.<\/em><\/p>",
         "credits": ""
       }
     },
@@ -163,29 +163,9 @@
         "desktop_margin_bottom": "inherit",
         "desktop_padding_top": "inherit",
         "desktop_padding_bottom": "tabletl:pb-xxxl",
-        "title": "Could you use a blessing in your life?",
-        "content": "<p>Paramahamsa Vishwananda is a fully realized enlightened master, direct disciple of Mahavatar Babaji, and world renowned Satguru. He is an incarnation of Divine Love, and is here to empower you to discover this never-ending Love for yourself. Darshan is a rare opportunity to meet a living master, and experience the transformative blessing of being seen and loved - exactly as you are.   <\/p>",
+        "title": "¿Te vendría bien una bendición en tu vida?",
+        "content": "<p>Paramahamsa Vishwananda es un Maestro plenamente realizado, discípulo directo de Mahavatar Babaji y Satguru de renombre internacional. Es una encarnación del Amor Divino y está aquí para guiarte a descubrir ese Amor infinito en ti. El Darshan es una oportunidad rara de encontrarte con un Maestro vivo y experimentar la bendición transformadora de ser visto y amado, exactamente como eres.<\/p>",
         "marquee_speed": 28
-      }
-    },
-    "section_text_content_dDgmnw": {
-      "type": "section__text-content",
-      "settings": {
-        "margin_top": "mt-0",
-        "margin_bottom": "mb-0",
-        "padding_top": "pt-0",
-        "padding_bottom": "pb-0",
-        "desktop_margin_top": "inherit",
-        "desktop_margin_bottom": "inherit",
-        "desktop_padding_top": "inherit",
-        "desktop_padding_bottom": "inherit",
-        "max_width": "",
-        "pretitle": "",
-        "title": "Celebrate the Beauty of Life",
-        "title_tag": "h2",
-        "title_font_style": "h3",
-        "description": "",
-        "credits": ""
       }
     },
     "section_icon_grid_QfR3bE": {
@@ -195,73 +175,37 @@
           "type": "content_block",
           "settings": {
             "image": "shopify:\/\/shop_images\/Enjoy_Sacred_Music_e0aa809c-e3df-43fc-9c19-0fcdde1375b6.png",
-            "title": "Enjoy Sacred Music",
+            "title": "Disfruta de la música sagrada",
             "title_tag": "h3",
             "title_font_style": "h5",
-            "description": "<p>One of the highlights of any Darshan Blessing is the amazing kirtan and bhajan! Kirtan is the call and response singing of the Divine Names, and is a powerful and fun way to open the heart and feel the presence of the Divine within and around us.<\/p>"
+            "description": "<p>El kirtan y el bhajan son uno de los puntos más bellos del Darshan. Cantar los Nombres Divinos al unísono es una forma poderosa y alegre de abrir el corazón y sentir la presencia de lo Divino.<\/p>"
           }
         },
         "content_block_bRpdR3": {
           "type": "content_block",
           "settings": {
             "image": "shopify:\/\/shop_images\/Positive_Atmosphere_1.png",
-            "title": "Positive Atmosphere",
+            "title": "Una atmósfera positiva",
             "title_tag": "h3",
             "title_font_style": "h5",
-            "description": "<p>Step into a world of positivity & connected with a likeminded community of spiritual seekers from around the globe! Darshan is deeply nourishing for the mind, body, and soul. Find healing, peace, and the joy of celebrating life.<\/p>"
+            "description": "<p>Entra en un espacio de paz y conéctate con una comunidad de buscadores espirituales venidos de todo el mundo. El Darshan nutre profundamente la mente, el cuerpo y el alma.<\/p>"
           }
         },
         "content_block_g4G4Lh": {
           "type": "content_block",
           "settings": {
             "image": "shopify:\/\/shop_images\/A_Precious_Blessing_77b673c0-c4b0-44fa-91a6-83a4727b7bd9.png",
-            "title": "A Precious Blessing",
+            "title": "Una bendición preciosa",
             "title_tag": "h3",
             "title_font_style": "h5",
-            "description": "<p>The blessing of a living Satguru is beyond rare. Unique for everyone, it has been described as a showering of unconditional love; a moment with the Divine; a glimpse into your own inner beauty; a deep peace; and a catalyst for spiritual transformation.<\/p>"
-          }
-        },
-        "content_block_FzqmmK": {
-          "type": "content_block",
-          "disabled": true,
-          "settings": {
-            "image": "shopify:\/\/shop_images\/icon-placeholder.png",
-            "title": "Experience deep connection",
-            "title_tag": "h3",
-            "title_font_style": "h5",
-            "description": "<p>There is nothing as powerful as profound, deep connection rooted in Love. Transform your relationship with your Self, others, and the Divine in ways you never before imagined possible.<\/p>"
-          }
-        },
-        "content_block_q7wQy8": {
-          "type": "content_block",
-          "disabled": true,
-          "settings": {
-            "image": "shopify:\/\/shop_images\/icon-placeholder.png",
-            "title": "Build on a lasting foundation",
-            "title_tag": "h3",
-            "title_font_style": "h5",
-            "description": "<p>Gain the tools you need to build a strong, sustainable foundation to build a life of Love and meaning. These practices and spiritual knowledge will give you the confidence to end the rat race<\/p>"
-          }
-        },
-        "content_block_arD8jE": {
-          "type": "content_block",
-          "disabled": true,
-          "settings": {
-            "image": "shopify:\/\/shop_images\/icon-placeholder.png",
-            "title": "Discover a Love that can’t be taken",
-            "title_tag": "h3",
-            "title_font_style": "h5",
-            "description": "<p>Have you looked for love in all the wrong places, only to feel let down again and again? Discover a love which can’t be broken, can’t be taken from you, and never ends. The Love of your soul.<\/p>"
+            "description": "<p>La bendición de un Satguru vivo es algo extraordinariamente raro. Única para cada persona: una lluvia de amor incondicional, un instante con lo Divino, una mirada a tu propia belleza interior.<\/p>"
           }
         }
       },
       "block_order": [
         "content_block_88fU6F",
         "content_block_bRpdR3",
-        "content_block_g4G4Lh",
-        "content_block_FzqmmK",
-        "content_block_q7wQy8",
-        "content_block_arD8jE"
+        "content_block_g4G4Lh"
       ],
       "settings": {
         "margin_top": "mt-0",
@@ -275,8 +219,8 @@
         "cols_mobile": "1",
         "cols_desktop": "3",
         "text_align": "text-left",
-        "title": "",
-        "subtitle": "",
+        "title": "Celebra la belleza de la vida",
+        "subtitle": "Lo que vivirás",
         "button_text": "",
         "button_url": "",
         "button_style": "btn"
@@ -304,223 +248,16 @@
         "content_width": "max-w-5xl",
         "text_align": "text-center",
         "text_color": "#ffffff",
-        "title": "Receive a blessing of pure Love.",
+        "title": "Recibe una bendición de Amor puro.",
         "title_font_style": "h3",
-        "subtitle": "<p>There is nothing more transformative that true, unconditional Love. <\/p>",
-        "button_text": "Save your Spot",
-        "button_url": "#",
+        "subtitle": "<p><strong>Solo Amor<\/strong><\/p><p>No hay nada más transformador que el amor verdadero e incondicional.<\/p>",
+        "button_text": "Reserva tu plaza",
+        "button_url": "",
         "button_style": "btn",
         "anchor_to_pricing": true,
         "video_title": "",
         "horizontal_position": "justify-center",
         "vertical_position": "items-center"
-      }
-    },
-    "section_content_grid_89gq9j": {
-      "type": "section__content-grid",
-      "blocks": {
-        "content_block_V6QDQF": {
-          "type": "content_block",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/bm-01-meditationtechniques.jpg",
-            "title": "Meditation Techniques",
-            "title_tag": "h2",
-            "title_font_style": "h5",
-            "description": "<p>Lorem ipsum dolor sit amet consectetur. Duis habitasse pellentesque platea mauris ligula sed scelerisque. <\/p>",
-            "cta_link": "",
-            "cta_label": "",
-            "cta_style": "btn btn--black",
-            "cta_klaviyo_embed": ""
-          }
-        },
-        "content_block_VBLpVd": {
-          "type": "content_block",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/bm-02-asanas.jpg",
-            "title": "Asanas",
-            "title_tag": "h2",
-            "title_font_style": "h5",
-            "description": "<p>Lorem ipsum dolor sit amet consectetur. Duis habitasse pellentesque platea mauris ligula sed scelerisque. <\/p>",
-            "cta_link": "",
-            "cta_label": "",
-            "cta_style": "btn btn--black",
-            "cta_klaviyo_embed": ""
-          }
-        },
-        "content_block_Nf4DGF": {
-          "type": "content_block",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/bm-03-mainokriya.jpg",
-            "title": "Maino Kriya",
-            "title_tag": "h2",
-            "title_font_style": "h4",
-            "description": "<p>Lorem ipsum dolor sit amet consectetur. Duis habitasse pellentesque platea mauris ligula sed scelerisque. <\/p>",
-            "cta_link": "",
-            "cta_label": "",
-            "cta_style": "btn btn--black",
-            "cta_klaviyo_embed": ""
-          }
-        },
-        "content_block_Hph6ri": {
-          "type": "content_block",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/bm-04-shaktipatinitiation.jpg",
-            "title": "Shaktipat Initiation",
-            "title_tag": "h2",
-            "title_font_style": "h4",
-            "description": "<p>For the first time ever, Paramahamsa Vishwananda will personally give the Grace of “shaktipat”, direct initiation into the Kriya Yoga lineage. This is an unfathomable blessing not to be missed! <\/p>",
-            "cta_link": "",
-            "cta_label": "",
-            "cta_style": "btn btn--black",
-            "cta_klaviyo_embed": ""
-          }
-        }
-      },
-      "block_order": [
-        "content_block_V6QDQF",
-        "content_block_VBLpVd",
-        "content_block_Nf4DGF",
-        "content_block_Hph6ri"
-      ],
-      "disabled": true,
-      "settings": {
-        "margin_top": "mt-0",
-        "margin_bottom": "mb-0",
-        "padding_top": "pt-0",
-        "padding_bottom": "pb-0",
-        "desktop_margin_top": "inherit",
-        "desktop_margin_bottom": "inherit",
-        "desktop_padding_top": "inherit",
-        "desktop_padding_bottom": "inherit",
-        "bg_color": "",
-        "cols_mobile": "1",
-        "cols_desktop": "2",
-        "horizontal_gap_mobile": "gap-x-md",
-        "horizontal_gap_desktop": "tabletl:gap-x-md",
-        "vertical_gap_mobile": "gap-y-md",
-        "vertical_gap_desktop": "tabletl:gap-y-md",
-        "format": "alongside",
-        "text_color": "#000000",
-        "apply_gradient": false,
-        "gradient_height": 40,
-        "gradient_color": "#000000"
-      }
-    },
-    "section_image_text_blocks_ixBKwy": {
-      "type": "section__image_text_blocks",
-      "blocks": {
-        "image_block_BMiYBN": {
-          "type": "image_block",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/bm-thewisdom.jpg",
-            "height": "auto",
-            "desktop_height": "inherit"
-          }
-        },
-        "content_block_pnHMw7": {
-          "type": "content_block",
-          "settings": {
-            "title": "The Wisdom",
-            "title_tag": "h2",
-            "title_font_style": "h3",
-            "description": "<p>At Soul Awakening, Paramahamsa VIshwananda will reveal step by step life-changing wisdom of the Bhakti Path. This wisdom gives you the inspiration and spiritual knowledge you need to build a strong, lasting foundation that infuses love and positivity into all areas of your life.<\/p>",
-            "credits": "",
-            "cta_url": "",
-            "cta_label": "",
-            "text_align": "left",
-            "desktop_text_align": "inherit",
-            "vertical_padding": "py-lg",
-            "vertical_padding_desktop": "tabletl:py-xxl"
-          }
-        }
-      },
-      "block_order": [
-        "image_block_BMiYBN",
-        "content_block_pnHMw7"
-      ],
-      "disabled": true,
-      "settings": {
-        "margin_top": "mt-xl",
-        "margin_bottom": "mb-xl",
-        "desktop_margin_top": "tabletl:mt-xxxl",
-        "desktop_margin_bottom": "tabletl:mb-xxxl",
-        "vertical_align": "center",
-        "flip_columns_desktop": true
-      }
-    },
-    "section_content_grid_Nycc68": {
-      "type": "section__content-grid",
-      "blocks": {
-        "content_block_dj9Th4": {
-          "type": "content_block",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/bm-05-nineformsofbhakti.jpg",
-            "title": "Nine Forms of Bhakti",
-            "title_tag": "h2",
-            "title_font_style": "h5",
-            "description": "<p>Lorem ipsum dolor sit amet consectetur. Duis habitasse pellentesque platea mauris ligula sed scelerisque. <\/p>",
-            "cta_link": "",
-            "cta_label": "",
-            "cta_style": "btn btn--black",
-            "cta_klaviyo_embed": ""
-          }
-        },
-        "content_block_9JYMm7": {
-          "type": "content_block",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/bm-06-sacredvedictexts.jpg",
-            "title": "Sacred Vedic texts",
-            "title_tag": "h2",
-            "title_font_style": "h5",
-            "description": "",
-            "cta_link": "",
-            "cta_label": "",
-            "cta_style": "btn btn--black",
-            "cta_klaviyo_embed": ""
-          }
-        },
-        "content_block_p6aFFm": {
-          "type": "content_block",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/bm-07-storiesofsaints.jpg",
-            "title": "Stories of Saints",
-            "title_tag": "h2",
-            "title_font_style": "h4",
-            "description": "<p>Lorem ipsum dolor sit amet consectetur. Duis habitasse pellentesque platea mauris ligula sed scelerisque. <\/p>",
-            "cta_link": "",
-            "cta_label": "",
-            "cta_style": "btn btn--black",
-            "cta_klaviyo_embed": ""
-          }
-        }
-      },
-      "block_order": [
-        "content_block_dj9Th4",
-        "content_block_9JYMm7",
-        "content_block_p6aFFm"
-      ],
-      "disabled": true,
-      "settings": {
-        "margin_top": "mt-0",
-        "margin_bottom": "mb-0",
-        "padding_top": "pt-0",
-        "padding_bottom": "pb-0",
-        "desktop_margin_top": "inherit",
-        "desktop_margin_bottom": "inherit",
-        "desktop_padding_top": "inherit",
-        "desktop_padding_bottom": "inherit",
-        "bg_color": "",
-        "cols_mobile": "1",
-        "cols_desktop": "2",
-        "horizontal_gap_mobile": "gap-x-md",
-        "horizontal_gap_desktop": "tabletl:gap-x-md",
-        "vertical_gap_mobile": "gap-y-md",
-        "vertical_gap_desktop": "tabletl:gap-y-md",
-        "format": "alongside",
-        "text_color": "#000000",
-        "apply_gradient": false,
-        "gradient_height": 40,
-        "gradient_color": "#000000"
       }
     },
     "section_event_calendar_fF9RNM": {
@@ -529,36 +266,36 @@
         "calendar_item_zrtK3J": {
           "type": "Calendar_item",
           "settings": {
-            "date_title": "Arrival",
-            "title": "Upliftment",
-            "content": "<p>When you arrive for Darshan with Paramahamsa Vishwananda, you'll check in with our welcoming team before stepping into the serene beauty of the temple. As you take in the sacred atmosphere, you’ll be immersed in the uplifting energy of live kirtan, filling the space with devotion and joy. Whether you choose to join in the singing, sit in quiet reflection, or connect with fellow seekers over snacks at the café, every moment prepares your heart for the divine blessing of Darshan.<\/p>",
+            "date_title": "Llegada",
+            "title": "Elevación",
+            "content": "<p>Al llegar al recinto te recibirá nuestro equipo de bienvenida. Mientras te adentras en la atmósfera sagrada del salón, te envolverá la energía elevadora del kirtan en vivo. Puedes unirte al canto, sentarte en silencio o conectar con otros buscadores junto a un té. Cada momento prepara tu corazón para la bendición del Darshan.<\/p>",
             "image": "shopify:\/\/shop_images\/9_Forms_Bhakti.jpg"
           }
         },
         "calendar_item_wCjn8G": {
           "type": "Calendar_item",
           "settings": {
-            "date_title": "Spiritual Talk & Kirtan",
-            "title": "Inspiration",
-            "content": "<p>When Paramahamsa Vishwananda arrives, He starts by sharing an inspiring satsang, offering profound spiritual wisdom that uplifts and goes straight to the heart. Soon, the atmosphere ignites with joy as He leads everyone in the most ecstatic kirtan, filling the temple with divine love and energy. With hearts open and spirits lifted, the sacred moment of Darshan begins.<\/p>",
+            "date_title": "Charla espiritual y Kirtan",
+            "title": "Inspiración",
+            "content": "<p>Cuando Paramahamsa Vishwananda llega, comparte un satsang inspirador con una sabiduría espiritual profunda que va directa al corazón. Después, la atmósfera se enciende con un kirtan extático: la sala se llena de amor divino y alegría. Con los corazones abiertos, comienza el momento sagrado del Darshan.<\/p>",
             "image": "shopify:\/\/shop_images\/Soul_Awake.jpg"
           }
         },
         "calendar_item_ArQz9V": {
           "type": "Calendar_item",
           "settings": {
-            "date_title": "Blessings",
-            "title": "Pure Love",
-            "content": "<p>As Darshan begins, Paramahamsa Vishwananda offers his first blessing collectively to everyone present. He invites everyone to close their eyes, go deep within their hearts, and offer a personal prayer or intention. <\/p><p>After, you are invited by sections to line up for your personal Blessing. During this time, the temple is alive with beautiful devotional music and sacred Vedic chanting. You are welcome to join in the singing, dance in celebration, or simply sit and soak in the divine atmosphere as you await your turn for the one-on-one blessing.<\/p>",
+            "date_title": "Bendiciones",
+            "title": "Amor puro",
+            "content": "<p>El Darshan comienza con una bendición colectiva de Paramahamsa Vishwananda. Te invitará a cerrar los ojos, ir al fondo del corazón y ofrecer una oración o intención personal. Después, por secciones, recibirás tu bendición personal. Durante ese tiempo el salón resuena con música devocional y canto védico — puedes cantar, danzar o sentarte en silencio mientras esperas tu turno.<\/p>",
             "image": "shopify:\/\/shop_images\/2024-08-25-p-0882.jpg"
           }
         },
         "calendar_item_cfHkfC": {
           "type": "Calendar_item",
           "settings": {
-            "date_title": "Enjoy",
-            "title": "Celebrate",
-            "content": "<p>After receiving your blessing, you’re welcome to stay and enjoy the sacred atmosphere, sit in meditation, or leave whenever you feel ready. Downstairs, our café and shop offer a space to connect with like-minded people, enjoy a snack, or explore spiritual books and items. Whether through quiet reflection or uplifting conversations, the experience of Darshan continues to unfold. As you head home, the grace and positivity of the event stays with you long after the event. <\/p>",
+            "date_title": "Disfruta",
+            "title": "Celebra",
+            "content": "<p>Tras recibir tu bendición eres bienvenido a quedarte, meditar en silencio o irte cuando te sientas listo. Habrá un espacio para conectar con personas afines, tomar algo y explorar libros y artículos sagrados. La gracia y la positividad del evento te acompañarán mucho después de salir de la sala.<\/p>",
             "image": "shopify:\/\/shop_images\/2024-08-13-p-0721.jpg"
           }
         }
@@ -578,49 +315,26 @@
         "desktop_margin_bottom": "inherit",
         "desktop_padding_top": "tabletl:pt-xxxl",
         "desktop_padding_bottom": "tabletl:pb-xxxl",
-        "title": "An Unforgettable Blessing",
-        "description": "<p>with a Living Master & Satguru <\/p>"
+        "title": "Cómo se vive el día",
+        "description": "<p>Un encuentro con un Maestro vivo y Satguru.<\/p>"
       }
     },
-    "section_image_text_blocks_hjR6aP": {
-      "type": "section__image_text_blocks",
-      "blocks": {
-        "image_block_WPMCWX": {
-          "type": "image_block",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/2023-09-02-p-0438.jpg",
-            "height": "auto",
-            "desktop_height": "50vh"
-          }
-        },
-        "content_block_iVedkM": {
-          "type": "content_block",
-          "settings": {
-            "title": "The Temple",
-            "title_tag": "h3",
-            "title_font_style": "h3",
-            "description": "<p>There are few places in this world that are soley dedicated to prayer for humanity. At the Paranitya Narasimha Temple and Ashram, the monks pray day and night, creating an incredibly high vibrational atmosphere of Love and positivity for all to soak in.<\/p><p>On the path of Bhakti – prayer takes the form of ecstatic singing, joyful dancing, delicious blessed food, and spiritual inspiration to align you with your highest purpose and authentic self.<\/p><p>Register today to experience it for yourself at Darshan with Paramahamsa Vishwananda!<br\/><br\/>Paranitya Narasimha Temple<br\/>1100 W. Church St. Elmira, NY<\/p>",
-            "credits": "",
-            "cta_url": "",
-            "cta_label": "",
-            "text_align": "left",
-            "desktop_text_align": "inherit",
-            "vertical_padding": "py-lg",
-            "vertical_padding_desktop": "tabletl:py-xxl"
-          }
-        }
-      },
-      "block_order": [
-        "image_block_WPMCWX",
-        "content_block_iVedkM"
-      ],
+    "section_venue_map": {
+      "type": "section__venue-map",
       "settings": {
         "margin_top": "mt-xl",
         "margin_bottom": "mb-xl",
         "desktop_margin_top": "tabletl:mt-xxxl",
         "desktop_margin_bottom": "tabletl:mb-xxxl",
-        "vertical_align": "center",
-        "flip_columns_desktop": true
+        "map_embed_url": "https:\/\/maps.google.com\/maps?q=Hotel+Beatriz+Costa+y+Spa,+Calle+Atalaya+3,+35509+Costa+Teguise,+Lanzarote&output=embed&hl=es",
+        "eyebrow": "La sede",
+        "title": "Hotel Beatriz Costa y Spa",
+        "title_font_style": "h3",
+        "description": "<p><strong>La sede del Darshan en Lanzarote.<\/strong><\/p><p>El Darshan se celebrará en uno de los espacios más serenos de Lanzarote, a pocos minutos del mar. Un entorno cuidado y acogedor, pensado para que tu día sea una experiencia tranquila desde la llegada hasta la despedida.<\/p><p><strong>Fecha y hora:<\/strong> Sábado 21 de noviembre de 2026 · 13:00 h (CET) · apertura de puertas a las 12:00 h<\/p><p><strong>Dirección:<\/strong> Calle Atalaya, 3 · 35509 Costa Teguise, Lanzarote · España<\/p><p>El espacio está adaptado para personas con movilidad reducida y sus acompañantes serán ubicados en una zona reservada cerca del Maestro.<\/p>",
+        "cta_label": "Reservar mi plaza",
+        "cta_url": "shopify:\/\/products\/darshan",
+        "cta_2_label": "Cómo llegar",
+        "cta_2_url": "https:\/\/www.google.com\/maps\/place\/Hotel+Beatriz+Costa+y+Spa\/@28.9963,-13.5046,17z"
       }
     },
     "section_ticket_tier_7YGiea": {
@@ -629,42 +343,40 @@
         "block_HyiKeh": {
           "type": "block",
           "settings": {
-            "title": "General Access Pass",
-            "price": "FREE",
-            "subtitle": "Receive your blessing at the Paranitya Narasimha Temple on August 17th!",
-            "description": "<ul><li>1:1 Personal Blessing with Paramahamsa Vishwananda<\/li><li>Enjoy Satsang (spiritual talk) with Paramahamsa Vishwananda <\/li><li>Amazing devotional music and dancing <\/li><li>Enjoy our cafe for treats and browse the Bhakti Shop<\/li><li>Experience our renowned, beautiful temple!<\/li><\/ul><p><\/p>",
-            "note": "Limited Passes Available",
-            "cta_label": "Regístrate gratis",
-            "cta_link": "shopify:\/\/products\/darshan-blessing-elmira-new-york-august-17",
+            "title": "Entrada General",
+            "price": "10 €",
+            "subtitle": "Acceso a todo el evento. Aforo principal.",
+            "description": "<ul><li>Bendición personal 1 a 1 con Paramahamsa Vishwananda<\/li><li>Satsang y charla espiritual<\/li><li>Kirtan, bhajans y música devocional<\/li><li>Comunidad y atmósfera de celebración<\/li><\/ul>",
+            "note": "Plazas limitadas",
+            "cta_label": "Reservar",
+            "cta_link": "shopify:\/\/products\/darshan",
             "cta_style": "btn btn--black text-white"
           }
         },
         "block_ETLd9E": {
           "type": "block",
-          "disabled": true,
           "settings": {
-            "title": "In-Person Pass",
-            "price": "$895",
-            "subtitle": "Get 4-day in person admission to the program INCLUDING:",
-            "description": "<ul><li>Full Training in Atma Kriya Yoga <\/li><li>Shaktipat Initiation directly from Paramahamsa Vishwananda<\/li><li>Atma Kriya Yoga Course Manual (physical & pdf)<\/li><li>Access to on-going advanced training & free refresher courses<\/li><li>Atma Kriya Yoga Course Manual (physical & pdf)<\/li><li>Access to on-going advanced training & free refresher courses<\/li><\/ul><p><\/p>",
-            "note": "Limited Passes Available",
-            "cta_label": "Entrada presencial",
-            "cta_link": "#",
-            "cta_style": "btn btn--black text-white"
+            "title": "Primeras Filas",
+            "price": "108 €",
+            "subtitle": "Filas 1 a 3 — la experiencia más cercana al Maestro.",
+            "description": "<ul><li>Asiento reservado en las primeras filas<\/li><li>Todo lo incluido en la entrada general<\/li><li>Acceso prioritario al recinto<\/li><li>Vista privilegiada del Darshan y el kirtan<\/li><\/ul>",
+            "note": "Plazas muy limitadas",
+            "cta_label": "Reservar",
+            "cta_link": "shopify:\/\/products\/darshan",
+            "cta_style": "btn btn--gold text-black"
           }
         },
         "block_NEXjNY": {
           "type": "block",
-          "disabled": true,
           "settings": {
-            "title": "In-Person Pass",
-            "price": "$895",
-            "subtitle": "Get 4-day in person admission to the program INCLUDING:",
-            "description": "<ul><li>Full Training in Atma Kriya Yoga <\/li><li>Shaktipat Initiation directly from Paramahamsa Vishwananda<\/li><li>Atma Kriya Yoga Course Manual (physical & pdf)<\/li><li>Access to on-going advanced training & free refresher courses<\/li><\/ul><p><\/p>",
-            "note": "Limited Passes Available",
-            "cta_label": "Entrada presencial",
-            "cta_link": "#",
-            "cta_style": "btn btn--gold text-black"
+            "title": "Menores de 18",
+            "price": "Gratis",
+            "subtitle": "Para todos los menores de 18 años, sin coste.",
+            "description": "<ul><li>Entrada gratuita acompañando a un adulto<\/li><li>Acceso a todo el evento<\/li><li>Recomendado el registro para el aforo<\/li><\/ul>",
+            "note": "Acompañado por un adulto",
+            "cta_label": "Registrar",
+            "cta_link": "shopify:\/\/products\/darshan",
+            "cta_style": "btn btn--black text-white"
           }
         }
       },
@@ -678,8 +390,8 @@
         "margin_bottom": "mb-lg",
         "desktop_margin_top": "tabletl:mt-xxl",
         "desktop_margin_bottom": "tabletl:mb-xxl",
-        "title": "Step into Divine Love",
-        "content": "August 17, 2025 | Starts at: 3pm, doors open 2pm"
+        "title": "Adéntrate en el Amor Divino",
+        "content": "Sábado 21 de noviembre de 2026 · 13:00 h CET · puertas 12:00"
       }
     },
     "section_review_carousel_dNJAUb": {
@@ -689,75 +401,38 @@
           "type": "content_block",
           "settings": {
             "image": "shopify:\/\/shop_images\/Alum_Stefano.jpg",
-            "content": "<p><strong>\"A darshan for me feels like a rendezvous for the heart to meet its long lost friend. It’s Guruji's way to open our hearts. With an open heart we can hear him talking with each beat vibrating the love never felt before. <\/strong><\/p><p>With an open heart, everything else in my life aligned to what the heart wanted. If we do what the heart wants, we’re truly being guided by Guruji and with his guidance, the relationship with God becomes conscious. It becomes intimate and sweet. <\/p><p>Life becomes colorful and its purpose deep. Everything has it’s divine timing, but if I can tell you from experience, don’t waste time and give your heart a chance to rejoice in Gurujis presence.\"<\/p>",
-            "credits": "Stefano Razeto | Professional Swimmer"
+            "content": "<p><strong>«Un darshan, para mí, es como un encuentro del corazón con un amigo perdido hace mucho.»<\/strong> Es la forma de Guruji de abrir nuestros corazones. Con el corazón abierto puedo escucharle hablar en cada latido, vibrando un amor que nunca antes había sentido. Si te puedo decir algo desde la experiencia: no pierdas tiempo, dale a tu corazón la oportunidad de alegrarse en su presencia.<\/p>",
+            "credits": "Stefano Razeto | Nadador profesional"
           }
         },
         "content_block_cVA6mi": {
           "type": "content_block",
           "settings": {
             "image": "shopify:\/\/shop_images\/IMG_3002.jpg",
-            "content": "<p><strong>\"Darshan is a blessing that goes beyond the boundaries of the mind.<\/strong> <br\/><br\/>When I received Darshan from Paramahamsa Vishwananada, my mind could not comprehend what I was feeling and the intensity of it - but I felt more love than I have ever experienced or even thought possible. Darshan awoke in me, that deep longing for connection with God - whom is the ultimate source of love.\" <\/p>",
-            "credits": "Paola CruzE-RYT, Yoga & Meditation Teacher"
+            "content": "<p><strong>«El Darshan es una bendición que va más allá de los límites de la mente.»<\/strong> Cuando recibí el Darshan de Paramahamsa Vishwananda mi mente no podía comprender lo que estaba sintiendo: más amor del que había experimentado o creído posible. El Darshan despertó en mí un anhelo profundo de conexión con Dios.<\/p>",
+            "credits": "Paola Cruz | E-RYT · Profesora de Yoga y Meditación"
           }
         },
         "content_block_N7pUYF": {
           "type": "content_block",
           "settings": {
             "image": "shopify:\/\/shop_images\/photo_2025-03-21_16-57-13.jpg",
-            "content": "<p><strong>“For my first blessing, I had to travel 4,000 miles to meet Paramahamsa Vishwananda. But in that moment when He looked into my eyes, it felt like time stopped.<\/strong> <\/p><p>I entered into this space that was not possible to achieve on my own. You can do whatever practice or meditation…but it doesn’t take you there. In that moment, my heart was beating, but it felt so peaceful. It felt like home.\"<\/p>",
-            "credits": "Vesna | Photographer"
-          }
-        },
-        "content_block_qBj7b4": {
-          "type": "content_block",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/photo_2025-03-30_00-16-49.jpg",
-            "content": "<p><strong>“When Paramahansa Vishwananda Looked into my eyes I felt nothing but unconditional love! <\/strong><\/p><p>I realized my biggest spiritual block is that I view myself as unworthy due to past sins or mistakes. Yet even though he could see all of that he continued to look into my eyes with love and acceptance and I knew that if I can just see myself as he sees me in that moment then I can really align myself rightly with the divine will for me. This realization has helped me to begin feeling worthy and a part of instead of unworthy or less then. Thank you from the bottom of my heart!” <\/p>",
-            "credits": "Justin | Customer Service Rep."
-          }
-        },
-        "content_block_Dw8dUV": {
-          "type": "content_block",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/photo_2025-03-30_00-19-07.jpg",
-            "content": "<p><strong>“I got a sense of joy and happiness and even felt euphoric afterwards. It gave me inner peace and calmness. <\/strong><br\/><br\/>It’s different for everyone. But for me it was a very spiritual, peaceful experience. ” <\/p>",
-            "credits": "Andrew | Property Manager"
-          }
-        },
-        "content_block_WkWfBL": {
-          "type": "content_block",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/IMG_0334.jpg",
-            "content": "<p><strong>“Life is filled with so many experiences, but nothing compares with Darshan. <\/strong><\/p><p>In the moment of Darshan, everything in my life that ever made me think I was not lovable, or guard my heart, melt away by looking in Guruji’s eyes. It is a moment of no fear, no worry. Really, just Love - so much love. <br\/><br\/>It’s something that stays with you far after Darshan is over.” <\/p>",
-            "credits": "Ally, Long Island, NY"
-          }
-        },
-        "content_block_eQzmnx": {
-          "type": "content_block",
-          "disabled": true,
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Rounded_Rectangle_944aac6a-abc2-4cef-a80f-5f6beee2e2d7.png",
-            "content": "<p>Lorem ipsum dolor sit amet consectetur. Sagittis nunc proin accumsan mattis imperdiet nulla gravida. Odio senectus odio fermentum vitae tortor lacus sed.<\/p>",
-            "credits": "user name"
+            "content": "<p><strong>«Cuando Paramahamsa Vishwananda me miró a los ojos, sentí amor incondicional.»<\/strong> Me di cuenta de que mi mayor bloqueo espiritual era verme como indigno por errores del pasado. Pero él me siguió mirando con amor y aceptación. Si puedo verme como él me ve, entonces puedo realmente alinearme con la voluntad divina. Eso me ayudó a empezar a sentirme digno y a sentirme parte de algo.<\/p>",
+            "credits": "Justin | Atención al cliente"
           }
         }
       },
       "block_order": [
         "content_block_tzKzba",
         "content_block_cVA6mi",
-        "content_block_N7pUYF",
-        "content_block_qBj7b4",
-        "content_block_Dw8dUV",
-        "content_block_WkWfBL",
-        "content_block_eQzmnx"
+        "content_block_N7pUYF"
       ],
       "settings": {
         "padding_top": "pt-md",
         "padding_bottom": "pb-md",
         "desktop_padding_top": "tabletl:pt-xl",
         "desktop_padding_bottom": "tabletl:pb-xl",
-        "title": "See what others are saying",
+        "title": "Lo que cuentan quienes ya lo han vivido",
         "title_tag": "h3"
       }
     },
@@ -767,51 +442,50 @@
         "accordion_item_emUQpJ": {
           "type": "accordion_item",
           "settings": {
-            "title": "Who is Darshan for? Do I need to be religious\/hindu to attend Darshan?",
-            "content": "<p>Darshan is for everyone! You don’t need to be Hindu or even consider yourself spiritual—just come with an open heart. <\/p><p>Paramahamsa Vishwananda’s Darshan is a gift of unconditional love, meant for anyone seeking a deeper connection, peace, or simply a beautiful experience. <\/p><p>No prior experience or belief system is required—just be yourself and enjoy the uplifting energy of the event.<\/p>"
+            "title": "¿Para quién es el Darshan? ¿Necesito ser religioso o hindú para asistir?",
+            "content": "<p>El Darshan es para todos. No necesitas ser hindú ni considerarte espiritual: basta con venir con el corazón abierto.<\/p><p>El Darshan de Paramahamsa Vishwananda es un regalo de amor incondicional, pensado para cualquier persona que busque una conexión más profunda, paz o, simplemente, una experiencia bella. No se requiere experiencia previa ni creencia particular.<\/p>"
           }
         },
         "accordion_item_rPjfcM": {
           "type": "accordion_item",
           "settings": {
-            "title": "What should I wear to Darshan?",
-            "content": "<p>Darshan is a joyful and festive occasion, and all are welcome to come as you are. <br\/><br\/>As a general guideline, we encourage you to wear modest attire that reflects the sacredness of the experience. <\/p><p>If you are wearing a tank top, we ask to please bring a shawl to cover your shoulders while receiving Darshan. <\/p>"
+            "title": "¿Cómo debo vestir para el Darshan?",
+            "content": "<p>El Darshan es un evento alegre y festivo. Te recomendamos una vestimenta modesta y cómoda, que respete el carácter sagrado del momento. Si llevas camiseta de tirantes, te pedimos que traigas un chal o pareo para cubrir los hombros al recibir la bendición.<\/p>"
           }
         },
         "accordion_item_7TFdiQ": {
           "type": "accordion_item",
           "settings": {
-            "title": "Is the temple handicap\/ wheelchair assessable?",
-            "content": "<p><strong>Yes!<\/strong> Our temple is wheelchair accessible through a separate entrance. However, please note that we do not have an elevator to access the lower level. If you need any assistance during your visit, our team will be happy to help ensure you have a comfortable and enriching experience. Let us know how we can support you! <\/p>"
+            "title": "¿La sede es accesible para personas con movilidad reducida?",
+            "content": "<p>Sí. El Hotel Beatriz Costa y Spa es accesible. Las personas con movilidad reducida y sus acompañantes serán ubicadas, por deferencia, en una zona reservada cerca del Maestro. Si necesitas asistencia durante el evento, escríbenos antes para coordinarlo.<\/p>"
           }
         },
         "accordion_item_mQ3rJ9": {
           "type": "accordion_item",
           "settings": {
-            "title": "Can I bring items to get blessed by Guruji?",
-            "content": "<p>Yes! Feel free to bring books, photos, murtis (deities), or malas. We will also have items available at our shop as well. Simply hand them to an attendant before receiving darshan.<\/p>"
-          }
-        },
-        "accordion_item_7CKjgY": {
-          "type": "accordion_item",
-          "disabled": true,
-          "settings": {
-            "title": "How can I get shaktipat if I am online only?",
-            "content": "<p><strong>What is the refund policy?<\/strong><\/p><p>Request a refund at least <strong>14 days before<\/strong> the program start date to receive a <strong>100% refund<\/strong> of your payment.<br\/><br\/>If you request a refund between <strong>7-13 days before<\/strong> the start date, you will receive a <strong>50% refund<\/strong>.<br\/><br\/>Refund requests made <strong>less than 7 days before<\/strong> the program start date are not eligible, as program resources and preparations will already be in place.<\/p><p><strong>How to Request a Refund:<\/strong><\/p><p>To request a refund, please contact our support team at info@bhaktimarga.us with your enrollment details. Refunds will be processed to the original payment method within <strong>7-10 business days<\/strong>.<\/p><p><strong>Exceptions:<\/strong><\/p><p>Refunds will not be issued for missed sessions, schedule conflicts, or personal circumstances. However, in cases of <strong>extraordinary situations<\/strong>, please reach out to discuss possible options.<\/p><p>We appreciate your understanding and look forward to supporting you on your spiritual journey with <strong>Bhakti Marga!<\/strong><\/p>"
+            "title": "¿Puedo llevar objetos para que Guruji los bendiga?",
+            "content": "<p>Sí. Puedes traer libros, fotos, murtis (deidades) o malas. También dispondremos de artículos en nuestra tienda. Entrégaselos a un voluntario antes de recibir el Darshan.<\/p>"
           }
         },
         "accordion_item_Bpxjbg": {
           "type": "accordion_item",
           "settings": {
-            "title": "Will it be live-streamed?",
-            "content": "<p>Absolutely! The beginning of the event will be <em>live-streamed on YouTube<\/em>, including the powerful group blessing with Guruji! <\/p><p>You’ll have the incredible opportunity to receive Darshan from the comfort of your own home and feel the divine energy as it flows through the entire gathering.<\/p><p>It’s a beautiful way to connect with Guruji and experience the energy, no matter where you are.<\/p>"
+            "title": "¿Se retransmitirá en directo?",
+            "content": "<p>El inicio del evento, incluida la bendición colectiva de Guruji, se transmitirá en directo por YouTube. Es una bella manera de recibir el Darshan y sentir la energía desde donde estés.<\/p>"
           }
         },
         "accordion_item_a6Qb7Q": {
           "type": "accordion_item",
           "settings": {
-            "title": "How do I get to Elmira, New York?",
-            "content": "<p>Getting to <strong>Elmira, NY<\/strong> is easy with several nearby airports offering travel options. Here's how you can plan your trip:<\/p><p><strong>Direct Flights<\/strong><br\/><br\/>The <strong>Elmira Corning Regional Airport (ELM)<\/strong> is the closest airport to the ashram, just a 15-minute drive away. While direct flights to Elmira may be limited and sometimes more expensive, you can fly to one of the following airports with direct flights to Elmira:<\/p><p>Detroit (DTW)<br\/>Orlando (SFB)<br\/>Punta Gorda (PGD)<br\/>Tampa (PIE) <\/p><p><strong>Nearest Airports<\/strong><br\/><br\/>Elmira Corning Regional (ELM) – 15 minute drive <\/p><p>Ithaca Tompkins International(ITH) – 45 minute drive <\/p><p>Syracuse Hancock International (SYR) – 1 hr 45 min. drive <\/p><p>Greater Rochester International (ROC) – 2 hour drive <\/p><p>Newark Liberty International (EWR) – 3.5 hour drive<br\/><strong><br\/>Coming from NYC<br\/><br\/><\/strong>Drive: 4.5 (depending on traffic) <\/p><p>Bus: There are affordable buses from NYC using OurBus. ($50, 5.5 hours)  <a href=\"https:\/\/www.ourbus.com\/\">https:\/\/www.ourbus.com<\/a><\/p><p>Flight from Ithaca: You can find a direct flight from NYC to the Ithaca Tompkins airport <br\/><br\/>Safe travels, and we look forward to welcoming you! 🙏✨<\/p>"
+            "title": "¿Cómo llego a Lanzarote y a Costa Teguise?",
+            "content": "<p><strong>Aeropuerto:<\/strong> Lanzarote · César Manrique (ACE), a unos 12 km del Hotel Beatriz Costa y Spa.<\/p><p><strong>Desde el aeropuerto:<\/strong> taxi (≈ 20 min), autobús línea 22\/23 a Costa Teguise o coche de alquiler.<\/p><p><strong>Dirección:<\/strong> Calle Atalaya, 3 · 35509 Costa Teguise · Lanzarote.<\/p><p>Si vienes desde la península, hay vuelos directos diarios desde Madrid, Barcelona, Valencia, Bilbao y Málaga.<\/p>"
+          }
+        },
+        "accordion_item_refund": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "¿Cuál es la política de cancelación y reembolso?",
+            "content": "<p>Reembolso del 100 % si cancelas con más de 14 días de antelación. Reembolso del 50 % entre 7 y 13 días antes. No se procesan reembolsos con menos de 7 días, ya que los preparativos ya están en marcha.<\/p><p>Para solicitar un reembolso, escríbenos a <a href=\"mailto:info@bhaktimarga.es\">info@bhaktimarga.es<\/a> con tu número de pedido.<\/p>"
           }
         }
       },
@@ -820,9 +494,9 @@
         "accordion_item_rPjfcM",
         "accordion_item_7TFdiQ",
         "accordion_item_mQ3rJ9",
-        "accordion_item_7CKjgY",
         "accordion_item_Bpxjbg",
-        "accordion_item_a6Qb7Q"
+        "accordion_item_a6Qb7Q",
+        "accordion_item_refund"
       ],
       "settings": {
         "margin_top": "mt-xxl",
@@ -834,7 +508,7 @@
         "desktop_padding_top": "inherit",
         "desktop_padding_bottom": "tabletl:pb-xxxl",
         "max_width": "",
-        "title": "FAQs",
+        "title": "Preguntas frecuentes",
         "cta_url": "shopify:\/\/pages\/contacto",
         "cta_label": "Contáctanos",
         "title_position": "left"
@@ -863,65 +537,34 @@
         "content_width": "max-w-5xl",
         "text_align": "text-center",
         "text_color": "#ffffff",
-        "title": "Experience the Blessing of Divine Love",
+        "title": "Vive la bendición del Amor Divino",
         "title_font_style": "h2",
         "subtitle": "",
-        "button_text": "Save your Spot",
-        "button_url": "shopify:\/\/products\/darshan-blessing-elmira-new-york-august-17",
+        "button_text": "Reserva tu plaza",
+        "button_url": "shopify:\/\/products\/darshan",
         "button_style": "btn",
-        "anchor_to_pricing": true,
+        "anchor_to_pricing": false,
         "video_title": "",
         "horizontal_position": "justify-center",
         "vertical_position": "items-center"
-      }
-    },
-    "section_grid_images_HiU7jG": {
-      "type": "section__grid-images",
-      "blocks": {
-        "image_block_kPyb8r": {
-          "type": "image_block",
-          "settings": {}
-        }
-      },
-      "block_order": [
-        "image_block_kPyb8r"
-      ],
-      "disabled": true,
-      "settings": {
-        "margin_top": "mt-0",
-        "margin_bottom": "mb-0",
-        "padding_top": "pt-0",
-        "padding_bottom": "pb-0",
-        "desktop_margin_top": "inherit",
-        "desktop_margin_bottom": "inherit",
-        "desktop_padding_top": "inherit",
-        "desktop_padding_bottom": "inherit",
-        "text": "",
-        "cta_url": "",
-        "cta_label": ""
       }
     }
   },
   "order": [
     "hero",
     "main",
+    "section_hero_event_meta",
     "section_text_content_YVPHBf",
     "section_video_TMtkEK",
     "section_text_content_NGRdYj",
-    "section_text_content_ikgUYc",
     "section_featured_master_section_kUWppT",
-    "section_text_content_dDgmnw",
     "section_icon_grid_QfR3bE",
     "section_hero_jPCMza",
-    "section_content_grid_89gq9j",
-    "section_image_text_blocks_ixBKwy",
-    "section_content_grid_Nycc68",
     "section_event_calendar_fF9RNM",
-    "section_image_text_blocks_hjR6aP",
+    "section_venue_map",
     "section_ticket_tier_7YGiea",
     "section_review_carousel_dNJAUb",
     "section_accordion_eVtHNJ",
-    "section_hero_9MnEcf",
-    "section_grid_images_HiU7jG"
+    "section_hero_9MnEcf"
   ]
 }

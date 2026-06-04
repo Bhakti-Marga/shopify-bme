@@ -44,7 +44,7 @@
       <div class="grid grid-cols-1 tabletp:grid-cols-3">
         <div class="flex flex-col tabletl:flex-row tabletp:col-span-2 tabletl:items-center">
           {% if section.settings.title != blank %}
-            <{{ section.settings.title_tag }} class="review-carousel-header__title h3 leading-[1.15]">
+            <{{ section.settings.title_tag }} class="review-carousel-header__title leading-[1.15]"style="font-size: {{ section.settings.title_font_size }}px;">
                 {{ section.settings.title }}
             </{{ section.settings.title_tag }}>
           {% endif %}
@@ -77,9 +77,9 @@
               {% endif %}
               <figcaption>
                 {% if block.settings.content != blank %}
-                  <div class="text-center rte mb-12">
-                      {{ block.settings.content }}
-                  </div>  
+                  <div class="text-center rte mb-12" style="font-size: {{ block.settings.content_font_size }}px;">
+                    {{ block.settings.content }}
+                  </div>
                 {% endif %}
                 {% if block.settings.credits != blank %}
                   <div class="font-600 text-16 text-center">
@@ -90,11 +90,12 @@
             </figure>
           {% endif %}
         {% endfor %}
-      </div> 
+      </div>
       <div class="swiper-pagination"></div>
     </div>
   </s-carousel>
 </div>
+
 {% schema %}
 {
   "name": "Review Carousel",
@@ -186,8 +187,17 @@
         { "value": "h5", "label": "H5" }
       ],
       "default": "h2"
-    }
-  ],
+    },
+  {
+  "type": "range",
+  "id": "title_font_size",
+  "min": 16,
+  "max": 60,
+  "step": 2,
+  "unit": "px",
+  "label": "Tamaño del título",
+  "default": 32
+}],
   "blocks": [
     {
       "type": "content_block",
@@ -207,6 +217,16 @@
           "type": "text",
           "id": "credits",
           "label": "Credits"
+        },
+        {
+          "type": "range",
+          "id": "content_font_size",
+          "min": 10,
+          "max": 40,
+          "step": 1,
+          "unit": "px",
+          "label": "Tamaño de fuente",
+          "default": 16
         }
       ]
     }

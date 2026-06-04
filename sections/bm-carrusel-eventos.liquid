@@ -1,0 +1,208 @@
+{% comment %} BM - Carrusel Eventos {% endcomment %}
+
+{{ 'component-card.css' | asset_url | stylesheet_tag }}
+{{ 'component-price.css' | asset_url | stylesheet_tag }}
+
+<style>
+  .bm-carrusel-eventos {
+    padding: 40px 20px;
+  }
+  .bm-carrusel-eventos h2 {
+    text-align: center;
+    margin-bottom: 28px;
+    font-size: 24px;
+  }
+  .bm-carrusel-track {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 16px;
+    -webkit-overflow-scrolling: touch;
+  }
+  .bm-carrusel-track::-webkit-scrollbar {
+    height: 4px;
+  }
+  .bm-carrusel-track::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
+  }
+  .bm-evento-card {
+    min-width: 200px;
+    max-width: 220px;
+    flex-shrink: 0;
+    scroll-snap-align: start;
+    background: var(--color-background, #fff);
+    border-radius: var(--media-radius, 8px);
+    overflow: hidden;
+    border: 1px solid rgba(0,0,0,0.08);
+  }
+  .bm-evento-card__image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    display: block;
+  }
+  .bm-evento-card__body {
+    padding: 12px;
+  }
+  .bm-evento-card__category {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--color-foreground-secondary, #888);
+    margin-bottom: 5px;
+  }
+  .bm-evento-card__title {
+    font-size: 0.875rem;
+    font-weight: 700;
+    margin: 0 0 8px;
+    line-height: 1.3;
+    color: var(--color-foreground, #1a1a1a);
+  }
+  .bm-evento-card__title a {
+    color: inherit;
+    text-decoration: none;
+  }
+  .bm-evento-card__meta {
+    font-size: 0.78rem;
+    color: var(--color-foreground-secondary, #666);
+    margin: 3px 0;
+  }
+  .bm-evento-card__price {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--color-foreground, #1a1a1a);
+    margin: 6px 0 0;
+  }
+  .bm-evento-card__cta {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 7px 14px;
+    background: #1a4f9c;
+    color: #fff;
+    border-radius: var(--buttons-radius, 4px);
+    text-decoration: none;
+    font-size: 0.78rem;
+    font-weight: 600;
+    transition: background 0.2s ease;
+  }
+  .bm-evento-card__cta:hover {
+    background: #163f7e;
+  }
+</style>
+
+<section class="bm-carrusel-eventos">
+  {% if section.settings.title != blank %}
+    <h2>{{ section.settings.title }}</h2>
+  {% endif %}
+
+  <div class="bm-carrusel-track">
+    {% assign col = collections[section.settings.collection] %}
+    {% for product in col.products limit: section.settings.products_count %}
+
+      {% assign category    = product.metafields.event.category.value %}
+{% assign loc_list    = product.metafields.custom.localizacion.value | map: 'name' %}
+{% assign loc_name    = loc_list.first %}
+{% assign event_start = product.metafields.event.event_start.value %}
+{% assign event_end   = product.metafields.event.event_end.value %}
+{% assign prof_list   = product.metafields.custom.profesores.value | map: 'name' %}
+{% assign prof_name   = prof_list.first %}
+
+      <div class="bm-evento-card">
+
+        {% comment %} 1. FOTO {% endcomment %}
+        {% if product.featured_image %}
+          <a href="{{ product.url }}">
+            <img class="bm-evento-card__image"
+                 src="{{ product.featured_image | image_url: width: 440 }}"
+                 width="440"
+                 height="{{ 440 | divided_by: product.featured_image.aspect_ratio | round }}"
+                 alt="{{ product.title | escape }}"
+                 loading="lazy">
+          </a>
+        {% endif %}
+
+        <div class="bm-evento-card__body">
+
+          {% comment %} 2. CATEGORÍA {% endcomment %}
+          {% if category != blank %}
+            <span class="bm-evento-card__category">{{ category }}</span>
+          {% endif %}
+
+          {% comment %} 3. TÍTULO {% endcomment %}
+          <h3 class="bm-evento-card__title">
+            <a href="{{ product.url }}">{{ product.title }}</a>
+          </h3>
+
+          {% comment %} 4. LOCALIZACIÓN {% endcomment %}
+          {% if loc_name != blank %}
+            <p class="bm-evento-card__meta">📍 {{ loc_name }}</p>
+          {% endif %}
+
+          {% comment %} 5. FECHA INICIO {% endcomment %}
+{% if event_start %}
+  <p class="bm-evento-card__meta">📅 {{ event_start | date: "%d/%m/%Y" }}</p>
+{% endif %}
+
+{% comment %} 6. FECHA FIN {% endcomment %}
+{% if event_end %}
+  <p class="bm-evento-card__meta">🏁 {{ event_end | date: "%d/%m/%Y" }}</p>
+{% endif %}
+
+{% comment %} 7. PROFESOR {% endcomment %}
+{% if prof_name != blank %}
+  <p class="bm-evento-card__meta">🧘 {{ prof_name }}</p>
+{% endif %}
+
+{% comment %} 8. PRECIO {% endcomment %}
+<p class="bm-evento-card__price">
+  {{ product.price_min | money }}
+  {% if product.price_min != product.price_max %}
+    – {{ product.price_max | money }}
+  {% endif %}
+</p>
+
+          <a class="bm-evento-card__cta" href="{{ product.url }}">Ver más</a>
+
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "BM - Carrusel Eventos",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Título de la sección",
+      "default": "Próximos Eventos"
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Colección de eventos"
+    },
+    {
+      "type": "range",
+      "id": "products_count",
+      "label": "Número de productos",
+      "min": 2,
+      "max": 12,
+      "step": 1,
+      "default": 4
+    }
+  ],
+  "presets": [
+    {
+      "name": "BM - Carrusel Eventos"
+    }
+  ]
+}
+{% endschema %}

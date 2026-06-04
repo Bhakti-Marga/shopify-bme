@@ -47,6 +47,7 @@
         "subtitle": "<p>Paramahamsa Vishwananda es una fuerza transformadora para nuestro tiempo. Está redefiniendo el bhaki yoga para el siglo XXI, haciendo que la sabiduría ancestral sea accesible y relevante para todos.</p>",
         "button_text": "",
         "button_url": "",
+        "button_anchor": "",
         "button_style": "btn",
         "anchor_to_pricing": false,
         "video_title": "",
@@ -86,6 +87,7 @@
         "subtitle": "<p>Paramahamsa Vishwananda es un maestro iluminado y Satguru viviente que nos da  directa experiencia al Amor Divino.</p>",
         "button_text": "",
         "button_url": "",
+        "button_anchor": "",
         "button_style": "btn",
         "anchor_to_pricing": false,
         "video_title": "",
@@ -124,6 +126,7 @@
         "subtitle": "<p>Paramahamsa Vishwananda es un maestro iluminado y Satguru viviente que nos da  directa experiencia al Amor Divino.</p>",
         "button_text": "",
         "button_url": "",
+        "button_anchor": "",
         "button_style": "btn",
         "anchor_to_pricing": false,
         "video_title": "",
@@ -152,6 +155,8 @@
             "credits": "",
             "cta_url": "",
             "cta_label": "",
+            "cta_2_url": "",
+            "cta_2_label": "",
             "text_align": "left",
             "desktop_text_align": "inherit",
             "vertical_padding": "py-lg",
@@ -194,6 +199,8 @@
             "credits": "",
             "cta_url": "",
             "cta_label": "",
+            "cta_2_url": "",
+            "cta_2_label": "",
             "text_align": "left",
             "desktop_text_align": "inherit",
             "vertical_padding": "py-lg",
@@ -245,6 +252,7 @@
         "subtitle": "<p>– Paramahamsa Sri Swami Vishwananda<br/>Solo alguien que conoce a Dios puede guiarte hacia la meta final</p>",
         "button_text": "",
         "button_url": "",
+        "button_anchor": "",
         "button_style": "btn",
         "anchor_to_pricing": false,
         "video_title": "",
@@ -410,6 +418,8 @@
             "credits": "PARAMAHAMSA VISHWANANDA",
             "cta_url": "",
             "cta_label": "",
+            "cta_2_url": "",
+            "cta_2_label": "",
             "text_align": "left",
             "desktop_text_align": "inherit",
             "vertical_padding": "py-lg",
@@ -593,6 +603,34 @@
         "title": "<p>Sigue @Paramahamsa_Vishwananda </p>",
         "title_icon": "x"
       }
+    },
+    "section_events_carousel_MMXeUe": {
+      "type": "section__events-carousel",
+      "blocks": {
+        "block_JCXBwh": {
+          "type": "block",
+          "settings": {
+            "article": "events-1/darshan-blessing-lanzarote"
+          }
+        }
+      },
+      "block_order": [
+        "block_JCXBwh"
+      ],
+      "name": "Proximos eventos",
+      "settings": {
+        "padding_top": "pt-xxxl",
+        "padding_bottom": "pb-xxxl",
+        "desktop_padding_top": "inherit",
+        "desktop_padding_bottom": "inherit",
+        "set_dark_theme": true,
+        "apply_gradient": true,
+        "title": "Próximos Eventos con Él",
+        "title_tag": "h2",
+        "cta_label": "",
+        "cta_url": "",
+        "hide_arrows_desktop": true
+      }
     }
   },
   "order": [
@@ -609,6 +647,7 @@
     "section_image_text_blocks_94GqbY",
     "section_playlist_WUtnJ6",
     "section_social_3Fr3Cy",
-    "section_social_cRkwRq"
+    "section_social_cRkwRq",
+    "section_events_carousel_MMXeUe"
   ]
 }

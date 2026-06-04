@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Donation Page v2 — Brief for Claude Code</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --bg:#f6f4ef; --paper:#ffffff;
+    --ink:#16254c; --ink-2:#2b3a5e; --muted:#6b6f7a;
+    --line:#e7e3d8; --line-2:#ececec;
+    --gold:#d6bf90; --gold-soft:#e8dbc0; --gold-ink:#7a6533;
+    --code-bg:#0f1730; --code-ink:#e8e6df;
+    --sans:"Inter",-apple-system,BlinkMacSystemFont,"Avenir Next","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    --mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.5;-webkit-font-smoothing:antialiased}
+  .page{max-width:1320px;margin:0 auto;padding:36px 24px 80px}
+
+  .hd{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:28px;padding-bottom:20px;border-bottom:1px solid var(--line)}
+  .hd .eyebrow{font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:0 0 8px}
+  .hd h1{font-weight:600;font-size:30px;line-height:1.1;margin:0;letter-spacing:-.01em}
+  .hd h1 i{font-style:normal;color:var(--gold-ink)}
+  .hd .meta{font-family:var(--mono);font-size:12px;color:var(--muted);text-align:right;white-space:nowrap}
+  .hd .meta b{color:var(--ink);font-weight:600}
+
+  .grid{display:grid;grid-template-columns:1.4fr 1fr;gap:24px;align-items:start}
+  @media (max-width:1000px){.grid{grid-template-columns:1fr}}
+
+  .card{background:var(--paper);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+  .card .ctitle{display:flex;align-items:center;justify-content:space-between;padding:13px 18px;border-bottom:1px solid var(--line);background:#fbf9f3}
+  .card .ctitle h2{margin:0;font-size:12.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+  .card .ctitle .pill{font-family:var(--mono);font-size:11px;color:var(--muted);background:#fff;border:1px solid var(--line);padding:2px 8px;border-radius:999px}
+
+  /* ── MOCK ────────────────────────────────────────────────── */
+  .browser{padding:0}
+  .chrome{display:flex;align-items:center;gap:6px;padding:9px 14px;border-bottom:1px solid var(--line);background:#fbf9f3}
+  .chrome .dot{width:9px;height:9px;border-radius:50%;background:#e0dbcc}
+  .chrome .url{flex:1;margin-left:10px;font-family:var(--mono);font-size:11px;color:var(--muted);background:#fff;border:1px solid var(--line);padding:4px 10px;border-radius:6px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+  /* site header strip */
+  .strip{background:var(--ink);color:#fff;padding:14px 24px;display:flex;align-items:center;gap:18px;font-size:13px}
+  .strip .logo{width:28px;height:28px;border-radius:50%;background:radial-gradient(circle at 40% 40%,#fff 0 6px,transparent 6.5px),conic-gradient(from 0deg,#fff 0 8deg,transparent 8deg 30deg,#fff 30deg 38deg,transparent 38deg 60deg,#fff 60deg 68deg,transparent 68deg 90deg,#fff 90deg 98deg,transparent 98deg 120deg,#fff 120deg 128deg,transparent 128deg 150deg,#fff 150deg 158deg,transparent 158deg 180deg,#fff 180deg 188deg,transparent 188deg 210deg,#fff 210deg 218deg,transparent 218deg 240deg,#fff 240deg 248deg,transparent 248deg 270deg,#fff 270deg 278deg,transparent 278deg 300deg,#fff 300deg 308deg,transparent 308deg 330deg,#fff 330deg 338deg,transparent 338deg 360deg);flex:none}
+  .strip .brand{font-weight:700;letter-spacing:.02em}
+  .strip .brand small{display:block;font-weight:500;font-size:9px;letter-spacing:.2em;opacity:.8;margin-top:1px}
+  .strip .sep{width:1px;height:22px;background:#ffffff33}
+  .strip .crumb{font-weight:600}
+
+  /* product layout */
+  .product{display:grid;grid-template-columns:1fr 1.05fr;gap:32px;padding:28px}
+  @media (max-width:780px){.product{grid-template-columns:1fr;padding:18px}}
+  .media{aspect-ratio: 5 / 5.4;border-radius:12px;background:linear-gradient(135deg,#f3a060 0%,#c95a3c 35%,#3a4a6e 70%,#16254c 100%);position:relative;overflow:hidden}
+  .media::before{content:"";position:absolute;inset:0;background:
+    radial-gradient(ellipse 30% 18% at 50% 70%,#ffd47a 0%,transparent 60%),
+    radial-gradient(ellipse 60% 35% at 50% 75%,#f4a85d 0%,transparent 60%);
+    mix-blend-mode:screen}
+  .media .heart{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-size:120px;color:#1b2949;opacity:.92;filter:drop-shadow(0 6px 14px rgba(0,0,0,.35))}
+  .media .ph{position:absolute;left:12px;bottom:12px;font-family:var(--mono);font-size:10px;color:#fff;background:rgba(0,0,0,.35);padding:4px 8px;border-radius:4px;letter-spacing:.04em}
+  .media .zoom{position:absolute;right:12px;bottom:12px;width:34px;height:34px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;color:var(--ink);font-size:14px;box-shadow:0 2px 6px rgba(0,0,0,.2)}
+
+  .info h2{font-size:24px;font-weight:600;margin:0 0 4px;letter-spacing:-.01em}
+  .info .desc{color:var(--muted);font-size:13.5px;margin:0 0 18px;max-width:46ch}
+
+  /* Seal-style frequency block (radios stacked, like target) */
+  .freq{display:flex;flex-direction:column;border:1px solid var(--line);border-radius:10px;overflow:hidden;margin-bottom:14px}
+  .freq label{display:flex;align-items:center;gap:12px;padding:14px 16px;cursor:pointer;background:#fff;transition:background .15s;font-size:14px}
+  .freq label + label{border-top:1px solid var(--line)}
+  .freq label.on{background:#fbf9f3}
+  .freq .rd{width:18px;height:18px;border-radius:50%;border:1.5px solid #c9c4b4;flex:none;position:relative}
+  .freq label.on .rd{border-color:var(--ink)}
+  .freq label.on .rd::after{content:"";position:absolute;inset:3px;border-radius:50%;background:var(--ink)}
+  .freq .ttl{font-weight:600;color:var(--ink)}
+  .freq .sub{color:var(--muted);font-size:12px;margin-left:auto;font-family:var(--mono)}
+
+  /* "Detalles de la suscripción" disclosure */
+  .detalles{display:flex;align-items:center;gap:10px;color:var(--ink-2);font-size:13px;margin:0 2px 18px;padding:2px 0}
+  .detalles .ic{width:28px;height:28px;border-radius:50%;background:#fbf9f3;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:13px;color:var(--gold-ink)}
+
+  /* amount stepper rows — the key behavior */
+  .amounts{border-top:1px solid var(--line-2)}
+  .row{display:grid;grid-template-columns:1fr auto;align-items:center;padding:14px 4px;border-bottom:1px solid var(--line-2);gap:14px}
+  .row .lbl{font-size:15px;color:var(--ink)}
+  .row .lbl small{display:block;font-family:var(--mono);font-size:11px;color:var(--muted);margin-top:2px}
+  .stepper{display:flex;align-items:center;gap:14px;font-variant-numeric:tabular-nums}
+  .stepper button{appearance:none;width:30px;height:30px;border-radius:50%;border:1.5px solid #c9c4b4;background:#fff;color:var(--ink);font-size:18px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .15s}
+  .stepper button:hover{border-color:var(--ink);background:#fbf9f3}
+  .stepper button:disabled{opacity:.35;cursor:not-allowed}
+  .stepper .qty{min-width:24px;text-align:center;font-weight:600;font-size:15px}
+  .row.active{background:#fbf9f3}
+  .row.active .lbl{font-weight:600}
+
+  /* total + cta footer */
+  .totalbar{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:18px 4px 0;margin-top:6px;flex-wrap:wrap}
+  .totalbar .lbl{font-size:15px;color:var(--ink);font-weight:600}
+  .totalbar .amt{font-family:var(--mono);font-size:22px;font-weight:700;color:var(--ink);font-variant-numeric:tabular-nums}
+  .cta{appearance:none;border:0;background:var(--ink);color:#fff;font:inherit;font-weight:700;font-size:13px;letter-spacing:.12em;text-transform:uppercase;padding:16px 28px;border-radius:4px;cursor:pointer;transition:background .15s;margin-left:auto}
+  .cta:hover{background:#1f3168}
+
+  /* annotation pills overlaying mock */
+  .anno{position:absolute;font-family:var(--mono);font-size:10.5px;font-weight:600;background:var(--ink);color:#fff;padding:3px 8px;border-radius:4px;letter-spacing:.04em;white-space:nowrap;box-shadow:0 2px 8px rgba(22,37,76,.25)}
+  .anno::before{content:"";position:absolute;width:8px;height:8px;background:var(--ink);transform:rotate(45deg)}
+
+  /* ── side ────────────────────────────────────────────────── */
+  .side{display:flex;flex-direction:column;gap:18px;position:sticky;top:18px}
+  @media (max-width:1000px){.side{position:static}}
+
+  .brief{padding:18px}
+  .brief h3{font-size:12.5px;font-weight:600;margin:0 0 10px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+  .brief ol{margin:0;padding-left:18px}
+  .brief ol li{margin:0 0 7px;color:var(--ink-2);font-size:13.5px}
+  .brief ol li b{color:var(--ink)}
+  .brief code{font-family:var(--mono);font-size:11.5px;background:#fbf9f3;padding:1px 5px;border-radius:3px;border:1px solid var(--line)}
+  .brief .files{font-family:var(--mono);font-size:11.5px;background:#fbf9f3;border:1px solid var(--line);border-radius:8px;padding:10px 12px;margin-top:12px;color:var(--ink-2)}
+  .brief .files div + div{margin-top:3px}
+  .brief .files .tag{display:inline-block;width:54px;color:var(--gold-ink);font-weight:600}
+
+  .prompt{background:var(--code-bg);color:var(--code-ink);border-radius:14px;overflow:hidden;border:1px solid #0a1226}
+  .prompt .ctitle{background:#0a1226;border-bottom-color:#1a2447}
+  .prompt .ctitle h2{color:#cfd3e0}
+  .prompt .ctitle button{appearance:none;border:1px solid #2a345a;background:#1a2447;color:#cfd3e0;font:inherit;font-family:var(--mono);font-size:11px;padding:4px 10px;border-radius:6px;cursor:pointer}
+  .prompt .ctitle button:hover{background:#243056}
+  .prompt pre{margin:0;padding:16px 18px;font-family:var(--mono);font-size:12px;line-height:1.55;white-space:pre-wrap;color:#dfe2ea;max-height:580px;overflow:auto}
+  .prompt pre .c{color:#7e88aa}
+  .prompt pre .k{color:#f1c075}
+  .prompt pre .s{color:#9fd28c}
+
+  /* spec */
+  .spec{margin-top:28px;display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  @media (max-width:1000px){.spec{grid-template-columns:1fr}}
+  .spec .card{padding:18px}
+  .spec h3{font-size:12.5px;font-weight:600;margin:0 0 12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+  .spec table{width:100%;border-collapse:collapse;font-size:13px}
+  .spec td{padding:7px 0;border-bottom:1px dashed var(--line);vertical-align:top}
+  .spec td:first-child{color:var(--muted);width:40%;font-family:var(--mono);font-size:11.5px}
+  .spec td b{color:var(--ink);font-weight:600}
+  .swatch{display:inline-block;width:14px;height:14px;border-radius:3px;vertical-align:-3px;margin-right:6px;border:1px solid rgba(0,0,0,.08)}
+
+  .foot{margin-top:28px;font-family:var(--mono);font-size:11px;color:var(--muted);text-align:center}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header class="hd">
+    <div>
+      <p class="eyebrow">Brief v2 · Donation Product Page</p>
+      <h1>Replicar <i>bhaktimarga.org/products/donate</i> sobre tu theme + Seal</h1>
+    </div>
+    <div class="meta">
+      <div>template (new): <b>product.haz-una-donacion.json</b></div>
+      <div>section (new): <b>product__haz-una-donacion.liquid</b></div>
+      <div>keep old: <b>product.donation.*</b> untouched</div>
+    </div>
+  </header>
+
+  <div class="grid">
+
+    <!-- ─── MOCK ─────────────────────────────────────────────── -->
+    <section class="card browser">
+      <div class="ctitle">
+        <h2>Mock — same behavior as target, cleaned-up layout</h2>
+        <span class="pill">desktop · /products/haz-una-donacion</span>
+      </div>
+      <div class="chrome">
+        <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+        <div class="url">tu-tienda.myshopify.com/products/haz-una-donacion</div>
+      </div>
+
+      <div class="strip">
+        <div class="logo"></div>
+        <div class="brand">BhaktiMarga<small>JUST LOVE</small></div>
+        <div class="sep"></div>
+        <div class="crumb">Haz una donación</div>
+        <div style="margin-left:auto;display:flex;gap:14px;opacity:.85;font-size:12px">
+          <span>👤</span><span>🛒 <sup>1</sup></span>
+        </div>
+      </div>
+
+      <div class="product">
+        <!-- image -->
+        <div class="media">
+          <div class="heart">♥</div>
+          <div class="ph">shopify://shop_images/donate.jpg</div>
+          <div class="zoom">⌕</div>
+        </div>
+
+        <!-- right column -->
+        <div class="info" style="position:relative">
+          <h2>Haz una donación</h2>
+          <p class="desc">Tu generosidad sostiene la misión. Selecciona la frecuencia y combina las cantidades hasta el importe que quieras donar.</p>
+
+          <!-- Seal selling-plan radios — stacked, native Seal output styled -->
+          <div class="freq" data-anno="Seal selling-plan widget — radios, styled but functionally untouched">
+            <label>
+              <span class="rd"></span>
+              <span class="ttl">Donación única</span>
+              <span class="sub">one-time</span>
+            </label>
+            <label class="on">
+              <span class="rd"></span>
+              <span class="ttl">Donación mensual recurrente</span>
+              <span class="sub">monthly</span>
+            </label>
+          </div>
+
+          <div class="detalles">
+            <span class="ic">↻</span>
+            <span>Detalles de la suscripción</span>
+          </div>
+
+          <!-- amounts: one row per variant, stepper qty -->
+          <div class="amounts" id="amounts">
+            <div class="row"><div class="lbl">1 €<small>variant: 1-euro</small></div>
+              <div class="stepper"><button class="minus" disabled>−</button><span class="qty">0</span><button class="plus">+</button></div></div>
+            <div class="row"><div class="lbl">5 €<small>variant: 5-euros</small></div>
+              <div class="stepper"><button class="minus" disabled>−</button><span class="qty">0</span><button class="plus">+</button></div></div>
+            <div class="row active"><div class="lbl">10 €<small>variant: 10-euros</small></div>
+              <div class="stepper"><button class="minus">−</button><span class="qty">2</span><button class="plus">+</button></div></div>
+            <div class="row active"><div class="lbl">50 €<small>variant: 50-euros</small></div>
+              <div class="stepper"><button class="minus">−</button><span class="qty">1</span><button class="plus">+</button></div></div>
+            <div class="row"><div class="lbl">100 €<small>variant: 100-euros</small></div>
+              <div class="stepper"><button class="minus" disabled>−</button><span class="qty">0</span><button class="plus">+</button></div></div>
+            <div class="row"><div class="lbl">500 €<small>variant: 500-euros</small></div>
+              <div class="stepper"><button class="minus" disabled>−</button><span class="qty">0</span><button class="plus">+</button></div></div>
+          </div>
+
+          <div class="totalbar">
+            <div class="lbl">Importe total:</div>
+            <div class="amt" id="total">70,00 €</div>
+            <button class="cta">DONA AHORA</button>
+          </div>
+
+          <!-- annotations -->
+          <div class="anno" style="top:178px;right:-10px">SEAL widget — keep behavior</div>
+          <div class="anno" style="top:368px;right:-10px">one row = one variant<br/>qty = stepper</div>
+          <div class="anno" style="bottom:6px;left:50%;transform:translateX(-50%)">cart adds N line items at once</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── SIDE ─────────────────────────────────────────────── -->
+    <aside class="side">
+
+      <section class="card brief">
+        <h3>What to paste — and what it does</h3>
+        <ol>
+          <li><b>Click "Copy"</b> on the dark panel below. That is the full prompt — paste it into Claude Code at the root of <code>shopify-bme/</code>.</li>
+          <li>The prompt is <b>styles only</b>. Claude Code will <b>copy</b> the existing donation files into new ones (<code>product.haz-una-donacion.*</code>), <b>preserve every line of behavior</b>, and only restyle the right column to match the mock on the left.</li>
+          <li>Your current page stays untouched. When the new one looks right, swap the donation product's template in Shopify admin.</li>
+        </ol>
+        <div class="files">
+          <div><span class="tag">NEW</span>sections/product__haz-una-donacion.liquid</div>
+          <div><span class="tag">NEW</span>templates/product.haz-una-donacion.json</div>
+          <div><span class="tag">REF</span>sections/product__donation.liquid <span style="color:var(--muted)">(read-only, structure ref)</span></div>
+          <div><span class="tag">REF</span>assets/theme.css <span style="color:var(--muted)">(tokens)</span></div>
+        </div>
+      </section>
+
+      <section class="card prompt">
+        <div class="ctitle">
+          <h2>Prompt — paste into Claude Code</h2>
+          <button id="copy">Copy</button>
+        </div>
+        <pre id="prompt-body"><span class="c"># Restyle the donation product page — STYLES ONLY, no behavior changes</span>
+
+<span class="k">Context</span>
+Theme: <span class="s">shopify-bme</span> (this repo).
+Existing donation page: <span class="s">templates/product.donation.json</span> +
+<span class="s">sections/product__donation.liquid</span>.
+It already works: Seal Subscriptions drives frequency, and the user
+combines preset amount variants with quantity steppers.
+DO NOT change any of that behavior. Do NOT touch <span class="s">product.donation.*</span>.
+
+<span class="k">Task</span>
+Create a new template + section as a STYLE-ONLY copy, so I can swap
+the donation product to the new template safely and roll back easily.
+
+<span class="k">Files to create</span>
+- <span class="s">templates/product.haz-una-donacion.json</span>
+- <span class="s">sections/product__haz-una-donacion.liquid</span>
+
+Copy <span class="s">product.donation.json</span> verbatim, change only the main
+section type to <span class="s">product__haz-una-donacion</span>. Keep the same Seal
+Subscriptions app block id and settings.
+
+Copy <span class="s">sections/product__donation.liquid</span> verbatim, then:
+- rename the schema name to "Donation v2".
+- restyle the right column to match the mock in
+  <span class="s">Donation Page Brief.html</span> (open this file alongside).
+- KEEP every Liquid tag, every <span class="s">{% form 'product' %}</span>, every
+  hidden input, every <span class="s">{%- for block in section.blocks -%}</span>
+  loop, the inline cart-dedup script at the bottom, and the
+  JSON-LD block — UNCHANGED.
+
+<span class="k">Style targets (from the mock)</span>
+- Image left, controls right (existing grid).
+- Seal radios styled as two stacked rows with a left dot indicator,
+  blue dot when active, hover bg <span class="s">#fbf9f3</span>.
+- Amount rows as a single vertical list, one row per variant, with
+  variant title left and the existing quantity stepper on the right.
+  Stepper buttons: 30px round, 1.5px <span class="s">#c9c4b4</span> border, hover
+  border <span class="s">#16254c</span>. Active row bg <span class="s">#fbf9f3</span>, label semibold.
+- "Importe total" + CTA on the same row, total in mono tabular nums,
+  CTA solid <span class="s">#16254c</span>, white text, 4px radius, uppercase,
+  letter-spacing .12em.
+- Mobile (&lt; 768px): stack to one column, pin the total/CTA row to
+  the viewport bottom.
+
+<span class="k">Tokens (reuse only)</span>
+Avenir Next 500/600/700, ink <span class="s">#16254c</span>, gold <span class="s">#d6bf90</span>,
+line <span class="s">#e7e3d8</span>, paper <span class="s">#fbf9f3</span>. No new fonts, no new colors.
+
+<span class="k">Acceptance</span>
+- New page renders at the new template's product URL.
+- Visually matches the mock.
+- Identical behavior to <span class="s">/products/hacer-una-donacion</span>: same
+  Seal flow, same add-to-cart, same de-dup script.
+- No console errors.
+
+<span class="k">Out of scope</span>
+- Any change to <span class="s">product.donation.*</span>.
+- Any JS behavior change (cart logic, Seal, steppers, form submit).
+- Translations.
+</pre>
+      </section>
+    </aside>
+  </div>
+
+  <div class="spec">
+    <section class="card">
+      <h3>Variant ↔ row mapping</h3>
+      <table>
+        <tr><td>row 1</td><td><b>1 €</b> → variant <code>1-euro</code></td></tr>
+        <tr><td>row 2</td><td><b>5 €</b> → variant <code>5-euros</code></td></tr>
+        <tr><td>row 3</td><td><b>10 €</b> → variant <code>10-euros</code></td></tr>
+        <tr><td>row 4</td><td><b>50 €</b> → variant <code>50-euros</code></td></tr>
+        <tr><td>row 5</td><td><b>100 €</b> → variant <code>100-euros</code></td></tr>
+        <tr><td>row 6</td><td><b>500 €</b> → variant <code>500-euros</code></td></tr>
+        <tr><td>source</td><td>iterate <code>product.variants | sort: 'price'</code></td></tr>
+      </table>
+    </section>
+
+    <section class="card">
+      <h3>Tokens &amp; integration</h3>
+      <table>
+        <tr><td>color · ink</td><td><span class="swatch" style="background:#16254c"></span><b>#16254c</b> · CTA bg, text</td></tr>
+        <tr><td>color · gold</td><td><span class="swatch" style="background:#d6bf90"></span><b>#d6bf90</b> · accents only</td></tr>
+        <tr><td>color · row hl</td><td><span class="swatch" style="background:#fbf9f3;border-color:#e7e3d8"></span><b>#fbf9f3</b> · active row bg</td></tr>
+        <tr><td>font</td><td><b>Avenir Next</b> 500 / 600 / 700</td></tr>
+        <tr><td>cta radius</td><td><b>4px</b> (matches target), uppercase, letter-spacing .12em</td></tr>
+        <tr><td>stepper</td><td>30px round, border 1.5px <b>#c9c4b4</b>, hover → border <b>#16254c</b></td></tr>
+        <tr><td>Seal block</td><td>section block id ref: <b>seal_subscriptions_subscription_widget_*</b> — copy from <code>product.donation.json</code></td></tr>
+        <tr><td>Cart add</td><td><b>POST /cart/add.js</b> with <code>{ items: [{id, quantity, selling_plan}] }</code></td></tr>
+        <tr><td>Cart drawer</td><td>open via existing snippet <code>drawer--cart.liquid</code> or theme event <code>cart:open</code></td></tr>
+      </table>
+    </section>
+  </div>
+
+  <p class="foot">Layout only — behavior is locked to target. Open in browser → Copy prompt → paste into Claude Code at <b>shopify-bme/</b> root.</p>
+</div>
+
+<script>
+  const prices = [1,5,10,50,100,500];
+  const total = document.getElementById('total');
+  const fmt = n => n.toLocaleString('es-ES',{minimumFractionDigits:2,maximumFractionDigits:2}) + ' €';
+  function recompute(){
+    let sum = 0;
+    document.querySelectorAll('#amounts .row').forEach((row,i) => {
+      const q = parseInt(row.querySelector('.qty').textContent,10) || 0;
+      sum += prices[i] * q;
+      row.classList.toggle('active', q > 0);
+      row.querySelector('.minus').disabled = q <= 0;
+    });
+    total.textContent = fmt(sum);
+  }
+  document.querySelectorAll('#amounts .stepper').forEach(s => {
+    const minus = s.querySelector('.minus');
+    const plus  = s.querySelector('.plus');
+    const qty   = s.querySelector('.qty');
+    minus.addEventListener('click', () => { qty.textContent = Math.max(0,(+qty.textContent)-1); recompute(); });
+    plus.addEventListener('click',  () => { qty.textContent = (+qty.textContent)+1; recompute(); });
+  });
+  document.querySelectorAll('.freq label').forEach(lb => lb.addEventListener('click', () => {
+    document.querySelectorAll('.freq label').forEach(x => x.classList.remove('on'));
+    lb.classList.add('on');
+  }));
+  document.getElementById('copy').addEventListener('click', async () => {
+    const text = document.getElementById('prompt-body').innerText;
+    try{
+      await navigator.clipboard.writeText(text);
+      const b = document.getElementById('copy'); const o = b.textContent;
+      b.textContent = 'Copied ✓'; setTimeout(()=>b.textContent=o,1400);
+    }catch(e){
+      const r = document.createRange();
+      r.selectNode(document.getElementById('prompt-body'));
+      getSelection().removeAllRanges(); getSelection().addRange(r);
+    }
+  });
+  recompute();
+</script>
+</body>
+</html>

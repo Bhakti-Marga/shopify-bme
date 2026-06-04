@@ -45,6 +45,7 @@
         "subtitle": "<p>Nuestra espiritualidad es a la vez expresiva y vivencial. Sigue el camino del <em>bhakti</em>, construido con maestría por nuestro <em>satguru</em>, para experimentar una profunda conexión personal con lo Divino a través del amor y el servicio.</p>",
         "button_text": "",
         "button_url": "",
+        "button_anchor": "",
         "button_style": "btn",
         "anchor_to_pricing": false,
         "video_title": "",
@@ -60,20 +61,22 @@
           "type": "image_block",
           "settings": {
             "image": "shopify://shop_images/2021-05-25-p-0531.jpg",
-            "height": "auto",
-            "desktop_height": "auto"
+            "height": "33vh",
+            "desktop_height": "33vh"
           }
         },
         "content_block_gVQiM6": {
           "type": "content_block",
           "settings": {
             "title": "El camino del bhakti",
-            "title_tag": "h2",
+            "title_tag": "h3",
             "title_font_style": "h3",
             "description": "<p>Nuestra espiritualidad es a la vez expresiva y vivencial. Sigue el camino del <em>bhakti</em>, construido con maestría por nuestro <em>satguru</em>, para experimentar una profunda conexión personal con lo divino a través del amor y el servicio.</p>",
             "credits": "",
             "cta_url": "",
             "cta_label": "",
+            "cta_2_url": "",
+            "cta_2_label": "",
             "text_align": "left",
             "desktop_text_align": "inherit",
             "vertical_padding": "py-lg",
@@ -117,6 +120,8 @@
             "credits": "",
             "cta_url": "",
             "cta_label": "",
+            "cta_2_url": "",
+            "cta_2_label": "",
             "text_align": "left",
             "desktop_text_align": "inherit",
             "vertical_padding": "py-lg",
@@ -147,8 +152,8 @@
           "type": "image_block",
           "settings": {
             "image": "shopify://shop_images/2024-08-15-p-0744.jpg",
-            "height": "auto",
-            "desktop_height": "inherit"
+            "height": "50vh",
+            "desktop_height": "auto"
           }
         },
         "content_block_UfXYk3": {
@@ -161,10 +166,12 @@
             "credits": "",
             "cta_url": "",
             "cta_label": "",
-            "text_align": "left",
+            "cta_2_url": "",
+            "cta_2_label": "",
+            "text_align": "center",
             "desktop_text_align": "inherit",
-            "vertical_padding": "py-lg",
-            "vertical_padding_desktop": "tabletl:py-xxl"
+            "vertical_padding": "py-md",
+            "vertical_padding_desktop": "tabletl:py-md"
           }
         }
       },
@@ -175,12 +182,21 @@
       "custom_css": [],
       "name": "El camino del Bhakti",
       "settings": {
-        "margin_top": "mt-xl",
+        "margin_top": "mt-md",
         "margin_bottom": "mb-0",
-        "desktop_margin_top": "tabletl:mt-xl",
-        "desktop_margin_bottom": "tabletl:mb-xl",
+        "desktop_margin_top": "tabletl:mt-lg",
+        "desktop_margin_bottom": "tabletl:mb-md",
         "vertical_align": "center",
         "flip_columns_desktop": false
+      }
+    },
+    "bm_carrusel_eventos_FWdCK3": {
+      "type": "bm-carrusel-eventos",
+      "name": "BM-Carrusel Eventos",
+      "settings": {
+        "title": "Próximos Eventos",
+        "collection": "events",
+        "products_count": 9
       }
     },
     "section_image_text_blocks_KcfxKd": {
@@ -190,8 +206,8 @@
           "type": "image_block",
           "settings": {
             "image": "shopify://shop_images/2022-07-16-p-0413.jpg",
-            "height": "auto",
-            "desktop_height": "inherit"
+            "height": "33vh",
+            "desktop_height": "33vh"
           }
         },
         "content_block_x4pPWN": {
@@ -204,6 +220,8 @@
             "credits": "",
             "cta_url": "shopify://blogs/events/4-days-to-soul-awakening-with-paramahamsa-vishwananda",
             "cta_label": "Explorar herramientas",
+            "cta_2_url": "",
+            "cta_2_label": "",
             "text_align": "left",
             "desktop_text_align": "inherit",
             "vertical_padding": "py-lg",
@@ -218,51 +236,12 @@
       "disabled": true,
       "custom_css": [],
       "settings": {
-        "margin_top": "mt-xl",
+        "margin_top": "mt-md",
         "margin_bottom": "mb-0",
-        "desktop_margin_top": "tabletl:mt-xxl",
-        "desktop_margin_bottom": "tabletl:mb-xl",
+        "desktop_margin_top": "tabletl:mt-md",
+        "desktop_margin_bottom": "tabletl:mb-md",
         "vertical_align": "top",
         "flip_columns_desktop": true
-      }
-    },
-    "section_hero_tK9b6d": {
-      "type": "section__hero",
-      "disabled": true,
-      "custom_css": [],
-      "settings": {
-        "padding_top": "0px",
-        "desktop_padding_top": "inherit",
-        "padding_bottom": "0px",
-        "desktop_padding_bottom": "inherit",
-        "padding_horizontal": "px-0",
-        "desktop_padding_horizontal": "inherit",
-        "margin_top": "mt-0",
-        "margin_bottom": "mb-lg",
-        "desktop_margin_top": "tabletl:mt-xl",
-        "desktop_margin_bottom": "tabletl:mb-xxl",
-        "use_container": false,
-        "set_100vh": false,
-        "set_100vh_desktop": true,
-        "border_radius": 0,
-        "aspect_ratio": "9/16",
-        "aspect_ratio_desktop": "16/9",
-        "image": "shopify://shop_images/2024-07-18-p-0173.jpg",
-        "video": "shopify://files/videos/2025-03-28-BM3Web-SVGPBN-01.mp4",
-        "bg_color": "",
-        "content_width": "max-w-5xl",
-        "text_align": "text-center",
-        "text_color": "#ffffff",
-        "title": "Śrī Viṭṭhala Giridhārī Parabrahmane Namaḥ",
-        "title_font_style": "h4",
-        "subtitle": "<p>\"Mi respeto al Supremo Señor Vitthala que es el refugio y protector de todos\"</p>",
-        "button_text": "",
-        "button_url": "",
-        "button_style": "btn",
-        "anchor_to_pricing": false,
-        "video_title": "",
-        "horizontal_position": "justify-center",
-        "vertical_position": "items-center"
       }
     },
     "section_playlist_WUtnJ6": {
@@ -364,6 +343,8 @@
             "credits": "",
             "cta_url": "shopify://pages/yoga-meditation",
             "cta_label": "Descubre prácticas",
+            "cta_2_url": "",
+            "cta_2_label": "",
             "text_align": "left",
             "desktop_text_align": "inherit",
             "vertical_padding": "py-lg",
@@ -378,12 +359,52 @@
       "custom_css": [],
       "name": "Yoga y meditación",
       "settings": {
-        "margin_top": "mt-xl",
+        "margin_top": "mt-0",
         "margin_bottom": "mb-0",
         "desktop_margin_top": "tabletl:mt-xxl",
         "desktop_margin_bottom": "tabletl:mb-xl",
         "vertical_align": "top",
         "flip_columns_desktop": true
+      }
+    },
+    "section_hero_tK9b6d": {
+      "type": "section__hero",
+      "disabled": true,
+      "custom_css": [],
+      "settings": {
+        "padding_top": "0px",
+        "desktop_padding_top": "0px",
+        "padding_bottom": "0px",
+        "desktop_padding_bottom": "0px",
+        "padding_horizontal": "px-0",
+        "desktop_padding_horizontal": "tabletl:px-md",
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-sm",
+        "desktop_margin_top": "tabletl:mt-0",
+        "desktop_margin_bottom": "tabletl:mb-sm",
+        "use_container": false,
+        "set_100vh": false,
+        "set_100vh_desktop": false,
+        "border_radius": 30,
+        "aspect_ratio": "9/16",
+        "aspect_ratio_desktop": "16/9",
+        "image": "shopify://shop_images/2024-07-18-p-0173.jpg",
+        "video": "shopify://files/videos/2025-03-28-BM3Web-SVGPBN-01.mp4",
+        "bg_color": "",
+        "content_width": "max-w-5xl",
+        "text_align": "text-center",
+        "text_color": "#ffffff",
+        "title": "Śrī Viṭṭhala Giridhārī Parabrahmane Namaḥ",
+        "title_font_style": "h4",
+        "subtitle": "<p>\"Mi respeto al Supremo Señor Vitthala que es el refugio y protector de todos\"</p>",
+        "button_text": "",
+        "button_url": "",
+        "button_anchor": "",
+        "button_style": "btn",
+        "anchor_to_pricing": false,
+        "video_title": "",
+        "horizontal_position": "justify-center",
+        "vertical_position": "items-center"
       }
     },
     "section_image_text_blocks_AGAr6n": {
@@ -407,6 +428,8 @@
             "credits": "",
             "cta_url": "shopify://pages/knowledge",
             "cta_label": "Descubre prácticas",
+            "cta_2_url": "",
+            "cta_2_label": "",
             "text_align": "left",
             "desktop_text_align": "inherit",
             "vertical_padding": "py-lg",
@@ -421,7 +444,7 @@
       "custom_css": [],
       "name": "Conocimiento",
       "settings": {
-        "margin_top": "mt-xl",
+        "margin_top": "mt-0",
         "margin_bottom": "mb-0",
         "desktop_margin_top": "tabletl:mt-xl",
         "desktop_margin_bottom": "tabletl:mb-xl",
@@ -450,6 +473,8 @@
             "credits": "",
             "cta_url": "shopify://pages/rituals",
             "cta_label": "Descubre prácticas",
+            "cta_2_url": "",
+            "cta_2_label": "",
             "text_align": "left",
             "desktop_text_align": "inherit",
             "vertical_padding": "py-lg",
@@ -464,10 +489,10 @@
       "custom_css": [],
       "name": "Rituales",
       "settings": {
-        "margin_top": "mt-xl",
+        "margin_top": "mt-lg",
         "margin_bottom": "mb-0",
-        "desktop_margin_top": "tabletl:mt-xl",
-        "desktop_margin_bottom": "tabletl:mb-xl",
+        "desktop_margin_top": "tabletl:mt-lg",
+        "desktop_margin_bottom": "tabletl:mb-lg",
         "vertical_align": "top",
         "flip_columns_desktop": true
       }
@@ -493,6 +518,8 @@
             "credits": "",
             "cta_url": "shopify://pages/devotional-arts",
             "cta_label": "Descubre prácticas",
+            "cta_2_url": "",
+            "cta_2_label": "",
             "text_align": "left",
             "desktop_text_align": "inherit",
             "vertical_padding": "py-lg",
@@ -507,10 +534,10 @@
       "custom_css": [],
       "name": "Artes devocionales",
       "settings": {
-        "margin_top": "mt-xl",
-        "margin_bottom": "mb-md",
-        "desktop_margin_top": "tabletl:mt-xl",
-        "desktop_margin_bottom": "tabletl:mb-xxxl",
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-sm",
+        "desktop_margin_top": "tabletl:mt-0",
+        "desktop_margin_bottom": "tabletl:mb-0",
         "vertical_align": "top",
         "flip_columns_desktop": false
       }
@@ -571,10 +598,10 @@
       ],
       "name": "Nuestro camino",
       "settings": {
-        "margin_top": "mt-xl",
+        "margin_top": "mt-xxxl",
         "margin_bottom": "mb-0",
         "padding_top": "pt-0",
-        "padding_bottom": "pb-0",
+        "padding_bottom": "pb-xxxl",
         "desktop_margin_top": "tabletl:mt-xl",
         "desktop_margin_bottom": "tabletl:mb-xl",
         "desktop_padding_top": "inherit",
@@ -607,6 +634,8 @@
             "credits": "",
             "cta_url": "",
             "cta_label": "",
+            "cta_2_url": "",
+            "cta_2_label": "",
             "text_align": "left",
             "desktop_text_align": "inherit",
             "vertical_padding": "py-lg",
@@ -618,6 +647,7 @@
         "image_block_hkgd9R",
         "content_block_zCnUmN"
       ],
+      "disabled": true,
       "custom_css": [],
       "name": "Práctica diaria",
       "settings": {
@@ -631,6 +661,7 @@
     },
     "section_hero_EmDBMy": {
       "type": "section__hero",
+      "disabled": true,
       "custom_css": [],
       "settings": {
         "padding_top": "0px",
@@ -659,6 +690,7 @@
         "subtitle": "<p>Paramahamsa Vishwananda</p>",
         "button_text": "",
         "button_url": "",
+        "button_anchor": "",
         "button_style": "btn",
         "anchor_to_pricing": false,
         "video_title": "",
@@ -736,10 +768,11 @@
     "section_image_text_blocks_PHhidM",
     "section_image_text_blocks_idDHbJ",
     "section_image_text_blocks_eUrEhx",
+    "bm_carrusel_eventos_FWdCK3",
     "section_image_text_blocks_KcfxKd",
-    "section_hero_tK9b6d",
     "section_playlist_WUtnJ6",
     "section_image_text_blocks_HMkAqw",
+    "section_hero_tK9b6d",
     "section_image_text_blocks_AGAr6n",
     "section_image_text_blocks_rKfcjn",
     "section_image_text_blocks_RYbwtF",

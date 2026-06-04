@@ -44,25 +44,45 @@
         <h2 class="section-accordion__title text-40 leading-tight mb-sm tabletl:mb-md tabletl:text-56">{{ section.settings.title }}</h2>
       {% endif %}
       {% if section.settings.cta_url != blank and section.settings.cta_label != blank %}
-        <a href="{{ block.settings.cta_url }}" class="btn btn--gold inline-block mb-md tabletl:mb-lg">
+        <a href="{{ section.settings.cta_url }}" class="btn btn--gold inline-block mb-md tabletl:mb-lg">
           {{ section.settings.cta_label }}
         </a>
       {% endif %}
     </div>
-    <s-accordion class="section-accordion__accordion block border border-gray-light rounded self-start {% if section.settings.title_position == 'left' %} tabletl:w-[65%] {% endif -%}" js-accordion>
-      {% for block in section.blocks %}
-        <div class="accordion-item px-md py-32 tabletl:px-lg {% unless forloop.last %}border-b border-gray-light {% endunless %}" js-accordion-item>
-          <button type="button" class="accordion-header w-full flex justify-between items-center duration-500 tabletl:hover:opacity-70" tabindex="0" aria-expanded="false" aria-controls="accordion--{{ block.id }}" js-accordion-header>
-            <h3 class="mr-md font-500 text-left text-14 tabletl:text-16">{{ block.settings.title }}</h3>
-            <span class="accordion-icon w-lg shrink-0 transform transition-transform duration-500">{% render 'icon--caret' %}</span>
-          </button>
-          <div id="accordion--{{ block.id }}" class="accordion-content text-black/60" aria-hidden="true" js-accordion-content>
-            <div class="rte pt-sm">{{ block.settings.content }}</div>
+
+    <div class="{% if section.settings.title_position == 'left' %} tabletl:w-[65%] {% endif %}">
+      <button type="button"
+        class="btn btn--gold inline-block mb-md"
+        id="toggle-all-btn-{{ section.id }}"
+        onclick="
+          const items = this.closest('.section-accordion__content').querySelectorAll('[js-accordion-header]');
+          const allOpen = [...items].every(h => h.getAttribute('aria-expanded') === 'true');
+          items.forEach(header => {
+            const expanded = !allOpen;
+            header.setAttribute('aria-expanded', expanded);
+            const content = header.closest('[js-accordion-item]').querySelector('[js-accordion-content]');
+            content.setAttribute('aria-hidden', !expanded);
+          });
+          this.textContent = allOpen ? 'Desplegar todo' : 'Colapsar todo';
+        ">
+        Desplegar todo
+      </button>
+
+      <s-accordion class="section-accordion__accordion block border border-gray-light rounded self-start" js-accordion>
+        {% for block in section.blocks %}
+          <div class="accordion-item px-sm py-sm tabletl:px-md {% unless forloop.last %}border-b border-gray-light {% endunless %}" js-accordion-item>
+            <button type="button" class="accordion-header w-full flex justify-between items-center duration-500 tabletl:hover:opacity-70" tabindex="0" aria-expanded="false" aria-controls="accordion--{{ block.id }}" js-accordion-header>
+              <h3 class="mr-md font-700 text-left text-14 tabletl:text-16" style="color: #16254C;">{{ block.settings.title }}</h3>
+              <span class="accordion-icon w-lg shrink-0 transform transition-transform duration-500">{% render 'icon--caret' %}</span>
+            </button>
+            <div id="accordion--{{ block.id }}" class="accordion-content text-black/60" aria-hidden="true" js-accordion-content>
+              <div class="rte pt-sm">{{ block.settings.content }}</div>
+            </div>
           </div>
-        </div>
-      {% endfor %}
-    </s-accordion>
-  
+        {% endfor %}
+      </s-accordion>
+    </div>
+
   </div>
 </section>
 
@@ -238,7 +258,7 @@
         }
       ],
       "default": "left"
-    },
+    }
   ],
   "blocks": [
     {

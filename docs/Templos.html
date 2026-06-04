@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Nuestros Templos en España — Bhakti Marga</title>
+<link rel="stylesheet" href="assets/theme.css"/>
+<style>
+  /* Local mockup helpers — uses the same tokens as theme.css */
+  :root{
+    --blue:#16254c;
+    --gold:#d6bf90;
+    --gold-light:#e8dbc0;
+    --gray-light:#9b9b9b;
+    --gray-lighter:#f6f6f7;
+  }
+  html,body{background:#fff;color:#000;font-family:'Avenir Next','Helvetica Neue',Helvetica,Arial,sans-serif;}
+  body{font-size:1.125rem;font-weight:500;line-height:1.5;}
+  .wrap{max-width:100rem;margin:0 auto;padding:0 1.25rem;}
+  @media (min-width:64rem){.wrap{padding:0 2.5rem;}}
+
+  /* Placeholder media (subtle stripes + monospace label, only because we
+     have no real images here — actual section uses the existing image setting) */
+  .ph{
+    position:relative;width:100%;height:100%;
+    background:
+      repeating-linear-gradient(135deg, rgba(0,0,0,.04) 0 1px, transparent 1px 14px),
+      linear-gradient(180deg,#e8dfcf 0%,#d8c7a7 100%);
+    overflow:hidden;
+  }
+  .ph--blue{
+    background:
+      repeating-linear-gradient(135deg, rgba(255,255,255,.05) 0 1px, transparent 1px 14px),
+      linear-gradient(180deg,#1f3266 0%,#16254c 100%);
+  }
+  .ph__label{
+    position:absolute;left:1rem;bottom:1rem;
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:.6875rem;letter-spacing:.04em;color:rgba(0,0,0,.55);
+    background:rgba(255,255,255,.7);padding:.25rem .5rem;border-radius:.25rem;
+  }
+  .ph--blue .ph__label{color:rgba(255,255,255,.85);background:rgba(255,255,255,.12);}
+
+  /* === HERO (section__hero, bg #16254c, content centered) === */
+  .hero{
+    position:relative;background:var(--blue);color:#fff;
+    margin:0;padding:0 0 60px;
+    overflow:hidden;
+  }
+  .hero__inner{
+    position:relative;
+    max-width:64rem;margin:0 auto;
+    padding:7rem 1.25rem 5rem;
+    text-align:center;
+    z-index:2;
+  }
+  @media (min-width:64rem){.hero__inner{padding:10rem 2.5rem 7rem;}}
+  /* Decorative gold arch motif behind title — pure CSS, low-key */
+  .hero__motif{
+    position:absolute;left:50%;top:0;transform:translateX(-50%);
+    width:min(900px,90%);aspect-ratio:2/1;
+    border:1px solid rgba(214,191,144,.18);
+    border-bottom:0;
+    border-radius:50% 50% 0 0 / 100% 100% 0 0;
+    z-index:1;
+  }
+  .hero__motif::before{
+    content:"";position:absolute;left:50%;top:8%;transform:translateX(-50%);
+    width:65%;aspect-ratio:2/1;
+    border:1px solid rgba(214,191,144,.12);border-bottom:0;
+    border-radius:50% 50% 0 0 / 100% 100% 0 0;
+  }
+  .hero__motif::after{
+    content:"";position:absolute;left:50%;top:18%;transform:translateX(-50%);
+    width:40%;aspect-ratio:2/1;
+    border:1px solid rgba(214,191,144,.08);border-bottom:0;
+    border-radius:50% 50% 0 0 / 100% 100% 0 0;
+  }
+  /* Faint gold glow */
+  .hero::before{
+    content:"";position:absolute;left:50%;top:30%;transform:translate(-50%,-50%);
+    width:60vw;height:60vw;max-width:800px;max-height:800px;
+    background:radial-gradient(closest-side, rgba(214,191,144,.18), rgba(214,191,144,0) 70%);
+    z-index:0;pointer-events:none;
+  }
+  .hero__eyebrow{
+    display:inline-flex;align-items:center;gap:.75rem;
+    font-size:.8125rem;letter-spacing:.22em;text-transform:uppercase;
+    color:var(--gold);font-weight:600;margin-bottom:1.75rem;
+  }
+  .hero__eyebrow::before,.hero__eyebrow::after{
+    content:"";width:1.75rem;height:1px;background:var(--gold);opacity:.7;
+  }
+  .hero__title{
+    font-family:'Avenir Next',sans-serif;font-weight:600;
+    font-size:2.75rem;line-height:1.05;letter-spacing:-.01em;
+  }
+  @media (min-width:64rem){.hero__title{font-size:5.5rem;}}
+  .hero__sub{
+    margin-top:1.5rem;font-weight:500;font-size:1.125rem;color:rgba(255,255,255,.85);
+    max-width:46ch;margin-left:auto;margin-right:auto;
+  }
+  @media (min-width:64rem){.hero__sub{font-size:1.25rem;}}
+
+  /* Bottom curl: separates blue hero from white body (smoother than abrupt cut) */
+  .hero__divider{
+    position:relative;height:80px;background:var(--blue);
+  }
+  .hero__divider::after{
+    content:"";position:absolute;left:0;right:0;bottom:0;height:80px;
+    background:#fff;border-radius:50% 50% 0 0 / 100% 100% 0 0;
+  }
+
+  /* === ICON GRID (2 cols) — Hari Hara & Bhava Narasimha === */
+  .grid{padding:2.5rem 0 6rem;}
+  @media (min-width:64rem){.grid{padding:4rem 0 9rem;}}
+  .grid__inner{
+    display:grid;grid-template-columns:1fr;gap:3rem;
+    max-width:84rem;margin:0 auto;padding:0 1.25rem;
+  }
+  @media (min-width:64rem){.grid__inner{grid-template-columns:1fr 1fr;gap:4rem;padding:0 2.5rem;}}
+
+  .tcard{
+    text-align:center;display:flex;flex-direction:column;align-items:center;
+  }
+  /* Round/portrait media with gold ring + soft shadow */
+  .tcard__media{
+    position:relative;width:100%;max-width:30rem;
+    aspect-ratio:4/5;border-radius:9999px 9999px 1.5rem 1.5rem;
+    overflow:hidden;
+    box-shadow:0 1.5rem 3rem -1rem rgba(22,37,76,.25);
+  }
+  .tcard__media::after{
+    content:"";position:absolute;inset:0;border-radius:inherit;
+    border:1px solid rgba(214,191,144,.45);
+    /* gold double-ring */
+    box-shadow:inset 0 0 0 8px rgba(255,255,255,.85), inset 0 0 0 9px rgba(214,191,144,.55);
+    pointer-events:none;
+  }
+  .tcard__media .ph{position:absolute;inset:0;}
+
+  .tcard__loc{
+    margin-top:2rem;
+    font-size:.75rem;letter-spacing:.22em;text-transform:uppercase;
+    color:var(--gold);font-weight:600;
+    display:inline-flex;align-items:center;gap:.5rem;
+  }
+  .tcard__loc::before,.tcard__loc::after{
+    content:"";width:1.25rem;height:1px;background:var(--gold);opacity:.6;
+  }
+  .tcard__title{
+    margin-top:.75rem;
+    font-family:'Avenir Next',sans-serif;font-weight:600;
+    font-size:2rem;line-height:1.1;letter-spacing:-.005em;color:#16254c;
+  }
+  @media (min-width:64rem){.tcard__title{font-size:2.5rem;}}
+  .tcard__desc{
+    margin-top:1rem;color:rgba(0,0,0,.7);font-size:1rem;line-height:1.55;
+    max-width:38ch;
+  }
+  .tcard__cta{
+    margin-top:1.75rem;
+    display:inline-block;border-radius:62.4375rem;
+    padding:1rem 2rem;font-size:1rem;line-height:1.5em;font-weight:500;
+    background:var(--gold);color:#000;text-decoration:none;
+    transition:background-color .2s;
+  }
+  .tcard__cta:hover{background:var(--gold-light);}
+  .tcard__cta::after{content:"  →";opacity:.7;}
+
+  /* Mock site chrome */
+  .chrome{position:sticky;top:0;z-index:10;background:#fff;border-bottom:1px solid #efefef;}
+  .chrome__inner{display:flex;align-items:center;justify-content:space-between;padding:1rem 1.25rem;}
+  @media (min-width:64rem){.chrome__inner{padding:1rem 2.5rem;}}
+  .chrome__logo{font-weight:600;letter-spacing:.04em;font-size:.875rem;text-transform:uppercase;}
+  .chrome__nav{display:none;gap:1.75rem;font-size:.9375rem;font-weight:500;}
+  @media (min-width:64rem){.chrome__nav{display:flex;}}
+  .chrome__nav a{color:rgba(0,0,0,.7);text-decoration:none;}
+  .chrome__nav a.active{color:#000;}
+  .chrome__cart{font-size:.875rem;color:rgba(0,0,0,.6);}
+</style>
+<script type='text/javascript' nonce='saFlIQlfrgD0Ek8Kb3waaQ==' src='https://claude.ai/7mEIIG9Sd8bU6L4kWyyKFWxU8rxyzIMbJEm2SLpap-KEr5onJDyWl9E559Na8nnR933BUld42efmiR7R1DoqjQBfG_clQKYzXS5PwsW9hYjKoMHBRm7JbbINdUnBsFd4fQ2BKxUVXD2CjwUeUHn_vWO1OfaK3BC17gP99W_KZIO-reXX8RWLCLvyJC-ZC-1a__KmUgC_p5NGXVoysrPjmoAKoZFGpF60BE8RMvE3blQA5zvMd-62p7rGRqsuWp7RweAhuYUsN3Xe2vYX7fiRxtpovMMYXzFTnPddOfdnKlTRGnMqUijhaZfQgPZfO3PXVHg2W2aARQSMOg9KaGwn53l2urafJVbTXXnowsvb5fro_wfxYPRUOIwxY2Ehg_83Ckn389B9hBK42KxlViX92IakMpLNH-bLMOMI4i98XWg-pfE0YTXWl4Vtce8rvnEH4m6WT_mw-CnRaoOtGvahQ14BYyqhE59Wvi9bK61-YsoQ6Ev78QVmAarl2Xp_NcmrTMi2pP2qnNaX3dR8t1pPrkvGpI4RubOyTIuhmjIWSQuDmernifA'></script></head>
+<body>
+
+<header class="chrome" data-screen-label="Site chrome">
+  <div class="chrome__inner">
+    <div class="chrome__logo">Bhakti Marga · España</div>
+    <nav class="chrome__nav">
+      <a href="#">El Camino</a>
+      <a href="#">Maestro</a>
+      <a href="#">Comunidad</a>
+      <a href="#" class="active">Templos</a>
+      <a href="#">Eventos</a>
+      <a href="#">Tienda</a>
+    </nav>
+    <div class="chrome__cart">Carrito (0)</div>
+  </div>
+</header>
+
+<main data-screen-label="Templos page">
+
+  <!-- === HERO === content idéntico al template actual === -->
+  <section class="hero" data-screen-label="01 Hero">
+    <div class="hero__motif" aria-hidden="true"></div>
+    <div class="hero__inner">
+      <span class="hero__eyebrow">Bhakti Marga · España</span>
+      <h1 class="hero__title">Nuestros Templos en España</h1>
+      <p class="hero__sub">Visita los templos de Bhakti Marga en España y vive una experiencia espiritual única.</p>
+    </div>
+  </section>
+  <div class="hero__divider" aria-hidden="true"></div>
+
+  <!-- === ICON GRID === content idéntico al template actual === -->
+  <section class="grid" data-screen-label="02 Templos">
+    <div class="grid__inner">
+
+      <article class="tcard">
+        <div class="tcard__media">
+          <div class="ph"><div class="ph__label">Hari Hara — Lanzarote · imagen actual</div></div>
+        </div>
+        <span class="tcard__loc">Lanzarote</span>
+        <h3 class="tcard__title">Hari Hara — Lanzarote</h3>
+        <p class="tcard__desc">Templo en Lanzarote.</p>
+        <a class="tcard__cta" href="/pages/templo-lanzarote">Ver más</a>
+      </article>
+
+      <article class="tcard">
+        <div class="tcard__media">
+          <div class="ph"><div class="ph__label">Bhava Narasimha — Málaga · imagen actual</div></div>
+        </div>
+        <span class="tcard__loc">Málaga</span>
+        <h3 class="tcard__title">Bhava Narasimha — Málaga</h3>
+        <p class="tcard__desc">Templo en Málaga.</p>
+        <a class="tcard__cta" href="/pages/templo-malaga">Ver más</a>
+      </article>
+
+    </div>
+  </section>
+
+</main>
+
+</body>
+</html>

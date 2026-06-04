@@ -55,7 +55,7 @@
       </div>
     {% endif %}
     {% if section.settings.credits != blank %}
-      <p class="mt-xl font-600 leading-tight text-24 tabletl:text-32 tabletl:mt-xxl">{{ section.settings.credits }}</p>
+     <p class="mt-sm leading-tight text-12 tabletl:text-16 tabletl:mt-md" style="font-style: italic;"> {{ section.settings.credits }}</p>
     {% endif %} 
   </div>
 </section>
@@ -237,13 +237,27 @@
         { "value": "h4", "label": "H4 - 40px / 32px" },
         { "value": "h5", "label": "H5 - 32px / 24px" }
       ],
-      "default": "h3"
+      "default": "h4"
     },
-    {
-      "type": "richtext",
-      "id": "description",
-      "label": "Description"
-    },
+ {
+  "type": "html",
+  "id": "description",
+  "label": "Description"
+},
+{
+  "type": "select",
+  "id": "description_font_style",
+  "label": "Description Font Style",
+  "options": [
+    { "value": "h1", "label": "H1 - 120px / 80px" },
+    { "value": "h2", "label": "H2 - 88px / 48px" },
+    { "value": "h3", "label": "H3 - 56px / 40px" },
+    { "value": "h4", "label": "H4 - 40px / 32px" },
+    { "value": "h5", "label": "H5 - 32px / 24px" },
+    { "value": "p",  "label": "P - 24px / 18px" }
+  ],
+  "default": "p"
+},
     {
       "type": "text",
       "id": "credits",

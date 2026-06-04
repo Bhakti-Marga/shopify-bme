@@ -75,7 +75,8 @@
         "border_radius": 0,
         "aspect_ratio": "9/16",
         "aspect_ratio_desktop": "16/9",
-        "image": "shopify://shop_images/hari-hara.jpg",
+        "image": "shopify://shop_images/hari-hara-2-mobile.png",
+        "image_desktop": "shopify://shop_images/hari-hara.jpg",
         "bg_color": "",
         "content_width": "max-w-5xl",
         "text_align": "text-left",
@@ -163,6 +164,8 @@
             "credits": "",
             "cta_url": "#",
             "cta_label": "",
+            "cta_2_url": "",
+            "cta_2_label": "",
             "text_align": "left",
             "desktop_text_align": "inherit",
             "vertical_padding": "py-lg",
@@ -177,7 +180,7 @@
       "name": "Horario",
       "settings": {
         "margin_top": "mt-xl",
-        "margin_bottom": "mb-xxl",
+        "margin_bottom": "mb-md",
         "desktop_margin_top": "tabletl:mt-xxxl",
         "desktop_margin_bottom": "tabletl:mb-xxl",
         "vertical_align": "center",
@@ -305,6 +308,8 @@
             "credits": "",
             "cta_url": "shopify://pages/calendar",
             "cta_label": "Visitar el Templo",
+            "cta_2_url": "",
+            "cta_2_label": "",
             "text_align": "left",
             "desktop_text_align": "inherit",
             "vertical_padding": "py-lg",
@@ -366,7 +371,7 @@
         "padding_bottom": "pb-xl",
         "desktop_padding_top": "tabletl:pt-xl",
         "desktop_padding_bottom": "tabletl:pb-xl",
-        "title": "<p>Sigue @hariharatemple</p>",
+        "title": "<p><a href=\"https://www.instagram.com/hariharatemple/\" target=\"_blank\" title=\"https://www.instagram.com/hariharatemple/\">Sigue @hariharatemple</a></p>",
         "title_icon": "instagram"
       }
     }

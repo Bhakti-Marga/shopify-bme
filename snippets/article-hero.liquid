@@ -19,32 +19,28 @@
     <div class="tabletl:flex tabletl:gap-lg tabletl:items-center">
       {% if article.metafields.event.product != blank %}
         <a
-          {% if anchor == true %}
-            href="#prices"
-          {% else %}
-            href="{{ article.url }}"
-          {% endif %}
+          href="{{ article.metafields.event.product.value.url }}"
           class="article-hero__cta btn inline-block mb-md tabletl:mb-0"
         >
-          Register now!
+          Reserva tu plaza
         </a>
       {% endif %}
       <div class="flex flex-wrap font-600 text-14 gap-lg tabletl:gap-xl tabletl:text-16">
         {% if article.metafields.event.date != blank %}
           <div class="article-hero__info-item pr-lg border-r border-white tabletl:pr-0 tabletl:border-r-0 tabletl:pl-xl tabletl:border-l">
-            <strong class="font-600">Date</strong> 
+            <strong class="font-600">Fecha</strong> 
             <span class="capitalize block">{{ article.metafields.event.date }}</span>
           </div>
         {% endif %}
         {% if article.metafields.event.location != blank %}
           <div class="article-hero__info-item pr-lg border-r border-white tabletl:pr-0 tabletl:border-r-0 tabletl:pl-xl tabletl:border-l">
-            <strong class="font-600">Place</strong> 
+            <strong class="font-600">Lugar</strong> 
             <span class="capitalize block">{{ article.metafields.event.location }}</span>
           </div>
         {% endif %}
         {% if article.metafields.event.timezone != blank %}
           <div class="article-hero__info-item pr-lg border-white tabletl:pr-0 tabletl:pl-xl tabletl:border-l">
-            <strong class="font-600">Timezone</strong> 
+            <strong class="font-600">Zona horaria</strong> 
             <span class="capitalize block">{{ article.metafields.event.timezone }}</span>
           </div>
         {% endif %}

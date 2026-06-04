@@ -1,9 +1,27 @@
 <style>
-  .btn{
-    padding: 3px 2rem;
-  }
-  .fc-toolbar-chunk{
-    margin: 0px 30px;
-  }
+  .btn{ padding: 3px 2rem; }
+  .fc-toolbar-chunk{ margin: 0px 30px; }
 </style>
+
+<script>
+  window.shopifyEvents = [
+    {% for product in collections.all.products %}
+      {% assign event_start = product.metafields.event.event_start.value %}
+      {% if event_start != blank %}
+        {% assign location = product.metafields.custom.localizacion.value | first %}
+        {
+          "title": {{ product.title | json }},
+          "start": {{ event_start | date: "%Y-%m-%d" | json }},
+          {% assign event_end = product.metafields.event.event_end.value %}
+          {% if event_end != blank %}
+          "end": {{ event_end | date: "%Y-%m-%d" | json }},
+          {% endif %}
+          "location": {{ location.name | default: "Otro" | json }},
+          "url": {{ product.url | prepend: shop.url | json }}
+        },
+      {% endif %}
+    {% endfor %}
+  ];
+</script>
+
 <div style="background-color: white;" id="calendar"></div>

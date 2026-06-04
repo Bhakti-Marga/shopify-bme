@@ -1,8 +1,132 @@
-{%- liquid 
-  assign current_variant = product.selected_or_first_available_variant 
+{{ 'consent-form.css' | asset_url | stylesheet_tag }}
+{%- liquid
+  assign current_variant = product.selected_or_first_available_variant
   assign product_form_id = 'ProductForm-' | append: section.id | append: product.id
   assign master_select_id = 'MasterSelect-' | append: section.id
 -%}
+
+<style>
+  .product { --bm-navy:#16254c; --bm-navy-deep:#0e1a37; --bm-gold:#b89a5e; --bm-blue-link:#3671d8; --bm-rule:#e6e6e6; }
+  .product { font-family: 'Avenir Next', Helvetica, Arial, sans-serif; }
+
+  .product .product__title{
+    color: var(--bm-gold);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: .01em;
+    line-height: 1.1;
+    font-size: clamp(1.75rem, 3.2vw, 2.5rem);
+    margin-bottom: 1.25rem;
+  }
+
+  .product .product__price{
+    color: var(--bm-navy);
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin: 1rem 0 1.25rem;
+  }
+
+  .product .product__description{
+    color: var(--bm-navy);
+    font-size: .9375rem;
+    line-height: 1.6;
+    margin-top: 1.25rem;
+  }
+  .product .product__description a{
+    color: var(--bm-blue-link);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  .product .form__label:has(+ .quantity__input.hidden){ display:none; }
+
+  .product .form__label{
+    text-transform: uppercase;
+    letter-spacing: .12em;
+    font-size: .75rem;
+    color: #6b6f7a;
+    font-weight: 600;
+    margin-bottom: .5rem;
+    display: block;
+  }
+
+  .product [js-add-to-cart].btn,
+  .product .btn.btn--gold[js-add-to-cart]{
+    background-color: var(--bm-navy);
+    color: #fff;
+    border-radius: 4px;
+    padding: 1rem 1.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    font-size: .9375rem;
+    width: 100%;
+    box-shadow: none;
+    transition: background-color .2s ease;
+  }
+  .product [js-add-to-cart].btn:hover,
+  .product [js-add-to-cart].btn:focus,
+  .product [js-add-to-cart].btn:focus-visible{
+    background-color: var(--bm-navy-deep);
+    color: #fff;
+  }
+  .product [js-add-to-cart].btn:disabled{
+    background-color: #c7c9cf;
+    color: #fff;
+    cursor: not-allowed;
+  }
+
+  .product .quantity{
+    border-color: var(--bm-rule);
+    border-radius: 4px;
+    margin-bottom: 1rem;
+  }
+
+  .product .product-option__select,
+  .product select{
+    border: 1px solid var(--bm-rule);
+    border-radius: 4px;
+    background-color: #fff;
+    padding: .875rem 1rem;
+    font-size: .9375rem;
+    color: var(--bm-navy);
+    width: 100%;
+    margin-bottom: .75rem;
+  }
+
+  .product #infiniteoptions-container .product-form__text-input input{
+    border: 1px solid var(--bm-rule);
+    border-radius: 4px;
+    padding: .875rem 1rem;
+    font-weight: 500;
+    color: var(--bm-navy);
+    text-transform: none;
+  }
+  .product #infiniteoptions-container .product-form__text-input input::placeholder{
+    color: #9ca3af;
+    text-transform: none;
+    font-weight: 500;
+  }
+
+  .product .product__images .swiper-slide img{ border-radius: 6px; }
+
+  .product .product__images {
+    max-height: 500px;
+    overflow: hidden;
+  }
+
+  @media (min-width: 64rem) {
+    .product .product__images {
+      position: sticky;
+      top: var(--header-height);
+      align-self: start;
+      max-height: 500px;
+    }
+    .product .product__information {
+      position: static;
+    }
+  }
+</style>
 
 {%- capture carousel_options -%}
   {
@@ -14,7 +138,7 @@
       "forceToAxis": true
     },
     "loop": false,
-    "spaceBetween": "16",
+    "spaceBetween": 16,
     "pagination": {
       "el": ".swiper-pagination",
       "type": "bullets",
@@ -25,13 +149,15 @@
 
 <s-product role="section" class="product block container py-md tabletl:py-xl" data-section-id="{{ section.id }}">
   <a class="skip-to-content-link sr-only" href="#ProductInfo-{{ section.id }}">Skip to product information</a>
+
   <div class="product__layout tabletl:grid tabletl:grid-cols-2 tabletl:gap-md">
+
     <div class="product__images">
-      <s-carousel data-init="belowLaptop" data-options='{{carousel_options}}'>
+      <s-carousel data-init="belowLaptop" data-options='{{ carousel_options }}'>
         <div id="ProductMainImages" class="swiper w-full pb-[50px]" js-carousel>
           <div class="swiper-wrapper tabletl:grid tabletl:grid-cols-2 tabletl:gap-md">
             {% for media in product.media %}
-              {% assign slide_classes = 'aspect-[7/9] relative z-1 overflow-hidden' %}
+              {% assign slide_classes = 'aspect-[4/3] relative z-1 overflow-hidden' %}
               {% assign index_mod_3 = forloop.index | modulo: 3 %}
 
               {% if index_mod_3 == 1 %}
@@ -53,44 +179,120 @@
                   <div class="swiper-slide {{ slide_classes }}" js-carousel-slide>
                     {{ media | video_tag: controls: true, autoplay: false, loop: true, mute: false, class: 'w-full h-full object-cover block' }}
                   </div>
-                {% when 'external_video' %}              
+                {% when 'external_video' %}
                   <div class="swiper-slide {{ slide_classes }}" js-carousel-slide>
                     {{ media | external_video_tag }}
                   </div>
-                {% endcase %}
+              {% endcase %}
             {% endfor %}
           </div>
           <div class="swiper-pagination tabletl:hidden"></div>
         </div>
       </s-carousel>
-    </div><!-- .product__images-container -->
+    </div><!-- .product__images -->
 
     <div class="product__information h-[min-content] py-lg tabletl:py-xl tabletl:px-xxl tabletl:sticky tabletl:top-[var(--header-height)]" id="ProductInfo-{{ section.id }}">
+
+      {%- comment -%} 1. TÍTULO {%- endcomment -%}
       <h1 class="product__title h5 leading-tight mb-lg">{{ product.title }}</h1>
-      <div class="product__price mb-lg text-18 tabletl:text-20" js-price>{{current_variant.price | money }}</div>
-      {% if product.metafields.event.date_time != blank or product.metafields.event.teacher != blank or product.metafields.event.location != blank %}
-        <div class="product__event-info-wrapper mb-lg text-18 tabletl:text-20">
-          {% if product.metafields.event.date_time != blank %}
-            <p class="font-700">{{ product.metafields.event.date_time }}</p>
-          {% endif %}
-          {% if product.metafields.event.teacher != blank %}
-            <p class="mt-sm">{{ product.metafields.event.teacher }}</p>
-          {% endif %}
-          {% if product.metafields.event.type != blank and product.metafields.event.location != blank %}
-            {%- assign event_type = product.metafields.event.type | downcase -%}
-              {%- if event_type contains "in-person" -%}
-                <p class="mt-sm">{{ product.metafields.event.location }}</p>
-              {%- endif -%}
-          {% endif %}
+
+      {%- comment -%} 2. CATEGORÍA {%- endcomment -%}
+      {%- if product.metafields.event.category != blank -%}
+        <p style="font-size:.9375rem;margin-bottom:1rem;">
+          <span class="form__label" style="display:inline;margin-bottom:0;">Categoría:</span>
+          <span style="color:var(--bm-navy);font-weight:700;">{{ product.metafields.event.category.value }}</span>
+        </p>
+      {%- endif -%}
+
+      {%- comment -%} 3. DESCRIPCIÓN {%- endcomment -%}
+      {%- if product.description != blank -%}
+        <div class="product__description text-16 mb-lg tabletl:text-18" style="border-bottom:1px solid var(--bm-rule);padding-bottom:1rem;">
+          {{ product.description }}
         </div>
-      {% endif %}
-      <div class="product__description text-16 mb-lg tabletl:text-18">{{ product.description }}</div>
-      {%- comment -%}
-        * Product Form
-      {%- endcomment -%}
+      {%- endif -%}
+
+      {%- comment -%} 4. LOCALIZACIÓN {%- endcomment -%}
+      {%- assign locations = product.metafields.custom.localizacion.value -%}
+      {%- if locations != blank -%}
+        <div class="mb-lg" style="border-bottom:1px solid var(--bm-rule);padding-bottom:1rem;">
+          {%- for loc in locations -%}
+            <p style="font-size:.9375rem;">
+              <span class="form__label" style="display:inline;margin-bottom:0;">Localización:</span>
+              <span style="color:var(--bm-navy);font-weight:700;">{{ loc.name }}</span>
+              <a href="https://www.google.com/maps/search/{{ loc.name | url_encode }}"
+                 target="_blank"
+                 rel="noopener"
+                 style="display:inline-flex;align-items:center;margin-left:.4rem;color:var(--bm-blue-link);"
+                 title="Ver en Google Maps">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                </svg>
+              </a>
+            </p>
+          {%- endfor -%}
+        </div>
+      {%- endif -%}
+
+      {%- comment -%} 5. CARACTERÍSTICAS {%- endcomment -%}
+      {%- if product.metafields.event.consents != blank -%}
+        <div class="mb-lg" style="border-bottom:1px solid var(--bm-rule);padding-bottom:1rem;">
+          <p style="font-size:.9375rem;">
+            <span class="form__label" style="display:inline;margin-bottom:0;">Características:</span>
+            <span style="color:var(--bm-navy);font-weight:700;">{{ product.metafields.event.consents.value }}</span>
+          </p>
+        </div>
+      {%- endif -%}
+
+      {%- comment -%} 6. FECHAS {%- endcomment -%}
+      {%- if product.metafields.event.event_start != blank -%}
+        <div class="mb-lg" style="border-bottom:1px solid var(--bm-rule);padding-bottom:1rem;">
+          <p style="font-size:.9375rem;">
+            <span class="form__label" style="display:inline;margin-bottom:0;">Inicio:</span>
+            <span style="color:var(--bm-navy);font-weight:700;">{{ product.metafields.event.event_start.value | date: "%d %b %Y, %H:%M" }}</span>
+          </p>
+          {%- if product.metafields.event.event_end != blank -%}
+            <p style="font-size:.9375rem;margin-top:.5rem;">
+              <span class="form__label" style="display:inline;margin-bottom:0;">Fin:</span>
+              <span style="color:var(--bm-navy);font-weight:700;">{{ product.metafields.event.event_end.value | date: "%d %b %Y, %H:%M" }}</span>
+            </p>
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+
+      {%- comment -%} 7. PRECIO {%- endcomment -%}
+      <div class="product__price mb-lg text-18 tabletl:text-20" style="border-bottom:1px solid var(--bm-rule);padding-bottom:1rem;" js-price>
+        <p style="font-size:.9375rem;">
+          <span class="form__label" style="display:inline;margin-bottom:0;">Precio:</span>
+          <span style="color:var(--bm-navy);font-weight:700;">{{ current_variant.price | money }}</span>
+        </p>
+      </div>
+
+      {%- comment -%} 8. PROFESORES {%- endcomment -%}
+      {%- assign profesores = product.metafields.custom.profesores.value -%}
+      {%- if profesores != blank -%}
+        <div class="mb-lg" style="border-bottom:1px solid var(--bm-rule);padding-bottom:1rem;">
+          <span class="form__label">Profesor/es:</span>
+          {%- for prof in profesores -%}
+            <div style="display:flex;align-items:flex-start;gap:1rem;margin-top:.75rem;">
+              {%- if prof.photo != blank -%}
+                {{ prof.photo | image_url: width: 80 | image_tag: style: 'width:60px;height:60px;object-fit:cover;border-radius:50%;flex-shrink:0;' }}
+              {%- endif -%}
+              <div>
+                <p style="color:var(--bm-navy);font-weight:700;font-size:1rem;">{{ prof.name }}</p>
+                {%- if prof.presentacion != blank -%}
+                  <div style="color:#6b6f7a;font-size:.875rem;margin-top:.25rem;line-height:1.5;">{{ prof.presentacion | metafield_tag }}</div>
+                {%- endif -%}
+              </div>
+            </div>
+          {%- endfor -%}
+        </div>
+      {%- endif -%}
+
+      {%- comment -%} 9. FORMULARIO {%- endcomment -%}
       {%- form 'product', product, id: product_form_id, class: 'form', novalidate: 'novalidate', js-product-form: true -%}
-        
-        {%- comment -%} Product Variant Master Select {%- endcomment -%}
+
+        {%- comment -%} Variant Master Select {%- endcomment -%}
         {% render 'master-variant-select',
           variants: product.variants,
           id: master_select_id,
@@ -100,69 +302,99 @@
         {% unless product.has_only_default_variant %}
           <product-options class="no-js-hidden block" data-product='ProductJSON' data-master-select-id="{{ master_select_id }}" data-enable-history-state>
             {% for option in product.options_with_values %}
-              {% render 'product-option-selector' 
-                option: option
-                type: 'select'
-                section_id: section.id
+              {% render 'product-option-selector',
+                option: option,
+                type: 'select',
+                section_id: section.id,
                 product_id: product.id
               %}
             {% endfor %}
           </product-options>
         {% endunless %}
 
+        {%- comment -%} Cantidad {%- endcomment -%}
+        {%- assign product_type = product.type | downcase -%}
         <label class="form__label inline-block font-600 text-16 mb-md" for="Quantity-{{ section.id }}">
-          {%- assign product_type = product.type | downcase -%}
           {%- if product_type contains "event" -%}
             Attendees:
           {%- else -%}
             Qty:
           {%- endif -%}
         </label>
+
         {%- if product_type contains "event" -%}
           <input class="quantity__input hidden"
-                type="number"
-                name="quantity"
-                id="Quantity-{{ section.id }}"
-                min="1"
-                value="1"
-                form="{{ product_form_id }}"
-              >
+                 type="number"
+                 name="quantity"
+                 id="Quantity-{{ section.id }}"
+                 min="1"
+                 value="1"
+                 form="{{ product_form_id }}">
         {%- else -%}
           <quantity-input class="quantity flex justify-between items-center w-[130px] py-12 px-lg border rounded-full mb-lg">
-            <button class="quantity__button" name="minus" type="button" aria-label="Decrease quantity for {{ product.title }}" title="Decrease quantity for {{ product.title }}">&minus;</button>
+            <button class="quantity__button" name="minus" type="button"
+              aria-label="Decrease quantity for {{ product.title }}"
+              title="Decrease quantity for {{ product.title }}">&minus;</button>
             <input class="quantity__input w-full bg-transparent text-center font-500 text-20"
-                type="number"
-                name="quantity"
-                id="Quantity-{{ section.id }}"
-                min="1"
-                value="1"
-                form="{{ product_form_id }}"
-              >
-            <button class="quantity__button" name="plus" type="button" aria-label="Increase quantity for {{ product.title }}" title="Increase quantity for {{ product.title }}">&plus;</button>
+                   type="number"
+                   name="quantity"
+                   id="Quantity-{{ section.id }}"
+                   min="1"
+                   value="1"
+                   form="{{ product_form_id }}">
+            <button class="quantity__button" name="plus" type="button"
+              aria-label="Increase quantity for {{ product.title }}"
+              title="Increase quantity for {{ product.title }}">&plus;</button>
           </quantity-input>
         {%- endif -%}
 
+        {%- comment -%} Campos extra (Infinite Options y otros bloques de app) {%- endcomment -%}
         {%- for block in section.blocks -%}
-          {% render block %}
+          {%- case block.type -%}
+            {%- when 'add-to-cart' -%}
+              <div {{ block.shopify_attributes }}>
+                <button
+                  class="btn btn--gold py-md w-full uppercase relative"
+                  type="submit"
+                  {% unless current_variant.available %} disabled {% endunless %}
+                  js-add-to-cart>
+                  <loading-spinner style="--size: 3rem; --bg-opacity: 100%;"></loading-spinner>
+                  {% if current_variant.available %} Añadir al carrito {% else %} Agotado {% endif %}
+                </button>
+                <p class="hidden" js-error-message></p>
+              </div>
+            {%- when 'event-consent' -%}
+            {%- else -%}
+              {% render block %}
+          {%- endcase -%}
         {%- endfor -%}
 
-        <button 
-          class="btn btn--gold py-md w-full uppercase relative"
-          type="submit" 
-          {% unless current_variant.available %} disabled {% endunless %}
-          js-add-to-cart>
-          <loading-spinner style="--size: 3rem; --bg-opacity: 100%;"></loading-spinner>
-          {% if current_variant.available %} Add To Cart {% else %} Sold Out {% endif %}
-        </button>
-        <p class="hidden" js-error-message></p>
-
       {%- endform -%}
-    </div><!-- .product__images-container -->
+
+      {%- for block in section.blocks -%}
+        {%- if block.type == 'event-consent' -%}
+          {% if product.metafields.event.consent != blank %}
+            {% assign event_consent = product.metafields.event.consent %}
+            <div class="product__consent-form mb-lg" {{ block.shopify_attributes }}>
+              {% if event_consent == 'darshan' %}
+                {%- render 'consent-darshan', product: product, form_id: product_form_id -%}
+              {% endif %}
+              {% if event_consent == 'course' %}
+                {%- render 'consent-course', product: product, form_id: product_form_id -%}
+              {% endif %}
+              {% if event_consent == 'festivities' %}
+                {%- render 'consent-festivities', product: product, form_id: product_form_id -%}
+              {% endif %}
+            </div>
+          {% endif %}
+        {%- endif -%}
+      {%- endfor -%}
+
+    </div><!-- .product__information -->
+
   </div><!-- .product__layout -->
 
   <script type="application/json" id="ProductJSON">{{ product | json }}</script>
-
-<script type="application/json" id="ProductJSON">{{ product | json }}</script>
 
 </s-product>
 
@@ -173,6 +405,7 @@
     assign seo_media = product.featured_media
   endif
 -%}
+
 <script type="application/ld+json">
   {
     "@context": "http://schema.org/",
@@ -195,14 +428,14 @@
     "offers": [
       {%- for variant in product.variants -%}
         {
-          "@type" : "Offer",
+          "@type": "Offer",
           {%- if variant.sku != blank -%}
             "sku": {{ variant.sku | json }},
           {%- endif -%}
-          "availability" : "http://schema.org/{% if variant.available %}InStock{% else %}OutOfStock{% endif %}",
-          "price" : {{ variant.price | divided_by: 100.00 | json }},
-          "priceCurrency" : {{ cart.currency.iso_code | json }},
-          "url" : {{ shop.url | append: variant.url | json }}
+          "availability": "http://schema.org/{% if variant.available %}InStock{% else %}OutOfStock{% endif %}",
+          "price": {{ variant.price | divided_by: 100.00 | json }},
+          "priceCurrency": {{ cart.currency.iso_code | json }},
+          "url": {{ shop.url | append: variant.url | json }}
         }{% unless forloop.last %},{% endunless %}
       {%- endfor -%}
     ]
@@ -215,8 +448,17 @@
   "blocks": [
     {
       "type": "@app"
+    },
+    {
+      "type": "event-consent",
+      "name": "Event Consent Form",
+      "limit": 1
+    },
+    {
+      "type": "add-to-cart",
+      "name": "Add to Cart Button",
+      "limit": 1
     }
   ]
 }
 {% endschema %}
-

@@ -186,7 +186,7 @@
         "title": "Puja Personal: Un Diálogo Sagrado con lo Divino",
         "title_tag": "h2",
         "title_font_style": "h3",
-        "description": "{{ page.content }}",
+        "description": "",
         "credits": ""
       }
     }

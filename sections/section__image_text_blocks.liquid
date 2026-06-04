@@ -48,10 +48,10 @@
           assign image_classes = image_classes | strip
         %}
 
-        <div class="relative w-full h-full flex items-center justify-center {{ image_container_classes }}"
-          {% if block.settings.height != 'auto' %}style="--image-height: {{ block.settings.height }};"{% endif %}
-          {% if block.settings.desktop_height != 'inherit' %}style="{% if block.settings.height == 'auto' %}--image-height-desktop: {{ block.settings.desktop_height }};{% else %}--image-height: {{ block.settings.height }}; --image-height-desktop: {{ block.settings.desktop_height }};{% endif %}"{% endif %}
-        >
+ <div class="relative w-full h-full flex items-center justify-center {{ image_container_classes }}"
+  style="{% if block.settings.height != 'auto' %}--image-height: {{ block.settings.height }};{% endif %}{% if block.settings.desktop_height != 'inherit' %}--image-height-desktop: {{ block.settings.desktop_height }};{% endif %}"
+>
+
           {% if block.settings.image %}
             {% render 'lazy-image',
               image: block.settings.image,

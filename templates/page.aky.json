@@ -36,45 +36,76 @@
         "border_radius": 16,
         "aspect_ratio": "auto",
         "aspect_ratio_desktop": "4/3",
-        "image": "shopify://shop_images/aky-hero.jpg",
-        "image_desktop": "shopify://shop_images/aky-hero.jpg",
+        "image": "shopify://shop_images/2027-02-12-p-0554-mobile.png",
+        "image_desktop": "shopify://shop_images/2027-02-12-p-0554.jpg",
         "bg_color": "#16254c",
         "content_width": "max-w-5xl",
         "text_align": "text-left",
         "text_color": "#ffffff",
         "title": "Atma Kriya Yoga",
         "title_font_style": "h3",
-        "subtitle": "<p>Experimenta un sistema yóguico completo que te ayudará a sumergirte en tu corazón y conectar con lo Divino.</p>",
+        "subtitle": "<p>CURSOS DE MEDITACIÓN Y YOGA</p><p>Experimenta un sistema yóguico completo que te ayudará a sumergirte en tu corazón y conectar con lo Divino.</p>",
         "button_text": "",
         "button_url": "",
+        "button_anchor": "",
         "button_style": "btn",
         "anchor_to_pricing": false,
         "video_title": "",
-        "video_url": "shopify://files/videos/Start-your-Journey-with-Yoga-Meditation.mp4",
-        "poster_video": "shopify://files/videos/Start-your-Journey-with-Yoga-Meditation.mp4",
+        "video_url": "shopify://files/videos/Soul Awakening Bhakti Marga_681c4d11-a234-4173-b9b9-43a1aef70982.mp4",
+        "poster_image": "shopify://shop_images/Screenshot_2026-05-09_at_8.09.18_PM.png",
+        "poster_image_desktop": "shopify://shop_images/Screenshot_2026-05-09_at_8.09.18_PM.png",
+        "poster_video": "shopify://files/videos/Soul Awakening Bhakti Marga_681c4d11-a234-4173-b9b9-43a1aef70982.mp4",
         "horizontal_position": "justify-center",
         "vertical_position": "items-end"
       }
     },
-    "bm_event_slider_FakRgW": {
-      "type": "BM-event-slider",
-      "name": "Product Carousel",
+    "bm_carrusel_eventos_3NaKid": {
+      "type": "bm-carrusel-eventos",
+      "name": "BM - Carrusel Eventos",
       "settings": {
-        "product_collection": "events",
-        "set_dark_theme": true,
-        "apply_gradient": true,
-        "title": "Próximos cursos",
-        "title_tag": "h2",
-        "cta_label": "",
-        "cta_url": "",
-        "padding_top": "pt-xl",
-        "padding_bottom": "pb-xl",
-        "desktop_padding_top": "inherit",
-        "desktop_padding_bottom": "inherit"
+        "title": "Próximos Cursos",
+        "collection": "atma-kriya-yoga",
+        "products_count": 8
+      }
+    },
+    "section_image_text_blocks_Xfh44d": {
+      "type": "section__image_text_blocks",
+      "blocks": {
+        "content_block_8FN3f3": {
+          "type": "content_block",
+          "settings": {
+            "title": "Solicitar un curso",
+            "title_tag": "h3",
+            "title_font_style": "h4",
+            "description": "<p>¿No hay próximos cursos o profesores en tu zona? </p><p>Ponte en contacto con nosotros, haremos todo lo posible para ayudarle a comenzar tu viaje de Atma Kriya Yoga.</p>",
+            "credits": "",
+            "cta_url": "shopify://pages/request-a-course",
+            "cta_label": "Solicitar ahora",
+            "cta_2_url": "",
+            "cta_2_label": "",
+            "text_align": "left",
+            "desktop_text_align": "left",
+            "vertical_padding": "py-md",
+            "vertical_padding_desktop": "tabletl:py-md"
+          }
+        }
+      },
+      "block_order": [
+        "content_block_8FN3f3"
+      ],
+      "name": "Solicitar curso si no hay",
+      "settings": {
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "desktop_margin_top": "tabletl:mt-0",
+        "desktop_margin_bottom": "tabletl:mb-0",
+        "vertical_align": "top",
+        "flip_columns_desktop": false
       }
     },
     "section_hero_EmDBMy": {
       "type": "section__hero",
+      "disabled": true,
       "custom_css": [
         ".hero__content-wrapper {background: #0000004a; z-index: 1; position: sticky;}"
       ],
@@ -96,7 +127,7 @@
         "border_radius": 0,
         "aspect_ratio": "9/16",
         "aspect_ratio_desktop": "16/9",
-        "image_desktop": "shopify://shop_images/Asana.jpg",
+        "image_desktop": "shopify://shop_images/2027-02-12-p-0554.jpg",
         "bg_color": "",
         "content_width": "max-w-5xl",
         "text_align": "text-center",
@@ -106,6 +137,7 @@
         "subtitle": "",
         "button_text": "",
         "button_url": "",
+        "button_anchor": "",
         "button_style": "btn",
         "anchor_to_pricing": false,
         "video_title": "",
@@ -118,44 +150,39 @@
       "blocks": {
         "image_block_XE4iM8": {
           "type": "image_block",
-          "settings": {}
+          "settings": {
+            "image": "shopify://shop_images/2027-02-12-p-0544.jpg"
+          }
+        },
+        "image_block_RbK3zk": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/2027-02-12-p-0545.jpg"
+          }
         },
         "image_block_pwGRCw": {
           "type": "image_block",
           "settings": {
-            "image": "shopify://shop_images/soul-awakening-grid-image-1.png"
-          }
-        },
-        "image_block_BYhtDy": {
-          "type": "image_block",
-          "settings": {
-            "image": "shopify://shop_images/soul-awakening-grid-image-6.png"
+            "image": "shopify://shop_images/2027-02-12-p-0548.jpg"
           }
         },
         "image_block_MxBkXT": {
           "type": "image_block",
           "settings": {
-            "image": "shopify://shop_images/soul-awakening-grid-image-9.png"
-          }
-        },
-        "image_block_U8hYi8": {
-          "type": "image_block",
-          "settings": {
-            "image": "shopify://shop_images/soul-awakening-grid-image-2.png"
+            "image": "shopify://shop_images/2027-02-12-p-0608.jpg"
           }
         }
       },
       "block_order": [
         "image_block_XE4iM8",
+        "image_block_RbK3zk",
         "image_block_pwGRCw",
-        "image_block_BYhtDy",
-        "image_block_MxBkXT",
-        "image_block_U8hYi8"
+        "image_block_MxBkXT"
       ],
       "name": "Sobre la práctica",
       "settings": {
-        "margin_top": "mt-xxxl",
-        "margin_bottom": "mb-xxxl",
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-md",
         "padding_top": "pt-0",
         "padding_bottom": "pb-0",
         "desktop_margin_top": "inherit",
@@ -166,7 +193,32 @@
         "position": "left",
         "title": "Sobre la práctica",
         "title_tag": "h2",
-        "description": "<p>Con el tiempo, muchos practicantes describen una transformación profunda en su relación con el miedo, la duda y la mente. A través de la respiración, el mantra y la indagación interior, esta práctica deja de sentirse como una técnica y se convierte en una experiencia viva de presencia y conexión con el Ser. Los participantes hablan de una atención más enfocada, una sensación de cercanía con lo Divino y el redescubrimiento de una dimensión más auténtica de sí mismos, más allá de las etiquetas de éxito, fracaso o limitación.</p>"
+        "description": "<p>Atma Kriya Yoga es un sistema yóguico completo que incluye meditación, así como ejercicios energéticos y físicos. La práctica es completa y lo suficientemente flexible como para incorporarla a un estilo de vida ajetreado.<br/><br/>Con el tiempo, muchos practicantes describen una transformación profunda en su relación con el miedo, la duda y la mente. A través de la respiración, el mantra y la indagación interior, esta práctica deja de sentirse como una técnica y se convierte en una experiencia viva de presencia y conexión con el Ser. Los participantes hablan de una atención más enfocada, una sensación de cercanía con lo Divino y el redescubrimiento de una dimensión más auténtica de sí mismos, más allá de las etiquetas de éxito, fracaso o limitación.</p>"
+      }
+    },
+    "section_text_content_DmEjLK": {
+      "type": "section__text-content",
+      "custom_css": [
+        "{font-size: 22px;}"
+      ],
+      "name": "Beneficios AKY",
+      "settings": {
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "padding_top": "pt-0",
+        "padding_bottom": "pb-0",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "tabletl:mb-0",
+        "desktop_padding_top": "inherit",
+        "desktop_padding_bottom": "tabletl:pb-0",
+        "max_width": "",
+        "pretitle": "",
+        "title": "¿Qué es Atma Kriya Yoga?",
+        "title_tag": "h3",
+        "title_font_style": "h4",
+        "description": "\"Atma Kriya Yoga trata sobre la relación de Amor entre nosotros y Dios. \n\nEn esta relación de Amor que tienes con lo Divino, intenta perderte en ella. Dios se convertirá en lo más importante. Este es nuestro único objetivo y lo único que hay que lograr es realizar este Amor de Dios.\n\nEn Atma Kriya Yoga, todos estos ejercicios, todo este prānāyāma y todo este canto se hacen únicamente para complacer a lo Divino, a la Divinidad que hay dentro de ti. Lo haces para despertar esa Divinidad que está profunda dentro de todos nosotros. Y no debes olvidar que lo haces porque amas a Dios, porque te amas a ti mismo, porque amas a todos. Todo se trata de esta pureza del Amor.\n\nTodo de lo que he estado hablando es solo sobre el Amor. Solo existe esto. Nunca he hablado de otra cosa. Incluso cuando hablo de bhakti, es simplemente el Amor por Dios. Este Amor es la única realidad que conozco. Y esta es la única realidad que quiero que todos vosotros conozcáis: que vosotros también estáis constantemente en este Amor de Dios. Todas las prácticas que vais a realizar tienen como fin desarrollar este Amor, hacerlo crecer.\"",
+        "description_font_style": "p",
+        "credits": "Paramahamsa Sri Swami Vishwananda durante la primera iniciación de Atma Kriya Yoga el 22 de marzo de 2007"
       }
     },
     "section_accordion_bPkzp9": {
@@ -184,13 +236,6 @@
           "settings": {
             "title": "Técnicas de meditación",
             "content": "<p>La concentración y el enfoque te ayudan a llevar la consciencia a tus acciones diarias para que puedas trascender la dualidad de la existencia humana.</p>"
-          }
-        },
-        "accordion_item_ifjmNr": {
-          "type": "accordion_item",
-          "settings": {
-            "title": "",
-            "content": ""
           }
         },
         "accordion_item_bb6e9Y": {
@@ -245,7 +290,7 @@
         "accordion_item_wWaaBW": {
           "type": "accordion_item",
           "settings": {
-            "title": "Iniciación shaktipat",
+            "title": "Iniciación Shaktipat",
             "content": "<p>El curso culmina con una hermosa iniciación individual en la que se te otorga la gracia y la bendición de todos los Maestros de <em>kriya-yoga</em>. </p>"
           }
         }
@@ -253,7 +298,6 @@
       "block_order": [
         "accordion_item_MkAi9b",
         "accordion_item_HWmQhF",
-        "accordion_item_ifjmNr",
         "accordion_item_bb6e9Y",
         "accordion_item_D9wLcz",
         "accordion_item_hG8kz3",
@@ -277,48 +321,7 @@
         "title": "Detalles del curso",
         "cta_url": "",
         "cta_label": "",
-        "title_position": "left"
-      }
-    },
-    "section_image_text_blocks_Xfh44d": {
-      "type": "section__image_text_blocks",
-      "blocks": {
-        "image_block_k6rWMK": {
-          "type": "image_block",
-          "settings": {
-            "height": "auto",
-            "desktop_height": "auto"
-          }
-        },
-        "content_block_8FN3f3": {
-          "type": "content_block",
-          "settings": {
-            "title": "Solicitar un curso",
-            "title_tag": "h3",
-            "title_font_style": "h4",
-            "description": "<p>¿No hay próximos cursos o profesores en tu zona? </p><p>Ponte en contacto con nosotros, haremos todo lo posible para ayudarle a comenzar tu viaje de Atma Kriya Yoga.</p>",
-            "credits": "",
-            "cta_url": "shopify://pages/request-a-course",
-            "cta_label": "Solicitar ahora",
-            "text_align": "left",
-            "desktop_text_align": "inherit",
-            "vertical_padding": "py-lg",
-            "vertical_padding_desktop": "tabletl:py-xxl"
-          }
-        }
-      },
-      "block_order": [
-        "image_block_k6rWMK",
-        "content_block_8FN3f3"
-      ],
-      "disabled": true,
-      "settings": {
-        "margin_top": "mt-xl",
-        "margin_bottom": "mb-0",
-        "desktop_margin_top": "tabletl:mt-xxxl",
-        "desktop_margin_bottom": "tabletl:mb-xl",
-        "vertical_align": "center",
-        "flip_columns_desktop": false
+        "title_position": "top"
       }
     },
     "section_image_text_blocks_PHhidM": {
@@ -335,13 +338,15 @@
         "content_block_gVQiM6": {
           "type": "content_block",
           "settings": {
-            "title": "Lineaje Kriya",
+            "title": "Linaje Kriya",
             "title_tag": "h3",
             "title_font_style": "h4",
             "description": "<p>Atma Kriya Yoga es absolutamente único. Aunque las técnicas aquietan la mente, el objetivo espiritual es despertar el alma en su relación eterna con Dios mediante el cultivo de diversas formas de <em>bhakti</em>: amor y devoción.<br/><br/>A medida que tu práctica se hace más profunda, las cualidades divinas comienzan a manifestarse de forma natural: paz, autocontrol, fuerza, sabiduría, humildad, compasión, vitalidad y mucho más.<br/><br/>Gracias a la gracia de la iniciación <em>shaktipat</em>, las técnicas son lo suficientemente sencillas como para que las aprendan los principiantes, pero lo suficientemente poderosas como para llevar incluso a los meditadores más avanzados a nuevas cotas de conexión divina.</p>",
             "credits": "",
             "cta_url": "",
             "cta_label": "",
+            "cta_2_url": "",
+            "cta_2_label": "",
             "text_align": "left",
             "desktop_text_align": "inherit",
             "vertical_padding": "py-lg",
@@ -354,12 +359,12 @@
         "content_block_gVQiM6"
       ],
       "custom_css": [],
-      "name": "Lineaje Kriya",
+      "name": "Linaje Kriya",
       "settings": {
-        "margin_top": "mt-xl",
+        "margin_top": "mt-sm",
         "margin_bottom": "mb-0",
-        "desktop_margin_top": "tabletl:mt-xxxl",
-        "desktop_margin_bottom": "tabletl:mb-xl",
+        "desktop_margin_top": "tabletl:mt-sm",
+        "desktop_margin_bottom": "tabletl:mb-sm",
         "vertical_align": "center",
         "flip_columns_desktop": false
       }
@@ -371,32 +376,36 @@
           "type": "content_block",
           "settings": {
             "image": "shopify://shop_images/teacher-yashasvini.jpg",
-            "content": "<p><strong>PEACE IN THE CHAOS</strong><br/>'I'd been searching for many years for \"something that was missing\" in my life. I found it in Atma Kriya Yoga. It helped me connect to my heart and find peace in the chaos of my life as a single mother of three kids. And I can fit it in two minutes here and 10 minutes there throughout my day. Just those few moments each day have changed my life for the better.'</p>",
-            "credits": "Viktorija | Ireland"
+            "content": "<p><strong>PAZ EN EL CAOS</strong><br/>'Durante muchos años busqué \"algo que me faltaba\" en la vida. Lo encontré en el Atma Kriya Yoga. Me ayudó a conectar con mi corazón y a encontrar la paz en el caos de mi vida como madre soltera de tres hijos. Y puedo dedicarle dos minutos aquí y diez allá a lo largo del día. Esos pocos momentos diarios han cambiado mi vida para mejor'</p>",
+            "credits": "Viktorija | Ireland",
+            "content_font_size": 11
           }
         },
         "content_block_VLafxC": {
           "type": "content_block",
           "settings": {
             "image": "shopify://shop_images/ramshwardas.webp",
-            "content": "<p><strong>HEART OPENING</strong><br/>'Over 35 years, I learned 112 kriya techniques, but my heart never opened until I learned Atma Kriya Yoga...Atma Kriya Yoga is the only one that awakens love. It went right to my soul and helped me realise I could love everybody. I'd never received Shaktipat (decent of guru's grace) before...It was like my old computer had been given new software, and I was learning to live in a new paradigm.'</p>",
-            "credits": "Swamini Pratibha | Canada"
+            "content": "<p><strong>APERTURA DEL CORAZÓN</strong></p><p>'Durante más de 35 años, aprendí 112 técnicas de kriya, pero mi corazón nunca se abrió hasta que aprendí Atma Kriya Yoga... Atma Kriya Yoga es el único que despierta el amor. Llegó directamente a mi alma y me ayudó a darme cuenta de que podía amar a todos. Nunca antes había recibido Shaktipat (la gracia del gurú)... Fue como si a mi vieja computadora le hubieran dado un nuevo software y estuviera aprendiendo a vivir en un nuevo paradigma'</p>",
+            "credits": "Swamini Pratibha | Canada",
+            "content_font_size": 12
           }
         },
         "content_block_kmn7Bt": {
           "type": "content_block",
           "settings": {
             "image": "shopify://shop_images/teacher-saketharaman.jpg",
-            "content": "<p><strong>FOUNTAIN OF ETERNAL LOVE</strong><br/>'The practice opened up a deep fountain of eternal love and a profound peace that I’d been looking for. Through it, I came to realise that Atma Kriya Yoga is Bhagavan, God Himself. Over time, I came to experience that each breath is not my own, it is Him who is breathing. It is Him who is seeing. It is Him who is perceiving.'</p>",
-            "credits": "Shivani | Slovenia"
+            "content": "<p><strong>FUENTE DE AMOR ETERNO</strong></p><p>'La práctica abrió una profunda fuente de amor eterno y una paz profunda que había estado buscando. A través de ella, llegué a comprender que Atma Kriya Yoga es Bhagavan, Dios mismo. Con el tiempo, llegué a experimentar que cada respiración no es mía, es Él quien respira. Es Él quien ve. Es Él quien percibe'</p>",
+            "credits": "Shivani | Slovenia",
+            "content_font_size": 12
           }
         },
         "content_block_7eHX9f": {
           "type": "content_block",
           "settings": {
             "image": "shopify://shop_images/teacher-rishi-aaradhaka.jpg",
-            "content": "<p><strong>SPEAKS TO GREATNESS</strong><br/>'Over the years, I’ve studied and researched many different Kriya lineages. While some masters–through their lineage–can give Shaktipat Initiation, Paramahamsa Vishwananda is the only one I know of who has ever been allowed to initiate hundreds of others to give Shaktipat. This speaks to the greatness of who He is, and what He is here to do.'</p>",
-            "credits": "Jaganmohini Das | Bulgaria"
+            "content": "<p><strong>HABLA DE LA GRANDEZA </strong></p><p>'A lo largo de los años, he estudiado e investigado muchos linajes de Kriya diferentes. Si bien algunos maestros, a través de su linaje, pueden impartir la Iniciación Shaktipat, Paramahamsa Vishwananda es el único que conozco al que se le ha permitido iniciar a cientos de personas para impartir Shaktipat. Esto habla de la grandeza de quién es Él y de la misión que ha venido a cumplir'</p>",
+            "credits": "Jaganmohini Das | Bulgaria",
+            "content_font_size": 12
           }
         }
       },
@@ -408,19 +417,20 @@
       ],
       "name": "Experiencias",
       "settings": {
-        "padding_top": "pt-xxxl",
+        "padding_top": "pt-sm",
         "padding_bottom": "pb-0",
         "desktop_padding_top": "inherit",
-        "desktop_padding_bottom": "inherit",
+        "desktop_padding_bottom": "tabletl:pb-0",
         "title": "La práctica deja de ser instrucción y se convierte en experiencia",
-        "title_tag": "h4"
+        "title_tag": "h5",
+        "title_font_size": 34
       }
     },
     "section_rich_text_TAJheq": {
       "type": "section__rich-text",
-      "name": "Rich Text Section",
+      "name": "Descubre otra Y&M",
       "settings": {
-        "margin_top": "mt-xxl",
+        "margin_top": "mt-md",
         "margin_bottom": "mb-0",
         "padding_top": "pt-0",
         "padding_bottom": "pb-0",
@@ -487,11 +497,12 @@
   "order": [
     "main",
     "section_hero_cBpMpY",
-    "bm_event_slider_FakRgW",
+    "bm_carrusel_eventos_3NaKid",
+    "section_image_text_blocks_Xfh44d",
     "section_hero_EmDBMy",
     "section_text_image_grid_NcYma4",
+    "section_text_content_DmEjLK",
     "section_accordion_bPkzp9",
-    "section_image_text_blocks_Xfh44d",
     "section_image_text_blocks_PHhidM",
     "section_review_carousel_rxy9jF",
     "section_rich_text_TAJheq",
