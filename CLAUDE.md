@@ -14,8 +14,15 @@ Store: `d016j0-nz.myshopify.com` | Theme: SEED v1.0.0 | Theme ID: `183370088792`
 # Start local dev server (mirrors dev.ps1)
 shopify theme dev --store d016j0-nz.myshopify.com
 
-# Push to live theme
-shopify theme push --store d016j0-nz.myshopify.com --theme 183370088792 --allow-live
+# Push to live theme (SAFE — ignores config/settings_data.json so admin-edited
+# content like section photos, footer legal text, and social links is never wiped)
+.\push.ps1
+
+# Pull admin/editor changes down into the repo (run before committing settings)
+shopify theme pull --store d016j0-nz.myshopify.com --theme 183370088792
+
+# Raw push (AVOID — overwrites admin content with whatever is in local files)
+# shopify theme push --store d016j0-nz.myshopify.com --theme 183370088792 --allow-live
 
 # Validate JSON locale files
 node -e "const fs=require('fs');JSON.parse(fs.readFileSync('locales/es.json','utf8'));console.log('OK')"

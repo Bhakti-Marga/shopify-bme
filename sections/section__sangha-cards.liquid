@@ -58,11 +58,14 @@
     flex-direction: column;
   }
 
+  /* OPCIÓN C — ratio portrait 2/3, sin recorte agresivo */
   .scard__img {
     width: 100%;
-    height: 220px;
+    aspect-ratio: 2/3;
     object-fit: cover;
+    object-position: center 15%;
     display: block;
+    flex-shrink: 0;
   }
 
   .scard__body {
@@ -159,7 +162,7 @@
 
       <!-- Templo Bhava Narasimha -->
       <div class="scard">
-        <img class="scard__img" src="https://picsum.photos/seed/temple1/400/220" alt="Templo Bhava Narasimha" loading="lazy">
+        <img class="scard__img" src="{% if section.settings.img_templo_bhava %}{{ section.settings.img_templo_bhava | image_url: width: 400 }}{% else %}https://cdn.shopify.com/s/files/1/0929/1415/5864/files/BN-BN.png?v=1778240839{% endif %}" alt="Templo Bhava Narasimha" loading="lazy">
         <div class="scard__body">
           <span class="scard__badge scard__badge--temple">Templo</span>
           <h3 class="scard__name">Templo Bhava Narasimha</h3>
@@ -175,7 +178,7 @@
 
       <!-- Templo Hari Hara -->
       <div class="scard">
-        <img class="scard__img" src="https://picsum.photos/seed/temple2/400/220" alt="Templo Hari Hara" loading="lazy">
+        <img class="scard__img" src="{% if section.settings.img_templo_harihara %}{{ section.settings.img_templo_harihara | image_url: width: 400 }}{% else %}https://cdn.shopify.com/s/files/1/0929/1415/5864/files/HariHara.png?v=1778842897{% endif %}" alt="Templo Hari Hara" loading="lazy">
         <div class="scard__body">
           <span class="scard__badge scard__badge--temple">Templo</span>
           <h3 class="scard__name">Templo Hari Hara</h3>
@@ -193,7 +196,7 @@
 
       <!-- Sangha Galicia -->
       <div class="scard">
-        <img class="scard__img" src="https://picsum.photos/seed/sangha1/400/220" alt="Sangha Galicia" loading="lazy">
+        <img class="scard__img" src="{% if section.settings.img_sangha_galicia %}{{ section.settings.img_sangha_galicia | image_url: width: 400 }}{% else %}https://picsum.photos/seed/sangha1/400/220{% endif %}" alt="Sangha Galicia" loading="lazy">
         <div class="scard__body">
           <span class="scard__badge scard__badge--sangha">Sangha</span>
           <h3 class="scard__name">Sangha Galicia</h3>
@@ -207,25 +210,9 @@
         </div>
       </div>
 
-      <!-- Sangha Valencia -->
-      <div class="scard">
-        <img class="scard__img" src="https://picsum.photos/seed/sangha2/400/220" alt="Sangha Valencia" loading="lazy">
-        <div class="scard__body">
-          <span class="scard__badge scard__badge--sangha">Sangha</span>
-          <h3 class="scard__name">Sangha Valencia</h3>
-          <p class="scard__city">📍 Valencia</p>
-          <div class="scard__tags">
-            <span class="scard__tag">Clases de conocimiento</span>
-            <span class="scard__tag">Canto OM</span>
-            <span class="scard__tag">Kirtan</span>
-          </div>
-          <a href="/pages/sangha-valencia" class="scard__btn">Ver Sangha</a>
-        </div>
-      </div>
-
       <!-- Sangha Barcelona -->
       <div class="scard">
-        <img class="scard__img" src="https://picsum.photos/seed/sangha3/400/220" alt="Sangha Barcelona" loading="lazy">
+        <img class="scard__img" src="{% if section.settings.img_sangha_barcelona %}{{ section.settings.img_sangha_barcelona | image_url: width: 400 }}{% else %}https://picsum.photos/seed/sangha3/400/220{% endif %}" alt="Sangha Barcelona" loading="lazy">
         <div class="scard__body">
           <span class="scard__badge scard__badge--sangha">Sangha</span>
           <h3 class="scard__name">Sangha Barcelona</h3>
@@ -241,7 +228,7 @@
 
       <!-- Sangha Gipuzkoa -->
       <div class="scard">
-        <img class="scard__img" src="https://picsum.photos/seed/sangha4/400/220" alt="Sangha Gipuzkoa" loading="lazy">
+        <img class="scard__img" src="{% if section.settings.img_sangha_gipuzkoa %}{{ section.settings.img_sangha_gipuzkoa | image_url: width: 400 }}{% else %}https://picsum.photos/seed/sangha4/400/220{% endif %}" alt="Sangha Gipuzkoa" loading="lazy">
         <div class="scard__body">
           <span class="scard__badge scard__badge--sangha">Sangha</span>
           <h3 class="scard__name">Sangha Gipuzkoa</h3>
@@ -256,7 +243,7 @@
 
       <!-- Sangha Euskadi -->
       <div class="scard">
-        <img class="scard__img" src="https://picsum.photos/seed/sangha5/400/220" alt="Sangha Euskadi" loading="lazy">
+        <img class="scard__img" src="{% if section.settings.img_sangha_euskadi %}{{ section.settings.img_sangha_euskadi | image_url: width: 400 }}{% else %}https://picsum.photos/seed/sangha5/400/220{% endif %}" alt="Sangha Euskadi" loading="lazy">
         <div class="scard__body">
           <span class="scard__badge scard__badge--sangha">Sangha</span>
           <h3 class="scard__name">Sangha Euskadi</h3>
@@ -271,7 +258,7 @@
 
       <!-- Sangha Málaga -->
       <div class="scard">
-        <img class="scard__img" src="https://picsum.photos/seed/sangha6/400/220" alt="Sangha Málaga" loading="lazy">
+        <img class="scard__img" src="{% if section.settings.img_sangha_malaga %}{{ section.settings.img_sangha_malaga | image_url: width: 400 }}{% else %}https://picsum.photos/seed/sangha6/400/220{% endif %}" alt="Sangha Málaga" loading="lazy">
         <div class="scard__body">
           <span class="scard__badge scard__badge--sangha">Sangha</span>
           <h3 class="scard__name">Sangha Málaga</h3>
@@ -287,7 +274,7 @@
 
       <!-- Sangha Riba-Roja -->
       <div class="scard">
-        <img class="scard__img" src="https://picsum.photos/seed/sangha7/400/220" alt="Sangha Riba-Roja" loading="lazy">
+        <img class="scard__img" src="{% if section.settings.img_sangha_ribaroja %}{{ section.settings.img_sangha_ribaroja | image_url: width: 400 }}{% else %}https://picsum.photos/seed/sangha7/400/220{% endif %}" alt="Sangha Riba-Roja" loading="lazy">
         <div class="scard__body">
           <span class="scard__badge scard__badge--sangha">Sangha</span>
           <h3 class="scard__name">Sangha Riba-Roja</h3>
@@ -302,7 +289,7 @@
 
       <!-- Sangha Canals -->
       <div class="scard">
-        <img class="scard__img" src="https://picsum.photos/seed/sangha8/400/220" alt="Sangha Canals" loading="lazy">
+        <img class="scard__img" src="{% if section.settings.img_sangha_canals %}{{ section.settings.img_sangha_canals | image_url: width: 400 }}{% else %}https://picsum.photos/seed/sangha8/400/220{% endif %}" alt="Sangha Canals" loading="lazy">
         <div class="scard__body">
           <span class="scard__badge scard__badge--sangha">Sangha</span>
           <h3 class="scard__name">Sangha Canals</h3>
@@ -318,7 +305,7 @@
 
       <!-- Sangha Madrid -->
       <div class="scard">
-        <img class="scard__img" src="https://picsum.photos/seed/sangha9/400/220" alt="Sangha Madrid" loading="lazy">
+        <img class="scard__img" src="{% if section.settings.img_sangha_madrid %}{{ section.settings.img_sangha_madrid | image_url: width: 400 }}{% else %}https://picsum.photos/seed/sangha9/400/220{% endif %}" alt="Sangha Madrid" loading="lazy">
         <div class="scard__body">
           <span class="scard__badge scard__badge--sangha">Sangha</span>
           <h3 class="scard__name">Sangha Madrid</h3>
@@ -353,6 +340,61 @@
       "id": "subtitle",
       "label": "Subtítulo de la sección",
       "default": "Encuentra la sangha o templo más cercano a ti"
+    },
+    {
+      "type": "header",
+      "content": "Imágenes de las tarjetas",
+      "info": "Sube una foto para cada comunidad. Si lo dejas vacío se muestra una imagen de marcador de posición."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_templo_bhava",
+      "label": "Templo Bhava Narasimha"
+    },
+    {
+      "type": "image_picker",
+      "id": "img_templo_harihara",
+      "label": "Templo Hari Hara"
+    },
+    {
+      "type": "image_picker",
+      "id": "img_sangha_galicia",
+      "label": "Sangha Galicia"
+    },
+    {
+      "type": "image_picker",
+      "id": "img_sangha_barcelona",
+      "label": "Sangha Barcelona"
+    },
+    {
+      "type": "image_picker",
+      "id": "img_sangha_gipuzkoa",
+      "label": "Sangha Gipuzkoa"
+    },
+    {
+      "type": "image_picker",
+      "id": "img_sangha_euskadi",
+      "label": "Sangha Euskadi"
+    },
+    {
+      "type": "image_picker",
+      "id": "img_sangha_malaga",
+      "label": "Sangha Málaga"
+    },
+    {
+      "type": "image_picker",
+      "id": "img_sangha_ribaroja",
+      "label": "Sangha Riba-Roja"
+    },
+    {
+      "type": "image_picker",
+      "id": "img_sangha_canals",
+      "label": "Sangha Canals"
+    },
+    {
+      "type": "image_picker",
+      "id": "img_sangha_madrid",
+      "label": "Sangha Madrid"
     }
   ],
   "presets": [

@@ -27,6 +27,25 @@
           "subfooter_nav": "seed-subfooter",
           "legal_address": "Asociación BHAKTI MARGA ESPAÑA, CIF G76198209. Calle Pablo Picasso, 11, 29719 Benamocarra, Málaga. Email: spain@bhaktimarga.es."
         }
+      },
+      "section__sangha-map": {
+        "type": "section__sangha-map",
+        "settings": {
+          "title": "Encuentra tu Sangha",
+          "subtitle": "Descubre tu comunidad Bhakti Marga más cercana en España"
+        }
+      },
+      "section__sangha-cards": {
+        "type": "section__sangha-cards",
+        "settings": {
+          "title": "Nuestras Comunidades",
+          "subtitle": "Encuentra la sangha o templo más cercano a ti",
+          "img_sangha_barcelona": "shopify://shop_images/barcelona.jpg",
+          "img_sangha_malaga": "shopify://shop_images/malaga.png",
+          "img_sangha_ribaroja": "shopify://shop_images/riba_roja.png",
+          "img_sangha_canals": "shopify://shop_images/canals.png",
+          "img_sangha_madrid": "shopify://shop_images/madrid.jpg"
+        }
       }
     },
     "content_for_index": [],
