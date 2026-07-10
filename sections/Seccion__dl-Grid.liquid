@@ -1,0 +1,136 @@
+{% render 'dl-styles' %}
+{%- liquid
+  assign s = section.settings
+-%}
+<div class="dv-scope">
+  <section class="dl-grid dv-pad">
+    {%- if s.eyebrow != blank or s.title != blank or s.body != blank -%}
+      <div class="dl-grid__head">
+        {%- if s.eyebrow != blank -%}<p class="dv-sec-eyebrow">{{ s.eyebrow }}</p>{%- endif -%}
+        {%- if s.title != blank -%}<h2 class="dv-sec-title">{{ s.title }}</h2>{%- endif -%}
+        {%- if s.body != blank -%}<p class="dv-sec-body" style="margin-top:14px">{{ s.body }}</p>{%- endif -%}
+      </div>
+    {%- endif -%}
+    <div class="dl-grid__wrap">
+      {%- for block in section.blocks -%}
+
+        {%- if block.type == 'foto' -%}
+          <div class="dl-cell dl-cell--img" {{ block.shopify_attributes }}>
+            {%- if block.settings.image != blank -%}
+              {{ block.settings.image | image_url: width: 800 | image_tag: alt: '', loading: 'lazy' }}
+            {%- endif -%}
+          </div>
+
+        {%- elsif block.type == 'texto' -%}
+          <div class="dl-cell dl-cell--text"
+            style="background-color:{{ block.settings.bg_color }};"
+            {{ block.shopify_attributes }}>
+            <div class="dl-cell__inner">
+              {%- if block.settings.icon != blank -%}
+                <div class="dl-cell__icon">
+                  {{ block.settings.icon | image_url: width: 80 | image_tag: alt: '', loading: 'lazy' }}
+                </div>
+              {%- endif -%}
+              {%- if block.settings.title != blank -%}
+                <h3 class="dl-cell__title" style="color:{{ block.settings.text_color }}">{{ block.settings.title }}</h3>
+              {%- endif -%}
+              {%- if block.settings.body != blank -%}
+                <p class="dl-cell__body" style="color:{{ block.settings.text_color }}">{{ block.settings.body }}</p>
+              {%- endif -%}
+            </div>
+          </div>
+        {%- endif -%}
+
+      {%- endfor -%}
+    </div>
+  </section>
+</div>
+
+{% stylesheet %}
+  .dv-scope .dl-grid { background: var(--cream-soft) }
+  .dv-scope .dl-grid__head { text-align: center; max-width: 720px; margin: 0 auto 40px; padding: 0 24px }
+
+  .dv-scope .dl-grid__wrap {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 280px;
+    gap: 10px;
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 24px
+  }
+
+  /* Celda base */
+  .dv-scope .dl-cell { overflow: hidden; border-radius: 8px }
+
+  /* Foto */
+  .dv-scope .dl-cell--img img { width: 100%; height: 100%; object-fit: cover; display: block }
+
+  /* Texto */
+  .dv-scope .dl-cell--text { display: flex; align-items: flex-end }
+  .dv-scope .dl-cell__inner { padding: 24px 26px; width: 100% }
+  .dv-scope .dl-cell__icon { margin-bottom: 12px }
+  .dv-scope .dl-cell__icon img { width: 36px; height: 36px; object-fit: contain; opacity: 0.85 }
+  .dv-scope .dl-cell__title { font-size: 1.15rem; font-weight: 700; line-height: 1.25; margin: 0 0 8px }
+  .dv-scope .dl-cell__body { font-size: 0.85rem; line-height: 1.55; margin: 0; opacity: 0.92 }
+
+  @media (max-width: 900px) {
+    .dv-scope .dl-grid__wrap { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 240px }
+  }
+  @media (max-width: 700px) {
+    .dv-scope .dl-grid__wrap { grid-template-columns: 1fr; grid-auto-rows: 260px }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Darshan Grid",
+  "tag": "section",
+  "max_blocks": 12,
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow" },
+    { "type": "text", "id": "title", "label": "Título" },
+    { "type": "textarea", "id": "body", "label": "Texto" }
+  ],
+  "blocks": [
+    {
+      "type": "foto",
+      "name": "Cuadro foto",
+      "settings": [
+        { "type": "image_picker", "id": "image", "label": "Imagen" }
+      ]
+    },
+    {
+      "type": "texto",
+      "name": "Cuadro texto",
+      "settings": [
+        { "type": "image_picker", "id": "icon", "label": "Icono (opcional)" },
+        { "type": "text", "id": "title", "label": "Título" },
+        { "type": "textarea", "id": "body", "label": "Texto" },
+        {
+          "type": "select", "id": "bg_color", "label": "Color de fondo",
+          "options": [
+            { "value": "#1B2A4A", "label": "Navy" },
+            { "value": "#F5F0E8", "label": "Beige" },
+            { "value": "#2D5016", "label": "Verde bosque" },
+            { "value": "#8B4513", "label": "Tierra" },
+            { "value": "#4A1942", "label": "Púrpura oscuro" },
+            { "value": "#C17F24", "label": "Dorado" }
+          ],
+          "default": "#1B2A4A"
+        },
+        {
+          "type": "select", "id": "text_color", "label": "Color de texto",
+          "options": [
+            { "value": "#FFFFFF", "label": "Blanco" },
+            { "value": "#F5F0E8", "label": "Beige claro" },
+            { "value": "#1B2A4A", "label": "Navy" }
+          ],
+          "default": "#FFFFFF"
+        }
+      ]
+    }
+  ],
+  "presets": [{ "name": "Seccion__dl-Grid" }]
+}
+{% endschema %}

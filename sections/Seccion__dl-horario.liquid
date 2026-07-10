@@ -1,0 +1,63 @@
+{% render 'dl-styles' %}
+{%- liquid
+  assign s = section.settings
+-%}
+<div class="dv-scope">
+  <section class="dl-horario dv-pad">
+    {%- if s.anchor != blank -%}<span id="{{ s.anchor }}" class="dl-anchor"></span>{%- endif -%}
+    {%- if s.eyebrow != blank or s.title != blank or s.subtitle != blank -%}
+      <div class="dl-horario__head">
+        {%- if s.eyebrow != blank -%}<p class="dv-sec-eyebrow">{{ s.eyebrow }}</p>{%- endif -%}
+        {%- if s.title != blank -%}<h2 class="dv-sec-title">{{ s.title }}</h2>{%- endif -%}
+        {%- if s.subtitle != blank -%}<p class="dv-sec-body" style="margin-top:12px">{{ s.subtitle }}</p>{%- endif -%}
+      </div>
+    {%- endif -%}
+    <div class="dl-horario__list">
+      {%- for block in section.blocks -%}
+        <div class="dl-hrow" {{ block.shopify_attributes }}>
+          <div class="dl-hrow__time">{{ block.settings.time }}</div>
+          <div class="dl-hrow__body">
+            {%- if block.settings.title != blank -%}<h3>{{ block.settings.title }}</h3>{%- endif -%}
+            {%- if block.settings.text != blank -%}{{ block.settings.text }}{%- endif -%}
+          </div>
+        </div>
+      {%- endfor -%}
+    </div>
+  </section>
+</div>
+{% stylesheet %}
+  .dv-scope .dl-horario{background:var(--cream-soft)}
+  .dv-scope .dl-anchor{position:absolute;top:-90px;left:0}
+  .dv-scope .dl-horario__head{text-align:center;max-width:740px;margin:0 auto 46px;padding:0 24px}
+  .dv-scope .dl-horario__list{max-width:880px;margin:0 auto;padding:0 24px}
+  .dv-scope .dl-hrow{display:grid;grid-template-columns:108px 1fr;gap:26px;padding:24px 0;border-bottom:1px solid var(--rule);align-items:start}
+  .dv-scope .dl-hrow:last-child{border-bottom:0}
+  .dv-scope .dl-hrow__time{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:15px;font-weight:700;color:var(--gold-deep);letter-spacing:.01em;padding-top:3px;white-space:nowrap}
+  .dv-scope .dl-hrow__body h3{font-size:1.2rem;font-weight:600;color:var(--navy);margin:0 0 8px;line-height:1.3}
+  .dv-scope .dl-hrow__body p{margin:0;font-size:15.5px;line-height:1.7;color:var(--muted)}
+  .dv-scope .dl-hrow__body ul{margin:10px 0 0;padding:0;list-style:none}
+  .dv-scope .dl-hrow__body li{position:relative;padding:6px 0 6px 22px;font-size:15px;line-height:1.6;color:var(--ink)}
+  .dv-scope .dl-hrow__body li::before{content:"";position:absolute;left:0;top:13px;width:8px;height:8px;border-radius:50%;background:var(--gold)}
+  @media (max-width:700px){.dv-scope .dl-hrow{grid-template-columns:1fr;gap:8px}.dv-scope .dl-hrow__time{padding-top:0;white-space:normal}}
+{% endstylesheet %}
+{% schema %}
+{
+  "name": "Darshan · Horario",
+  "tag": "section",
+  "max_blocks": 20,
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "El programa" },
+    { "type": "text", "id": "title", "label": "Título", "default": "Horario del día" },
+    { "type": "textarea", "id": "subtitle", "label": "Subtítulo", "default": "Sábado 21 de noviembre de 2026 · Hotel Beatriz Costa y Spa, Costa Teguise" },
+    { "type": "text", "id": "anchor", "label": "ID ancla (para enlaces internos, p. ej. horario)" }
+  ],
+  "blocks": [
+    { "type": "fila", "name": "Fila", "settings": [
+      { "type": "text", "id": "time", "label": "Hora", "default": "12:00 h" },
+      { "type": "text", "id": "title", "label": "Título" },
+      { "type": "richtext", "id": "text", "label": "Descripción (admite lista)" }
+    ] }
+  ],
+  "presets": [{ "name": "Darshan · Horario" }]
+}
+{% endschema %}

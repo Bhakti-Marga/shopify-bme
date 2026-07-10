@@ -1,0 +1,60 @@
+{% render 'dl-styles' %}
+{%- liquid
+  assign s = section.settings
+-%}
+<div class="dv-scope">
+  <section class="dl-faq dv-pad">
+    <div class="dl-faq__inner">
+      <div class="dl-faq__head">
+        <div>
+          {%- if s.eyebrow != blank -%}<p class="dv-sec-eyebrow">{{ s.eyebrow }}</p>{%- endif -%}
+          {%- if s.title != blank -%}<h2 class="dv-sec-title">{{ s.title }}</h2>{%- endif -%}
+        </div>
+        {%- if s.cta_label != blank -%}<a href="{{ s.cta_link | default: '#' }}" class="dv-btn dv-btn--outline">{{ s.cta_label }}</a>{%- endif -%}
+      </div>
+      <div class="dl-faq__list">
+        {%- for block in section.blocks -%}
+          <details class="dl-faq-item" {{ block.shopify_attributes }}>
+            <summary>{{ block.settings.question }}</summary>
+            <div class="dl-answer">{{ block.settings.answer }}</div>
+          </details>
+        {%- endfor -%}
+      </div>
+    </div>
+  </section>
+</div>
+{% stylesheet %}
+  .dv-scope .dl-faq{background:var(--cream)}
+  .dv-scope .dl-faq__inner{max-width:880px;margin:0 auto;padding:0 24px}
+  .dv-scope .dl-faq__head{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;margin-bottom:32px;flex-wrap:wrap}
+  .dv-scope .dl-faq__list{display:flex;flex-direction:column;gap:10px}
+  .dv-scope details.dl-faq-item{background:#fff;border-radius:14px;overflow:hidden;border:1px solid var(--rule)}
+  .dv-scope details.dl-faq-item[open]{box-shadow:0 8px 24px -12px rgba(22,37,76,.18)}
+  .dv-scope details.dl-faq-item summary{list-style:none;cursor:pointer;padding:22px 26px;font-size:16px;font-weight:600;color:var(--navy);display:flex;align-items:center;justify-content:space-between;gap:16px;line-height:1.4}
+  .dv-scope details.dl-faq-item summary::-webkit-details-marker{display:none}
+  .dv-scope details.dl-faq-item summary::after{content:"+";font-size:22px;font-weight:300;color:var(--gold-deep);transition:transform .2s;flex-shrink:0}
+  .dv-scope details.dl-faq-item[open] summary::after{content:"−"}
+  .dv-scope details.dl-faq-item .dl-answer{padding:0 26px 22px;font-size:14.5px;line-height:1.75;color:var(--muted)}
+  .dv-scope details.dl-faq-item .dl-answer p{margin:0 0 10px}
+  .dv-scope details.dl-faq-item .dl-answer p:last-child{margin:0}
+{% endstylesheet %}
+{% schema %}
+{
+  "name": "Darshan · FAQ",
+  "tag": "section",
+  "max_blocks": 20,
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Preguntas frecuentes" },
+    { "type": "text", "id": "title", "label": "Título", "default": "¿Tienes alguna duda?" },
+    { "type": "text", "id": "cta_label", "label": "Botón · texto", "default": "Contáctanos" },
+    { "type": "url", "id": "cta_link", "label": "Botón · enlace" }
+  ],
+  "blocks": [
+    { "type": "pregunta", "name": "Pregunta", "settings": [
+      { "type": "text", "id": "question", "label": "Pregunta" },
+      { "type": "richtext", "id": "answer", "label": "Respuesta" }
+    ] }
+  ],
+  "presets": [{ "name": "Darshan · FAQ" }]
+}
+{% endschema %}

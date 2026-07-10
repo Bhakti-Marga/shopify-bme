@@ -1,0 +1,55 @@
+{% render 'dl-styles' %}
+{%- liquid
+  assign s = section.settings
+-%}
+<div class="dv-scope">
+  <section class="dl-icons dv-pad">
+    {%- if s.eyebrow != blank or s.title != blank -%}
+      <div class="dl-icons__head">
+        {%- if s.eyebrow != blank -%}<p class="dv-sec-eyebrow">{{ s.eyebrow }}</p>{%- endif -%}
+        {%- if s.title != blank -%}<h2 class="dv-sec-title">{{ s.title }}</h2>{%- endif -%}
+      </div>
+    {%- endif -%}
+    <div class="dl-icons__grid">
+      {%- for block in section.blocks -%}
+        <article class="dl-icard" {{ block.shopify_attributes }}>
+          <div class="dl-icard__img">{%- if block.settings.image != blank -%}{{ block.settings.image | image_url: width: 500 | image_tag: alt: '', loading: 'lazy' }}{%- endif -%}</div>
+          {%- if block.settings.title != blank -%}<h3>{{ block.settings.title }}</h3>{%- endif -%}
+          {%- if block.settings.text != blank -%}<div class="dl-icard__text">{{ block.settings.text }}</div>{%- endif -%}
+        </article>
+      {%- endfor -%}
+    </div>
+  </section>
+</div>
+{% stylesheet %}
+  .dv-scope .dl-icons{background:var(--white)}
+  .dv-scope .dl-icons__head{text-align:center;max-width:680px;margin:0 auto 56px;padding:0 24px}
+  .dv-scope .dl-icons__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:36px;max-width:1180px;margin:0 auto;padding:0 24px}
+  @media (max-width:700px){.dv-scope .dl-icons__grid{grid-template-columns:1fr;gap:40px}}
+  .dv-scope .dl-icard{text-align:center}
+  .dv-scope .dl-icard__img{aspect-ratio:1/1;max-width:200px;margin:0 auto 22px;border-radius:50%;overflow:hidden;position:relative;box-shadow:0 16px 38px -16px rgba(22,37,76,.3)}
+  .dv-scope .dl-icard__img::after{content:"";position:absolute;inset:0;border-radius:50%;box-shadow:inset 0 0 0 6px #fff, inset 0 0 0 7px rgba(214,191,144,.6);pointer-events:none}
+  .dv-scope .dl-icard__img img{width:100%;height:100%;object-fit:cover;display:block}
+  .dv-scope .dl-icard h3{font-size:1.25rem;font-weight:600;color:var(--navy);margin:0 0 10px;line-height:1.3}
+  .dv-scope .dl-icard__text{font-size:14.5px;line-height:1.75;color:var(--muted)}
+  .dv-scope .dl-icard__text p{margin:0}
+{% endstylesheet %}
+{% schema %}
+{
+  "name": "Darshan · Iconos",
+  "tag": "section",
+  "max_blocks": 6,
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Lo que vivirás" },
+    { "type": "text", "id": "title", "label": "Título", "default": "Celebra la belleza de la vida" }
+  ],
+  "blocks": [
+    { "type": "icono", "name": "Icono", "settings": [
+      { "type": "image_picker", "id": "image", "label": "Imagen" },
+      { "type": "text", "id": "title", "label": "Título" },
+      { "type": "richtext", "id": "text", "label": "Texto" }
+    ] }
+  ],
+  "presets": [{ "name": "Darshan · Iconos" }]
+}
+{% endschema %}

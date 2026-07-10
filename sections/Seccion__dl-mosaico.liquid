@@ -1,0 +1,61 @@
+{% render 'dl-styles' %}
+{%- liquid
+  assign s = section.settings
+-%}
+<div class="dv-scope">
+  <section class="dl-mosaic dv-pad">
+    {%- if s.eyebrow != blank or s.title != blank or s.body != blank -%}
+      <div class="dl-mosaic__head">
+        {%- if s.eyebrow != blank -%}<p class="dv-sec-eyebrow">{{ s.eyebrow }}</p>{%- endif -%}
+        {%- if s.title != blank -%}<h2 class="dv-sec-title">{{ s.title }}</h2>{%- endif -%}
+        {%- if s.body != blank -%}<p class="dv-sec-body" style="margin-top:14px">{{ s.body }}</p>{%- endif -%}
+      </div>
+    {%- endif -%}
+    <div class="dl-mosaic__grid">
+      {%- for block in section.blocks -%}
+        <div class="dl-m" style="grid-column:span {{ block.settings.col_span }};grid-row:span {{ block.settings.row_span }};" {{ block.shopify_attributes }}>
+          {%- if block.settings.image != blank -%}{{ block.settings.image | image_url: width: 1200 | image_tag: alt: '', loading: 'lazy' }}{%- endif -%}
+        </div>
+      {%- endfor -%}
+    </div>
+  </section>
+</div>
+{% stylesheet %}
+  .dv-scope .dl-mosaic{background:var(--cream-soft)}
+  .dv-scope .dl-mosaic__head{text-align:center;max-width:720px;margin:0 auto 40px;padding:0 24px}
+  .dv-scope .dl-mosaic__grid{display:grid;grid-template-columns:repeat(12,1fr);grid-auto-rows:140px;gap:10px;max-width:1240px;margin:0 auto;padding:0 24px}
+  .dv-scope .dl-m{overflow:hidden;border-radius:8px}
+  .dv-scope .dl-m img{width:100%;height:100%;object-fit:cover;display:block}
+  @media (max-width:780px){
+    .dv-scope .dl-mosaic__grid{grid-template-columns:repeat(6,1fr);grid-auto-rows:120px}
+    .dv-scope .dl-m{grid-column:span 3 !important;grid-row:span 1 !important}
+  }
+  @media (max-width:700px){
+    .dv-scope .dl-mosaic__grid{grid-template-columns:1fr;grid-auto-rows:200px}
+    .dv-scope .dl-m{grid-column:span 1 !important;grid-row:span 1 !important}
+  }
+{% endstylesheet %}
+{% schema %}
+{
+  "name": "Darshan · Mosaico",
+  "tag": "section",
+  "max_blocks": 12,
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "El Maestro" },
+    { "type": "text", "id": "title", "label": "Título", "default": "¿Te vendría bien una bendición en tu vida?" },
+    { "type": "textarea", "id": "body", "label": "Texto", "default": "Paramahamsa Vishwananda es un Maestro plenamente realizado, discípulo directo de Mahavatar Babaji y Satguru de renombre internacional." }
+  ],
+  "blocks": [
+    { "type": "imagen", "name": "Imagen", "settings": [
+      { "type": "image_picker", "id": "image", "label": "Imagen" },
+      { "type": "select", "id": "col_span", "label": "Ancho (columnas de 12)", "options": [
+        { "value": "2", "label": "2" }, { "value": "3", "label": "3" }, { "value": "4", "label": "4" }, { "value": "6", "label": "6" }
+      ], "default": "6" },
+      { "type": "select", "id": "row_span", "label": "Alto (filas)", "options": [
+        { "value": "1", "label": "1" }, { "value": "2", "label": "2" }, { "value": "3", "label": "3" }
+      ], "default": "2" }
+    ] }
+  ],
+  "presets": [{ "name": "Darshan · Mosaico" }]
+}
+{% endschema %}

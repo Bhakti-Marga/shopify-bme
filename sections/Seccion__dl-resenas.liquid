@@ -1,0 +1,64 @@
+{% render 'dl-styles' %}
+{%- liquid
+  assign s = section.settings
+-%}
+<div class="dv-scope">
+  <section class="dl-reviews dv-pad">
+    {%- if s.eyebrow != blank or s.title != blank -%}
+      <div class="dl-reviews__head">
+        {%- if s.eyebrow != blank -%}<p class="dv-sec-eyebrow">{{ s.eyebrow }}</p>{%- endif -%}
+        {%- if s.title != blank -%}<h2 class="dv-sec-title">{{ s.title }}</h2>{%- endif -%}
+      </div>
+    {%- endif -%}
+    <div class="dl-reviews__rail">
+      {%- for block in section.blocks -%}
+        <article class="dl-rcard" {{ block.shopify_attributes }}>
+          {%- if block.settings.quote != blank -%}<div class="dl-rcard__quote">{{ block.settings.quote }}</div>{%- endif -%}
+          <div class="dl-rcard__who">
+            <div class="dl-rcard__avatar">{%- if block.settings.avatar != blank -%}{{ block.settings.avatar | image_url: width: 120 | image_tag: alt: '', loading: 'lazy' }}{%- endif -%}</div>
+            <div>
+              {%- if block.settings.name != blank -%}<div class="dl-rcard__name">{{ block.settings.name }}</div>{%- endif -%}
+              {%- if block.settings.role != blank -%}<div class="dl-rcard__role">{{ block.settings.role }}</div>{%- endif -%}
+            </div>
+          </div>
+        </article>
+      {%- endfor -%}
+    </div>
+  </section>
+</div>
+{% stylesheet %}
+  .dv-scope .dl-reviews{background:var(--white)}
+  .dv-scope .dl-reviews__head{text-align:center;max-width:600px;margin:0 auto 50px;padding:0 24px}
+  .dv-scope .dl-reviews__rail{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:1280px;margin:0 auto;padding:0 24px}
+  @media (max-width:980px){.dv-scope .dl-reviews__rail{grid-template-columns:1fr 1fr}}
+  @media (max-width:700px){.dv-scope .dl-reviews__rail{grid-template-columns:1fr}}
+  .dv-scope .dl-rcard{background:var(--cream-soft);border-radius:18px;padding:28px;display:flex;flex-direction:column;gap:18px}
+  .dv-scope .dl-rcard__quote{font-size:15px;line-height:1.7;color:var(--ink)}
+  .dv-scope .dl-rcard__quote p{margin:0}
+  .dv-scope .dl-rcard__quote strong{color:var(--navy);font-weight:600}
+  .dv-scope .dl-rcard__who{display:flex;align-items:center;gap:14px;margin-top:auto}
+  .dv-scope .dl-rcard__avatar{width:46px;height:46px;border-radius:50%;overflow:hidden;background:var(--cream);flex-shrink:0;position:relative}
+  .dv-scope .dl-rcard__avatar img{width:100%;height:100%;object-fit:cover}
+  .dv-scope .dl-rcard__name{font-size:13.5px;color:var(--navy);font-weight:600;line-height:1.25}
+  .dv-scope .dl-rcard__role{font-size:12px;color:var(--muted);line-height:1.25;margin-top:1px}
+{% endstylesheet %}
+{% schema %}
+{
+  "name": "Darshan · Reseñas",
+  "tag": "section",
+  "max_blocks": 12,
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Testimonios" },
+    { "type": "text", "id": "title", "label": "Título", "default": "Lo que cuentan quienes ya lo han vivido" }
+  ],
+  "blocks": [
+    { "type": "resena", "name": "Reseña", "settings": [
+      { "type": "richtext", "id": "quote", "label": "Texto" },
+      { "type": "image_picker", "id": "avatar", "label": "Avatar" },
+      { "type": "text", "id": "name", "label": "Nombre" },
+      { "type": "text", "id": "role", "label": "Rol" }
+    ] }
+  ],
+  "presets": [{ "name": "Darshan · Reseñas" }]
+}
+{% endschema %}

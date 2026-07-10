@@ -1,0 +1,74 @@
+{% render 'dl-styles' %}
+{%- liquid
+  assign s = section.settings
+-%}
+<div class="dv-scope">
+  <section class="dl-hero">
+    <div class="dl-hero__media">
+      {%- if s.image != blank -%}
+        <img class="dl-hero__img" src="{{ s.image | image_url: width: 2200 }}" alt="" loading="eager" width="2200" height="1238" style="object-position:50% {{ s.focal_y | default: 35 }}%;">
+      {%- endif -%}
+    </div>
+    <div class="dl-hero__inner">
+      {%- if s.eyebrow != blank -%}<span class="dv-eyebrow">{{ s.eyebrow }}</span>{%- endif -%}
+      {%- if s.title != blank -%}<h1 class="dl-hero__title">{{ s.title }}</h1>{%- endif -%}
+      {%- if s.subtitle != blank -%}<p class="dl-hero__sub">{{ s.subtitle }}</p>{%- endif -%}
+      {%- if s.meta_date != blank or s.meta_time != blank or s.meta_place != blank -%}
+        <div class="dl-hero__meta">
+          {%- if s.meta_date != blank -%}<span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 9h18M8 3v4M16 3v4"/></svg>{{ s.meta_date }}</span>{%- endif -%}
+          {%- if s.meta_time != blank -%}<span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>{{ s.meta_time }}</span>{%- endif -%}
+          {%- if s.meta_place != blank -%}<span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s-7-7.5-7-13a7 7 0 1 1 14 0c0 5.5-7 13-7 13z"/><circle cx="12" cy="9" r="2.5"/></svg>{{ s.meta_place }}</span>{%- endif -%}
+        </div>
+      {%- endif -%}
+      <div class="dl-hero__ctas">
+        {%- if s.btn1_text != blank -%}<a href="{{ s.btn1_link | default: '#' }}" class="dv-btn dv-btn--gold">{{ s.btn1_text }}</a>{%- endif -%}
+        {%- if s.btn2_text != blank -%}<a href="{{ s.btn2_link | default: '#' }}" class="dv-btn dv-btn--outline-white">{{ s.btn2_text }}</a>{%- endif -%}
+      </div>
+    </div>
+  </section>
+</div>
+{% stylesheet %}
+  .dv-scope .dl-hero{position:relative;color:#fff;min-height:560px;overflow:hidden}
+  .dv-scope .dl-hero__media{position:absolute;inset:0;z-index:0}
+  .dv-scope .dl-hero__img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .dv-scope .dl-hero__media::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,26,55,.35) 0%,rgba(14,26,55,.85) 95%)}
+  .dv-scope .dl-hero__inner{position:relative;z-index:1;max-width:1100px;margin:0 auto;padding:120px 24px 80px;text-align:center}
+  .dv-scope .dl-hero__title{font-size:clamp(2.4rem,6vw,4.75rem);font-weight:500;line-height:1.05;letter-spacing:-.01em;margin:0 0 18px;color:#fff}
+  .dv-scope .dl-hero__sub{font-size:clamp(1.05rem,1.6vw,1.25rem);color:rgba(255,255,255,.85);max-width:50ch;margin:0 auto 28px}
+  .dv-scope .dl-hero__meta{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 18px;margin-bottom:30px;font-size:13.5px;color:rgba(255,255,255,.85)}
+  .dv-scope .dl-hero__meta span{display:inline-flex;align-items:center;gap:8px}
+  .dv-scope .dl-hero__meta svg{opacity:.85}
+  .dv-scope .dl-hero__ctas{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+  /* Short/narrow mobile viewports (small phones, browser chrome visible,
+     or keyboard open) don't have 560px + 200px of vertical room to spare —
+     that forced extra scroll to reach the CTAs and left a lot of dead
+     space above/below the text. Let content define the height and scale
+     the inner padding with the viewport instead of a fixed px jump. */
+  @media (max-width:480px){
+    .dv-scope .dl-hero{min-height:0}
+    .dv-scope .dl-hero__inner{padding:clamp(48px,12vh,64px) 20px clamp(28px,7vh,40px)}
+  }
+{% endstylesheet %}
+{% schema %}
+{
+  "name": "Darshan · Hero",
+  "tag": "section",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Evento especial · Lanzarote 2026" },
+    { "type": "text", "id": "title", "label": "Título", "default": "Darshan en Lanzarote" },
+    { "type": "textarea", "id": "subtitle", "label": "Subtítulo", "default": "Una bendición única e inolvidable de Paramahamsa Vishwananda — Maestro vivo, Satguru e incarnación del Amor Divino." },
+    { "type": "image_picker", "id": "image", "label": "Imagen de fondo" },
+    { "type": "range", "id": "focal_y", "min": 0, "max": 100, "step": 1, "unit": "%", "label": "Enfoque vertical de la imagen (0 = arriba)", "default": 35 },
+    { "type": "header", "content": "Datos del evento (chips)" },
+    { "type": "text", "id": "meta_date", "label": "Fecha", "default": "Sábado, 21 de noviembre de 2026" },
+    { "type": "text", "id": "meta_time", "label": "Hora", "default": "13:00 h CET — apertura de puertas 12:00" },
+    { "type": "text", "id": "meta_place", "label": "Lugar", "default": "Hotel Beatriz Costa y Spa, Costa Teguise" },
+    { "type": "header", "content": "Botones" },
+    { "type": "text", "id": "btn1_text", "label": "Botón 1 · texto", "default": "Reserva tu plaza" },
+    { "type": "url", "id": "btn1_link", "label": "Botón 1 · enlace" },
+    { "type": "text", "id": "btn2_text", "label": "Botón 2 · texto", "default": "Ver el programa" },
+    { "type": "url", "id": "btn2_link", "label": "Botón 2 · enlace" }
+  ],
+  "presets": [{ "name": "Darshan · Hero" }]
+}
+{% endschema %}

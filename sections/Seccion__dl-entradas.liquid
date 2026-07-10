@@ -1,0 +1,118 @@
+{% render 'dl-styles' %}
+{%- liquid
+  assign s = section.settings
+  assign uid = 'dlt-' | append: section.id
+-%}
+<div class="dv-scope">
+  <section class="dl-tickets dv-pad" id="{{ uid }}">
+    {%- if s.anchor != blank -%}<span id="{{ s.anchor }}" class="dl-anchor"></span>{%- endif -%}
+    {%- if s.eyebrow != blank or s.title != blank or s.date != blank -%}
+      <div class="dl-tickets__head">
+        {%- if s.eyebrow != blank -%}<p class="dv-sec-eyebrow">{{ s.eyebrow }}</p>{%- endif -%}
+        {%- if s.title != blank -%}<h2 class="dv-sec-title">{{ s.title }}</h2>{%- endif -%}
+        {%- if s.date != blank -%}<p class="dl-date">{{ s.date }}</p>{%- endif -%}
+      </div>
+    {%- endif -%}
+    <div class="dl-tickets__carousel">
+      <button class="dl-tarrow" aria-label="Anterior" data-prev type="button">‹</button>
+      <div class="dl-tickets__track" data-track>
+        {%- for block in section.blocks -%}
+          <article class="dl-tcard {% if block.settings.featured %}dl-tcard--featured{% endif %}" {{ block.shopify_attributes }}>
+            {%- if block.settings.tag != blank -%}<div class="dl-tcard__tag">{{ block.settings.tag }}</div>{%- endif -%}
+            {%- if block.settings.title != blank -%}<h3 class="dl-tcard__title">{{ block.settings.title }}</h3>{%- endif -%}
+            {%- if block.settings.price != blank -%}<div class="dl-tcard__price">{{ block.settings.price }}</div>{%- endif -%}
+            {%- if block.settings.note != blank -%}<p class="dl-tcard__note">{{ block.settings.note }}</p>{%- endif -%}
+            {%- if block.settings.features != blank -%}<div class="dl-tcard__list">{{ block.settings.features }}</div>{%- endif -%}
+            <div class="dl-tcard__cta">
+              {%- if block.settings.cta_label != blank -%}<a href="{{ block.settings.cta_link | default: '#' }}" class="dv-btn {% if block.settings.featured %}dv-btn--gold{% else %}dv-btn--navy{% endif %}">{{ block.settings.cta_label }}</a>{%- endif -%}
+              {%- if block.settings.limit != blank -%}<p class="dl-tcard__limit">{{ block.settings.limit }}</p>{%- endif -%}
+            </div>
+          </article>
+        {%- endfor -%}
+      </div>
+      <button class="dl-tarrow" aria-label="Siguiente" data-next type="button">›</button>
+    </div>
+    <div class="dl-tickets__dots" data-dots></div>
+  </section>
+</div>
+<script>
+(function(){
+  var root=document.getElementById('{{ uid }}');
+  if(!root)return;
+  var track=root.querySelector('[data-track]');
+  if(!track)return;
+  var prev=root.querySelector('[data-prev]'),next=root.querySelector('[data-next]'),dotsWrap=root.querySelector('[data-dots]');
+  var cards=Array.prototype.slice.call(track.querySelectorAll('.dl-tcard'));
+  function step(){var c=cards[0];return c?c.getBoundingClientRect().width+20:300;}
+  function overflowing(){if(window.matchMedia('(max-width:700px)').matches){return false;}return track.scrollWidth>track.clientWidth+4;}
+  cards.forEach(function(_,i){var b=document.createElement('button');b.type='button';b.setAttribute('aria-label','Entrada '+(i+1));b.addEventListener('click',function(){track.scrollTo({left:step()*i,behavior:'smooth'});});dotsWrap.appendChild(b);});
+  function sync(){var on=overflowing();if(prev)prev.style.display=on?'':'none';if(next)next.style.display=on?'':'none';dotsWrap.style.display=on?'':'none';if(!on)return;var idx=Math.round(track.scrollLeft/step());Array.prototype.forEach.call(dotsWrap.children,function(d,i){d.classList.toggle('is-active',i===idx);});}
+  if(prev)prev.addEventListener('click',function(){track.scrollBy({left:-step(),behavior:'smooth'});});
+  if(next)next.addEventListener('click',function(){track.scrollBy({left:step(),behavior:'smooth'});});
+  track.addEventListener('scroll',sync,{passive:true});window.addEventListener('resize',sync);sync();
+})();
+</script>
+{% stylesheet %}
+  .dv-scope .dl-tickets{background:var(--cream)}
+  .dv-scope .dl-anchor{position:absolute;top:-90px;left:0}
+  .dv-scope .dl-tickets__head{text-align:center;max-width:680px;margin:0 auto 50px;padding:0 24px}
+  .dv-scope .dl-date{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px;color:var(--navy);margin-top:8px;letter-spacing:.04em}
+  .dv-scope .dl-tcard{background:#fff;border-radius:18px;padding:30px 26px;display:flex;flex-direction:column;border:1.5px solid transparent;transition:transform .18s,box-shadow .18s,border-color .18s}
+  .dv-scope .dl-tcard:hover{transform:translateY(-3px);box-shadow:0 18px 40px -20px rgba(22,37,76,.25)}
+  .dv-scope .dl-tcard--featured{border-color:var(--gold);background:linear-gradient(180deg,#fff 0%,var(--cream-soft) 100%)}
+  .dv-scope .dl-tcard__tag{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-deep);font-weight:700;margin-bottom:14px}
+  .dv-scope .dl-tcard__title{font-size:1.3rem;font-weight:600;color:var(--navy);margin:0 0 6px;line-height:1.2}
+  .dv-scope .dl-tcard__price{font-size:2.4rem;font-weight:600;color:var(--navy);line-height:1;margin:14px 0 6px;letter-spacing:-.01em}
+  .dv-scope .dl-tcard__note{font-size:13px;color:var(--muted);margin:0 0 18px;line-height:1.55}
+  .dv-scope .dl-tcard__list{margin:0 0 22px;padding:0;flex:1}
+  .dv-scope .dl-tcard__list ul{margin:0;padding:0;list-style:none}
+  .dv-scope .dl-tcard__list li{font-size:13.5px;line-height:1.55;color:var(--ink);padding:7px 0 7px 22px;position:relative;border-bottom:1px dashed var(--rule)}
+  .dv-scope .dl-tcard__list li:last-child{border-bottom:0}
+  .dv-scope .dl-tcard__list li::before{content:"";position:absolute;left:0;top:14px;width:10px;height:10px;border-radius:50%;background:var(--gold)}
+  .dv-scope .dl-tcard__cta{margin-top:auto}
+  .dv-scope .dl-tcard__cta .dv-btn{width:100%}
+  .dv-scope .dl-tcard__limit{font-size:11px;color:var(--muted);letter-spacing:.06em;text-transform:uppercase;margin-top:10px;text-align:center}
+  .dv-scope .dl-tickets__carousel{position:relative;max-width:1180px;margin:0 auto;padding:0 24px;display:flex;align-items:stretch;gap:10px}
+  .dv-scope .dl-tickets__track{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;padding:6px 2px 12px;flex:1;min-width:0;-ms-overflow-style:none;scrollbar-width:none}
+  .dv-scope .dl-tickets__track::-webkit-scrollbar{display:none}
+  .dv-scope .dl-tickets__track .dl-tcard{flex:0 0 clamp(280px,calc(33.333% - 14px),348px);scroll-snap-align:center}
+  @media (max-width:980px){.dv-scope .dl-tickets__track .dl-tcard{flex:0 0 clamp(240px,84%,348px)}}
+  .dv-scope .dl-tarrow{align-self:center;flex-shrink:0;width:46px;height:46px;border-radius:50%;border:1.5px solid var(--rule);background:#fff;color:var(--navy);font-size:22px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 18px -10px rgba(22,37,76,.35);transition:all .18s}
+  .dv-scope .dl-tarrow:hover{background:var(--navy);color:#fff;border-color:var(--navy)}
+  @media (max-width:700px){.dv-scope .dl-tarrow{display:none}}
+  .dv-scope .dl-tickets__dots{display:flex;justify-content:center;gap:8px;margin-top:16px}
+  .dv-scope .dl-tickets__dots button{width:8px;height:8px;border-radius:50%;border:0;background:var(--rule);cursor:pointer;padding:0;transition:all .2s}
+  .dv-scope .dl-tickets__dots button.is-active{background:var(--gold-deep);width:22px;border-radius:4px}
+  @media (max-width:700px){
+    .dv-scope .dl-tickets__track{display:flex;flex-direction:column;overflow-x:visible;scroll-snap-type:none}
+    .dv-scope .dl-tickets__track .dl-tcard{flex:1 1 auto;width:100%;scroll-snap-align:none}
+    .dv-scope .dl-tickets__dots{display:none}
+  }
+{% endstylesheet %}
+{% schema %}
+{
+  "name": "Darshan · Entradas",
+  "tag": "section",
+  "max_blocks": 8,
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Reserva tu lugar" },
+    { "type": "text", "id": "title", "label": "Título", "default": "Adéntrate en el Amor Divino" },
+    { "type": "text", "id": "date", "label": "Fecha", "default": "Sábado 21 de noviembre de 2026 · 13:00 h CET · puertas 12:00" },
+    { "type": "text", "id": "anchor", "label": "ID ancla (para enlaces internos, p. ej. entradas)" }
+  ],
+  "blocks": [
+    { "type": "entrada", "name": "Entrada", "settings": [
+      { "type": "text", "id": "tag", "label": "Etiqueta" },
+      { "type": "text", "id": "title", "label": "Título" },
+      { "type": "text", "id": "price", "label": "Precio" },
+      { "type": "text", "id": "note", "label": "Nota" },
+      { "type": "richtext", "id": "features", "label": "Características (lista)" },
+      { "type": "text", "id": "cta_label", "label": "Botón · texto", "default": "Reservar" },
+      { "type": "url", "id": "cta_link", "label": "Botón · enlace" },
+      { "type": "text", "id": "limit", "label": "Texto bajo el botón" },
+      { "type": "checkbox", "id": "featured", "label": "Destacada (borde dorado)", "default": false }
+    ] }
+  ],
+  "presets": [{ "name": "Darshan · Entradas" }]
+}
+{% endschema %}

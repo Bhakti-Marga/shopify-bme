@@ -1,0 +1,97 @@
+{% render 'dl-styles' %}
+{%- liquid
+  assign s = section.settings
+  assign has_poster = false
+  if s.poster != blank
+    assign has_poster = true
+  endif
+-%}
+<div class="dv-scope">
+  <section class="dl-video{% if has_poster %} dl-video--cover{% endif %}">
+    {%- if has_poster -%}
+      {%- capture modal_id -%}DlVideoModal-{{ section.id }}{%- endcapture -%}
+      {%- capture modal_open_selector -%}js-open-dl-video-{{ section.id }}{%- endcapture -%}
+      {%- capture modal_close_selector -%}js-close-dl-video-{{ section.id }}{%- endcapture -%}
+      <div class="dl-video__cover-wrap">
+        <div class="dl-video__cover">
+          <img
+            class="dl-video__cover-img"
+            src="{{ s.poster | image_url: width: 1600 }}"
+            srcset="{{ s.poster | image_url: width: 600 }} 600w, {{ s.poster | image_url: width: 900 }} 900w, {{ s.poster | image_url: width: 1200 }} 1200w, {{ s.poster | image_url: width: 1600 }} 1600w, {{ s.poster | image_url: width: 1920 }} 1920w"
+            sizes="(min-width: 720px) 1100px, 100vw"
+            alt="{{ s.poster.alt | default: s.title | default: s.eyebrow | escape }}"
+            loading="lazy"
+            width="1600"
+            height="900"
+          >
+          {%- if s.video != blank -%}
+            <button type="button" class="dl-video__play" aria-label="Reproducir vídeo" {{ modal_open_selector }}></button>
+          {%- endif -%}
+        </div>
+      </div>
+      {%- if s.video != blank -%}
+        {% render 'video-modal',
+          modal_id: modal_id,
+          video_url: s.video,
+          selectors_open: modal_open_selector,
+          selectors_close: modal_close_selector
+        %}
+      {%- endif -%}
+    {%- else -%}
+      {%- if s.eyebrow != blank or s.title != blank or s.subtitle != blank -%}
+        <div class="dl-video__head">
+          {%- if s.eyebrow != blank -%}<p class="dv-sec-eyebrow">{{ s.eyebrow }}</p>{%- endif -%}
+          {%- if s.title != blank -%}<h2 class="dv-sec-title">{{ s.title }}</h2>{%- endif -%}
+          {%- if s.subtitle != blank -%}<p class="dv-sec-body" style="margin-top:12px">{{ s.subtitle }}</p>{%- endif -%}
+        </div>
+      {%- endif -%}
+      <div class="dl-video__frame">
+        {%- if s.video != blank -%}
+          {{ s.video | video_tag: controls: true, playsinline: true, preload: 'metadata', class: 'dl-video__el' }}
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+  </section>
+</div>
+{% stylesheet %}
+  .dv-scope .dl-video{background:var(--white);text-align:center;padding:8px 0 80px}
+  @media (max-width:720px){.dv-scope .dl-video{padding:0 0 56px}}
+  .dv-scope .dl-video__head{max-width:760px;margin:0 auto 34px;padding:0 24px}
+  .dv-scope .dl-video__frame{position:relative;max-width:1100px;margin:0 auto;padding:0 24px}
+  .dv-scope .dl-video__frame video{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:14px;background:#0e1a37;box-shadow:0 24px 60px -20px rgba(22,37,76,.35)}
+
+  /* Carátula — el editor sube UNA imagen ya compuesta (título/subtítulo/botón
+     "quemados" en el propio PNG, ver docs/caratula-D.png), así que aquí solo se
+     muestra esa imagen completa y clicable; no se dibuja panel de texto ni
+     icono de play propios encima para no duplicar lo que ya trae la imagen. */
+  .dv-scope .dl-video--cover{padding:8px 0 80px;text-align:left}
+  @media (max-width:720px){.dv-scope .dl-video--cover{padding:0 0 56px}}
+  .dv-scope .dl-video__cover-wrap{max-width:1100px;margin:0 auto;padding:0 24px}
+  .dv-scope .dl-video__cover{
+    position:relative;overflow:hidden;border-radius:6px;
+    aspect-ratio:16/9;
+    box-shadow:0 24px 60px -20px rgba(22,37,76,.4);
+  }
+  .dv-scope .dl-video__cover-img{display:block;width:100%;height:100%;object-fit:cover}
+  .dv-scope .dl-video__play{
+    position:absolute;inset:0;width:100%;height:100%;
+    padding:0;margin:0;border:0;background:transparent;cursor:pointer;
+  }
+{% endstylesheet %}
+{% schema %}
+{
+  "name": "Darshan · Vídeo",
+  "tag": "section",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Vídeo" },
+    { "type": "text", "id": "title", "label": "Título", "default": "Vive el Darshan en Lanzarote" },
+    { "type": "textarea", "id": "subtitle", "label": "Subtítulo (opcional)" },
+    { "type": "video", "id": "video", "label": "Vídeo" },
+    { "type": "header", "content": "Carátula (imagen de portada)" },
+    { "type": "paragraph", "content": "Si subes una imagen aquí, se muestra tal cual como carátula clicable (usa una imagen ya compuesta con su propio título/botón de play, ver docs/caratula-D.png). Si la dejas vacía, se muestra el vídeo directamente como antes." },
+    { "type": "image_picker", "id": "poster", "label": "Imagen de portada" },
+    { "type": "text", "id": "meta", "label": "Línea meta (opcional)", "info": "Ej: Edición Especial · Noviembre 2026 · Islas Canarias" }
+  ],
+  "presets": [{ "name": "Darshan · Vídeo" }]
+}
+{% endschema %}

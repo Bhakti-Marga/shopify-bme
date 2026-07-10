@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -5,13 +14,75 @@
       "disabled": true,
       "settings": {}
     },
-    "section_hero_darshan": {
-      "type": "section__hero",
+    "dl_hero": {
+      "type": "Seccion__dl-hero",
+      "settings": {
+        "eyebrow": "Darshan · Lanzarote 2026",
+        "title": "Encuentro en persona con Paramahamsa Vishwananda",
+        "subtitle": "Una bendición única de un Satguru vivo, un maestro consumado en la tradición bhakti",
+        "image": "shopify://shop_images/darshan-hero.png",
+        "focal_y": 35,
+        "meta_date": "Sábado, 21 de noviembre de 2026",
+        "meta_time": "13:00 h CET — apertura de puertas 12:00 h",
+        "meta_place": "Hotel Beatriz Costa y Spa, Costa Teguise",
+        "btn1_text": "Reserva tu plaza",
+        "btn1_link": "#entradas",
+        "btn2_text": "Ver el programa",
+        "btn2_link": "#horario"
+      }
+    },
+    "dl_quote": {
+      "type": "Seccion__dl-texto",
+      "settings": {
+        "variant": "light",
+        "eyebrow": "Recibe la Gracia única e inolvidable de un Maestro vivo",
+        "title": "Darshan significa \"visión divina\"",
+        "body": "<p><em>«Cuando vienes al Darshan algo profundo dentro de ti es tocado. Eso es la conexión, eso es darshan. Veo la belleza de tu alma, veo quién es esa alma que está frente a mi, lo que quiere esa alma en ese instante. Eso es lo que quiero que veas, y eso es lo que quiero que comprendas por ti mismo.»</em></p><p>— Paramahamsa Vishwananda</p>",
+        "button_text": "",
+        "button_link": ""
+      }
+    },
+    "section_hero_video_signup_HHgFrG": {
+      "type": "section__hero-video-signup",
+      "name": "Hero Video Signup",
+      "disabled": true,
       "settings": {
         "padding_top": "0px",
-        "desktop_padding_top": "inherit",
-        "padding_bottom": "40px",
-        "desktop_padding_bottom": "60px",
+        "desktop_padding_top": "0px",
+        "padding_bottom": "0px",
+        "desktop_padding_bottom": "inherit",
+        "padding_horizontal": "px-0",
+        "desktop_padding_horizontal": "inherit",
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "use_container": false,
+        "set_100vh": false,
+        "border_radius": 40,
+        "aspect_ratio": "16/9",
+        "aspect_ratio_desktop": "16/9",
+        "video": "shopify://files/videos/dharshan 01 cursiva.mp4",
+        "video_desktop": "shopify://files/videos/dharshan 01 cursiva.mp4",
+        "bg_color": "",
+        "text_color": "",
+        "form_background_color": "255, 255, 255",
+        "title": "Este  bloquee es hero video sign up",
+        "subtitle": "subtitulo",
+        "description": "<p>descripcion</p>",
+        "klaviyo_embed": "",
+        "video_url": "shopify://files/videos/darshan teaser.mp4"
+      }
+    },
+    "section_hero_video_signup_mFqNwd": {
+      "type": "section__hero-video-signup",
+      "name": "Hero Video Signup",
+      "disabled": true,
+      "settings": {
+        "padding_top": "0px",
+        "desktop_padding_top": "0px",
+        "padding_bottom": "0px",
+        "desktop_padding_bottom": "inherit",
         "padding_horizontal": "px-0",
         "desktop_padding_horizontal": "inherit",
         "margin_top": "mt-0",
@@ -19,30 +90,748 @@
         "desktop_margin_top": "inherit",
         "desktop_margin_bottom": "inherit",
         "use_container": true,
+        "set_100vh": true,
+        "border_radius": 40,
+        "aspect_ratio": "16/9",
+        "aspect_ratio_desktop": "16/9",
+        "image": "shopify://shop_images/darshan-hero.png",
+        "image_desktop": "shopify://shop_images/darshan-hero.png",
+        "video_desktop": "shopify://files/videos/darshan teaser.mp4",
+        "bg_color": "",
+        "text_color": "",
+        "form_background_color": "255, 255, 255",
+        "title": "Este  bloquee es hero video sign up full screen height",
+        "subtitle": "subtitulo",
+        "description": "<p>descripcion</p>",
+        "klaviyo_embed": "",
+        "video_url": "shopify://files/videos/darshan teaser.mp4"
+      }
+    },
+    "section_hero_ehW49p": {
+      "type": "section__hero",
+      "name": "Hero",
+      "disabled": true,
+      "settings": {
+        "padding_top": "0px",
+        "desktop_padding_top": "0px",
+        "padding_bottom": "0px",
+        "desktop_padding_bottom": "inherit",
+        "padding_horizontal": "px-0",
+        "desktop_padding_horizontal": "inherit",
+        "margin_top": "mt-0",
+        "margin_bottom": "mb-0",
+        "desktop_margin_top": "inherit",
+        "desktop_margin_bottom": "inherit",
+        "use_container": false,
         "set_100vh": false,
-        "set_100vh_desktop": true,
-        "border_radius": 16,
+        "set_100vh_desktop": false,
+        "border_radius": 40,
         "aspect_ratio": "auto",
-        "aspect_ratio_desktop": "auto",
-        "bg_color": "#16254c",
-        "content_width": "max-w-3xl",
+        "aspect_ratio_desktop": "16/9",
+        "image": "shopify://shop_images/Paramahamsa_Vishawananda_darshan.webp",
+        "image_desktop": "shopify://shop_images/Paramahamsa_Vishawananda_darshan.webp",
+        "video": "shopify://files/videos/BME – Rituals(1)_9bb8f764-e06c-4feb-9968-ac972724dc46.mov",
+        "video_desktop": "shopify://files/videos/BME – Rituals(1)_9bb8f764-e06c-4feb-9968-ac972724dc46.mov",
+        "bg_color": "",
+        "content_width": "max-w-2xl",
         "text_align": "text-center",
-        "text_color": "#ffffff",
-        "title": "Darshan Lanzarote 2026",
-        "title_font_style": "h1",
-        "subtitle": "<p>Próximamente. Mantente atento para conocer todos los detalles.</p>",
-        "button_text": "",
-        "button_url": "",
-        "button_style": "btn",
-        "anchor_to_pricing": false,
-        "video_title": "",
-        "horizontal_position": "justify-center",
-        "vertical_position": "items-center"
+        "text_color": "#f4f4f3",
+        "title": "Encuentro en persona con Paramahamsa Vishwananda (bloque Hero)",
+        "title_font_style": "h4",
+        "subtitle": "<p>Sábado, 21 de noviembre de 2026<br/>Hotel Costa Teguise Lanzarote</p>",
+        "button_text": "reserva tu plaza",
+        "button_url": "#entrada",
+        "button_anchor": "button anchor, no entiendo",
+        "button_style": "btn btn--gold",
+        "anchor_to_pricing": true,
+        "video_title": "titulo del video que le puedes dar a VER",
+        "video_url": "shopify://files/videos/dharshan 01 cursiva.mp4",
+        "poster_image": "shopify://shop_images/Govinda_Ramananda_Bhakti_Marga.jpg",
+        "poster_image_desktop": "shopify://shop_images/Govinda_Ramananda_Bhakti_Marga.jpg",
+        "poster_video_desktop": "shopify://files/videos/darshan teaser.mp4",
+        "horizontal_position": "justify-end",
+        "vertical_position": "items-end"
+      }
+    },
+    "dl_video_main": {
+      "type": "Seccion__dl-video",
+      "name": "Video guruji",
+      "settings": {
+        "eyebrow": "",
+        "title": "DARSHAN LANZAROTE",
+        "subtitle": "En la Presencia del Maestro",
+        "meta": "Edición Especial · Noviembre 2026 · Islas Canarias",
+        "poster": "shopify://shop_images/caratula-D.png",
+        "video": "shopify://files/videos/dharshan 01 cursiva.mp4"
+      }
+    },
+    "dl_video_test": {
+      "type": "Seccion__dl-video",
+      "name": "Darshan · Vídeo testimonio",
+      "settings": {
+        "eyebrow": "Testimonio",
+        "title": "«El Darshan cambió mi forma de mirar la vida»",
+        "subtitle": "Escucha en primera persona qué significa recibir la bendición de Paramahamsa Vishwananda.",
+        "video": "shopify://files/videos/maui testimony_6d15637d-d9e9-4192-bf4f-4cfdb92991d0.mp4"
+      }
+    },
+    "dl_narrative": {
+      "type": "Seccion__dl-texto",
+      "name": "La bendicion de un satguru",
+      "settings": {
+        "variant": "navy",
+        "eyebrow": "",
+        "title": "La \"mirada\" de un Satguru que puede cambiar el curso de tu vida",
+        "body": "<p>Darshan con Paramahamsa Vishwananda es una bendición rara, directa y personal de un \"Verdadero Maestro\". En ese instante sagrado, el velo se levanta y es posible percibir el Amor y la Gracia Divina que ya están presentes dentro y alrededor de nosotros.</p><p>Un solo momento puede tener un impacto profundo a nivel mental, físico, emocional y espiritual.</p><p>Las personas que han recibido Darshan describen un despertar profundo del corazón, un amor incondicional y una aceptación hacia la Vida que nunca habían sentido antes. Muchos reciben sanación de dolencias concretas, paz mental, calma y la sensación de estar conectados con la esencia más profunda de sí mismos: el alma.</p><p>No hay nada más transformador que el amor verdadero e incondicional.</p>",
+        "button_text": "Inscríbete hoy. Plazas limitadas",
+        "button_link": "shopify://products/darshan"
+      }
+    },
+    "dl_cta": {
+      "type": "Seccion__dl-texto",
+      "disabled": true,
+      "name": "Reserva tu plaza",
+      "settings": {
+        "variant": "navy",
+        "eyebrow": "Solo Amor",
+        "title": "Recibe una bendición de Amor puro.",
+        "body": "<p>No hay nada más transformador que el amor verdadero e incondicional.</p>",
+        "button_text": "Reserva tu plaza",
+        "button_link": "#entradas"
+      }
+    },
+    "seccion_dl_timeline_Wn8qJK": {
+      "type": "Seccion__dl-timeline",
+      "blocks": {
+        "paso_YrWAPX": {
+          "type": "paso",
+          "settings": {
+            "image": "shopify://shop_images/2025-03-01-p-0740_df33f0ec-0603-4a81-bb9a-eb8f7515fd07.jpg",
+            "step": "Trascendencia",
+            "title": "Ver y ser visto por lo Divino",
+            "text": "<p>En la práctica es contemplar o estar en presencia de un santo o un Maestro consciente como Paramahamsa Vishwananda. </p><p>Es una oportunidad de conexión interna.</p>"
+          }
+        },
+        "paso_eNQdbF": {
+          "type": "paso",
+          "settings": {
+            "image": "shopify://shop_images/2024-02-18-p-7294-Edit_0198a868-1f98-4466-84f7-47498674a2ba.jpg",
+            "step": "",
+            "title": "Quién puede dar Darshan",
+            "text": "<p>Los buscadores espirituales o devotos de tradición hindú suelen realizar largas peregrinaciones a lugares sagrados, visitar Santos/Sadhus o Maestros, o buscar la bendición de una <em>deidad</em> específica en un templo.</p><p>Recibir darshan de un Satguru como Paramahamsa Vishwananda es una oportunidad única en la Vida de pocas personas.</p>"
+          }
+        },
+        "paso_ttbkaz": {
+          "type": "paso",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/Darshan_Hotel_Coste_Teguise.jpg",
+            "step": "",
+            "title": "Cómo puedo recibir el Darshan",
+            "text": "<p>El 21 de noviembre en Lanzarote a apartir de las 12h. En el hotel Costa Teguise, inscribiéndote .</p><p><em>El darshan</em> está abierto a todo el mundo. Todos están invitados a asistir,  y experimentar lo que se siente al estar un poco más cerca de lo divino en la tierra, independientemente de su fe o tradición.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "paso_YrWAPX",
+        "paso_eNQdbF",
+        "paso_ttbkaz"
+      ],
+      "name": "Info sobre darshan SEO",
+      "settings": {
+        "eyebrow": "",
+        "title": "Todo sobre Darshan",
+        "body": ""
+      }
+    },
+    "seccion_dl_texto_8eXdRM": {
+      "type": "Seccion__dl-texto",
+      "name": "Quien es PV",
+      "settings": {
+        "variant": "light",
+        "eyebrow": "El Maestro",
+        "title": "¿Quién es Paramahamsa Vishwananda?",
+        "body": "<p>Paramahamsa Vishwananda es un <em>satguru</em> (término sánscrito que significa «verdadero maestro», es decir, alguien que vive la verdad que enseña y guía a otros hacia ella) y el fundador de Bhakti Marga, una comunidad internacional de practicantes con miembros en más de 80 países. Nacido en Mauricio en 1978, fundó en 2021 la Hari Bhakta Sampradaya, un linaje dentro de la tradición<em> bhakti</em>, el camino hindú de la devoción. Es autor de varios libros, entre ellos comentarios sobre el <em>Bhagavad Gita</em>, y enseña Atma Kriya Yoga, una práctica de meditación y respiración del linaje de Mahavatar Babaji.</p>",
+        "button_text": "Conoce más sobre el Maestro",
+        "button_link": "shopify://pages/paramahamsa-vishwananda"
+      }
+    },
+    "dl_timeline": {
+      "type": "Seccion__dl-timeline",
+      "blocks": {
+        "t1": {
+          "type": "paso",
+          "settings": {
+            "image": "shopify://shop_images/9_Forms_Bhakti.jpg",
+            "step": "Llegada",
+            "title": "Comienza a conectar",
+            "text": "<p>Al llegar al recinto te recibirá nuestro equipo de bienvenida. Mientras te adentras en la atmósfera sagrada del salón, te envolverá la energía elevadora del kirtan en vivo. Puedes unirte al canto, sentarte en silencio o conectar con otros buscadores junto a un té. Cada momento prepara tu corazón para la bendición del Darshan.</p>"
+          }
+        },
+        "t2": {
+          "type": "paso",
+          "settings": {
+            "image": "shopify://shop_images/Soul_Awake.jpg",
+            "step": "Charla espiritual y Kirtan",
+            "title": "Inspiración",
+            "text": "<p>Cuando Paramahamsa Vishwananda llega, comparte un satsang inspirador con una sabiduría espiritual profunda que va directa al corazón. Después, la atmósfera se enciende con un kirtan extático: la sala se llena de amor divino y alegría. Con los corazones abiertos, comienza el momento sagrado del Darshan.</p>"
+          }
+        },
+        "t3": {
+          "type": "paso",
+          "settings": {
+            "image": "shopify://shop_images/2024-08-25-p-0882.jpg",
+            "step": "Darshan",
+            "title": "Amor puro",
+            "text": "<p>El Darshan comienza con una bendición colectiva de Paramahamsa Vishwananda. Te invitará a cerrar los ojos, ir al fondo del corazón y ofrecer una oración o intención personal. Después, por secciones, recibirás tu bendición personal. Durante ese tiempo el salón resuena con música devocional y canto védico — puedes cantar, danzar o sentarte en silencio mientras esperas tu turno.</p>"
+          }
+        },
+        "paso_yQCWwx": {
+          "type": "paso",
+          "settings": {
+            "image": "shopify://shop_images/CIMG1012_jpg.webp",
+            "step": "Vivencia",
+            "title": "No hay dos darshans iguales",
+            "text": "<p>Cada uno es un momento único y sagrado entre tú y lo Divino. Algunos experimentan una transformación interior, otros encuentran sanación y otros sienten una abrumadora sensación de amor y aceptación. A veces, no sienten nada en absoluto. </p><p>Lo que permanece constante en cada <em>darshan </em>es el compartir del Amor Divino incondicional. Gurudev hace todo lo posible por apoyarte en tu camino espiritual</p>"
+          }
+        },
+        "t4": {
+          "type": "paso",
+          "settings": {
+            "image": "shopify://shop_images/2024-08-13-p-0721.jpg",
+            "step": "Disfruta",
+            "title": "Celebración",
+            "text": "<p>Tras recibir tu bendición eres bienvenido a quedarte, meditar en silencio o irte cuando te sientas listo. Habrá un espacio para conectar con personas afines, tomar algo y explorar libros y artículos sagrados. La gracia y la positividad del evento te acompañarán mucho después de salir de la sala.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "t1",
+        "t2",
+        "t3",
+        "paso_yQCWwx",
+        "t4"
+      ],
+      "name": "como se vive el dia",
+      "settings": {
+        "eyebrow": "Una bendición inolvidable",
+        "title": "Cómo se vive el día",
+        "body": ""
+      }
+    },
+    "dl_iconos": {
+      "type": "Seccion__dl-iconos",
+      "blocks": {
+        "i1": {
+          "type": "icono",
+          "settings": {
+            "image": "shopify://shop_images/2025-03-01-p-0303.jpg",
+            "title": "Disfruta de la música sagrada",
+            "text": "<p>El kirtan y el bhajan son uno de los puntos más bellos del Darshan. Cantar los Nombres Divinos al unísono es una forma poderosa y alegre de abrir el corazón y sentir la presencia de lo Divino.</p>"
+          }
+        },
+        "i2": {
+          "type": "icono",
+          "settings": {
+            "image": "shopify://shop_images/2024-08-25-p-0997.jpg",
+            "title": "Una atmósfera positiva",
+            "text": "<p>Entra en un espacio de paz y conéctate con una comunidad de buscadores espirituales venidos de todo el mundo. El Darshan nutre profundamente la mente, el cuerpo y el alma.</p>"
+          }
+        },
+        "i3": {
+          "type": "icono",
+          "settings": {
+            "image": "shopify://shop_images/2023-09-03-p-1943.jpg",
+            "title": "Una bendición preciosa",
+            "text": "<p>La bendición de un Satguru vivo es algo extraordinariamente raro. Única para cada persona: una lluvia de amor incondicional, un instante con lo Divino, una mirada a tu propia belleza interior.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "i1",
+        "i2",
+        "i3"
+      ],
+      "disabled": true,
+      "name": "Lo que viviras",
+      "settings": {
+        "eyebrow": "Lo que vivirás",
+        "title": "Celebra la belleza de la vida - X"
+      }
+    },
+    "dl_horario": {
+      "type": "Seccion__dl-horario",
+      "blocks": {
+        "h1": {
+          "type": "fila",
+          "settings": {
+            "time": "12:00 h",
+            "title": "Apertura y registro",
+            "text": "<p>Bienvenida y registro de asistentes, acompañado de bhajans en directo interpretados por la sangha o de música ambiental.</p>"
+          }
+        },
+        "h2": {
+          "type": "fila",
+          "settings": {
+            "time": "13:00 h",
+            "title": "Entrada de asistentes",
+            "text": "<p>Bhajans en directo y proyección de vídeos de Guruji mientras la sala se va llenando.</p>"
+          }
+        },
+        "h3": {
+          "type": "fila",
+          "settings": {
+            "time": "13:45–14:00 h",
+            "title": "Charla introductoria",
+            "text": "<p>Explicación de qué es un Darshan, especialmente para quienes lo reciben por primera vez.</p>"
+          }
+        },
+        "h4": {
+          "type": "fila",
+          "settings": {
+            "time": "14:00 h",
+            "title": "Antes de la llegada de Guruji",
+            "text": "<p>Bhajans en directo y proyección de vídeos y testimonios, con música en directo hasta Su llegada.</p>"
+          }
+        },
+        "h5": {
+          "type": "fila",
+          "settings": {
+            "time": "15:00 h",
+            "title": "Llegada de Guruji",
+            "text": "<ul><li>Toque de caracola a Su entrada.</li><li>Cuando Él se acomoda en Su asiento, ofrenda de flores a Giridhari.</li><li>Transición: canto de Om (3 veces) y el Guru Stotram mientras se ofrecen flores a Sus Pies.</li><li>Canto del Gayatri Mantra (3 veces).</li></ul>"
+          }
+        },
+        "h6": {
+          "type": "fila",
+          "settings": {
+            "time": "Tras Su llegada",
+            "title": "El Darshan",
+            "text": "<ul><li>Guruji hablará y/o cantará junto con los músicos.</li><li>Meditación de Darshan: dirige la meditación y mira a todos los presentes desde Su asana.</li><li>Canto del Sri Suktam y el Purusha Suktam.</li></ul>"
+          }
+        }
+      },
+      "block_order": [
+        "h1",
+        "h2",
+        "h3",
+        "h4",
+        "h5",
+        "h6"
+      ],
+      "settings": {
+        "eyebrow": "El programa",
+        "title": "Horario del día",
+        "subtitle": "Sábado 21 de noviembre de 2026 · Hotel Beatriz Costa y Spa, Costa Teguise",
+        "anchor": "horario"
+      }
+    },
+    "dl_sede": {
+      "type": "Seccion__dl-sede",
+      "blocks": {
+        "d1": {
+          "type": "dato",
+          "settings": {
+            "label": "Dirección",
+            "value": "Hotel Beatriz Costa & Spa Calle la Atalaya, 3,",
+            "sub": "35509 Costa Teguise, Lanzarote · España"
+          }
+        },
+        "d2": {
+          "type": "dato",
+          "settings": {
+            "label": "Fecha y hora",
+            "value": "Sábado 21 de noviembre de 2026",
+            "sub": "13:00 h (CET) · apertura de puertas a las 12:00 h"
+          }
+        },
+        "d3": {
+          "type": "dato",
+          "settings": {
+            "label": "Accesibilidad",
+            "value": "Espacio adaptado para personas con movilidad reducida y acompañantes.",
+            "sub": "Por deferencia, te ubicaremos en una zona reservada cerca del Maestro."
+          }
+        }
+      },
+      "block_order": [
+        "d1",
+        "d2",
+        "d3"
+      ],
+      "settings": {
+        "eyebrow": "La sede",
+        "title": "Hotel Beatriz Costa y Spa",
+        "body": "<p>El Darshan se celebrará en uno de los espacios más serenos de Lanzarote, a pocos minutos del mar. Un entorno cuidado y acogedor, pensado para que tu día sea una experiencia tranquila desde la llegada hasta la despedida.</p>",
+        "image": "shopify://shop_images/2024-08-13-p-0721.jpg",
+        "btn1_text": "Cómo llegar",
+        "btn1_link": "https://maps.app.goo.gl/1FCPLSKgjzDnJaqd8",
+        "btn2_text": "Reservar mi plaza",
+        "btn2_link": "shopify://products/darshan"
+      }
+    },
+    "dl_entradas": {
+      "type": "Seccion__dl-entradas",
+      "blocks": {
+        "e1": {
+          "type": "entrada",
+          "settings": {
+            "tag": "Entrada general",
+            "title": "Entrada General",
+            "price": "10 €",
+            "note": "Acceso a todo el evento. Aforo principal.",
+            "features": "<ul><li>Bendición personal 1 a 1 con Paramahamsa Vishwananda</li><li>Satsang y charla espiritual</li><li>Kirtan, bhajans y música devocional</li><li>Comunidad y atmósfera de celebración</li></ul>",
+            "cta_label": "Reservar",
+            "cta_link": "shopify://products/darshan",
+            "limit": "Plazas limitadas",
+            "featured": false
+          }
+        },
+        "e2": {
+          "type": "entrada",
+          "settings": {
+            "tag": "Primeras filas",
+            "title": "Primeras Filas",
+            "price": "108 €",
+            "note": "Filas 1 a 3 — la experiencia más cercana al Maestro.",
+            "features": "<ul><li>Asiento reservado en las primeras filas</li><li>Todo lo incluido en la entrada general</li><li>Acceso prioritario al recinto</li><li>Vista privilegiada del Darshan y el kirtan</li></ul>",
+            "cta_label": "Reservar",
+            "cta_link": "shopify://products/darshan",
+            "limit": "Plazas muy limitadas",
+            "featured": true
+          }
+        },
+        "e3": {
+          "type": "entrada",
+          "settings": {
+            "tag": "Menores",
+            "title": "Menores de 18 años",
+            "price": "Gratis",
+            "note": "Para todas las personas menores de 18 años, sin coste.",
+            "features": "<ul><li>Entrada gratuita acompañando a un adulto</li><li>Acceso a todo el evento</li><li>Recomendado el registro para el aforo</li></ul>",
+            "cta_label": "Registrar",
+            "cta_link": "shopify://products/darshan",
+            "limit": "Acompañado por un adulto",
+            "featured": false
+          }
+        }
+      },
+      "block_order": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "settings": {
+        "eyebrow": "Reserva tu lugar",
+        "title": "Adéntrate en el Amor Divino",
+        "date": "Sábado 21 de noviembre de 2026 · 13:00 h CET · puertas 12:00 h",
+        "anchor": "entradas"
+      }
+    },
+    "seccion_dl_grid_pdCYCN": {
+      "type": "Seccion__dl-Grid",
+      "blocks": {
+        "texto_eqPa9T": {
+          "type": "texto",
+          "settings": {
+            "icon": "shopify://shop_images/Frame_39.png",
+            "title": "Una pregunta por escrito",
+            "body": "Puedes escribir una pregunta personal en un pequeño trozo de papel y entregársela a Paramahamsa Vishwananda. No hay expectativa de respuesta escrita; la práctica está en el acto de ofrecer la pregunta.",
+            "bg_color": "#1B2A4A",
+            "text_color": "#FFFFFF"
+          }
+        },
+        "foto_rjYACb": {
+          "type": "foto",
+          "settings": {
+            "image": "shopify://shop_images/Om_chanting.webp"
+          }
+        },
+        "texto_zhxUk7": {
+          "type": "texto",
+          "settings": {
+            "icon": "shopify://shop_images/Frame_40.png",
+            "title": "Siéntate con aquello para lo que has venido",
+            "body": "Mucha gente viene con algo en mente — una dificultad, una esperanza, una pregunta abierta. No hay ningún guión. El encuentro es breve y en silencio para la mayoría de las personas.",
+            "bg_color": "#F5F0E8",
+            "text_color": "#1B2A4A"
+          }
+        },
+        "foto_cYrUy6": {
+          "type": "foto",
+          "settings": {
+            "image": "shopify://shop_images/Bhakti_Marga_personas_devotas_felices.webp"
+          }
+        },
+        "texto_kdDNNa": {
+          "type": "texto",
+          "settings": {
+            "icon": "shopify://shop_images/Frame_40.png",
+            "title": "Una foto de alguien a quien amas",
+            "body": "En la tradición, es habitual traer una foto de alguien (un familiar, un amigo, alguien que está enfermo) y pedir una breve bendición en su nombre. Mucha gente lo hace por sus padres o sus hijos.",
+            "bg_color": "#F5F0E8",
+            "text_color": "#1B2A4A"
+          }
+        },
+        "foto_RTJgFk": {
+          "type": "foto",
+          "settings": {
+            "image": "shopify://shop_images/2023-11-05-p-1146_jpg.webp"
+          }
+        },
+        "texto_NhyjDC": {
+          "type": "texto",
+          "settings": {
+            "icon": "shopify://shop_images/Frame_40.png",
+            "title": "Llega con el corazón abierto",
+            "body": "No hace falta decir nada, pedir nada ni entender nada. Simplemente estar ahí ya es suficiente. No es necesario tener experiencia previa en meditación ni conocer la tradición. El Darshan está abierto a cualquier persona, independientemente de su fe o creencias.",
+            "bg_color": "#4A1942",
+            "text_color": "#FFFFFF"
+          }
+        },
+        "foto_HCczfz": {
+          "type": "foto",
+          "settings": {
+            "image": "shopify://shop_images/Paramahamsa_Vishawananda_darshan.webp"
+          }
+        },
+        "texto_kjLcyC": {
+          "type": "texto",
+          "settings": {
+            "icon": "shopify://shop_images/Frame_38.png",
+            "title": "Algunas Recomendaciones",
+            "body": "Se recomienda llegar unos minutos antes para hacer tranquilamente el registro, sentarse, respirar, unirse al canto previo de kirtan y estar presente antes del encuentro. Se recomienda vestir ropa cómoda y modesta.",
+            "bg_color": "#C17F24",
+            "text_color": "#FFFFFF"
+          }
+        }
+      },
+      "block_order": [
+        "texto_eqPa9T",
+        "foto_rjYACb",
+        "texto_zhxUk7",
+        "foto_cYrUy6",
+        "texto_kdDNNa",
+        "foto_RTJgFk",
+        "texto_NhyjDC",
+        "foto_HCczfz",
+        "texto_kjLcyC"
+      ],
+      "name": "como prepararse para el Darshan",
+      "settings": {
+        "eyebrow": "En un darshan puedes",
+        "title": "Cómo prepararse para el Darshan",
+        "body": "Estas algunas de las cosas que podrías hacer pero no es obligatorio."
+      }
+    },
+    "dl_mosaico": {
+      "type": "Seccion__dl-mosaico",
+      "blocks": {
+        "m2": {
+          "type": "imagen",
+          "settings": {
+            "image": "shopify://shop_images/2024-11-17-p-0134.jpg",
+            "col_span": "2",
+            "row_span": "1"
+          }
+        },
+        "m1": {
+          "type": "imagen",
+          "settings": {
+            "image": "shopify://shop_images/2025-03-01-p-0303.jpg",
+            "col_span": "3",
+            "row_span": "2"
+          }
+        },
+        "m6": {
+          "type": "imagen",
+          "settings": {
+            "image": "shopify://shop_images/2025-03-01-p-0860.jpg",
+            "col_span": "2",
+            "row_span": "1"
+          }
+        },
+        "m3": {
+          "type": "imagen",
+          "settings": {
+            "image": "shopify://shop_images/2024-08-25-p-0997.jpg",
+            "col_span": "2",
+            "row_span": "2"
+          }
+        },
+        "imagen_UydTyy": {
+          "type": "imagen",
+          "settings": {
+            "image": "shopify://shop_images/the-path-overview-paramahamsa-vishwananda-satguru.jpg",
+            "col_span": "6",
+            "row_span": "2"
+          }
+        },
+        "m4": {
+          "type": "imagen",
+          "settings": {
+            "image": "shopify://shop_images/2025-03-01-p-0744.jpg",
+            "col_span": "4",
+            "row_span": "2"
+          }
+        },
+        "m5": {
+          "type": "imagen",
+          "settings": {
+            "image": "shopify://shop_images/2023-09-03-p-1943.jpg",
+            "col_span": "4",
+            "row_span": "2"
+          }
+        }
+      },
+      "block_order": [
+        "m2",
+        "m1",
+        "m6",
+        "m3",
+        "imagen_UydTyy",
+        "m4",
+        "m5"
+      ],
+      "disabled": true,
+      "settings": {
+        "eyebrow": "",
+        "title": "",
+        "body": ""
+      }
+    },
+    "dl_resenas": {
+      "type": "Seccion__dl-resenas",
+      "blocks": {
+        "r1": {
+          "type": "resena",
+          "settings": {
+            "quote": "<p><strong>«Un darshan, para mí, es como un encuentro del corazón con un amigo perdido hace mucho.»</strong> Es la forma de Guruji de abrir nuestros corazones. Con el corazón abierto puedo escucharle hablar en cada latido, vibrando un amor que nunca antes había sentido. Si te puedo decir algo desde la experiencia: no pierdas tiempo, dale a tu corazón la oportunidad de alegrarse en su presencia.</p>",
+            "avatar": "shopify://shop_images/Alum_Stefano.jpg",
+            "name": "Stefano Razeto",
+            "role": "Nadador profesional"
+          }
+        },
+        "r2": {
+          "type": "resena",
+          "settings": {
+            "quote": "<p><strong>«El Darshan es una bendición que va más allá de los límites de la mente.»</strong> Cuando recibí el Darshan de Paramahamsa Vishwananda mi mente no podía comprender lo que estaba sintiendo: más amor del que había experimentado o creído posible. El Darshan despertó en mí un anhelo profundo de conexión con Dios.</p>",
+            "avatar": "shopify://shop_images/IMG_3002.jpg",
+            "name": "Paola Cruz",
+            "role": "E-RYT · Profesora de Yoga y Meditación"
+          }
+        },
+        "r3": {
+          "type": "resena",
+          "settings": {
+            "quote": "<p><strong>«Cuando Paramahamsa Vishwananda me miró a los ojos, sentí amor incondicional.»</strong> Me di cuenta de que mi mayor bloqueo espiritual era verme como indigno por errores del pasado. Pero él me siguió mirando con amor y aceptación. Si puedo verme como él me ve, entonces puedo realmente alinearme con la voluntad divina. Eso me ayudó a empezar a sentirme digno y a sentirme parte de algo.</p>",
+            "avatar": "shopify://shop_images/photo_2025-03-21_16-57-13.jpg",
+            "name": "Justin",
+            "role": "Atención al cliente"
+          }
+        }
+      },
+      "block_order": [
+        "r1",
+        "r2",
+        "r3"
+      ],
+      "settings": {
+        "eyebrow": "Otros Testimonios",
+        "title": "Qué más cuentan quienes ya lo han vivido"
+      }
+    },
+    "dl_faq": {
+      "type": "Seccion__dl-faq",
+      "blocks": {
+        "f1": {
+          "type": "pregunta",
+          "settings": {
+            "question": "¿Para quién es el Darshan? ¿Necesito ser religioso o hindú para asistir?",
+            "answer": "<p>El Darshan es para todos. No necesitas ser hindú ni considerarte espiritual: basta con venir con el corazón abierto.</p><p>El Darshan de Paramahamsa Vishwananda es un regalo de amor incondicional, pensado para cualquier persona que busque una conexión más profunda, paz o, simplemente, una experiencia bella. No se requiere experiencia previa ni creencia particular.</p>"
+          }
+        },
+        "f2": {
+          "type": "pregunta",
+          "settings": {
+            "question": "¿Cómo debo vestir para el Darshan?",
+            "answer": "<p>El Darshan es un evento alegre y festivo. Te recomendamos una vestimenta modesta y cómoda, que respete el carácter sagrado del momento. Si llevas camiseta de tirantes, te pedimos que traigas un chal o pareo para cubrir los hombros al recibir la bendición.</p>"
+          }
+        },
+        "f3": {
+          "type": "pregunta",
+          "settings": {
+            "question": "¿La sede es accesible para personas con movilidad reducida?",
+            "answer": "<p>Sí. El Hotel Beatriz Costa y Spa es accesible. Las personas con movilidad reducida y sus acompañantes serán ubicadas, por deferencia, en una zona reservada cerca del Maestro. Si necesitas asistencia durante el evento, escríbenos antes para coordinarlo.</p>"
+          }
+        },
+        "f4": {
+          "type": "pregunta",
+          "settings": {
+            "question": "¿Puedo llevar objetos para que Guruji los bendiga?",
+            "answer": "<p>Sí. Puedes traer libros, fotos, murtis (deidades) o malas. También dispondremos de artículos en nuestra tienda. Entrégaselos a un voluntario antes de recibir el Darshan.</p>"
+          }
+        },
+        "f5": {
+          "type": "pregunta",
+          "settings": {
+            "question": "¿Se retransmitirá en directo?",
+            "answer": "<p>El inicio del evento, incluida la bendición colectiva de Guruji, se transmitirá en directo por YouTube. Es una bella manera de recibir el Darshan y sentir la energía desde donde estés.</p>"
+          }
+        },
+        "f6": {
+          "type": "pregunta",
+          "settings": {
+            "question": "¿Cómo llego a Lanzarote y a Costa Teguise?",
+            "answer": "<p><strong>Aeropuerto:</strong> Lanzarote · César Manrique (ACE), a unos 12 km del Hotel Beatriz Costa y Spa.</p><p><strong>Desde el aeropuerto:</strong> taxi (≈ 20 min), autobús línea 22/23 a Costa Teguise o coche de alquiler.</p><p><strong>Dirección:</strong> Calle Atalaya, 3 · 35509 Costa Teguise · Lanzarote.</p><p>Si vienes desde la península, hay vuelos directos diarios desde Madrid, Barcelona, Valencia, Bilbao y Málaga.</p>"
+          }
+        },
+        "f7": {
+          "type": "pregunta",
+          "settings": {
+            "question": "¿Cuál es la política de cancelación y reembolso?",
+            "answer": "<p>Reembolso del 100 % si cancelas con más de 14 días de antelación. Reembolso del 50 % entre 7 y 13 días antes. No se procesan reembolsos con menos de 7 días, ya que los preparativos ya están en marcha.</p><p>Para solicitar un reembolso, escríbenos a <a href=\"mailto:info@bhaktimarga.es\">info@bhaktimarga.es</a> con tu número de pedido.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "f1",
+        "f2",
+        "f3",
+        "f4",
+        "f5",
+        "f6",
+        "f7"
+      ],
+      "settings": {
+        "eyebrow": "Preguntas frecuentes",
+        "title": "¿Tienes alguna duda?",
+        "cta_label": "Contáctanos",
+        "cta_link": "mailto:info@bhaktimarga.es"
       }
     }
   },
   "order": [
     "main",
-    "section_hero_darshan"
+    "dl_hero",
+    "dl_quote",
+    "section_hero_video_signup_HHgFrG",
+    "section_hero_video_signup_mFqNwd",
+    "section_hero_ehW49p",
+    "dl_video_main",
+    "dl_video_test",
+    "dl_narrative",
+    "dl_cta",
+    "seccion_dl_timeline_Wn8qJK",
+    "seccion_dl_texto_8eXdRM",
+    "dl_timeline",
+    "dl_iconos",
+    "dl_horario",
+    "dl_sede",
+    "dl_entradas",
+    "seccion_dl_grid_pdCYCN",
+    "dl_mosaico",
+    "dl_resenas",
+    "dl_faq"
   ]
 }

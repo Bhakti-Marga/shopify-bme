@@ -1,0 +1,52 @@
+{% render 'dl-styles' %}
+{%- liquid
+  assign s = section.settings
+-%}
+<div class="dv-scope">
+  <section class="dl-text dl-text--{{ s.variant }} {% if s.variant != 'navy' %}dv-pad{% endif %}">
+    <div class="dl-text__inner">
+      {%- if s.eyebrow != blank -%}
+        {%- if s.variant == 'navy' -%}<p class="dv-eyebrow">{{ s.eyebrow }}</p>{%- else -%}<p class="dv-sec-eyebrow">{{ s.eyebrow }}</p>{%- endif -%}
+      {%- endif -%}
+      {%- if s.title != blank -%}<h2 class="dl-text__title">{{ s.title }}</h2>{%- endif -%}
+      {%- if s.body != blank -%}<div class="dl-text__body">{{ s.body }}</div>{%- endif -%}
+      {%- if s.button_text != blank -%}<a href="{{ s.button_link | default: '#' }}" class="dv-btn {% if s.variant == 'navy' %}dv-btn--gold{% else %}dv-btn--outline{% endif %} dl-text__btn">{{ s.button_text }}</a>{%- endif -%}
+    </div>
+  </section>
+</div>
+{% stylesheet %}
+  .dv-scope .dl-text__inner{max-width:780px;margin:0 auto;padding:0 24px;text-align:center}
+  .dv-scope .dl-text__title{font-size:clamp(1.65rem,3.2vw,2.6rem);font-weight:600;color:var(--navy);line-height:1.15;letter-spacing:-.01em;margin:0 0 22px}
+  .dv-scope .dl-text__body{font-size:17px;line-height:1.8;color:var(--ink)}
+  .dv-scope .dl-text__body p{margin:0 0 18px}
+  .dv-scope .dl-text__body p:last-child{margin:0}
+  .dv-scope .dl-text__body em{font-style:italic;color:var(--navy)}
+  .dv-scope .dl-text__btn{margin-top:26px}
+  .dv-scope .dl-text--light{background:var(--white)}
+  .dv-scope .dl-text--cream{background:var(--cream)}
+  .dv-scope .dl-text--cream .dl-text__body{color:var(--ink)}
+  .dv-scope .dl-text--navy{background:var(--navy);color:#fff;text-align:center;padding:88px 24px;overflow:hidden}
+  @media (max-width:720px){.dv-scope .dl-text--navy{padding:60px 24px}}
+  .dv-scope .dl-text--navy::before{content:"";position:absolute;left:50%;top:0;transform:translateX(-50%);width:min(900px,90%);aspect-ratio:2/1;border:1px solid rgba(214,191,144,.18);border-bottom:0;border-radius:50% 50% 0 0 / 100% 100% 0 0;pointer-events:none}
+  .dv-scope .dl-text--navy .dl-text__title{color:#fff;font-weight:500;font-size:clamp(2rem,4.4vw,3.4rem)}
+  .dv-scope .dl-text--navy .dl-text__body{color:rgba(255,255,255,.85);font-size:17px}
+{% endstylesheet %}
+{% schema %}
+{
+  "name": "Darshan · Texto",
+  "tag": "section",
+  "settings": [
+    { "type": "select", "id": "variant", "label": "Estilo", "options": [
+      { "value": "light", "label": "Claro (cita)" },
+      { "value": "cream", "label": "Crema (narrativa)" },
+      { "value": "navy", "label": "Azul (CTA)" }
+    ], "default": "light" },
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow" },
+    { "type": "text", "id": "title", "label": "Título" },
+    { "type": "richtext", "id": "body", "label": "Texto" },
+    { "type": "text", "id": "button_text", "label": "Botón · texto" },
+    { "type": "url", "id": "button_link", "label": "Botón · enlace" }
+  ],
+  "presets": [{ "name": "Darshan · Texto" }]
+}
+{% endschema %}

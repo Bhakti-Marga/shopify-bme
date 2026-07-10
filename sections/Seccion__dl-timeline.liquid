@@ -1,0 +1,65 @@
+{% render 'dl-styles' %}
+{%- liquid
+  assign s = section.settings
+-%}
+<div class="dv-scope">
+  <section class="dl-timeline dv-pad">
+    {%- if s.eyebrow != blank or s.title != blank or s.body != blank -%}
+      <div class="dl-timeline__head">
+        {%- if s.eyebrow != blank -%}<p class="dv-sec-eyebrow">{{ s.eyebrow }}</p>{%- endif -%}
+        {%- if s.title != blank -%}<h2 class="dv-sec-title">{{ s.title }}</h2>{%- endif -%}
+        {%- if s.body != blank -%}<p class="dv-sec-body" style="margin-top:12px">{{ s.body }}</p>{%- endif -%}
+      </div>
+    {%- endif -%}
+    <div class="dl-timeline__list">
+      {%- for block in section.blocks -%}
+        <article class="dl-tl-item" {{ block.shopify_attributes }}>
+          <div class="dl-tl-media">{%- if block.settings.image != blank -%}{{ block.settings.image | image_url: width: 900 | image_tag: alt: '', loading: 'lazy' }}{%- endif -%}</div>
+          <div class="dl-tl-body">
+            {%- if block.settings.step != blank -%}<p class="dl-tl-step">{{ block.settings.step }}</p>{%- endif -%}
+            {%- if block.settings.title != blank -%}<h3 class="dl-tl-title">{{ block.settings.title }}</h3>{%- endif -%}
+            {%- if block.settings.text != blank -%}<div class="dl-tl-text">{{ block.settings.text }}</div>{%- endif -%}
+          </div>
+        </article>
+      {%- endfor -%}
+    </div>
+  </section>
+</div>
+{% stylesheet %}
+  .dv-scope .dl-timeline{background:var(--cream)}
+  .dv-scope .dl-timeline__head{text-align:center;max-width:680px;margin:0 auto 50px;padding:0 24px}
+  .dv-scope .dl-timeline__list{max-width:1080px;margin:0 auto;padding:0 24px;display:flex;flex-direction:column;gap:18px}
+  .dv-scope .dl-tl-item{display:grid;grid-template-columns:1.05fr 1fr;gap:32px;align-items:center;background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 6px 24px -10px rgba(22,37,76,.18)}
+  .dv-scope .dl-tl-item:nth-child(even){grid-template-columns:1fr 1.05fr;direction:rtl}
+  .dv-scope .dl-tl-item:nth-child(even) > *{direction:ltr}
+  @media (max-width:700px){.dv-scope .dl-tl-item,.dv-scope .dl-tl-item:nth-child(even){grid-template-columns:1fr;direction:ltr}}
+  .dv-scope .dl-tl-media{aspect-ratio:5/3;position:relative;background:var(--cream-soft)}
+  .dv-scope .dl-tl-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .dv-scope .dl-tl-body{padding:30px 36px}
+  @media (max-width:560px){.dv-scope .dl-tl-body{padding:24px}}
+  .dv-scope .dl-tl-step{font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-deep);font-weight:700;margin:0 0 10px}
+  .dv-scope .dl-tl-title{font-size:1.6rem;font-weight:600;color:var(--navy);line-height:1.15;margin:0 0 12px}
+  .dv-scope .dl-tl-text{font-size:14.5px;line-height:1.75;color:var(--muted)}
+  .dv-scope .dl-tl-text p{margin:0}
+{% endstylesheet %}
+{% schema %}
+{
+  "name": "Darshan · Programa",
+  "tag": "section",
+  "max_blocks": 8,
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Una bendición inolvidable" },
+    { "type": "text", "id": "title", "label": "Título", "default": "Cómo se vive el día" },
+    { "type": "textarea", "id": "body", "label": "Texto", "default": "Un encuentro con un Maestro vivo y Satguru." }
+  ],
+  "blocks": [
+    { "type": "paso", "name": "Paso", "settings": [
+      { "type": "image_picker", "id": "image", "label": "Imagen" },
+      { "type": "text", "id": "step", "label": "Etiqueta (Llegada, Bendiciones…)" },
+      { "type": "text", "id": "title", "label": "Título" },
+      { "type": "richtext", "id": "text", "label": "Texto" }
+    ] }
+  ],
+  "presets": [{ "name": "Darshan · Programa" }]
+}
+{% endschema %}
